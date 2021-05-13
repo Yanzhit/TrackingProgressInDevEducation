@@ -54,6 +54,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resourse\Project.txt" />
+	<Compile Include="Resourse\Отслеживание успеваемости в DevEducation.docx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,7 +83,6 @@
     <Folder Include="Core\Interfaces\" />
     <Folder Include="Core\Structs\" />
     <Folder Include="DB\" />
-    <Folder Include="Resourse\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
