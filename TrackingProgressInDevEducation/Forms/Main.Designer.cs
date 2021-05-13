@@ -1,7 +1,7 @@
 ﻿
-namespace TrackingProgressInDevEducation
+namespace TrackingProgressInDevEducation.Forms
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
