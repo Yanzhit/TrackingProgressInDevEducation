@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[CommentType] (
-    [Id]   INT          NOT NULL,
-    [Name] NVARCHAR (1) NOT NULL,
-    CONSTRAINT [PK_COMMENTTYPE] PRIMARY KEY CLUSTERED ([Id] ASC)
+    [id]   INT           IDENTITY (1, 1) NOT NULL,
+    [Name] NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_COMMENTTYPE] PRIMARY KEY CLUSTERED ([id] ASC)
 );
 

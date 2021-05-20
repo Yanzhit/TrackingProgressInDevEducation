@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[Students] (
-    [Id]      INT          NOT NULL,
-    [Name]    NVARCHAR (1) NOT NULL,
-    [Surname] NVARCHAR (1) NOT NULL,
-    [Rate]    DECIMAL (18) NOT NULL,
-    CONSTRAINT [PK_STUDENTS] PRIMARY KEY CLUSTERED ([Id] ASC)
+    [id]      INT            IDENTITY (1, 1) NOT NULL,
+    [Name]    NVARCHAR (50)  NOT NULL,
+    [Surname] NVARCHAR (50)  NOT NULL,
+    [Rate]    DECIMAL (6, 2) NOT NULL,
+    CONSTRAINT [PK_STUDENTS] PRIMARY KEY CLUSTERED ([id] ASC)
 );
 
