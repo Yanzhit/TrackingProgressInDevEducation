@@ -80,5 +80,6 @@
     <Build Include="dbo\Tables\HomeworkComplete.sql" />
     <Build Include="dbo\Stored Procedures\AddNewStudent.sql" />
     <Build Include="dbo\Stored Procedures\GetStudents.sql" />
+    <Build Include="dbo\Stored Procedures\RemoveStudents.sql" />
   </ItemGroup>
 </Project>

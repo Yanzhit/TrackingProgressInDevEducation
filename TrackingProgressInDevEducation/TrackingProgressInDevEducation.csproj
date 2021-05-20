@@ -57,6 +57,7 @@
     <Compile Include="Resourse\Project.txt" />
     <Compile Include="Resourse\UsefulLinks.txt" />
     <Compile Include="Resourse\Отслеживание успеваемости в DevEducation.docx" />
+	<Compile Include="DB\SQLQuery1.sql" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
