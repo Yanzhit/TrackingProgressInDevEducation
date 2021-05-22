@@ -63,6 +63,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\Stored Procedures\TableStudents" />
+    <Folder Include="dbo\Stored Procedures\Groups" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -85,5 +86,10 @@
     <Build Include="dbo\Stored Procedures\TableStudents\GetByIdStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
+    <Build Include="dbo\Stored Procedures\Groups\GetGroups.sql" />
+    <Build Include="dbo\Stored Procedures\Groups\GetGroupById.sql" />
+    <Build Include="dbo\Stored Procedures\Groups\AddNewGroup.sql" />
+    <Build Include="dbo\Stored Procedures\Groups\RemoveGroupById.sql" />
+    <Build Include="dbo\Stored Procedures\Groups\UpdateGroupById.sql" />
   </ItemGroup>
 </Project>
