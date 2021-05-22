@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{548f523d-e6ae-43c4-afdc-3749fc3ffa1c}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -16,7 +16,7 @@
     <ModelCollation>1049,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -24,6 +24,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>Cyrillic_General_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -61,7 +62,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
-    <Folder Include="dbo\Stored Procedures\Students" />
+    <Folder Include="dbo\Stored Procedures\TableStudents" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -79,9 +80,10 @@
     <Build Include="dbo\Tables\CommentType.sql" />
     <Build Include="dbo\Tables\Payments.sql" />
     <Build Include="dbo\Tables\HomeworkComplete.sql" />
-    <Build Include="dbo\Stored Procedures\Students\AddNewStudent.sql" />
-    <Build Include="dbo\Stored Procedures\Students\GetStudents.sql" />
-    <Build Include="dbo\Stored Procedures\Students\RemoveStudents.sql" />
-    <Build Include="dbo\Stored Procedures\Students\GetByIdStudent.sql" />
+    <Build Include="SQLQuery.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\AddNewStudent.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\GetByIdStudent.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
   </ItemGroup>
 </Project>
