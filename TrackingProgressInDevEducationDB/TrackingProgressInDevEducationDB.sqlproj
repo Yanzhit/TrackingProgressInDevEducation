@@ -67,6 +67,7 @@
     <Folder Include="dbo\Stored Procedures\TableHomeworks" />
     <Folder Include="dbo\Stored Procedures\TableHomeworkComplete" />
     <Folder Include="dbo\Stored Procedures\TableComments" />
+    <Folder Include="dbo\Stored Procedures\TableLectors" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -106,6 +107,13 @@
     <Build Include="dbo\Stored Procedures\TableComments\GetComments.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\RemoveComments.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\UpdateCommentById.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\RemoveCommentById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\AddNewLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\GetLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\GetLectors.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectors.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\UpdateLectorById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
