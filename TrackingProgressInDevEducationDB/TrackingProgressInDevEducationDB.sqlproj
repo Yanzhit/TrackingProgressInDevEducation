@@ -66,6 +66,7 @@
     <Folder Include="dbo\Stored Procedures\TableGroups" />
     <Folder Include="dbo\Stored Procedures\TableHomeworks" />
     <Folder Include="dbo\Stored Procedures\TableHomeworkComplete" />
+    <Folder Include="dbo\Stored Procedures\TableCourses" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -100,5 +101,6 @@
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidHomework.sql" />
     <Build Include="SQLHelper.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\AddNewCourse.sql" />
   </ItemGroup>
 </Project>
