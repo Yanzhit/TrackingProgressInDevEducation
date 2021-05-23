@@ -103,5 +103,7 @@
     <Build Include="SQLHelper.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\AddNewCourse.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
   </ItemGroup>
 </Project>
