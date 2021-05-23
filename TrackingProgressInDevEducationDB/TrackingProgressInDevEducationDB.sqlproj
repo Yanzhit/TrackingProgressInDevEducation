@@ -68,6 +68,7 @@
     <Folder Include="dbo\Stored Procedures\TableHomeworkComplete" />
     <Folder Include="dbo\Stored Procedures\TableComments" />
     <Folder Include="dbo\Stored Procedures\TableLectors" />
+    <Folder Include="dbo\Stored Procedures\TableVisits" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -91,7 +92,6 @@
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\GetGroups.sql" />
-    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupById.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\AddNewGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\RemoveGroupById.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\UpdateGroupById.sql" />
@@ -114,6 +114,12 @@
     <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectorById.sql" />
     <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectors.sql" />
     <Build Include="dbo\Stored Procedures\TableLectors\UpdateLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\GetVisits.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\AddNewVisit.sql" />
+    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\GetVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\RemoveVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\UpdateVisitById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
