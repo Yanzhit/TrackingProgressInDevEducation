@@ -3,6 +3,8 @@
     [Name]    NVARCHAR (50)  NOT NULL,
     [Surname] NVARCHAR (50)  NOT NULL,
     [Rate]    DECIMAL (6, 2) NOT NULL,
-    CONSTRAINT [PK_STUDENTS] PRIMARY KEY CLUSTERED ([id] ASC)
+    [GroupId] INT NOT NULL, 
+    CONSTRAINT [PK_STUDENTS] PRIMARY KEY CLUSTERED ([id] ASC), 
+    CONSTRAINT [FK_Students_Group] FOREIGN KEY ([GroupId]) REFERENCES [Groups]([id])
 );
 

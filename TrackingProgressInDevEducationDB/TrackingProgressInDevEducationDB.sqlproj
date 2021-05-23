@@ -61,6 +61,8 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Stored Procedures\CommentTypes" />
+    <Folder Include="dbo\Stored Procedures\Payments" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -81,5 +83,17 @@
     <Build Include="dbo\Stored Procedures\AddNewStudent.sql" />
     <Build Include="dbo\Stored Procedures\GetStudents.sql" />
     <Build Include="dbo\Stored Procedures\RemoveStudents.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\AddNewCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\DeleteSelectedCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\GetAllCommentTypes.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\UpdateCommentTypeById.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\AddNewPayment.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\ChangePaymentAmount.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\ClosePayment.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\GetAllPaymentsByStudent.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\GetAllPaymentsByGroup.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\UpdatePaymentTerm.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\UpdatePaymentSetDateAndStatus.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\DeletePaymentById.sql" />
   </ItemGroup>
 </Project>
