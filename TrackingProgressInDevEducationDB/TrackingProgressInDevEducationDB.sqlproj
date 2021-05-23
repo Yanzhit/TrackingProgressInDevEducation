@@ -66,6 +66,7 @@
     <Folder Include="dbo\Stored Procedures\TableGroups" />
     <Folder Include="dbo\Stored Procedures\TableHomeworks" />
     <Folder Include="dbo\Stored Procedures\TableHomeworkComplete" />
+    <Folder Include="dbo\Stored Procedures\TableCourses" />
     <Folder Include="dbo\Stored Procedures\TableComments" />
     <Folder Include="dbo\Stored Procedures\TableLectors" />
     <Folder Include="dbo\Stored Procedures\TableVisits" />
@@ -120,6 +121,10 @@
     <Build Include="dbo\Stored Procedures\TableVisits\GetVisitById.sql" />
     <Build Include="dbo\Stored Procedures\TableVisits\RemoveVisitById.sql" />
     <Build Include="dbo\Stored Procedures\TableVisits\UpdateVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\AddNewCourse.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
