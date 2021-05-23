@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace TrackingProgressInDevEducation.Forms
 {
@@ -7,6 +8,13 @@ namespace TrackingProgressInDevEducation.Forms
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void SignIn_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

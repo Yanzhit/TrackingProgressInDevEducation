@@ -91,5 +91,6 @@
     <Build Include="dbo\Stored Procedures\TableGroups\AddNewGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\RemoveGroupById.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\UpdateGroupById.sql" />
+    <Build Include="SQLHelper.sql" />
   </ItemGroup>
 </Project>
