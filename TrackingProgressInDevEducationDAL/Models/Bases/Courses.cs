@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    class Courses
+    public class Courses
     {
+        public string Name { get; set; }
+        public string StartedOn { get; set; }
+        public string FinishedOn { get; set; }
     }
 }
