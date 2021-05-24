@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Resource Include="BackGroundMain.jpg" />
+    <Resource Include="Resourse\BackGroundMain.jpg" />
   </ItemGroup>
 
   <ItemGroup>
