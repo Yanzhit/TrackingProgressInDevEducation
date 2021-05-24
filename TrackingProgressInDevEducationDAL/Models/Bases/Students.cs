@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    class Students
+    public struct  Students
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public decimal Rate { get; set; }
+
+        //public Students()
+        //{
+        //    Name = (string)
+        //    Surname = (string)
+        //    Rate = (decimal)
+        //}
     }
 }
