@@ -2,7 +2,8 @@
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class Class1
+    public class Connection
     {
+
     }
 }
