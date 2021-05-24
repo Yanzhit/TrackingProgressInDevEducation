@@ -2,6 +2,6 @@
 {
     public class CommentType
     {
-        
+        public string Name { get; set; }
     }
 }
