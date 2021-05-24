@@ -30,6 +30,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             Connection connection = new Connection();
             connection.Connect();
+            MessageBox.Show(connection.L[0].Name + " " + connection.L[0].Surname + " " + connection.L[0].Rate);
         }
     }
 }
