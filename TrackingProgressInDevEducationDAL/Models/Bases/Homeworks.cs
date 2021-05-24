@@ -2,6 +2,6 @@
 {
     public class Homeworks
     {
-        
+        public string Name { get; set; }
     }
 }
