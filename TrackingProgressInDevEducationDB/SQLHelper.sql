@@ -91,3 +91,4 @@ where [Cost] is Null
 delete [Product]
 where [Cost] = 10
 */
+

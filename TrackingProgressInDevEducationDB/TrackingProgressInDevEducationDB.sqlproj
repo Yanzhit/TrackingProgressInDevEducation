@@ -16,7 +16,7 @@
     <ModelCollation>1049,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -66,6 +66,10 @@
     <Folder Include="dbo\Stored Procedures\TableGroups" />
     <Folder Include="dbo\Stored Procedures\TableHomeworks" />
     <Folder Include="dbo\Stored Procedures\TableHomeworkComplete" />
+    <Folder Include="dbo\Stored Procedures\TableCourses" />
+    <Folder Include="dbo\Stored Procedures\TableComments" />
+    <Folder Include="dbo\Stored Procedures\TableLectors" />
+    <Folder Include="dbo\Stored Procedures\TableVisits" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -89,7 +93,6 @@
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\GetGroups.sql" />
-    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupById.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\AddNewGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\RemoveGroupById.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\UpdateGroupById.sql" />
@@ -100,5 +103,30 @@
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidHomework.sql" />
     <Build Include="SQLHelper.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\AddNewComment.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\GetByIdComment.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\GetComments.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\RemoveComments.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\UpdateCommentById.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\RemoveCommentById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\AddNewLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\GetLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\GetLectors.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\RemoveLectors.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\UpdateLectorById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\GetVisits.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\AddNewVisit.sql" />
+    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\GetVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\RemoveVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\UpdateVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\AddNewCourse.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
   </ItemGroup>
 </Project>
