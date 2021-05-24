@@ -11,9 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TrackingProgressInDevEducation.Pages;
+using TrackingProgressInDevEducationUI.Pages;
 
-namespace TrackingProgressInDevEducation
+namespace TrackingProgressInDevEducationUI
 {
     /// <summary>
     /// Логика взаимодействия для MainForm.xaml
@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducation
                 //Переброс вторичного потока в основной поток.
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    SignIn signIn = new SignIn();
+                    SignIn signIn = new SignIn(this);
                     this.Content = signIn;
                 });                
             });

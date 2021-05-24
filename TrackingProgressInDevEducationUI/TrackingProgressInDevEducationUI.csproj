@@ -11,14 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TrackingProgressInDevEducationBLL\TrackingProgressInDevEducationBLL.csproj" />
+    <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="BackGroundMain.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Update="MainForm.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-    </Page>
-    <Page Update="Pages\Main.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Pages\SignIn.xaml">
