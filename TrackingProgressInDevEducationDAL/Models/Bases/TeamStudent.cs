@@ -1,6 +1,6 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public struct TeamStudent
+    public class TeamStudent
     {
         public int TeamId { get; set; }
         public int StudentId { get; set; }
