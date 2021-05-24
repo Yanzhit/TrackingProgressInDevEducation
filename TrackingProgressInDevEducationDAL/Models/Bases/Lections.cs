@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public struct Lections
+    public class Lections
     {
         public int CourseId { get; set; }
         public int LectorId { get; set; }
