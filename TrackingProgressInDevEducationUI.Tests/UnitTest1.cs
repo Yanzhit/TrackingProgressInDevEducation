@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace TrackingProgressInDevEducation.Tests
+namespace TrackingProgressInDevEducationUI.Tests
 {
     public class Tests
     {
