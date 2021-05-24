@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public struct Payments
+    public class Payments
     {
         public int StudentId { get; set; }
         public DateTime PaymentTo { get; set; }
