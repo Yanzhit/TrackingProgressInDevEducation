@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="BackGroundMain.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="BackGroundMain.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Page Update="MainForm.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
