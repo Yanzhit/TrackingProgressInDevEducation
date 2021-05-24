@@ -8,9 +8,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public struct Lections
     {
-        int CourseId { get; set; }
-        int LectorId { get; set; }
-        string StartedOn { get; set; }
+        public int CourseId { get; set; }
+        public int LectorId { get; set; }
+        public string StartedOn { get; set; }
 
         //public Lections()
         //{
