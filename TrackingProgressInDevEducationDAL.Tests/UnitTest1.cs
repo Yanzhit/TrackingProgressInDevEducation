@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace TrackingProgressInDevEducation_BLL.Tests
+namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class Tests
     {
