@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    class Visits
+    public struct Visits
     {
+        public bool VisitStatus { get; set; }
+        public int StudentId { get; set; }
+        public int LectionId { get; set; }
+
+        //public Visits(Connect connect)
+        //{
+        //    VisitStatus = true;
+        //    StudentId = 0;
+        //    LectionId = 0;
+        //}
     }
 }
