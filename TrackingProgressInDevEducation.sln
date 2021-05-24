@@ -7,7 +7,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TrackingProgressInDevEducat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingProgressInDevEducation", "TrackingProgressInDevEducation\TrackingProgressInDevEducation.csproj", "{3FE9E59E-9F3F-48AA-94E8-A1AE08233FCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingProgressInDevEducation.Tests", "TrackingProgressInDevEducation.Tests\TrackingProgressInDevEducation.Tests.csproj", "{831D510A-710E-4B4E-AB04-13A48A489880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingProgressInDevEducation.Tests", "TrackingProgressInDevEducation.Tests\TrackingProgressInDevEducation.Tests.csproj", "{831D510A-710E-4B4E-AB04-13A48A489880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingProgressInDevEducation_Dal.Tests", "TrackingProgressInDevEducation_Dal.Tests\TrackingProgressInDevEducation_Dal.Tests.csproj", "{EBDE7CEE-3162-466D-A799-56F4AA62E50B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingProgressInDevEducation_BLL.Tests", "TrackingProgressInDevEducation_BLL.Tests\TrackingProgressInDevEducation_BLL.Tests.csproj", "{14FDED4B-CF74-4994-B4CE-600FF9A10AD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{831D510A-710E-4B4E-AB04-13A48A489880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831D510A-710E-4B4E-AB04-13A48A489880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831D510A-710E-4B4E-AB04-13A48A489880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDE7CEE-3162-466D-A799-56F4AA62E50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDE7CEE-3162-466D-A799-56F4AA62E50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDE7CEE-3162-466D-A799-56F4AA62E50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDE7CEE-3162-466D-A799-56F4AA62E50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FDED4B-CF74-4994-B4CE-600FF9A10AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FDED4B-CF74-4994-B4CE-600FF9A10AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FDED4B-CF74-4994-B4CE-600FF9A10AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FDED4B-CF74-4994-B4CE-600FF9A10AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
