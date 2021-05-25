@@ -13,7 +13,12 @@
         <Label x:Name="NameGroupLabel" Content="Группа с# 333" HorizontalAlignment="Left" Height="72" Margin="281,40,0,0" VerticalAlignment="Top" Width="265" FontSize="30"/>
         <Button x:Name="AddStudent" Content="Добавить студента" HorizontalAlignment="Left" Height="45" Margin="620,55,0,0" VerticalAlignment="Top" Width="243" Background="#FFFB5F5F"/>
         <Grid x:Name="GridGroup" HorizontalAlignment="Center" Height="518" Margin="0,151,0,0" VerticalAlignment="Top" Width="818" Background="#FFFFF3F3">
-            <DataGrid HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="754" RenderTransformOrigin="0.469,0.482" SelectionChanged="DataGrid_SelectionChanged"/>
+            <DataGrid HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="754" RenderTransformOrigin="0.469,0.482" SelectionChanged="DataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Студент" FontSize="30" MinWidth="380"/>
+                    <DataGridTextColumn FontSize="30" Header="Рейтинг" MinWidth="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
 
     </Grid>
