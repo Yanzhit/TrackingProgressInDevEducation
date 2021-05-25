@@ -1,0 +1,25 @@
+﻿<Page x:Class="TrackingProgressInDevEducationUI.Pages.GroupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GroupPage">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <Grid HorizontalAlignment="Left" Height="309" Margin="39,111,0,0" VerticalAlignment="Top" Width="731" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}">
+            <Button x:Name="button" Content="Создать" HorizontalAlignment="Left" Height="33" Margin="562,262,0,0" VerticalAlignment="Top" Width="137" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontSize="16"/>
+            <Label x:Name="label1" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="44,33,0,0" VerticalAlignment="Top" Width="165" FontSize="14" RenderTransformOrigin="0.533,1.415"/>
+            <Label x:Name="label1_Copy" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="44,88,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
+            <Label x:Name="label1_Copy1" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="44,0,0,0" VerticalAlignment="Center" Width="165" FontSize="14"/>
+            <Label x:Name="label1_Copy2" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="44,194,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="29" Margin="293,33,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="406" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="406"/>
+        </Grid>
+        <Label x:Name="label" Content="Создание новой группы" HorizontalAlignment="Center" Height="53" Margin="0,36,0,0" VerticalAlignment="Top" Width="291" FontSize="24"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="39,36,0,0" VerticalAlignment="Top" Width="147" Source="/Pages/educationCore-LOGO.JPG"/>
+
+    </Grid>
+</Page>
