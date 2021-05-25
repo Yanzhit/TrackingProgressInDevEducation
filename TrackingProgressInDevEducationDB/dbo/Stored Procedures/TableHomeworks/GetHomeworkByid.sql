@@ -1,4 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[GetHomeworkByid](@ID int)
 AS
-select * from [Homework] 
+select * from [Homeworks] 
 where id=@ID
