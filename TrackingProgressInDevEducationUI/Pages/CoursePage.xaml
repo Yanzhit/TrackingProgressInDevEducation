@@ -10,7 +10,7 @@
 
     <Grid x:Name="Grid" Background="#FFE2D8D8" Margin="0,0,-100,-250
           " HorizontalAlignment="Right" Width="900">
-        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="73" Margin="26,10,0,0" VerticalAlignment="Top" Width="229" Source="/Pages/AggregationFirst.bmp"/>
+        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="90" Margin="26,10,0,0" VerticalAlignment="Top" Width="261" Source="/Pages/educationCore-LOGO.JPG"/>
         <Label x:Name="NamePage" Content="Создание нового курса" HorizontalAlignment="Left" Height="72" Margin="288,10,0,0" VerticalAlignment="Top" Width="575" FontSize="30"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="512" Margin="0,155,0,0" VerticalAlignment="Top" Width="772" Background="#FFF9EFEF">
             <Label x:Name="NameCursesText" Content="Название курса" HorizontalAlignment="Left" Height="69" Margin="36,49,0,0" VerticalAlignment="Top" Width="287" FontSize="28"/>
