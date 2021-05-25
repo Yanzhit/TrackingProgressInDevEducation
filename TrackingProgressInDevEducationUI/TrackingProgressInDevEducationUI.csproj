@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pages\AggregationFirst.bmp" />
     <None Remove="Pages\educationCore-LOGO.JPG" />
     <None Remove="Pages\ImageEducationCore.html" />
   </ItemGroup>
@@ -18,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Pages\AggregationFirst.bmp" />
     <Resource Include="Pages\educationCore-LOGO.JPG" />
     <Resource Include="Pages\ImageEducationCore.html" />
     <Resource Include="Resourse\BackGroundMain.jpg" />
