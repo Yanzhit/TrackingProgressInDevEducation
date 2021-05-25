@@ -127,9 +127,6 @@
     <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
-    <Build Include="dbo\Stored Procedures\AddNewStudent.sql" />
-    <Build Include="dbo\Stored Procedures\GetStudents.sql" />
-    <Build Include="dbo\Stored Procedures\RemoveStudents.sql" />
     <Build Include="dbo\Stored Procedures\CommentTypes\AddNewCommentType.sql" />
     <Build Include="dbo\Stored Procedures\CommentTypes\DeleteSelectedCommentType.sql" />
     <Build Include="dbo\Stored Procedures\CommentTypes\GetAllCommentTypes.sql" />
