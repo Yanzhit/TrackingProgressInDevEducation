@@ -23,6 +23,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainMenu : Page
     {
+        private List<IModels> _models = new List<IModels>();
         public MainMenu()
         {
             InitializeComponent();
@@ -30,8 +31,15 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Test test = new Test();
-            //test.Connect("Select * from Students");
+            int i = 0;
+            Queryes queryes = new Queryes();
+            object objects = QuerySettings.Connect(queryes.GetStudents);
+            List<Students> students = (List<Students>)objects;
+            foreach (Students student in students)
+            {
+                MessageBox.Show($"{student.Name} {student.Surname} {student.Rate} {i}");
+                i++;
+            }
         }
     }
 }

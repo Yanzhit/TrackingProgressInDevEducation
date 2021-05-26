@@ -7,17 +7,13 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class QuerySettings
+    public static class QuerySettings
     {
-        public static List<IModels> Models { get; set; } = new List<IModels>();
-
-        public void Connect(IQuery query)
+        public static object Connect(IQuery query)
         {
             MethodInfo method = typeof(Connection).GetMethod(nameof(Connection.Connect));
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-
-            var result = generic.Invoke(null, new object[] {query.QueryName});
-            Models.AddRange((List<IModels>) result);
+            return generic.Invoke(null, new object[] {query.Command});
         }
     }
 }

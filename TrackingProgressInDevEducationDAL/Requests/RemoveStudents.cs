@@ -7,12 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Requests
     public class RemoveStudents : IQuery
     {
         public Type Type { get;}
-        public string QueryName { get;}
+        public string Name { get;}
+        public string Command { get; }
 
         public RemoveStudents()
         {
             Type = typeof(Students);
-            QueryName  = "RemoveStudents";
+            Name  = "RemoveStudents";
+            Command = "";
         }
     }
 }
