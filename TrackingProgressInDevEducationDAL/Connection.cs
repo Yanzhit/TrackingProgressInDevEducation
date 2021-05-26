@@ -1,34 +1,56 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 using Dapper;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL
 {
     public class Connection
     {
-        public List<test> L = new List<test>();
-        public string sss;
-        public void Connect()
+        public static List<T> Connect<T>(string q)
         {
-            
-            int id = 1;
             string cS = @"Data Source=.\;Initial Catalog=TrackingProgressInDevEducationDB;Integrated Security=True";
-            string q = "Select * from Students";// +
-                       //"where id = 1";
+            int id = 1;
+            List<IModels> L = new List<IModels>();
+
 
             using (IDbConnection dbConnection = new SqlConnection(cS))
             {
-                L = dbConnection.Query<test>(q, new {id}).AsList<test>();
-                //L = dbConnection.Query</*Сюда дженерик*/>(q, new {id}).AsList<int>();
+                return dbConnection.Query<T>(q, new { id }).AsList<T>();
+                //return ll[0];
             }
         }
     }
 
-    public class test
+    public class Test
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public decimal Rate { get; set; }
+        public static List<IModels> Models { get; set; } = new List<IModels>();
+        private Type[] _types = new[] { typeof(Students), typeof(Visits) };
+
+        public void Connect(string q)
+        {
+            Type type = null;
+            if (q == "Select * from Students")
+            {
+                type = _types[0];
+            }
+
+            if (q == "Select * from Visits")
+            {
+                type = _types[1];
+            }
+
+            MethodInfo method = typeof(Connection).GetMethod(nameof(Connection.Connect));
+            MethodInfo generic = method.MakeGenericMethod(type);
+
+
+            var result = generic.Invoke(null, new object[] {q});
+            IModels mod = (IModels) result;
+        }
     }
+    
 }

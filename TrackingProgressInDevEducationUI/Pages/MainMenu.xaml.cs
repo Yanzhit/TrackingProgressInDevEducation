@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -28,9 +30,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Connection connection = new Connection();
-            connection.Connect();
-            MessageBox.Show(connection.L[0].Name + " " + connection.L[0].Surname + " " + connection.L[0].Rate);
+            //Test test = new Test();
+            //test.Connect("Select * from Students");
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
+﻿using TrackingProgressInDevEducationDAL.Models.Interface;
+
+namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Homeworks
+    public class Homeworks : IModels
     {
         public string Name { get; set; }
     }
