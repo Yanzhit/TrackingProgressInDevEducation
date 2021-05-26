@@ -2,19 +2,22 @@
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class Queryes
+    public class Queries
     {
         public AddNewStudent AddNewStudent { get; set; }
         public GetByIdStudent GetByIdStudent { get; set; }
         public GetStudents GetStudents { get; set; }
         public RemoveStudents RemoveStudents { get; set; }
 
-        public Queryes()
+        public Queries()
         {
             AddNewStudent = new AddNewStudent();
-            GetByIdStudent = new GetByIdStudent();
             GetStudents = new GetStudents();
             RemoveStudents = new RemoveStudents();
+        }
+        public Queries(int id)
+        {
+            GetByIdStudent = new GetByIdStudent(id);
         }
     }
 }

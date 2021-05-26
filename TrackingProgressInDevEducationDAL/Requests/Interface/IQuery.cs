@@ -6,6 +6,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Interface
     {
         Type Type { get; }
         string Name { get; }
-        string Command { get; }
+        string Params { get; }
     }
 }
