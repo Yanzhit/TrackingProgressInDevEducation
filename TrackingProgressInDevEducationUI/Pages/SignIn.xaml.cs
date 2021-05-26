@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using TrackingProgressInDevEducationUI;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -9,7 +8,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class SignIn : Page
     {
-        private MainForm _mainForm;
+        private readonly MainForm _mainForm;
         public SignIn(MainForm mainForm)
         {
             InitializeComponent();
@@ -18,7 +17,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu menu = new MainMenu();
+            MainMenu menu = new MainMenu(_mainForm);
             _mainForm.Content = menu;
         }
 
