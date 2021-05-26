@@ -21,5 +21,11 @@ namespace TrackingProgressInDevEducationUI.Pages
             MainMenu menu = new MainMenu();
             _mainForm.Content = menu;
         }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration registration = new Registration();
+            _mainForm.Content = registration;
+        }
     }
 }
