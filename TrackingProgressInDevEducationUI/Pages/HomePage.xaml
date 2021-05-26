@@ -29,5 +29,6 @@
                 <DataGridTextColumn Header="Кол-во Студентов"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Журнал" HorizontalAlignment="Left" Height="19" Margin="439,253,0,0" VerticalAlignment="Top" Width="68"/>
     </Grid>
 </PageFunction>
