@@ -1,3 +1,3 @@
 ﻿CREATE PROCEDURE [dbo].[GetAllCourses]
 AS
-select * from [Courses]
+select id, [Name] from [Courses]

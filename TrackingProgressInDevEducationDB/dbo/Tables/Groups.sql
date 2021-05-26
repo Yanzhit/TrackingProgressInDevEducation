@@ -2,7 +2,9 @@
     [id]       INT           IDENTITY (1, 1) NOT NULL,
     [Name]     NVARCHAR (50) NOT NULL,
     [CourseId] INT           NOT NULL,
+    [StartDate] Date NOT NULL, 
+    [EndDate] Date NOT NULL, 
     CONSTRAINT [PK_GROUPS] PRIMARY KEY CLUSTERED ([id] ASC),
-    CONSTRAINT [Group_fk0] FOREIGN KEY ([CourseId]) REFERENCES [dbo].[Courses] ([id]) ON UPDATE CASCADE
+    CONSTRAINT [Group_fk0] FOREIGN KEY ([CourseId]) REFERENCES [dbo].[Courses] ([id])
 );
 

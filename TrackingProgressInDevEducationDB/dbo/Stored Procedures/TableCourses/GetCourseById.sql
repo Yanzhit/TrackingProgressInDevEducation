@@ -1,4 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[GetCourseById](@id int)
 AS
-select [Name], [StartedOn], [FinishedOn] from [Courses]
+select id, [Name] from [Courses]
 where [id] = @id
