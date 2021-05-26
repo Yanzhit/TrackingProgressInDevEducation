@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Interface;
+using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL
 {
@@ -10,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL
     {
         public static List<IModels> Models { get; set; } = new List<IModels>();
 
-        public void Connect(Query query)
+        public void Connect(IQuery query)
         {
             MethodInfo method = typeof(Connection).GetMethod(nameof(Connection.Connect));
             MethodInfo generic = method.MakeGenericMethod(query.Type);
