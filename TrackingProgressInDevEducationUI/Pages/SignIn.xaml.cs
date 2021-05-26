@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration();
+            Registration registration = new Registration(_mainForm);
             _mainForm.Content = registration;
         }
     }
