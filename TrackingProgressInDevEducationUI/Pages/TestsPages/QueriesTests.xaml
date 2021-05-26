@@ -16,16 +16,16 @@
                 <GradientStop Color="#FFBFDEB3" Offset="0.948"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="RequestViewTextBox" HorizontalAlignment="Left" Height="366" Margin="31,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="403" Background="White"/>
+        <TextBox x:Name="RequestViewTextBox" HorizontalAlignment="Left" Height="366" Margin="31,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Background="White"/>
         <Button x:Name="SendQueries" Content="Отправить запрос" HorizontalAlignment="Left" Height="32" Margin="553,388,0,0" VerticalAlignment="Top" Width="111" Click="SendQueries_Click"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,47,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="GetStudentsByIdRadioButton" Content="GetStudentsById" HorizontalAlignment="Left" Margin="374,46,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,67,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,87,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,107,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,127,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,147,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,167,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="GetStudentsByIdRadioButton" Content="GetStudentsById" HorizontalAlignment="Left" Margin="445,27,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="GetStudentsRadioButton" Content="GetStudents" HorizontalAlignment="Left" Margin="374,26,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,187,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,225,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="446,245,0,0" VerticalAlignment="Top"/>
@@ -72,6 +72,7 @@
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,352,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,212,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,372,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="GetStudentsByIdTextBoxId" HorizontalAlignment="Left" Height="17" Margin="488,44,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" IsEnabled="False"/>
 
     </Grid>
 </Page>

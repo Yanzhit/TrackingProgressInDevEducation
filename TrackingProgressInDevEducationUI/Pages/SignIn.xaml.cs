@@ -6,6 +6,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// <summary>
     /// Логика взаимодействия для SignIn.xaml
     /// </summary>
+    // ReSharper disable once RedundantExtendsListEntry
     public partial class SignIn : Page
     {
         private readonly MainForm _mainForm;

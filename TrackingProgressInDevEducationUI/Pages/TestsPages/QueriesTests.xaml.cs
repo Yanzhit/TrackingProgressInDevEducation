@@ -24,16 +24,28 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
         {
-            if (GetStudentsByIdRadioButton.IsChecked == true)
+            Queries queries;
+            List<Students> students;
+            if (GetStudentsRadioButton.IsChecked == true)
             {
-                Queryes queryes = new Queryes();
-                object objects = QuerySettings.Connect(queryes.GetStudents);
-                List<Students> students = (List<Students>)objects;
+                queries = new Queries();
+                students = (List<Students>)QuerySettings.QuerySet(queries.GetStudents);
                 foreach (Students student in students)
                 {
                     RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
                 }
             }
+
+            if (GetStudentsByIdRadioButton.IsChecked == true)
+            {
+                queries = new Queries(Int32.Parse(GetStudentsByIdTextBoxId.Text));
+                students = (List<Students>)QuerySettings.QuerySet(queries.GetByIdStudent);
+                foreach (Students student in students)  
+                {
+                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
+                }
+            }
         }
+        
     }
 }
