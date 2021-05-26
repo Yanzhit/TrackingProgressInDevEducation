@@ -16,7 +16,7 @@
     <ModelCollation>1049,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -70,6 +70,7 @@
     <Folder Include="dbo\Stored Procedures\TableComments" />
     <Folder Include="dbo\Stored Procedures\TableLectors" />
     <Folder Include="dbo\Stored Procedures\TableVisits" />
+    <Folder Include="dbo\Stored Procedures\TableTeams" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -88,6 +89,7 @@
     <Build Include="dbo\Tables\Payments.sql" />
     <Build Include="dbo\Tables\HomeworkComplete.sql" />
     <Build Include="SQLQuery.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\AddNewTeam.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\AddNewStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetByIdStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
@@ -121,6 +123,10 @@
     <Build Include="dbo\Stored Procedures\TableVisits\GetVisitById.sql" />
     <Build Include="dbo\Stored Procedures\TableVisits\RemoveVisitById.sql" />
     <Build Include="dbo\Stored Procedures\TableVisits\UpdateVisitById.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\GetTeamById.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\GetTeams.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\RemoveTeamById.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\UpdateTeamById.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\AddNewCourse.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
