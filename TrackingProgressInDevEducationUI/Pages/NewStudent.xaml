@@ -11,8 +11,7 @@
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250" HorizontalAlignment="Right" Width="900">
         <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="74" Margin="10,10,0,0" VerticalAlignment="Top" Width="229" Source="/logo.png" Stretch="Fill" />
         <Label x:Name="NamePage" Content="Создание нового студента" HorizontalAlignment="Left" Height="72" Margin="287,16,0,0" VerticalAlignment="Top" Width="308" FontSize="23" FontWeight="Bold"/>
-        <Button x:Name="ImportStudentBtn" Content="Загрузить Excel" HorizontalAlignment="Left" Margin="650,10,0,0" VerticalAlignment="Top" Height="74" Width="229" FontSize="24"/>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="98" Margin="0,4,0,0" VerticalAlignment="Top" Width="880"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="98" Margin="0,3,0,0" VerticalAlignment="Top" Width="880"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="512" Margin="0,155,0,0" VerticalAlignment="Top" Width="772" Background="#FFF9EFEF">
             <Label x:Name="Surname" Content="Фамилия" HorizontalAlignment="Left" Height="35" Margin="36,49,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Center" Height="35" Margin="349,49,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
