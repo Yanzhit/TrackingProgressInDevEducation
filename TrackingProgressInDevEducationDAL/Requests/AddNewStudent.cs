@@ -7,12 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Requests
     public class AddNewStudent : IQuery
     {
         public Type Type { get; }
-        public string QueryName { get; }
+        public string Name { get; }
+        public string Command { get; }
 
         public AddNewStudent()
         {
             Type = typeof(Students);
-            QueryName = "AddNewStudent";
+            Name = "AddNewStudent";
+            Command = "";
         }
     }
 }

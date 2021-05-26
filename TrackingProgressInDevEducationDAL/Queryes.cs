@@ -8,5 +8,13 @@ namespace TrackingProgressInDevEducationDAL
         public GetByIdStudent GetByIdStudent { get; set; }
         public GetStudents GetStudents { get; set; }
         public RemoveStudents RemoveStudents { get; set; }
+
+        public Queryes()
+        {
+            AddNewStudent = new AddNewStudent();
+            GetByIdStudent = new GetByIdStudent();
+            GetStudents = new GetStudents();
+            RemoveStudents = new RemoveStudents();
+        }
     }
 }
