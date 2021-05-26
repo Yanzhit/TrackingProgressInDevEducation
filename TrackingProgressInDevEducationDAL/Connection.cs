@@ -7,28 +7,13 @@ namespace TrackingProgressInDevEducationDAL
 {
     public class Connection
     {
-        public List<test> L = new List<test>();
-        public string sss;
-        public void Connect()
+        private static string _cS = @"Data Source=.\;Initial Catalog=TrackingProgressInDevEducationDB;Integrated Security=True";
+        public static List<T> Connect<T>(string query)
         {
-            
-            int id = 1;
-            string cS = @"Data Source=.\;Initial Catalog=TrackingProgressInDevEducationDB;Integrated Security=True";
-            string q = "Select * from Students";// +
-                       //"where id = 1";
-
-            using (IDbConnection dbConnection = new SqlConnection(cS))
+            using (IDbConnection dbConnection = new SqlConnection(_cS))
             {
-                L = dbConnection.Query<test>(q, new {id}).AsList<test>();
-                //L = dbConnection.Query</*Сюда дженерик*/>(q, new {id}).AsList<int>();
+                return dbConnection.Query<T>(query).AsList<T>();
             }
         }
-    }
-
-    public class test
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public decimal Rate { get; set; }
     }
 }
