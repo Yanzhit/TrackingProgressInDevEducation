@@ -1,4 +1,6 @@
-﻿namespace TrackingProgressInDevEducationDAL
+﻿using TrackingProgressInDevEducationDAL.Requests;
+
+namespace TrackingProgressInDevEducationDAL
 {
     public class Queryes
     {
