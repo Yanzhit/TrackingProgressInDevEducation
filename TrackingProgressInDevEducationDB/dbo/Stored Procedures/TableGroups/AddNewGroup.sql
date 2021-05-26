@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[AddNewGroup](@Name nvarchar(50), @CourseId int)
+﻿CREATE PROCEDURE [dbo].[AddNewGroup](@Name nvarchar(50), @CourseId int, @StartDate date, @EndDate date)
 AS 
-insert [Groups] ([Name], [CourseId])
-values (@Name, @CourseId)
+IF @StartDate = null SET @StartDate = GetDate() 
+insert [Groups] ([Name], [CourseId],[StartDate], [EndDate])
+values (@Name, @CourseId, @StartDate, @EndDate)

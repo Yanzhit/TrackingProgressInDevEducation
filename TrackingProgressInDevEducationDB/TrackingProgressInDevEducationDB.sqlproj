@@ -151,6 +151,8 @@
     <Build Include="dbo\Tables\Lector_Courses.sql" />
     <Build Include="dbo\Stored Procedures\TableLectorCourses\AddCourseToLector.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetCoursesByLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupsByLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\GetAllTeamsByLector.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
