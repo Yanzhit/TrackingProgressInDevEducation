@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL
         {
             MethodInfo method = typeof(Connection).GetMethod(nameof(Connection.Connect));
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-            return generic.Invoke(null, new object[] {query.Name, query.Params});
+            return generic.Invoke(null, new object[] {query});
         }
     }
 }
