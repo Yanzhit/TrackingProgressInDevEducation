@@ -19,7 +19,7 @@
         <Button Content="Добавить курс" HorizontalAlignment="Left" Height="32" Margin="612,110,0,0" VerticalAlignment="Top" Width="140" FontSize="14" FontWeight="Bold" Background="#FFB0AEAE"/>
         <Button Content="Создать группу" HorizontalAlignment="Left" Height="34" Margin="612,224,0,0" VerticalAlignment="Top" Width="140" FontSize="14" FontWeight="Bold" Background="#FFB0AEAE"/>
         <Button Content="Создать команду" HorizontalAlignment="Left" Height="32" Margin="612,342,0,0" VerticalAlignment="Top" Width="140" FontSize="14" FontWeight="Bold" Background="#FFB0AEAE"/>
-        <Image HorizontalAlignment="Left" Height="45" Margin="52,19,0,0" VerticalAlignment="Top" Width="110" Source="/Pages/educationCore-LOGO.JPG"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="52,19,0,0" VerticalAlignment="Top" Width="110" Source="/Resourse/educationCore-LOGO.JPG"/>
         <DataGrid HorizontalAlignment="Left" Height="60" Margin="52,223,0,0" VerticalAlignment="Top" Width="368">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Группа"/>
