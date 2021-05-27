@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetAllPaymentsByGroup]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllPaymentsByGroup]
 	@Group int
 AS
 	SELECT PM.id

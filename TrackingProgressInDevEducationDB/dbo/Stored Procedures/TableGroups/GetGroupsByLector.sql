@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetGroupsByLector]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetGroupsByLector]
 	@LectorId int
 AS
 SELECT 

@@ -1,5 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[RemoveCourseById](@id int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[RemoveCourseById](@id int)
 AS 
-delete from [dbo].[Courses]
+delete from [TrackingProgressInDevEducationDB].[Courses]
 where id=@id
 

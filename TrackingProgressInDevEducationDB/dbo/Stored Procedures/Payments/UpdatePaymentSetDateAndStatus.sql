@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[UpdatePaymentSetDateAndStatus]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[UpdatePaymentSetDateAndStatus]
 	@ID INT,
 	@NEWDATE DATE
 AS

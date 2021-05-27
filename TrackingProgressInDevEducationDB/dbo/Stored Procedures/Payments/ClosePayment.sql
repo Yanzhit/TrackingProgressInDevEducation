@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ClosePayment]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[ClosePayment]
 	@Date date,
 	@ID int
 AS

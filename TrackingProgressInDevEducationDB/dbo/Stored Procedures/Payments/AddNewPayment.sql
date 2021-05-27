@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[AddNewPayment]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[AddNewPayment]
 	@Student int,
 	@DateTo date,
 	@PaymentDate date,

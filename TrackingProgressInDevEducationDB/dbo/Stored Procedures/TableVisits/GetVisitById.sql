@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetVisitById](@ID int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetVisitById](@ID int)
 AS 
 select * from [Visits]
 where id=@ID

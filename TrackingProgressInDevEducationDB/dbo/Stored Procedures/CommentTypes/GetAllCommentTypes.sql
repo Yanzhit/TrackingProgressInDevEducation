@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetAllCommentTypes]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllCommentTypes]
 
 AS
 	SELECT [id]

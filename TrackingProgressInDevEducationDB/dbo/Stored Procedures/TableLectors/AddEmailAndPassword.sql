@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[AddEmailAndPassword]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[AddEmailAndPassword]
 	@Id int,
 	@Email nvarchar (50),
 	@Password nvarchar (50)

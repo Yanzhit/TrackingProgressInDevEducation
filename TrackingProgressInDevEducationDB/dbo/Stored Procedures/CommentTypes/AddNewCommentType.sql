@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[AddNewCommentType]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[AddNewCommentType]
 	@Name nvarchar
 AS
 	INSERT [CommentType] (Name)

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[UpdateHomeworkCompleteByidHomework] (@HomeworkId int, @Status bit )
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[UpdateHomeworkCompleteByidHomework] (@HomeworkId int, @Status bit )
 AS
-update [dbo].[HomeworkComplete] set [Status] = @Status
+update [TrackingProgressInDevEducationDB].[HomeworkComplete] set [Status] = @Status
 where HomeworkId=@HomeworkId

@@ -1,7 +1,7 @@
-﻿CREATE PROCEDURE [dbo].[UpdateCommentTypeById]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[UpdateCommentTypeById]
 	@ID int,
 	@Name nvarchar
 
 AS
-	UPDATE [dbo].[CommentType] 
+	UPDATE [TrackingProgressInDevEducationDB].[CommentType] 
 	SET [Name] = @Name WHERE id = @ID 

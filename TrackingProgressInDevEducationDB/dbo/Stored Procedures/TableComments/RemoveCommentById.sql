@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[RemoveCommentById](@ID int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[RemoveCommentById](@ID int)
 AS 
-delete from [dbo].[Comments]
+delete from [TrackingProgressInDevEducationDB].[Comments]
 where id=@ID

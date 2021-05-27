@@ -1,3 +1,3 @@
-﻿CREATE PROCEDURE [dbo].[GetComments] 
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetComments] 
 AS
 select * from [Comments]

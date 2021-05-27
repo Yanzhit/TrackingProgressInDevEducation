@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[UpdatePaymentTerm]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[UpdatePaymentTerm]
 	@ID INT,
 	@NEWDATE DATE
 AS

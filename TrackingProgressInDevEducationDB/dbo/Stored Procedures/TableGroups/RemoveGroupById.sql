@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[RemoveGroupById](@ID int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[RemoveGroupById](@ID int)
 AS 
-delete from [dbo].[Groups]
+delete from [TrackingProgressInDevEducationDB].[Groups]
 where id=@ID

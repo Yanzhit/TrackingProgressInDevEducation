@@ -9,8 +9,7 @@
     <ProjectGuid>{548f523d-e6ae-43c4-afdc-3749fc3ffa1c}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>TrackingProgressInDevEducationDB</RootNamespace>
     <AssemblyName>TrackingProgressInDevEducationDB</AssemblyName>
     <ModelCollation>1049,CI</ModelCollation>
@@ -25,6 +24,7 @@
     <DefaultCollation>Cyrillic_General_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
     <TargetFrameworkProfile />
+    <DefaultSchema>TrackingProgressInDevEducationDB</DefaultSchema>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -51,7 +51,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -74,6 +73,10 @@
     <Folder Include="dbo\Stored Procedures\Payments" />
     <Folder Include="dbo\Stored Procedures\TableTeams" />
     <Folder Include="dbo\Stored Procedures\TableLectorCourses" />
+    <Folder Include="dbo\Stored Procedures\TableTeamStudent" />
+    <Folder Include="dbo\Stored Procedures\TableLections" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Schemas" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -108,7 +111,7 @@
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableHomeworkComplete\UpdateHomeworkCompleteByidHomework.sql" />
     <Build Include="SQLHelper.sql" />
-    <Build Include="dbo\Stored Procedures\TableComments\AddNewComment.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\AddNewCommentToStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\GetByIdComment.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\GetComments.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\RemoveComments.sql" />
@@ -153,6 +156,14 @@
     <Build Include="dbo\Stored Procedures\TableCourses\GetCoursesByLector.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\GetGroupsByLector.sql" />
     <Build Include="dbo\Stored Procedures\TableTeams\GetAllTeamsByLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\GetAllStudentsByTeam.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeamStudent\AddStudentToTeam.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\GetAllCommentsByTeam.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\AddCommentToTeam.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\AddStudentToGroup.sql" />
+    <Build Include="dbo\Stored Procedures\TableLections\GetAllLectionsByGroup.sql" />
+    <Build Include="dbo\Stored Procedures\TableLections\ChangeLectionDate.sql" />
+    <Build Include="Security\Schemas\TrackingProgressInDevEducationDB.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
