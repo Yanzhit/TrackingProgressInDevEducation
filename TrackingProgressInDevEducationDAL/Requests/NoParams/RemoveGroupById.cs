@@ -8,13 +8,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
-        public RemoveGroupById()
+        public RemoveGroupById(int id)
         {
             Type = typeof(Groups);
             Name = "RemoveGroupById";
-            Command = "";
+            Params = $"{id}";
         }
     }
 }

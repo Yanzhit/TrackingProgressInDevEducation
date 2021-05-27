@@ -8,13 +8,13 @@ namespace TrackingProgressInDevEducationDAL.Requests
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
-        public AddNewStudent()
+        public AddNewStudent(string Name, string Surname, decimal Rate)
         {
             Type = typeof(Students);
             Name = "AddNewStudent";
-            Command = "";
+            Params = $"{Name},{Surname},{Rate}";
         }
     }
 }

@@ -9,12 +9,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
-        public GetByIdComment()
+        public string Params { get; }
+        public GetByIdComment(int id)
         {
             Type = typeof(Comments);
             Name = "GetByIdComment";
-            Command = "";
+            Params = $"{id}";
         }
     }
     }

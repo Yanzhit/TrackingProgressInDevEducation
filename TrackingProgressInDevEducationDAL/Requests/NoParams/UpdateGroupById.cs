@@ -8,13 +8,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
-        public UpdateGroupById()
+        public UpdateGroupById(int id,string Name, int CourseId)
         {
             Type = typeof(Groups);
             Name = "UpdateGroupById";
-            Command = "";
+            Params = $"{id},{Name},{CourseId}";
         }
     }
 }

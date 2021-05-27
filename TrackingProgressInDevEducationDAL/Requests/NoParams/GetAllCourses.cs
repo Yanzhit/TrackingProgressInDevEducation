@@ -8,13 +8,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
         public GetAllCourses()
         {
             Type = typeof(Courses);
             Name = "GetAllCourses";
-            Command = "";
+            Params = "";
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetGroupById](@ID int)
+﻿CREATE PROCEDURE [dbo].[GetGroupById](@id int)
 AS 
 select * from [Groups]
-where id=@ID
+where id=@id

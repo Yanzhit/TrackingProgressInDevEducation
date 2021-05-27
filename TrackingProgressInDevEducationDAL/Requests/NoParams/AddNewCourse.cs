@@ -9,13 +9,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
-        public AddNewCourse()
+        public AddNewCourse( string Name, DateTime StartedOn, DateTime FinishedOn)
         {
             Type = typeof(Courses);
             Name = "AddNewCourse";
-            Command = "";
+            Params = $"{Name},{StartedOn},{FinishedOn}";
         }
     }
 }

@@ -8,13 +8,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
     {
         public Type Type { get; }
         public string Name { get; }
-        public string Command { get; }
+        public string Params { get; }
 
-        public RemoveCommentById()
+        public RemoveCommentById(int id)
         {
             Type = typeof(Comments);
             Name = "RemoveCommentById";
-            Command = "";
+            Params = $"{id}";
         }
     }
 }
