@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public GetComments()
         {
             Type = typeof(Comments);
-            Name = "GetComments";
+            Name = GetType().Name;
             Params = "";
         }
     }

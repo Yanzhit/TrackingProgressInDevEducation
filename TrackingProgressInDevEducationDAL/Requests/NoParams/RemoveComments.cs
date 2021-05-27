@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public RemoveComments()
         {
             Type = typeof(Comments);
-            Name = "RemoveComments";
+            Name = GetType().Name;
             Params = "";
         }
     }

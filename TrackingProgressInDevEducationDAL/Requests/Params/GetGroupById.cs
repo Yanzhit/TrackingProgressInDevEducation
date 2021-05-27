@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public GetGroupById(int id)
         {
             Type = typeof(Groups);
-            Name = "GetGroupById";
+            Name = GetType().Name;;
             Params = $"{id}";
         }
     }

@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public RemoveStudents()
         {
             Type = typeof(Students);
-            Name  = "RemoveStudents";
+            Name = GetType().Name;
             Params = "";
         }
     }

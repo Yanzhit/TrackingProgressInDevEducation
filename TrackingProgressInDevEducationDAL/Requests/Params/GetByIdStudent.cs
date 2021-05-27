@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public GetByIdStudent(int id)
         {
             Type = typeof(Students);
-            Name = "GetByIdStudent";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

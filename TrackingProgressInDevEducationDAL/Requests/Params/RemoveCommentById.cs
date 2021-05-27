@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public RemoveCommentById(int id)
         {
             Type = typeof(Comments);
-            Name = "RemoveCommentById";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

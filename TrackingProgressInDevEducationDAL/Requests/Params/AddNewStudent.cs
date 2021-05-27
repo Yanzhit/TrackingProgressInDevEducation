@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public AddNewStudent(string name, string surname, decimal rate)
         {
             Type = typeof(Students);
-            Name = "AddNewStudent";
+            Name = GetType().Name;
             Params = $"{name}, {surname}, {rate}";
         }
     }

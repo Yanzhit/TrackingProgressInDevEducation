@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public AddNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
             Type = typeof(Courses);
-            Name = "AddNewCourse";
+            Name = GetType().Name;
             Params = $"{name}, {startedOn}, {finishedOn}";
         }
     }

@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public RemoveGroupById(int id)
         {
             Type = typeof(Groups);
-            Name = "RemoveGroupById";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

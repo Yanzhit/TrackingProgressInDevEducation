@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public UpdateHomeworkById(string name, int id)
         {
             Type = typeof(Homeworks);
-            Name = "UpdateHomeworkById";
+            Name = GetType().Name;
             Params = $"{name}, {id}";
         }
     }
