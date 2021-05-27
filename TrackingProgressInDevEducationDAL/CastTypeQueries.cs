@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL
                     break;
                 case EnumCastTypeQueries.Groups:
                     break;
-                case EnumCastTypeQueries.Homework_Group:
+                case EnumCastTypeQueries.HomeworkGroup:
                     break;
                 case EnumCastTypeQueries.HomeworkComplete:
                     break;
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL
                     break;
                 case EnumCastTypeQueries.Lections:
                     break;
-                case EnumCastTypeQueries.Lector_Group:
+                case EnumCastTypeQueries.LectorGroup:
                     break;
                 case EnumCastTypeQueries.Lectors:
                     break;
@@ -32,7 +32,7 @@ namespace TrackingProgressInDevEducationDAL
                     break;
                 case EnumCastTypeQueries.Students:
                     break;
-                case EnumCastTypeQueries.Team_Student:
+                case EnumCastTypeQueries.TeamStudent:
                     break;
                 case EnumCastTypeQueries.Teams:
                     break;

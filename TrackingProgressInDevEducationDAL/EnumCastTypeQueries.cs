@@ -6,15 +6,15 @@
         CommentType,
         Courses,
         Groups,
-        Homework_Group,
+        HomeworkGroup,
         HomeworkComplete,
         Homeworks,
         Lections,
-        Lector_Group,
+        LectorGroup,
         Lectors,
         Payments,
         Students,
-        Team_Student,
+        TeamStudent,
         Teams,
         Visits
     }
