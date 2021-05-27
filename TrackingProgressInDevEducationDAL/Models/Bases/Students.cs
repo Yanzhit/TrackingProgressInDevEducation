@@ -26,5 +26,37 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Surname = "";
             Rate = 0;
         }
+
+        public override bool Equals(object obj)
+        {
+            Students actual = (Students)obj;
+            Students expected = this;
+            if (actual != null)
+            {
+                if (expected.Name != actual.Name)
+                {
+                    return false;
+                }
+                if (expected.Surname != actual.Surname)
+                {
+                    return false;
+                }
+                if (expected.Rate != actual.Rate)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
+
+        //public override string ToString()
+        //{
+        //    return "";
+        //}
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using Dapper;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL
@@ -16,5 +17,6 @@ namespace TrackingProgressInDevEducationDAL
                 return dbConnection.Query<T>($"exec {query.Name} {query.Params}").AsList<T>();
             }
         }
+       
     }
 }
