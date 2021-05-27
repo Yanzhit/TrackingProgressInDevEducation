@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[NullifyLector_Group]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyLector_Group]
 AS
-delete from [dbo].[Lector_Group]
+delete from [TrackingProgressInDevEducationDB].[Lector_Group]
 DBCC CHECKIDENT ([Lector_Group], RESEED, 0)  -- Обнуление ключа indentify

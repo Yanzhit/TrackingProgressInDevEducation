@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[NullifyTeams]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyTeams]
 AS
-delete from [dbo].[Teams]
+delete from [TrackingProgressInDevEducationDB].[Teams]
 DBCC CHECKIDENT ([Teams], RESEED, 0)  -- Обнуление ключа indentify

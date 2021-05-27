@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[NullifyVisits]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyVisits]
 AS
-delete from [dbo].[Visits]
+delete from [TrackingProgressInDevEducationDB].[Visits]
 DBCC CHECKIDENT ([Visits], RESEED, 0)  -- Обнуление ключа indentify
