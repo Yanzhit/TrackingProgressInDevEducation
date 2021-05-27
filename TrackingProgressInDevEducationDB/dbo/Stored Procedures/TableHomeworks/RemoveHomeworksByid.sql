@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[RemoveHomeworksByid](@ID int)
+﻿CREATE PROCEDURE [dbo].[RemoveHomeworksByid](@id int)
 AS
 delete from [dbo].[Homeworks]
-where id=@ID
+where id=@id
