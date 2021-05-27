@@ -72,7 +72,7 @@
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,352,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,212,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="665,372,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="GetStudentsByIdTextBoxId" HorizontalAlignment="Left" Height="17" Margin="488,44,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" IsEnabled="False"/>
+        <TextBox x:Name="GetStudentsByIdTextBoxId" HorizontalAlignment="Left" Height="17" Margin="488,44,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="51"/>
 
     </Grid>
 </Page>
