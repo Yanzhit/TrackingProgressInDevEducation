@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Lectors] (
+﻿CREATE TABLE [TrackingProgressInDevEducationDB].[Lectors] (
     [id]       INT           IDENTITY (1, 1) NOT NULL,
     [FullName] NVARCHAR (50) NOT NULL,
     [Email] NVARCHAR(50) NULL, 

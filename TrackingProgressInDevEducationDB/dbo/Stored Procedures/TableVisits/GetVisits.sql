@@ -1,3 +1,3 @@
-﻿CREATE PROCEDURE [dbo].[GetVisits]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetVisits]
 AS
 select * from [Visits]

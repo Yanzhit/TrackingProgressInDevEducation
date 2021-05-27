@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ChangePaymentAmount]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[ChangePaymentAmount]
 	@Amount decimal,
 	@ID int
 AS

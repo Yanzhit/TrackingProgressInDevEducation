@@ -1,3 +1,3 @@
-﻿CREATE PROCEDURE [dbo].[GetGroups]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetGroups]
 AS
 select * from [Groups]

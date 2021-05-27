@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[RemoveLectorById](@ID int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[RemoveLectorById](@ID int)
 AS 
-delete from [dbo].[Lectors]
+delete from [TrackingProgressInDevEducationDB].[Lectors]
 where id=@ID

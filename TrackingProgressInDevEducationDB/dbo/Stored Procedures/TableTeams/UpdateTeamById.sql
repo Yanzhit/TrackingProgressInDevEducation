@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[UpdateTeamById](@id int,@Name nvarchar(50))
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[UpdateTeamById](@id int,@Name nvarchar(50))
 AS 
-update [dbo].[Teams] set [Name]=@Name
+update [TrackingProgressInDevEducationDB].[Teams] set [Name]=@Name
 where [id]=@id

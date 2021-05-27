@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetCoursesByLector]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetCoursesByLector]
 	@LectorId int
 AS
 	SELECT C.id, C.[Name]

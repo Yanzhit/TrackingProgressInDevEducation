@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetAllPaymentsByStudent]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllPaymentsByStudent]
 	@Student int
 AS
 	SELECT id

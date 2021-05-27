@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetTeamById](@id int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetTeamById](@id int)
 AS 
 select * from [Teams]
 where id=@id
