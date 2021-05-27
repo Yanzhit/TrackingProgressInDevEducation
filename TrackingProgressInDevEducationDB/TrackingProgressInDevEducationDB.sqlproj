@@ -113,7 +113,7 @@
     <Build Include="SQLHelper.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\AddNewCommentToStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\GetByIdComment.sql" />
-    <Build Include="dbo\Stored Procedures\TableComments\GetComments.sql" />
+    <Build Include="dbo\Stored Procedures\TableComments\GetCommentsByStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\RemoveComments.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\UpdateCommentById.sql" />
     <Build Include="dbo\Stored Procedures\TableComments\RemoveCommentById.sql" />
@@ -164,6 +164,12 @@
     <Build Include="dbo\Stored Procedures\TableLections\GetAllLectionsByGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableLections\ChangeLectionDate.sql" />
     <Build Include="Security\Schemas\TrackingProgressInDevEducationDB.sql" />
+    <Build Include="dbo\Stored Procedures\TableStudents\GetAllStudentsByGroup.sql" />
+    <Build Include="dbo\Stored Procedures\TableVisits\GetVisitsByStudent.sql" />
+    <Build Include="dbo\Stored Procedures\TableHomeworkComplete\GetHWComplitingByStudent.sql" />
+    <Build Include="dbo\Stored Procedures\TableLections\AddLectionToGroup.sql" />
+    <Build Include="dbo\Stored Procedures\TableHomeworkComplete\GetAllHomeWorkByGroup.sql" />
+    <Build Include="dbo\Stored Procedures\TableHomeworkComplete\AddNewHomeWorkForStudentByGroup.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
