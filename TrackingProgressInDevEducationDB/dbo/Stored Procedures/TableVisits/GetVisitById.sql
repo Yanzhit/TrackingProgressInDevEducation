@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetVisitById](@ID int)
+﻿CREATE PROCEDURE [dbo].[GetVisitById](@id int)
 AS 
 select * from [Visits]
-where id=@ID
+where id=@id

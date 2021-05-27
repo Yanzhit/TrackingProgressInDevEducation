@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[RemoveVisitById](@ID int)
+﻿CREATE PROCEDURE [dbo].[RemoveVisitById](@id int)
 AS 
 delete from [dbo].[Visits]
-where id=@ID
+where id=@id
