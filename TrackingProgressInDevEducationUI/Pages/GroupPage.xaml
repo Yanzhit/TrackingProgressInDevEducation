@@ -20,7 +20,7 @@
             <DatePicker x:Name="datePicker_Copy" HorizontalAlignment="Left" Margin="293,194,0,0" VerticalAlignment="Top" Height="26" Width="139"/>
         </Grid>
         <Label x:Name="label" Content="Создание новой группы" HorizontalAlignment="Center" Height="53" Margin="0,36,0,0" VerticalAlignment="Top" Width="291" FontSize="24"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="39,36,0,0" VerticalAlignment="Top" Width="147" Source="/Pages/educationCore-LOGO.JPG"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="39,36,0,0" VerticalAlignment="Top" Width="147" Source="/Resourse/educationCore-LOGO.JPG"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
 
     </Grid>

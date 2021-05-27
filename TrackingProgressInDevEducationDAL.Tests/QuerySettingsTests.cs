@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests;
+using TrackingProgressInDevEducationDAL.Requests.NoParams;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Tests

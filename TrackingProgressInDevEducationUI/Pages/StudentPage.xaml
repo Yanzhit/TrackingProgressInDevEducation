@@ -12,7 +12,7 @@
         <Border BorderThickness="1" BorderBrush="Black" Margin="10,10,10,360">
             <Label Content="Студент1" Margin="327,25,327,25"/>
         </Border>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="62" Margin="19,20,0,0" VerticalAlignment="Top" Width="168" Source="/Pages/educationCore-LOGO.JPG"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="62" Margin="19,20,0,0" VerticalAlignment="Top" Width="168" Source="/Resourse/educationCore-LOGO.JPG"/>
         <DataGrid x:Name="dataGrid" Margin="10,126,10,225">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="123"/>
