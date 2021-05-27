@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public DeletePaymentById(int id)
         {
             Type = typeof(Payments);
-            Name = "DeletePaymentById";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

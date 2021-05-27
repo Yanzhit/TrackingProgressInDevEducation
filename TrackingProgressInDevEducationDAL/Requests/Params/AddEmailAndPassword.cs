@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public AddEmailAndPassword(int id, string email, string password)
         {
             Type = typeof(Lectors);
-            Name = "AddEmailAndPassword";
+            Name = GetType().Name;
             Params = $"{id}, {email}, {password}";
         }
     }

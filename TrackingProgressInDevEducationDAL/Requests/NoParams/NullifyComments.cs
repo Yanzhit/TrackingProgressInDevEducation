@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 
         public NullifyComments()
         {
-            Type = typeof(NullifyComments);
+            Type = typeof(Comments);
             Name = GetType().Name;
             Params = "";
         }

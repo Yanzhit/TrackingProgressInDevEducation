@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public AddNewLector(string fullName)
         {
             Type = typeof(Lectors);
-            Name = "AddNewLector";
+            Name = GetType().Name;
             Params = $"{fullName}";
         }
     }

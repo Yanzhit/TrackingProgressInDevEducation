@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public DeleteSelectedCommentType(int id)
         {
             Type = typeof(CommentType);
-            Name = "DeleteSelectedCommentType";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

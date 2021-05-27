@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public ClosePayment(DateTime date, int id)
         {
             Type = typeof(Payments);
-            Name = "ClosePayment";
+            Name = GetType().Name;
             Params = $"{date}, {id}";
         }
     }

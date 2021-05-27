@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public GetAllPaymentsByStudent(int student)
         {
             Type = typeof(Payments);
-            Name = "GetAllPaymentsByStudent";
+            Name = GetType().Name;
             Params = $"{student}";
         }
     }

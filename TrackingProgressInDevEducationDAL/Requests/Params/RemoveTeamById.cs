@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public RemoveTeamById(int id)
         {
             Type = typeof(Teams);
-            Name = "RemoveTeamById";
+            Name = GetType().Name;
             Params = $"{id}";
         }
     }

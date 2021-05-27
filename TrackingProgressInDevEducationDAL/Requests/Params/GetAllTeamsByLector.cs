@@ -9,11 +9,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public string Name { get; }
         public string Params { get; }
 
-        public GetAllTeamsByLector(int LectorId)
+        public GetAllTeamsByLector(int lectorId)
         {
             Type = typeof(Teams);
-            Name = "GetAllTeamsByLector";
-            Params = $"{LectorId}";
+            Name = GetType().Name;
+            Params = $"{lectorId}";
         }
     }
 }

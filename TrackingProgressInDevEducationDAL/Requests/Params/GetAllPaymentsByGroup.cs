@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public GetAllPaymentsByGroup(int group)
         {
             Type = typeof(Payments);
-            Name = "GetAllPaymentsByGroup";
+            Name = GetType().Name;
             Params = $"{group}";
         }
     }

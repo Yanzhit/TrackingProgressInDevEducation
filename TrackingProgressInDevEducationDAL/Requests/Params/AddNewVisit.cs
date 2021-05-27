@@ -10,11 +10,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public string Name { get; }
         public string Params { get; }
 
-        public AddNewVisit(bool VisitStatus, int StudentId, int LectionId)
+        public AddNewVisit(bool visitStatus, int studentId, int lectionId)
         {
             Type = typeof(Visits);
-            Name = "AddNewVisit";
-            Params = $"{VisitStatus}, {StudentId}, {LectionId}";
+            Name = GetType().Name;
+            Params = $"{visitStatus}, {studentId}, {lectionId}";
         }
     }
 }

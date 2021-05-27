@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public UpdateCommentTypeById(int id, string name)
         {
             Type = typeof(CommentType);
-            Name = "UpdateCommentTypeById";
+            Name = GetType().Name;
             Params = $"{id}, {name}";
         }
     }

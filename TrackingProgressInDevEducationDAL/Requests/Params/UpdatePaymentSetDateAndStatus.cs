@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public UpdatePaymentSetDateAndStatus(int id, DateTime newDate)
         {
             Type = typeof(Payments);
-            Name = "UpdatePaymentSetDateAndStatus";
+            Name = GetType().Name;
             Params = $"{id}, {newDate}";
         }
     }

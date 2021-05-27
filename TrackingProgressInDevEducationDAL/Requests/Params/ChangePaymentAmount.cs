@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Params
         public ChangePaymentAmount(decimal amount, int id)
         {
             Type = typeof(Payments);
-            Name = "ChangePaymentAmount";
+            Name = GetType().Name;
             Params = $"{amount}, {id}";
         }
     }

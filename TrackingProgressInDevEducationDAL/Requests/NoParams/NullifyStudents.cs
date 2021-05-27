@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 
         public NullifyStudents()
         {
-            Type = typeof(NullifyStudents);
+            Type = typeof(Students);
             Name = GetType().Name;
             Params = "";
         }
