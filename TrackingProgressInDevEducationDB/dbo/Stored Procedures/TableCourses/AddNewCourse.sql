@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[AddNewCourse](@Name nvarchar(50), @StartedOn date, @FinishedOn date)
+﻿CREATE PROCEDURE [dbo].[AddNewCourse]
+@Name nvarchar(50)
 AS
-insert [Courses] ([Name], [StartedOn], [FinishedOn])
-values (@Name, @StartedOn, @FinishedOn)
+insert [Courses] 
+values (@Name)

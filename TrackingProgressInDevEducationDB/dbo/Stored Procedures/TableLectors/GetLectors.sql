@@ -1,3 +1,3 @@
 ﻿CREATE PROCEDURE [dbo].[GetLectors] 
 AS
-select * from [Lectors]
+select id, FullName from [Lectors]
