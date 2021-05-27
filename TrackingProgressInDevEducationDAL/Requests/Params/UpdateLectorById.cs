@@ -1,0 +1,20 @@
+﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interface;
+
+namespace TrackingProgressInDevEducationDAL.Requests.Params
+{
+    public class UpdateLectorById : IQuery
+    {
+        public Type Type { get; }
+        public string Name { get; }
+        public string Params { get; }
+
+        public UpdateLectorById(int id, string fullName)
+        {
+            Type = typeof(Lectors);
+            Name = "UpdateLectorById";
+            Params = $"{id}, {fullName}";
+        }
+    }
+}
