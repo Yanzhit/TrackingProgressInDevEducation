@@ -5,16 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Abstract\**" />
+    <EmbeddedResource Remove="Models\Abstract\**" />
+    <None Remove="Models\Abstract\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TrackingProgressInDevEducationDB\TrackingProgressInDevEducationDB.sqlproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Abstract\" />
   </ItemGroup>
 
 </Project>

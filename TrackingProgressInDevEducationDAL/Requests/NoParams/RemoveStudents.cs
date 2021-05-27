@@ -2,17 +2,19 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests
+namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
     public class RemoveStudents : IQuery
     {
         public Type Type { get;}
-        public string QueryName { get;}
+        public string Name { get;}
+        public string Params { get; }
 
         public RemoveStudents()
         {
             Type = typeof(Students);
-            QueryName  = "RemoveStudents";
+            Name  = "RemoveStudents";
+            Params = "";
         }
     }
 }

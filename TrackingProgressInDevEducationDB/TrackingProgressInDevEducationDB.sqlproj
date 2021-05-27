@@ -16,7 +16,7 @@
     <ModelCollation>1049,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -70,7 +70,11 @@
     <Folder Include="dbo\Stored Procedures\TableComments" />
     <Folder Include="dbo\Stored Procedures\TableLectors" />
     <Folder Include="dbo\Stored Procedures\TableVisits" />
+    <Folder Include="dbo\Stored Procedures\CommentTypes" />
+    <Folder Include="dbo\Stored Procedures\Payments" />
     <Folder Include="dbo\Stored Procedures\TableTeams" />
+    <Folder Include="dbo\Stored Procedures\TableLectorCourses" />
+    <Folder Include="dbo\Stored Procedures\NullifyProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -93,7 +97,6 @@
     <Build Include="dbo\Stored Procedures\TableStudents\AddNewStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetByIdStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
-    <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\GetGroups.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\AddNewGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\RemoveGroupById.sql" />
@@ -131,6 +134,32 @@
     <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\AddNewCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\DeleteSelectedCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\GetAllCommentTypes.sql" />
+    <Build Include="dbo\Stored Procedures\CommentTypes\UpdateCommentTypeById.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\AddNewPayment.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\ChangePaymentAmount.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\ClosePayment.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\GetAllPaymentsByStudent.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\GetAllPaymentsByGroup.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\UpdatePaymentTerm.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\UpdatePaymentSetDateAndStatus.sql" />
+    <Build Include="dbo\Stored Procedures\Payments\DeletePaymentById.sql" />
+    <Build Include="dbo\Tables\Cities.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectors\AddEmailAndPassword.sql" />
+    <Build Include="dbo\Tables\Lector_Courses.sql" />
+    <Build Include="dbo\Stored Procedures\TableLectorCourses\AddCourseToLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableCourses\GetCoursesByLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableGroups\GetGroupsByLector.sql" />
+    <Build Include="dbo\Stored Procedures\TableTeams\GetAllTeamsByLector.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyStudents.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyComments.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyCourses.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyGroups.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyHomework_Group.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyHomeworkComplete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
