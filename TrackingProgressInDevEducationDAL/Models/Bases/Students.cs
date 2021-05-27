@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public decimal Rate { get; set; }
+        public Decimal Rate { get; set; }
 
         public Students(List<object> objects)
         {
