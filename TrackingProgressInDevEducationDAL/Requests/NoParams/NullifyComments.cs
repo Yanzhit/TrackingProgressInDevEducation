@@ -4,15 +4,15 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
-    public class RemoveComments : IQuery
+    public class NullifyComments : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public RemoveComments()
+        public NullifyComments()
         {
-            Type = typeof(Comments);
+            Type = typeof(NullifyComments);
             Name = GetType().Name;
             Params = "";
         }
