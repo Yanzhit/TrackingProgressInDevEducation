@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для GroupPage.xaml
+    /// Interaction logic for GroupPage.xaml
     /// </summary>
     public partial class GroupPage : Page
     {
