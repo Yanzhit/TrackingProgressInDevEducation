@@ -71,6 +71,7 @@
     <Folder Include="dbo\Stored Procedures\TableLectors" />
     <Folder Include="dbo\Stored Procedures\TableVisits" />
     <Folder Include="dbo\Stored Procedures\TableTeams" />
+    <Folder Include="dbo\Stored Procedures\NullifyProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Lectors.sql" />
@@ -93,7 +94,6 @@
     <Build Include="dbo\Stored Procedures\TableStudents\AddNewStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetByIdStudent.sql" />
     <Build Include="dbo\Stored Procedures\TableStudents\GetStudents.sql" />
-    <Build Include="dbo\Stored Procedures\TableStudents\RemoveStudents.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\GetGroups.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\AddNewGroup.sql" />
     <Build Include="dbo\Stored Procedures\TableGroups\RemoveGroupById.sql" />
@@ -131,6 +131,13 @@
     <Build Include="dbo\Stored Procedures\TableCourses\GetAllCourses.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\GetCourseById.sql" />
     <Build Include="dbo\Stored Procedures\TableCourses\RemoveCourseById.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyStudents.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyComments.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyCommentType.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyCourses.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyGroups.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyHomework_Group.sql" />
+    <Build Include="dbo\Stored Procedures\NullifyProcedures\NullifyHomeworkComplete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
