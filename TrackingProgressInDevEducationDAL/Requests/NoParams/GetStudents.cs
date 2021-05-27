@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         public GetStudents()
         {
             Type = typeof(Students);
-            Name = "GetStudents";
+            Name = "[TrackingProgressInDevEducationDB].GetStudents";
             Params = "";
         }
     }
