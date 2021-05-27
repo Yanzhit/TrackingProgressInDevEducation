@@ -4,18 +4,17 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
-  public  class AddNewComment: IQuery
+    public class UpdateGroupById : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public AddNewComment(string Text,int TypeId,int StudentId, int CreatedBy)
+        public UpdateGroupById(int id, string name, int courseId)
         {
-            Type = typeof(Comments);
-            Name = "AddNewComment";
-            Params = $"{Text},{TypeId},{StudentId},{CreatedBy}";
+            Type = typeof(Groups);
+            Name = "UpdateGroupById";
+            Params = $"{id}, {name}, {courseId}";
         }
     }
-
 }

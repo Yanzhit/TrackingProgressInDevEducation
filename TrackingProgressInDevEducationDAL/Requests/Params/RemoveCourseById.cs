@@ -2,20 +2,19 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.Params
 {
-  public  class GetByIdComment:IQuery
+    public class RemoveCourseById : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
-        public GetByIdComment(int id)
+
+        public RemoveCourseById(int id)
         {
-            Type = typeof(Comments);
-            Name = "GetByIdComment";
+            Type = typeof(Courses);
+            Name = "RemoveCourseById";
             Params = $"{id}";
         }
     }
-    }
-
+}

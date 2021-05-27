@@ -2,7 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests
+namespace TrackingProgressInDevEducationDAL.Requests.Params
 {
     public class AddNewStudent : IQuery
     {
@@ -10,11 +10,11 @@ namespace TrackingProgressInDevEducationDAL.Requests
         public string Name { get; }
         public string Params { get; }
 
-        public AddNewStudent(string Name, string Surname, decimal Rate)
+        public AddNewStudent(string name, string surname, decimal rate)
         {
             Type = typeof(Students);
             Name = "AddNewStudent";
-            Params = $"{Name},{Surname},{Rate}";
+            Params = $"{name}, {surname}, {rate}";
         }
     }
 }

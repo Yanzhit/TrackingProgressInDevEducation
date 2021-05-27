@@ -2,9 +2,9 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.Params
 {
-   public class GetGroupById:IQuery
+   public class GetGroupById : IQuery
     {
         public Type Type { get; }
         public string Name { get; }

@@ -2,7 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests
+namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
     public class GetStudents : IQuery
     {
@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests
         {
             Type = typeof(Students);
             Name = "GetStudents";
-            Params = "select * from [Students]";
+            Params = "";
         }
     }
 }

@@ -4,7 +4,7 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
-  public  class GetComments:IQuery
+    public  class GetComments : IQuery
     {
         public Type Type { get; }
         public string Name { get; }

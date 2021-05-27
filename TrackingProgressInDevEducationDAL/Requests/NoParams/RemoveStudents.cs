@@ -2,7 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests
+namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
     public class RemoveStudents : IQuery
     {

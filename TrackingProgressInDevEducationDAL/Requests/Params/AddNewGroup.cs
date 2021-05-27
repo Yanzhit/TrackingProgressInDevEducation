@@ -2,19 +2,19 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.Params
 {
-    public class RemoveHomeworksByid:IQuery
+    public class AddNewGroup : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public RemoveHomeworksByid(int id)
+        public AddNewGroup(string name, int courseId)
         {
-            Type = typeof(Homeworks);
-            Name = "RemoveHomeworksByid";
-            Params = $"{id}";
+            Type = typeof(Groups);
+            Name = "AddNewGroup";
+            Params = $"{name}, {courseId}";
         }
     }
 }

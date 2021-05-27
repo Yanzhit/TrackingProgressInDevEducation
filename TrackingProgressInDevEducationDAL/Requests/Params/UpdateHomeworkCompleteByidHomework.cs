@@ -4,17 +4,17 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
-    public class RemoveCourseById:IQuery
+    public class UpdateHomeworkCompleteByIdHomework : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public RemoveCourseById(int id)
+        public UpdateHomeworkCompleteByIdHomework(int homeworkId, bool status)
         {
-            Type = typeof(Courses);
-            Name = "RemoveCourseById";
-            Params = $"{id}";
+            Type = typeof(HomeworkComplete);
+            Name = "UpdateHomeworkCompleteByIdHomework";
+            Params = $"{homeworkId}, {status}";
         }
     }
 }

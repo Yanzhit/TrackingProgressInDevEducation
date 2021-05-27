@@ -2,19 +2,19 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests
+namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 {
-    public class GetStudents : IQuery
+    public class CreateNewHomeworks : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public GetStudents()
+        public CreateNewHomeworks(string name)
         {
-            Type = typeof(Students);
-            Name = "GetStudents";
-            Params = "";
+            Type = typeof(Homeworks);
+            Name = "CreateNewHomeworks";
+            Params = $"{name}";
         }
     }
 }

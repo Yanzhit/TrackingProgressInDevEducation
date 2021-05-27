@@ -19,8 +19,4 @@
     <ProjectReference Include="..\TrackingProgressInDevEducationDB\TrackingProgressInDevEducationDB.sqlproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Requests\Params\" />
-  </ItemGroup>
-
 </Project>
