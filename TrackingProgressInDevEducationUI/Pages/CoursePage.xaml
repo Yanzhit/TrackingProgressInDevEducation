@@ -1,0 +1,24 @@
+﻿<Page x:Class="TrackingProgressInDevEducationUI.Pages.CoursePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CoursePage">
+
+    <Grid x:Name="Grid" Background="#FFE2D8D8" Margin="0,0,-100,-250
+          " HorizontalAlignment="Right" Width="900">
+        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="90" Margin="26,10,0,0" VerticalAlignment="Top" Width="261" Source="/Pages/educationCore-LOGO.JPG"/>
+        <Label x:Name="NamePage" Content="Создание нового курса" HorizontalAlignment="Left" Height="72" Margin="288,10,0,0" VerticalAlignment="Top" Width="575" FontSize="30"/>
+        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="512" Margin="0,155,0,0" VerticalAlignment="Top" Width="772" Background="#FFF9EFEF">
+            <Label x:Name="NameCursesText" Content="Название курса" HorizontalAlignment="Left" Height="69" Margin="36,49,0,0" VerticalAlignment="Top" Width="287" FontSize="28"/>
+            <Label x:Name="CourseDescriptionText" Content="Описание курса" HorizontalAlignment="Left" Height="130" Margin="36,196,0,0" VerticalAlignment="Top" Width="330" FontSize="28"/>
+            <TextBox x:Name="NameCursesTextBox" HorizontalAlignment="Left" Height="84" Margin="349,49,0,0" Text="Введите название..." TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <TextBox x:Name="CourseDescriptionBoxText" HorizontalAlignment="Left" Height="219" Margin="349,196,0,0" Text="Введите описание..." TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE6E6E6"/>
+            <Button x:Name="CreateCursesButton" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="349,445,0,0" VerticalAlignment="Top" Width="389" FontSize="20" Background="#FFEC7979"/>
+        </Grid>
+
+    </Grid>
+</Page>
