@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.NoParams;
+using TrackingProgressInDevEducationDAL.Requests.ForTables.TableStudents;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
