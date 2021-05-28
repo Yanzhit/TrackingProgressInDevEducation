@@ -17,21 +17,39 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 {
                     new()
                     {
-                        Name = "Имя",
-                        Surname = "Фамилия",
-                        Rate = 0.0m
+                        Name = "Тимур",
+                        Surname = "Кот",
+                        Rate = 100.00m
                     },
                     new()
                     {
-                        Name = "Имя",
-                        Surname = "Фамилия",
-                        Rate = 0.0m
+                        Name = "Шерхан",
+                        Surname = "Тигр",
+                        Rate = 100.00m
                     },
                     new()
                     {
-                        Name = "Имя",
-                        Surname = "Фамилия",
-                        Rate = 0.0m
+                        Name = "Убийца",
+                        Surname = "Киви",
+                        Rate = 100.00m
+                    },
+                    new()
+                    {
+                        Name = "Синий",
+                        Surname = "Клен",
+                        Rate = 100.00m
+                    },
+                    new()
+                    {
+                        Name = "Радостная",
+                        Surname = "Прелесть",
+                        Rate = 10.00m
+                    },
+                    new()
+                    {
+                        Name = "Жидкий",
+                        Surname = "Лес",
+                        Rate = 67.00m
                     }
                 }
             };

@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Interface;
+﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
@@ -8,5 +9,23 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int TypeId { get; set; }
         public int StudentId { get; set; }
         public int CreatedBy { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Comments)obj);
+        }
+
+        protected bool Equals(Comments other)
+        {
+            return Text == other.Text &&
+                   TypeId == other.TypeId &&
+                   StudentId == other.StudentId &&
+                   CreatedBy == other.CreatedBy;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy);
+        }
     }
 }
