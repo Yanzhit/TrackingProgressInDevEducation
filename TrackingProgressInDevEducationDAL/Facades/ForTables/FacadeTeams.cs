@@ -9,6 +9,15 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
 
     }
 
+    public class FacadeUpdateTeamById
+    {
+        public List<Teams> UpdateTeamById(int id, string name)
+        {
+            UpdateTeamById updateTeamById = new UpdateTeamById(id, name);
+            return (List<Teams>) QuerySettings.QuerySet(updateTeamById);
+        }
+    }
+
     public class FacadeGetTeamById
     {
         public List<Teams> GetTeamById(int id)
