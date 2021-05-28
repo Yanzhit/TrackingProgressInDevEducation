@@ -17,4 +17,14 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
             return (List<Homeworks>) QuerySettings.QuerySet(getHomeworkById);
         }
     }
+
+    public class FacadeUpdateHomeworkById
+    {
+        public List<Homeworks> UpdateHomeworkById(string name, int id)
+        {
+            UpdateHomeworkById updateHomeworkById = new UpdateHomeworkById(name, id);
+            return (List<Homeworks>) QuerySettings.QuerySet(updateHomeworkById);
+        }
+    }
+
 }
