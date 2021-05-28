@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.NoParams;
+﻿using TrackingProgressInDevEducationDAL.Requests.ForTables.Students;
+using TrackingProgressInDevEducationDAL.Requests.NoParams;
 using TrackingProgressInDevEducationDAL.Requests.Params;
 
 namespace TrackingProgressInDevEducationDAL

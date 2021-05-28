@@ -1,8 +1,7 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.ForTables.Students
 {
     public class GetStudents : IQuery
     {
@@ -12,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
 
         public GetStudents()
         {
-            Type = typeof(Students);
+            Type = typeof(Models.Bases.Students);
             Name = GetType().Name;
             Params = string.Empty;
         }
