@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Nullify
         {
             Type = typeof(Students);
             Name = GetType().Name;
-            Params = "";
+            Params = string.Empty;
         }
     }
 }
