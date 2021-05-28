@@ -1,4 +1,5 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Nullify
@@ -11,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 
         public NullifyHomeworkGroup()
         {
-            Type = typeof(NullifyHomeworkGroup);
+            Type = typeof(HomeworkGroup);
             Name = GetType().Name;
             Params = string.Empty;
         }

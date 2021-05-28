@@ -1,4 +1,5 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Nullify
@@ -11,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 
         public NullifyLectorGroup()
         {
-            Type = typeof(NullifyLectorGroup);
+            Type = typeof(LectorGroup);
             Name = GetType().Name;
             Params = string.Empty;
         }
