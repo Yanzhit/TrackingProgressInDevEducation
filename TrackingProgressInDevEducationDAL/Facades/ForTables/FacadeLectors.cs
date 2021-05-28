@@ -9,6 +9,15 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
         
     }
 
+    public class FacadeGetLectors
+    {
+        public List<Lectors> GetLectors()
+        {
+            GetLectors getLectors = new GetLectors();
+            return (List<Lectors>)QuerySettings.QuerySet(getLectors);
+        }
+    }
+
     public class FacadeAddNewLector
     {
         public List<Lectors> AddNewLector(string fullName)
