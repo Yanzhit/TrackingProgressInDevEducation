@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class QuerySettingsTests
     {
-        [TestCaseSource(typeof(ConnectionDTO))]
+        [TestCaseSource(typeof(StudentsDTO))]
         public void GetStudentsTest(IQuery query, List<Students> expected)
         {
             List<Students> actual = (List<Students>)QuerySettings.QuerySet(query);

@@ -5,13 +5,13 @@ using TrackingProgressInDevEducationDAL.Requests.NoParams;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
-    public class PreInstallMock
+    public static class PreInstallConnectMock
     {
-        public void Mock(int i)
+        public static List<T> GetMock<T>(List<T> t)
         {
             NullifyStudents nullifyStudents = new NullifyStudents();
             QuerySettings.QuerySet(nullifyStudents);
-            switch (i)
+            switch (t.Count)
             {
                 case 1:
                     new List<Students>
@@ -37,6 +37,8 @@ namespace TrackingProgressInDevEducationDAL.Tests
                     };
                     break;
             }
+
+            return new List<T>();
         }
     }
 }

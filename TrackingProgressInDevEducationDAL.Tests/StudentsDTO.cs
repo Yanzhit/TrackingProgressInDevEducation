@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.NoParams;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
-    public class ConnectionDTO : IEnumerable
+    public class StudentsDTO : IEnumerable
     {
         public IEnumerator GetEnumerator()
         {
