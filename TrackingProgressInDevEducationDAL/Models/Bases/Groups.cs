@@ -19,8 +19,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Groups other)
         {
-            return Name == other.Name &&
-                   CourseId == other.CourseId;
+            return Name == other.Name
+                   && CourseId == other.CourseId;
         }
 
         public override int GetHashCode()

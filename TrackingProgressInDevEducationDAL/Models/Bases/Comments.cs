@@ -15,12 +15,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             return Equals((Comments)obj);
         }
 
-        protected bool Equals(Comments other)
+        private bool Equals(Comments other)
         {
-            return Text == other.Text &&
-                   TypeId == other.TypeId &&
-                   StudentId == other.StudentId &&
-                   CreatedBy == other.CreatedBy;
+            return Text == other.Text
+                   && TypeId == other.TypeId
+                   && StudentId == other.StudentId
+                   && CreatedBy == other.CreatedBy;
         }
 
         public override int GetHashCode()

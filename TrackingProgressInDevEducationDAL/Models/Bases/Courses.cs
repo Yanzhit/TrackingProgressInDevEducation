@@ -20,9 +20,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Courses other)
         {
-            return Name == other.Name &&
-                   StartedOn == other.StartedOn &&
-                   FinishedOn == other.FinishedOn;
+            return Name == other.Name
+                   && StartedOn == other.StartedOn
+                   && FinishedOn == other.FinishedOn;
         }
 
         public override int GetHashCode()

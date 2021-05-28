@@ -16,9 +16,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(HomeworkComplete other)
         {
-            return HomeworkId == other.HomeworkId &&
-                   StudentId == other.StudentId &&
-                   Status == other.Status;
+            return HomeworkId == other.HomeworkId
+                   && StudentId == other.StudentId
+                   && Status == other.Status;
         }
         public override int GetHashCode()
         {

@@ -20,9 +20,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Visits other)
         {
-            return VisitStatus == other.VisitStatus &&
-                   StudentId == other.StudentId &&
-                   LectionId == other.LectionId;
+            return VisitStatus == other.VisitStatus
+                   && StudentId == other.StudentId
+                   && LectionId == other.LectionId;
         }
 
         public override int GetHashCode()

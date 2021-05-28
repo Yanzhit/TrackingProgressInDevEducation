@@ -15,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(LectorGroup other)
         {
-            return LectorId == other.LectorId &&
-                   GroupId == other.GroupId;
+            return LectorId == other.LectorId
+                   && GroupId == other.GroupId;
         }
 
         public override int GetHashCode()

@@ -21,10 +21,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Students actual)
         {
-            return actual != null &&
-                   Name == actual.Name &&
-                   Surname == actual.Surname &&
-                   Rate == actual.Rate;
+            return actual != null
+                   && Name == actual.Name
+                   && Surname == actual.Surname
+                   && Rate == actual.Rate;
         }
 
         public override int GetHashCode()

@@ -15,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(TeamStudent other)
         {
-            return TeamId == other.TeamId &&
-                   StudentId == other.StudentId;
+            return TeamId == other.TeamId
+                   && StudentId == other.StudentId;
         }
 
         public override int GetHashCode()

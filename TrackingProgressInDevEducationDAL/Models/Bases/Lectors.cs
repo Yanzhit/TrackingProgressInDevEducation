@@ -20,9 +20,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Lectors other)
         {
-            return FullName == other.FullName &&
-                   Email == other.Email &&
-                   Password == other.Password;
+            return FullName == other.FullName
+                   && Email == other.Email
+                   && Password == other.Password;
         }
 
         public override int GetHashCode()

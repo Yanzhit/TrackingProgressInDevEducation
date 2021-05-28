@@ -22,11 +22,11 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Payments other)
         {
-            return StudentId == other.StudentId &&
-                   PaymentTo.Equals(other.PaymentTo) &&
-                   PaymentOn.Equals(other.PaymentOn) &&
-                   Amount == other.Amount &&
-                   Status == other.Status;
+            return StudentId == other.StudentId
+                   && PaymentTo.Equals(other.PaymentTo)
+                   && PaymentOn.Equals(other.PaymentOn)
+                   && Amount == other.Amount
+                   && Status == other.Status;
         }
 
         public override int GetHashCode()
