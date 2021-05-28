@@ -10,6 +10,15 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
         
     }
 
+    public class FacadeUpdateCommentById
+    {
+        public List<Comments> UpdateCommentById(int id, string text)
+        {
+            UpdateCommentById updateCommentById = new UpdateCommentById(id, text);
+            return (List<Comments>)QuerySettings.QuerySet(updateCommentById);
+        }
+    }
+
     public class FacadeRemoveCommentById
     {
         public List<Comments> RemoveCommentById(int id)
