@@ -1,6 +1,5 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 using TrackingProgressInDevEducationDAL.Requests.Nullify;
 
 namespace TrackingProgressInDevEducationDAL.Tests
@@ -12,34 +11,49 @@ namespace TrackingProgressInDevEducationDAL.Tests
             switch (type.FullName)
             {
                 case nameof(Comments):
+                    NullifyTableComments();
                     break;
                 case nameof(CommentType):
+                    NullifyTableCommentType();
                     break;
                 case nameof(Courses):
+                    NullifyTableCourses();
                     break;
                 case nameof(Groups):
+                    NullifyTableGroups();
                     break;
                 case nameof(HomeworkComplete):
+                    NullifyTableHomeworkComplete();
                     break;
                 case nameof(HomeworkGroup):
+                    NullifyTableHomeworkGroup();
                     break;
                 case nameof(Homeworks):
+                    NullifyTableHomeworks();
                     break;
                 case nameof(Lections):
+                    NullifyTableLections();
                     break;
                 case nameof(LectorGroup):
+                    NullifyTableLectorGroup();
                     break;
                 case nameof(Lectors):
+                    NullifyTableLectors();
                     break;
                 case nameof(Payments):
+                    NullifyTablePayments();
                     break;
                 case nameof(Students):
+                    NullifyTableStudents();
                     break;
                 case nameof(Teams):
+                    NullifyTableTeams();
                     break;
                 case nameof(TeamStudent):
+                    NullifyTableTeamStudent();
                     break;
                 case nameof(Visits):
+                    NullifyTableVisits();
                     break;
             }
         }
