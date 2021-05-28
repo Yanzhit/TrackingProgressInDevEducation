@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.NoParams
         {
             Type = typeof(Courses);
             Name = GetType().Name;
-            Params = "";
+            Params = string.Empty;
         }
     }
 }
