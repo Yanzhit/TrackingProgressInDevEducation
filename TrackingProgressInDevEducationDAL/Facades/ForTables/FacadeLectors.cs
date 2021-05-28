@@ -17,4 +17,13 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
             return (List<Lectors>) QuerySettings.QuerySet(updateLectorById);
         }
     }
+
+    public class FacadeRemoveLectorById
+    {
+        public List<Lectors> RemoveLectorById(int id)
+        {
+            RemoveLectorById removeLectorById = new RemoveLectorById(id);
+            return (List<Lectors>) QuerySettings.QuerySet(removeLectorById);
+        }
+    }
 }
