@@ -17,4 +17,13 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
             return (List<Comments>) QuerySettings.QuerySet(getAllCourses);
         }
     }
+
+    public class FacadeGetByIdComment
+    {
+        public List<Comments> GetByIdComment(int id)
+        {
+            GetByIdComment getByIdComment = new GetByIdComment(id);
+            return (List<Comments>)QuerySettings.QuerySet(getByIdComment);
+        }
+    }
 }
