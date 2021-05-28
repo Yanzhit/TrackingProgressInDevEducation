@@ -27,4 +27,13 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
         }
     }
 
+
+    public class FacadeRemoveHomeworksById
+    {
+        public List<Homeworks> RemoveHomeworksById(int id)
+        {
+            RemoveHomeworksById removeHomeworksById = new RemoveHomeworksById(id);
+            return (List<Homeworks>) QuerySettings.QuerySet(removeHomeworksById);
+        }
+    }
 }
