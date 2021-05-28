@@ -2,19 +2,19 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 {
-    public class NullifyComments : IQuery
+    public class NullifyHomeworkGroup : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public NullifyComments()
+        public NullifyHomeworkGroup()
         {
-            Type = typeof(Comments);
+            Type = typeof(HomeworkGroup);
             Name = GetType().Name;
-            Params = "";
+            Params = string.Empty;
         }
     }
 }

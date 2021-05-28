@@ -2,17 +2,17 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
-namespace TrackingProgressInDevEducationDAL.Requests.NoParams
+namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 {
-    public class GetStudents : IQuery
+    public class NullifyLectorGroup : IQuery
     {
         public Type Type { get; }
         public string Name { get; }
         public string Params { get; }
 
-        public GetStudents()
+        public NullifyLectorGroup()
         {
-            Type = typeof(Students);
+            Type = typeof(LectorGroup);
             Name = GetType().Name;
             Params = string.Empty;
         }
