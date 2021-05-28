@@ -164,18 +164,28 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyCommentType.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyCourses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyGroups.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyHomework_Group.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyHomeworkGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyHomeworkComplete.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyHomeworks.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyLections.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyLector_Group.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyLectorGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyPayments.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyTeam_Student.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyTeamStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyTeams.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyVisits.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableComments\UpdateCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Security\Schemas\TrackingProgressInDevEducationDB.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableComments\GetCommentsByStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableHomeworkComplete\AddNewHomeWorkForStudentByGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableHomeworkComplete\GetAllHomeWorkByGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableHomeworkComplete\GetHWComplitingByStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectors\AddLectionToGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableStudents\GetAllStudentsByGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableVisits\GetVisitsByStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyCities.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\NullifyProcedures\NullifyLectorCourses.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableStudents\RemoveStudentById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

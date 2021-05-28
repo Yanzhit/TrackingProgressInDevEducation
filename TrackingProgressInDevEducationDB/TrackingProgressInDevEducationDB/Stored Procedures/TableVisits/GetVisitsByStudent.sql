@@ -8,4 +8,3 @@ AS
 	FROM Visits V
 	JOIN Lections L ON L.id = V.LectionId
 	WHERE V.StudentId = @StudentId
-

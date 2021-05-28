@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.NoParams;
+using TrackingProgressInDevEducationDAL.Requests.Nullify;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
