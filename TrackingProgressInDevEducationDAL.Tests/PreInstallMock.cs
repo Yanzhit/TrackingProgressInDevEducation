@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.Nullify;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
-    public static class PreInstallConnectMock
+    public static class PreInstallMock
     {
         public static List<T> GetMock<T>(List<T> t)
         {
