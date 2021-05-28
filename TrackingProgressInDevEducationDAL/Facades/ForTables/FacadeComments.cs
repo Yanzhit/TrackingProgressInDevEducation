@@ -10,6 +10,15 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
         
     }
 
+    public class FacadeAddNewComment
+    {
+        public List<Comments> AddNewComment(string text, int typeId, int studentId, int createdBy)
+        {
+            AddNewComment addNewComment = new AddNewComment(text, typeId, studentId, createdBy);
+            return (List<Comments>) QuerySettings.QuerySet(addNewComment);
+        }
+    }
+
     public class FacadeGetComments
     {
         public List<Comments> GetComments()
