@@ -21,7 +21,11 @@
 
   <ItemGroup>
     <Folder Include="Models\Others\" />
-    <Folder Include="Requests\Others\" />
+    <Folder Include="Requests\ForTables\TableCities\" />
+    <Folder Include="Requests\ForTables\TableHomeworkGroup\" />
+    <Folder Include="Requests\ForTables\TableLections\" />
+    <Folder Include="Requests\ForTables\TableLectorCourses\" />
+    <Folder Include="Requests\ForTables\TableLectorGroup\" />
   </ItemGroup>
 
 </Project>

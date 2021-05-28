@@ -146,7 +146,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\UpdatePaymentSetDateAndStatus.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\DeletePaymentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\Cities.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectors\AddEmailAndPassword.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectors\AddEmailAndPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\Lector_Courses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectorCourses\AddCourseToLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableCourses\GetCoursesByLector.sql" />
