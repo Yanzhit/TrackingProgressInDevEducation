@@ -54,4 +54,13 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
             return (List<Groups>)QuerySettings.QuerySet(removeGroupById);
         }
     }
+
+    public class FacadeUpdateGroupById
+    {
+        public List<Groups> UpdateGroupById(int id, string name, int courseId)
+        {
+            UpdateGroupById updateGroupById = new UpdateGroupById(id, name, courseId);
+            return (List<Groups>)QuerySettings.QuerySet(updateGroupById);
+        }
+    }
 }
