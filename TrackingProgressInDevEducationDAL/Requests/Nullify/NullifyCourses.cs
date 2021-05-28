@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
-using static System.String;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 {
@@ -12,9 +12,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Nullify
 
         public NullifyCourses()
         {
-            Type = typeof(NullifyCourses);
+            Type = typeof(Courses);
             Name = GetType().Name;
-            Params = Empty;
+            Params = string.Empty;
         }
     }
 }
