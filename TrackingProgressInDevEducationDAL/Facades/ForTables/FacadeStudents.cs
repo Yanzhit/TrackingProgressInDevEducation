@@ -7,6 +7,15 @@ using TrackingProgressInDevEducationDAL.Requests.Params;
     {
     }
 
+    public class FacadeGetStudents
+    {
+        public List<Students> GetStudents()
+        {
+            GetStudents getStudents = new GetStudents();
+            return (List<Students>)QuerySettings.QuerySet(getStudents);
+        }
+    }
+
     public class FacadeAddNewStudent
     {
         public string AddNewStudent(string name, string surname, decimal rate)
