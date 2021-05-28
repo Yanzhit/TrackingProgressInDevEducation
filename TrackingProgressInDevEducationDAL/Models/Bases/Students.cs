@@ -13,50 +13,23 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public string Surname { get; set; }
         public Decimal Rate { get; set; }
-
-        public Students(List<object> objects)
-        {
-            Name = (string)objects[1];
-            Surname = (string)objects[2];
-            Rate = (decimal)objects[3];
-        }
-        public Students()
-        {
-            Name = "";
-            Surname = "";
-            Rate = 0;
-        }
-
+        
         public override bool Equals(object obj)
         {
-            Students actual = (Students)obj;
-            Students expected = this;
-            if (actual != null)
-            {
-                if (expected.Name != actual.Name)
-                {
-                    return false;
-                }
-                if (expected.Surname != actual.Surname)
-                {
-                    return false;
-                }
-                if (expected.Rate != actual.Rate)
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-            return true;
+            return Equals((Students)obj);
         }
 
-        //public override string ToString()
-        //{
-        //    return "";
-        //}
+        private bool Equals(Students actual)
+        {
+            return actual != null
+                   && Name == actual.Name
+                   && Surname == actual.Surname
+                   && Rate == actual.Rate;
+        }
 
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Surname, Rate);
+        }
     }
 }
