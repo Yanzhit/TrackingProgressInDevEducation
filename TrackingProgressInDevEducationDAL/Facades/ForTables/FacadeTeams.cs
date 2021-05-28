@@ -17,4 +17,13 @@ namespace TrackingProgressInDevEducationDAL.Facades.ForTables
             return (List<Teams>) QuerySettings.QuerySet(getTeams);
         }
     }
+
+    public class FacadeAddNewTeam
+    {
+        public List<Teams> AddNewTeam(string name)
+        {
+            AddNewTeam addNewTeam = new AddNewTeam(name);
+            return (List<Teams>) QuerySettings.QuerySet(addNewTeam);
+        }
+    }
 }
