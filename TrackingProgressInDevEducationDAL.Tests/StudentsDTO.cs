@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableStudents;
+using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -11,9 +11,9 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             yield return new object[]
             {
-                new GetStudents(),
+                //new GetStudents(),
 
-                new List<Students>
+                new List<Student>
                 {
                     new()
                     {

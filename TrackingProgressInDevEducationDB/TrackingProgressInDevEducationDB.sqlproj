@@ -69,7 +69,6 @@
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TableComments" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectors" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TableVisits" />
-    <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentTypes" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TableTeams" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TableLectorCourses" />
@@ -133,10 +132,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableCourses\GetAllCourses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableCourses\GetCourseById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TableCourses\RemoveCourseById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentTypes\AddNewCommentType.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentTypes\DeleteSelectedCommentType.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentTypes\GetAllCommentTypes.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentTypes\UpdateCommentTypeById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\AddNewPayment.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\ChangePaymentAmount.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\ClosePayment.sql" />

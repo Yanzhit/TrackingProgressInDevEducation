@@ -5,7 +5,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Interface
     public interface IQuery
     {
         Type Type { get; }
-        string Name { get; }
-        string Params { get; }
+        public TypeQueries TypeQueries { get; set; }
+        string Name { get; set; }
+        string Params { get; set; }
     }
 }

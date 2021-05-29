@@ -1,8 +1,6 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Interface;
-
-namespace TrackingProgressInDevEducationDAL.Models.Bases
+﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class CommentType : IModels
+    public class CommentType : AbstractModel
     {
         public string Name { get; set; }
 
