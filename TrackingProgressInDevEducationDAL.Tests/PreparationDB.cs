@@ -1,22 +1,27 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Nullify;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class PreparationDB
     {
-        public FillingDB fillingDB =  new FillingDB();
-        public NullifyDB nullifyDB = new NullifyDB();
+        private readonly FillingDB _fillingDB;
+        private readonly NullifyDB _nullifyDB;
+
+        public PreparationDB()
+        {
+            _fillingDB =  new FillingDB();
+            _nullifyDB = new NullifyDB();
+        }
+
         public void Filling(Type type)
         {
-            fillingDB.Filling(type);
+            _fillingDB.Filling(type);
         }
 
         public void Nullify(Type type)
         {
             
-            nullifyDB.Nullify(type);
+            _nullifyDB.Nullify(type);
         }
     }
 }
