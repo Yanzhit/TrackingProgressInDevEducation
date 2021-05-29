@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class HomeworkGroup : AbstractModels
+    public class HomeworkGroup : AbstractModel
     {
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }

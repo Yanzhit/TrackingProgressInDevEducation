@@ -9,10 +9,10 @@ namespace TrackingProgressInDevEducationDAL.Tests
     {
         private PreparationDB _pDB= new PreparationDB();
         [TestCaseSource(typeof(StudentsDTO))]
-        public void GetStudentsTest(IQuery query, List<Students> expected)
+        public void GetStudentsTest(IQuery query, List<Student> expected)
         {
             _pDB.Nullify(query.Type);
-            List<Students> actual = (List<Students>)QuerySettings.QuerySet(query);
+            List<Student> actual = (List<Student>)QuerySettings.QuerySet(query);
             Assert.AreEqual(expected, actual);
         }
     }

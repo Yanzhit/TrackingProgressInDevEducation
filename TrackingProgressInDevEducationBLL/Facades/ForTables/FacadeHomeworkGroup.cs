@@ -1,7 +1,9 @@
-﻿namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+﻿using TrackingProgressInDevEducationDAL.Requests.ForTables;
+
+namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeHomeworkGroup
+    public static class FacadeHomeworkGroup
     {
-        
+        private static readonly QHomeworkGroup Query = new();
     }
 }

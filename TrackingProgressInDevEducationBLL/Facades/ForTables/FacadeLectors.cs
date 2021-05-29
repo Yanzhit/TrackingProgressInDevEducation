@@ -1,57 +1,32 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableLectors;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeLectors
+    public static class FacadeLectors
     {
-        
-    }
-
-    public class FacadeGetLectors
-    {
-        public List<Lectors> GetLectors()
+        private static readonly QLector Query = new();
+        public static IEnumerable<Lector> GetLectors()
         {
-            GetLectors getLectors = new GetLectors();
-            return (List<Lectors>)QuerySettings.QuerySet(getLectors);
+            return (List<Lector>) QuerySettings.QuerySet(Query.GetLectors());
         }
-    }
-
-    public class FacadeAddNewLector
-    {
-        public List<Lectors> AddNewLector(string fullName)
+        public static IEnumerable<Lector> AddNewLector(string fullName)
         {
-            AddNewLector addNewLector = new AddNewLector(fullName);
-            return (List<Lectors>)QuerySettings.QuerySet(addNewLector);
+            return (List<Lector>)QuerySettings.QuerySet(Query.AddNewLector(fullName));
         }
-    }
-
-    public class FacadeGetLectorById
-    {
-        public List<Lectors> GetLectorById(int id)
+        public static IEnumerable<Lector> GetLectorById(int id)
         {
-            GetLectorById getLectorById = new GetLectorById(id);
-            return (List<Lectors>) QuerySettings.QuerySet(getLectorById);
+            return (List<Lector>) QuerySettings.QuerySet(Query.GetLectorById(id));
         }
-    }
-
-    public class FacadeUpdateLectorById
-    {
-        public List<Lectors> UpdateLectorById(int id, string fullName)
+        public static IEnumerable<Lector> UpdateLectorById(int id, string fullName)
         {
-            UpdateLectorById updateLectorById = new UpdateLectorById(id, fullName);
-            return (List<Lectors>) QuerySettings.QuerySet(updateLectorById);
+            return (List<Lector>) QuerySettings.QuerySet(Query.UpdateLectorById(id, fullName));
         }
-    }
-
-    public class FacadeRemoveLectorById
-    {
-        public List<Lectors> RemoveLectorById(int id)
+        public static List<Lector> RemoveLectorById(int id)
         {
-            RemoveLectorById removeLectorById = new RemoveLectorById(id);
-            return (List<Lectors>) QuerySettings.QuerySet(removeLectorById);
+            return (List<Lector>) QuerySettings.QuerySet(Query.RemoveLectorById(id));
         }
     }
 }

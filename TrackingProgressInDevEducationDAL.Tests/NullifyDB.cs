@@ -1,6 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Nullify;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -10,16 +10,16 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             switch (type.Name)
             {
-                case nameof(Comments):
+                case nameof(Comment):
                     NullifyTableComments();
                     break;
                 case nameof(CommentType):
                     NullifyTableCommentType();
                     break;
-                case nameof(Courses):
+                case nameof(Course):
                     NullifyTableCourses();
                     break;
-                case nameof(Groups):
+                case nameof(Group):
                     NullifyTableGroups();
                     break;
                 case nameof(HomeworkComplete):
@@ -28,94 +28,109 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(HomeworkGroup):
                     NullifyTableHomeworkGroup();
                     break;
-                case nameof(Homeworks):
+                case nameof(Homework):
                     NullifyTableHomeworks();
                     break;
-                case nameof(Lections):
+                case nameof(Lection):
                     NullifyTableLections();
                     break;
                 case nameof(LectorGroup):
                     NullifyTableLectorGroup();
                     break;
-                case nameof(Lectors):
+                case nameof(Lector):
                     NullifyTableLectors();
                     break;
-                case nameof(Payments):
+                case nameof(Payment):
                     NullifyTablePayments();
                     break;
-                case nameof(Students):
+                case nameof(Student):
                     NullifyTableStudents();
                     break;
-                case nameof(Teams):
+                case nameof(Team):
                     NullifyTableTeams();
                     break;
                 case nameof(TeamStudent):
                     NullifyTableTeamStudent();
                     break;
-                case nameof(Visits):
+                case nameof(Visit):
                     NullifyTableVisits();
                     break;
             }
         }
         private void NullifyTableComments()
         {
-            QuerySettings.QuerySet(new NullifyComments());
+            var query = new QComment();
+            QuerySettings.QuerySet(query.NullifyComments());
         }
         private void NullifyTableCommentType()
         {
-            QuerySettings.QuerySet(new NullifyCommentType());
+            var query = new QCommentType();
+            QuerySettings.QuerySet(query.NullifyCommentType());
         }
         private void NullifyTableCourses()
         {
-            QuerySettings.QuerySet(new NullifyCourses());
+            var query = new QCours();
+            QuerySettings.QuerySet(query.NullifyCourses());
         }
         private void NullifyTableGroups()
         {
-            QuerySettings.QuerySet(new NullifyGroups());
+            var query = new QGroup();
+            QuerySettings.QuerySet(query.NullifyGroups());
         }
         private void NullifyTableHomeworkComplete()
         {
-            QuerySettings.QuerySet(new NullifyHomeworkComplete());
+            var query = new QHomeworkComplete();
+            QuerySettings.QuerySet(query.NullifyHomeworkComplete());
         }
         private void NullifyTableHomeworkGroup()
         {
-            QuerySettings.QuerySet(new NullifyHomeworkGroup());
+            var query = new QHomeworkGroup();
+            //QuerySettings.QuerySet(query.NullifyTableHomeworkGroup());
         }
         private void NullifyTableHomeworks()
         {
-            QuerySettings.QuerySet(new NullifyHomeworks());
+            var query = new QHomework();
+            QuerySettings.QuerySet(query.NullifyHomeworks());
         }
         private void NullifyTableLections()
         {
-            QuerySettings.QuerySet(new NullifyLections());
+            var query = new QLection();
+            QuerySettings.QuerySet(query.NullifyLections());
         }
         private void NullifyTableLectorGroup()
         {
-            QuerySettings.QuerySet(new NullifyLectorGroup());
+            var query = new QLectorGroup();
+            QuerySettings.QuerySet(query.NullifyLectorGroup());
         }
         private void NullifyTableLectors()
         {
-            QuerySettings.QuerySet( new NullifyLectors());
+            var query = new QLector();
+            QuerySettings.QuerySet(query.NullifyLectors());
         }
         private void NullifyTablePayments()
         {
-            QuerySettings.QuerySet(new NullifyPayments());
+            var query = new QPayment();
+            QuerySettings.QuerySet(query.NullifyPayments());
         }
         private void NullifyTableStudents()
         {
-            QuerySettings.QuerySet(new NullifyStudents());
+            var query = new QStudent();
+            QuerySettings.QuerySet(query.NullifyStudents());
         }
         private void NullifyTableTeams()
         {
-            QuerySettings.QuerySet(new NullifyTeams());
+            var query = new QTeam();
+            QuerySettings.QuerySet(query.NullifyTeams());
         }
         private void NullifyTableTeamStudent()
         {
-            QuerySettings.QuerySet( new NullifyTeamStudent());
+            var query = new QTeamStudent();
+            QuerySettings.QuerySet(query.NullifyTeamStudent());
         }
         private void NullifyTableVisits()
         {
-            QuerySettings.QuerySet(new NullifyVisits());
+            var query = new QVisit();
+            QuerySettings.QuerySet(query.NullifyVisits());
         }
     }
 }

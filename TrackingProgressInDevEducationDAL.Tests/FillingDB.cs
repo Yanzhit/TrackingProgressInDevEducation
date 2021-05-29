@@ -1,16 +1,9 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableComments;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableCommentType;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableCourses;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableGroups;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableLectors;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TablePayments;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableStudents;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableTeams;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableVisits;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
 using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
+using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -21,17 +14,17 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             switch (type.Name)
             {
-                case nameof(Comments):
+                case nameof(Comment):
                     new WriteComments().Write();
                     FillingTableComments();
                     break;
                 case nameof(CommentType):
                     FillingTableCommentType();
                     break;
-                case nameof(Courses):
+                case nameof(Course):
                     FillingTableCourses();
                     break;
-                case nameof(Groups):
+                case nameof(Group):
                     FillingTableGroups();
                     break;
                 case nameof(HomeworkComplete):
@@ -40,31 +33,31 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(HomeworkGroup):
                     FillingTableHomeworkGroup();
                     break;
-                case nameof(Homeworks):
+                case nameof(Homework):
                     FillingTableHomeworks();
                     break;
-                case nameof(Lections):
+                case nameof(Lection):
                     FillingTableLections();
                     break;
                 case nameof(LectorGroup):
                     FillingTableLectorGroup();
                     break;
-                case nameof(Lectors):
+                case nameof(Lector):
                     FillingTableLectors();
                     break;
-                case nameof(Payments):
+                case nameof(Payment):
                     FillingTablePayments();
                     break;
-                case nameof(Students):
+                case nameof(Student):
                     FillingTableStudents();
                     break;
-                case nameof(Teams):
+                case nameof(Team):
                     FillingTableTeams();
                     break;
                 case nameof(TeamStudent):
                     FillingTableTeamStudent();
                     break;
-                case nameof(Visits):
+                case nameof(Visit):
                     FillingTableVisits();
                     break;
             }
@@ -72,89 +65,104 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableComments()
         {
-            foreach (MockComments data in _mock.Comments)
+            var query = new QComment();
+            foreach (MockComment data in _mock.Comments)
             {
-                QuerySettings.QuerySet(new AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy));
+                QuerySettings.QuerySet(query.AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy));
             }
         }
         private void FillingTableCommentType()
         {
+            var query = new QCommentType();
             foreach (MockCommentType data in _mock.CommentType)
             {
-                QuerySettings.QuerySet(new AddNewCommentType(data.Name));
+                QuerySettings.QuerySet(query.AddNewCommentType(data.Name));
             }
         }
         private void FillingTableCourses()
         {
-            foreach (MockCourses data in _mock.Courses)
+            var query = new QCours();
+            foreach (MockCourse data in _mock.Courses)
             {
-                QuerySettings.QuerySet(new AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));
+                QuerySettings.QuerySet(query.AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));
             }
         }
         private void FillingTableGroups()
         {
-            foreach (MockGroups data in _mock.Groups)
+            var query = new QGroup();
+            foreach (MockGroup data in _mock.Groups)
             {
-                QuerySettings.QuerySet(new AddNewGroup(data.Name, data.CourseId));
+                QuerySettings.QuerySet(query.AddNewGroup(data.Name, data.CourseId));
             }
         }
         private void FillingTableHomeworkComplete()
         {
-            //QuerySettings.QuerySet(new AddNewHomeworkComplete());
+            var query = new QHomeworkComplete();
+            //QuerySettings.QuerySet(query.AddNewHomeworkComplete());
         }
         private void FillingTableHomeworkGroup()
         {
-            //QuerySettings.QuerySet(new AddNewHomeworkGroup());
+            var query = new QHomeworkGroup();
+            //QuerySettings.QuerySet(query.AddNewHomeworkGroup());
         }
         private void FillingTableHomeworks()
         {
-            //QuerySettings.QuerySet(new AddNewHomeworks());
+            var query = new QHomework();
+            //QuerySettings.QuerySet(query.AddNewHomeworks());
         }
         private void FillingTableLections()
         {
-            //QuerySettings.QuerySet(new AddNewLections());
+            var query = new QLection();
+            //QuerySettings.QuerySet(query.AddNewLections());
         }
         private void FillingTableLectorGroup()
         {
-            //QuerySettings.QuerySet(new AddNewLectorGroup());
+            var query = new QLectorGroup();
+            //QuerySettings.QuerySet(query.AddNewLectorGroup());
         }
         private void FillingTableLectors()
         {
-            foreach (MockLectors data in _mock.Lectors)
+            var query = new QLector();
+            foreach (MockLector data in _mock.Lectors)
             {
-                QuerySettings.QuerySet(new AddNewLector(data.FullName));
+                QuerySettings.QuerySet(query.AddNewLector(data.FullName));
             }
         }
         private void FillingTablePayments()
         {
-            foreach (MockPayments data in _mock.Payments)
+            var query = new QPayment();
+            foreach (MockPayment data in _mock.Payments)
             {
-                QuerySettings.QuerySet(new AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
+                QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
             }
         }
         private void FillingTableStudents()
         {
-            foreach (MockStudents data in _mock.Students)
+            var query = new QStudent();
+            foreach (MockStudent data in _mock.Students)
             {
-                QuerySettings.QuerySet(new AddNewStudent(data.Name, data.Surname, data.Rate));
+                QuerySettings.QuerySet(query.AddNewStudent(data.Name, data.Surname, data.Rate));
             }
         }
         private void FillingTableTeams()
         {
-            foreach (MockTeams data in _mock.Teams)
+            var query = new QTeam();
+            foreach (MockTeam data in _mock.Teams)
             {
-                QuerySettings.QuerySet(new AddNewTeam(data.Name));
+                QuerySettings.QuerySet(query.AddNewTeam(data.Name));
             }
         }
         private void FillingTableTeamStudent()
         {
-            //QuerySettings.QuerySet( new AddNewTeamStudent());
+            var query = new QTeamStudent();
+            //QuerySettings.QuerySet(query.AddNewTeamStudent());
         }
         private void FillingTableVisits()
         {
-            foreach (MockVisits data in _mock.Visits)
+            var query = new QVisit();
+            foreach (MockVisit data in _mock.Visits)
             {
-                QuerySettings.QuerySet(new AddNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
+                QuerySettings.QuerySet(query.AddNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
             }
         }
     }

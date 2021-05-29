@@ -1,6 +1,6 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class CommentType : AbstractModels
+    public class CommentType : AbstractModel
     {
         public string Name { get; set; }
 

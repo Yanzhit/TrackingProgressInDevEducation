@@ -1,7 +1,7 @@
 ﻿namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeCities
+    public static class FacadeCities
     {
-        
+        //private static readonly QCities Query = new();
     }
 }

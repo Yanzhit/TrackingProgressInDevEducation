@@ -5,27 +5,27 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class MockBase
     {
-        public List<MockComments> Comments { get; }
+        public List<MockComment> Comments { get; }
         public List<MockCommentType> CommentType { get; }
-        public List<MockGroups> Groups { get; }
-        public List<MockCourses> Courses { get; }
-        public List<MockLectors> Lectors { get; }
-        public List<MockPayments> Payments { get; }
-        public List<MockStudents> Students { get; }
-        public List<MockTeams> Teams { get; }
-        public List<MockVisits> Visits { get; }
+        public List<MockGroup> Groups { get; }
+        public List<MockCourse> Courses { get; }
+        public List<MockLector> Lectors { get; }
+        public List<MockPayment> Payments { get; }
+        public List<MockStudent> Students { get; }
+        public List<MockTeam> Teams { get; }
+        public List<MockVisit> Visits { get; }
 
         public MockBase()
         {
-            Comments = new List<MockComments>();
+            Comments = new List<MockComment>();
             CommentType = new List<MockCommentType>();
-            Groups = new List<MockGroups>();
-            Courses = new List<MockCourses>();
-            Lectors = new List<MockLectors>();
-            Payments = new List<MockPayments>();
-            Students = new List<MockStudents>();
-            Teams = new List<MockTeams>();
-            Visits = new List<MockVisits>();
+            Groups = new List<MockGroup>();
+            Courses = new List<MockCourse>();
+            Lectors = new List<MockLector>();
+            Payments = new List<MockPayment>();
+            Students = new List<MockStudent>();
+            Teams = new List<MockTeam>();
+            Visits = new List<MockVisit>();
         }
     }
 }

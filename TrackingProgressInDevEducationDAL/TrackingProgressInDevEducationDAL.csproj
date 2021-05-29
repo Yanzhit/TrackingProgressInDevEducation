@@ -6,8 +6,14 @@
 
   <ItemGroup>
     <Compile Remove="Models\Abstract\**" />
+    <Compile Remove="Requests\ForTables\TableLections\**" />
+    <Compile Remove="Requests\ForTables\TableLectorCourses\**" />
     <EmbeddedResource Remove="Models\Abstract\**" />
+    <EmbeddedResource Remove="Requests\ForTables\TableLections\**" />
+    <EmbeddedResource Remove="Requests\ForTables\TableLectorCourses\**" />
     <None Remove="Models\Abstract\**" />
+    <None Remove="Requests\ForTables\TableLections\**" />
+    <None Remove="Requests\ForTables\TableLectorCourses\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,11 +27,6 @@
 
   <ItemGroup>
     <Folder Include="Models\Others\" />
-    <Folder Include="Requests\ForTables\TableCities\" />
-    <Folder Include="Requests\ForTables\TableHomeworkGroup\" />
-    <Folder Include="Requests\ForTables\TableLections\" />
-    <Folder Include="Requests\ForTables\TableLectorCourses\" />
-    <Folder Include="Requests\ForTables\TableLectorGroup\" />
   </ItemGroup>
 
 </Project>

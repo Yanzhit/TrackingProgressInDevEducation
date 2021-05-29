@@ -1,57 +1,32 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableComments;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeComments
+    public static class FacadeComments
     {
-        
-    }
-
-    public class FacadeUpdateCommentById
-    {
-        public List<Comments> UpdateCommentById(int id, string text)
+        private static readonly QComment Query = new();
+        public static IEnumerable<Comment> UpdateCommentById(int id, string text)
         {
-            UpdateCommentById updateCommentById = new UpdateCommentById(id, text);
-            return (List<Comments>)QuerySettings.QuerySet(updateCommentById);
+            return (List<Comment>) QuerySettings.QuerySet(Query.UpdateCommentById(id, text));
         }
-    }
-
-    public class FacadeRemoveCommentById
-    {
-        public List<Comments> RemoveCommentById(int id)
+        public static IEnumerable<Comment> RemoveCommentById(int id)
         {
-            RemoveCommentById removeCommentById = new RemoveCommentById(id);
-            return (List<Comments>) QuerySettings.QuerySet(removeCommentById);
+            return (List<Comment>) QuerySettings.QuerySet(Query.RemoveCommentById(id));
         }
-    }
-
-    public class FacadeAddNewComment
-    {
-        public List<Comments> AddNewComment(string text, int typeId, int studentId, int createdBy)
+        public static IEnumerable<Comment> AddNewComment(string text, int typeId, int studentId, int createdBy)
         {
-            AddNewComment addNewComment = new AddNewComment(text, typeId, studentId, createdBy);
-            return (List<Comments>) QuerySettings.QuerySet(addNewComment);
+            return (List<Comment>) QuerySettings.QuerySet(Query.AddNewComment(text, typeId, studentId, createdBy));
         }
-    }
-
-    public class FacadeGetComments
-    {
-        public List<Comments> GetComments()
+        public static IEnumerable<Comment> GetComments()
         {
-            GetComments getAllCourses = new GetComments();
-            return (List<Comments>) QuerySettings.QuerySet(getAllCourses);
+            return (List<Comment>) QuerySettings.QuerySet(Query.GetComments());
         }
-    }
-
-    public class FacadeGetByIdComment
-    {
-        public List<Comments> GetByIdComment(int id)
+        public static IEnumerable<Comment> GetByIdComment(int id)
         {
-            GetByIdComment getByIdComment = new GetByIdComment(id);
-            return (List<Comments>)QuerySettings.QuerySet(getByIdComment);
+            return (List<Comment>)QuerySettings.QuerySet(Query.GetByIdComment(id));
         }
     }
 }

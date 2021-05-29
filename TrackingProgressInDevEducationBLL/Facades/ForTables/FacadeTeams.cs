@@ -1,57 +1,32 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableTeams;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeTeams
+    public static class FacadeTeams
     {
-
-    }
-
-    public class FacadeUpdateTeamById
-    {
-        public List<Teams> UpdateTeamById(int id, string name)
+        private static readonly QTeam Query = new();
+        public static IEnumerable<Team> UpdateTeamById(int id, string name)
         {
-            UpdateTeamById updateTeamById = new UpdateTeamById(id, name);
-            return (List<Teams>) QuerySettings.QuerySet(updateTeamById);
+            return (List<Team>) QuerySettings.QuerySet(Query.UpdateTeamById(id, name));
         }
-    }
-
-    public class FacadeGetTeamById
-    {
-        public List<Teams> GetTeamById(int id)
+        public static IEnumerable<Team> GetTeamById(int id)
         {
-            GetTeamById getTeamById = new GetTeamById(id);
-            return (List<Teams>)QuerySettings.QuerySet(getTeamById);
+            return (List<Team>) QuerySettings.QuerySet(Query.GetTeamById(id));
         }
-    }
-
-    public class FacadeRemoveTeamById
-    {
-        public List<Teams> RemoveTeamById(int id)
+        public static IEnumerable<Team> RemoveTeamById(int id)
         {
-            RemoveTeamById removeTeamById = new RemoveTeamById(id);
-            return (List<Teams>) QuerySettings.QuerySet(removeTeamById);
+            return (List<Team>) QuerySettings.QuerySet(Query.RemoveTeamById(id));
         }
-    }
-
-    public class FacadeGetTeams
-    {
-        public List<Teams> GetTeams()
+        public static IEnumerable<Team> GetTeams()
         {
-            GetTeams getTeams = new GetTeams();
-            return (List<Teams>) QuerySettings.QuerySet(getTeams);
+            return (List<Team>) QuerySettings.QuerySet(Query.GetTeams());
         }
-    }
-
-    public class FacadeAddNewTeam
-    {
-        public List<Teams> AddNewTeam(string name)
+        public static IEnumerable<Team> AddNewTeam(string name)
         {
-            AddNewTeam addNewTeam = new AddNewTeam(name);
-            return (List<Teams>) QuerySettings.QuerySet(addNewTeam);
+            return (List<Team>) QuerySettings.QuerySet(Query.AddNewTeam(name));
         }
     }
 }

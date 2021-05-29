@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableStudents;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
+using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -10,11 +11,11 @@ namespace TrackingProgressInDevEducationBLL
         public static IEnumerable<string> GetStudents()
         {
             var result = new List<string>();
-            GetStudents getStudents = new GetStudents();
-            var students = (List<Students>)QuerySettings.QuerySet(getStudents);
-            foreach (Students student in students)
+            var query = new QStudent();
+            var students = (List<Student>)QuerySettings.QuerySet(query.GetStudents());
+            foreach (Student student in students)
             {
-                result.Add($"{student.Name} {student.Surname} {student.Rate}\n");
+                result.Add($"{student.Name} {student.Surname} {student.Rate}");
             }
             return result;
         }

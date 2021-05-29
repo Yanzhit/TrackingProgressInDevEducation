@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class TeamStudent : AbstractModels
+    public class TeamStudent : AbstractModel
     {
         public int TeamId { get; set; }
         public int StudentId { get; set; }

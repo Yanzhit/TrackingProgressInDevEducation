@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Facades.ForTables;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -25,21 +26,21 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
         {
-            IEnumerable<string> students;
+            IEnumerable<Student> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
-                students = FacadeExcemple.GetStudents();
+                students = FacadeStudent.GetStudents();
                 foreach (var student in students)
                 {
-                    RequestViewTextBox.Text += student;
+                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
                 }
             }
 
             if (GetStudentsByIdRadioButton.IsChecked == true)
             {
                 //queries = new Queries(Int32.Parse(GetStudentsByIdTextBoxId.Text));
-                //students = (List<Students>)QuerySettings.QuerySet(queries.GetByIdStudent);
-                //foreach (Students student in students)  
+                //students = (List<QStudent>)QuerySettings.QuerySet(queries.GetByIdStudent);
+                //foreach (QStudent student in students)  
                 //{
                 //    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
                 //}

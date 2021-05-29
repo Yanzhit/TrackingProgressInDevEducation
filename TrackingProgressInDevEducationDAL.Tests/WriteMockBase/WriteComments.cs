@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.WriteMockBase
         {
             for(int i = 0; i < _data.Count; i++)
             {
-                PreparationDB.Mock.Comments.Add(new MockComments(_data.Text[i], _data.TypeId[i], _data.StudentId[i], _data.CreatedBy[i]));
+                PreparationDB.Mock.Comments.Add(new MockComment(_data.Text[i], _data.TypeId[i], _data.StudentId[i], _data.CreatedBy[i]));
             }
         }
     }

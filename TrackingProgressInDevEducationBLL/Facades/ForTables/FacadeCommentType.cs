@@ -1,7 +1,9 @@
-﻿namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+﻿using TrackingProgressInDevEducationDAL.Models.Bases;
+
+namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeCommentType
+    public static class FacadeCommentType
     {
-        
+        private static readonly CommentType Query = new();
     }
 }

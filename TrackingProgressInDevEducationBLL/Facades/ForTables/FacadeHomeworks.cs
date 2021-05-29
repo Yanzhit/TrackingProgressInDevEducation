@@ -1,49 +1,28 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableHomeworks;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeHomeworks
+    public static class FacadeHomeworks
     {
-
-    }
-
-    public class FacadeGetHomeworkById
-    {
-        public List<Homeworks> GetHomeworkById(int id)
+        private static readonly QHomework Query = new();
+        public static IEnumerable<Homework> GetHomeworkById(int id)
         {
-            GetHomeworkById getHomeworkById = new GetHomeworkById(id);
-            return (List<Homeworks>) QuerySettings.QuerySet(getHomeworkById);
+            return (List<Homework>) QuerySettings.QuerySet(Query.GetHomeworkById(id));
+        }
+        public static List<Homework> UpdateHomeworkById(string name, int id)
+        {
+            return (List<Homework>) QuerySettings.QuerySet(Query.UpdateHomeworkById(name, id));
+        }
+        public static List<Homework> RemoveHomeworksById(int id)
+        {
+            return (List<Homework>) QuerySettings.QuerySet(Query.RemoveHomeworksById(id));
+        }
+        public static List<Homework> CreateNewHomeworks(string name)
+        {
+            return (List<Homework>) QuerySettings.QuerySet(Query.CreateNewHomeworks(name));
         }
     }
-
-    public class FacadeUpdateHomeworkById
-    {
-        public List<Homeworks> UpdateHomeworkById(string name, int id)
-        {
-            UpdateHomeworkById updateHomeworkById = new UpdateHomeworkById(name, id);
-            return (List<Homeworks>) QuerySettings.QuerySet(updateHomeworkById);
-        }
-    }
-
-
-    public class FacadeRemoveHomeworksById
-    {
-        public List<Homeworks> RemoveHomeworksById(int id)
-        {
-            RemoveHomeworksById removeHomeworksById = new RemoveHomeworksById(id);
-            return (List<Homeworks>) QuerySettings.QuerySet(removeHomeworksById);
-        }
-    }
-
-    public class FacadeCreateNewHomeworks
-    {
-        public List<Homeworks> CreateNewHomeworks(string name)
-        {
-            CreateNewHomeworks createNewHomeworks = new CreateNewHomeworks(name);
-            return (List<Homeworks>) QuerySettings.QuerySet(createNewHomeworks);
-        }
-}
 }

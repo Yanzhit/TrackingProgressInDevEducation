@@ -1,67 +1,43 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables.TableGroups;
+using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using TrackingProgressInDevEducationDAL.Requests.Others;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public class FacadeGroups
+    public static class FacadeGroups
     {
-        
-    }
-
-    public class FacadeGetGroups
-    {
-        public List<Groups> GetGroups()
+        private static readonly QGroup Query = new();
+        public static IEnumerable<Group> GetGroups()
         {
-            GetGroups getGroups = new GetGroups();
-            return (List<Groups>)QuerySettings.QuerySet(getGroups);
+            return (List<Group>) QuerySettings.QuerySet(Query.GetGroups());
+        }
+        public static IEnumerable<Group> AddNewGroup(string name, int courseId)
+        {
+            return (List<Group>)QuerySettings.QuerySet(Query.AddNewGroup(name, courseId));
+        }
+        public static IEnumerable<Group> GetGroupById(int id)
+        {
+            return (List<Group>)QuerySettings.QuerySet(Query.GetGroupById(id));
+        }
+        public static IEnumerable<Group> RemoveGroupById(int id)
+        {
+            return (List<Group>)QuerySettings.QuerySet(Query.RemoveGroupById(id));
+        }
+        public static IEnumerable<Group> UpdateGroupById(int id, string name, int courseId)
+        {
+            return (List<Group>)QuerySettings.QuerySet(Query.UpdateGroupById(id, name, courseId));
         }
     }
+    
 
-    public class FacadeAddNewGroup
-    {
-        public List<Groups> AddNewGroup(string name, int courseId)
-        {
-            AddNewGroup addNewGroup = new AddNewGroup(name, courseId);
-            return (List<Groups>)QuerySettings.QuerySet(addNewGroup);
-        }
-    }
-
-    public class FacadeGetGroupById
-    {
-        public List<Groups> GetGroupById(int id)
-        {
-            GetGroupById getGroupById = new GetGroupById(id);
-            return (List<Groups>)QuerySettings.QuerySet(getGroupById);
-        }
-    }
-
-    public class FacadeGetGroupsByLector
-    {
-        public List<Groups> GetGroupsByLector(int lectorId)
-        {
-            GetGroupsByLector getGroupsByLector = new GetGroupsByLector(lectorId);
-            return (List<Groups>)QuerySettings.QuerySet(getGroupsByLector);
-        }
-    }
-
-    public class FacadeRemoveGroupById
-    {
-        public List<Groups> RemoveGroupById(int id)
-        {
-            RemoveGroupById removeGroupById = new RemoveGroupById(id);
-            return (List<Groups>)QuerySettings.QuerySet(removeGroupById);
-        }
-    }
-
-    public class FacadeUpdateGroupById
-    {
-        public List<Groups> UpdateGroupById(int id, string name, int courseId)
-        {
-            UpdateGroupById updateGroupById = new UpdateGroupById(id, name, courseId);
-            return (List<Groups>)QuerySettings.QuerySet(updateGroupById);
-        }
-    }
+    //public class FacadeGetGroupsByLector
+    //{
+    //    public List<Group> GetGroupsByLector(int lectorId)
+    //    {
+    //        GetGroupsByLector getGroupsByLector = new GetGroupsByLector(lectorId);
+    //        return (List<Group>)QuerySettings.QuerySet(Query.GetGroupsByLector);
+    //    }
+    //}
 }
