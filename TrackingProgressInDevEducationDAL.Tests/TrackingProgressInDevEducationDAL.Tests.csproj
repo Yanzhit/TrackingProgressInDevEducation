@@ -16,4 +16,8 @@
     <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DataMock\" />
+  </ItemGroup>
+
 </Project>

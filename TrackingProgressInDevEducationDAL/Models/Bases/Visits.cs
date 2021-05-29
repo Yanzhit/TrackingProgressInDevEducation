@@ -7,11 +7,15 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Visits : IModels
+    public class Visits : AbstrackModels
     {
         public bool VisitStatus { get; set; }
         public int StudentId { get; set; }
         public int LectionId { get; set; }
+
+        protected Visits()
+        {
+        }
 
         public override bool Equals(object obj)
         {

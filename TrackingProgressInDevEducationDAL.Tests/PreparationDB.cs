@@ -4,6 +4,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class PreparationDB
     {
+        public static readonly MockBase Mock = new();
         private readonly FillingDB _fillingDB;
         private readonly NullifyDB _nullifyDB;
 

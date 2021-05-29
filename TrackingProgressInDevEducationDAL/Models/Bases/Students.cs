@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Students : IModels
+    public class Students : AbstrackModels
     {
         public string Name { get; set; }
         public string Surname { get; set; }
