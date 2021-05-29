@@ -28,8 +28,4 @@
     <Folder Include="Requests\ForTables\TableLectorGroup\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Facades\Others\" />
-  </ItemGroup>
-
 </Project>

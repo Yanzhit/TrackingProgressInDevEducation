@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Params;
+using TrackingProgressInDevEducationDAL.Requests.ForTables.TableHomeworks;
 
-namespace TrackingProgressInDevEducationDAL.Facades.ForTables
+namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
     public class FacadeHomeworks
     {

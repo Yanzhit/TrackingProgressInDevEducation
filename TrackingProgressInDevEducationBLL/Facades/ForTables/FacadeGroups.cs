@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Params;
-using TrackingProgressInDevEducationDAL.Requests.NoParams;
+using TrackingProgressInDevEducationDAL.Requests.ForTables.TableGroups;
+using TrackingProgressInDevEducationDAL.Requests.Others;
 
-namespace TrackingProgressInDevEducationDAL.Facades.ForTables
+namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
     public class FacadeGroups
     {

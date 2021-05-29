@@ -1,6 +1,7 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Nullify;
+﻿using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Requests.Nullify;
 
-namespace TrackingProgressInDevEducationDAL.Facades.Others
+namespace TrackingProgressInDevEducationBLL.Facades.Others
 {
     public class FacadeNullify
     {
