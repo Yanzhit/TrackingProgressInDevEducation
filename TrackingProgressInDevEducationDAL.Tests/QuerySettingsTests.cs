@@ -7,9 +7,11 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class QuerySettingsTests
     {
+        private PreparationDB _pDB= new PreparationDB();
         [TestCaseSource(typeof(StudentsDTO))]
         public void GetStudentsTest(IQuery query, List<Students> expected)
         {
+            _pDB.Nullify(query.Type);
             List<Students> actual = (List<Students>)QuerySettings.QuerySet(query);
             Assert.AreEqual(expected, actual);
         }
