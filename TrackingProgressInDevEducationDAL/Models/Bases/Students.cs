@@ -13,18 +13,23 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public string Surname { get; set; }
         public Decimal Rate { get; set; }
-
-        public Students(List<object> objects)
+        
+        public override bool Equals(object obj)
         {
-            Name = (string)objects[1];
-            Surname = (string)objects[2];
-            Rate = (decimal)objects[3];
+            return Equals((Students)obj);
         }
-        public Students()
+
+        private bool Equals(Students actual)
         {
-            Name = "";
-            Surname = "";
-            Rate = 0;
+            return actual != null
+                   && Name == actual.Name
+                   && Surname == actual.Surname
+                   && Rate == actual.Rate;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Surname, Rate);
         }
     }
 }

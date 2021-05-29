@@ -11,5 +11,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((HomeworkGroup)obj);
+        }
+
+        private bool Equals(HomeworkGroup other)
+        {
+            return HomeworkId == other.HomeworkId
+                   && GroupId == other.GroupId;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(HomeworkId, GroupId);
+        }
     }
 }

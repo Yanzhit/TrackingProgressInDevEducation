@@ -12,5 +12,22 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public string StartedOn { get; set; }
         public string FinishedOn { get; set; }
+        
+        public override bool Equals(object obj)
+        {
+            return Equals((Courses)obj);
+        }
+
+        private bool Equals(Courses other)
+        {
+            return Name == other.Name
+                   && StartedOn == other.StartedOn
+                   && FinishedOn == other.FinishedOn;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, StartedOn, FinishedOn);
+        }
     }
 }
