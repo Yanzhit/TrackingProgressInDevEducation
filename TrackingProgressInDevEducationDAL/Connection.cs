@@ -15,7 +15,19 @@ namespace TrackingProgressInDevEducationDAL
         {
             using (IDbConnection dbConnection = new SqlConnection(Cs))
             {
-                return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
+                switch (query.TypeQueries)
+                {
+                    case TypeQueries.Set:
+                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
+                    case TypeQueries.Get:
+                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
+                    case TypeQueries.Update:
+                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
+                    case TypeQueries.Remove:
+                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
+                    default:
+                        return new List<T>();
+                }
             }
         }
        
