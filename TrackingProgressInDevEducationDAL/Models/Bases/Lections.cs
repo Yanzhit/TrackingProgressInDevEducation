@@ -7,7 +7,7 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Lections : IModels
+    public class Lections : AbstrackModels
     {
         public int CourseId { get; set; }
         public int LectorId { get; set; }

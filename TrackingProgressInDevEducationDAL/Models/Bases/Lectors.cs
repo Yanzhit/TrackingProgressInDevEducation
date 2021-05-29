@@ -7,10 +7,10 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Lectors : IModels
+    public class Lectors : AbstrackModels
     {
-        public int FullName { get; set; }
-        public int Email { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
 
         public override bool Equals(object obj)

@@ -1,31 +1,31 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Tests.DataMock;
+using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class MockBase
     {
-        public List<DataComments> Comments { get; }
-        public List<DataCommentType> CommentType { get; }
-        public List<DataGroups> Groups { get; }
-        public List<DataCourses> Courses { get; }
-        public List<DataLectors> Lectors { get; }
-        public List<DataPayments> Payments { get; }
-        public List<DataStudents> Students { get; }
-        public List<DataTeams> Teams { get; }
-        public List<DataVisits> Visits { get; }
+        public List<MockComments> Comments { get; }
+        public List<MockCommentType> CommentType { get; }
+        public List<MockGroups> Groups { get; }
+        public List<MockCourses> Courses { get; }
+        public List<MockLectors> Lectors { get; }
+        public List<MockPayments> Payments { get; }
+        public List<MockStudents> Students { get; }
+        public List<MockTeams> Teams { get; }
+        public List<MockVisits> Visits { get; }
 
         public MockBase()
         {
-            Comments = new List<DataComments>();
-            CommentType = new List<DataCommentType>();
-            Groups = new List<DataGroups>();
-            Courses = new List<DataCourses>();
-            Lectors = new List<DataLectors>();
-            Payments = new List<DataPayments>();
-            Students = new List<DataStudents>();
-            Teams = new List<DataTeams>();
-            Visits = new List<DataVisits>();
+            Comments = new List<MockComments>();
+            CommentType = new List<MockCommentType>();
+            Groups = new List<MockGroups>();
+            Courses = new List<MockCourses>();
+            Lectors = new List<MockLectors>();
+            Payments = new List<MockPayments>();
+            Students = new List<MockStudents>();
+            Teams = new List<MockTeams>();
+            Visits = new List<MockVisits>();
         }
     }
 }

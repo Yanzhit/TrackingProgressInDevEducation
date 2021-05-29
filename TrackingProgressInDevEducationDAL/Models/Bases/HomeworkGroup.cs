@@ -7,7 +7,7 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class HomeworkGroup : IModels
+    public class HomeworkGroup : AbstrackModels
     {
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }

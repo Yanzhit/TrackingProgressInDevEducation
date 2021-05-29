@@ -9,19 +9,20 @@ using TrackingProgressInDevEducationDAL.Requests.ForTables.TablePayments;
 using TrackingProgressInDevEducationDAL.Requests.ForTables.TableStudents;
 using TrackingProgressInDevEducationDAL.Requests.ForTables.TableTeams;
 using TrackingProgressInDevEducationDAL.Requests.ForTables.TableVisits;
-using TrackingProgressInDevEducationDAL.Tests.DataMock;
+using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
+using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class FillingDB
     {
-        private static readonly MockBase Moke = new MockBase();
-        
+        private readonly MockBase _mock = PreparationDB.Mock;
         public void Filling(Type type) 
         {
             switch (type.Name)
             {
                 case nameof(Comments):
+                    new WriteComments().Write();
                     FillingTableComments();
                     break;
                 case nameof(CommentType):
@@ -71,28 +72,28 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableComments()
         {
-            foreach (DataComments data in Moke.Comments)
+            foreach (MockComments data in _mock.Comments)
             {
                 QuerySettings.QuerySet(new AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy));
             }
         }
         private void FillingTableCommentType()
         {
-            foreach (DataCommentType data in Moke.CommentType)
+            foreach (MockCommentType data in _mock.CommentType)
             {
                 QuerySettings.QuerySet(new AddNewCommentType(data.Name));
             }
         }
         private void FillingTableCourses()
         {
-            foreach (DataCourses data in Moke.Courses)
+            foreach (MockCourses data in _mock.Courses)
             {
                 QuerySettings.QuerySet(new AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));
             }
         }
         private void FillingTableGroups()
         {
-            foreach (DataGroups data in Moke.Groups)
+            foreach (MockGroups data in _mock.Groups)
             {
                 QuerySettings.QuerySet(new AddNewGroup(data.Name, data.CourseId));
             }
@@ -119,28 +120,28 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableLectors()
         {
-            foreach (DataLectors data in Moke.Lectors)
+            foreach (MockLectors data in _mock.Lectors)
             {
                 QuerySettings.QuerySet(new AddNewLector(data.FullName));
             }
         }
         private void FillingTablePayments()
         {
-            foreach (DataPayments data in Moke.Payments)
+            foreach (MockPayments data in _mock.Payments)
             {
                 QuerySettings.QuerySet(new AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
             }
         }
         private void FillingTableStudents()
         {
-            foreach (DataStudents data in Moke.Students)
+            foreach (MockStudents data in _mock.Students)
             {
                 QuerySettings.QuerySet(new AddNewStudent(data.Name, data.Surname, data.Rate));
             }
         }
         private void FillingTableTeams()
         {
-            foreach (DataTeams data in Moke.Teams)
+            foreach (MockTeams data in _mock.Teams)
             {
                 QuerySettings.QuerySet(new AddNewTeam(data.Name));
             }
@@ -151,7 +152,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableVisits()
         {
-            foreach (DataVisits data in Moke.Visits)
+            foreach (MockVisits data in _mock.Visits)
             {
                 QuerySettings.QuerySet(new AddNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
             }

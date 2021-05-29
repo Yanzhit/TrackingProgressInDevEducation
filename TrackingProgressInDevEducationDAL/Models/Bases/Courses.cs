@@ -7,11 +7,11 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Courses : IModels
+    public class Courses : AbstrackModels
     {
         public string Name { get; set; }
-        public string StartedOn { get; set; }
-        public string FinishedOn { get; set; }
+        public DateTime StartedOn { get; set; }
+        public DateTime FinishedOn { get; set; }
         
         public override bool Equals(object obj)
         {

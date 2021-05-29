@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Homeworks : IModels
+    public class Homeworks : AbstrackModels
     {
         public string Name { get; set; }
 

@@ -7,7 +7,7 @@ using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Payments : IModels
+    public class Payments : AbstrackModels
     {
         public int StudentId { get; set; }
         public DateTime PaymentTo { get; set; }

@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
     public class DataHomeworkGroup
     {
-
-        public DataHomeworkGroup()
-        {
-        } 
+        
     }
 }

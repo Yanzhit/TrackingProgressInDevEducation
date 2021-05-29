@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class CommentType : IModels
+    public class CommentType : AbstrackModels
     {
         public string Name { get; set; }
 

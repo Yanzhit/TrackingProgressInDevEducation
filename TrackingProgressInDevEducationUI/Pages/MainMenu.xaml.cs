@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     {
         private MainForm _mainForm;
         private bool _isDevMod = true;
-        private List<IModels> _models = new List<IModels>();
+        private List<AbstrackModels> _models = new List<AbstrackModels>();
         public MainMenu(MainForm mainForm)
         {
             InitializeComponent();
