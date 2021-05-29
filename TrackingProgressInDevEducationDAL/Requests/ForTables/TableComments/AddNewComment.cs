@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables.TableComments
         public string Name { get; }
         public string Params { get; }
 
-        public AddNewComment(string text,int typeId,int studentId, int createdBy)
+        public AddNewComment(string text, int typeId, int studentId, int createdBy)
         {
             Type = typeof(Comments);
             Name = GetType().Name;
