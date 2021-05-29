@@ -69,7 +69,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void NullifyTableCourses()
         {
-            var query = new QCours();
+            var query = new QCourse();
             QuerySettings.QuerySet(query.NullifyCourses());
         }
         private void NullifyTableGroups()

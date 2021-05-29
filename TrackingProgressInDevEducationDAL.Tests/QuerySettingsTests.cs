@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class QuerySettingsTests
     {
-        private PreparationDB _pDB= new PreparationDB();
+        private readonly PreparationDB _pDB= new();
         [TestCaseSource(typeof(StudentsDTO))]
         public void GetStudentsTest(IQuery query, List<Student> expected)
         {

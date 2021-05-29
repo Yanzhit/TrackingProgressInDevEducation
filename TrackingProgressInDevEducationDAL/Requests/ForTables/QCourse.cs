@@ -4,32 +4,37 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
-    public class QCours : IQuery
+    public class QCourse : IQuery
     {
         public Type Type { get; } = typeof(Course);
+        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QCours AddNewCourse(string name, DateTime startedOn, DateTime finishedOn)
+        public QCourse AddNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
+            TypeQueries = TypeQueries.Set;
             Name = nameof(AddNewCourse);
             Params = $"{name}, {startedOn}, {finishedOn}";
             return this;
         }
-        public QCours GetAllCourses()
+        public QCourse GetAllCourses()
         {
+            TypeQueries = TypeQueries.Get;
             Name = nameof(GetAllCourses);
             Params = string.Empty;
             return this;
         }
-        public QCours RemoveCourseById(int id)
+        public QCourse RemoveCourseById(int id)
         {
+            TypeQueries = TypeQueries.Remove;
             Name = nameof(RemoveCourseById);
             Params = $"{id}";
             return this;
         }
-        public QCours NullifyCourses()
+        public QCourse NullifyCourses()
         {
+            TypeQueries = TypeQueries.Remove;
             Name = nameof(NullifyCourses);
             Params = string.Empty;
             return this;

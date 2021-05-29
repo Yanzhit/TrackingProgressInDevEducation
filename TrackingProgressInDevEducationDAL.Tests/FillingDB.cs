@@ -81,7 +81,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableCourses()
         {
-            var query = new QCours();
+            var query = new QCourse();
             foreach (MockCourse data in _mock.Courses)
             {
                 QuerySettings.QuerySet(query.AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));

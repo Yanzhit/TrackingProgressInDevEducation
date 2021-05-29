@@ -1,20 +1,19 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
-    public class QLection : IQuery
+    public class QLectorCourse : IQuery
     {
-        public Type Type { get; } = typeof(Lection);
+        public Type Type { get; }
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QLection NullifyLections()
+        public QLectorCourse NullifyCourse()
         {
             TypeQueries = TypeQueries.Remove;
-            Name = nameof(NullifyLections);
+            Name = nameof(NullifyCourse);
             Params = string.Empty;
             return this;
         }

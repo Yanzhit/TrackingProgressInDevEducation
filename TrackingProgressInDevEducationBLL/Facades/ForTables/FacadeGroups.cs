@@ -2,7 +2,6 @@
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
-using TrackingProgressInDevEducationDAL.Requests.Others;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {

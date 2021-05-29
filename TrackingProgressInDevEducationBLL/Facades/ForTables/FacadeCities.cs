@@ -2,6 +2,6 @@
 {
     public static class FacadeCities
     {
-        //private static readonly QCities Query = new();
+        //private static readonly QCity Query = new();
     }
 }

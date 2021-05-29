@@ -5,9 +5,5 @@
         public void Write()
         {
         }
-
-        void Mock()
-        {
-        }
     }
 }
