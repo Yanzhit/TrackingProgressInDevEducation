@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -24,26 +25,24 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
         {
-            Queries queries;
-            List<Students> students;
+            IEnumerable<string> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
-                queries = new Queries();
-                students = (List<Students>)QuerySettings.QuerySet(queries.GetStudents);
-                foreach (Students student in students)
+                students = FacadeExcemple.GetStudents();
+                foreach (var student in students)
                 {
-                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
+                    RequestViewTextBox.Text += student;
                 }
             }
 
             if (GetStudentsByIdRadioButton.IsChecked == true)
             {
-                queries = new Queries(Int32.Parse(GetStudentsByIdTextBoxId.Text));
-                students = (List<Students>)QuerySettings.QuerySet(queries.GetByIdStudent);
-                foreach (Students student in students)  
-                {
-                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
-                }
+                //queries = new Queries(Int32.Parse(GetStudentsByIdTextBoxId.Text));
+                //students = (List<Students>)QuerySettings.QuerySet(queries.GetByIdStudent);
+                //foreach (Students student in students)  
+                //{
+                //    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
+                //}
             }
         }
         

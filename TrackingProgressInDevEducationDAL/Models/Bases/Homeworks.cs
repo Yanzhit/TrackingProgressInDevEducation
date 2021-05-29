@@ -1,8 +1,6 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Interface;
-
-namespace TrackingProgressInDevEducationDAL.Models.Bases
+﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Homeworks : AbstrackModels
+    public class Homeworks : AbstractModels
     {
         public string Name { get; set; }
 

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Courses : AbstrackModels
+    public class Courses : AbstractModels
     {
         public string Name { get; set; }
         public DateTime StartedOn { get; set; }

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Payments : AbstrackModels
+    public class Payments : AbstractModels
     {
         public int StudentId { get; set; }
         public DateTime PaymentTo { get; set; }

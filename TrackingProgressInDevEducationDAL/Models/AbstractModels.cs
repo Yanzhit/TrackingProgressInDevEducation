@@ -1,8 +1,8 @@
-﻿namespace TrackingProgressInDevEducationDAL.Models.Interface
+﻿namespace TrackingProgressInDevEducationDAL.Models
 {
-    public abstract  class AbstrackModels
+    public abstract  class AbstractModels
     {
-        protected AbstrackModels()
+        protected AbstractModels()
         {
         }
 

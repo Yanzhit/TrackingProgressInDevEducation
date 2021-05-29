@@ -1,9 +1,8 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Comments : AbstrackModels
+    public class Comments : AbstractModels
     {
         public string Text { get; set; }
         public int TypeId { get; set; }

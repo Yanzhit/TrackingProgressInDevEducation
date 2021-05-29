@@ -13,8 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 using TrackingProgressInDevEducationUI.Pages.TestsPages;
 
 namespace TrackingProgressInDevEducationUI.Pages
@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     {
         private MainForm _mainForm;
         private bool _isDevMod = true;
-        private List<AbstrackModels> _models = new List<AbstrackModels>();
+        private List<AbstractModels> _models = new List<AbstractModels>();
         public MainMenu(MainForm mainForm)
         {
             InitializeComponent();

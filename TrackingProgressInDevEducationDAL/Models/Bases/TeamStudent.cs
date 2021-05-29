@@ -1,9 +1,8 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class TeamStudent : AbstrackModels
+    public class TeamStudent : AbstractModels
     {
         public int TeamId { get; set; }
         public int StudentId { get; set; }

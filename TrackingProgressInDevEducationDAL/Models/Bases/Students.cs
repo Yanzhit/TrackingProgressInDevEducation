@@ -4,11 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Students : AbstrackModels
+    public class Students : AbstractModels
     {
         public string Name { get; set; }
         public string Surname { get; set; }

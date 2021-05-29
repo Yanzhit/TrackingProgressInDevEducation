@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Models.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class Lections : AbstrackModels
+    public class Lections : AbstractModels
     {
         public int CourseId { get; set; }
         public int LectorId { get; set; }
