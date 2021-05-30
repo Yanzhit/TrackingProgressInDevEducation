@@ -1,5 +1,14 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCourse]
-	@Name nvarchar(50)
+(
+	@Name NVARCHAR(50)
+)
 AS
-insert [Courses] 
-values (@Name)
+	INSERT [Courses]
+	(
+		[Name]
+	)
+	VALUES
+	(
+		@Name
+	)
+--ZLoo (Все ок)

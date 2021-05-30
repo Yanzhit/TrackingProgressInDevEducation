@@ -1,4 +1,17 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewHW](@Name nvarchar(50))
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewHW]
+(
+	 @Name NVARCHAR(50)
+	,@Deskription NVARCHAR(50)
+)
 AS
-insert [Homeworks] ([Name])
-values (@Name)
+	INSERT [Homeworks]
+	(
+		 [Name]
+		,[Deskription]
+	)
+	VALUES
+	(
+		 @Name
+		,@Deskription
+	)
+--ZLoo (Все ок)

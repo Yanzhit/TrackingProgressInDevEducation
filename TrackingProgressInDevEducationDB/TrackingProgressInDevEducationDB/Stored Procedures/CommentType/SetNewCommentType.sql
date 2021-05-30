@@ -1,6 +1,14 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCommentType]
-	@param1 int = 0,
-	@param2 int
+(
+	 @Name INT
+)	
 AS
-	SELECT @param1, @param2
-RETURN 0
+	INSERT [CommentType]
+	(
+		[Name]
+	)
+	VALUES
+	(
+		@Name
+	)
+--ZLoo (Все ок)

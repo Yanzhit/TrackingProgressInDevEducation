@@ -1,6 +1,17 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewHWGroup]
-	@param1 int = 0,
-	@param2 int
+(
+	 @HomeworkId INT
+	,@GroupId INT
+)
 AS
-	SELECT @param1, @param2
-RETURN 0
+	INSERT [Homework_Group]
+	(
+		 [HomeworkId]
+		,[GroupId]
+	)
+	VALUES
+	(
+		 @HomeworkId
+		,@GroupId		
+	)
+--ZLoo (Все ок)

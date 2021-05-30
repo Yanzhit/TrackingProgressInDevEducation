@@ -1,4 +1,5 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyHWs]
 AS
-delete from [TrackingProgressInDevEducationDB].[Homeworks]
+DELETE FROM [TrackingProgressInDevEducationDB].[Homeworks]
 DBCC CHECKIDENT ([Homeworks], RESEED, 0)  -- Обнуление ключа indentify
+--ZLoo (Все ок)

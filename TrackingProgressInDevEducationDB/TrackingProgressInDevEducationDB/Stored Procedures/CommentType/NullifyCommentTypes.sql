@@ -1,4 +1,5 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyCommentType]
 AS
-delete from [TrackingProgressInDevEducationDB].[CommentType]
+DELETE FROM [TrackingProgressInDevEducationDB].[CommentType]
 DBCC CHECKIDENT ([CommentType], RESEED, 0)  -- Обнуление ключа indentify
+--ZLoo (Все ок)
