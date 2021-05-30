@@ -1,6 +1,26 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewComment]
-	@param1 int = 0,
-	@param2 int
+(
+	 @Text NVARCHAR(50)
+	,@TypeId INT
+	,@StudentId INT
+	,@CreatedBy INT
+	,@TeamId INT
+)
 AS
-	SELECT @param1, @param2
-RETURN 0
+	INSERT [Comments]
+	(
+		 [Text]
+		,[TypeId]
+		,[StudentId]
+		,[CreatedBy]
+		,[TeamId]
+	)
+	VALUES
+	(
+		 @Text
+		,@TypeId
+		,@StudentId
+		,@CreatedBy
+		,@TeamId
+	)
+--ZLoo (Все ок)

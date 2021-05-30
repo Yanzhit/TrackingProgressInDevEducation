@@ -1,45 +1,48 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewStudent]
-	@Name nvarchar(50),
-	@Surname nvarchar(50),
-	@Rate Decimal(6,2),
-	@GroupId int,
-	@Phone nvarchar(50),
-	@Email nvarchar(50),
-	@Contract nvarchar(50),
-	@Birthday date,
-	@MiddleName nvarchar(50),
-	@Git nvarchar(50),
-	@CityId int,
-	@Status BIT
+(
+	 @Name NVARCHAR(50)
+	,@Surname NVARCHAR(50)
+	,@Rate DECIMAL(6,2)
+	,@GroupId INT
+	,@Phone NVARCHAR(50)
+	,@Email NVARCHAR(50)
+	,@Contract NVARCHAR(50)
+	,@Birthday DATE
+	,@MiddleName NVARCHAR(50)
+	,@Git NVARCHAR(50)
+	,@CityId INT
+	,@Status BIT
+)
 
 AS
-insert [Students] 
-(
-	[Name],
-	[Surname],
-	[Rate],
-	[GroupId],
-	[Phone],
-	[Email],
-	[Contract],
-	[Birthday],
-	[MiddleName],
-	[Git],
-	[CityId],
-	[Status]
-)
-values 
-(
-	@Name,
-	@Surname,
-	@Rate,
-	@GroupId,
-	@Phone,
-	@Email,
-	@Contract,
-	@Birthday,
-	@MiddleName,
-	@Git,
-	@CityId,
-	@Status
-)
+	INSERT [Students] 
+	(
+		 [Name]
+		,[Surname]
+		,[Rate]
+		,[GroupId]
+		,[Phone]
+		,[Email]
+		,[Contract]
+		,[Birthday]
+		,[MiddleName]
+		,[Git]
+		,[CityId]
+		,[Status]
+	)
+	VALUES
+	(
+		 @Name
+		,@Surname
+		,@Rate
+		,@GroupId
+		,@Phone
+		,@Email
+		,@Contract
+		,@Birthday
+		,@MiddleName
+		,@Git
+		,@CityId
+		,@Status
+	)
+--ZLoo (Все ок)
