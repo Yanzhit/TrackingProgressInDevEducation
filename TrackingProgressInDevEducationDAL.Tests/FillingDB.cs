@@ -1,4 +1,5 @@
 ﻿using System;
+using TrackingProgressInDevEducationBLL.Facades.ForTables;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
@@ -65,10 +66,9 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableComments()
         {
-            var query = new QComment();
             foreach (MockComment data in _mock.Comments)
             {
-                QuerySettings.QuerySet(query.AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy));
+                FacadeComments.AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy);
             }
         }
         private void FillingTableCommentType()
@@ -76,6 +76,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             var query = new QCommentType();
             foreach (MockCommentType data in _mock.CommentType)
             {
+                //FacadeCommentType.
                 QuerySettings.QuerySet(query.AddNewCommentType(data.Name));
             }
         }
@@ -84,48 +85,53 @@ namespace TrackingProgressInDevEducationDAL.Tests
             var query = new QCourse();
             foreach (MockCourse data in _mock.Courses)
             {
+                //FacadeCourses.
                 QuerySettings.QuerySet(query.AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));
             }
         }
         private void FillingTableGroups()
         {
-            var query = new QGroup();
             foreach (MockGroup data in _mock.Groups)
             {
-                QuerySettings.QuerySet(query.AddNewGroup(data.Name, data.CourseId));
+                FacadeGroups.AddNewGroup(data.Name, data.CourseId);
             }
         }
         private void FillingTableHomeworkComplete()
         {
+            //FacadeHomeworkComplete
             var query = new QHomeworkComplete();
             //QuerySettings.QuerySet(query.AddNewHomeworkComplete());
         }
         private void FillingTableHomeworkGroup()
         {
+            //FacadeHomeworkGroup.
             var query = new QHomeworkGroup();
             //QuerySettings.QuerySet(query.AddNewHomeworkGroup());
         }
         private void FillingTableHomeworks()
         {
-            var query = new QHomework();
-            //QuerySettings.QuerySet(query.AddNewHomeworks());
+            //foreach (MockHomework data in _mock.Homeworks)
+            //{
+            //    FacadeHomeworks.CreateNewHomeworks(data.Name);
+            //}
         }
         private void FillingTableLections()
         {
+            //FacadeLections.
             var query = new QLection();
             //QuerySettings.QuerySet(query.AddNewLections());
         }
         private void FillingTableLectorGroup()
         {
+            //FacadeLectorGroup.
             var query = new QLectorGroup();
             //QuerySettings.QuerySet(query.AddNewLectorGroup());
         }
         private void FillingTableLectors()
         {
-            var query = new QLector();
             foreach (MockLector data in _mock.Lectors)
             {
-                QuerySettings.QuerySet(query.AddNewLector(data.FullName));
+                FacadeLectors.AddNewLector(data.FullName);
             }
         }
         private void FillingTablePayments()
@@ -133,27 +139,27 @@ namespace TrackingProgressInDevEducationDAL.Tests
             var query = new QPayment();
             foreach (MockPayment data in _mock.Payments)
             {
+                //FacadePayments.
                 QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
             }
         }
         private void FillingTableStudents()
         {
-            var query = new QStudent();
             foreach (MockStudent data in _mock.Students)
             {
-                QuerySettings.QuerySet(query.AddNewStudent(data.Name, data.Surname, data.Rate));
+                FacadeStudent.AddNewStudent(data.Name, data.Surname, data.Rate);
             }
         }
         private void FillingTableTeams()
         {
-            var query = new QTeam();
             foreach (MockTeam data in _mock.Teams)
             {
-                QuerySettings.QuerySet(query.AddNewTeam(data.Name));
+                FacadeTeams.AddNewTeam(data.Name);
             }
         }
         private void FillingTableTeamStudent()
         {
+            //FacadeTeamStudent.
             var query = new QTeamStudent();
             //QuerySettings.QuerySet(query.AddNewTeamStudent());
         }
@@ -162,6 +168,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             var query = new QVisit();
             foreach (MockVisit data in _mock.Visits)
             {
+                //FacadeVisits.
                 QuerySettings.QuerySet(query.AddNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
             }
         }
