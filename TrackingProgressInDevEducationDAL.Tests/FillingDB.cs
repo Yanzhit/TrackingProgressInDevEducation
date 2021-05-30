@@ -4,7 +4,6 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
 using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
-using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
