@@ -1,10 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
   <Operation Name="Rename Refactor" Key="da4b1f34-3c33-4a39-aea3-5ab3391c3830" ChangeDateTime="05/23/2021 12:40:23">
-    <Property Name="ElementName" Value="[dbo].[Comments].[Name]" />
+    <Property Name="ElementName" Value="[TrackingProgressInDevEducationDB].[Comments].[Name]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
-    <Property Name="ParentElementName" Value="[dbo].[Comments]" />
+    <Property Name="ParentElementName" Value="[TrackingProgressInDevEducationDB].[Comments]" />
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Text" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8c3a69d-d694-40e9-9a3e-2a454e30e049" ChangeDateTime="05/26/2021 12:58:40">
+    <Property Name="ElementName" Value="[TrackingProgressInDevEducationDB].[Cities].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TrackingProgressInDevEducationDB].[Cities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6f551d58-af03-4b09-92bd-79c7bcc5b2e9" ChangeDateTime="05/26/2021 12:59:44">
+    <Property Name="ElementName" Value="[TrackingProgressInDevEducationDB].[Students].[City]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TrackingProgressInDevEducationDB].[Students]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CityId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="59259a24-c3e3-4b81-8744-2cd6cf390785" ChangeDateTime="05/26/2021 16:02:11">
+    <Property Name="ElementName" Value="[TrackingProgressInDevEducationDB].[Lector_Courses].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TrackingProgressInDevEducationDB].[Lector_Courses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LectorId" />
   </Operation>
 </Operations>

@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Abstract\**" />
+    <Compile Remove="Requests\ForTables\TableLections\**" />
+    <Compile Remove="Requests\ForTables\TableLectorCourses\**" />
+    <EmbeddedResource Remove="Models\Abstract\**" />
+    <EmbeddedResource Remove="Requests\ForTables\TableLections\**" />
+    <EmbeddedResource Remove="Requests\ForTables\TableLectorCourses\**" />
+    <None Remove="Models\Abstract\**" />
+    <None Remove="Requests\ForTables\TableLections\**" />
+    <None Remove="Requests\ForTables\TableLectorCourses\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
@@ -14,7 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Abstract\" />
+    <Folder Include="Models\Others\" />
+    <Folder Include="Requests\Others\" />
   </ItemGroup>
 
 </Project>

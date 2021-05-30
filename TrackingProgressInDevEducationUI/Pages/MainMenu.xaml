@@ -9,7 +9,15 @@
       Title="MainMenu">
 
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="102" Margin="262,225,0,0" VerticalAlignment="Top" Width="256" Click="Button_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="White" Offset="0.185"/>
+                <GradientStop Color="#FF95D492" Offset="0.811"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="QueriesTestButton" Content="QueriesTest" HorizontalAlignment="Left" Height="25" Margin="52,26,0,0" VerticalAlignment="Top" Width="88" Click="QueriesTestButton_Click" Visibility="Hidden"/>
+        <CheckBox x:Name="DevModeCheckBox" Content="DevMod" HorizontalAlignment="Left" Margin="710,10,0,0" VerticalAlignment="Top" Checked="DevModCheckBox_Checked"/>
 
     </Grid>
 </Page>
