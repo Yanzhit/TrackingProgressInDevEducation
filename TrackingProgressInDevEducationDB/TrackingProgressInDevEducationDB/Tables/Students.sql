@@ -11,6 +11,7 @@
     [MiddleName] NVARCHAR(50) NULL, 
     [Git] NVARCHAR(50) NULL, 
     [CityId] INT NULL, 
+    [Status] BIT NULL, 
     CONSTRAINT [PK_STUDENTS] PRIMARY KEY CLUSTERED ([id] ASC), 
     CONSTRAINT [FK_Students_Group] FOREIGN KEY ([GroupId]) REFERENCES [TrackingProgressInDevEducationDB].[Groups]([id]),
     CONSTRAINT [FK_Students_City] FOREIGN KEY ([CityId]) REFERENCES [TrackingProgressInDevEducationDB].[Cities]([id])

@@ -9,7 +9,8 @@
 	@Birthday date,
 	@MiddleName nvarchar(50),
 	@Git nvarchar(50),
-	@CityId int
+	@CityId int,
+	@Status BIT
 
 AS
 insert [Students] 
@@ -24,7 +25,8 @@ insert [Students]
 	[Birthday],
 	[MiddleName],
 	[Git],
-	[CityId]
+	[CityId],
+	[Status]
 )
 values 
 (
@@ -38,5 +40,6 @@ values
 	@Birthday,
 	@MiddleName,
 	@Git,
-	@CityId
+	@CityId,
+	@Status
 )
