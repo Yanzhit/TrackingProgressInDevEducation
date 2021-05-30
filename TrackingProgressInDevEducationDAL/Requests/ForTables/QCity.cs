@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QCity SetNewCity(string name)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(SetNewCity);
             Params = $"{name}";
             return this;
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QCity GetCities()
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetSeveral;
             Name = nameof(GetCities);
             Params = string.Empty;
             return this;
@@ -30,7 +30,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QCity GetCityById(int id)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetCityById);
             Params = $"{id}";
             return this;
@@ -38,7 +38,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QCity RemoveCityById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveCityById);
             Params = $"{id}";
             return this;

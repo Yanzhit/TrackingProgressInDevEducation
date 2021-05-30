@@ -14,42 +14,42 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QTeam AddNewTeam(string name)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewTeam);
             Params = $"{name}";
             return this;
         }
         public QTeam GetTeams()
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetSeveral;
             Name = nameof(GetTeams);
             Params = string.Empty;
             return this;
         }
         public QTeam GetTeamById(int id)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetTeamById);
             Params = $"{id}";
             return this;
         }
         public QTeam UpdateTeamById(int id, string name)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateTeamById);
             Params = $"{id}, {name}";
             return this;
         }
         public QTeam RemoveTeamById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveTeamById);
             Params = $"{id}";
             return this;
         }
         public QTeam GetAllTeamsByLector(int lectorId)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetSeveral;
             Name = GetType().Name;
             Params = $"{lectorId}";
             return this;

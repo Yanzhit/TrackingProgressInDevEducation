@@ -14,35 +14,35 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QVisit AddNewVisit(bool visitStatus, int studentId, int lectionId)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewVisit);
             Params = $"{visitStatus}, {studentId}, {lectionId}";
             return this;
         }
         public QVisit GetVisitById(int id)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetVisitById);
             Params = $"{id}";
             return this;
         }
         public QVisit GetVisits()
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetSeveral;
             Name = nameof(GetVisits);
             Params = string.Empty;
             return this;
         }
         public QVisit RemoveVisitById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveVisitById);
             Params = $"{id}";
             return this;
         }
         public QVisit UpdateVisitById(int id, bool visitStatus, int studentId, int lectionId)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateVisitById);
             Params = $"{id}, {visitStatus}, {studentId}, {lectionId}";
             return this;

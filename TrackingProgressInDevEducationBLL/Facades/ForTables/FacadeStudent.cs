@@ -18,9 +18,9 @@ namespace TrackingProgressInDevEducationBLL.Facades.ForTables
             return (List<Student>)QuerySettings.QuerySet(Query.AddNewStudent(name, surname, rate));
         }
 
-        public static IEnumerable<Student> GetByIdStudent(int id)
+        public static Student GetByIdStudent(int id)
         {
-            return (List<Student>)QuerySettings.QuerySet(Query.GetByIdStudent(id));
+            return (Student)QuerySettings.QuerySet(Query.GetByIdStudent(id));
         }
         public static IEnumerable<Student>  NullifyStudents()
         {

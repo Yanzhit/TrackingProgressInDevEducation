@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QLector AddEmailAndPasswordLectors(int id, string email, string password)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddEmailAndPasswordLectors);
             Params = $"{id}, {email}, {password}";
             return this;
@@ -22,35 +22,35 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QLector AddNewLector(string fullName)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewLector);
             Params = $"{fullName}";
             return this;
         }
         public QLector GetLectorById(int id)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetLectorById);
             Params = $"{id}";
             return this;
         }
         public QLector GetLectors()
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetSeveral;
             Name = nameof(GetLectors);
             Params = string.Empty;
             return this;
         }
         public QLector RemoveLectorById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveLectorById);
             Params = $"{id}";
             return this;
         }
         public QLector UpdateLectorById(int id, string fullName)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateLectorById);
             Params = $"{id}, {fullName}";
             return this;

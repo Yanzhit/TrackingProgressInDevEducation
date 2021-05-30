@@ -86,7 +86,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             //FacadeHomeworkComplete.
             var query = new QHomeworkComplete();
-            QuerySettings.QuerySet(query.NullifyHomeworkComplete());
+            QuerySettings.QuerySet(query.NullifyHWComplete());
         }
         private void NullifyTableHomeworkGroup()
         {

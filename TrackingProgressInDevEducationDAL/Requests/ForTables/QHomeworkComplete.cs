@@ -12,24 +12,24 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QHomeworkComplete UpdateHomeworkCompleteByIdHomework(int homeworkId, bool status)
+        public QHomeworkComplete UpdateHWCompleteByIdHW(int homeworkId, bool status)
         {
-            TypeQueries = TypeQueries.Update;
-            Name = nameof(UpdateHomeworkCompleteByIdHomework);
+            TypeQueries = TypeQueries.UpdateOne;
+            Name = nameof(UpdateHWCompleteByIdHW);
             Params = $"{homeworkId}, {status}";
             return this;
         }
-        public QHomeworkComplete UpdateHomeworkCompleteByIdStudents(int studentId, bool status)
+        public QHomeworkComplete UpdateHWCompleteByIdStudents(int studentId, bool status)
         {
-            TypeQueries = TypeQueries.Update;
-            Name = nameof(UpdateHomeworkCompleteByIdStudents);
+            TypeQueries = TypeQueries.UpdateOne;
+            Name = nameof(UpdateHWCompleteByIdStudents);
             Params = $"{studentId}, {status}";
             return this;
         }
-        public QHomeworkComplete NullifyHomeworkComplete()
+        public QHomeworkComplete NullifyHWComplete()
         {
             TypeQueries = TypeQueries.Nullify;
-            Name = nameof(NullifyHomeworkComplete);
+            Name = nameof(NullifyHWComplete);
             Params = string.Empty;
             return this;
         }

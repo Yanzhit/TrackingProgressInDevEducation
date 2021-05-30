@@ -14,21 +14,21 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QCourse AddNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewCourse);
             Params = $"{name}, {startedOn}, {finishedOn}";
             return this;
         }
         public QCourse GetAllCourses()
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetAllCourses);
             Params = string.Empty;
             return this;
         }
         public QCourse RemoveCourseById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveCourseById);
             Params = $"{id}";
             return this;

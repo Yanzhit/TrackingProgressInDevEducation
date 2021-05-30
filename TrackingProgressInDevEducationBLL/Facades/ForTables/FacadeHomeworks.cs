@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationBLL.Facades.ForTables
         }
         public static List<Homework> CreateNewHomeworks(string name)
         {
-            return (List<Homework>) QuerySettings.QuerySet(Query.CreateNewHomeworks(name));
+            return (List<Homework>) QuerySettings.QuerySet(Query.SetNewHWs(name));
         }
     }
 }
