@@ -7,6 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QComment: IQuery
     {
         public Type Type { get; } = typeof(Comment);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -48,7 +49,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         }
         public QComment NullifyComments()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyComments);
             Params = string.Empty;
             return this;

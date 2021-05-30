@@ -5,6 +5,7 @@
         Get = 0,
         Set,
         Update,
-        Remove
+        Remove,
+        Nullify
     }
 }

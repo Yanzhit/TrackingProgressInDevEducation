@@ -7,6 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QLector : IQuery
     {
         public Type Type { get; } = typeof(Lector);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -56,7 +57,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         }
         public QLector NullifyLectors()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyLectors);
             Params = string.Empty;
             return this;

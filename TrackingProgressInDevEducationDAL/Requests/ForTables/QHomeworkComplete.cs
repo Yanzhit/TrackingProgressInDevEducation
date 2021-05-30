@@ -7,6 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QHomeworkComplete : IQuery
     {
         public Type Type { get; } = typeof(HomeworkComplete);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -27,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         }
         public QHomeworkComplete NullifyHomeworkComplete()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHomeworkComplete);
             Params = string.Empty;
             return this;

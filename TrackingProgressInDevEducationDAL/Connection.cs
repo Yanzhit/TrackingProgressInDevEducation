@@ -6,28 +6,15 @@ using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class Connection
+    public static class Connection
     {
-        private static readonly string Schema = $"exec TrackingProgressInDevEducationDB.";
         private const string Cs = @"Persist Security Info=False;User ID=DevEd;Password=qqq!11;Initial Catalog=Sandbox.Test;Server=80.78.240.16";
         //private const string Cs = @"Persist Security Info=False;User ID=DevEd;Password=qqq!11;Initial Catalog=Sandbox;Server=80.78.240.16";
-        public static List<T> Connect<T>(IQuery query)
+        public static IDbConnection Connect()
         {
-            using (IDbConnection dbConnection = new SqlConnection(Cs))
+            using(IDbConnection dbConnection = new SqlConnection(Cs))
             {
-                switch (query.TypeQueries)
-                {
-                    case TypeQueries.Set:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Get:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Update:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Remove:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    default:
-                        return new List<T>();
-                }
+                return dbConnection;
             }
         }
        

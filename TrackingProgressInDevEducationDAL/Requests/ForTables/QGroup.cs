@@ -7,6 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QGroup : IQuery
     {
         public Type Type { get; } = typeof(Group);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -55,7 +56,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         }
         public QGroup NullifyGroups()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyGroups);
             Params = string.Empty;
             return this;

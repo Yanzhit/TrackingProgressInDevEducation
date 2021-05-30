@@ -7,6 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QPayment : IQuery
     {
         public Type Type { get; } = typeof(Payment);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -69,7 +70,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         }
         public QPayment NullifyPayments()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyPayments);
             Params = string.Empty;
             return this;
