@@ -23,24 +23,18 @@ namespace TrackingProgressInDevEducationUI
         public MainForm()
         {
             InitializeComponent();
-            StartSignIn();
+            _ = StartSignIn();
         }
 
         /// <summary>
         /// Вызов страницы авторизации с задержкой в 2 секунды
         /// </summary>
-        private void StartSignIn()
+        private async Task StartSignIn()
         {
             //Запуск задержки
-            Task.Delay(2000).ContinueWith(_ =>
-            {
-                //Переброс вторичного потока в основной поток.
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    SignIn signIn = new SignIn(this);
-                    this.Content = signIn;
-                });                
-            });
+            await Task.Delay(TimeSpan.FromSeconds(2));
+            SignIn signIn = new SignIn(this);
+            this.Content = signIn;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

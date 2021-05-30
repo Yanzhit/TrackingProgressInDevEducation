@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Models.Interface;
+using TrackingProgressInDevEducationUI.Pages.TestsPages;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -23,22 +24,41 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainMenu : Page
     {
-        private List<IModels> _models = new List<IModels>();
-        public MainMenu()
+        private MainForm _mainForm;
+        private bool _isDevMod = true;
+        private List<AbstractModel> _models = new List<AbstractModel>();
+        public MainMenu(MainForm mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
+            PreInstall();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void PreInstall()
         {
-            int i = 0;
-            Queryes queryes = new Queryes();
-            object objects = QuerySettings.Connect(queryes.GetStudents);
-            List<Students> students = (List<Students>)objects;
-            foreach (Students student in students)
+            if (!_isDevMod)
             {
-                MessageBox.Show($"{student.Name} {student.Surname} {student.Rate} {i}");
-                i++;
+                QueriesTestButton.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void QueriesTestButton_Click(object sender, RoutedEventArgs e)
+        {
+            QueriesTests queriesTests = new QueriesTests(_mainForm);
+            _mainForm.Content = queriesTests;
+        }
+
+        private void DevModCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (DevModeCheckBox.IsChecked == true)
+            {
+                _isDevMod = true;
+                QueriesTestButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                _isDevMod = false;
+                QueriesTestButton.Visibility = Visibility.Hidden;
             }
         }
     }
