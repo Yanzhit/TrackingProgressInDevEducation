@@ -12,7 +12,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public string Surname { get; set; }
         public Decimal Rate { get; set; }
-        
+        public int GroupId { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Contract { get; set; }
+        public DateTime Birthday { get; set; }
+        public string MiddleName { get; set; }
+        public string Git { get; set; }
+        public int CityId { get; set; }
+
+       
         public override bool Equals(object obj)
         {
             return Equals((Student)obj);

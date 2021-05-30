@@ -2,9 +2,14 @@
 {
     public enum TypeQueries
     {
-        Get = 0,
-        Set,
-        Update,
-        Remove
+        GetOne  = 0,
+        SetOne,
+        UpdateOne,
+        RemoveOne,
+        GetSeveral,
+        SetSeveral,
+        UpdateSeveral,
+        RemoveSeveral,
+        Nullify
     }
 }

@@ -7,41 +7,42 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     public class QHomework : IQuery
     {
         public Type Type { get; } = typeof(Homework);
+        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QHomework CreateNewHomeworks(string name)
+        public QHomework SetNewHWs(string name)
         {
-            TypeQueries = TypeQueries.Set;
-            Name = nameof(CreateNewHomeworks);
+            TypeQueries = TypeQueries.SetOne;
+            Name = nameof(SetNewHWs);
             Params = $"{name}";
             return this;
         }
         public QHomework GetHomeworkById(int id)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.GetOne;
             Name = nameof(GetHomeworkById);
             Params = $"{id}";
             return this;
         }
         public QHomework RemoveHomeworksById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.RemoveOne;
             Name = nameof(RemoveHomeworksById);
             Params = $"{id}";
             return this;
         }
         public QHomework UpdateHomeworkById(string name, int id)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateHomeworkById);
             Params = $"{name}, {id}";
             return this;
         }
         public QHomework NullifyHomeworks()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHomeworks);
             Params = string.Empty;
             return this;
