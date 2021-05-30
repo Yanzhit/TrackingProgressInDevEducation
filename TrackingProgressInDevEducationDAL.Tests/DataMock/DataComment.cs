@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataComments
+    public class DataComment
     {
-        public int Count { get; }
         public string[] Text { get; }
 
         public int[] TypeId { get; }
@@ -13,10 +12,17 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 
         public int[] CreatedBy { get; }
 
-        public DataComments()
+        public DataComment()
         {
-            Count = 10;
-            Text = new[]
+            Text = DataText();
+            TypeId = DataTypeId();
+            StudentId = DataStudentId();
+            CreatedBy = DataCreatedBy();
+        }
+
+        private string[] DataText()
+        {
+            return new[]
             {
                 "Комментарий первый",
                 "Хороший тип",
@@ -29,15 +35,25 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
                 "Веселый дядя гуру",
                 "Амбиции не знают границ" //10
             };
-            TypeId  = new[]
+        }
+
+        private int[] DataTypeId()
+        {
+            return new[]
             {
                 1, 2, 3, 4, 5, 6, 8, 9, 0, 7 //10
             };
-            StudentId = new[]
+        }
+        private int[] DataStudentId()
+        {
+            return new[]
             {
                 1, 2, 3, 2, 3, 6, 8, 2, 0, 7 //10
             };
-            CreatedBy = new[]
+        }
+        private int[] DataCreatedBy()
+        {
+            return new[]
             {
                 1, 2, 8, 2, 7, 5, 2, 2, 0, 1 //10
             };

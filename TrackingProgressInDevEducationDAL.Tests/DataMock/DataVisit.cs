@@ -1,39 +1,39 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataHomeworkComplete
+    public class DataVisit
     {
-        public int[] HomeworkId { get; }
+        public bool[] VisitStatus { get; }
         public int[] StudentId { get; }
-        public bool[] Status { get; }
+        public int[] LectionId { get; }
 
-        public DataHomeworkComplete()
+        public DataVisit()
         {
-            HomeworkId = DataHomeworkId();
+            VisitStatus = DataVisitStatus();
             StudentId = DataStudentId();
-            Status = DataStatus();
+            LectionId = DataLectionId();
         }
 
-        private int[] DataHomeworkId()
-        {
-            return new[]
-            {
-                3, 2, 1
-            };
-        }
-        private int[] DataStudentId()
-        {
-            return new[]
-            {
-                1, 2, 3
-            };
-        }
-        private bool[] DataStatus()
+        private bool[] DataVisitStatus()
         {
             return new[]
             {
                 true,
                 false,
                 true
+            };
+        }
+        private int[] DataStudentId()
+        {
+            return new[]
+            {
+               1, 2, 3
+            };
+        }
+        private int[] DataLectionId()
+        {
+            return new[]
+            {
+                4, 2, 1
             };
         }
     }
