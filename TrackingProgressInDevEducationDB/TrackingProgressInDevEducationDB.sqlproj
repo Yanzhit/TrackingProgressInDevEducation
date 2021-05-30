@@ -100,8 +100,8 @@
     <Build Include="SQLQuery.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\SetNewTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\SetNewStudent.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetByIdStudent.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetStudents.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetStudentByIdJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetALLStudents.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroups.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\RemoveGroupById.sql" />
@@ -119,7 +119,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\RemoveCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\SetNewLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectors.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetAllLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\RemoveLectorById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdateLectorById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\GetVisits.sql" />
@@ -147,9 +147,9 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\SetNewEmailAndPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\Lector_Courses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\LectorCourses\SetNewCourseToLector.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\GetCoursesByLector.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\GetAllCoursesByLectorJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroupsByLector.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\GetAllTeamsByLector.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\GetAllTeamsByLectorJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetAllStudentsByTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TeamStudent\SetStudentToTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\GetCommentsByTeam.sql" />
@@ -171,7 +171,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\RemoveCityById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\UpdateCityById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\GetCityById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\GetCities.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\GetAllCities.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\SetNewCityById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\NullifyCities.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\NullifyPayments.sql" />
@@ -218,6 +218,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\LectorCourses\SetNewLectorCourse.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\SetNewHWComplete.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\SetNewComment.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\GetNotActualTeamByStudentIdJ.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
