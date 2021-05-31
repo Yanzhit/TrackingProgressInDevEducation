@@ -1,8 +1,8 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeHomeworkComplete
+    public class HWCompletes
     {
         private static readonly QHomeworkComplete Query = new();
     }

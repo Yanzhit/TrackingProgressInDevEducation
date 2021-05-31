@@ -1,5 +1,5 @@
 ﻿using System;
-using TrackingProgressInDevEducationBLL.Facades.ForTables;
+using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
@@ -126,11 +126,11 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void NullifyTableStudents()
         {
-            FacadeStudent.NullifyStudents();
+            Students.NullifyStudents();
         }
         private void NullifyTableTeams()
         {
-            FacadeTeams.NullifyTeams();
+            Teams.NullifyTeams();
         }
         private void NullifyTableTeamStudent()
         {

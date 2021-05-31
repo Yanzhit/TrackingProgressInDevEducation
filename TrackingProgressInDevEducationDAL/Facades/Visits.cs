@@ -1,8 +1,8 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeVisits
+    public class Visits
     {
         private static readonly QVisit Query = new();
     }

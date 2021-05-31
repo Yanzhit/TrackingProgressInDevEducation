@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeStudent
+    public class Students
     {
         private static readonly QStudent Query = new();
         public static Student SetNewStudent

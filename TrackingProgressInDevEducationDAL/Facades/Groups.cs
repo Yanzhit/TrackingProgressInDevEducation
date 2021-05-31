@@ -1,21 +1,20 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeGroups
+    public class Groups
     {
         private static readonly QGroup Query = new();
         //public static IEnumerable<Group> GetGroups()
         //{
         //    return (List<Group>) QuerySettings.QuerySet(Query.GetGroups());
         //}
-        public static Group SetNewGroup(string name, int courseId)
-        {
-            return (Group)QuerySettings.QuerySet(Query.SetNewGroup(name, courseId));
-        }
+        //public static Group SetNewGroup(string name, int courseId)
+        //{
+        //    return (Group)QuerySettings.QuerySet(Query.SetNewGroup(name, courseId));
+        //}
         //public static IEnumerable<Group> GetGroupById(int id)
         //{
         //    return (List<Group>)QuerySettings.QuerySet(Query.GetGroupById(id));

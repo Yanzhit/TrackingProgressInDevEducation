@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeComments
+    public class Comments
     {
         private static readonly QComment Query = new();
         //public static IEnumerable<Comment> UpdateCommentById(int id, string text)

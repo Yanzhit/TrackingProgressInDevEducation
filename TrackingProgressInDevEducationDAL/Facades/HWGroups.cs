@@ -1,8 +1,8 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeHomeworkGroup
+    public class HWGroups
     {
         private static readonly QHomeworkGroup Query = new();
     }

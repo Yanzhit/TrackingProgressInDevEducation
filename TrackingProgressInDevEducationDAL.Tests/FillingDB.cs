@@ -1,5 +1,5 @@
 ﻿using System;
-using TrackingProgressInDevEducationBLL.Facades.ForTables;
+using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
@@ -67,7 +67,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockComment data in _mock.Comments)
             {
-                FacadeComments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
+                Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
             }
         }
         private void FillingTableCommentType()
@@ -92,7 +92,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockGroup data in _mock.Groups)
             {
-                FacadeGroups.SetNewGroup(data.Name, data.CourseId);
+                //Groups(data.Name, data.CourseId);
             }
         }
         private void FillingTableHomeworkComplete()
@@ -130,7 +130,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockLector data in _mock.Lectors)
             {
-                FacadeLectors.SetNewLector(data.FullName, data.Email, data.Password);
+                Lectors.SetNewLector(data.FullName, data.Email, data.Password);
             }
         }
         private void FillingTablePayments()
@@ -146,7 +146,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockStudent data in _mock.Students)
             {
-                FacadeStudent.SetNewStudent
+                Students.SetNewStudent
                     (
                         data.Name,
                         data.Surname,
@@ -167,7 +167,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockTeam data in _mock.Teams)
             {
-                FacadeTeams.SetNewTeam(data.Name);
+                Teams.SetNewTeam(data.Name);
             }
         }
         private void FillingTableTeamStudent()

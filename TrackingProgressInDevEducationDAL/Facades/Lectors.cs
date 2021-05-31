@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeLectors
+    public class Lectors
     {
         private static readonly QLector Query = new();
         //public static IEnumerable<Lector> GetLectors()

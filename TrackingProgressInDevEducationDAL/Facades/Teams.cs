@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeTeams
+    public class Teams
     {
         private static readonly QTeam Query = new();
         public static Team SetNewTeam(string name)

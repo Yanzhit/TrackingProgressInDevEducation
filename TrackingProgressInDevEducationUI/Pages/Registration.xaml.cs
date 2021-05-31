@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using TrackingProgressInDevEducationBLL.Facades.ForTables;
+using TrackingProgressInDevEducationDAL.Facades;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -46,7 +46,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
             if (Password_Input.Text == PasswordRepeat_Input.Text)
             {
-                FacadeLectors.SetNewLector(FullName_Input.Text, Email_Input.Text, Password_Input.Text);
+                Lectors.SetNewLector(FullName_Input.Text, Email_Input.Text, Password_Input.Text);
             }
         }
     }

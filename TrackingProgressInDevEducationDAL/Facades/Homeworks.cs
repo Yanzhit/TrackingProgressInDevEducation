@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
-namespace TrackingProgressInDevEducationBLL.Facades.ForTables
+namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class FacadeHomeworks
+    public class Homeworks
     {
         private static readonly QHomework Query = new();
         //public static IEnumerable<Homework> GetHomeworkById(int id)
