@@ -219,6 +219,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lections\SetNewLection.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Homeworks\SetNewHW.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\SetNewHWComplete.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\CommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkGroup\SetNewHWGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\SetNewCourse.sql" />
