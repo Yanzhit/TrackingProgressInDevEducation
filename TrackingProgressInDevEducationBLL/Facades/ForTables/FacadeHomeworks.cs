@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeHomeworks
+    public class FacadeHomeworks
     {
         private static readonly QHomework Query = new();
         //public static IEnumerable<Homework> GetHomeworkById(int id)

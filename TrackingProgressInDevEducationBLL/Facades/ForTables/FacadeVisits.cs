@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeVisits
+    public class FacadeVisits
     {
         private static readonly QVisit Query = new();
     }

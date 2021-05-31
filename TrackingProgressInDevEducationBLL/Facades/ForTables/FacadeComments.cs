@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeComments
+    public class FacadeComments
     {
         private static readonly QComment Query = new();
         //public static IEnumerable<Comment> UpdateCommentById(int id, string text)

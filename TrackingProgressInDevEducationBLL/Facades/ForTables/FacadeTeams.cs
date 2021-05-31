@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeTeams
+    public class FacadeTeams
     {
         private static readonly QTeam Query = new();
         public static Team SetNewTeam(string name)

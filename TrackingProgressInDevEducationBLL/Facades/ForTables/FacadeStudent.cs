@@ -6,7 +6,7 @@ using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeStudent
+    public class FacadeStudent
     {
         private static readonly QStudent Query = new();
         public static Student SetNewStudent
