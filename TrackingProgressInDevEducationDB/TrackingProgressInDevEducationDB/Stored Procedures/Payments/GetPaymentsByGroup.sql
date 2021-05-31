@@ -5,7 +5,7 @@ AS
 	,PaymentOn
 	,PaymentTo
 	,Amount
-	,[Status]
+	--,[Status]
 	FROM [Payments] PM
 	LEFT JOIN [Students] ST ON PM.StudentId = ST.id
 	LEFT JOIN [Groups] GP ON ST.GroupId = GP.id

@@ -1,4 +1,20 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewVisit](@VisitStatus bit, @StudentId int, @LectionId int)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewVisit]
+(
+	 @VisitStatus BIT
+	,@StudentId INT
+	,@LectionId INT
+)
 AS 
-insert [Visits] ([VisitStatus], [StudentId], [LectionId])
-values (@VisitStatus, @StudentId, @LectionId)
+	INSERT [Visits]
+	(	
+		 [VisitStatus]
+		,[StudentId]
+		,[LectionId]
+	)
+	VALUES
+	(
+		 @VisitStatus
+		,@StudentId
+		,@LectionId
+	)
+--ZLoo (Все ок)

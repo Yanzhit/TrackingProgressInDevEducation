@@ -1,6 +1,20 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewHWComplete]
-	@param1 int = 0,
-	@param2 int
+(
+	 @HomeworkId INT
+	,@StudentId INT
+	,@Status BIT
+)
 AS
-	SELECT @param1, @param2
-RETURN 0
+	INSERT [HomeworkComplete]
+	(
+		 [HomeworkId]
+		,[StudentId]
+		,[Status]
+	)
+	VALUES
+	(
+		 @HomeworkId
+		,@StudentId
+		,@Status
+	)	
+--ZLoo (Все ок)

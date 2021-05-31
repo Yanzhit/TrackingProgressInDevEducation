@@ -1,6 +1,20 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewLection]
-	@param1 int = 0,
-	@param2 int
+(
+	 @GroupId INT
+	,@LectorId INT
+	,@StartedOn DATE
+)
 AS
-	SELECT @param1, @param2
-RETURN 0
+	INSERT [Lections]
+	(
+		 [GroupId]
+		,[LectorId]
+		,[StartedOn]
+	)
+	VALUES
+	(
+		 @GroupId
+		,@LectorId
+		,@StartedOn
+	)
+--ZLoo (Все ок)

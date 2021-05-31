@@ -1,4 +1,20 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewLector](@FullName nvarchar(50))
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewLector]
+(
+	 @FullName NVARCHAR(50)
+	,@Email NVARCHAR(50)
+	,@Password NVARCHAR(50)
+)
 AS
-insert [Lectors] ([FullName])
-values (@FullName)
+	INSERT [Lectors]
+	(
+		 [FullName]
+		,[Email]
+		,[Password]
+	)
+	VALUES
+	(
+		 @FullName
+		,@Email
+		,@Password
+	)
+--ZLoo (Все ок)
