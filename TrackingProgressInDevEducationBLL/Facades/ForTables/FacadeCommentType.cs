@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeCommentType
+    public class FacadeCommentType
     {
         private static readonly CommentType Query = new();
     }

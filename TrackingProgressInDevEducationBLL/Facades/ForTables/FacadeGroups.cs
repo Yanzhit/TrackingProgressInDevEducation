@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationBLL.Facades.ForTables
 {
-    public static class FacadeGroups
+    public class FacadeGroups
     {
         private static readonly QGroup Query = new();
         public static IEnumerable<Group> GetGroups()
