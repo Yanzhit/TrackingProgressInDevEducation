@@ -1,10 +1,11 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Bases;
+﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationDAL.Tests.ModelsMock
 {
     public class MockLection : Lection
     {
-        public MockLection(int courseId, int lectorId, string startedOn)
+        public MockLection(int courseId, int lectorId, DateTime startedOn)
         {
             CourseId = courseId;
             LectorId = lectorId;

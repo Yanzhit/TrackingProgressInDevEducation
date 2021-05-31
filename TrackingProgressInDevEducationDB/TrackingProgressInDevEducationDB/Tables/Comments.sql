@@ -11,4 +11,3 @@
     CONSTRAINT [Comment_fk2] FOREIGN KEY ([CreatedBy]) REFERENCES [TrackingProgressInDevEducationDB].[Lectors] ([id]), 
     CONSTRAINT [Comment_fk3] FOREIGN KEY ([TeamId]) REFERENCES [TrackingProgressInDevEducationDB].[Teams]([id])
 );
-

@@ -13,7 +13,6 @@
 	,@CityId INT
 	,@Status BIT
 )
-
 AS
 	INSERT [Students] 
 	(

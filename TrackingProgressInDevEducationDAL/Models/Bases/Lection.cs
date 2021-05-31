@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public int CourseId { get; set; }
         public int LectorId { get; set; }
-        public string StartedOn { get; set; }
+        public DateTime StartedOn { get; set; }
 
         public override bool Equals(object obj)
         {
