@@ -130,7 +130,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockLector data in _mock.Lectors)
             {
-                FacadeLectors.AddNewLector(data.FullName);
+                FacadeLectors.SetNewLector(data.FullName, data.Email, data.Password);
             }
         }
         private void FillingTablePayments()

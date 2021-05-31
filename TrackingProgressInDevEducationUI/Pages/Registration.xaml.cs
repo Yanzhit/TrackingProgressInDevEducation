@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using TrackingProgressInDevEducationBLL.Facades.ForTables;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -23,30 +24,30 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            if (NameInput.Text.Length is <= 0 or > 50 ||
-                SurnameInput.Text.Length is <= 0 or > 50 ||
-                PasswordInput.Text.Length is <= 0 or > 50 ||
-                PasswordRepeatInput.Text.Length is <= 0 or > 50 ||
-                PasswordInput.Text != PasswordRepeatInput.Text)
+            if (FullName_Input.Text.Length is <= 0 or > 50)
             {
-
+                return;
             }
-            //if(SurnameInput.Text.Length is <= 0 or > 50)
-            //{
-                
-            //}
-            //if (PasswordInput.Text.Length is <= 0 or > 50)
-            //{
 
-            //}
-            //if (PasswordRepeatInput.Text.Length is <= 0 or > 50)
-            //{
+            if (Email_Input.Text.Length is <= 0 or > 50)
+            {
+                return;
+            }
 
-            //}
-            //if (PasswordInput.Text != PasswordRepeatInput.Text)
-            //{
+            if (Password_Input.Text.Length is <= 0 or > 50)
+            {
+                return;
+            }
 
-            //}
+            if (PasswordRepeat_Input.Text.Length is <= 0 or > 50)
+            {
+                return;
+            }
+
+            if (Password_Input.Text == PasswordRepeat_Input.Text)
+            {
+                FacadeLectors.SetNewLector(FullName_Input.Text, Email_Input.Text, Password_Input.Text);
+            }
         }
     }
 }

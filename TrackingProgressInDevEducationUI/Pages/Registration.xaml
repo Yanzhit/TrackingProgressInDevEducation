@@ -16,18 +16,18 @@
                 <GradientStop Color="#FFBDBDBD" Offset="0.209"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="RegistrationButton" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="321,320,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="Registration_Click" IsEnabled="False"/>
-        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Margin="326,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="SurnameInput" HorizontalAlignment="Left" Margin="326,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordInput" HorizontalAlignment="Left" Margin="326,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordRepeatInput" HorizontalAlignment="Left" Margin="326,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="TextName" HorizontalAlignment="Left" Height="19" Margin="326,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Имя"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
-        <TextBlock x:Name="TextSurname" HorizontalAlignment="Left" Height="19" Margin="326,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Фамилия"/></TextBlock>
+        <Button x:Name="RegistrationButton" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="321,320,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="Registration_Click"/>
+        <TextBox x:Name="FullName_Input" HorizontalAlignment="Left" Margin="326,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Password_Input" HorizontalAlignment="Left" Margin="326,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordRepeat_Input" HorizontalAlignment="Left" Margin="326,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="TextName" HorizontalAlignment="Left" Height="19" Margin="326,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
         <TextBlock x:Name="TextPassword" HorizontalAlignment="Left" Height="19" Margin="326,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
-        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="326,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="326,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Повторите п"/><Run Text="ароль"/></TextBlock>
         <Button x:Name="SignInButton" Content="Вход" HorizontalAlignment="Left" Margin="321,366,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="SignIn_Click"/>
         <TextBlock HorizontalAlignment="Left" Height="19" Margin="331,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.646,0.632"><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="58" Margin="243,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
+        <TextBox x:Name="Email_Input" HorizontalAlignment="Left" Margin="327,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="TextEmail" HorizontalAlignment="Left" Height="19" Margin="328,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Электронная почта"/></TextBlock>
 
     </Grid>
 </Page>
