@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QTeam : IQuery
     {
         public Type Type { get; } = typeof(Team);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateTeamById);
-            Params = $"{id}, {name}";
+            Params = $"{id}{Sep}{name}";
             return this;
         }
         public QTeam RemoveTeamById(int id)

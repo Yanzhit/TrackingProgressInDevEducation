@@ -67,7 +67,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockComment data in _mock.Comments)
             {
-                FacadeComments.AddNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy);
+                FacadeComments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
             }
         }
         private void FillingTableCommentType()
@@ -76,7 +76,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             foreach (MockCommentType data in _mock.CommentType)
             {
                 //FacadeCommentType.
-                QuerySettings.QuerySet(query.AddNewCommentType(data.Name));
+                QuerySettings.QuerySet(query.SetNewCType(data.Name));
             }
         }
         private void FillingTableCourses()
@@ -85,7 +85,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             foreach (MockCourse data in _mock.Courses)
             {
                 //FacadeCourses.
-                QuerySettings.QuerySet(query.AddNewCourse(data.Name, data.StartedOn, data.FinishedOn));
+                QuerySettings.QuerySet(query.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn));
             }
         }
         private void FillingTableGroups()

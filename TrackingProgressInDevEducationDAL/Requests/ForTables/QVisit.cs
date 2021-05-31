@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QVisit : IQuery
     {
         public Type Type { get; } = typeof(Visit);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewVisit);
-            Params = $"{visitStatus}, {studentId}, {lectionId}";
+            Params = $"{visitStatus}{Sep}{studentId}{Sep}{lectionId}";
             return this;
         }
         public QVisit GetVisitById(int id)
@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateVisitById);
-            Params = $"{id}, {visitStatus}, {studentId}, {lectionId}";
+            Params = $"{id}{Sep}{visitStatus}{Sep}{studentId}{Sep}{lectionId}";
             return this;
         }
         public QVisit NullifyVisits()

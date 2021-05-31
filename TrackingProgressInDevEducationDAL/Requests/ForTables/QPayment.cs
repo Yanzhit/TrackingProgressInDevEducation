@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QPayment : IQuery
     {
         public Type Type { get; } = typeof(Payment);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -16,21 +16,21 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewPayment);
-            Params = $"{studentId}, {paymentTo}, {paymentOn}, {amount}, {status}";
+            Params = $"{studentId}{Sep}{paymentTo}{Sep}{paymentOn}{Sep}{amount}{Sep}{status}";
             return this;
         }
         public QPayment ChangePaymentAmount(decimal amount, int id)
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(ChangePaymentAmount);
-            Params = $"{amount}, {id}";
+            Params = $"{amount}{Sep}{id}";
             return this;
         }
         public QPayment ClosePayment(DateTime date, int id)
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(ClosePayment);
-            Params = $"{date}, {id}";
+            Params = $"{date}{Sep}{id}";
             return this;
         }
         public QPayment RemovePaymentById(int id)
@@ -58,14 +58,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdatePaymentSetDateAndStatus);
-            Params = $"{id}, {newDate}";
+            Params = $"{id}{Sep}{newDate}";
             return this;
         }
         public QPayment UpdatePaymentTeam(int id, DateTime newDate)
         {
             TypeQueries = TypeQueries.UpdateSeveral;
             Name = nameof(UpdatePaymentTeam);
-            Params = $"{id}, {newDate}";
+            Params = $"{id}{Sep}{newDate}";
             return this;
         }
         public QPayment NullifyPayments()

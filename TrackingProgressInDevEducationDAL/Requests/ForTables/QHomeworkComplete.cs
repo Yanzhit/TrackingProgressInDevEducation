@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QHomeworkComplete : IQuery
     {
         public Type Type { get; } = typeof(HomeworkComplete);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -16,14 +16,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateHWCompleteByIdHW);
-            Params = $"{homeworkId}, {status}";
+            Params = $"{homeworkId}{Sep}{status}";
             return this;
         }
         public QHomeworkComplete UpdateHWCompleteByIdStudents(int studentId, bool status)
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateHWCompleteByIdStudents);
-            Params = $"{studentId}, {status}";
+            Params = $"{studentId}{Sep}{status}";
             return this;
         }
         public QHomeworkComplete NullifyHWComplete()

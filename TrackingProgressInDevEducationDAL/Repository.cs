@@ -1,61 +1,73 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Dapper;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL
 {
     public static class Repository
     {
         private static readonly IDbConnection DBConnection = Connection.DbConnection;
+        private static string _command;
 
         public static T SetOneAsync<T>(IQuery query)
         {
-            return DBConnection.QuerySingle<T>($"{query.Schema}{query.Name} {query.Params}");
+            ConfigCommand(query);
+            return DBConnection.QuerySingle<T>(_command);
         }
 
         public static T GetOneAsync<T>(IQuery query)
         {
-            return DBConnection.QuerySingle<T>($"{query.Schema}{query.Name} {query.Params}");
+            ConfigCommand(query);
+            return DBConnection.QuerySingle<T>(_command);
         }
 
         public static T UpdateOneAsync<T>(IQuery query)
         {
-            return DBConnection.QuerySingle<T>($"{query.Schema}{query.Name} {query.Params}");
+            ConfigCommand(query);
+            return DBConnection.QuerySingle<T>(_command);
         }
 
         public static T RemoveOneAsync<T>(IQuery query)
         {
-            return DBConnection.QuerySingle<T>($"{query.Schema}{query.Name} {query.Params}");
+            ConfigCommand(query);
+            return DBConnection.QuerySingle<T>(_command);
         }
 
         public static IEnumerable<T> SetSeveralAsync<T>(IQuery query)
         {
-            return DBConnection.Query<T>($"{query.Schema}{query.Name} {query.Params}").AsList();
+            ConfigCommand(query);
+            return DBConnection.Query<T>(_command).AsList();
         }
 
         public static IEnumerable<T> GetSeveralAsync<T>(IQuery query)
         {
-            return DBConnection.Query<T>($"{query.Schema}{query.Name} {query.Params}").AsList();
+            ConfigCommand(query);
+            return DBConnection.Query<T>(_command).AsList();
         }
 
         public static IEnumerable<T> UpdateSeveralAsync<T>(IQuery query)
         {
-            return DBConnection.Query<T>($"{query.Schema}{query.Name} {query.Params}").AsList();
-            
+            ConfigCommand(query);
+            return DBConnection.Query<T>(_command).AsList();
         }
 
         public static IEnumerable<T> RemoveSeveralAsync<T>(IQuery query)
         {
-            return DBConnection.Query<T>($"{query.Schema}{query.Name} {query.Params}").AsList();
+            ConfigCommand(query);
+            return DBConnection.Query<T>(_command).AsList();
         }
 
         public static IEnumerable<T> NullifyAsync<T>(IQuery query)
         {
-            return DBConnection.Query<T>($"{query.Schema}{query.Name} {query.Params}").AsList();
+            ConfigCommand(query);
+            return DBConnection.Query<T>(_command).AsList();
+        }
+
+        private static void ConfigCommand(IQuery query)
+        {
+            _command = $"{Exec}{Gap}{Schema}{Point}{query.Name}{Gap}{query.Params}";
         }
     }
 }

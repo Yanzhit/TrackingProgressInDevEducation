@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCommentType]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCType]
 (
 	 @Name INT
 )	

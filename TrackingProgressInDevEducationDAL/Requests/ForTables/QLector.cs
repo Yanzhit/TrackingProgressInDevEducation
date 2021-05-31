@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QLector : IQuery
     {
         public Type Type { get; } = typeof(Lector);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -52,7 +52,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateLectorById);
-            Params = $"{id}, {fullName}";
+            Params = $"{id}{Sep}{fullName}";
             return this;
         }
         public QLector NullifyLectors()

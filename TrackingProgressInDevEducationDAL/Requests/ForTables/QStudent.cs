@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QStudent : IQuery
     {
         public Type Type { get; } = typeof(Student);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewStudent);
-            Params = $"{name}, {surname}, {rate}";
+            Params = $"{name}{Sep}{surname}{Sep}{rate}";
             return this;
         }
 

@@ -68,7 +68,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             //FacadeCommentType.
             var query = new QCommentType();
-            QuerySettings.QuerySet(query.NullifyCommentType());
+            QuerySettings.QuerySet(query.NullifyCTypes());
         }
         private void NullifyTableCourses()
         {

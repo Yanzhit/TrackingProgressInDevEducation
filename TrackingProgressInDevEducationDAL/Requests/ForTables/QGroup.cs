@@ -1,13 +1,13 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
     public class QGroup : IQuery
     {
         public Type Type { get; } = typeof(Group);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(AddNewGroup);
-            Params = $"{name}, {courseId}";
+            Params = $"{name}{Sep}{courseId}";
             return this;
         }
         public QGroup GetGroupById(int id)
@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         {
             TypeQueries = TypeQueries.UpdateOne;
             Name = nameof(UpdateGroupById);
-            Params = $"{id}, {name}, {courseId}";
+            Params = $"{id}{Sep}{name}{Sep}{courseId}";
             return this;
         }
         public QGroup GetGroupsByLector(int lectorId)
