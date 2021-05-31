@@ -20,7 +20,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string MiddleName { get; set; }
         public string Git { get; set; }
         public int CityId { get; set; }
-
+        public bool Status { get; set; }
+        
        
         public override bool Equals(object obj)
         {
@@ -32,12 +33,35 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             return actual != null
                    && Name == actual.Name
                    && Surname == actual.Surname
-                   && Rate == actual.Rate;
+                   && Rate == actual.Rate
+                   && GroupId == actual.GroupId
+                   && Phone == actual.Phone
+                   && Email == actual.Email
+                   && Contract == actual.Contract
+                   && Birthday == actual.Birthday
+                   && MiddleName == actual.MiddleName
+                   && Git == actual.Git
+                   && CityId == actual.CityId
+                   && Status == actual.Status;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Surname, Rate);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Name);
+            hashCode.Add(Surname);
+            hashCode.Add(Rate);
+            hashCode.Add(GroupId);
+            hashCode.Add(Phone);
+            hashCode.Add(Email);
+            hashCode.Add(Contract);
+            hashCode.Add(Birthday);
+            hashCode.Add(MiddleName);
+            hashCode.Add(Git);
+            hashCode.Add(CityId);
+            hashCode.Add(Status);
+            return hashCode.ToHashCode();
         }
     }
 }

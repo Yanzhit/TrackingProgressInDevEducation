@@ -98,7 +98,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             //FacadeHomeworks.
             var query = new QHomework();
-            QuerySettings.QuerySet(query.NullifyHomeworks());
+            QuerySettings.QuerySet(query.NullifyHWs());
         }
         private void NullifyTableLections()
         {
@@ -130,15 +130,13 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void NullifyTableTeams()
         {
-            //FacadeTeams.
-            var query = new QTeam();
-            QuerySettings.QuerySet(query.NullifyTeams());
+            FacadeTeams.NullifyTeams();
         }
         private void NullifyTableTeamStudent()
         {
             //FacadeTeamStudent.
             var query = new QTeamStudent();
-            QuerySettings.QuerySet(query.NullifyTeamStudent());
+            QuerySettings.QuerySet(query.NullifyTStudent());
         }
         private void NullifyTableVisits()
         {

@@ -38,8 +38,8 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 
             if (GetStudentsByIdRadioButton.IsChecked == true)
             {
-                Student sss = FacadeStudent.GetByIdStudent(1);
-                RequestViewTextBox.Text += $"{sss.Name} {sss.Surname} {sss.Rate}\n";
+                //Student sss = FacadeStudent.GetByIdStudent(1);
+                //RequestViewTextBox.Text += $"{sss.Name} {sss.Surname} {sss.Rate}\n";
             }
         }
     }

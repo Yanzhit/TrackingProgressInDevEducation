@@ -25,13 +25,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <param name="teamId">id командного комментария</param>
         /// <returns>Подготовленный запрос</returns>
         public QComment SetNewComment
-            (
-                string text,
-                int typeId,
-                int studentId,
-                int createdBy,
-                int teamId
-            )
+        (
+            string text,
+            int typeId,
+            int studentId,
+            int createdBy,
+            int teamId
+        )
         {
             TypeQueries = TypeQueries.SetOne;
             Name = nameof(SetNewComment);

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewTeamStudent]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewTStudent]
 (
 	 @TeamId INT
 	,@StudentId INT

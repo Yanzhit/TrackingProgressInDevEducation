@@ -25,6 +25,7 @@
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
     <TargetFrameworkProfile />
     <DefaultSchema>TrackingProgressInDevEducationDB</DefaultSchema>
+    <PermissionSet>UNSAFE</PermissionSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -204,12 +205,12 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\NullifyPayments.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\NullifyStudents.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\NullifyTeams.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TeamStudent\NullifyTeamStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TeamStudent\NullifyTStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\NullifyVisits.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\SetNewCity.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\SetNewComment.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\SetNewVisit.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TeamStudent\SetNewTeamStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TeamStudent\SetNewTStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\SetNewTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Payments\SetNewPayment.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\LectorGroup\SetNewLectorGroup.sql" />

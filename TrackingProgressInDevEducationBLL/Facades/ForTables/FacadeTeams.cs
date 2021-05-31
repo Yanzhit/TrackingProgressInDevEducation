@@ -8,25 +8,29 @@ namespace TrackingProgressInDevEducationBLL.Facades.ForTables
     public static class FacadeTeams
     {
         private static readonly QTeam Query = new();
-        public static IEnumerable<Team> UpdateTeamById(int id, string name)
+        public static Team SetNewTeam(string name)
         {
-            return (List<Team>) QuerySettings.QuerySet(Query.UpdateTeamById(id, name));
+            return (Team) QuerySettings.QuerySet(Query.SetNewTeam(name));
         }
-        public static IEnumerable<Team> GetTeamById(int id)
+        public static IEnumerable<Team> NullifyTeams()
         {
-            return (List<Team>) QuerySettings.QuerySet(Query.GetTeamById(id));
+            return (List<Team>) QuerySettings.QuerySet(Query.NullifyTeams());
         }
-        public static IEnumerable<Team> RemoveTeamById(int id)
-        {
-            return (List<Team>) QuerySettings.QuerySet(Query.RemoveTeamById(id));
-        }
-        public static IEnumerable<Team> GetTeams()
-        {
-            return (List<Team>) QuerySettings.QuerySet(Query.GetTeams());
-        }
-        public static IEnumerable<Team> AddNewTeam(string name)
-        {
-            return (List<Team>) QuerySettings.QuerySet(Query.AddNewTeam(name));
-        }
+        //public static IEnumerable<Team> UpdateTeamById(int id, string name)
+        //{
+        //    return (List<Team>) QuerySettings.QuerySet(Query.UpdateTeamById(id, name));
+        //}
+        //public static IEnumerable<Team> GetTeamById(int id)
+        //{
+        //    return (List<Team>) QuerySettings.QuerySet(Query.GetTeamById(id));
+        //}
+        //public static IEnumerable<Team> RemoveTeamById(int id)
+        //{
+        //    return (List<Team>) QuerySettings.QuerySet(Query.RemoveTeamById(id));
+        //}
+        //public static IEnumerable<Team> GetTeams()
+        //{
+        //    return (List<Team>) QuerySettings.QuerySet(Query.GetTeams());
+        //}
     }
 }

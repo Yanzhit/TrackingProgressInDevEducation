@@ -92,7 +92,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockGroup data in _mock.Groups)
             {
-                FacadeGroups.AddNewGroup(data.Name, data.CourseId);
+                FacadeGroups.SetNewGroup(data.Name, data.CourseId);
             }
         }
         private void FillingTableHomeworkComplete()
@@ -146,14 +146,28 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             foreach (MockStudent data in _mock.Students)
             {
-                FacadeStudent.AddNewStudent(data.Name, data.Surname, data.Rate);
+                FacadeStudent.SetNewStudent
+                    (
+                        data.Name,
+                        data.Surname,
+                        data.Rate,
+                        data.GroupId,
+                        data.Phone,
+                        data.Email,
+                        data.Contract,
+                        data.Birthday,
+                        data.MiddleName,
+                        data.Git,
+                        data.CityId,
+                        data.Status
+                    );
             }
         }
         private void FillingTableTeams()
         {
             foreach (MockTeam data in _mock.Teams)
             {
-                FacadeTeams.AddNewTeam(data.Name);
+                FacadeTeams.SetNewTeam(data.Name);
             }
         }
         private void FillingTableTeamStudent()
@@ -167,8 +181,8 @@ namespace TrackingProgressInDevEducationDAL.Tests
             var query = new QVisit();
             foreach (MockVisit data in _mock.Visits)
             {
-                //FacadeVisits.
-                QuerySettings.QuerySet(query.AddNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
+                //FacadeVisits
+                QuerySettings.QuerySet(query.SetNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
             }
         }
     }
