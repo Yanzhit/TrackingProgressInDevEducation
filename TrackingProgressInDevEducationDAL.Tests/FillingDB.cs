@@ -1,7 +1,7 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
 
 namespace TrackingProgressInDevEducationDAL.Tests

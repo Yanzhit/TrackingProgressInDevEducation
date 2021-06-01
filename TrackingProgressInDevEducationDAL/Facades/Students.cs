@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationDAL.Facades

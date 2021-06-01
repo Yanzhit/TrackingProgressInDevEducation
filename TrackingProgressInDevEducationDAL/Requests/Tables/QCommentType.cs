@@ -1,9 +1,9 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using static TrackingProgressInDevEducationDAL.Defines;
+
 //ZLoo (Свойства все, Методы(SetNewCTypeБ NullifyCTypes))
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
     /// Запросы к таблице типов комментариев

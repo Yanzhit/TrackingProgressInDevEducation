@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewGroup, NullifyGroups)
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
     /// Запросы к таблице групп

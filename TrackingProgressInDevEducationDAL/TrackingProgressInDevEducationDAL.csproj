@@ -6,16 +6,16 @@
 
   <ItemGroup>
     <Compile Remove="Models\Abstract\**" />
-    <Compile Remove="Requests\ForTables\TableLections\**" />
-    <Compile Remove="Requests\ForTables\TableLectorCourses\**" />
+    <Compile Remove="Requests\Tables\TableLections\**" />
+    <Compile Remove="Requests\Tables\TableLectorCourses\**" />
     <Compile Remove="Requests\Others\**" />
     <EmbeddedResource Remove="Models\Abstract\**" />
-    <EmbeddedResource Remove="Requests\ForTables\TableLections\**" />
-    <EmbeddedResource Remove="Requests\ForTables\TableLectorCourses\**" />
+    <EmbeddedResource Remove="Requests\Tables\TableLections\**" />
+    <EmbeddedResource Remove="Requests\Tables\TableLectorCourses\**" />
     <EmbeddedResource Remove="Requests\Others\**" />
     <None Remove="Models\Abstract\**" />
-    <None Remove="Requests\ForTables\TableLections\**" />
-    <None Remove="Requests\ForTables\TableLectorCourses\**" />
+    <None Remove="Requests\Tables\TableLections\**" />
+    <None Remove="Requests\Tables\TableLectorCourses\**" />
     <None Remove="Requests\Others\**" />
   </ItemGroup>
 

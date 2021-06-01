@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(NullifyComments)(В SetNewComment нужно до настроить входящие параметры (null)))
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
     /// Запросы к таблице комментариев

@@ -2,7 +2,7 @@
 using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLectorGroup : IQuery
     {

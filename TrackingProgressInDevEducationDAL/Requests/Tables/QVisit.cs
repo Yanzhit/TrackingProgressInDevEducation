@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewVisit(проверить входные параметры), NullifyVisits))
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
     /// Запросы для таблицы посещений

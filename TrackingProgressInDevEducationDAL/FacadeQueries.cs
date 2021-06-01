@@ -1,6 +1,8 @@
-﻿namespace TrackingProgressInDevEducationDAL.Facades
+﻿using TrackingProgressInDevEducationDAL.Facades;
+
+namespace TrackingProgressInDevEducationDAL
 {
-    public class Facade
+    public class FacadeQueries
     {
         /// <summary>
         /// Фасад для городов.

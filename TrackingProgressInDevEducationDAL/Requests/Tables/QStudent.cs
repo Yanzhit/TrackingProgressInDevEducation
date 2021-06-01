@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationDAL.Defines;
 
-namespace TrackingProgressInDevEducationDAL.Requests.ForTables
+namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QStudent : IQuery
     {

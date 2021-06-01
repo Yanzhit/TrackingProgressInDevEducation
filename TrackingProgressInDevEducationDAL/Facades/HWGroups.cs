@@ -1,4 +1,4 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.ForTables;
+﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
