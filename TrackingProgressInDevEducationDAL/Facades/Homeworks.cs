@@ -8,25 +8,24 @@ namespace TrackingProgressInDevEducationDAL.Facades
     public class Homeworks : AFacade
     {
         public QHomework Query { get; set; }
-        //public static IEnumerable<Homework> GetHomeworkById(int id)
-        //{
-        //    return (List<Homework>) QuerySettings.QuerySet(Query.GetHomeworkById(id));
-        //}
-        //public static List<Homework> UpdateHomeworkById(string name, int id)
-        //{
-        //    return (List<Homework>) QuerySettings.QuerySet(Query.UpdateHomeworkById(name, id));
-        //}
-        //public static List<Homework> RemoveHomeworksById(int id)
-        //{
-        //    return (List<Homework>) QuerySettings.QuerySet(Query.RemoveHomeworksById(id));
-        //}
-        //public static Homework CreateNewHomeworks(string name)
-        //{
-        //    return (Homework) QuerySettings.QuerySet(Query.SetNewHW(name));
-        //}
-        //public static List<Homework> NullifyHWs()
-        //{
-        //    return (List<Homework>) QuerySettings.QuerySet(Query.NullifyHWs());
-        //}
+
+        /// <summary>
+        /// Создать новое ДЗ
+        /// </summary>
+        /// <param name="name">Имя ДЗ</param>
+        /// <returns>ДЗ</returns>
+        public Homework SetNewHW(string name)
+        {
+            return (Homework)_query.QuerySet(_qHomework.SetNewHW(name));
+        }
+
+        /// <summary>
+        /// Обнуление таблицы ДЗ и ключа identity
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Homework> NullifyHWs()
+        {
+            return (IEnumerable<Homework>)_query.QuerySet(_qHomework.NullifyHWs());
+        }
     }
 }
