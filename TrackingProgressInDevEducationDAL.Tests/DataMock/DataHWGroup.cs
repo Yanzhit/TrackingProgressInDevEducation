@@ -1,11 +1,11 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataHomeworkGroup
+    public class DataHWGroup
     {
         public int[] HomeworkId { get; }
         public int[] GroupId { get; }
 
-        public DataHomeworkGroup()
+        public DataHWGroup()
         {
             HomeworkId = DataHomeworkId();
             GroupId = DataGroupId();

@@ -1,10 +1,10 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataCommentType
+    public class DataCType
     {
         public string[] Name { get; }
 
-        public DataCommentType()
+        public DataCType()
         {
             Name = DataName();
         }

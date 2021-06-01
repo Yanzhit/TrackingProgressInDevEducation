@@ -1,12 +1,12 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataHomeworkComplete
+    public class DataHWComplete
     {
         public int[] HomeworkId { get; }
         public int[] StudentId { get; }
         public bool[] Status { get; }
 
-        public DataHomeworkComplete()
+        public DataHWComplete()
         {
             HomeworkId = DataHomeworkId();
             StudentId = DataStudentId();
