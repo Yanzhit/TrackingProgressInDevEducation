@@ -4,6 +4,6 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Lections
     {
-        private static readonly QLection Query = new();
+        private readonly QLection _qLection = new();
     }
 }
