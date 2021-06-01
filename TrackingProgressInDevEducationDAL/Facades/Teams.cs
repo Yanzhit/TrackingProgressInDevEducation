@@ -6,30 +6,26 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Teams
     {
-        private static readonly QTeam Query = new();
-        //public static Team SetNewTeam(string name)
-        //{
-        //    return (Team) QuerySettings.QuerySet(Query.SetNewTeam(name));
-        //}
-        //public static IEnumerable<Team> NullifyTeams()
-        //{
-        //    return (List<Team>) QuerySettings.QuerySet(Query.NullifyTeams());
-        //}
-        //public static IEnumerable<Team> UpdateTeamById(int id, string name)
-        //{
-        //    return (List<Team>) QuerySettings.QuerySet(Query.UpdateTeamById(id, name));
-        //}
-        //public static IEnumerable<Team> GetTeamById(int id)
-        //{
-        //    return (List<Team>) QuerySettings.QuerySet(Query.GetTeamById(id));
-        //}
-        //public static IEnumerable<Team> RemoveTeamById(int id)
-        //{
-        //    return (List<Team>) QuerySettings.QuerySet(Query.RemoveTeamById(id));
-        //}
-        //public static IEnumerable<Team> GetTeams()
-        //{
-        //    return (List<Team>) QuerySettings.QuerySet(Query.GetTeams());
-        //}
+        private readonly QTeam _qTeam = new();
+        private readonly QuerySettings _query = new();
+
+        /// <summary>
+        /// Добавить новую команду
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public Student SetNewTeam(string name)
+        {
+            return (Student)_query.QuerySet(_qTeam.SetNewTeam(name));
+        }
+
+        /// <summary>
+        /// Обнулить таблицу команд
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Student> NullifyTeams()
+        {
+            return (IEnumerable<Student>)_query.QuerySet(_qTeam.NullifyTeams());
+        }
     }
 }
