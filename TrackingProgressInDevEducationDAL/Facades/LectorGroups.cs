@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
@@ -10,12 +11,12 @@ namespace TrackingProgressInDevEducationDAL.Facades
 
 
         /// <summary>
-        /// Обнуление таблицы ДЗ ГРУППЫ и ключа identity
+        /// Обнуление таблицы Лекторы Группы
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<QHomeworkGroup> NullifyLectorGroup()
+        public IEnumerable<LectorGroup> NullifyLectorGroup()
         {
-            return (IEnumerable<QHomeworkGroup>)_query.QuerySet(_qLectorGroup.NullifyLectorGroup());
+            return (IEnumerable<LectorGroup>)_query.QuerySet(_qLectorGroup.NullifyLectorGroup());
         }
     }
 }
