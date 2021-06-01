@@ -9,8 +9,8 @@ namespace TrackingProgressInDevEducationDAL.Tests
     
     public class FillingDB
     {
+        private readonly FacadeQueries _facade = new();
         private readonly MockBase _mock = PreparationDB.Mock;
-        private FacadeQueries _facade = new FacadeQueries();
         public void Filling(Type type) 
         {
             switch (type.Name)
