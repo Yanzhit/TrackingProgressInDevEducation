@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         }
 
         ///// <summary>
-        ///// Получить все лекции
+        ///// КОСЯК В ИМЕНИ МЕТОДА
         ///// </summary>
         ///// <returns></returns>
         //public IEnumerable<Lection> GetAllLector()
