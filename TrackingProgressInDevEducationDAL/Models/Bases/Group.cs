@@ -11,6 +11,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public int CourseId { get; set; }
 
+        public Group()
+        {
+        }
+
+        public Group(string name, int courseId)
+        {
+            Name = name;
+            CourseId = courseId;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Group)obj);

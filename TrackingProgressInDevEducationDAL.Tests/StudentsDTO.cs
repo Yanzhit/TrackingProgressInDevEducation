@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             yield return new object[]
             {
-                //new GetStudents(),
+               // Students.GetStudents(),
 
                 new List<Student>
                 {

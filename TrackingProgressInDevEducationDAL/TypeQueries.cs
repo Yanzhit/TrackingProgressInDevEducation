@@ -2,9 +2,17 @@
 {
     public enum TypeQueries
     {
-        Get = 0,
-        Set,
-        Update,
-        Remove
+        /// <summary>
+        /// Запрос с единственным возвращаемым объектом
+        /// </summary>
+        Single  = 0,
+        /// <summary>
+        /// Запрос с множественным возвращаемым объектом
+        /// </summary>
+        Several,
+        /// <summary>
+        /// Обнуление таблицы "НЕ ОПРЕДЕЛЕНО ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ, НУЖНО УТОЧНЯТЬ"
+        /// </summary>
+        Nullify
     }
 }

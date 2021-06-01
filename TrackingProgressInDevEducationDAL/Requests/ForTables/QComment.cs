@@ -1,9 +1,13 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
-
+using static TrackingProgressInDevEducationDAL.Defines;
+//ZLoo (Свойства все, Методы(NullifyComments)(В SetNewComment нужно до настроить входящие параметры (null)))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
+    /// <summary>
+    /// Запросы к таблице комментариев
+    /// </summary>
     public class QComment: IQuery
     {
         public Type Type { get; } = typeof(Comment);
@@ -11,47 +15,70 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QComment GetComments()
+        /// <summary>
+        /// Создания нового комментария
+        /// </summary>
+        /// <param name="text">Текст комментария</param>
+        /// <param name="typeId">id типа комментария</param>
+        /// <param name="studentId">id студента на которого написан комментарий</param>
+        /// <param name="createdBy">id создателя комментария</param>
+        /// <param name="teamId">id командного комментария</param>
+        /// <returns>Подготовленный запрос</returns>
+        public QComment SetNewComment
+        (
+            string text,
+            int typeId,
+            int studentId,
+            int createdBy,
+            int teamId
+        )
         {
-            TypeQueries = TypeQueries.Get;
-            Name = nameof(GetComments);
-            Params = string.Empty;
+            TypeQueries = TypeQueries.Single;
+            Name = nameof(SetNewComment);
+            Params = $"{text}{Sep}{typeId}{Sep}{studentId}{Sep}{createdBy}{Sep}{teamId}";
             return this;
         }
-        public QComment GetByIdComment(int id)
-        {
-            TypeQueries = TypeQueries.Get;
-            Name = nameof(GetByIdComment);
-            Params = $"{id}";
-            return this;
-        }
-        public QComment AddNewComment(string text, int typeId, int studentId, int createdBy)
-        {
-            TypeQueries = TypeQueries.Set;
-            Name = nameof(AddNewComment);
-            Params = $"{text}, {typeId}, {studentId}, {createdBy}";
-            return this;
-        }
-        public QComment RemoveCommentById(int id)
-        {
-            TypeQueries = TypeQueries.Remove;
-            Name = nameof(RemoveCommentById);
-            Params = $"{id}";
-            return this;
-        }
-        public QComment UpdateCommentById(int id, string text)
-        {
-            TypeQueries = TypeQueries.Update;
-            Name = nameof(UpdateCommentById);
-            Params = $"{id}, {text}";
-            return this;
-        }
+
+        /// <summary>
+        /// Обнуление таблицы Городов и ключа identity
+        /// </summary>
+        /// <returns>Подготовленный запрос</returns>
         public QComment NullifyComments()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyComments);
             Params = string.Empty;
             return this;
         }
+
+        //public QComment GetComments()
+        //{
+        //    TypeQueries = TypeQueries.GetSeveral;
+        //    Name = nameof(GetComments);
+        //    Params = string.Empty;
+        //    return this;
+        //}
+        //public QComment GetByIdComment(int id)
+        //{
+        //    TypeQueries = TypeQueries.GetOne;
+        //    Name = nameof(GetByIdComment);
+        //    Params = $"{id}";
+        //    return this;
+        //}
+        
+        //public QComment RemoveCommentById(int id)
+        //{
+        //    TypeQueries = TypeQueries.RemoveOne;
+        //    Name = nameof(RemoveCommentById);
+        //    Params = $"{id}";
+        //    return this;
+        //}
+        //public QComment UpdateCommentById(int id, string text)
+        //{
+        //    TypeQueries = TypeQueries.UpdateOne;
+        //    Name = nameof(UpdateCommentById);
+        //    Params = $"{id}{Sep}{text}";
+        //    return this;
+        //}
     }
 }

@@ -1,17 +1,50 @@
-﻿using System.Collections.Generic;
+﻿using System.Data;
 using System.Reflection;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
+using TrackingProgressInDevEducationDAL.Interfaces;
+using TrackingProgressInDevEducationDAL.Repositories;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public static class QuerySettings
+    public class QuerySettings
     {
-        public static object QuerySet(IQuery query)
+        private IDbConnection _dbConnection;
+        public object QuerySet(IQuery query)
         {
-            MethodInfo method = typeof(Connection).GetMethod(nameof(Connection.Connect));
+            Connect();
+            MethodInfo method = SelectMetod(query.TypeQueries);
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-            return generic.Invoke(null, new object[] {query});
+            string command = ConfigCommand(query);
+            object objects = generic.Invoke(this, new object[] {_dbConnection, command});
+            Disconnect();
+            return objects;
+        }
+
+        private void Connect()
+        {
+            Connection connection = new();
+            _dbConnection = connection.Connect();
+        }
+
+        private void Disconnect()
+        {
+            _dbConnection.Dispose();
+        }
+
+        private MethodInfo SelectMetod(TypeQueries type)
+        {
+            return type switch
+            {
+                TypeQueries.Single => typeof(Single).GetMethod(nameof(Single.Async)),
+                TypeQueries.Several => typeof(Several).GetMethod(nameof(Several.Async)),
+                TypeQueries.Nullify => typeof(Nullify).GetMethod(nameof(Nullify.Async)),
+                _ => null
+            };
+        }
+
+        private string ConfigCommand(IQuery query)
+        {
+            return $"{Exec}{Gap}{Schema}{Point}{query.Name}{Gap}{query.Params}";
         }
     }
 }

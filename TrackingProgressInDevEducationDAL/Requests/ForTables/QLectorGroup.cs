@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         public string Params { get; set; }
         public QLectorGroup NullifyLectorGroup()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyLectorGroup);
             Params = string.Empty;
             return this;

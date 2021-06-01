@@ -1,35 +1,17 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using Dapper;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL
 {
     public class Connection
     {
-        private static readonly string Schema = $"exec TrackingProgressInDevEducationDB.";
-        private const string Cs = @"Persist Security Info=False;User ID=DevEd;Password=qqq!11;Initial Catalog=Sandbox.Test;Server=80.78.240.16";
-        //private const string Cs = @"Persist Security Info=False;User ID=DevEd;Password=qqq!11;Initial Catalog=Sandbox;Server=80.78.240.16";
-        public static List<T> Connect<T>(IQuery query)
+        private readonly string _cs =
+            $@"Persist Security Info={F};User ID={User};Password={Password};Initial Catalog={DbTest};Server={Ip}";
+        
+        public IDbConnection Connect()
         {
-            using (IDbConnection dbConnection = new SqlConnection(Cs))
-            {
-                switch (query.TypeQueries)
-                {
-                    case TypeQueries.Set:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Get:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Update:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    case TypeQueries.Remove:
-                        return dbConnection.Query<T>($"{Schema}{query.Name} {query.Params}").AsList<T>();
-                    default:
-                        return new List<T>();
-                }
-            }
+            return new SqlConnection(_cs);
         }
-       
     }
 }

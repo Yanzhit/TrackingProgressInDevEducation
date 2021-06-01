@@ -1,6 +1,7 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
@@ -11,55 +12,49 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QLector AddEmailAndPasswordLectors(int id, string email, string password)
+        public QLector SetNewLector(string fullName, string email, string password)
         {
-            TypeQueries = TypeQueries.Set;
-            Name = nameof(AddEmailAndPasswordLectors);
-            Params = $"{id}, {email}, {password}";
-            return this;
-        }
-
-        public QLector AddNewLector(string fullName)
-        {
-            TypeQueries = TypeQueries.Set;
-            Name = nameof(AddNewLector);
-            Params = $"{fullName}";
-            return this;
-        }
-        public QLector GetLectorById(int id)
-        {
-            TypeQueries = TypeQueries.Get;
-            Name = nameof(GetLectorById);
-            Params = $"{id}";
-            return this;
-        }
-        public QLector GetLectors()
-        {
-            TypeQueries = TypeQueries.Get;
-            Name = nameof(GetLectors);
-            Params = string.Empty;
-            return this;
-        }
-        public QLector RemoveLectorById(int id)
-        {
-            TypeQueries = TypeQueries.Remove;
-            Name = nameof(RemoveLectorById);
-            Params = $"{id}";
-            return this;
-        }
-        public QLector UpdateLectorById(int id, string fullName)
-        {
-            TypeQueries = TypeQueries.Update;
-            Name = nameof(UpdateLectorById);
-            Params = $"{id}, {fullName}";
+            TypeQueries = TypeQueries.Single;
+            Name = nameof(SetNewLector);
+            Params = $"{fullName}{Sep}{email}{Sep}{password}";
             return this;
         }
         public QLector NullifyLectors()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyLectors);
             Params = string.Empty;
             return this;
         }
+
+        public QLector GetLectorById(int id)
+        {
+            TypeQueries = TypeQueries.Single;
+            Name = nameof(GetLectorById);
+            Params = $"{id}";
+            return this;
+        }
+
+        //public QLector GetLectors()
+        //{
+        //    TypeQueries = TypeQueries.GetSeveral;
+        //    Name = nameof(GetLectors);
+        //    Params = string.Empty;
+        //    return this;
+        //}
+        //public QLector RemoveLectorById(int id)
+        //{
+        //    TypeQueries = TypeQueries.RemoveOne;
+        //    Name = nameof(RemoveLectorById);
+        //    Params = $"{id}";
+        //    return this;
+        //}
+        //public QLector UpdateLectorById(int id, string fullName)
+        //{
+        //    TypeQueries = TypeQueries.UpdateOne;
+        //    Name = nameof(UpdateLectorById);
+        //    Params = $"{id}{Sep}{fullName}";
+        //    return this;
+        //}
     }
 }

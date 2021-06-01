@@ -4,6 +4,15 @@
     {
         public string Name { get; set; }
 
+        public Homework()
+        {
+        }
+
+        public Homework(string name)
+        {
+            Name = name;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Homework)obj);

@@ -1,6 +1,7 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
@@ -13,63 +14,63 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QPayment AddNewPayment(int studentId, DateTime paymentTo, DateTime paymentOn, decimal amount, bool status)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(AddNewPayment);
-            Params = $"{studentId}, {paymentTo}, {paymentOn}, {amount}, {status}";
+            Params = $"{studentId}{Sep}{paymentTo}{Sep}{paymentOn}{Sep}{amount}{Sep}{status}";
             return this;
         }
         public QPayment ChangePaymentAmount(decimal amount, int id)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(ChangePaymentAmount);
-            Params = $"{amount}, {id}";
+            Params = $"{amount}{Sep}{id}";
             return this;
         }
         public QPayment ClosePayment(DateTime date, int id)
         {
-            TypeQueries = TypeQueries.Set;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(ClosePayment);
-            Params = $"{date}, {id}";
+            Params = $"{date}{Sep}{id}";
             return this;
         }
         public QPayment RemovePaymentById(int id)
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(RemovePaymentById);
             Params = $"{id}";
             return this;
         }
         public QPayment GetAllPaymentsByGroup(int group)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllPaymentsByGroup);
             Params = $"{group}";
             return this;
         }
         public QPayment GetAllPaymentsByStudent(int student)
         {
-            TypeQueries = TypeQueries.Get;
+            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllPaymentsByStudent);
             Params = $"{student}";
             return this;
         }
         public QPayment UpdatePaymentSetDateAndStatus(int id, DateTime newDate)
         {
-            TypeQueries = TypeQueries.Update;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(UpdatePaymentSetDateAndStatus);
-            Params = $"{id}, {newDate}";
+            Params = $"{id}{Sep}{newDate}";
             return this;
         }
-        public QPayment UpdatePaymentTerm(int id, DateTime newDate)
+        public QPayment UpdatePaymentTeam(int id, DateTime newDate)
         {
-            TypeQueries = TypeQueries.Update;
-            Name = nameof(UpdatePaymentTerm);
-            Params = $"{id}, {newDate}";
+            TypeQueries = TypeQueries.Several;
+            Name = nameof(UpdatePaymentTeam);
+            Params = $"{id}{Sep}{newDate}";
             return this;
         }
         public QPayment NullifyPayments()
         {
-            TypeQueries = TypeQueries.Remove;
+            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyPayments);
             Params = string.Empty;
             return this;

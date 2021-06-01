@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
@@ -12,8 +8,15 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int StudentId { get; set; }
         public int LectionId { get; set; }
 
-        protected Visit()
+        public Visit()
         {
+        }
+
+        public Visit(bool visitStatus, int studentId, int lectionId)
+        {
+            VisitStatus = visitStatus;
+            StudentId = studentId;
+            LectionId = lectionId;
         }
 
         public override bool Equals(object obj)
