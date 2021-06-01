@@ -1,51 +1,65 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
-
+using static TrackingProgressInDevEducationDAL.Defines;
+//ZLoo (Свойства все, Методы(SetNewHW, NullifyHWs)
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class QHomework : IQuery
     {
         public Type Type { get; } = typeof(Homework);
-        public string Schema { get; set; } = $"exec TrackingProgressInDevEducationDB.";
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QHomework SetNewHWs(string name)
+        /// <summary>
+        /// Запросы к таблице домашних заданий
+        /// </summary>
+        /// <param name="name">Название домашнего задания</param>
+        /// <returns>Подготовленный запрос</returns>
+        public QHomework SetNewHW(string name)
         {
             TypeQueries = TypeQueries.SetOne;
-            Name = nameof(SetNewHWs);
+            Name = nameof(SetNewHW);
             Params = $"{name}";
             return this;
         }
-        public QHomework GetHomeworkById(int id)
-        {
-            TypeQueries = TypeQueries.GetOne;
-            Name = nameof(GetHomeworkById);
-            Params = $"{id}";
-            return this;
-        }
-        public QHomework RemoveHomeworksById(int id)
-        {
-            TypeQueries = TypeQueries.RemoveOne;
-            Name = nameof(RemoveHomeworksById);
-            Params = $"{id}";
-            return this;
-        }
-        public QHomework UpdateHomeworkById(string name, int id)
-        {
-            TypeQueries = TypeQueries.UpdateOne;
-            Name = nameof(UpdateHomeworkById);
-            Params = $"{name}, {id}";
-            return this;
-        }
-        public QHomework NullifyHomeworks()
+
+        /// <summary>
+        /// Обнуление таблицы домашних заданий и ключа identity
+        /// </summary>
+        /// <returns>Подготовленный запрос</returns>
+        public QHomework NullifyHWs()
         {
             TypeQueries = TypeQueries.Nullify;
-            Name = nameof(NullifyHomeworks);
+            Name = nameof(NullifyHWs);
             Params = string.Empty;
             return this;
         }
+
+        //public QHomework GetHomeworkById(int id)
+        //{
+        //    TypeQueries = TypeQueries.GetOne;
+        //    Name = nameof(GetHomeworkById);
+        //    Params = $"{id}";
+        //    return this;
+        //}
+        //public QHomework RemoveHomeworksById(int id)
+        //{
+        //    TypeQueries = TypeQueries.RemoveOne;
+        //    Name = nameof(RemoveHomeworksById);
+        //    Params = $"{id}";
+        //    return this;
+        //}
+        //public QHomework UpdateHomeworkById(string name, int id)
+        //{
+        //    TypeQueries = TypeQueries.UpdateOne;
+        //    Name = nameof(UpdateHomeworkById);
+        //    Params = $"{name}{Sep}{id}";
+        //    return this;
+        //}
     }
 }

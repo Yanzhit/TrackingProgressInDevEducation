@@ -4,6 +4,15 @@
     {
         public string Name { get; set; }
 
+        public CommentType()
+        {
+        }
+
+        public CommentType(string name)
+        {
+            Name = name;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((CommentType)obj);

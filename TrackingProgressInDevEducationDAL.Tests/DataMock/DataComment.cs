@@ -11,6 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public int[] StudentId { get; }
 
         public int[] CreatedBy { get; }
+        public int[] TeamId { get; }
 
         public DataComment()
         {
@@ -18,6 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
             TypeId = DataTypeId();
             StudentId = DataStudentId();
             CreatedBy = DataCreatedBy();
+            TeamId = DataTeamId();
         }
 
         private string[] DataText()
@@ -52,6 +54,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
             };
         }
         private int[] DataCreatedBy()
+        {
+            return new[]
+            {
+                1, 2, 8, 2, 7, 5, 2, 2, 0, 1 //10
+            };
+        }
+
+        private int[] DataTeamId()
         {
             return new[]
             {

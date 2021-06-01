@@ -1,31 +1,31 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class MockBase
     {
-        public List<MockComment> Comments { get; }
-        public List<MockCommentType> CommentType { get; }
-        public List<MockGroup> Groups { get; }
-        public List<MockCourse> Courses { get; }
-        public List<MockLector> Lectors { get; }
-        public List<MockPayment> Payments { get; }
-        public List<MockStudent> Students { get; }
-        public List<MockTeam> Teams { get; }
-        public List<MockVisit> Visits { get; }
+        public List<Comment> Comments { get; }
+        public List<CommentType> CommentType { get; }
+        public List<Group> Groups { get; }
+        public List<Course> Courses { get; }
+        public List<Lector> Lectors { get; }
+        public List<Payment> Payments { get; }
+        public List<Student> Students { get; }
+        public List<Team> Teams { get; }
+        public List<Visit> Visits { get; }
 
         public MockBase()
         {
-            Comments = new List<MockComment>();
-            CommentType = new List<MockCommentType>();
-            Groups = new List<MockGroup>();
-            Courses = new List<MockCourse>();
-            Lectors = new List<MockLector>();
-            Payments = new List<MockPayment>();
-            Students = new List<MockStudent>();
-            Teams = new List<MockTeam>();
-            Visits = new List<MockVisit>();
+            Comments = new List<Comment>();
+            CommentType = new List<CommentType>();
+            Groups = new List<Group>();
+            Courses = new List<Course>();
+            Lectors = new List<Lector>();
+            Payments = new List<Payment>();
+            Students = new List<Student>();
+            Teams = new List<Team>();
+            Visits = new List<Visit>();
         }
     }
 }
