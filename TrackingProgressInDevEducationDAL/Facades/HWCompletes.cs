@@ -10,20 +10,22 @@ namespace TrackingProgressInDevEducationDAL.Facades
         private readonly QuerySettings _query = new();
 
         /// <summary>
-        /// Создать новое ДЗ
+        /// Создать новое Завершенное ДЗ
         /// </summary>
-        /// <param name="name">Имя ДЗ</param>
-        /// <returns>ДЗ</returns>
-        public HWComplete SetNewHW(int homeworkId, int studentId, bool status)
+        /// <param name="homeworkId">ID ДЗ</param>
+        /// <param name="studentId">ID Студента</param>
+        /// <param name="status">Статус Завершения ДЗ</param>
+        /// <returns>Завершенное ДЗ</returns>
+        public HWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
             return (HWComplete)_query.QuerySet(_qHomeworkComplete.SetNewHWComplete(homeworkId, studentId, status));
         }
 
         /// <summary>
-        /// Обнуление таблицы ДЗ и ключа identity
+        /// Обнуление таблицы Завершенного ДЗ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<HWComplete> NullifyHWs()
+        public IEnumerable<HWComplete> NullifyHWComplete()
         {
             return (IEnumerable<HWComplete>)_query.QuerySet(_qHomeworkComplete.NullifyHWComplete());
         }
