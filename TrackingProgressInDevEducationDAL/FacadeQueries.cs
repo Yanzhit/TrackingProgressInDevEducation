@@ -1,6 +1,4 @@
 ﻿using TrackingProgressInDevEducationDAL.Facades;
-using TrackingProgressInDevEducationDAL.Abstarcts;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL
@@ -10,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для городов.
         /// </summary>
-        public Cities Cities => new Cities
+        public Cities Cities => new()
         {
             Query = new QCity()
         };
@@ -18,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для комментариев.
         /// </summary>
-        public Comments Comments => new Comments
+        public Comments Comments => new()
         {
             Query = new QComment()
         };
@@ -26,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для типа комментариев.
         /// </summary>
-        public CommentTypes CommentTypes => new CommentTypes
+        public CommentTypes CommentTypes => new()
         {
             Query = new QCommentType()
         };
@@ -34,7 +32,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для курсов.
         /// </summary>
-        public Courses Courses => new Courses
+        public Courses Courses => new()
         {
             Query = new QCourse()
         };
@@ -42,7 +40,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для групп.
         /// </summary>
-        public Groups Groups => new Groups
+        public Groups Groups => new()
         {
             Query = new QGroup()
         };
@@ -50,7 +48,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для выполненного дз.
         /// </summary>
-        public HWCompletes HWCompletes => new HWCompletes
+        public HWCompletes HWCompletes => new()
         {
             Query = new QHWComplete()
         };
@@ -58,7 +56,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для групповых дз.
         /// </summary>
-        public HWGroups HWGroups => new HWGroups
+        public HWGroups HWGroups => new()
         {
             Query = new QHWGroup()
         };
@@ -66,7 +64,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для дз.
         /// </summary>
-        public Homeworks Homeworks => new Homeworks
+        public Homeworks Homeworks => new()
         {
             Query = new QHomework()
         };
@@ -74,7 +72,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для лекций.
         /// </summary>
-        public Lections Lections => new Lections
+        public Lections Lections => new()
         {
             Query = new QLection()
         };
@@ -82,7 +80,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для связи лектора к курсу.
         /// </summary>
-        public LectorCourses LectorCourses => new LectorCourses
+        public LectorCourses LectorCourses => new()
         {
             Query = new QLectorCourse()
         };
@@ -90,7 +88,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для связи лектора к группе.
         /// </summary>
-        public LectorGroups LectorGroups => new LectorGroups
+        public LectorGroups LectorGroups => new()
         {
             Query = new QLectorGroup()
         };
@@ -98,7 +96,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для лекторов.
         /// </summary>
-        public Lectors Lectors => new Lectors
+        public Lectors Lectors => new()
         {
             Query = new QLector()
         };
@@ -106,7 +104,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для оплаты.
         /// </summary>
-        public Payments Payments => new Payments
+        public Payments Payments => new()
         {
             Query = new QPayment()
         };
@@ -114,15 +112,15 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для студентов.
         /// </summary>
-        public Students Students => new Students
+        public Students Students => new()
         {
-            Query = new Query()
+            Query = new QStudent()
         };
 
         /// <summary>
         /// Фасад для команд.
         /// </summary>
-        public Teams Teams => new Teams
+        public Teams Teams => new()
         {
             Query = new QTeam()
         };
@@ -130,7 +128,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для команд студентов.
         /// </summary>
-        public TeamStudents TeamStudents => new TeamStudents
+        public TeamStudents TeamStudents => new()
         {
             Query = new QTeamStudent()
         };
@@ -138,7 +136,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для посещения.
         /// </summary>
-        public Visits Visits => new Visits
+        public Visits Visits => new()
         {
             Query = new QVisit()
         };

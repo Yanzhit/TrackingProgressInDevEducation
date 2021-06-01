@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Students : AFacade
     {
-        public Query Query { get; set; }
+        public QStudent Query { get; set; }
 
         public IEnumerable<Student> GetAllStudents()
         {

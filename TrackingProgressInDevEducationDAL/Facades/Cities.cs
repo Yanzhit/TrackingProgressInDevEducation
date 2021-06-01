@@ -10,7 +10,6 @@ namespace TrackingProgressInDevEducationDAL.Facades
         public QCity Query { get; set; }
         public City SetNewCity(string name)
         {
-        
             return (City) _querySet.QuerySet(Query.SetNewCity(name));
         }
 

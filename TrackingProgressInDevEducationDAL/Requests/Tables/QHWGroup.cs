@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// <summary>
     /// Запросы к таблице домашних заданий групп
     /// </summary>
-    public class QHomeworkGroup : IQuery
+    public class QHWGroup : IQuery
     {
         public Type Type { get; } = typeof(HWGroup);
         public TypeQueries TypeQueries { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <param name="homeworkId">id домашнего задания</param>
         /// <param name="groupId">id групп</param>
         /// <returns>Подготовленный запрос</returns>
-        public QHomeworkGroup SetNewHWGroup(int homeworkId, int groupId)
+        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
             TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWGroup);
@@ -33,7 +33,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// Обнуление таблицы завершенных домашних заданий групп и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public QHomeworkGroup NullifyHWGroup()
+        public QHWGroup NullifyHWGroup()
         {
             TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHWGroup);

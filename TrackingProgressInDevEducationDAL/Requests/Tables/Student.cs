@@ -5,7 +5,7 @@ using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
-    public class Query : IQuery
+    public class QStudent : IQuery
     {
         public Type Type { get; } = typeof(Student);
         public TypeQueries TypeQueries { get; set; }
@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <param name="cityId">id города студента</param>
         /// <param name="status">Статус студента, обучается/выпустился (0;1)</param>
         /// <returns>Подготовленный запрос</returns>
-        public Query SetNewStudent
+        public QStudent SetNewStudent
             (
                 string name,
                 string surname,
@@ -56,7 +56,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// Получить всех студентов из таблицы
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public Query GetAllStudents()
+        public QStudent GetAllStudents()
         {
             TypeQueries = TypeQueries.Single;
             Name = nameof(GetAllStudents);
@@ -68,7 +68,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// Обнуление таблицы студентов и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public Query NullifyStudents()
+        public QStudent NullifyStudents()
         {
             TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyStudents);
