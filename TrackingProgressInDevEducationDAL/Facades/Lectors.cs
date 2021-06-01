@@ -11,14 +11,14 @@ namespace TrackingProgressInDevEducationDAL.Facades
         //{
         //    return (List<Lector>) QuerySettings.QuerySet(Query.GetLectors());
         //}
-        public static Lector SetNewLector(string fullName, string email, string password)
-        {
-            return (Lector)QuerySettings.QuerySet(Query.SetNewLector(fullName, email, password));
-        }
-        public static IEnumerable<Lector> GetLectorById(int id)
-        {
-            return (List<Lector>) QuerySettings.QuerySet(Query.GetLectorById(id));
-        }
+        //public static Lector SetNewLector(string fullName, string email, string password)
+        //{
+        //    return (Lector)QuerySettings.QuerySet(Query.SetNewLector(fullName, email, password));
+        //}
+        //public static IEnumerable<Lector> GetLectorById(int id)
+        //{
+        //    return (List<Lector>) QuerySettings.QuerySet(Query.GetLectorById(id));
+        //}
         //public static IEnumerable<Lector> UpdateLectorById(int id, string fullName)
         //{
         //    return (List<Lector>) QuerySettings.QuerySet(Query.UpdateLectorById(id, fullName));

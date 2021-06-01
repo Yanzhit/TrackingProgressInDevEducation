@@ -7,14 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Facades
     public class Teams
     {
         private static readonly QTeam Query = new();
-        public static Team SetNewTeam(string name)
-        {
-            return (Team) QuerySettings.QuerySet(Query.SetNewTeam(name));
-        }
-        public static IEnumerable<Team> NullifyTeams()
-        {
-            return (List<Team>) QuerySettings.QuerySet(Query.NullifyTeams());
-        }
+        //public static Team SetNewTeam(string name)
+        //{
+        //    return (Team) QuerySettings.QuerySet(Query.SetNewTeam(name));
+        //}
+        //public static IEnumerable<Team> NullifyTeams()
+        //{
+        //    return (List<Team>) QuerySettings.QuerySet(Query.NullifyTeams());
+        //}
         //public static IEnumerable<Team> UpdateTeamById(int id, string name)
         //{
         //    return (List<Team>) QuerySettings.QuerySet(Query.UpdateTeamById(id, name));

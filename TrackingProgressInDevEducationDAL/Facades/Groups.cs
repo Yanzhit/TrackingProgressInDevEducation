@@ -6,7 +6,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Groups
     {
-        private static readonly QGroup Query = new();
+        private readonly QGroup Query = new();
         //public static IEnumerable<Group> GetGroups()
         //{
         //    return (List<Group>) QuerySettings.QuerySet(Query.GetGroups());
@@ -27,10 +27,10 @@ namespace TrackingProgressInDevEducationDAL.Facades
         //{
         //    return (List<Group>)QuerySettings.QuerySet(Query.UpdateGroupById(id, name, courseId));
         //}
-        public static IEnumerable<Group> NullifyGroups()
-        {
-            return (List<Group>)QuerySettings.QuerySet(Query.NullifyGroups());
-        }
+        //public static IEnumerable<Group> NullifyGroups()
+        //{
+        //    return (List<Group>)QuerySettings.QuerySet(Query.NullifyGroups());
+        //}
     }
     
 

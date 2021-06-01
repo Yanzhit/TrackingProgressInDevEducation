@@ -28,7 +28,8 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             IEnumerable<Student> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
-                students = Students.GetStudents();
+                Facade f = new Facade();
+                students = f.Students.GetAllStudents();
                 foreach (var student in students)
                 {
                     RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";

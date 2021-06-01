@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             yield return new object[]
             {
-                Students.GetStudents(),
+               // Students.GetStudents(),
 
                 new List<Student>
                 {

@@ -19,13 +19,13 @@ namespace TrackingProgressInDevEducationDAL.Facades
         //{
         //    return (List<Homework>) QuerySettings.QuerySet(Query.RemoveHomeworksById(id));
         //}
-        public static Homework CreateNewHomeworks(string name)
-        {
-            return (Homework) QuerySettings.QuerySet(Query.SetNewHW(name));
-        }
-        public static List<Homework> NullifyHWs()
-        {
-            return (List<Homework>) QuerySettings.QuerySet(Query.NullifyHWs());
-        }
+        //public static Homework CreateNewHomeworks(string name)
+        //{
+        //    return (Homework) QuerySettings.QuerySet(Query.SetNewHW(name));
+        //}
+        //public static List<Homework> NullifyHWs()
+        //{
+        //    return (List<Homework>) QuerySettings.QuerySet(Query.NullifyHWs());
+        //}
     }
 }

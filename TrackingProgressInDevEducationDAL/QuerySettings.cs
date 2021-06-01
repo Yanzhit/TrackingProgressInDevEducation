@@ -1,52 +1,47 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Reflection;
-using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public static class QuerySettings
+    public class QuerySettings
     {
-        public static object QuerySet(IQuery query)
+        
+        public object QuerySet(IQuery query)
         {
-            Connection.Connect();
-            MethodInfo method = null;
-            switch (query.TypeQueries)
+            Connection connection = new();
+            IDbConnection dbConnection = connection.Connect();
+            MethodInfo method = SelectMetod(query.TypeQueries);
+            MethodInfo generic = method.MakeGenericMethod(query.Type);
+            object objects = generic.Invoke(this, new object[] {query, dbConnection});
+            connection.Disconnect(dbConnection); //нужно ли прокидывать? или можно тут отрубать
+            return objects;
+        }
+
+        private MethodInfo SelectMetod(TypeQueries type)
+        {
+            switch (type)
             {
                 case TypeQueries.GetOne:
-                    method = typeof(Repository).GetMethod(nameof(Repository.GetOneAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.GetOneAsync));
                 case TypeQueries.SetOne:
-                    method = typeof(Repository).GetMethod(nameof(Repository.SetOneAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.SetOneAsync));
                 case TypeQueries.UpdateOne:
-                    method = typeof(Repository).GetMethod(nameof(Repository.UpdateOneAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.UpdateOneAsync));
                 case TypeQueries.RemoveOne:
-                    method = typeof(Repository).GetMethod(nameof(Repository.RemoveOneAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.RemoveOneAsync));
                 case TypeQueries.GetSeveral:
-                    method = typeof(Repository).GetMethod(nameof(Repository.GetSeveralAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.GetSeveralAsync));
                 case TypeQueries.SetSeveral:
-                    method = typeof(Repository).GetMethod(nameof(Repository.SetSeveralAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.SetSeveralAsync));
                 case TypeQueries.UpdateSeveral:
-                    method = typeof(Repository).GetMethod(nameof(Repository.UpdateSeveralAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.UpdateSeveralAsync));
                 case TypeQueries.RemoveSeveral:
-                    method = typeof(Repository).GetMethod(nameof(Repository.RemoveSeveralAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.RemoveSeveralAsync));
                 case TypeQueries.Nullify:
-                    method = typeof(Repository).GetMethod(nameof(Repository.NullifyAsync));
-                    break;
+                    return typeof(Repository).GetMethod(nameof(Repository.NullifyAsync));
             }
-            MethodInfo generic = method.MakeGenericMethod(query.Type);
-            object objects = generic.Invoke(null, new object[] {query});
-            Connection.Disconnect();
-            return objects;
+            return null;
         }
     }
 }

@@ -6,63 +6,62 @@ using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public static class Repository
+    public class Repository
     {
-        private static readonly IDbConnection DBConnection = Connection.DbConnection;
         private static string _command;
 
-        public static T SetOneAsync<T>(IQuery query)
+        public static T SetOneAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.QuerySingle<T>(_command);
+            return connection.QuerySingle<T>(_command);
         }
 
-        public static T GetOneAsync<T>(IQuery query)
+        public static T GetOneAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.QuerySingle<T>(_command);
+            return connection.QuerySingle<T>(_command);
         }
 
-        public static T UpdateOneAsync<T>(IQuery query)
+        public static T UpdateOneAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.QuerySingle<T>(_command);
+            return connection.QuerySingle<T>(_command);
         }
 
-        public static T RemoveOneAsync<T>(IQuery query)
+        public static T RemoveOneAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.QuerySingle<T>(_command);
+            return connection.QuerySingle<T>(_command);
         }
 
-        public static IEnumerable<T> SetSeveralAsync<T>(IQuery query)
+        public static IEnumerable<T> SetSeveralAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.Query<T>(_command).AsList();
+            return connection.Query<T>(_command).AsList();
         }
 
-        public static IEnumerable<T> GetSeveralAsync<T>(IQuery query)
+        public static IEnumerable<T> GetSeveralAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.Query<T>(_command).AsList();
+            return connection.Query<T>(_command).AsList();
         }
 
-        public static IEnumerable<T> UpdateSeveralAsync<T>(IQuery query)
+        public static IEnumerable<T> UpdateSeveralAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.Query<T>(_command).AsList();
+            return connection.Query<T>(_command).AsList();
         }
 
-        public static IEnumerable<T> RemoveSeveralAsync<T>(IQuery query)
+        public static IEnumerable<T> RemoveSeveralAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.Query<T>(_command).AsList();
+            return connection.Query<T>(_command).AsList();
         }
 
-        public static IEnumerable<T> NullifyAsync<T>(IQuery query)
+        public static IEnumerable<T> NullifyAsync<T>(IQuery query, IDbConnection connection)
         {
             ConfigCommand(query);
-            return DBConnection.Query<T>(_command).AsList();
+            return connection.Query<T>(_command).AsList();
         }
 
         private static void ConfigCommand(IQuery query)

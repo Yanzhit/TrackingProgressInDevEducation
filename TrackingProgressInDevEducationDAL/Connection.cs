@@ -4,22 +4,19 @@ using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public static class Connection
+    public class Connection
     {
-        private static readonly string Cs =
+        private readonly string _cs =
             $@"Persist Security Info={F};User ID={User};Password={Password};Initial Catalog={DbTest};Server={Ip}";
         
-        public static IDbConnection DbConnection { get; set; }
-
-        public static void Connect()
+        public IDbConnection Connect()
         {
-            IDbConnection dbConnection = new SqlConnection(Cs);
-            DbConnection = dbConnection;
+            return new SqlConnection(_cs);
         }
 
-        public static void Disconnect()
+        public void Disconnect(IDbConnection dbConnection)
         {
-            DbConnection.Dispose();
+            dbConnection.Dispose();
         }
     }
 }
