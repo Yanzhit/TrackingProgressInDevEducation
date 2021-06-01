@@ -234,6 +234,9 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\SetNewTC.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\SetNewTest.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\NullifyTests.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\GetVisitsScore.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\GetHomeWorkProcedureScore.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\GetTestScore.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
