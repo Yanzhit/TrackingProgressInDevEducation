@@ -2,7 +2,6 @@
 using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.ForTables;
-using TrackingProgressInDevEducationDAL.Tests.ModelsMock;
 using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
 
 namespace TrackingProgressInDevEducationDAL.Tests
@@ -65,7 +64,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableComments()
         {
-            foreach (MockComment data in _mock.Comments)
+            foreach (Comment data in _mock.Comments)
             {
                 Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
             }
@@ -73,7 +72,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableCommentType()
         {
             var query = new QCommentType();
-            foreach (MockCommentType data in _mock.CommentType)
+            foreach (CommentType data in _mock.CommentType)
             {
                 //FacadeCommentType.
                 QuerySettings.QuerySet(query.SetNewCType(data.Name));
@@ -82,7 +81,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableCourses()
         {
             var query = new QCourse();
-            foreach (MockCourse data in _mock.Courses)
+            foreach (Course data in _mock.Courses)
             {
                 //FacadeCourses.
                 QuerySettings.QuerySet(query.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn));
@@ -90,7 +89,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableGroups()
         {
-            foreach (MockGroup data in _mock.Groups)
+            foreach (Group data in _mock.Groups)
             {
                 //Groups(data.Name, data.CourseId);
             }
@@ -128,7 +127,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableLectors()
         {
-            foreach (MockLector data in _mock.Lectors)
+            foreach (Lector data in _mock.Lectors)
             {
                 Lectors.SetNewLector(data.FullName, data.Email, data.Password);
             }
@@ -136,7 +135,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTablePayments()
         {
             var query = new QPayment();
-            foreach (MockPayment data in _mock.Payments)
+            foreach (Payment data in _mock.Payments)
             {
                 //FacadePayments.
                 QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
@@ -144,7 +143,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableStudents()
         {
-            foreach (MockStudent data in _mock.Students)
+            foreach (Student data in _mock.Students)
             {
                 Students.SetNewStudent
                     (
@@ -165,7 +164,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableTeams()
         {
-            foreach (MockTeam data in _mock.Teams)
+            foreach (Team data in _mock.Teams)
             {
                 Teams.SetNewTeam(data.Name);
             }
@@ -179,7 +178,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableVisits()
         {
             var query = new QVisit();
-            foreach (MockVisit data in _mock.Visits)
+            foreach (Visit data in _mock.Visits)
             {
                 //FacadeVisits
                 QuerySettings.QuerySet(query.SetNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
