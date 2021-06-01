@@ -11,10 +11,10 @@ namespace TrackingProgressInDevEducationDAL.Facades
         private readonly QuerySettings _query = new();
 
         /// <summary>
-        /// Создать новый тип Курсов
+        /// Создать новый Курс
         /// </summary>
-        /// <param name="name">Имя типа</param>
-        /// <returns>Тип комментариев</returns>
+        /// <param name="name">Имя курса</param>
+        /// <returns>Курс</returns>
         public Course SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
             return (Course)_query.QuerySet(_qCourse.SetNewCourse(name, startedOn, finishedOn));
