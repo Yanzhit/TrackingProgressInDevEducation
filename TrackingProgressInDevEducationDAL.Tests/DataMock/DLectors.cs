@@ -1,12 +1,14 @@
-﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+
+namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DLector
+    public class DLectors : ADMock
     {
         public string[] FullName { get; }
         public string[] Email { get; }
         public string[] Password { get; }
 
-        public DLector()
+        public DLectors()
         {
             FullName = DataFullName();
             Email = DataEmail();

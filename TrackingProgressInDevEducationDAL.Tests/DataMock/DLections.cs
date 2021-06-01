@@ -1,14 +1,15 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DLection
+    public class DLections : ADMock
     {
         public int[] GroupId { get; }
         public int[] LectorId { get; }
         public DateTime[] StartedOn { get; }
 
-        public DLection()
+        public DLections()
         {
             GroupId = DataGroupId();
             LectorId = DataLectorId();

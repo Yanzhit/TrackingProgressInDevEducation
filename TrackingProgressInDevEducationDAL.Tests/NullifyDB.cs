@@ -5,7 +5,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class NullifyDB
     {
-        private readonly FacadeQueries _facade = new();
+        private readonly ManagerQueries _manager = new();
 
         public void Nullify(Type type) 
         {
@@ -61,77 +61,77 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void NullifyTableComments()
         {
-            _facade.Comments.NullifyComments();
+            _manager.Comments.NullifyComments();
         }
 
         private void NullifyTableCommentType()
         {
-            _facade.CommentTypes.NullifyCTypes();
+            _manager.CommentTypes.NullifyCTypes();
         }
 
         private void NullifyTableCourses()
         {
-            _facade.Courses.NullifyCourses();
+            _manager.Courses.NullifyCourses();
         }
 
         private void NullifyTableGroups()
         {
-            _facade.Groups.NullifyGroups();
+            _manager.Groups.NullifyGroups();
         }
 
         private void NullifyTableHomeworkComplete()
         {
-            _facade.HWCompletes.NullifyHWComplete();
+            _manager.HWCompletes.NullifyHWComplete();
         }
 
         private void NullifyTableHomeworkGroup()
         {
-            _facade.HWGroups.NullifyHWGroup();
+            _manager.HWGroups.NullifyHWGroup();
         }
 
         private void NullifyTableHomeworks()
         {
-            _facade.Homeworks.NullifyHWs();
+            _manager.Homeworks.NullifyHWs();
         }
 
         private void NullifyTableLections()
         {
-            _facade.Lections.NullifyLections();
+            _manager.Lections.NullifyLections();
         }
 
         private void NullifyTableLectorGroup()
         {
-            _facade.LectorGroups.NullifyLectorGroup();
+            _manager.LectorGroups.NullifyLectorGroup();
         }
 
         private void NullifyTableLectors()
         {
-            _facade.Lectors.NullifyLectors();
+            _manager.Lectors.NullifyLectors();
         }
 
         private void NullifyTablePayments()
         {
-            _facade.Payments.NullifyPayments();
+            _manager.Payments.NullifyPayments();
         }
 
         private void NullifyTableStudents()
         {
-            _facade.Students.NullifyStudents();
+            _manager.Students.NullifyStudents();
         }
 
         private void NullifyTableTeams()
         {
-            _facade.Teams.NullifyTeams();
+            _manager.Teams.NullifyTeams();
         }
 
         private void NullifyTableTeamStudent()
         {
-            _facade.TStudents.NullifyTStudent();
+            _manager.TStudents.NullifyTStudent();
         }
 
         private void NullifyTableVisits()
         {
-            _facade.Visits.NullifyVisits();
+            _manager.Visits.NullifyVisits();
         }
     }
 }

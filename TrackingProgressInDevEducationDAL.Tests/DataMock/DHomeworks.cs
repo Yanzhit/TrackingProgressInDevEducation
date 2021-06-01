@@ -1,11 +1,13 @@
-﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+
+namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DHomework
+    public class DHomeworks : ADMock
     {
         public string[] Name { get; }
         public string[] Deskription { get; }
 
-        public DHomework()
+        public DHomeworks()
         {
             Name = DataName();
             Deskription = DataDeskription();

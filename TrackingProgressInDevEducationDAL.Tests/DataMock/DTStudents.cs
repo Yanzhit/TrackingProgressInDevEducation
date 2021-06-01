@@ -1,11 +1,13 @@
-﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+
+namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DTStudent
+    public class DTStudents : ADMock
     {
         public int[] TeamId { get; }
         public int[] StudentId { get; }
 
-        public DTStudent()
+        public DTStudents()
         {
             TeamId = DataTeamId();
             StudentId = DataStudentId();

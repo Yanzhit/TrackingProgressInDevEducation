@@ -1,10 +1,12 @@
-﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+
+namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DCType
+    public class DCTypes : ADMock
     {
         public string[] Name { get; }
 
-        public DCType()
+        public DCTypes()
         {
             Name = DataName();
         }

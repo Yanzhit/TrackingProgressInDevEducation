@@ -1,15 +1,16 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DGroup
+    public class DGroups : ADMock
     {
         public string[] Name { get; }
         public int[] CourseId { get; }
         public DateTime[] StartDate { get; }
         public DateTime[] EndDate { get; }
 
-        public DGroup()
+        public DGroups()
         {
             Name = DataName();
             CourseId = DataCourseId();
