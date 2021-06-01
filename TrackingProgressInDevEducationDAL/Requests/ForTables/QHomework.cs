@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHW, NullifyHWs)
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QHomework SetNewHW(string name)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHW);
             Params = $"{name}";
             return this;

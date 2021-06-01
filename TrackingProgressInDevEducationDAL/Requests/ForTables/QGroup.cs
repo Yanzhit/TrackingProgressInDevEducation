@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewGroup, NullifyGroups)
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QGroup SetNewGroup(string name, int courseId)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewGroup);
             Params = $"{name}{Sep}{courseId}";
             return this;

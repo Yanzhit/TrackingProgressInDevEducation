@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWGroup, NullifyHWGroup)
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QHomeworkGroup SetNewHWGroup(int homeworkId, int groupId)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWGroup);
             Params = $"{homeworkId}{Sep}{groupId}";
             return this;

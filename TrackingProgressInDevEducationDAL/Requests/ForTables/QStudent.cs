@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
                 bool status
             )
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewStudent);
             Params = $"{name}{Sep}{surname}{Sep}{rate}{Sep}{groupId}{Sep}" +
                      $"{phone}{Sep}{email}{Sep}{contract}{Sep}{birthday}{Sep}" +
@@ -58,7 +58,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QStudent GetAllStudents()
         {
-            TypeQueries = TypeQueries.GetSeveral;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(GetAllStudents);
             Params = string.Empty;
             return this;

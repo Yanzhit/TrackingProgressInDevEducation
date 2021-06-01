@@ -1,6 +1,7 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
+
 //ZLoo (Свойства все, Методы(SetNewCity, GetAllCities, NullifyCities))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 {
@@ -21,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QCity SetNewCity(string name)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewCity);
             Params = $"{name}";
             return this;
@@ -33,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QCity GetAllCities()
         {
-            TypeQueries = TypeQueries.GetSeveral;
+            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllCities);
             Params = string.Empty;
             return this;

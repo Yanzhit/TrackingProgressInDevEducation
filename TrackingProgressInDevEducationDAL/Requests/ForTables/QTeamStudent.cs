@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewTStudent, NullifyTStudent))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QTeamStudent SetNewTStudent(int teamId, int studentId)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewTStudent);
             Params = $"{teamId}{Sep}{studentId}";
             return this;

@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QLector SetNewLector(string fullName, string email, string password)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewLector);
             Params = $"{fullName}{Sep}{email}{Sep}{password}";
             return this;
@@ -29,7 +29,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
 
         public QLector GetLectorById(int id)
         {
-            TypeQueries = TypeQueries.GetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(GetLectorById);
             Params = $"{id}";
             return this;

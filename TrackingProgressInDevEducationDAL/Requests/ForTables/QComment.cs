@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(NullifyComments)(В SetNewComment нужно до настроить входящие параметры (null)))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -33,7 +33,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
             int teamId
         )
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewComment);
             Params = $"{text}{Sep}{typeId}{Sep}{studentId}{Sep}{createdBy}{Sep}{teamId}";
             return this;

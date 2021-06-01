@@ -1,6 +1,7 @@
 ﻿using System;
+
 //ZLoo (Все ок)
-namespace TrackingProgressInDevEducationDAL.Requests.Interface
+namespace TrackingProgressInDevEducationDAL.Interfaces
 {
     public interface IQuery
     {

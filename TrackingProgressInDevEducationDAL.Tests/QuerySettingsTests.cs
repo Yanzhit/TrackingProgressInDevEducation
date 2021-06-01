@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {

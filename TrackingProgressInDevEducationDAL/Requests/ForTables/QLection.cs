@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewLection, GetAllLector, NullifyLections))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QLection SetNewLection(int groupId, int lectorId, DateTime startedOn)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewLection);
             Params = $"{groupId}{Sep}{lectorId}{Sep}{startedOn}";
             return this;
@@ -36,7 +36,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QLection GetAllLector()
         {
-            TypeQueries = TypeQueries.SetSeveral;
+            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllLector);
             Params = string.Empty;
             return this;

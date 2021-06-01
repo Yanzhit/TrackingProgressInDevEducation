@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWComplete, NullifyHWComplete)
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QHomeworkComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWComplete);
             Params = $"{homeworkId}{Sep}{studentId}{Sep}{status}";
             return this;

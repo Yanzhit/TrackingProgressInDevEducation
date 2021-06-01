@@ -1,6 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interface;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewVisit(проверить входные параметры), NullifyVisits))
 namespace TrackingProgressInDevEducationDAL.Requests.ForTables
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
         /// <returns>Подготовленный запрос</returns>
         public QVisit SetNewVisit(bool visitStatus, int studentId, int lectionId)
         {
-            TypeQueries = TypeQueries.SetOne;
+            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewVisit);
             Params = $"{visitStatus}{Sep}{studentId}{Sep}{lectionId}";
             return this;
