@@ -1,23 +1,24 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Visits : AFacade
     {
-        public QVisit Query { get; set; }
+        public QVisit Query { get; init; }
 
         /// <summary>
         /// Добавить новое посещение
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="visitStatus"></param>
+        /// <param name="studentId"></param>
+        /// <param name="lectionId"></param>
         /// <returns>Посещение</returns>
         public Visit SetNewVisit(bool visitStatus, int studentId, int lectionId)
         {
-            return (Visit)_query.QuerySet(_qVisit.SetNewVisit(visitStatus, studentId, lectionId));
+            return (Visit)QuerySet.QuerySet(Query.SetNewVisit(visitStatus, studentId, lectionId));
         }
 
         /// <summary>
@@ -26,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Visit> NullifyVisits()
         {
-            return (IEnumerable<Visit>)_query.QuerySet(_qVisit.NullifyVisits());
+            return (IEnumerable<Visit>)QuerySet.QuerySet(Query.NullifyVisits());
         }
     }
 }

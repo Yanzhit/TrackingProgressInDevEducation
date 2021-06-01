@@ -1,14 +1,13 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
-﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+﻿﻿using System.Collections.Generic;
+ using TrackingProgressInDevEducationDAL.Abstracts;
+ using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class HWCompletes : AFacade
     {
-        public QHWComplete Query { get; set; }
+        public QHWComplete Query { get; init; }
 
         /// <summary>
         /// Создать новое Завершенное ДЗ
@@ -19,7 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Завершенное ДЗ</returns>
         public HWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            return (HWComplete)_query.QuerySet(_qHomeworkComplete.SetNewHWComplete(homeworkId, studentId, status));
+            return (HWComplete)QuerySet.QuerySet(Query.SetNewHWComplete(homeworkId, studentId, status));
         }
 
         /// <summary>
@@ -28,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<HWComplete> NullifyHWComplete()
         {
-            return (IEnumerable<HWComplete>)_query.QuerySet(_qHomeworkComplete.NullifyHWComplete());
+            return (IEnumerable<HWComplete>)QuerySet.QuerySet(Query.NullifyHWComplete());
         }
     }
 }

@@ -172,7 +172,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableTeamStudent()
         {
             //FacadeTeamStudent.
-            var query = new QTeamStudent();
+            var query = new QTStudent();
             //QuerySettings.QuerySet(query.AddNewTeamStudent());
         }
         private void FillingTableVisits()

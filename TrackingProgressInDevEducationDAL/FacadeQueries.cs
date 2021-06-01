@@ -128,9 +128,9 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для команд студентов.
         /// </summary>
-        public TeamStudents TeamStudents => new()
+        public TStudents TStudents => new()
         {
-            Query = new QTeamStudent()
+            Query = new QTStudent()
         };
 
         /// <summary>

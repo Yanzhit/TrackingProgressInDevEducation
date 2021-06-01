@@ -1,24 +1,22 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
-﻿using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class CommentTypes : AFacade
     {
-        public QCommentType Query { get; set; }
+        public QCommentType Query { get; init; }
 
         /// <summary>
         /// Создать новый тип комментария
         /// </summary>
-        /// <param name="name">Имя типа</param>
+        /// <param name="name">Имя типа комментария</param>
         /// <returns>Тип комментариев</returns>
         public CommentType SetNewCType(string name)
         {
-            return (CommentType)_query.QuerySet(_qCommentType.SetNewCType(name));
+            return (CommentType)QuerySet.QuerySet(Query.SetNewCType(name));
         }
 
         /// <summary>
@@ -27,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<CommentType> NullifyCTypes()
         {
-            return (IEnumerable<CommentType>)_query.QuerySet(_qCommentType.NullifyCTypes());
+            return (IEnumerable<CommentType>)QuerySet.QuerySet(Query.NullifyCTypes());
         }
     }
 }

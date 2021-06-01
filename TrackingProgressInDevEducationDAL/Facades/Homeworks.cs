@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Homeworks : AFacade
     {
-        public QHomework Query { get; set; }
+        public QHomework Query { get; init; }
 
         /// <summary>
         /// Создать новое ДЗ
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>ДЗ</returns>
         public Homework SetNewHW(string name)
         {
-            return (Homework)_query.QuerySet(_qHomework.SetNewHW(name));
+            return (Homework)QuerySet.QuerySet(Query.SetNewHW(name));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Homework> NullifyHWs()
         {
-            return (IEnumerable<Homework>)_query.QuerySet(_qHomework.NullifyHWs());
+            return (IEnumerable<Homework>)QuerySet.QuerySet(Query.NullifyHWs());
         }
     }
 }

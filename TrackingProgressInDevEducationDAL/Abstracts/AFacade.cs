@@ -1,7 +1,7 @@
-﻿namespace TrackingProgressInDevEducationDAL.Abstarcts
+﻿namespace TrackingProgressInDevEducationDAL.Abstracts
 {
     public abstract class AFacade
     {
-        protected readonly QuerySettings _querySet = new();
+        protected readonly QuerySettings QuerySet = new();
     }
 }

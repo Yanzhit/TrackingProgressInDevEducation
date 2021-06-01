@@ -1,22 +1,23 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Groups : AFacade
     {
-        public QGroup Query { get; set; }
+        public QGroup Query { get; init; }
 
         /// <summary>
         /// Создать новую Группу
         /// </summary>
         /// <param name="name">Имя Группы</param>
+        /// <param name="courseId"></param>
         /// <returns>Группа</returns>
-        public Group SetNewGroup(string name, int id)
+        public Group SetNewGroup(string name, int courseId)
         {
-            return (Group) _query.QuerySet(_qGroup.SetNewGroup(name, id));
+            return (Group)QuerySet.QuerySet(Query.SetNewGroup(name, courseId));
         }
 
         /// <summary>
@@ -25,7 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Group> NullifyGroups()
         {
-            return (IEnumerable<Group>)_query.QuerySet(_qGroup.NullifyGroups());
+            return (IEnumerable<Group>)QuerySet.QuerySet(Query.NullifyGroups());
         }
     }
 }

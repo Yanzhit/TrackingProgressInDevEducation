@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstarcts;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -7,15 +7,16 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Cities : AFacade
     {
+        public QCity Query { get; init; }
+
         /// <summary>
         /// Создать новый город
         /// </summary>
         /// <param name="name">Имя города</param>
         /// <returns>Город</returns>
-        public QCity Query { get; set; }
         public City SetNewCity(string name)
         {
-            return (City) _querySet.QuerySet(Query.SetNewCity(name));
+            return (City)QuerySet.QuerySet(Query.SetNewCity(name));
         }
 
         /// <summary>
@@ -24,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<City> GetAllCities()
         {
-            return (List<City>) _querySet.QuerySet(Query.GetAllCities());
+            return (List<City>)QuerySet.QuerySet(Query.GetAllCities());
         }
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<City> NullifyCities()
         {
-            return (List<City>) _querySet.QuerySet(Query.NullifyCities());
+            return (List<City>)QuerySet.QuerySet(Query.NullifyCities());
         }
     }
 }

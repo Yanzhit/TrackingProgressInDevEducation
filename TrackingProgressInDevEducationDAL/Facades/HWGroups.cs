@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
+using TrackingProgressInDevEducationDAL.Abstracts;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class HWGroups : AFacade 
     {
-        public QHWGroup Query { get; set; }
+        public QHWGroup Query { get; init; }
 
         /// <summary>
         /// Создать новое ДЗ ГРУППЫ
@@ -15,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="homeworkId">ID ДЗ</param>
         /// <param name="groupId">ID Группы</param>
         /// <returns>ДЗ ГРУППЫ</returns>
-        public QHomeworkGroup SetNewHWGroup(int homeworkId, int groupId)
+        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
-            return (QHomeworkGroup)_query.QuerySet(_qHomeworkGroup.SetNewHWGroup(homeworkId, groupId));
+            return (QHWGroup)QuerySet.QuerySet(Query.SetNewHWGroup(homeworkId, groupId));
         }
 
         /// <summary>
         /// Обнуление таблицы ДЗ ГРУППЫ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<QHomeworkGroup> NullifyHWGroup()
+        public IEnumerable<QHWGroup> NullifyHWGroup()
         {
-            return (IEnumerable<QHomeworkGroup>)_query.QuerySet(_qHomeworkGroup.NullifyHWGroup());
+            return (IEnumerable<QHWGroup>)QuerySet.QuerySet(Query.NullifyHWGroup());
         }
     }
 }

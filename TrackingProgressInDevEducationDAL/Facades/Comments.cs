@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstarcts;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Comments : AFacade
     {
-        public QComment Query { get; set; }
+        public QComment Query { get; init; }
 
         /// <summary>
         /// Создать новый курс
@@ -15,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="text">Текст комментария</param>
         /// <param name="typeId">ID типа</param>
         /// <param name="studentId">ID студента</param>
-        /// <param name="createdBy">ID преподователя, создавшего комментарий</param>
-        /// <param name="teamId">ID комманды</param>
+        /// <param name="createdBy">ID преподавателя, создавшего комментарий</param>
+        /// <param name="teamId">ID команды</param>
         /// <returns>Комментарий</returns>
         public Comment SetNewComment
         (
@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
             int teamId
         )
         {
-            return (Comment) _querySet.QuerySet
+            return (Comment) QuerySet.QuerySet
             (
                 Query.SetNewComment
                 (
@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Comment> NullifyComments()
         {
-            return (List<Comment>)_querySet.QuerySet(Query.NullifyComments());
+            return (List<Comment>)QuerySet.QuerySet(Query.NullifyComments());
         }
     }
 }

@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Teams : AFacade
     {
-        public QTeam Query { get; set; }
-        private readonly QTeam _qTeam = new();
-        private readonly QuerySettings _query = new();
+        public QTeam Query { get; init; }
 
         /// <summary>
         /// Добавить новую команду
@@ -18,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public Team SetNewTeam(string name)
         {
-            return (Team)_query.QuerySet(_qTeam.SetNewTeam(name));
+            return (Team)QuerySet.QuerySet(Query.SetNewTeam(name));
         }
 
         /// <summary>
@@ -27,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Team> NullifyTeams()
         {
-            return (IEnumerable<Team>)_query.QuerySet(_qTeam.NullifyTeams());
+            return (IEnumerable<Team>)QuerySet.QuerySet(Query.NullifyTeams());
         }
     }
 }

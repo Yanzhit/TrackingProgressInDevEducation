@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Lectors : AFacade 
     {
-        public QLector Query { get; set; }
+        public QLector Query { get; init; }
 
         /// <summary>
         /// Создать нового Учителя
@@ -19,7 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector SetNewLector(string fullName, string email, string password)
         {
-            return (Lector)_query.QuerySet(_qLector.SetNewLector(fullName, email, password));
+            return (Lector)QuerySet.QuerySet(Query.SetNewLector(fullName, email, password));
         }
 
         /// <summary>
@@ -29,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector GetLectorById(int id)
         {
-            return (Lector)_query.QuerySet(_qLector.GetLectorById(id));
+            return (Lector)QuerySet.QuerySet(Query.GetLectorById(id));
         }
 
         /// <summary>
@@ -38,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Lector> NullifyLectors()
         {
-            return (IEnumerable<Lector>)_query.QuerySet(_qLector.NullifyLectors());
+            return (IEnumerable<Lector>)QuerySet.QuerySet(Query.NullifyLectors());
         }
     }
 }

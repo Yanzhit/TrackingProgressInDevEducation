@@ -136,7 +136,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void NullifyTableTeamStudent()
         {
             //FacadeTeamStudent.
-            var query = new QTeamStudent();
+            var query = new QTStudent();
             //QuerySettings.QuerySet(query.NullifyTStudent());
         }
         private void NullifyTableVisits()

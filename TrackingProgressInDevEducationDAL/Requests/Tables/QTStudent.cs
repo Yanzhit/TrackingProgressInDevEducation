@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// <summary>
     /// Запросы для таблицы команд студентов
     /// </summary>
-    public class QTeamStudent : IQuery
+    public class QTStudent : IQuery
     {
         public Type Type { get; } = typeof(TeamStudent);
         public TypeQueries TypeQueries { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <param name="teamId">id команды</param>
         /// <param name="studentId">id студента</param>
         /// <returns>Подготовленный запрос</returns>
-        public QTeamStudent SetNewTStudent(int teamId, int studentId)
+        public QTStudent SetNewTStudent(int teamId, int studentId)
         {
             TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewTStudent);
@@ -32,7 +32,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// Обнуление таблицы команд студентов и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public QTeamStudent NullifyTStudent()
+        public QTStudent NullifyTStudent()
         {
             TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyTStudent);

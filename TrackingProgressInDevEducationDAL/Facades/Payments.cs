@@ -1,15 +1,14 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+ using TrackingProgressInDevEducationDAL.Abstracts;
+ using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Payments : AFacade
     {
-        public QPayment Query { get; set; }
+        public QPayment Query { get; init; }
 
         /// <summary>
         /// Добавить платеж
@@ -20,9 +19,25 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="amount">Сумма</param>
         /// <param name="status">Статус платежа</param>
         /// <returns>Платеж</returns>
-        public Payment AddNewPayment(int studentId, DateTime paymentTo, DateTime paymentOn, decimal amount, bool status)
+        public Payment AddNewPayment
+        (
+            int studentId,
+            DateTime paymentTo,
+            DateTime paymentOn,
+            decimal amount,
+            bool status
+        )
         {
-            return (Payment)_query.QuerySet(_qPayment.AddNewPayment(studentId, paymentTo, paymentOn, amount, status));
+            return (Payment) QuerySet.QuerySet
+            (
+                Query.AddNewPayment
+                (
+                    studentId,
+                    paymentTo,
+                    paymentOn,
+                    amount,
+                    status
+                ));
         }
 
         /// <summary>
@@ -33,7 +48,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment ChangePaymentAmount(decimal amount, int id)
         {
-            return (Payment)_query.QuerySet(_qPayment.ChangePaymentAmount(amount, id));
+            return (Payment)QuerySet.QuerySet(Query.ChangePaymentAmount(amount, id));
         }
 
         /// <summary>
@@ -44,7 +59,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment ClosePayment(DateTime date, int id)
         {
-            return (Payment)_query.QuerySet(_qPayment.ClosePayment(date, id));
+            return (Payment)QuerySet.QuerySet(Query.ClosePayment(date, id));
         }
 
         /// <summary>
@@ -54,7 +69,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment RemovePaymentById(int id)
         {
-            return (Payment)_query.QuerySet(_qPayment.RemovePaymentById(id));
+            return (Payment)QuerySet.QuerySet(Query.RemovePaymentById(id));
         }
 
         ///// <summary>
@@ -80,33 +95,32 @@ namespace TrackingProgressInDevEducationDAL.Facades
         //}
 
         /// <summary>
-        /// Вернуть все платежы группы
+        /// Вернуть все платежи группы
         /// </summary>
         /// <param name="group"></param>
-        /// <returns>Cписок платежей</returns>
+        /// <returns>Списки платежей</returns>
         public IEnumerable<Payment> GetAllPaymentsByGroup(int group)
         {
-            return (IEnumerable<Payment>)_query.QuerySet(_qPayment.GetAllPaymentsByGroup(group));
+            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.GetAllPaymentsByGroup(group));
         }
 
         /// <summary>
         /// Вернуть все платежи студента
         /// </summary>
         /// <param name="student"></param>
-        /// <returns>Cписок</returns>
+        /// <returns>Список</returns>
         public IEnumerable<Payment> GetAllPaymentsByStudent(int student)
         {
-            return (IEnumerable<Payment>)_query.QuerySet(_qPayment.GetAllPaymentsByStudent(student));
+            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.GetAllPaymentsByStudent(student));
         }
 
         /// <summary>
         /// Обнуление платежей и ключа identity
         /// </summary>
-        /// <param name="student"></param>
         /// <returns></returns>
-        public IEnumerable<Payment> NullifyPayments(int student)
+        public IEnumerable<Payment> NullifyPayments()
         {
-            return (IEnumerable<Payment>)_query.QuerySet(_qPayment.NullifyPayments());
+            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.NullifyPayments());
         }
     }
 }

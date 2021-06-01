@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
-using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
-using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Students : AFacade
     {
-        public QStudent Query { get; set; }
+        public QStudent Query { get; init; }
 
         /// <summary>
         /// Добавить студента
@@ -26,9 +26,38 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="cityId">Ид города</param>
         /// <param name="status">Статус</param>
         /// <returns>Студент</returns>
-        public Student SetNewStudent(string name, string surname, decimal rate, int groupId, string phone, string email, string contract, DateTime birthday, string middleName, string git, int cityId, bool status)
+        public Student SetNewStudent
+        (
+            string name,
+            string surname,
+            decimal rate,
+            int groupId,
+            string phone,
+            string email,
+            string contract,
+            DateTime birthday,
+            string middleName,
+            string git,
+            int cityId,
+            bool status
+        )
         {
-            return (Student)_query.QuerySet(_qStudent.SetNewStudent(name, surname, rate, groupId, phone, email, contract, birthday, middleName, git, cityId, status));
+            return (Student)QuerySet.QuerySet(Query.SetNewStudent
+                (
+                    name,
+                    surname,
+                    rate,
+                    groupId,
+                    phone,
+                    email,
+                    contract,
+                    birthday,
+                    middleName,
+                    git,
+                    cityId,
+                    status
+                )
+            );
         }
 
         /// <summary>
@@ -37,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Студенты</returns>
         public IEnumerable<Student> GetAllStudents()
         {
-            return (IEnumerable<Student>)_querySet.QuerySet(Query.GetAllStudents());
+            return (IEnumerable<Student>)QuerySet.QuerySet(Query.GetAllStudents());
         }
 
         /// <summary>
@@ -46,7 +75,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Student> NullifyStudents()
         {
-            return (IEnumerable<Student>)_query.QuerySet(_qStudent.NullifyStudents());
+            return (IEnumerable<Student>)QuerySet.QuerySet(Query.NullifyStudents());
         }
 
     }

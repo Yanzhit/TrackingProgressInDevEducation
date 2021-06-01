@@ -1,15 +1,14 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Abstarcts;
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+ using TrackingProgressInDevEducationDAL.Abstracts;
+ using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Lections : AFacade 
     {
-        public QLection Query { get; set; }
+        public QLection Query { get; init; }
 
         /// <summary>
         /// Создать новую Лекцию
@@ -20,7 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Лекция</returns>
         public Lection SetNewLection(int groupId, int lectorId, DateTime startedOn)
         {
-            return (Lection)_query.QuerySet(_qLection.SetNewLection(groupId, lectorId, startedOn));
+            return (Lection)QuerySet.QuerySet(Query.SetNewLection(groupId, lectorId, startedOn));
         }
 
         ///// <summary>
@@ -38,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Lection> NullifyLections()
         {
-            return (IEnumerable<Lection>)_query.QuerySet(_qLection.NullifyLections());
+            return (IEnumerable<Lection>)QuerySet.QuerySet(Query.NullifyLections());
         }
     }
 }
