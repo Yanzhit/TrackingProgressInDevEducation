@@ -1,31 +1,43 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Lectors
+    public class Lectors : AFacade 
     {
-        private static readonly QLector Query = new();
-        //public static IEnumerable<Lector> GetLectors()
-        //{
-        //    return (List<Lector>) QuerySettings.QuerySet(Query.GetLectors());
-        //}
-        //public static Lector SetNewLector(string fullName, string email, string password)
-        //{
-        //    return (Lector)QuerySettings.QuerySet(Query.SetNewLector(fullName, email, password));
-        //}
-        //public static IEnumerable<Lector> GetLectorById(int id)
-        //{
-        //    return (List<Lector>) QuerySettings.QuerySet(Query.GetLectorById(id));
-        //}
-        //public static IEnumerable<Lector> UpdateLectorById(int id, string fullName)
-        //{
-        //    return (List<Lector>) QuerySettings.QuerySet(Query.UpdateLectorById(id, fullName));
-        //}
-        //public static List<Lector> RemoveLectorById(int id)
-        //{
-        //    return (List<Lector>) QuerySettings.QuerySet(Query.RemoveLectorById(id));
-        //}
+        public QLector Query { get; init; }
+
+        /// <summary>
+        /// Создать нового Учителя
+        /// </summary>
+        /// <param name="fullName">Полное имя</param>
+        /// <param name="email">Эл.почта</param>
+        /// /// <param name="password">Пароль</param>
+        /// <returns>Учитель</returns>
+        public Lector SetNewLector(string fullName, string email, string password)
+        {
+            return (Lector)QuerySet.QuerySet(Query.SetNewLector(fullName, email, password));
+        }
+
+        /// <summary>
+        /// Вернуть учителя по ID
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>Учитель</returns>
+        public Lector GetLectorById(int id)
+        {
+            return (Lector)QuerySet.QuerySet(Query.GetLectorById(id));
+        }
+
+        /// <summary>
+        /// Обнуление таблицы Учителей и ключа identity
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Lector> NullifyLectors()
+        {
+            return (IEnumerable<Lector>)QuerySet.QuerySet(Query.NullifyLectors());
+        }
     }
 }

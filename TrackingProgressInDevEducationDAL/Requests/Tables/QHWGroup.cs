@@ -2,40 +2,41 @@
 using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationDAL.Defines;
-//ZLoo (Свойства все, Методы(SetNewTStudent, NullifyTStudent))
+//ZLoo (Свойства все, Методы(SetNewHWGroup, NullifyHWGroup)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
-    /// Запросы для таблицы команд студентов
+    /// Запросы к таблице домашних заданий групп
     /// </summary>
-    public class QTeamStudent : IQuery
+    public class QHWGroup : IQuery
     {
-        public Type Type { get; } = typeof(TeamStudent);
+        public Type Type { get; } = typeof(HWGroup);
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
-        
+
         /// <summary>
-        /// Создание новой команды
+        /// Создание нового завершенного домашнего задания групп
         /// </summary>
-        /// <param name="teamId">id команды</param>
-        /// <param name="studentId">id студента</param>
+        /// <param name="homeworkId">id домашнего задания</param>
+        /// <param name="groupId">id групп</param>
         /// <returns>Подготовленный запрос</returns>
-        public QTeamStudent SetNewTStudent(int teamId, int studentId)
+        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
             TypeQueries = TypeQueries.Single;
-            Name = nameof(SetNewTStudent);
-            Params = $"{teamId}{Sep}{studentId}";
+            Name = nameof(SetNewHWGroup);
+            Params = $"{homeworkId}{Sep}{groupId}";
             return this;
         }
+
         /// <summary>
-        /// Обнуление таблицы команд студентов и ключа identity
+        /// Обнуление таблицы завершенных домашних заданий групп и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public QTeamStudent NullifyTStudent()
+        public QHWGroup NullifyHWGroup()
         {
             TypeQueries = TypeQueries.Nullify;
-            Name = nameof(NullifyTStudent);
+            Name = nameof(NullifyHWGroup);
             Params = string.Empty;
             return this;
         }

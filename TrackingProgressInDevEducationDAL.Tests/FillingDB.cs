@@ -97,13 +97,13 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableHomeworkComplete()
         {
             //FacadeHomeworkComplete
-            var query = new QHomeworkComplete();
+            var query = new QHWComplete();
             //QuerySettings.QuerySet(query.AddNewHomeworkComplete());
         }
         private void FillingTableHomeworkGroup()
         {
             //FacadeHomeworkGroup.
-            var query = new QHomeworkGroup();
+            var query = new QHWGroup();
             //QuerySettings.QuerySet(query.AddNewHomeworkGroup());
         }
         private void FillingTableHomeworks()
@@ -172,7 +172,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableTeamStudent()
         {
             //FacadeTeamStudent.
-            var query = new QTeamStudent();
+            var query = new QTStudent();
             //QuerySettings.QuerySet(query.AddNewTeamStudent());
         }
         private void FillingTableVisits()

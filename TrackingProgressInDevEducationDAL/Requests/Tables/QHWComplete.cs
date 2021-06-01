@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// <summary>
     /// Запросы к таблице завершенных домашних заданий
     /// </summary>
-    public class QHomeworkComplete : IQuery
+    public class QHWComplete : IQuery
     {
         public Type Type { get; } = typeof(HWComplete);
         public TypeQueries TypeQueries { get; set; }
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <param name="studentId">id студента, на которого назначено домашнее задание</param>
         /// <param name="status">Статус выполнения домашнего задания (1;0)</param>
         /// <returns>Подготовленный запрос</returns>
-        public QHomeworkComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
+        public QHWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
             TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWComplete);
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// Обнуление таблицы завершенных домашних заданий и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
-        public QHomeworkComplete NullifyHWComplete()
+        public QHWComplete NullifyHWComplete()
         {
             TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHWComplete);
@@ -42,14 +42,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        //public QHomeworkComplete UpdateHWCompleteByIdHW(int homeworkId, bool status)
+        //public QHWComplete UpdateHWCompleteByIdHW(int homeworkId, bool status)
         //{
         //    TypeQueries = TypeQueries.UpdateOne;
         //    Name = nameof(UpdateHWCompleteByIdHW);
         //    Params = $"{homeworkId}{Sep}{status}";
         //    return this;
         //}
-        //public QHomeworkComplete UpdateHWCompleteByIdStudents(int studentId, bool status)
+        //public QHWComplete UpdateHWCompleteByIdStudents(int studentId, bool status)
         //{
         //    TypeQueries = TypeQueries.UpdateOne;
         //    Name = nameof(UpdateHWCompleteByIdStudents);

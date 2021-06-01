@@ -1,9 +1,31 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class HWGroups
+    public class HWGroups : AFacade 
     {
-        private static readonly QHomeworkGroup Query = new();
+        public QHWGroup Query { get; init; }
+
+        /// <summary>
+        /// Создать новое ДЗ ГРУППЫ
+        /// </summary>
+        /// <param name="homeworkId">ID ДЗ</param>
+        /// <param name="groupId">ID Группы</param>
+        /// <returns>ДЗ ГРУППЫ</returns>
+        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
+        {
+            return (QHWGroup)QuerySet.QuerySet(Query.SetNewHWGroup(homeworkId, groupId));
+        }
+
+        /// <summary>
+        /// Обнуление таблицы ДЗ ГРУППЫ и ключа identity
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<QHWGroup> NullifyHWGroup()
+        {
+            return (IEnumerable<QHWGroup>)QuerySet.QuerySet(Query.NullifyHWGroup());
+        }
     }
 }

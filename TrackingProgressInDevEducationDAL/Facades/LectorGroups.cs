@@ -1,9 +1,21 @@
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+﻿﻿using System.Collections.Generic;
+ using TrackingProgressInDevEducationDAL.Abstracts;
+ using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class LectorGroups
+    public class LectorGroups : AFacade 
     {
-        private static readonly QLectorGroup Query = new();
+        public QLectorGroup Query { get; init; }
+
+        /// <summary>
+        /// Обнуление таблицы Лекторы Группы
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<LectorGroup> NullifyLectorGroup()
+        {
+            return (IEnumerable<LectorGroup>)QuerySet.QuerySet(Query.NullifyLectorGroup());
+        }
     }
 }
