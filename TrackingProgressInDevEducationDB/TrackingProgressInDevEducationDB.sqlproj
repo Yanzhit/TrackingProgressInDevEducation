@@ -80,6 +80,8 @@
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentType" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkGroup" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\LectorGroup" />
+    <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes" />
+    <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="TrackingProgressInDevEducationDB\Tables\Lectors.sql" />
@@ -117,7 +119,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateCityById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetComments.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentsByStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentsByTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetCommentToTeam.sql" />
@@ -137,7 +138,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetHWByGroup.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetHWComplitingByStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetNewHWForStudentByGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateHWCompleteByIdHW.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateHWCompleteByIdStudents.sql" />
@@ -181,7 +181,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateTeamById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetStudentToTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetVisits.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetVisitsByStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveVisitById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateVisitById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lections\GetAllLector.sql" />
@@ -225,6 +224,16 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\SetNewCourse.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentType\SetNewCommentType.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorById.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\GetCommentsByStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\GetVisitsByStudentJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\GetHWComplitingByStudentJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\Tests.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\TestComplete.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\GetAllTestsByStudentIdJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\NullifyTCs.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\SetNewTC.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\SetNewTest.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\NullifyTests.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
