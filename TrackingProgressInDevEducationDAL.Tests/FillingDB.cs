@@ -73,7 +73,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableCommentType()
         {
-            foreach (CommentType data in _mock.CommentType)
+            foreach (CommentType data in _mock.CommentTypes)
             {
                 _facade.CommentTypes.SetNewCType(data.Name);
             }
@@ -94,7 +94,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableHomeworkComplete()
         {
-            //foreach (HWComplete data in _mock)
+            //foreach (HWComplete data in _mock.HWCompletes)
             //{
             //    _facade.HWCompletes.SetNewHWComplete(data.HomeworkId, data.StudentId, data.Status);
             //}
