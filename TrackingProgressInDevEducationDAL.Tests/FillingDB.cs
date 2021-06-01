@@ -6,9 +6,11 @@ using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
+    
     public class FillingDB
     {
         private readonly MockBase _mock = PreparationDB.Mock;
+        private FacadeQueries _facade = new FacadeQueries();
         public void Filling(Type type) 
         {
             switch (type.Name)
@@ -64,41 +66,38 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableComments()
         {
-            //foreach (Comment data in _mock.Comments)
-            //{
-            //    Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
-            //}
+            foreach (Comment data in _mock.Comments)
+            {
+                _facade.Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
+            }
         }
         private void FillingTableCommentType()
         {
-            //var query = new QCommentType();
-            //foreach (CommentType data in _mock.CommentType)
-            //{
-            //    //FacadeCommentType.
-            //    QuerySettings.QuerySet(query.SetNewCType(data.Name));
-            //}
+            foreach (CommentType data in _mock.CommentType)
+            {
+                _facade.CommentTypes.SetNewCType(data.Name);
+            }
         }
         private void FillingTableCourses()
         {
-            var query = new QCourse();
-            //foreach (Course data in _mock.Courses)
-            //{
-            //    //FacadeCourses.
-            //    QuerySettings.QuerySet(query.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn));
-            //}
+            foreach (Course data in _mock.Courses)
+            {
+                _facade.Courses.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn);
+            }
         }
         private void FillingTableGroups()
         {
             foreach (Group data in _mock.Groups)
             {
-                //Groups(data.Name, data.CourseId);
+                _facade.Groups.SetNewGroup(data.Name, data.CourseId);
             }
         }
         private void FillingTableHomeworkComplete()
         {
-            //FacadeHomeworkComplete
-            var query = new QHWComplete();
-            //QuerySettings.QuerySet(query.AddNewHomeworkComplete());
+            //foreach (HWComplete data in _mock)
+            //{
+            //    _facade.HWCompletes.SetNewHWComplete(data.HomeworkId, data.StudentId, data.Status);
+            //}
         }
         private void FillingTableHomeworkGroup()
         {
