@@ -5,7 +5,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class MockBase
     {
-        public List<City> Citys { get; }
+        public List<City> Cities { get; }
         public List<Comment> Comments { get; }
         public List<CommentType> CommentTypes { get; }
         public List<Course> Courses { get; }
@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         public MockBase()
         {
-            Citys = new List<City>();
+            Cities = new List<City>();
             Comments = new List<Comment>();
             CommentTypes = new List<CommentType>();
             Courses = new List<Course>();
