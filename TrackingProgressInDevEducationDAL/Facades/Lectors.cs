@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Вернуть учителя по ID
         /// </summary>
         /// <param name="id">ID</param>
-        /// <returns></returns>
+        /// <returns>Учитель</returns>
         public Lector GetLectorById(int id)
         {
             return (Lector)_query.QuerySet(_qLector.GetLectorById(id));
