@@ -1,12 +1,12 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataLector
+    public class DLector
     {
         public string[] FullName { get; }
         public string[] Email { get; }
         public string[] Password { get; }
 
-        public DataLector()
+        public DLector()
         {
             FullName = DataFullName();
             Email = DataEmail();

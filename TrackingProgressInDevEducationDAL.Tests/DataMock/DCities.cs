@@ -1,10 +1,10 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataCities
+    public class DCities
     {
         public string[] Name { get; }
 
-        public DataCities()
+        public DCities()
         {
             Name = DataName();
         }

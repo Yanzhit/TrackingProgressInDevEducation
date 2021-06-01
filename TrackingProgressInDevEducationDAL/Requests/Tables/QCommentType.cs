@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCommentType : IQuery
     {
-        public Type Type { get; } = typeof(CommentType);
+        public Type Type { get; } = typeof(CType);
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }

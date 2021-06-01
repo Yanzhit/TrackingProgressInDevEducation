@@ -1,22 +1,20 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataCType
+    public class DTeam
     {
         public string[] Name { get; }
-
-        public DataCType()
+        
+        public DTeam()
         {
             Name = DataName();
         }
-
         private string[] DataName()
         {
             return new[]
             {
-                "Общий",
-                "Soft",
-                "Hard",
-                "Team" //4
+                "eeee",
+                "ttete",
+                "twqeqwe"
             };
         }
     }

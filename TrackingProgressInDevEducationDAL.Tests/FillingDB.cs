@@ -1,8 +1,8 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Facades;
+using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
-using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
+using TrackingProgressInDevEducationDAL.Tests.DataMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -11,15 +11,15 @@ namespace TrackingProgressInDevEducationDAL.Tests
     {
         private readonly FacadeQueries _facade = new();
         private readonly MockBase _mock = PreparationDB.Mock;
+
         public void Filling(Type type) 
         {
             switch (type.Name)
             {
                 case nameof(Comment):
-                    new WriteComments().Write();
                     FillingTableComments();
                     break;
-                case nameof(CommentType):
+                case nameof(CType):
                     FillingTableCommentType();
                     break;
                 case nameof(Course):
@@ -64,6 +64,17 @@ namespace TrackingProgressInDevEducationDAL.Tests
             }
         }
 
+        //private void FillingCities()
+        //{
+        //    List<DCities> data = _mock.Cities;
+        //    for (int i = 0; i < data.Count; i++)
+        //    {
+                
+        //        _facade.Comments.SetNewComment(data., data.CreatedBy[0], data.StudentId, data.CreatedBy, data.TeamId);
+                
+        //    }
+        //}
+
         private void FillingTableComments()
         {
             foreach (Comment data in _mock.Comments)
@@ -71,13 +82,15 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 _facade.Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
             }
         }
+
         private void FillingTableCommentType()
         {
-            foreach (CommentType data in _mock.CommentTypes)
+            foreach (CType data in _mock.CTypes)
             {
                 _facade.CommentTypes.SetNewCType(data.Name);
             }
         }
+
         private void FillingTableCourses()
         {
             foreach (Course data in _mock.Courses)
@@ -85,6 +98,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 _facade.Courses.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn);
             }
         }
+
         private void FillingTableGroups()
         {
             foreach (Group data in _mock.Groups)
@@ -99,12 +113,14 @@ namespace TrackingProgressInDevEducationDAL.Tests
             //    _facade.HWCompletes.SetNewHWComplete(data.HomeworkId, data.StudentId, data.Status);
             //}
         }
+
         private void FillingTableHomeworkGroup()
         {
             //FacadeHomeworkGroup.
             var query = new QHWGroup();
             //QuerySettings.QuerySet(query.AddNewHomeworkGroup());
         }
+
         private void FillingTableHomeworks()
         {
             //foreach (MockHomework data in _mock.Homeworks)
@@ -112,18 +128,21 @@ namespace TrackingProgressInDevEducationDAL.Tests
             //    FacadeHomeworks.CreateNewHomeworks(data.Name);
             //}
         }
+
         private void FillingTableLections()
         {
             //FacadeLections.
             var query = new QLection();
             //QuerySettings.QuerySet(query.AddNewLections());
         }
+
         private void FillingTableLectorGroup()
         {
             //FacadeLectorGroup.
             var query = new QLectorGroup();
             //QuerySettings.QuerySet(query.AddNewLectorGroup());
         }
+
         private void FillingTableLectors()
         {
             //foreach (Lector data in _mock.Lectors)
@@ -131,6 +150,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             //    Lectors.SetNewLector(data.FullName, data.Email, data.Password);
             //}
         }
+
         private void FillingTablePayments()
         {
             var query = new QPayment();
@@ -140,6 +160,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             //    QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
             //}
         }
+
         private void FillingTableStudents()
         {
             //foreach (Student data in _mock.Students)

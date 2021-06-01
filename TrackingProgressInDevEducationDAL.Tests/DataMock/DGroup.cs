@@ -2,14 +2,14 @@
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataGroup
+    public class DGroup
     {
         public string[] Name { get; }
         public int[] CourseId { get; }
         public DateTime[] StartDate { get; }
         public DateTime[] EndDate { get; }
 
-        public DataGroup()
+        public DGroup()
         {
             Name = DataName();
             CourseId = DataCourseId();

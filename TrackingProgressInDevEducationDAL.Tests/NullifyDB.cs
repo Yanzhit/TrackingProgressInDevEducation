@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Comment):
                     NullifyTableComments();
                     break;
-                case nameof(CommentType):
+                case nameof(CType):
                     NullifyTableCommentType();
                     break;
                 case nameof(Course):

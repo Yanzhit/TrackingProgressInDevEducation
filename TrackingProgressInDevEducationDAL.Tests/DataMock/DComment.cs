@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataComment
+    public class DComment
     {
         public string[] Text { get; }
 
@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public int[] CreatedBy { get; }
         public int[] TeamId { get; }
 
-        public DataComment()
+        public DComment()
         {
             Text = DataText();
             TypeId = DataTypeId();

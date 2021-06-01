@@ -2,13 +2,13 @@
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataLection
+    public class DLection
     {
         public int[] GroupId { get; }
         public int[] LectorId { get; }
         public DateTime[] StartedOn { get; }
 
-        public DataLection()
+        public DLection()
         {
             GroupId = DataGroupId();
             LectorId = DataLectorId();

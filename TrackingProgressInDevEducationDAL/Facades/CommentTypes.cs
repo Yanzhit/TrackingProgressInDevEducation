@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="name">Имя типа комментария</param>
         /// <returns>Тип комментариев</returns>
-        public CommentType SetNewCType(string name)
+        public CType SetNewCType(string name)
         {
-            return (CommentType)QuerySet.QuerySet(Query.SetNewCType(name));
+            return (CType)QuerySet.QuerySet(Query.SetNewCType(name));
         }
 
         /// <summary>
         /// Обнуление таблицы Типов комментариев и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<CommentType> NullifyCTypes()
+        public IEnumerable<CType> NullifyCTypes()
         {
-            return (IEnumerable<CommentType>)QuerySet.QuerySet(Query.NullifyCTypes());
+            return (IEnumerable<CType>)QuerySet.QuerySet(Query.NullifyCTypes());
         }
     }
 }

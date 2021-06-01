@@ -1,24 +1,24 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class CommentType : AbstractModel
+    public class CType : AbstractModel
     {
         public string Name { get; set; }
 
-        public CommentType()
+        public CType()
         {
         }
 
-        public CommentType(string name)
+        public CType(string name)
         {
             Name = name;
         }
 
         public override bool Equals(object obj)
         {
-            return Equals((CommentType)obj);
+            return Equals((CType)obj);
         }
 
-        private bool Equals(CommentType other)
+        private bool Equals(CType other)
         {
             return Name == other.Name;
         }

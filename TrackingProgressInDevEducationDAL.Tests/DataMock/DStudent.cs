@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataStudent
+    public class DStudent
     {
         public string[] Name { get; }
         public string[] Surname { get; }
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public string[] Git { get; }
         public int[] CityId { get; }
 
-        public DataStudent()
+        public DStudent()
         {
             Name = DataName();
             Surname = DataSurname();

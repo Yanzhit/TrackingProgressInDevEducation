@@ -2,7 +2,7 @@
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataPayment
+    public class DPayment
     {
         public int[] StudentId { get; }
         public DateTime[] PaymentTo { get; }
@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public decimal[] Amount { get; }
         public bool[] Status { get; }
 
-        public DataPayment()
+        public DPayment()
         {
             StudentId = DataStudentId();
             PaymentTo = DataPaymentTo();

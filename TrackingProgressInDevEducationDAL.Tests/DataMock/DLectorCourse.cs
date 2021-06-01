@@ -1,11 +1,11 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataLectorCourse
+    public class DLectorCourse
     {
         public int[] LectorId {get;}
         public int[] CourseId {get;}
 
-        public DataLectorCourse()
+        public DLectorCourse()
         {
             LectorId = DataLectorId();
             CourseId = DataCourseId();

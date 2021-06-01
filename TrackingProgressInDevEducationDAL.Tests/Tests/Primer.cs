@@ -1,15 +1,14 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Interfaces;
-using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Expected.Students;
 
-namespace TrackingProgressInDevEducationDAL.Tests
+namespace TrackingProgressInDevEducationDAL.Tests.Tests
 {
-    public class QuerySettingsTests
+    public class Primer
     {
         private readonly PreparationDB _pDb= new();
-        [TestCaseSource(typeof(StudentsDTO))]
-        public void GetStudentsTest(IQuery query, List<Student> expected)
+        [TestCaseSource(typeof(EStudents))]
+        public void GetStudentsTest(IQuery query, object expected)
         {
             _pDb.Nullify(query.Type);
             _pDb.Filling(query.Type);

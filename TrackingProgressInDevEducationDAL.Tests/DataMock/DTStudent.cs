@@ -1,25 +1,25 @@
 ﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DataLectorGroup
+    public class DTStudent
     {
-        public int[] LectorId {get;}
-        public int[] GroupId {get;}
+        public int[] TeamId { get; }
+        public int[] StudentId { get; }
 
-        public DataLectorGroup()
+        public DTStudent()
         {
-            LectorId = DataLectorId();
-            GroupId = DataGroupId();
+            TeamId = DataTeamId();
+            StudentId = DataStudentId();
         }
 
-        private int[] DataLectorId()
+        private int[] DataTeamId()
         {
             return new[]
             {
                 1, 3, 4
             };
         }
-
-        private int[] DataGroupId()
+        
+        private int[] DataStudentId()
         {
             return new[]
             {
