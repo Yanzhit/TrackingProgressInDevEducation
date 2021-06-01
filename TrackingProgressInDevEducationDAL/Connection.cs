@@ -13,10 +13,5 @@ namespace TrackingProgressInDevEducationDAL
         {
             return new SqlConnection(_cs);
         }
-
-        public void Disconnect(IDbConnection dbConnection)
-        {
-            dbConnection.Dispose();
-        }
     }
 }
