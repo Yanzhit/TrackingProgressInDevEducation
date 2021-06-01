@@ -4,6 +4,10 @@
     {
         public string Name { get; set; }
 
+        public CommentType()
+        {
+        }
+
         public CommentType(string name)
         {
             Name = name;

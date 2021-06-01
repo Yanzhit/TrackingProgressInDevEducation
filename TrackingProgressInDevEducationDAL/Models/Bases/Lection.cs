@@ -12,6 +12,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int LectorId { get; set; }
         public DateTime StartedOn { get; set; }
 
+        public Lection()
+        {
+        }
 
         public Lection(int courseId, int lectorId, DateTime startedOn)
         {

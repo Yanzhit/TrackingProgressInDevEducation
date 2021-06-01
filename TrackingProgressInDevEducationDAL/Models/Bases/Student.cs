@@ -22,6 +22,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int CityId { get; set; }
         public bool Status { get; set; }
 
+        public Student()
+        {
+        }
+
         public Student
         (
             string name,

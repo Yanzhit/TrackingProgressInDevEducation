@@ -8,6 +8,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int StudentId { get; set; }
         public int Status { get; set; }
 
+        public HWComplete()
+        {
+        }
+
         public HWComplete(int homeworkId, int studentId, int status)
         {
             HomeworkId = homeworkId;

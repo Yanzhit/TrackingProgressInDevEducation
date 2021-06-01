@@ -7,6 +7,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int TeamId { get; set; }
         public int StudentId { get; set; }
 
+        public TeamStudent()
+        {
+        }
+
         public TeamStudent(int teamId, int studentId)
         {
             TeamId = teamId;

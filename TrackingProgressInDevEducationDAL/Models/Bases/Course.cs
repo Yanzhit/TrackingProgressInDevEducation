@@ -12,6 +12,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public DateTime StartedOn { get; set; }
         public DateTime FinishedOn { get; set; }
 
+        public Course()
+        {
+        }
+
         public Course(string name, DateTime startedOn, DateTime finishedOn)
         {
             Name = name;

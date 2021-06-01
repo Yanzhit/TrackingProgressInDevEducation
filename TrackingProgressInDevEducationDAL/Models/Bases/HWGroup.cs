@@ -11,6 +11,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }
 
+        public HWGroup()
+        {
+        }
+
         public HWGroup(int homeworkId, int groupId)
         {
             HomeworkId = homeworkId;

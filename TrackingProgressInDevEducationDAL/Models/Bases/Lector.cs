@@ -12,6 +12,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Email { get; set; }
         public string Password { get; set; }
 
+        public Lector()
+        {
+        }
 
         public Lector(string fullName, string email, string password)
         {

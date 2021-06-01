@@ -14,6 +14,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public decimal Amount { get; set; }
         public bool Status { get; set; }
 
+        public Payment()
+        {
+        }
+
         public Payment
         (
             int studentId,

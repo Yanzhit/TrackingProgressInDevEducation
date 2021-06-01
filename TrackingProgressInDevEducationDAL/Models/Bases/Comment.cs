@@ -10,6 +10,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int CreatedBy { get; set; }
         public int TeamId { get; set; }
 
+        public Comment()
+        {
+        }
+
         public Comment
             (
                 string text,

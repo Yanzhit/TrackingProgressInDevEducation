@@ -4,6 +4,6 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class CommentTypes
     {
-        private static readonly CommentType Query = new();
+        //private static readonly CommentType Query = new();
     }
 }

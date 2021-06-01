@@ -4,6 +4,10 @@
     {
         public string Name { get; set; }
 
+        public Homework()
+        {
+        }
+
         public Homework(string name)
         {
             Name = name;

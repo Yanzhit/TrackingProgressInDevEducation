@@ -7,6 +7,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int LectorId { get; set; }
         public int GroupId { get; set; }
 
+        public LectorGroup()
+        {
+        }
+
         public LectorGroup(int lectorId, int groupId)
         {
             LectorId = lectorId;

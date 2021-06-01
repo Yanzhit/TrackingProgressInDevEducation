@@ -8,6 +8,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int StudentId { get; set; }
         public int LectionId { get; set; }
 
+        public Visit()
+        {
+        }
+
         public Visit(bool visitStatus, int studentId, int lectionId)
         {
             VisitStatus = visitStatus;
