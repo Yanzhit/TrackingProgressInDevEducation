@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Добавить новую Команду к студентам
         /// </summary>
         /// <param name="name"></param>
-        /// <returns></returns>
+        /// <returns>Команда к Студентам</returns>
         public QTeamStudent SetNewTStudent(int teamId, int studentId)
         {
             return (QTeamStudent)_query.QuerySet(_qTeamStudent.SetNewTStudent(teamId, studentId));
