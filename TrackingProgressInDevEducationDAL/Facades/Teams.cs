@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public Student SetNewTeam(string name)
+        public Team SetNewTeam(string name)
         {
-            return (Student)_query.QuerySet(_qTeam.SetNewTeam(name));
+            return (Team)_query.QuerySet(_qTeam.SetNewTeam(name));
         }
 
         /// <summary>
         /// Обнулить таблицу команд
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Student> NullifyTeams()
+        public IEnumerable<Team> NullifyTeams()
         {
-            return (IEnumerable<Student>)_query.QuerySet(_qTeam.NullifyTeams());
+            return (IEnumerable<Team>)_query.QuerySet(_qTeam.NullifyTeams());
         }
     }
 }
