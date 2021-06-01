@@ -56,27 +56,27 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (Payment)_query.QuerySet(_qPayment.RemovePaymentById(id));
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="newDate"></param>
-        /// <returns></returns>
-        public Payment UpdatePaymentSetDateAndStatus(int id, DateTime newDate)
-        {
-            return (Payment)_query.QuerySet(_qPayment.UpdatePaymentSetDateAndStatus(id, newDate));
-        }
+        ///// <summary>
+        ///// КОСЯК  НЕ ВИЖУ СТАТУСА
+        ///// </summary>
+        ///// <param name="id"></param>
+        ///// <param name="newDate"></param>
+        ///// <returns></returns>
+        //public Payment UpdatePaymentSetDateAndStatus(int id, DateTime newDate)
+        //{
+        //    return (Payment)_query.QuerySet(_qPayment.UpdatePaymentSetDateAndStatus(id, newDate));
+        //}
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="newDate"></param>
-        /// <returns></returns>
-        public Payment UpdatePaymentTeam(int id, DateTime newDate)
-        {
-            return (Payment)_query.QuerySet(_qPayment.UpdatePaymentTeam(id, newDate));
-        }
+        ///// <summary>
+        ///// КОСЯК  ЧТО КОНКРЕТНО АПДЕЙТИТСЯ?
+        ///// </summary>
+        ///// <param name="id"></param>
+        ///// <param name="newDate"></param>
+        ///// <returns></returns>
+        //public Payment UpdatePaymentTeam(int id, DateTime newDate)
+        //{
+        //    return (Payment)_query.QuerySet(_qPayment.UpdatePaymentTeam(id, newDate));
+        //}
 
         /// <summary>
         /// Вернуть все платежы группы
