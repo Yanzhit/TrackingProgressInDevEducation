@@ -14,6 +14,22 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public decimal Amount { get; set; }
         public bool Status { get; set; }
 
+        public Payment
+        (
+            int studentId,
+            DateTime paymentTo,
+            DateTime paymentOn,
+            decimal amount,
+            bool status
+        )
+        {
+            StudentId = studentId;
+            PaymentTo = paymentTo;
+            PaymentOn = paymentOn;
+            Amount = amount;
+            Status = status;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Payment)obj);

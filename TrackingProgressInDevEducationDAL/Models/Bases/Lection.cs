@@ -12,6 +12,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int LectorId { get; set; }
         public DateTime StartedOn { get; set; }
 
+
+        public Lection(int courseId, int lectorId, DateTime startedOn)
+        {
+            CourseId = courseId;
+            LectorId = lectorId;
+            StartedOn = startedOn;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Lection)obj);

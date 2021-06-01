@@ -11,7 +11,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Name { get; set; }
         public DateTime StartedOn { get; set; }
         public DateTime FinishedOn { get; set; }
-        
+
+        public Course(string name, DateTime startedOn, DateTime finishedOn)
+        {
+            Name = name;
+            StartedOn = startedOn;
+            FinishedOn = finishedOn;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Course)obj);

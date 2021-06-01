@@ -2,18 +2,25 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class HomeworkComplete : AbstractModel
+    public class HWComplete : AbstractModel
     {
         public int HomeworkId { get; set; }
         public int StudentId { get; set; }
         public int Status { get; set; }
 
-        public override bool Equals(object obj)
+        public HWComplete(int homeworkId, int studentId, int status)
         {
-            return Equals((HomeworkComplete)obj);
+            HomeworkId = homeworkId;
+            StudentId = studentId;
+            Status = status;
         }
 
-        private bool Equals(HomeworkComplete other)
+        public override bool Equals(object obj)
+        {
+            return Equals((HWComplete)obj);
+        }
+
+        private bool Equals(HWComplete other)
         {
             return HomeworkId == other.HomeworkId
                    && StudentId == other.StudentId

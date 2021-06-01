@@ -4,6 +4,10 @@
     {
         public string Name { get; set; }
 
+        public City(string name)
+        {
+            Name = name;
+        }
         public override bool Equals(object obj)
         {
             return Equals((City)obj);

@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.ForTables
     /// </summary>
     public class QHomeworkComplete : IQuery
     {
-        public Type Type { get; } = typeof(HomeworkComplete);
+        public Type Type { get; } = typeof(HWComplete);
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }

@@ -27,10 +27,10 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Group):
                     FillingTableGroups();
                     break;
-                case nameof(HomeworkComplete):
+                case nameof(HWComplete):
                     FillingTableHomeworkComplete();
                     break;
-                case nameof(HomeworkGroup):
+                case nameof(HWGroup):
                     FillingTableHomeworkGroup();
                     break;
                 case nameof(Homework):

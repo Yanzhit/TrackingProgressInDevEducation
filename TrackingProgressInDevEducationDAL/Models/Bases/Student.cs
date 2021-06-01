@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Decimal Rate { get; set; }
+        public decimal Rate { get; set; }
         public int GroupId { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
@@ -21,8 +21,37 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Git { get; set; }
         public int CityId { get; set; }
         public bool Status { get; set; }
-        
-       
+
+        public Student
+        (
+            string name,
+            string surname,
+            decimal rate,
+            int groupId,
+            string phone,
+            string email,
+            string contract,
+            DateTime birthday,
+            string middleName,
+            string git,
+            int cityId,
+            bool status
+        )
+        {
+            Name = name;
+            Surname = surname;
+            Rate = rate;
+            GroupId = groupId;
+            Phone = phone;
+            Email = email;
+            Contract = contract;
+            Birthday = birthday;
+            MiddleName = middleName;
+            Git = git;
+            CityId = cityId;
+            Status = status;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Student)obj);

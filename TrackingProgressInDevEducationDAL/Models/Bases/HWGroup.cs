@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class HomeworkGroup : AbstractModel
+    public class HWGroup : AbstractModel
     {
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }
 
-        public override bool Equals(object obj)
+        public HWGroup(int homeworkId, int groupId)
         {
-            return Equals((HomeworkGroup)obj);
+            HomeworkId = homeworkId;
+            GroupId = groupId;
         }
 
-        private bool Equals(HomeworkGroup other)
+        public override bool Equals(object obj)
+        {
+            return Equals((HWGroup)obj);
+        }
+
+        private bool Equals(HWGroup other)
         {
             return HomeworkId == other.HomeworkId
                    && GroupId == other.GroupId;

@@ -4,6 +4,11 @@
     {
         public string Name { get; set; }
 
+        public Team(string name)
+        {
+            Name = name;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Team)obj);

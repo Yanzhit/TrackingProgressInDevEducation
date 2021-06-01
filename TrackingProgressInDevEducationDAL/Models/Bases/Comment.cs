@@ -10,6 +10,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int CreatedBy { get; set; }
         public int TeamId { get; set; }
 
+        public Comment
+            (
+                string text,
+                int typeId,
+                int studentId,
+                int createdBy,
+                int teamId
+            )
+        {
+            Text = text;
+            TypeId = typeId;
+            StudentId = studentId;
+            CreatedBy = createdBy;
+            TeamId = teamId;
+        }
         public override bool Equals(object obj)
         {
             return Equals((Comment)obj);

@@ -23,10 +23,10 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Group):
                     NullifyTableGroups();
                     break;
-                case nameof(HomeworkComplete):
+                case nameof(HWComplete):
                     NullifyTableHomeworkComplete();
                     break;
-                case nameof(HomeworkGroup):
+                case nameof(HWGroup):
                     NullifyTableHomeworkGroup();
                     break;
                 case nameof(Homework):

@@ -12,6 +12,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Email { get; set; }
         public string Password { get; set; }
 
+
+        public Lector(string fullName, string email, string password)
+        {
+            FullName = fullName;
+            Email = email;
+            Password = password;
+        }
         public override bool Equals(object obj)
         {
             return Equals((Lector)obj);
