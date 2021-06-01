@@ -1,9 +1,10 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Visits
+    public class Visits : AFacade
     {
-        private static readonly QVisit Query = new();
+        public QVisit Query { get; set; }
     }
 }

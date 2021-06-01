@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Groups
+    public class Groups : AFacade
     {
-        private readonly QGroup Query = new();
+        public QGroup Query { get; set; }
         //public static IEnumerable<Group> GetGroups()
         //{
         //    return (List<Group>) QuerySettings.QuerySet(Query.GetGroups());

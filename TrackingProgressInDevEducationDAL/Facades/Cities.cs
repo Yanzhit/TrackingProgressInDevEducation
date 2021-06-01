@@ -1,27 +1,27 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Cities
+    public class Cities : AFacade
     {
-        private readonly QCity _qCity = new();
-        private readonly QuerySettings _query = new();
-
+        public QCity Query { get; set; }
         public City SetNewCity(string name)
         {
-            return (City) _query.QuerySet(_qCity.SetNewCity(name));
+        
+            return (City) _querySet.QuerySet(Query.SetNewCity(name));
         }
 
         public IEnumerable<City> GetAllCities()
         {
-            return (List<City>) _query.QuerySet(_qCity.GetAllCities());
+            return (List<City>) _querySet.QuerySet(Query.GetAllCities());
         }
 
         public IEnumerable<City> NullifyCities()
         {
-            return (List<City>) _query.QuerySet(_qCity.NullifyCities());
+            return (List<City>) _querySet.QuerySet(Query.NullifyCities());
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Abstarcts;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class CommentTypes
+    public class CommentTypes : AFacade
     {
-        //private static readonly CommentType Query = new();
+        public QCommentType Query { get; set; }
     }
 }

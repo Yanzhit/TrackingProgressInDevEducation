@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Comments
+    public class Comments : AFacade
     {
-        private readonly QComment _qComments = new();
-        private readonly QuerySettings _query = new();
-
+        public QComment Query { get; set; }
         public Comment SetNewComment
         (
             string text,
@@ -18,9 +17,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             int teamId
         )
         {
-            return (Comment) _query.QuerySet
+            return (Comment) _querySet.QuerySet
             (
-                _qComments.SetNewComment
+                Query.SetNewComment
                 (
                     text,
                     typeId,
@@ -33,7 +32,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 
         public IEnumerable<Comment> NullifyComments()
         {
-            return (List<Comment>)_query.QuerySet(_qComments.NullifyComments());
+            return (List<Comment>)_querySet.QuerySet(Query.NullifyComments());
         }
     }
 }

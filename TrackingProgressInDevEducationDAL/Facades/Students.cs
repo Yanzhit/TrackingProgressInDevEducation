@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 using Student = TrackingProgressInDevEducationDAL.Models.Bases.Student;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Students
+    public class Students : AFacade
     {
-        private readonly QStudent _qStudent = new();
-        private readonly QuerySettings _query = new();
+        public Query Query { get; set; }
 
         public IEnumerable<Student> GetAllStudents()
         {
-            return (IEnumerable<Student>)_query.QuerySet(_qStudent.GetAllStudents());
+            return (IEnumerable<Student>)_querySet.QuerySet(Query.GetAllStudents());
         }
 
         //public static Student SetNewStudent

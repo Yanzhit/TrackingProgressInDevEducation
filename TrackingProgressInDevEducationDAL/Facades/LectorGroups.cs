@@ -1,9 +1,10 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class LectorGroups
+    public class LectorGroups : AFacade 
     {
-        private static readonly QLectorGroup Query = new();
+        public QLectorGroup Query { get; set; }
     }
 }

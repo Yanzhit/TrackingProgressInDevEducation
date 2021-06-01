@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Teams
+    public class Teams : AFacade
     {
-        private static readonly QTeam Query = new();
+        public QTeam Query { get; set; }
         //public static Team SetNewTeam(string name)
         //{
         //    return (Team) QuerySettings.QuerySet(Query.SetNewTeam(name));

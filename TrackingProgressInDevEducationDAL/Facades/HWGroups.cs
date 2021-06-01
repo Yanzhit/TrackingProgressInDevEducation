@@ -1,9 +1,10 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class HWGroups
+    public class HWGroups : AFacade 
     {
-        private static readonly QHomeworkGroup Query = new();
+        public QHWGroup Query { get; set; }
     }
 }

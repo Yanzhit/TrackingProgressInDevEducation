@@ -1,9 +1,10 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class HWCompletes
+    public class HWCompletes : AFacade
     {
-        private static readonly QHomeworkComplete Query = new();
+        public QHWComplete Query { get; set; }
     }
 }

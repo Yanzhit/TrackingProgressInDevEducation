@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Homeworks
+    public class Homeworks : AFacade
     {
-        private static readonly QHomework Query = new();
+        public QHomework Query { get; set; }
         //public static IEnumerable<Homework> GetHomeworkById(int id)
         //{
         //    return (List<Homework>) QuerySettings.QuerySet(Query.GetHomeworkById(id));

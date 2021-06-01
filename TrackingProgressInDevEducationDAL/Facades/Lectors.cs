@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Abstarcts;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Lectors
+    public class Lectors : AFacade 
     {
-        private static readonly QLector Query = new();
+        public QLector Query { get; set; }
         //public static IEnumerable<Lector> GetLectors()
         //{
         //    return (List<Lector>) QuerySettings.QuerySet(Query.GetLectors());
