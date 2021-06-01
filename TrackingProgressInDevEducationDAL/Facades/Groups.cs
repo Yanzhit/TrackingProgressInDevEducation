@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="name">Имя Группы</param>
         /// <returns>Группа</returns>
-        public Course SetNewGroup(string name, int id)
+        public Group SetNewGroup(string name, int id)
         {
-            return (Course) _query.QuerySet(_qGroup.SetNewGroup(name, id));
+            return (Group) _query.QuerySet(_qGroup.SetNewGroup(name, id));
         }
 
         /// <summary>
         /// Обнуление таблицы Группы и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Course> NullifyGroups()
+        public IEnumerable<Group> NullifyGroups()
         {
-            return (IEnumerable<Course>)_query.QuerySet(_qGroup.NullifyGroups());
+            return (IEnumerable<Group>)_query.QuerySet(_qGroup.NullifyGroups());
         }
     }
 }
