@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Abstract
         protected void PreparindDB(Type type)
         {
             var preparation = new PreparationDB();
-            preparation.Nullify(type);
+            //preparation.Nullify(type);
             preparation.Filling(type);
         }
     }

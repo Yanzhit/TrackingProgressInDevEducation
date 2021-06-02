@@ -32,9 +32,9 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
                 "А он огонь",
                 "So good",
                 "Что ещё?",
-                "Проверка связи",
-                "Оладушек",
-                "Карусель такая большая",
+                //"Проверка связи",
+                //"Оладушек",
+                //"Карусель такая большая",
                 "Веселый дядя гуру",
                 "Амбиции не знают границ" //10
             };
@@ -44,14 +44,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             return new[]
             {
-                1, 2, 3, 4, 5, 6, 8, 9, 0, 7 //10
+                /*1, 2, 3, 4, 5,*/ 6, 8, 9, 0, 7 //10
             };
         }
         private int[] DataStudentId()
         {
             return new[]
             {
-                1, 2, 3, 2, 3, 6, 8, 2, 0, 7 //10
+                1, 2, /*3, 2, 3, 6, */8, 2, 0, 7 //10
             };
         }
         private int[] DataCreatedBy()

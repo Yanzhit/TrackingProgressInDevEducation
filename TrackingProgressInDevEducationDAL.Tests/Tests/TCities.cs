@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
-using TrackingProgressInDevEducationDAL.Tests.Expected.Cities;
+using TrackingProgressInDevEducationDAL.Tests.Expected;
 
 namespace TrackingProgressInDevEducationDAL.Tests.Tests
 {
@@ -52,7 +52,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Cities.NullifyCities();
+            _manager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }
     }

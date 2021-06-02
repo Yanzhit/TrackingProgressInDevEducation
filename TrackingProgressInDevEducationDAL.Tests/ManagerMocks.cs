@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.DataMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
@@ -13,9 +16,9 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             get
             {
-                var dCities = new DCities();
-                dCities.Count = dCities.Name.Length;
-                return dCities;
+                var mock = new DCities();
+                mock.Count = GetMinCount(mock);
+                return mock;
             }
         }
 
@@ -23,34 +26,174 @@ namespace TrackingProgressInDevEducationDAL.Tests
         {
             get
             {
-                var dComments = new DComments();
-                var value = FindMinValue(dComments.StudentId.Length, dComments.CreatedBy.Length);
-                value = FindMinValue(value, dComments.TeamId.Length);
-                value = FindMinValue(value, dComments.Text.Length);
-                value = FindMinValue(value, dComments.TypeId.Length);
-                dComments.Count = value;
-                return dComments;
+                var mock = new DComments();
+                mock.Count = GetMinCount(mock);
+                return mock;
             }
         }
-        public DCTypes DCTypes => new();
-        public DCourse DCourses => new();
-        public DGroups DGroups => new();
-        public DHomeworks DHomeworks => new();
-        public DHWCompletes DHWCompletes => new();
-        public DHWGroups DHWGroups => new();
-        public DLections DLections => new();
-        public DLectors DLectors  => new();
-        public DLectorCourse DLectorCourses => new();
-        public DLectorGroup DLectorGroups => new();
-        public DPayments DPayments  => new();
-        public DStudents DStudents => new();
-        public DTeams DTeams  => new();
-        public DTStudents DTStudents => new();
-        public DVisits DVisits  => new();
 
-        private int FindMinValue(int valueA, int valueB)
+        public DCTypes DCTypes
         {
-            return valueA > valueB ? valueB : valueA;
+            get
+            {
+                var mock = new DCTypes();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DCourse DCourses
+        {
+            get
+            {
+                var mock = new DCourse();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DGroups DGroups
+        {
+            get
+            {
+                var mock = new DGroups();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DHomeworks DHomeworks
+        {
+            get
+            {
+                var mock = new DHomeworks();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DHWCompletes DHWCompletes
+        {
+            get
+            {
+                var mock = new DHWCompletes();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DHWGroups DHWGroups
+        {
+            get
+            {
+                var mock = new DHWGroups();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DLections DLections
+        {
+            get
+            {
+                var mock = new DLections();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DLectors DLectors
+        {
+            get
+            {
+                var mock = new DLectors();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DLectorCourse DLectorCourses
+        {
+            get
+            {
+                var mock = new DLectorCourse();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DLectorGroup DLectorGroups
+        {
+            get
+            {
+                var mock = new DLectorGroup();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DPayments DPayments
+        {
+            get
+            {
+                var mock = new DPayments();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DStudents DStudents
+        {
+            get
+            {
+                var mock = new DStudents();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DTeams DTeams
+        {
+            get
+            {
+                var mock = new DTeams();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DTStudents DTStudents
+        {
+            get
+            {
+                var mock = new DTStudents();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+
+        public DVisits DVisits
+        {
+            get
+            {
+                var mock = new DVisits();
+                mock.Count = GetMinCount(mock);
+                return mock;
+            }
+        }
+        
+        private int GetMinCount(ADMock mock)
+        {
+            PropertyInfo[] props = mock.GetType().GetProperties();
+            int minValue = props[0].DeclaringType.Assembly.CustomAttributes.Count();
+            foreach (var length in props)
+            {
+                if (minValue > length.DeclaringType.Assembly.CustomAttributes.Count())
+                {
+                    minValue = length.DeclaringType.Assembly.CustomAttributes.Count();
+                }
+            }
+            return minValue;
         }
     }
 }

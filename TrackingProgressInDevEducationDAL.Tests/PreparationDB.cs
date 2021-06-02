@@ -11,14 +11,11 @@ namespace TrackingProgressInDevEducationDAL.Tests
         public PreparationDB()
         {
             _manager = new ManagerMocks();
-            _fillingDB =  new FillingDB();
             _nullifyDB = new NullifyDB();
+            _fillingDB =  new FillingDB();
         }
 
-        public void Filling(Type type)
-        {
-            _fillingDB.Filling(type, _manager);
-        }
+        
 
         /// <summary>
         /// Обнуление таблиц по модели
@@ -26,8 +23,11 @@ namespace TrackingProgressInDevEducationDAL.Tests
         /// <param name="type"></param>
         public void Nullify(Type type)
         {
-            
             _nullifyDB.Nullify(type);
+        }
+        public void Filling(Type type)
+        {
+            _fillingDB.Filling(type, _manager);
         }
     }
 }
