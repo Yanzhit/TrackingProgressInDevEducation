@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         /// Добавление нового города в таблицу
         /// </summary>
         /// <param name="query">Запрос</param>
-        /// <param name="name">Входящие имя города</param>
+        /// <param name="city">Входящий город с именем</param>
         /// <param name="expected">Ожидаемый результат</param>
         [TestCaseSource(typeof(ECities), nameof(ECities.SetNewCity))]
         public void SetNewCitiesTest(IQuery query, City city, object expected)

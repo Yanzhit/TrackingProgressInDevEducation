@@ -147,7 +147,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Lection> lections = manager.DLections.Lections;
             foreach (var lection in lections)
             {
-                //_manager.Lections.SetNewLection(lection.lection.CourseId,);
+               // _manager.Lections.SetNewLection();
             }
         }
 
