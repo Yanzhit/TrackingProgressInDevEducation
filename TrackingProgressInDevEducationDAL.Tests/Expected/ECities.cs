@@ -1,7 +1,8 @@
 ﻿using System.Collections;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
-namespace TrackingProgressInDevEducationDAL.Tests.Expected.Cities
+namespace TrackingProgressInDevEducationDAL.Tests.Expected
 {
     /// <summary>
     /// Ожидаемый результат для разных запросов
@@ -17,13 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected.Cities
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
+                new City(""),
                 1
             };
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
+                new City(""),
                 1
             };
         }
@@ -37,13 +38,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected.Cities
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
                 1
             };
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
                 1
             };
         }
@@ -57,13 +56,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected.Cities
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
                 1
             };
             yield return new object[]
             {
                 new QCity(),
-                "Сарай",
                 1
             };
         }

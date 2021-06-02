@@ -1,8 +1,9 @@
 using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Interfaces;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
-using TrackingProgressInDevEducationDAL.Tests.Expected.Cities;
+using TrackingProgressInDevEducationDAL.Tests.Expected;
 
 namespace TrackingProgressInDevEducationDAL.Tests.Tests
 {
@@ -12,21 +13,16 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
     public class TCities : ATTests
     {
         /// <summary>
-        /// Фасад запросов
-        /// </summary>
-        private readonly ManagerQueries _manager = new();
-        
-        /// <summary>
         /// Добавление нового города в таблицу
         /// </summary>
         /// <param name="query">Запрос</param>
         /// <param name="name">Входящие имя города</param>
         /// <param name="expected">Ожидаемый результат</param>
         [TestCaseSource(typeof(ECities), nameof(ECities.SetNewCity))]
-        public void SetNewCitiesTest(IQuery query, string name, object expected)
+        public void SetNewCitiesTest(IQuery query, City city, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Cities.SetNewCity(name);
+            _manager.Cities.SetNewCity(city.Name);
             //Assert.AreEqual(expected, actual);
         }
 
