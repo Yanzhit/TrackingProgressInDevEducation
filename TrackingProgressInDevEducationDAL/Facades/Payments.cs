@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="amount">Сумма</param>
         /// <param name="status">Статус платежа</param>
         /// <returns>Платеж</returns>
-        public Payment AddNewPayment
+        public Payment SetNewPayment
         (
             int studentId,
             DateTime paymentTo,

@@ -1,48 +1,33 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using System.Net.Mail;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База лекторов
+    /// </summary>
     public class DLectors : ADMock
     {
-        public string[] FullName { get; }
-        public string[] Email { get; }
-        public string[] Password { get; }
+        /// <summary>
+        /// Список лекторов для заполнения BD
+        /// </summary>
+        public List<Lector> Lectors { get; }
 
+        /// <summary>
+        /// Инициализация базы лекторов
+        /// </summary>
         public DLectors()
         {
-            FullName = DataFullName();
-            Email = DataEmail();
-            Password = DataPassword();
-        }
-
-        private string[] DataFullName()
-        {
-            return new[]
+            Lectors = new List<Lector>
             {
-                "ABH",
-                "DQQ",
-                "WEe"
-            };
-        }
-        
-        private string[] DataEmail()
-        {
-            return new[]
-            {
-                
-                "DQQ",
-                "ABH",
-                "WEe"
-            };
-        }
-        
-        private string[] DataPassword()
-        {
-            return new[]
-            {
-                "WEe",
-                "ABH",
-                "DQQ"
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ")
             };
         }
     }

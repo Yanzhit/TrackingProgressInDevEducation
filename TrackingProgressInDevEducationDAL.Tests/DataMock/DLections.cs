@@ -1,46 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База лекций
+    /// </summary>
     public class DLections : ADMock
     {
-        public int[] GroupId { get; }
-        public int[] LectorId { get; }
-        public DateTime[] StartedOn { get; }
+        /// <summary>
+        /// Список лекций для заполнения BD
+        /// </summary>
+        public List<Lection> Lections { get; }
 
+        /// <summary>
+        /// Инициализация базы лекций
+        /// </summary>
         public DLections()
         {
-            GroupId = DataGroupId();
-            LectorId = DataLectorId();
-            StartedOn = DataStartedOn();
-        }
-
-        private int[] DataGroupId()
-        {
-            return new[]
+            Lections = new List<Lection>
             {
-                1, 2, 3, 4, 5
-            };
-        }
-
-        private int[] DataLectorId()
-        {
-            return new[]
-            {
-                1, 2, 3, 4, 5
-            };
-        }
-
-        private DateTime[] DataStartedOn()
-        {
-            return new DateTime[]
-            {
-                DateTime.MaxValue,
-                DateTime.MinValue,
-                DateTime.Now,
-                DateTime.Today,
-                DateTime.Now
+                new(1,3,DateTime.MaxValue),
+                new(1,3,DateTime.MaxValue),
+                new(1,3,DateTime.MaxValue),
+                new(1,3,DateTime.MinValue),
+                new(1,3,DateTime.MinValue),
+                new(1,3,DateTime.MinValue)
             };
         }
     }

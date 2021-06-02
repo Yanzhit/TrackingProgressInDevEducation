@@ -50,7 +50,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Team):
                  //   NullifyTableTeams();
                     break;
-                case nameof(TeamStudent):
+                case nameof(TStudent):
                     NullifyTableTeamStudent();
                     break;
                 case nameof(Visit):
@@ -66,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void NullifyTableCommentType()
         {
-            _manager.CommentTypes.NullifyCTypes();
+            _manager.CTypes.NullifyCTypes();
         }
 
         private void NullifyTableCourses()

@@ -1,12 +1,14 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Reflection;
 using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Repositories;
 using static TrackingProgressInDevEducationDAL.Defines;
+using Single = TrackingProgressInDevEducationDAL.Repositories.Single;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class QuerySettings
+    public class QuerySettings : IDisposable
     {
         private IDbConnection _dbConnection;
         public object QuerySet(IQuery query)
@@ -45,6 +47,11 @@ namespace TrackingProgressInDevEducationDAL
         private string ConfigCommand(IQuery query)
         {
             return $"{Exec}{Gap}{Schema}{Point}{query.Name}{Gap}{query.Params}";
+        }
+
+        public void Dispose()
+        {
+            _dbConnection?.Dispose();
         }
     }
 }

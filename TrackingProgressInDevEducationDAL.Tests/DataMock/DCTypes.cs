@@ -1,24 +1,30 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База типов комментариев
+    /// </summary>
     public class DCTypes : ADMock
     {
-        public string[] Name { get; }
+        /// <summary>
+        /// Список типов комментариев для заполнения BD
+        /// </summary>
+        public List<CType> CTypes;
 
+        /// <summary>
+        /// Инициализация базы типов комментариев
+        /// </summary>
         public DCTypes()
         {
-            Name = DataName();
-        }
-
-        private string[] DataName()
-        {
-            return new[]
+            CTypes = new List<CType>
             {
-                "Общий",
-                "Soft",
-                "Hard",
-                "Team" //4
+                new("Общий"),
+                new("Soft"),
+                new("Hard"),
+                new("Team")
             };
         }
     }

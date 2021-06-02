@@ -10,6 +10,15 @@ namespace TrackingProgressInDevEducationDAL.Facades
         public QLectorGroup Query { get; init; }
 
         /// <summary>
+        /// Создание нового Лектора Группы
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<LectorGroup> SetNewLectorGroup(int lectorId, int groupId)
+        {
+            return (IEnumerable<LectorGroup>)QuerySet.QuerySet(Query.SetNewLectorGroup(lectorId, groupId));
+        }
+
+        /// <summary>
         /// Обнуление таблицы Лекторы Группы
         /// </summary>
         /// <returns></returns>

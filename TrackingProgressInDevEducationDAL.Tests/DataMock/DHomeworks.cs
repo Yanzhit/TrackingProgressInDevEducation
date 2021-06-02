@@ -1,33 +1,32 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База домашнего задания
+    /// </summary>
     public class DHomeworks : ADMock
     {
-        public string[] Name { get; }
-        public string[] Deskription { get; }
+        /// <summary>
+        /// Список домашнего задания для заполнения BD
+        /// </summary>
+        public List<Homework> Homeworks;
 
+        /// <summary>
+        /// Инициализация базы домашнего задания
+        /// </summary>
         public DHomeworks()
         {
-            Name = DataName();
-            Deskription = DataDeskription();
-        }
-
-        private string[] DataName()
-        {
-            return new[]
+            Homeworks = new List<Homework>
             {
-                "ff",
-                "qq"
-            };
-        }
-
-        private string[] DataDeskription()
-        {
-            return new[]
-            {
-                "rr",
-                "tt"
+                new("First"),
+                new("Level"),
+                new("Operand"),
+                new("Varies"),
+                new("Fail"),
+                new("God")
             };
         }
     }

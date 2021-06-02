@@ -1,72 +1,35 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База Комментариев
+    /// </summary>
     public class DComments : ADMock
     {
-        public string[] Text { get; }
+        /// <summary>
+        /// Список комментариев для заполнения BD
+        /// </summary>
+        public List<Comment> Comments { get; }
 
-        public int[] TypeId { get; }
-
-        public int[] StudentId { get; }
-
-        public int[] CreatedBy { get; }
-        public int[] TeamId { get; }
-
+        /// <summary>
+        /// Инициализация базы комментариев
+        /// </summary>
         public DComments()
         {
-            Text = DataText();
-            TypeId = DataTypeId();
-            StudentId = DataStudentId();
-            CreatedBy = DataCreatedBy();
-            TeamId = DataTeamId();
-        }
-
-        private string[] DataText()
-        {
-            return new[]
+            Comments = new List<Comment>
             {
-                "Комментарий первый",
-                "Хороший тип",
-                "А он огонь",
-                "So good",
-                "Что ещё?",
-                "Проверка связи",
-                "Оладушек",
-                "Карусель такая большая",
-                "Веселый дядя гуру",
-                "Амбиции не знают границ" //10
-            };
-        }
-
-        private int[] DataTypeId()
-        {
-            return new[]
-            {
-                1, 2, 3, 4, 5, 6, 8, 9, 0, 7 //10
-            };
-        }
-        private int[] DataStudentId()
-        {
-            return new[]
-            {
-                1, 2, 3, 2, 3, 6, 8, 2, 0, 7 //10
-            };
-        }
-        private int[] DataCreatedBy()
-        {
-            return new[]
-            {
-                1, 2, 8, 2, 7, 5, 2, 2, 0, 1 //10
-            };
-        }
-
-        private int[] DataTeamId()
-        {
-            return new[]
-            {
-                1, 2, 8, 2, 7, 5, 2, 2, 0, 1 //10
+                new ("Комментарий первый", 2, 3, 2, 1),
+                new ("Комментарий второй", 2, 3, 2, 1),
+                new ("Комментарий третий", 2, 3, 2, 1),
+                new ("Комментарий четвертый", 2, 3, 2, 1),
+                new ("Комментарий пятый", 2, 3, 2, 1),
+                new ("Комментарий шестой", 2, 3, 2, 1),
+                new ("Комментарий седьмой", 2, 3, 2, 1),
+                new ("Комментарий восьмой", 2, 3, 2, 1),
+                new ("Комментарий девятый", 2, 3, 2, 1)
             };
         }
     }

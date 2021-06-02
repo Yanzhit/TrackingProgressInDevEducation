@@ -48,7 +48,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Cities.NullifyCities();
+            _manager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }
     }

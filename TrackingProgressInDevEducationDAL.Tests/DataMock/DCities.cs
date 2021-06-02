@@ -1,30 +1,36 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База Городов
+    /// </summary>
     public class DCities : ADMock
     {
-        public string[] Name { get; }
+        /// <summary>
+        /// Список городов для заполнения BD
+        /// </summary>
+        public List<City> Cities { get; }
 
+        /// <summary>
+        /// Инициализация базы городов
+        /// </summary>
         public DCities()
         {
-            Name = DataName();
-        }
-
-        private string[] DataName()
-        {
-            return new[]
+            Cities = new List<City>
             {
-                "Санкт-Петербург",
-                "Москва",
-                "Владимир",
-                "Самара",
-                "Саратов",
-                "Омск",
-                "Оренбург",
-                "Новгород",
-                "Орск",
-                "Тверь" //10
+                new("Санкт-Петербург"),
+                new("Москва"),
+                new("Владимир"),
+                new("Самара"),
+                new("Саратов"),
+                new("Омск"),
+                new("Оренбург"),
+                new("Новгород"),
+                new("Орск"),
+                new("Тверь")
             };
         }
     }

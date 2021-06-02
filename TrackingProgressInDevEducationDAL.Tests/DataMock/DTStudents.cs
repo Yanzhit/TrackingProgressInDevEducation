@@ -1,31 +1,32 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База команд студентов
+    /// </summary>
     public class DTStudents : ADMock
     {
-        public int[] TeamId { get; }
-        public int[] StudentId { get; }
+        /// <summary>
+        /// Список команд студентов для заполнения BD
+        /// </summary>
+        public List<TStudent> TStudents { get; }
 
+        /// <summary>
+        /// Инициализация базы команд студентов
+        /// </summary>
         public DTStudents()
         {
-            TeamId = DataTeamId();
-            StudentId = DataStudentId();
-        }
-
-        private int[] DataTeamId()
-        {
-            return new[]
+            TStudents = new List<TStudent>
             {
-                1, 3, 4
-            };
-        }
-        
-        private int[] DataStudentId()
-        {
-            return new[]
-            {
-                3, 2, 4
+                new(1,5),
+                new(2,2),
+                new(3,4),
+                new(4,1),
+                new(1,3),
+                new(2,5)
             };
         }
     }

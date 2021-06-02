@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Tests.DataMock;
+﻿using TrackingProgressInDevEducationDAL.Tests.DataMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -9,48 +7,80 @@ namespace TrackingProgressInDevEducationDAL.Tests
         /// <summary>
         /// 
         /// </summary>
-        public DCities DCities
-        {
-            get
-            {
-                var dCities = new DCities();
-                dCities.Count = dCities.Name.Length;
-                return dCities;
-            }
-        }
+        public DCities DCities => new();
 
-        public DComments DComments
-        {
-            get
-            {
-                var dComments = new DComments();
-                var value = FindMinValue(dComments.StudentId.Length, dComments.CreatedBy.Length);
-                value = FindMinValue(value, dComments.TeamId.Length);
-                value = FindMinValue(value, dComments.Text.Length);
-                value = FindMinValue(value, dComments.TypeId.Length);
-                dComments.Count = value;
-                return dComments;
-            }
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public DComments DComments => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
         public DCTypes DCTypes => new();
-        public DCourse DCourses => new();
-        public DGroups DGroups => new();
-        public DHomeworks DHomeworks => new();
-        public DHWCompletes DHWCompletes => new();
-        public DHWGroups DHWGroups => new();
-        public DLections DLections => new();
-        public DLectors DLectors  => new();
-        public DLectorCourse DLectorCourses => new();
-        public DLectorGroup DLectorGroups => new();
-        public DPayments DPayments  => new();
-        public DStudents DStudents => new();
-        public DTeams DTeams  => new();
-        public DTStudents DTStudents => new();
-        public DVisits DVisits  => new();
 
-        private int FindMinValue(int valueA, int valueB)
-        {
-            return valueA > valueB ? valueB : valueA;
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public DCourse DCourses => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DGroups DGroups => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHomeworks DHomeworks => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHWCompletes DHWCompletes => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHWGroups DHWGroups => new();
+
+        public DLections DLections => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DLectors DLectors => new();
+
+        public DLectorCourse DLectorCourses => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DLectorGroup DLectorGroups => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DPayments DPayments => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DStudents DStudents => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DTeams DTeams => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DTStudents DTStudents => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DVisits DVisits => new();
     }
 }

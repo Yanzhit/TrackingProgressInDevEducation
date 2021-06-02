@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для типа комментариев.
         /// </summary>
-        public CommentTypes CommentTypes => new()
+        public CommentTypes CTypes => new()
         {
             Query = new QCommentType()
         };

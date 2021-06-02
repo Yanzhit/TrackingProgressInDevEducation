@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 using Dapper;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
@@ -16,9 +17,19 @@ namespace TrackingProgressInDevEducationDAL.Repositories
             return connection.Query<T>(command).AsList();
         }
 
-        public static IEnumerable<T> NullifyAsync<T>(IDbConnection connection, string command)
+        //public static IEnumerable<T> NullifyAsync<T>(IDbConnection connection, string command)
+        //{
+        //    return connection.Query<T>(command).AsList();
+        //}
+        public static async Task<IEnumerable<T>> NullifyAsync<T>(IDbConnection connection, string command)
         {
-            return connection.Query<T>(command).AsList();
+            return await connection.QueryAsync<T>(command);
+        }
+
+        public static async Task<T> NullifyAsynw<T>(IDbConnection connection, string command)
+        {
+            var res =  await connection.QuerySingleAsync<T>(command);
+            return res;
         }
     }
 }

@@ -81,6 +81,8 @@
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentType" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkGroup" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\LectorGroup" />
+    <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes" />
+    <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests" />
     <Folder Include="TrackingProgressInDevEducationDB\Stored Procedures\Join" />
   </ItemGroup>
   <ItemGroup>
@@ -119,11 +121,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateCityById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetComments.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentsByStudent.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentsByTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveCommentById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetCommentToTeam.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetNewCommentToStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateCommentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentTypeById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCommentTypes.sql" />
@@ -133,13 +131,11 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCourseById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetCourses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveCourseById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetGroups.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetGroupsByLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetHWByGroup.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetHWComplitingByStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetNewHWForStudentByGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateHWCompleteByIdHW.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateHWCompleteByIdStudents.sql" />
@@ -173,17 +169,14 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdatePaymentAmount.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdatePaymentSetDateAndStatus.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdatePaymentTeam.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetAllStudentsByGroup.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetAllStudentsByTeam.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetAllStudentsByTeamJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveStudentById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetStudentToGroup.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetTeamById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetTeams.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveTeamById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateTeamById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\SetStudentToTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetVisits.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\GetVisitsByStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\RemoveVisitById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\UpdateVisitById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lections\GetAllLector.sql" />
@@ -219,6 +212,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lections\SetNewLection.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Homeworks\SetNewHW.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\SetNewHWComplete.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\CommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkGroup\SetNewHWGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\SetNewCourse.sql" />
@@ -226,6 +220,25 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllCoursesByLectorJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllTeamsByLectorJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\GetCommentsByStudent.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\GetVisitsByStudentJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\GetHWComplitingByStudentJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\Tests.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Tables\TestComplete.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\GetAllTestsByStudentIdJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\NullifyTCs.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\SetNewTC.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\SetNewTest.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Tests\NullifyTests.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Visits\GetVisitsScore.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\GetHomeWorkProcedureScore.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\TestCompletes\GetTestScore.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroupByIdJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetAllStudentsByGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\GetTeamById.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\GetCommentsByTeam.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\SetCommentToTeam.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Comments\SetNewCommentToStudent.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
