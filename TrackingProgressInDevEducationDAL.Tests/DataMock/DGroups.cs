@@ -14,14 +14,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         /// <summary>
         /// Список групп для заполнения BD
         /// </summary>
-        public List<Group> Grops;
+        public List<Group> Groups;
 
         /// <summary>
         ///  Инициализация базы групп
         /// </summary>
         public DGroups()
         {
-            Grops = new List<Group>
+            Groups = new List<Group>
             {
                 new("Dev{ed} C# Base 1", 1),
                 new("Dev{ed} C# Front 2", 2),

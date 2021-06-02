@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Tests.Abstract;
-using TrackingProgressInDevEducationDAL.Tests.DataMock;
+﻿using TrackingProgressInDevEducationDAL.Tests.DataMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -12,33 +7,80 @@ namespace TrackingProgressInDevEducationDAL.Tests
         /// <summary>
         /// 
         /// </summary>
-        public DCities DCities => new DCities();
+        public DCities DCities => new();
 
-        public DComments DComments => new DComments();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DComments DComments => new();
 
-        public DCTypes DCTypes => new DCTypes();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DCTypes DCTypes => new();
 
-        public DCourse DCourses => new DCourse();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DCourse DCourses => new();
 
-        public DGroups DGroups => new DGroups();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DGroups DGroups => new();
 
-        public DHomeworks DHomeworks => new DHomeworks();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHomeworks DHomeworks => new();
 
-        public DHWCompletes DHWCompletes => new DHWCompletes();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHWCompletes DHWCompletes => new();
 
-        public DHWGroups DHWGroups => new DHWGroups();
-        public DLections DLections => new DLections();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DHWGroups DHWGroups => new();
 
-        public DLectors DLectors => new DLectors();
-        public DLectorCourse DLectorCourses => new DLectorCourse();
+        public DLections DLections => new();
 
-        public DLectorGroup DLectorGroups => new DLectorGroup();
-        public DPayments DPayments => new DPayments();
+        /// <summary>
+        /// 
+        /// </summary>
+        public DLectors DLectors => new();
 
-        public DStudents DStudents => new DStudents();
-        public DTeams DTeams => new DTeams();
-        public DTStudents DTStudents => new DTStudents();
-        public DVisits DVisits => new DVisits();
-        
+        public DLectorCourse DLectorCourses => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DLectorGroup DLectorGroups => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DPayments DPayments => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DStudents DStudents => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DTeams DTeams => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DTStudents DTStudents => new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DVisits DVisits => new();
     }
 }

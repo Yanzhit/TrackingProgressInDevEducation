@@ -66,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void NullifyTableCommentType()
         {
-            _manager.CommentTypes.NullifyCTypes();
+            _manager.CTypes.NullifyCTypes();
         }
 
         private void NullifyTableCourses()

@@ -21,11 +21,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             HWCompletes = new List<HWComplete>
             {
-                new (1, 4, 1),
-                new (2, 2, 3),
-                new (3, 3, 1),
-                new (1, 1, 4),
-                new (2, 2, 1)
+                new (1, 4, true),
+                new (2, 2, false),
+                new (3, 3, true),
+                new (1, 1, false),
+                new (2, 2, false)
             };
         }
     }

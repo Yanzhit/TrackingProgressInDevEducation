@@ -6,13 +6,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public int HomeworkId { get; set; }
         public int StudentId { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
 
         public HWComplete()
         {
         }
 
-        public HWComplete(int homeworkId, int studentId, int status)
+        public HWComplete(int homeworkId, int studentId, bool status)
         {
             HomeworkId = homeworkId;
             StudentId = studentId;
