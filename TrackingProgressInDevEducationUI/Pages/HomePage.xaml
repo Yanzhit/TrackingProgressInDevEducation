@@ -13,7 +13,7 @@
     >
 
     <Page.Resources>
-        <ResourceDictionary Source="Pages/Styles/ButtonStyles.xaml"/>
+        <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
     </Page.Resources>
     
     <Grid Background="#91D4D1">
@@ -83,9 +83,9 @@
         />
         
         <Button
-            Style="{DynamicResource ButtonStyle}"
+            Style="{DynamicResource ButtonStyles}"
             Content="Создать команду" 
-            Margin="612,342,0,0" 
+            Margin="593,374,0,0" 
         />
         
         <Image 
@@ -108,7 +108,7 @@
         </DataGrid>
         
         <Button
-            Style="{DynamicResource ButtonStyle}" 
+            Style="{DynamicResource ButtonStyles}" 
             Content="Журнал" 
             Margin="439,253,0,0" 
         />

@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCTypeTest(IQuery query, CType commentType, object expected)
         {
             PreparindDB(query.Type);
-            _manager.CommentTypes.SetNewCType(commentType.Name);
+            _manager.CTypes.SetNewCType(commentType.Name);
             //Assert.AreEqual(expected, actual);
         }
 
@@ -36,7 +36,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCTypesTest(IQuery query, object expected)
         {
             PreparindDB(query.Type);
-            _manager.CommentTypes.NullifyCTypes();
+            _manager.CTypes.NullifyCTypes();
             //Assert.AreEqual(expected, actual);
         }
     }
