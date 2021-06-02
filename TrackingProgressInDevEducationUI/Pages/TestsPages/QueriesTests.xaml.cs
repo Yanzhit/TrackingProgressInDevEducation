@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.BLLModels.Bases;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -12,10 +13,12 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
     public partial class QueriesTests : Page
     {
         private MainForm _mainForm;
+        public City tCity;
         public QueriesTests(MainForm mainForm)
         {
             InitializeComponent();
             _mainForm = mainForm;
+            tCity = new City("Вологдар");
         }
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
@@ -35,6 +38,7 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             {
                 //Student sss = FacadeStudent.GetByIdStudent(1);
                 //RequestViewTextBox.Text += $"{sss.Name} {sss.Surname} {sss.Rate}\n";
+                BCity tBCity = new BCity(tCity);
             }
         }
     }
