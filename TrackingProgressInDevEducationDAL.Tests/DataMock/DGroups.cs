@@ -1,69 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
+using NUnit.Framework;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База групп
+    /// </summary>
     public class DGroups : ADMock
     {
-        public string[] Name { get; }
-        public int[] CourseId { get; }
-        public DateTime[] StartDate { get; }
-        public DateTime[] EndDate { get; }
+        /// <summary>
+        /// Список групп для заполнения BD
+        /// </summary>
+        public List<Group> Grops;
 
+        /// <summary>
+        ///  Инициализация базы групп
+        /// </summary>
         public DGroups()
         {
-            Name = DataName();
-            CourseId = DataCourseId();
-            StartDate = DataStartDate();
-            EndDate = DataEndDate();
-        }
-
-        private string[] DataName()
-        {
-            return new[]
+            Grops = new List<Group>
             {
-                "Dev{ed} C# Base 1",
-                "Dev{ed} C# Base 2",
-                "Dev{ed} C# Base 3",
-                "Dev{ed} C# Base 4",
-                "Dev{ed} C# Base 5",
-                "Dev{ed} C# Base 6",
-                "Dev{ed} C# Base 7",
-                "Dev{ed} C# Base 8"
-            };
-        }
-
-        private int[] DataCourseId()
-        {
-            return new[] {1, 1, 1, 1, 1, 1, 1, 1};
-        }
-
-        private DateTime[] DataStartDate()
-        {
-            return new[]
-            {
-                DateTime.MaxValue, 
-                DateTime.MinValue,
-                DateTime.Now,
-                DateTime.MaxValue,
-                DateTime.MaxValue, 
-                DateTime.MinValue,
-                DateTime.Now,
-                DateTime.MaxValue
-            };
-        }
-        private DateTime[] DataEndDate()
-        {
-            return new[]
-            {
-                DateTime.MaxValue, 
-                DateTime.MinValue,
-                DateTime.Now,
-                DateTime.MaxValue,
-                DateTime.MaxValue, 
-                DateTime.MinValue,
-                DateTime.Now,
-                DateTime.MaxValue
+                new("Dev{ed} C# Base 1", 1),
+                new("Dev{ed} C# Front 2", 2),
+                new("Dev{ed} C# Mobile 3", 3),
+                new("Dev{ed} C# Back 4", 4),
+                new("Dev{ed} JAVA# Base 1", 5),
+                new("Dev{ed} JAVA# Front 2", 6),
+                new("Dev{ed} JAVA# Mobile 3", 7),
+                new("Dev{ed} C# Back 4", 8),
             };
         }
     }

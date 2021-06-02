@@ -2,16 +2,16 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class TeamStudent : AbstractModel
+    public class TStudent : AbstractModel
     {
         public int TeamId { get; set; }
         public int StudentId { get; set; }
 
-        public TeamStudent()
+        public TStudent()
         {
         }
 
-        public TeamStudent(int teamId, int studentId)
+        public TStudent(int teamId, int studentId)
         {
             TeamId = teamId;
             StudentId = studentId;
@@ -19,10 +19,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         public override bool Equals(object obj)
         {
-            return Equals((TeamStudent)obj);
+            return Equals((TStudent)obj);
         }
 
-        private bool Equals(TeamStudent other)
+        private bool Equals(TStudent other)
         {
             return TeamId == other.TeamId
                    && StudentId == other.StudentId;

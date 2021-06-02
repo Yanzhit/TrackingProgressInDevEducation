@@ -58,7 +58,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Team):
                     FillingTableTeams();
                     break;
-                case nameof(TeamStudent):
+                case nameof(TStudent):
                     FillingTableTeamStudent();
                     break;
                 case nameof(Visit):
@@ -69,28 +69,28 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingCities(ManagerMocks manager)
         {
-            DCities data = manager.DCities;
+            //DCities data = manager.DCities;
 
-            for (var i = 0; i < data.Count; i++)
-            {
-                _manager.Cities.SetNewCity(data.Name[i]);
-            }
+            //for (var i = 0; i < data.Count; i++)
+            //{
+            //    _manager.Cities.SetNewCity(data.Name[i]);
+            //}
         }
 
         private void FillingTableComments(ManagerMocks manager)
         {
-            DComments data = manager.DComments;
-            for (int i = 0; i < data.Count; i++)
-            {
-                _manager.Comments.SetNewComment
-                (
-                    data.Text[i],
-                    data.TypeId[i],
-                    data.StudentId[i],
-                    data.CreatedBy[i],
-                    data.TeamId[i]
-                );
-            }
+            //DComments data = manager.DComments;
+            //for (int i = 0; i < data.Count; i++)
+            //{
+            //    _manager.Comments.SetNewComment
+            //    (
+            //        data.Text[i],
+            //        data.TypeId[i],
+            //        data.StudentId[i],
+            //        data.CreatedBy[i],
+            //        data.TeamId[i]
+            //    );
+            //}
         }
 
         private void FillingTableCommentType()

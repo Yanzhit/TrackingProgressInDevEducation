@@ -1,30 +1,33 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База группового дз
+    /// </summary>
     public class DHWGroups : ADMock
     {
-        public int[] HomeworkId { get; }
-        public int[] GroupId { get; }
+        /// <summary>
+        /// Список группового дз для заполнения BD
+        /// </summary>
+        public List<HWGroup> HWGroups { get; }
 
+        /// <summary>
+        /// Инициализация базы группового дз
+        /// </summary>
         public DHWGroups()
         {
-            HomeworkId = DataHomeworkId();
-            GroupId = DataGroupId();
-        }
-
-        private int[] DataHomeworkId()
-        {
-            return new[]
+            HWGroups = new List<HWGroup>
             {
-                1, 3, 2
-            };
-        }
-        private int[] DataGroupId()
-        {
-            return new[]
-            {
-                3, 2, 1
+                new(1,2),
+                new(2,2),
+                new(3,2),
+                new(1,1),
+                new(1,2),
+                new(3,2),
+                new(1,1)
             };
         }
     }

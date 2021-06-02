@@ -12,188 +12,33 @@ namespace TrackingProgressInDevEducationDAL.Tests
         /// <summary>
         /// 
         /// </summary>
-        public DCities DCities
-        {
-            get
-            {
-                var mock = new DCities();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DCities DCities => new DCities();
 
-        public DComments DComments
-        {
-            get
-            {
-                var mock = new DComments();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DComments DComments => new DComments();
 
-        public DCTypes DCTypes
-        {
-            get
-            {
-                var mock = new DCTypes();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DCTypes DCTypes => new DCTypes();
 
-        public DCourse DCourses
-        {
-            get
-            {
-                var mock = new DCourse();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DCourse DCourses => new DCourse();
 
-        public DGroups DGroups
-        {
-            get
-            {
-                var mock = new DGroups();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DGroups DGroups => new DGroups();
 
-        public DHomeworks DHomeworks
-        {
-            get
-            {
-                var mock = new DHomeworks();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DHomeworks DHomeworks => new DHomeworks();
 
-        public DHWCompletes DHWCompletes
-        {
-            get
-            {
-                var mock = new DHWCompletes();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DHWCompletes DHWCompletes => new DHWCompletes();
 
-        public DHWGroups DHWGroups
-        {
-            get
-            {
-                var mock = new DHWGroups();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DHWGroups DHWGroups => new DHWGroups();
+        public DLections DLections => new DLections();
 
-        public DLections DLections
-        {
-            get
-            {
-                var mock = new DLections();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DLectors DLectors => new DLectors();
+        public DLectorCourse DLectorCourses => new DLectorCourse();
 
-        public DLectors DLectors
-        {
-            get
-            {
-                var mock = new DLectors();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DLectorGroup DLectorGroups => new DLectorGroup();
+        public DPayments DPayments => new DPayments();
 
-        public DLectorCourse DLectorCourses
-        {
-            get
-            {
-                var mock = new DLectorCourse();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DLectorGroup DLectorGroups
-        {
-            get
-            {
-                var mock = new DLectorGroup();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DPayments DPayments
-        {
-            get
-            {
-                var mock = new DPayments();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DStudents DStudents
-        {
-            get
-            {
-                var mock = new DStudents();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DTeams DTeams
-        {
-            get
-            {
-                var mock = new DTeams();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DTStudents DTStudents
-        {
-            get
-            {
-                var mock = new DTStudents();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
-
-        public DVisits DVisits
-        {
-            get
-            {
-                var mock = new DVisits();
-                mock.Count = GetMinCount(mock);
-                return mock;
-            }
-        }
+        public DStudents DStudents => new DStudents();
+        public DTeams DTeams => new DTeams();
+        public DTStudents DTStudents => new DTStudents();
+        public DVisits DVisits => new DVisits();
         
-        private int GetMinCount(ADMock mock)
-        {
-            PropertyInfo[] props = mock.GetType().GetProperties();
-            int minValue = props[0].DeclaringType.Assembly.CustomAttributes.Count();
-            foreach (var length in props)
-            {
-                if (minValue > length.DeclaringType.Assembly.CustomAttributes.Count())
-                {
-                    minValue = length.DeclaringType.Assembly.CustomAttributes.Count();
-                }
-            }
-            return minValue;
-        }
     }
 }

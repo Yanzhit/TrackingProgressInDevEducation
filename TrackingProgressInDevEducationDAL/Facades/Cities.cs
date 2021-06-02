@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
@@ -23,9 +24,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Получить все города
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<City> GetAllCities()
+        public async Task<IEnumerable<City>> GetAllCities()
         {
-            return (List<City>)QuerySet.QuerySet(Query.GetAllCities());
+            return (IEnumerable<City>)QuerySet.QuerySet(Query.GetAllCities());
         }
 
         /// <summary>

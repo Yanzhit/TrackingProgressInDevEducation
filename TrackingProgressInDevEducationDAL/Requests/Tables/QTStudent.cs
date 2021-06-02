@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QTStudent : IQuery
     {
-        public Type Type { get; } = typeof(TeamStudent);
+        public Type Type { get; } = typeof(TStudent);
         public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }

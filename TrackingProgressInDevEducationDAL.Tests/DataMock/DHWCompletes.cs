@@ -1,41 +1,31 @@
-﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
+    /// <summary>
+    /// База выполненного дз
+    /// </summary>
     public class DHWCompletes : ADMock
     {
-        public int[] HomeworkId { get; }
-        public int[] StudentId { get; }
-        public bool[] Status { get; }
+        /// <summary>
+        /// Список выполненного дз для заполнения BD
+        /// </summary>
+        public List<HWComplete> HWCompletes { get; }
 
+        /// <summary>
+        /// Инициализация базы выполненного дз
+        /// </summary>
         public DHWCompletes()
         {
-            HomeworkId = DataHomeworkId();
-            StudentId = DataStudentId();
-            Status = DataStatus();
-        }
-
-        private int[] DataHomeworkId()
-        {
-            return new[]
+            HWCompletes = new List<HWComplete>
             {
-                3, 2, 1
-            };
-        }
-        private int[] DataStudentId()
-        {
-            return new[]
-            {
-                1, 2, 3
-            };
-        }
-        private bool[] DataStatus()
-        {
-            return new[]
-            {
-                true,
-                false,
-                true
+                new (1, 4, 1),
+                new (2, 2, 3),
+                new (3, 3, 1),
+                new (1, 1, 4),
+                new (2, 2, 1)
             };
         }
     }
