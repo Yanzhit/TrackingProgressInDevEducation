@@ -1,8 +1,9 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DPayment
+    public class DPayments : ADMock
     {
         public int[] StudentId { get; }
         public DateTime[] PaymentTo { get; }
@@ -10,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public decimal[] Amount { get; }
         public bool[] Status { get; }
 
-        public DPayment()
+        public DPayments()
         {
             StudentId = DataStudentId();
             PaymentTo = DataPaymentTo();

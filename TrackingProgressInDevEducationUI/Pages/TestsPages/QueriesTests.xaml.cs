@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             IEnumerable<Student> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
-                FacadeQueries f = new FacadeQueries();
+                ManagerQueries f = new ManagerQueries();
                 students = f.Students.GetAllStudents();
                 foreach (var student in students)
                 {

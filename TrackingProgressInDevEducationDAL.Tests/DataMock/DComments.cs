@@ -1,8 +1,9 @@
 ﻿using System.Collections;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DComment
+    public class DComments : ADMock
     {
         public string[] Text { get; }
 
@@ -13,7 +14,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public int[] CreatedBy { get; }
         public int[] TeamId { get; }
 
-        public DComment()
+        public DComments()
         {
             Text = DataText();
             TypeId = DataTypeId();

@@ -1,6 +1,8 @@
-﻿namespace TrackingProgressInDevEducationDAL.Tests.DataMock
+﻿using TrackingProgressInDevEducationDAL.Tests.Abstract;
+
+namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DLectorGroup
+    public class DLectorGroup : ADMock
     {
         public int[] LectorId {get;}
         public int[] GroupId {get;}

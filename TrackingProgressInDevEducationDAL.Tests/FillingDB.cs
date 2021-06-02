@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.DataMock;
 
 namespace TrackingProgressInDevEducationDAL.Tests
@@ -9,15 +10,17 @@ namespace TrackingProgressInDevEducationDAL.Tests
     
     public class FillingDB
     {
-        private readonly FacadeQueries _facade = new();
-        private readonly MockBase _mock = PreparationDB.Mock;
+        private readonly ManagerQueries _manager = new();
 
-        public void Filling(Type type) 
+        public void Filling(Type type, ManagerMocks manager)
         {
             switch (type.Name)
             {
+                case nameof(City):
+                    FillingCities(manager);
+                    break;
                 case nameof(Comment):
-                    FillingTableComments();
+                    FillingTableComments(manager);
                     break;
                 case nameof(CType):
                     FillingTableCommentType();
@@ -64,53 +67,60 @@ namespace TrackingProgressInDevEducationDAL.Tests
             }
         }
 
-        //private void FillingCities()
-        //{
-        //    List<DCities> data = _mock.Cities;
-        //    for (int i = 0; i < data.Count; i++)
-        //    {
-                
-        //        _facade.Comments.SetNewComment(data., data.CreatedBy[0], data.StudentId, data.CreatedBy, data.TeamId);
-                
-        //    }
-        //}
-
-        private void FillingTableComments()
+        private void FillingCities(ManagerMocks manager)
         {
-            foreach (Comment data in _mock.Comments)
+            DCities data = manager.DCities;
+
+            for (var i = 0; i < data.Count; i++)
             {
-                _facade.Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
+                _manager.Cities.SetNewCity(data.Name[i]);
+            }
+        }
+
+        private void FillingTableComments(ManagerMocks manager)
+        {
+            DComments data = manager.DComments;
+            for (int i = 0; i < data.Count; i++)
+            {
+                _manager.Comments.SetNewComment
+                (
+                    data.Text[i],
+                    data.TypeId[i],
+                    data.StudentId[i],
+                    data.CreatedBy[i],
+                    data.TeamId[i]
+                );
             }
         }
 
         private void FillingTableCommentType()
         {
-            foreach (CType data in _mock.CTypes)
-            {
-                _facade.CommentTypes.SetNewCType(data.Name);
-            }
+            //foreach (CType data in _managerMock.CTypes)
+            //{
+            //    _manager.CommentTypes.SetNewCType(data.Name);
+            //}
         }
 
         private void FillingTableCourses()
         {
-            foreach (Course data in _mock.Courses)
-            {
-                _facade.Courses.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn);
-            }
+            //foreach (Course data in _managerMock.Courses)
+            //{
+            //    _manager.Courses.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn);
+            //}
         }
 
         private void FillingTableGroups()
         {
-            foreach (Group data in _mock.Groups)
-            {
-                _facade.Groups.SetNewGroup(data.Name, data.CourseId);
-            }
+            //foreach (Group data in _managerMock.Groups)
+            //{
+            //    _manager.Groups.SetNewGroup(data.Name, data.CourseId);
+            //}
         }
         private void FillingTableHomeworkComplete()
         {
-            //foreach (HWComplete data in _mock.HWCompletes)
+            //foreach (HWComplete data in _managerMock.HWCompletes)
             //{
-            //    _facade.HWCompletes.SetNewHWComplete(data.HomeworkId, data.StudentId, data.Status);
+            //    _manager.HWCompletes.SetNewHWComplete(data.HomeworkId, data.StudentId, data.Status);
             //}
         }
 
@@ -123,7 +133,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableHomeworks()
         {
-            //foreach (MockHomework data in _mock.Homeworks)
+            //foreach (MockHomework data in _managerMock.Homeworks)
             //{
             //    FacadeHomeworks.CreateNewHomeworks(data.Name);
             //}
@@ -145,7 +155,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableLectors()
         {
-            //foreach (Lector data in _mock.Lectors)
+            //foreach (Lector data in _managerMock.Lectors)
             //{
             //    Lectors.SetNewLector(data.FullName, data.Email, data.Password);
             //}
@@ -154,7 +164,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTablePayments()
         {
             var query = new QPayment();
-            //foreach (Payment data in _mock.Payments)
+            //foreach (Payment data in _managerMock.Payments)
             //{
             //    //FacadePayments.
             //    QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
@@ -163,7 +173,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingTableStudents()
         {
-            //foreach (Student data in _mock.Students)
+            //foreach (Student data in _managerMock.Students)
             //{
             //    Students.SetNewStudent
             //        (
@@ -184,7 +194,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         }
         private void FillingTableTeams()
         {
-            //foreach (Team data in _mock.Teams)
+            //foreach (Team data in _managerMock.Teams)
             //{
             //    Teams.SetNewTeam(data.Name);
             //}
@@ -198,7 +208,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
         private void FillingTableVisits()
         {
             var query = new QVisit();
-            //foreach (Visit data in _mock.Visits)
+            //foreach (Visit data in _managerMock.Visits)
             //{
             //    //FacadeVisits
             //    QuerySettings.QuerySet(query.SetNewVisit(data.VisitStatus, data.StudentId, data.LectionId));

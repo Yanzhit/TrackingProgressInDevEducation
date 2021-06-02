@@ -1,8 +1,9 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
 namespace TrackingProgressInDevEducationDAL.Tests.DataMock
 {
-    public class DStudent
+    public class DStudents : ADMock
     {
         public string[] Name { get; }
         public string[] Surname { get; }
@@ -16,7 +17,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         public string[] Git { get; }
         public int[] CityId { get; }
 
-        public DStudent()
+        public DStudents()
         {
             Name = DataName();
             Surname = DataSurname();
