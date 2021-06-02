@@ -1,3 +1,3 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllLectors] 
 AS
-select id, FullName, [Email], [Password] from [Lectors]
+select [id], [FullName], [Email], [Password] from [Lectors]

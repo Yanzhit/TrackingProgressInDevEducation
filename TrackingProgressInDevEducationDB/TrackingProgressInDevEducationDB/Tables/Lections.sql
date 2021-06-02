@@ -7,4 +7,3 @@
     CONSTRAINT [Lection_fk0] FOREIGN KEY ([GroupId]) REFERENCES [TrackingProgressInDevEducationDB].[Groups] ([id]),
     CONSTRAINT [Lection_fk1] FOREIGN KEY ([LectorId]) REFERENCES [TrackingProgressInDevEducationDB].[Lectors] ([id])
 );
-
