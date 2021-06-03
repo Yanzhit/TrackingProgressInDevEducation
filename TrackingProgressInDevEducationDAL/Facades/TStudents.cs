@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<QTStudent> NullifyTStudent()
         {
-            return (IEnumerable<QTStudent>)Manager.Nullify.Null(Query.NullifyTStudent());
+            return (IEnumerable<QTStudent>)Manager.Remove.Rem(Query.NullifyTStudent());
         }
     }
 }

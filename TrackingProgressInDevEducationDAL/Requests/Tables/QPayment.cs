@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
@@ -7,7 +8,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QPayment : IQuery
     {
-        public Type Type { get; } = typeof(Payment);
+        public Type Type { get; set; } = typeof(AResult);
+        public Type Test { get; } = typeof(Payment);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -37,12 +39,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         }
         public QPayment GetAllPaymentsByGroup(int group)
         {
+            Type = typeof(Payment);
             Name = nameof(GetAllPaymentsByGroup);
             Params = $"{group}";
             return this;
         }
         public QPayment GetAllPaymentsByStudent(int student)
         {
+            Type = typeof(Payment);
             Name = nameof(GetAllPaymentsByStudent);
             Params = $"{student}";
             return this;

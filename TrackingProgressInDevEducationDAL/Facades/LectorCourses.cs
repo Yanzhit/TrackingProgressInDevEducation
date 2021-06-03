@@ -20,7 +20,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<LectorCourse> NullifyCourse()
         {
-            return (IEnumerable<LectorCourse>)Manager.Nullify.Null(Query.NullifyCourse());
+            return (IEnumerable<LectorCourse>)Manager.Remove.Rem(Query.NullifyCourse());
         }
     }
 }

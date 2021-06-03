@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewCourse, NullifyCourses)
@@ -10,7 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCourse : IQuery
     {
-        public Type Type { get; } = typeof(Course);
+        public Type Type { get; set; }
+        public Type Test { get; } = typeof(Course);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -23,6 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCourse SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewCourse);
             Params = $"{name}{Sep}{startedOn}{Sep}{finishedOn}";
             return this;
@@ -34,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCourse NullifyCourses()
         {
-            Name = nameof(NullifyCourses);
+            Name = nameof(Remove);
             Params = string.Empty;
             return this;
         }

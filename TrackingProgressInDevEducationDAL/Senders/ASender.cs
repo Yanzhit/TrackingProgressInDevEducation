@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Data;
 using System.Reflection;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
@@ -8,18 +8,44 @@ namespace TrackingProgressInDevEducationDAL.Senders
 {
     public abstract class ASender
     {
-        
-        protected object Refraction(IQuery query, IDbConnection dbConnection, MethodInfo method)
+        private string _command;
+
+        protected object Reflection(IQuery query, IDbConnection dbConnection, MethodInfo method)
         {
-            string command = ConfigCommand(query);
+            GetCommand(query);
+            Type type = GetType(query);
+            object instatns = GetInstansClass(type);
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-            object obj = generic.Invoke(null, new object[] {dbConnection, command});
+            object obj = generic.Invoke(instatns, new object[] {dbConnection, _command});
             return obj;
         }
 
-        private string ConfigCommand(IQuery query)
+        private object GetInstansClass(Type type)
         {
-            return $"{Exec}{Gap}{Schema}{Point}{query.Name}{Gap}{query.Params}";
+            ConstructorInfo magicConstructor = type.GetConstructor(Type.EmptyTypes);
+            return magicConstructor.Invoke(new object[]{});
+        }
+
+        private Type GetType(IQuery query)
+        {
+            if (query.Type.FullName == typeof(Models.Results.Setter).FullName)
+            {
+                return typeof(Repositories.Setter);
+            }
+            if (query.Type.FullName == typeof(Models.Results.Update).FullName)
+            {
+                return typeof(Repositories.Update);
+            }
+            if(query.Type.FullName == typeof(Models.Results.Remove).FullName)
+            {
+                return typeof(Repositories.Remove);
+            }
+            return typeof(Repositories.Getter);
+        }
+
+        private void GetCommand(IQuery query)
+        {
+            _command = $"{Exec}{Gap}{Schema}{Point}{query.Name}{Gap}{query.Params}";
         }
     }
 }

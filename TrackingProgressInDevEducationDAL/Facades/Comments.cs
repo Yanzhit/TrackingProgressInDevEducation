@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Comment> NullifyComments()
         {
-            return (List<Comment>)Manager.Nullify.Null(Query.NullifyComments());
+            return (List<Comment>)Manager.Remove.Rem(Query.NullifyComments());
         }
     }
 }

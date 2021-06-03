@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Cities = new List<City>
             {
-                new("Санкт-Петербург"),
+                new("СПБ"),
                 new("Москва"),
                 new("Владимир"),
                 new("Самара"),

@@ -69,7 +69,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment RemovePaymentById(int id)
         {
-            return (Payment)Manager.Nullify.Null(Query.RemovePaymentById(id));
+            return (Payment)Manager.Remove.Rem(Query.RemovePaymentById(id));
         }
 
         ///// <summary>
@@ -120,7 +120,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Payment> NullifyPayments()
         {
-            return (IEnumerable<Payment>)Manager.Nullify.Null(Query.NullifyPayments());
+            return (IEnumerable<Payment>)Manager.Remove.Rem(Query.NullifyPayments());
         }
     }
 }

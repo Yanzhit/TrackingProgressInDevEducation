@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
@@ -7,7 +8,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLector : IQuery
     {
-        public Type Type { get; } = typeof(Lector);
+        public Type Type { get; set; } = typeof(AResult);
+        public Type Test { get; } = typeof(Lector);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -26,6 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QLector GetLectorById(int id)
         {
+            Type = typeof(Lector);
             Name = nameof(GetLectorById);
             Params = $"{id}";
             return this;

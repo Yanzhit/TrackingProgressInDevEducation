@@ -1,14 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using Dapper;
+﻿using System;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Getter : ASingle
+    public class Getter : ARepository
     {
-        public static IEnumerable<T> Several<T>(IDbConnection connection, string command)
+        public Getter() : base()
         {
-            return connection.Query<T>(command);
         }
     }
 }

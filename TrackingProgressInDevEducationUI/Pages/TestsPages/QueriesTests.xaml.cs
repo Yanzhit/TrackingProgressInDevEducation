@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL.BLLModels.Bases;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 
 namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 {
@@ -27,12 +28,12 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             if (GetStudentsRadioButton.IsChecked == true)
             {
                 FacadeManager f = new FacadeManager();
-                var citys = f.Cities.NullifyCities();
+                var citys = f.Cities.GetAllCities();
                 //students = f.Students.GetAllStudents();
-                //foreach (var student in students)
-                //{
-                //    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
-                //}
+                foreach (var student in citys)
+                {
+                    RequestViewTextBox.Text += $"{student.Name}\n";
+                }
             }
 
             if (GetStudentsByIdRadioButton.IsChecked == true)
@@ -42,9 +43,10 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
                 //
                 //BCity tBCity = new BCity(tCity);
                 FacadeManager f = new FacadeManager();
-                City city = f.Cities.SetNewCity("Пирва");
+                AResult aResult = f.Cities.SetNewCity("Пирва");
+                RequestViewTextBox.Text += $"Вы добавили город по id {aResult.Id}";
                 //Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
-                RequestViewTextBox.Text += $"{city.Name}";
+                //RequestViewTextBox.Text += $"{city.Name}";
             }
         }
     }

@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<CType> NullifyCTypes()
         {
-            return (IEnumerable<CType>)Manager.Nullify.Null(Query.NullifyCTypes());
+            return (IEnumerable<CType>)Manager.Remove.Rem(Query.NullifyCTypes());
         }
     }
 }

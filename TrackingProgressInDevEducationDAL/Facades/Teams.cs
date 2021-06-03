@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Team> NullifyTeams()
         {
-            return (IEnumerable<Team>)Manager.Nullify.Null(Query.NullifyTeams());
+            return (IEnumerable<Team>)Manager.Remove.Rem(Query.NullifyTeams());
         }
     }
 }

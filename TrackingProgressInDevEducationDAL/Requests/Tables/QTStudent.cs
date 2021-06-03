@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewTStudent, NullifyTStudent))
@@ -10,7 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QTStudent : IQuery
     {
-        public Type Type { get; } = typeof(TStudent);
+        public Type Type { get; set; } = typeof(AResult);
+        public Type Test { get; } = typeof(TStudent);
         public string Name { get; set; }
         public string Params { get; set; }
         

@@ -1,6 +1,11 @@
-﻿namespace TrackingProgressInDevEducationDAL.Repositories
+﻿using System;
+
+namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Remove : ASingle
+    public class Remove : ARepository
     {
+        public Remove() : base()
+        {
+        }
     }
 }

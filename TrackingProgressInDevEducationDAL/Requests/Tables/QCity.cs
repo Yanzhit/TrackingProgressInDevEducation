@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 //ZLoo (Свойства все, Методы(SetNewCity, GetAllCities, NullifyCities))
@@ -10,7 +11,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCity : IQuery
     {
-        public Type Type { get; } = typeof(Result);
+        public Type Type { get; set; }
+        public Type Test { get; } = typeof(City);
+
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -21,6 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity SetNewCity(string name)
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewCity);
             Params = $"{name}";
             return this;
@@ -32,6 +36,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity GetAllCities()
         {
+            Type = typeof(City);
             Name = nameof(GetAllCities);
             Params = string.Empty;
             return this;
@@ -43,6 +48,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity NullifyCities()
         {
+            Type = typeof(Remove);
             Name = nameof(NullifyCities);
             Params = string.Empty;
             return this;

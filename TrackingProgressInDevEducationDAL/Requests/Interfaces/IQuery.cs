@@ -8,8 +8,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Interfaces
         /// <summary>
         /// Тайп модели на базе которой работаем
         /// </summary>
-        Type Type { get; }
+        Type Type { get; set; }
 
+        /// <summary>
+        /// Тип модели для Unit тестов
+        /// </summary>
+        Type Test { get; }
         /// <summary>
         /// Название процедуры(Берется из названия метода) не допускается различий
         /// </summary>

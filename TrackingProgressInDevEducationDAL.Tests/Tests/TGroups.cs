@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EGroups), nameof(EGroups.SetNewGroup))]
         public void SetNewGroupTest(IQuery query, Group group, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.Test);
             FacadeManager.Groups.SetNewGroup(group.Name, group.CourseId);
             //Assert.AreEqual(expected, actual);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EGroups), nameof(EGroups.NullifyGroups))]
         public void NullifyGroupsTest(IQuery query, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.Test);
             FacadeManager.Groups.NullifyGroups();
             //Assert.AreEqual(expected, actual);
         }

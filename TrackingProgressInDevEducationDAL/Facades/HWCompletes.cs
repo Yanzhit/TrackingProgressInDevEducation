@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<HWComplete> NullifyHWComplete()
         {
-            return (IEnumerable<HWComplete>)Manager.Nullify.Null(Query.NullifyHWComplete());
+            return (IEnumerable<HWComplete>)Manager.Remove.Rem(Query.NullifyHWComplete());
         }
     }
 }

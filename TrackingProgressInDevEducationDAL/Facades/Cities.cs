@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
@@ -15,9 +16,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="name">Имя города</param>
         /// <returns>Город</returns>
-        public City SetNewCity(string name)
+        public AResult SetNewCity(string name)
         {
-            return (City)Manager.Setter.Single(Query.SetNewCity(name));
+            return (AResult)Manager.Setter.Single(Query.SetNewCity(name));
         }
 
         /// <summary>
@@ -33,9 +34,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Городов и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<City> NullifyCities()
+        public IEnumerable<AResult> NullifyCities()
         {
-            return (List<City>)Manager.Nullify.Null(Query.NullifyCities());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(Query.NullifyCities());
         }
     }
 }

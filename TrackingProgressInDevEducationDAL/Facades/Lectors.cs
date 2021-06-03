@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Lector> NullifyLectors()
         {
-            return (IEnumerable<Lector>)Manager.Nullify.Null(Query.NullifyLectors());
+            return (IEnumerable<Lector>)Manager.Remove.Rem(Query.NullifyLectors());
         }
     }
 }

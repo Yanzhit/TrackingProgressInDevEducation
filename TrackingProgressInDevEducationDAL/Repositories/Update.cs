@@ -1,6 +1,11 @@
-﻿namespace TrackingProgressInDevEducationDAL.Repositories
+﻿using System;
+
+namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Update : ASingle
+    public class Update : ARepository
     {
+        public Update() : base()
+        {
+        }
     }
 }
