@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lection : AbstractModel
     {
-        public int CourseId { get; set; }
+        public int GroupId { get; set; }
         public int LectorId { get; set; }
         public DateTime StartedOn { get; set; }
 
@@ -16,9 +16,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
         }
 
-        public Lection(int courseId, int lectorId, DateTime startedOn)
+        public Lection(int groupId, int lectorId, DateTime startedOn)
         {
-            CourseId = courseId;
+            GroupId = groupId;
             LectorId = lectorId;
             StartedOn = startedOn;
         }
@@ -30,14 +30,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Lection other)
         {
-            return CourseId == other.CourseId
+            return GroupId == other.GroupId
                    && LectorId == other.LectorId
                    && StartedOn == other.StartedOn;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(CourseId, LectorId, StartedOn);
+            return HashCode.Combine(GroupId, LectorId, StartedOn);
         }
     }
 }
