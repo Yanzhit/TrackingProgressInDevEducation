@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AutoMapper;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using Group = System.Text.RegularExpressions.Group;
+
+namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
+{
+    public class BGroup : BAbstractModel
+    {
+        public string Name { get; set; }
+        public int CourseId { get; set; }
+
+        public BGroup()
+        {
+        }
+
+        public BGroup(Group group)
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, BGroup>());
+            Mapper mapper = new Mapper(config);
+
+            BGroup tmpBGroup = new BGroup();
+            tmpBGroup = mapper.Map<BGroup>(group);
+            this.Name = tmpBGroup.Name;
+            this.CourseId = tmpBGroup.CourseId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((BGroup)obj);
+        }
+
+        private bool Equals(BGroup other)
+        {
+            return Name == other.Name
+                   && CourseId == other.CourseId;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, CourseId);
+        }
+    }
+}
