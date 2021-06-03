@@ -17,7 +17,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Группа</returns>
         public Group SetNewGroup(string name, int courseId)
         {
-            return (Group)QuerySet.QuerySet(Query.SetNewGroup(name, courseId));
+            return (Group)Manager.Setter.Single(Query.SetNewGroup(name, courseId));
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Group> NullifyGroups()
         {
-            return (IEnumerable<Group>)QuerySet.QuerySet(Query.NullifyGroups());
+            return (IEnumerable<Group>)Manager.Nullify.Null(Query.NullifyGroups());
         }
     }
 }

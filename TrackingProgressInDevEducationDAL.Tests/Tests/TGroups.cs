@@ -1,8 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Facades;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewGroupTest(IQuery query, Group group, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Groups.SetNewGroup(group.Name, group.CourseId);
+            FacadeManager.Groups.SetNewGroup(group.Name, group.CourseId);
             //Assert.AreEqual(expected, actual);
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyGroupsTest(IQuery query, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Groups.NullifyGroups();
+            FacadeManager.Groups.NullifyGroups();
             //Assert.AreEqual(expected, actual);
         }
     }

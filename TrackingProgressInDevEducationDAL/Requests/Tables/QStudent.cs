@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -8,7 +8,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QStudent : IQuery
     {
         public Type Type { get; } = typeof(Student);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -44,7 +43,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
                 bool status
             )
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewStudent);
             Params = $"{name}{Sep}{surname}{Sep}{rate}{Sep}{groupId}{Sep}" +
                      $"{phone}{Sep}{email}{Sep}{contract}{Sep}{birthday}{Sep}" +
@@ -58,7 +56,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent GetAllStudents()
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(GetAllStudents);
             Params = string.Empty;
             return this;
@@ -70,7 +67,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent NullifyStudents()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyStudents);
             Params = string.Empty;
             return this;
@@ -78,7 +74,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         //public QStudent GetByIdStudent(int id)
         //{
-        //    TypeQueries = TypeQueries.GetOne;
         //    Name = nameof(GetByIdStudent);
         //    Params = $"{id}";
         //    return this;

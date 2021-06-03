@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Тип комментариев</returns>
         public CType SetNewCType(string name)
         {
-            return (CType)QuerySet.QuerySet(Query.SetNewCType(name));
+            return (CType)Manager.Setter.Single(Query.SetNewCType(name));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<CType> NullifyCTypes()
         {
-            return (IEnumerable<CType>)QuerySet.QuerySet(Query.NullifyCTypes());
+            return (IEnumerable<CType>)Manager.Nullify.Null(Query.NullifyCTypes());
         }
     }
 }

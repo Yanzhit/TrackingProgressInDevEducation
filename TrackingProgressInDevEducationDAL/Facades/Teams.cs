@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public Team SetNewTeam(string name)
         {
-            return (Team)QuerySet.QuerySet(Query.SetNewTeam(name));
+            return (Team) Manager.Setter.Single(Query.SetNewTeam(name));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Team> NullifyTeams()
         {
-            return (IEnumerable<Team>)QuerySet.QuerySet(Query.NullifyTeams());
+            return (IEnumerable<Team>)Manager.Nullify.Null(Query.NullifyTeams());
         }
     }
 }

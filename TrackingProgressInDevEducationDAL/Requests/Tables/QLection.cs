@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewLection, GetAllLector, NullifyLections))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QLection : IQuery
     {
         public Type Type { get; } = typeof(Lection);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,7 +23,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QLection SetNewLection(int groupId, int lectorId, DateTime startedOn)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewLection);
             Params = $"{groupId}{Sep}{lectorId}{Sep}{startedOn}";
             return this;
@@ -36,7 +34,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QLection GetAllLector()
         {
-            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllLector);
             Params = string.Empty;
             return this;
@@ -48,7 +45,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QLection NullifyLections()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyLections);
             Params = string.Empty;
             return this;

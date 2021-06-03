@@ -4,7 +4,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Abstract
 {
     public class AExpected
     {
-        protected ManagerQueries Manager { get; set; }
+        protected FacadeManager FacadeManager { get; set; }
         protected object Expected { get; set; }
     }
 }

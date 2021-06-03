@@ -17,16 +17,16 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Город</returns>
         public City SetNewCity(string name)
         {
-            return (City)QuerySet.QuerySet(Query.SetNewCity(name));
+            return (City)Manager.Setter.Single(Query.SetNewCity(name));
         }
 
         /// <summary>
         /// Получить все города
         /// </summary>
         /// <returns></returns>
-        public async Task<IEnumerable<City>> GetAllCities()
+        public IEnumerable<City> GetAllCities()
         {
-            return (IEnumerable<City>)QuerySet.QuerySet(Query.GetAllCities());
+            return (IEnumerable<City>)Manager.Getter.Several(Query.GetAllCities());
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<City> NullifyCities()
         {
-            return (List<City>)QuerySet.QuerySet(Query.NullifyCities());
+            return (List<City>)Manager.Nullify.Null(Query.NullifyCities());
         }
     }
 }

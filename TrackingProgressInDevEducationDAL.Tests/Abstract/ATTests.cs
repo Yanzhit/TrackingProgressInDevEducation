@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Abstract
         /// <summary>
         /// Фасад запросов
         /// </summary>
-        protected readonly ManagerQueries _manager = new();
+        protected readonly FacadeManager FacadeManager = new();
 
         /// <summary>
         /// Очистка и заполнение базы данных по входящему типу модели

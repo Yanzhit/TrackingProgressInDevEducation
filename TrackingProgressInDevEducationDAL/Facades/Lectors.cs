@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector SetNewLector(string fullName, string email, string password)
         {
-            return (Lector)QuerySet.QuerySet(Query.SetNewLector(fullName, email, password));
+            return (Lector)Manager.Setter.Single(Query.SetNewLector(fullName, email, password));
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector GetLectorById(int id)
         {
-            return (Lector)QuerySet.QuerySet(Query.GetLectorById(id));
+            return (Lector)Manager.Setter.Single(Query.GetLectorById(id));
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Lector> NullifyLectors()
         {
-            return (IEnumerable<Lector>)QuerySet.QuerySet(Query.NullifyLectors());
+            return (IEnumerable<Lector>)Manager.Nullify.Null(Query.NullifyLectors());
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
             bool status
         )
         {
-            return (Payment) QuerySet.QuerySet
+            return (Payment) Manager.Setter.Single
             (
                 Query.AddNewPayment
                 (
@@ -48,7 +48,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment ChangePaymentAmount(decimal amount, int id)
         {
-            return (Payment)QuerySet.QuerySet(Query.ChangePaymentAmount(amount, id));
+            return (Payment)Manager.Update.Upd(Query.ChangePaymentAmount(amount, id));
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment ClosePayment(DateTime date, int id)
         {
-            return (Payment)QuerySet.QuerySet(Query.ClosePayment(date, id));
+            return (Payment)Manager.Update.Upd(Query.ClosePayment(date, id));
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Платеж</returns>
         public Payment RemovePaymentById(int id)
         {
-            return (Payment)QuerySet.QuerySet(Query.RemovePaymentById(id));
+            return (Payment)Manager.Nullify.Null(Query.RemovePaymentById(id));
         }
 
         ///// <summary>
@@ -80,7 +80,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         ///// <returns></returns>
         //public Payment UpdatePaymentSetDateAndStatus(int id, DateTime newDate)
         //{
-        //    return (Payment)_query.QuerySet(_qPayment.UpdatePaymentSetDateAndStatus(id, newDate));
+        //    return (Payment)_query.Manager(_qPayment.UpdatePaymentSetDateAndStatus(id, newDate));
         //}
 
         ///// <summary>
@@ -91,7 +91,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         ///// <returns></returns>
         //public Payment UpdatePaymentTeam(int id, DateTime newDate)
         //{
-        //    return (Payment)_query.QuerySet(_qPayment.UpdatePaymentTeam(id, newDate));
+        //    return (Payment)_query.Manager(_qPayment.UpdatePaymentTeam(id, newDate));
         //}
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Списки платежей</returns>
         public IEnumerable<Payment> GetAllPaymentsByGroup(int group)
         {
-            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.GetAllPaymentsByGroup(group));
+            return (IEnumerable<Payment>)Manager.Getter.Several(Query.GetAllPaymentsByGroup(group));
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Список</returns>
         public IEnumerable<Payment> GetAllPaymentsByStudent(int student)
         {
-            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.GetAllPaymentsByStudent(student));
+            return (IEnumerable<Payment>)Manager.Getter.Several(Query.GetAllPaymentsByStudent(student));
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Payment> NullifyPayments()
         {
-            return (IEnumerable<Payment>)QuerySet.QuerySet(Query.NullifyPayments());
+            return (IEnumerable<Payment>)Manager.Nullify.Null(Query.NullifyPayments());
         }
     }
 }

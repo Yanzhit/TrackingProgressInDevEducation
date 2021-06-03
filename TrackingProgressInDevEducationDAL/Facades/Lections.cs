@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Лекция</returns>
         public Lection SetNewLection(int groupId, int lectorId, DateTime startedOn)
         {
-            return (Lection)QuerySet.QuerySet(Query.SetNewLection(groupId, lectorId, startedOn));
+            return (Lection)Manager.Setter.Single(Query.SetNewLection(groupId, lectorId, startedOn));
         }
 
         ///// <summary>
@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         ///// <returns></returns>
         //public IEnumerable<Lection> GetAllLector()
         //{
-        //    return (List<Lection>)_query.QuerySet(_qLection.GetAllLector());
+        //    return (List<Lection>)_query.Manager(_qLection.GetAllLector());
         //}
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Lection> NullifyLections()
         {
-            return (IEnumerable<Lection>)QuerySet.QuerySet(Query.NullifyLections());
+            return (IEnumerable<Lection>)Manager.Nullify.Null(Query.NullifyLections());
         }
     }
 }

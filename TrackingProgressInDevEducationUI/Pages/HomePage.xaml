@@ -85,7 +85,7 @@
         <Button
             Style="{DynamicResource ButtonStyles}"
             Content="Создать команду" 
-            Margin="593,374,0,0" 
+            Margin="636,358,0,0" 
         />
         
         <Image 

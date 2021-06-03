@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Завершенное ДЗ</returns>
         public HWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            return (HWComplete)QuerySet.QuerySet(Query.SetNewHWComplete(homeworkId, studentId, status));
+            return (HWComplete)Manager.Setter.Single(Query.SetNewHWComplete(homeworkId, studentId, status));
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<HWComplete> NullifyHWComplete()
         {
-            return (IEnumerable<HWComplete>)QuerySet.QuerySet(Query.NullifyHWComplete());
+            return (IEnumerable<HWComplete>)Manager.Nullify.Null(Query.NullifyHWComplete());
         }
     }
 }

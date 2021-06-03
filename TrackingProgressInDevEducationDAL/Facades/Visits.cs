@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Посещение</returns>
         public Visit SetNewVisit(bool visitStatus, int studentId, int lectionId)
         {
-            return (Visit)QuerySet.QuerySet(Query.SetNewVisit(visitStatus, studentId, lectionId));
+            return (Visit)Manager.Setter.Single(Query.SetNewVisit(visitStatus, studentId, lectionId));
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Visit> NullifyVisits()
         {
-            return (IEnumerable<Visit>)QuerySet.QuerySet(Query.NullifyVisits());
+            return (IEnumerable<Visit>)Manager.Nullify.Null(Query.NullifyVisits());
         }
     }
 }

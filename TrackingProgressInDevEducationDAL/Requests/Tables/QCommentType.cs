@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 //ZLoo (Свойства все, Методы(SetNewCTypeБ NullifyCTypes))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QCommentType : IQuery
     {
         public Type Type { get; } = typeof(CType);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -22,7 +21,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns></returns>
         public QCommentType SetNewCType(string name)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewCType);
             Params = $"{name}";
             return this;
@@ -34,7 +32,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns></returns>
         public QCommentType NullifyCTypes()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyCTypes);
             Params = string.Empty;
             return this;
@@ -43,21 +40,18 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
        
         //public QCommentType RemoveSelectedCommentType(int id)
         //{
-        //    TypeQueries = TypeQueries.RemoveOne;
         //    Name = nameof(RemoveSelectedCommentType);
         //    Params = $"{id}";
         //    return this;
         //}
         //public QCommentType GetAllCommentTypes()
         //{
-        //    TypeQueries = TypeQueries.GetSeveral;
         //    Name = nameof(GetAllCommentTypes);
         //    Params = string.Empty;
         //    return this;
         //}
         //public QCommentType UpdateCommentTypeById(int id, string name)
         //{
-        //    TypeQueries = TypeQueries.UpdateOne;
         //    Name = nameof(UpdateCommentTypeById);
         //    Params = $"{id}{Sep}{name}";
         //    return this;

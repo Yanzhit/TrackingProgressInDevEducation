@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWComplete, NullifyHWComplete)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QHWComplete : IQuery
     {
         public Type Type { get; } = typeof(HWComplete);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,7 +23,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWComplete);
             Params = $"{homeworkId}{Sep}{studentId}{Sep}{status}";
             return this;
@@ -36,7 +34,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWComplete NullifyHWComplete()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHWComplete);
             Params = string.Empty;
             return this;
@@ -44,14 +41,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         //public QHWComplete UpdateHWCompleteByIdHW(int homeworkId, bool status)
         //{
-        //    TypeQueries = TypeQueries.UpdateOne;
         //    Name = nameof(UpdateHWCompleteByIdHW);
         //    Params = $"{homeworkId}{Sep}{status}";
         //    return this;
         //}
         //public QHWComplete UpdateHWCompleteByIdStudents(int studentId, bool status)
         //{
-        //    TypeQueries = TypeQueries.UpdateOne;
         //    Name = nameof(UpdateHWCompleteByIdStudents);
         //    Params = $"{studentId}{Sep}{status}";
         //    return this;

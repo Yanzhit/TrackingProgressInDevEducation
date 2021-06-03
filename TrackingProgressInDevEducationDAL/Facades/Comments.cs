@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
             int teamId
         )
         {
-            return (Comment) QuerySet.QuerySet
+            return (Comment) Manager.Setter.Single
             (
                 Query.SetNewComment
                 (
@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Comment> NullifyComments()
         {
-            return (List<Comment>)QuerySet.QuerySet(Query.NullifyComments());
+            return (List<Comment>)Manager.Nullify.Null(Query.NullifyComments());
         }
     }
 }

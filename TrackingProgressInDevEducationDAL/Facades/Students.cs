@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
             bool status
         )
         {
-            return (Student)QuerySet.QuerySet(Query.SetNewStudent
+            return (Student)Manager.Setter.Single(Query.SetNewStudent
                 (
                     name,
                     surname,
@@ -66,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Студенты</returns>
         public IEnumerable<Student> GetAllStudents()
         {
-            return (IEnumerable<Student>)QuerySet.QuerySet(Query.GetAllStudents());
+            return (IEnumerable<Student>)Manager.Getter.Several(Query.GetAllStudents());
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Student> NullifyStudents()
         {
-            return (IEnumerable<Student>)QuerySet.QuerySet(Query.NullifyStudents());
+            return (IEnumerable<Student>)Manager.Nullify.Null(Query.NullifyStudents());
         }
 
     }

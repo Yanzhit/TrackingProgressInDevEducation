@@ -2,6 +2,6 @@
 {
     public abstract class AFacade
     {
-        protected readonly QuerySettings QuerySet = new();
+        protected readonly QueriesManager Manager = new();
     }
 }

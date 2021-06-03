@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public QTStudent SetNewTStudent(int teamId, int studentId)
         {
-            return (QTStudent)QuerySet.QuerySet(Query.SetNewTStudent(teamId, studentId));
+            return (QTStudent)Manager.Setter.Single(Query.SetNewTStudent(teamId, studentId));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<QTStudent> NullifyTStudent()
         {
-            return (IEnumerable<QTStudent>)QuerySet.QuerySet(Query.NullifyTStudent());
+            return (IEnumerable<QTStudent>)Manager.Nullify.Null(Query.NullifyTStudent());
         }
     }
 }

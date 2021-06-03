@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Курс</returns>
         public Course SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
-            return (Course)QuerySet.QuerySet(Query.SetNewCourse(name, startedOn, finishedOn));
+            return (Course)Manager.Setter.Single(Query.SetNewCourse(name, startedOn, finishedOn));
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Course> NullifyCourses()
         {
-            return (IEnumerable<Course>)QuerySet.QuerySet(Query.NullifyCourses());
+            return (IEnumerable<Course>)Manager.Nullify.Null(Query.NullifyCourses());
         }
     }
 }

@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>ДЗ</returns>
         public Homework SetNewHW(string name)
         {
-            return (Homework)QuerySet.QuerySet(Query.SetNewHW(name));
+            return (Homework)Manager.Setter.Single(Query.SetNewHW(name));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<Homework> NullifyHWs()
         {
-            return (IEnumerable<Homework>)QuerySet.QuerySet(Query.NullifyHWs());
+            return (IEnumerable<Homework>)Manager.Nullify.Null(Query.NullifyHWs());
         }
     }
 }

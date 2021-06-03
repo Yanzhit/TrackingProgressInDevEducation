@@ -6,7 +6,7 @@ using TrackingProgressInDevEducationDAL.Repositories.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Nullify : ISeveral
+    public class Update : ISeveral
     {
         public async Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
         {

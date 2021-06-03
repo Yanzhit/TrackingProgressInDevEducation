@@ -1,7 +1,7 @@
 ﻿using System;
 
 //ZLoo (Все ок)
-namespace TrackingProgressInDevEducationDAL.Interfaces
+namespace TrackingProgressInDevEducationDAL.Requests.Interfaces
 {
     public interface IQuery
     {
@@ -9,11 +9,6 @@ namespace TrackingProgressInDevEducationDAL.Interfaces
         /// Тайп модели на базе которой работаем
         /// </summary>
         Type Type { get; }
-
-        /// <summary>
-        /// Тип запроса(Set, Get, Upd, Remove, Nullify) для работы с одним, либо несколькими объектами
-        /// </summary>
-        TypeQueries TypeQueries { get; set; }
 
         /// <summary>
         /// Название процедуры(Берется из названия метода) не допускается различий

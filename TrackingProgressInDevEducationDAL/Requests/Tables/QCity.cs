@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 //ZLoo (Свойства все, Методы(SetNewCity, GetAllCities, NullifyCities))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QCity : IQuery
     {
         public Type Type { get; } = typeof(City);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -22,7 +21,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity SetNewCity(string name)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewCity);
             Params = $"{name}";
             return this;
@@ -34,7 +32,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity GetAllCities()
         {
-            TypeQueries = TypeQueries.Several;
             Name = nameof(GetAllCities);
             Params = string.Empty;
             return this;
@@ -46,7 +43,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity NullifyCities()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyCities);
             Params = string.Empty;
             return this;
@@ -54,7 +50,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         //public QCity GetCityById(int id)
         //{
-        //    TypeQueries = TypeQueries.GetOne;
         //    Name = nameof(GetCityById);
         //    Params = $"{id}";
         //    return this;
@@ -62,7 +57,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         //public QCity RemoveCityById(int id)
         //{
-        //    TypeQueries = TypeQueries.RemoveOne;
         //    Name = nameof(RemoveCityById);
         //    Params = $"{id}";
         //    return this;

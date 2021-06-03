@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL
 {
-    public class ManagerQueries
+    public class FacadeManager
     {
         /// <summary>
         /// Фасад для городов.

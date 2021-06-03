@@ -15,7 +15,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<LectorGroup> SetNewLectorGroup(int lectorId, int groupId)
         {
-            return (IEnumerable<LectorGroup>)QuerySet.QuerySet(Query.SetNewLectorGroup(lectorId, groupId));
+            return (IEnumerable<LectorGroup>)Manager.Setter.Single(Query.SetNewLectorGroup(lectorId, groupId));
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<LectorGroup> NullifyLectorGroup()
         {
-            return (IEnumerable<LectorGroup>)QuerySet.QuerySet(Query.NullifyLectorGroup());
+            return (IEnumerable<LectorGroup>)Manager.Nullify.Null(Query.NullifyLectorGroup());
         }
     }
 }

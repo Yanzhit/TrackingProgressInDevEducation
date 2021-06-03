@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>ДЗ ГРУППЫ</returns>
         public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
-            return (QHWGroup)QuerySet.QuerySet(Query.SetNewHWGroup(homeworkId, groupId));
+            return (QHWGroup)Manager.Setter.Single(Query.SetNewHWGroup(homeworkId, groupId));
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<QHWGroup> NullifyHWGroup()
         {
-            return (IEnumerable<QHWGroup>)QuerySet.QuerySet(Query.NullifyHWGroup());
+            return (IEnumerable<QHWGroup>)Manager.Nullify.Null(Query.NullifyHWGroup());
         }
     }
 }

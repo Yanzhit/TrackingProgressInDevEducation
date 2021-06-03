@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewTStudent, NullifyTStudent))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QTStudent : IQuery
     {
         public Type Type { get; } = typeof(TStudent);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
         
@@ -23,7 +22,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTStudent SetNewTStudent(int teamId, int studentId)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewTStudent);
             Params = $"{teamId}{Sep}{studentId}";
             return this;
@@ -34,7 +32,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTStudent NullifyTStudent()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyTStudent);
             Params = string.Empty;
             return this;

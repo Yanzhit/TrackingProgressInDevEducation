@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCommentTest(IQuery query, Comment comment, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Comments.SetNewComment
+            FacadeManager.Comments.SetNewComment
             (
                 comment.Text, 
                 comment.TypeId, 
@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCommentsTest(IQuery query, object expected)
         {
             PreparindDB(query.Type);
-            _manager.Comments.NullifyComments();
+            FacadeManager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }
     }

@@ -1,6 +1,6 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWGroup, NullifyHWGroup)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,7 +11,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QHWGroup : IQuery
     {
         public Type Type { get; } = typeof(HWGroup);
-        public TypeQueries TypeQueries { get; set; }
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -23,7 +22,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
-            TypeQueries = TypeQueries.Single;
             Name = nameof(SetNewHWGroup);
             Params = $"{homeworkId}{Sep}{groupId}";
             return this;
@@ -35,7 +33,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWGroup NullifyHWGroup()
         {
-            TypeQueries = TypeQueries.Nullify;
             Name = nameof(NullifyHWGroup);
             Params = string.Empty;
             return this;
