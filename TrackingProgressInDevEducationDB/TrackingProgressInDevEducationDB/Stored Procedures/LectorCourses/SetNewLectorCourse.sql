@@ -9,7 +9,6 @@ AS
 		 [LectorId]
 		,[CourseId]
 	)
-	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @LectorId
