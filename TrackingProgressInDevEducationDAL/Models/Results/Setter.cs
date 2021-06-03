@@ -5,6 +5,7 @@
         public Setter()
         {
         }
+
         public Setter(int id):base(id)
         {
             Id = id;
