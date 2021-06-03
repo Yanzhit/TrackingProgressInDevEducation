@@ -4,7 +4,7 @@ using AutoMapper;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCity : BAbstractModel
+    public class BCity
     {
         public string Name { get; set; }
 

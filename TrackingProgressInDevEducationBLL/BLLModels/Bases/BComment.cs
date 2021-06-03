@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BComment : BAbstractModel
+    public class BComment
     {
         public string Text { get; set; }
         public int TypeId { get; set; }

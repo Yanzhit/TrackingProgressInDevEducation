@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCourse : BAbstractModel
+    public class BCourse
     {
         public string Name { get; set; }
         public DateTime StartedOn { get; set; }
