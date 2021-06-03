@@ -6,17 +6,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public string Text { get; set; }
         public int TypeId { get; set; }
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
         public int CreatedBy { get; set; }
-        public int TeamId { get; set; }
+        public int? TeamId { get; set; }
+        public decimal? Estimation { get; set; }
 
         public Comment
             (
                 string text,
                 int typeId,
-                int studentId,
+                int? studentId,
                 int createdBy,
-                int teamId
+                int? teamId,
+                decimal? estimation
             )
         {
             Text = text;
@@ -24,6 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             StudentId = studentId;
             CreatedBy = createdBy;
             TeamId = teamId;
+            Estimation = estimation;
         }
         public override bool Equals(object obj)
         {
@@ -36,12 +39,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
                    && TypeId == other.TypeId
                    && StudentId == other.StudentId
                    && CreatedBy == other.CreatedBy
-                   && TeamId == other.TeamId;
+                   && TeamId == other.TeamId
+                   && Estimation == other.Estimation;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId);
+            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId, Estimation);
         }
     }
 }
