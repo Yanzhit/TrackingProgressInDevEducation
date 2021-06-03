@@ -11,16 +11,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public decimal Rate { get; set; }
-        public int GroupId { get; set; }
+        public decimal? Rate { get; set; }
+        public int? GroupId { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Contract { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
         public string MiddleName { get; set; }
         public string Git { get; set; }
-        public int CityId { get; set; }
-        public bool Status { get; set; }
+        public int? CityId { get; set; }
+        public bool? Status { get; set; }
 
         public Student()
         {
@@ -30,16 +30,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         (
             string name,
             string surname,
-            decimal rate,
-            int groupId,
+            decimal? rate,
+            int? groupId,
             string phone,
             string email,
             string contract,
-            DateTime birthday,
+            DateTime? birthday,
             string middleName,
             string git,
-            int cityId,
-            bool status
+            int? cityId,
+            bool? status
         )
         {
             Name = name;

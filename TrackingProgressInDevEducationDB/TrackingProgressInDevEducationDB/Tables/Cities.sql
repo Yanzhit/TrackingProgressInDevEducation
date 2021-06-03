@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [TrackingProgressInDevEducationDB].[Cities]
 (
-	[id] INT NOT NULL PRIMARY KEY, 
-    [Name] NVARCHAR(50) NULL
+	[id] INT IDENTITY (1, 1) NOT NULL,
+    [Name] NVARCHAR(50) NULL, 
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([id])
 )

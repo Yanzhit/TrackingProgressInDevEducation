@@ -1,45 +1,32 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Groups
+    public class Groups : AFacade
     {
-        private readonly QGroup Query = new();
-        //public static IEnumerable<Group> GetGroups()
-        //{
-        //    return (List<Group>) QuerySettings.QuerySet(Query.GetGroups());
-        //}
-        //public static Group SetNewGroup(string name, int courseId)
-        //{
-        //    return (Group)QuerySettings.QuerySet(Query.SetNewGroup(name, courseId));
-        //}
-        //public static IEnumerable<Group> GetGroupById(int id)
-        //{
-        //    return (List<Group>)QuerySettings.QuerySet(Query.GetGroupById(id));
-        //}
-        //public static IEnumerable<Group> RemoveGroupById(int id)
-        //{
-        //    return (List<Group>)QuerySettings.QuerySet(Query.RemoveGroupById(id));
-        //}
-        //public static IEnumerable<Group> UpdateGroupById(int id, string name, int courseId)
-        //{
-        //    return (List<Group>)QuerySettings.QuerySet(Query.UpdateGroupById(id, name, courseId));
-        //}
-        //public static IEnumerable<Group> NullifyGroups()
-        //{
-        //    return (List<Group>)QuerySettings.QuerySet(Query.NullifyGroups());
-        //}
-    }
-    
+        public QGroup Query { get; init; }
 
-    //public class FacadeGetGroupsByLector
-    //{
-    //    public List<Group> GetGroupsByLector(int lectorId)
-    //    {
-    //        GetGroupsByLector getGroupsByLector = new GetGroupsByLector(lectorId);
-    //        return (List<Group>)QuerySettings.QuerySet(Query.GetGroupsByLector);
-    //    }
-    //}
+        /// <summary>
+        /// Создать новую Группу
+        /// </summary>
+        /// <param name="name">Имя Группы</param>
+        /// <param name="courseId"></param>
+        /// <returns>Группа</returns>
+        public Group SetNewGroup(string name, int courseId)
+        {
+            return (Group)Manager.Setter.Single(Query.SetNewGroup(name, courseId));
+        }
+
+        /// <summary>
+        /// Обнуление таблицы Группы и ключа identity
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Group> NullifyGroups()
+        {
+            return (IEnumerable<Group>)Manager.Remove.Rem(Query.NullifyGroups());
+        }
+    }
 }

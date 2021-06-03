@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
+using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.BLLModels.Bases;
 using TrackingProgressInDevEducationDAL;
-using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 
 namespace TrackingProgressInDevEducationUI.Pages.TestsPages
 {
@@ -17,10 +14,12 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
     public partial class QueriesTests : Page
     {
         private MainForm _mainForm;
+        public City tCity;
         public QueriesTests(MainForm mainForm)
         {
             InitializeComponent();
             _mainForm = mainForm;
+            tCity = new City("Вологдар");
         }
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
@@ -28,11 +27,12 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             IEnumerable<Student> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
-                Facade f = new Facade();
-                students = f.Students.GetAllStudents();
-                foreach (var student in students)
+                FacadeManager f = new FacadeManager();
+                var citys = f.Cities.GetAllCities();
+                //students = f.Students.GetAllStudents();
+                foreach (var student in citys)
                 {
-                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
+                    RequestViewTextBox.Text += $"{student.Name}\n";
                 }
             }
 
@@ -40,6 +40,13 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             {
                 //Student sss = FacadeStudent.GetByIdStudent(1);
                 //RequestViewTextBox.Text += $"{sss.Name} {sss.Surname} {sss.Rate}\n";
+                //
+                //BCity tBCity = new BCity(tCity);
+                FacadeManager f = new FacadeManager();
+                AResult aResult = f.Cities.SetNewCity("Пирва");
+                RequestViewTextBox.Text += $"Вы добавили город по id {aResult.Id}";
+                //Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
+                //RequestViewTextBox.Text += $"{city.Name}";
             }
         }
     }

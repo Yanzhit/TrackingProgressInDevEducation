@@ -1,20 +1,23 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class NullifyDB
     {
+        private readonly FacadeManager _manager = new();
+
         public void Nullify(Type type) 
         {
             switch (type.Name)
             {
+                case nameof(City):
+                    NullifyCities();
+                    break;
                 case nameof(Comment):
                     NullifyTableComments();
                     break;
-                case nameof(CommentType):
+                case nameof(CType):
                     NullifyTableCommentType();
                     break;
                 case nameof(Course):
@@ -50,7 +53,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Team):
                  //   NullifyTableTeams();
                     break;
-                case nameof(TeamStudent):
+                case nameof(TStudent):
                     NullifyTableTeamStudent();
                     break;
                 case nameof(Visit):
@@ -58,92 +61,85 @@ namespace TrackingProgressInDevEducationDAL.Tests
                     break;
             }
         }
+
+        private void NullifyCities()
+        {
+            _manager.Cities.NullifyCities();
+        }
+
         private void NullifyTableComments()
         {
-            //FacadeComments
-            var query = new QComment();
-            //QuerySettings.(query.NullifyComments());
+            _manager.Comments.NullifyComments();
         }
+
         private void NullifyTableCommentType()
         {
-            
-            
-            var query = new QCommentType();
-            //QuerySettings.QuerySet(query.NullifyCTypes());
+            _manager.CTypes.NullifyCTypes();
         }
+
         private void NullifyTableCourses()
         {
-            //FacadeCourses.
-            var query = new QCourse();
-            //QuerySettings.QuerySet(query.NullifyCourses());
+            _manager.Courses.NullifyCourses();
         }
+
         private void NullifyTableGroups()
         {
-            //FacadeGroups.
-            var query = new QGroup();
-            //QuerySettings.QuerySet(query.NullifyGroups());
+            _manager.Groups.NullifyGroups();
         }
+
         private void NullifyTableHomeworkComplete()
         {
-            //FacadeHomeworkComplete.
-            var query = new QHomeworkComplete();
-           // QuerySettings.QuerySet(query.NullifyHWComplete());
+            _manager.HWCompletes.NullifyHWComplete();
         }
+
         private void NullifyTableHomeworkGroup()
         {
-            //FacadeHomeworkGroup.
-            var query = new QHomeworkGroup();
-            //QuerySettings.QuerySet(query.NullifyTableHomeworkGroup());
+            _manager.HWGroups.NullifyHWGroup();
         }
+
         private void NullifyTableHomeworks()
         {
-            //FacadeHomeworks.
-            var query = new QHomework();
-            //QuerySettings.QuerySet(query.NullifyHWs());
+            _manager.Homeworks.NullifyHWs();
         }
+
         private void NullifyTableLections()
         {
-            //FacadeLections.
-            var query = new QLection();
-            //QuerySettings.QuerySet(query.NullifyLections());
+            _manager.Lections.NullifyLections();
         }
+
         private void NullifyTableLectorGroup()
         {
-            //FacadeLectorGroup
-            var query = new QLectorGroup();
-            //QuerySettings.QuerySet(query.NullifyLectorGroup());
+            _manager.LectorGroups.NullifyLectorGroup();
         }
+
         private void NullifyTableLectors()
         {
-            //FacadeLectors.
-            var query = new QLector();
-            //QuerySettings.QuerySet(query.NullifyLectors());
+            _manager.Lectors.NullifyLectors();
         }
+
         private void NullifyTablePayments()
         {
-            //FacadePayments.
-            var query = new QPayment();
-            //QuerySettings.QuerySet(query.NullifyPayments());
+            _manager.Payments.NullifyPayments();
         }
-        //private void NullifyTableStudents()
-        //{
-        //    Students.NullifyStudents();
-        //}
-        //private void NullifyTableTeams()
-        //{
-        //    Teams.NullifyTeams();
-        //}
+
+        private void NullifyTableStudents()
+        {
+            _manager.Students.NullifyStudents();
+        }
+
+        private void NullifyTableTeams()
+        {
+            _manager.Teams.NullifyTeams();
+        }
+
         private void NullifyTableTeamStudent()
         {
-            //FacadeTeamStudent.
-            var query = new QTeamStudent();
-            //QuerySettings.QuerySet(query.NullifyTStudent());
+            _manager.TStudents.NullifyTStudent();
         }
+
         private void NullifyTableVisits()
         {
-            //FacadeVisits.
-            var query = new QVisit();
-            //QuerySettings.QuerySet(query.NullifyVisits());
+            _manager.Visits.NullifyVisits();
         }
     }
 }

@@ -1,188 +1,237 @@
 ﻿using System;
-using TrackingProgressInDevEducationDAL.Facades;
+using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.ForTables;
-using TrackingProgressInDevEducationDAL.Tests.WriteMockBase;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
+    
     public class FillingDB
     {
-        private readonly MockBase _mock = PreparationDB.Mock;
-        public void Filling(Type type) 
+        private readonly FacadeManager _manager = new();
+
+        public void Filling(Type type, ManagerMocks manager)
         {
             switch (type.Name)
             {
-                case nameof(Comment):
-                    new WriteComments().Write();
-                    FillingTableComments();
+                case nameof(City):
+                    FillingCities(manager);
                     break;
-                case nameof(CommentType):
-                    FillingTableCommentType();
+                case nameof(Comment):
+                    FillingComments(manager);
+                    break;
+                case nameof(CType):
+                    FillingCType(manager);
                     break;
                 case nameof(Course):
-                    FillingTableCourses();
+                    FillingCourses(manager);
                     break;
                 case nameof(Group):
-                    FillingTableGroups();
+                    FillingGroups(manager);
                     break;
                 case nameof(HWComplete):
-                    FillingTableHomeworkComplete();
+                    FillingHWComplete(manager);
                     break;
                 case nameof(HWGroup):
-                    FillingTableHomeworkGroup();
+                    FillingHWGroup(manager);
                     break;
                 case nameof(Homework):
-                    FillingTableHomeworks();
+                    FillingHomeworks(manager);
                     break;
                 case nameof(Lection):
-                    FillingTableLections();
+                    FillingLections(manager);
                     break;
                 case nameof(LectorGroup):
-                    FillingTableLectorGroup();
+                    FillingLectorGroup(manager);
                     break;
                 case nameof(Lector):
-                    FillingTableLectors();
+                    FillingLectors(manager);
                     break;
                 case nameof(Payment):
-                    FillingTablePayments();
+                    FillingPayments(manager);
                     break;
                 case nameof(Student):
-                    FillingTableStudents();
+                    FillingStudents(manager);
                     break;
                 case nameof(Team):
-                    FillingTableTeams();
+                    FillingTeams(manager);
                     break;
-                case nameof(TeamStudent):
-                    FillingTableTeamStudent();
+                case nameof(TStudent):
+                    FillingTStudents(manager);
                     break;
                 case nameof(Visit):
-                    FillingTableVisits();
+                    FillingVisits(manager);
                     break;
             }
         }
 
-        private void FillingTableComments()
+        private void FillingCities(ManagerMocks manager)
         {
-            //foreach (Comment data in _mock.Comments)
-            //{
-            //    Comments.SetNewComment(data.Text, data.TypeId, data.StudentId, data.CreatedBy, data.TeamId);
-            //}
-        }
-        private void FillingTableCommentType()
-        {
-            //var query = new QCommentType();
-            //foreach (CommentType data in _mock.CommentType)
-            //{
-            //    //FacadeCommentType.
-            //    QuerySettings.QuerySet(query.SetNewCType(data.Name));
-            //}
-        }
-        private void FillingTableCourses()
-        {
-            var query = new QCourse();
-            //foreach (Course data in _mock.Courses)
-            //{
-            //    //FacadeCourses.
-            //    QuerySettings.QuerySet(query.SetNewCourse(data.Name, data.StartedOn, data.FinishedOn));
-            //}
-        }
-        private void FillingTableGroups()
-        {
-            foreach (Group data in _mock.Groups)
+            List<City> cities = manager.DCities.Cities;
+            foreach (var city in cities)
             {
-                //Groups(data.Name, data.CourseId);
+                _manager.Cities.SetNewCity(city.Name);
             }
         }
-        private void FillingTableHomeworkComplete()
+
+        private void FillingComments(ManagerMocks manager)
         {
-            //FacadeHomeworkComplete
-            var query = new QHomeworkComplete();
-            //QuerySettings.QuerySet(query.AddNewHomeworkComplete());
+            List<Comment> comments = manager.DComments.Comments;
+            foreach (var comment in comments)
+            {
+                _manager.Comments.SetNewComment
+                (
+                    comment.Text,
+                    comment.TypeId,
+                    comment.StudentId,
+                    comment.CreatedBy,
+                    comment.TeamId
+                );
+            }
         }
-        private void FillingTableHomeworkGroup()
+
+        private void FillingCType(ManagerMocks manager)
         {
-            //FacadeHomeworkGroup.
-            var query = new QHomeworkGroup();
-            //QuerySettings.QuerySet(query.AddNewHomeworkGroup());
+            List<CType> cTypes = manager.DCTypes.CTypes;
+            foreach (var cType in cTypes)
+            {
+                _manager.CTypes.SetNewCType(cType.Name);
+            }
         }
-        private void FillingTableHomeworks()
+
+        private void FillingCourses(ManagerMocks manager)
         {
-            //foreach (MockHomework data in _mock.Homeworks)
-            //{
-            //    FacadeHomeworks.CreateNewHomeworks(data.Name);
-            //}
+            List<Course> courses = manager.DCourses.Courses;
+            foreach (var course in courses)
+            {
+                _manager.Courses.SetNewCourse(course.Name, course.StartedOn, course.FinishedOn);
+            }
         }
-        private void FillingTableLections()
+
+        private void FillingGroups(ManagerMocks manager)
         {
-            //FacadeLections.
-            var query = new QLection();
-            //QuerySettings.QuerySet(query.AddNewLections());
+            List<Group> groups = manager.DGroups.Groups;
+            foreach (var group in groups)
+            {
+                _manager.Groups.SetNewGroup(group.Name, group.CourseId);
+            }
         }
-        private void FillingTableLectorGroup()
+        private void FillingHWComplete(ManagerMocks manager)
         {
-            //FacadeLectorGroup.
-            var query = new QLectorGroup();
-            //QuerySettings.QuerySet(query.AddNewLectorGroup());
+            List<HWComplete> hwCompletes = manager.DHWCompletes.HWCompletes;
+            foreach (var hwComplete in hwCompletes)
+            {
+                _manager.HWCompletes.SetNewHWComplete(hwComplete.HomeworkId, hwComplete.StudentId, hwComplete.Status);
+            }
         }
-        private void FillingTableLectors()
+
+        private void FillingHWGroup(ManagerMocks manager)
         {
-            //foreach (Lector data in _mock.Lectors)
-            //{
-            //    Lectors.SetNewLector(data.FullName, data.Email, data.Password);
-            //}
+            List<HWGroup> hwGroups = manager.DHWGroups.HWGroups;
+            foreach (var hwGroup in hwGroups)
+            {
+                _manager.HWGroups.SetNewHWGroup(hwGroup.HomeworkId, hwGroup.GroupId);
+            }
         }
-        private void FillingTablePayments()
+
+        private void FillingHomeworks(ManagerMocks manager)
         {
-            var query = new QPayment();
-            //foreach (Payment data in _mock.Payments)
-            //{
-            //    //FacadePayments.
-            //    QuerySettings.QuerySet(query.AddNewPayment(data.StudentId, data.PaymentTo, data.PaymentOn, data.Amount, data.Status));
-            //}
+            List<Homework> homeworks = manager.DHomeworks.Homeworks;
+            foreach (var hwGroup in homeworks)
+            {
+                _manager.Homeworks.SetNewHW(hwGroup.Name);
+            }
         }
-        private void FillingTableStudents()
+
+        private void FillingLections(ManagerMocks manager)
         {
-            //foreach (Student data in _mock.Students)
-            //{
-            //    Students.SetNewStudent
-            //        (
-            //            data.Name,
-            //            data.Surname,
-            //            data.Rate,
-            //            data.GroupId,
-            //            data.Phone,
-            //            data.Email,
-            //            data.Contract,
-            //            data.Birthday,
-            //            data.MiddleName,
-            //            data.Git,
-            //            data.CityId,
-            //            data.Status
-            //        );
-            //}
+            List<Lection> lections = manager.DLections.Lections;
+            foreach (var lection in lections)
+            {
+               // _manager.Lections.SetNewLection();
+            }
         }
-        private void FillingTableTeams()
+
+        private void FillingLectorGroup(ManagerMocks manager)
         {
-            //foreach (Team data in _mock.Teams)
-            //{
-            //    Teams.SetNewTeam(data.Name);
-            //}
+            List<LectorGroup> lectorGroups = manager.DLectorGroups.LectorGroups;
+            foreach (var lectorGroup in lectorGroups)
+            {
+                _manager.LectorGroups.SetNewLectorGroup(lectorGroup.LectorId, lectorGroup.GroupId);
+            }
         }
-        private void FillingTableTeamStudent()
+
+        private void FillingLectors(ManagerMocks manager)
         {
-            //FacadeTeamStudent.
-            var query = new QTeamStudent();
-            //QuerySettings.QuerySet(query.AddNewTeamStudent());
+            List<Lector> lectors = manager.DLectors.Lectors;
+            foreach (var lector in lectors)
+            {
+                _manager.Lectors.SetNewLector(lector.FullName, lector.Email, lector.Password);
+            }
         }
-        private void FillingTableVisits()
+
+        private void FillingPayments(ManagerMocks manager)
         {
-            var query = new QVisit();
-            //foreach (Visit data in _mock.Visits)
-            //{
-            //    //FacadeVisits
-            //    QuerySettings.QuerySet(query.SetNewVisit(data.VisitStatus, data.StudentId, data.LectionId));
-            //}
+            List<Payment> payments = manager.DPayments.Payments;
+            foreach (var payment in payments)
+            {
+                _manager.Payments.SetNewPayment
+                (
+                    payment.StudentId,
+                    payment.PaymentTo,
+                    payment.PaymentOn,
+                    payment.Amount,
+                    payment.Status
+                );
+            }
+        }
+
+        private void FillingStudents(ManagerMocks manager)
+        {
+            List<Student> students = manager.DStudents.Students;
+            foreach (var student in students)
+            {
+                _manager.Students.SetNewStudent
+                (
+                    student.Name,
+                    student.Surname,
+                    student.Rate,
+                    student.GroupId,
+                    student.Phone,
+                    student.Email,
+                    student.Contract,
+                    student.Birthday,
+                    student.MiddleName,
+                    student.Git,
+                    student.CityId,
+                    student.Status
+                );
+            }
+        }
+        private void FillingTeams(ManagerMocks manager)
+        {
+            List<Team> teams = manager.DTeams.Teams;
+            foreach (var team in teams)
+            {
+                _manager.Teams.SetNewTeam(team.Name);
+            }
+        }
+
+        private void FillingTStudents(ManagerMocks manager)
+        {
+            List<TStudent> tStudents = manager.DTStudents.TStudents;
+            foreach (var tStudent in tStudents)
+            {
+                _manager.TStudents.SetNewTStudent(tStudent.TeamId, tStudent.StudentId);
+            }
+        }
+
+        private void FillingVisits(ManagerMocks manager)
+        {
+            List<Visit> visits = manager.DVisits.Visits;
+            foreach (var visit in visits)
+            {
+                _manager.Visits.SetNewVisit(visit.VisitStatus, visit.StudentId, visit.LectionId);
+            }
         }
     }
 }

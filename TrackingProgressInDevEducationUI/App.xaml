@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:TrackingProgressInDevEducationUI"
              StartupUri="MainForm.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pages/Styles/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

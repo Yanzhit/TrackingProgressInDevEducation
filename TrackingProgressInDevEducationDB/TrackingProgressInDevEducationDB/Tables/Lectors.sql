@@ -5,4 +5,3 @@
     [Password] NVARCHAR(50) NULL, 
     CONSTRAINT [PK_LECTORS] PRIMARY KEY CLUSTERED ([id] ASC)
 );
-

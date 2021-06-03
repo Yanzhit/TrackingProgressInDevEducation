@@ -3,7 +3,7 @@
     public class City : AbstractModel
     {
         public string Name { get; set; }
-
+        
         public City()
         {
         }
