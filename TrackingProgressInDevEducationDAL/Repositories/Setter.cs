@@ -1,21 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using System.Threading.Tasks;
 using Dapper;
-using TrackingProgressInDevEducationDAL.Repositories.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Setter
+    public class Setter //: ASingle
     {
-        public static /*async Task<T>*/T SingleAsync<T>(IDbConnection connection, string command)
+        public static IEnumerable<T> Single<T>(IDbConnection connection, string command)
         {
-            return /*await*/ connection.QuerySingle<T>(command);
+            //var retval = connection.Execute(command);
+            var retval = connection.Query<T>(command);
+            var result = retval.GetType().ContainsGenericParameters;
+            return connection.Query<T>(command);
         }
 
-        public  static async Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
+        public static IEnumerable<T> Several<T>(IDbConnection connection, string command)
         {
-            return await connection.QueryAsync<T>(command);
+            return connection.Query<T>(command);
         }
     }
 }

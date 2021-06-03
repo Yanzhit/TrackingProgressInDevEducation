@@ -2,15 +2,10 @@
 using System.Data;
 using System.Threading.Tasks;
 using Dapper;
-using TrackingProgressInDevEducationDAL.Repositories.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Nullify : ISeveral
+    public class Nullify : ASingle
     {
-        public static async Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
-        {
-            return await connection.QueryAsync<T>(command);
-        }
     }
 }

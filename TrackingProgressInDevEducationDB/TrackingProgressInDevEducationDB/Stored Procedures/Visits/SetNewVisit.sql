@@ -11,6 +11,7 @@ AS
 		,[StudentId]
 		,[LectionId]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @VisitStatus

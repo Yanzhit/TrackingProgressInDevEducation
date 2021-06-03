@@ -27,11 +27,12 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             if (GetStudentsRadioButton.IsChecked == true)
             {
                 FacadeManager f = new FacadeManager();
-                students = f.Students.GetAllStudents();
-                foreach (var student in students)
-                {
-                    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
-                }
+                var citys = f.Cities.NullifyCities();
+                //students = f.Students.GetAllStudents();
+                //foreach (var student in students)
+                //{
+                //    RequestViewTextBox.Text += $"{student.Name} {student.Surname} {student.Rate}\n";
+                //}
             }
 
             if (GetStudentsByIdRadioButton.IsChecked == true)
@@ -41,8 +42,9 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
                 //
                 //BCity tBCity = new BCity(tCity);
                 FacadeManager f = new FacadeManager();
-                Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
-                RequestViewTextBox.Text += $"{city.Text}";
+                City city = f.Cities.SetNewCity("Пирва");
+                //Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
+                RequestViewTextBox.Text += $"{city.Name}";
             }
         }
     }

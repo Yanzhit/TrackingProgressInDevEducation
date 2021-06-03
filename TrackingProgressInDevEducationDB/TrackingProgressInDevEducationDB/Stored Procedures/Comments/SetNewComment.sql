@@ -15,6 +15,7 @@ AS
 		,[CreatedBy]
 		,[TeamId]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @Text

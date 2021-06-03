@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Senders
             Connection connection = new();
             using (IDbConnection dbConnection = connection.Connect())
             {
-                MethodInfo method = typeof(Repositories.Getter).GetMethod(nameof(Repositories.Getter.SingleAsync));
+                MethodInfo method = typeof(Repositories.Getter).GetMethod(nameof(Repositories.Getter.Single));
                 return Refraction(query, dbConnection, method);
             }
         }
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Senders
             Connection connection = new();
             using (IDbConnection dbConnection = connection.Connect())
             {
-                MethodInfo method = typeof(Repositories.Getter).GetMethod(nameof(Repositories.Getter.SeveralAsync));
+                MethodInfo method = typeof(Repositories.Getter).GetMethod(nameof(Repositories.Getter.Several));
                 return Refraction(query, dbConnection, method);
             }
         }
