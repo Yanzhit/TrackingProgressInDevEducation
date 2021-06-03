@@ -17,9 +17,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="lectorId">ID Учителя</param>
         /// /// <param name="startedOn">Начало Лекции</param>
         /// <returns>Лекция</returns>
-        public Lection SetNewLection(int groupId, int lectorId, DateTime startedOn)
+        public Lection SetNewLection(int courseId, int lectorId, DateTime startedOn)
         {
-            return (Lection)Manager.Setter.Single(Query.SetNewLection(groupId, lectorId, startedOn));
+            return (Lection)Manager.Setter.Single(Query.SetNewLection(courseId, lectorId, startedOn));
         }
 
         ///// <summary>
