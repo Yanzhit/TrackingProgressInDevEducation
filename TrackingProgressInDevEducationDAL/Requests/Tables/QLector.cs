@@ -8,31 +8,52 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLector : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
+        public Type Type { get; set; }
         public Type Test { get; } = typeof(Lector);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QLector SetNewLector(string fullName, string email, string password)
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewLector);
             Params = $"{fullName}{Sep}{email}{Sep}{password}";
-            return this;
-        }
-        public QLector NullifyLectors()
-        {
-            Name = nameof(NullifyLectors);
-            Params = string.Empty;
             return this;
         }
 
         public QLector GetLectorById(int id)
         {
-            Type = typeof(Lector);
+            Type = typeof(Getter);
             Name = nameof(GetLectorById);
             Params = $"{id}";
             return this;
         }
+
+        public QLector GetAllLectors()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetAllLectors);
+            Params = string.Empty;
+            return this;
+        }
+
+        public QLector UpdNewEmailAndPasswordLectors()
+        {
+            Type = typeof(Update);
+            Name = nameof(UpdNewEmailAndPasswordLectors);
+            Params = $"";
+            return this;
+        }
+
+        public QLector NullifyLectors()
+        {
+            Type = typeof(Remove);
+            Name = nameof(NullifyLectors);
+            Params = string.Empty;
+            return this;
+        }
+
+        
 
         //public QLector GetLectors()
         //{

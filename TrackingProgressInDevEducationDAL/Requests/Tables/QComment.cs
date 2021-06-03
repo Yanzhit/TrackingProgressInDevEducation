@@ -34,8 +34,41 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             int? teamId
         )
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewComment);
             Params = $"{text}{Sep}{typeId}{Sep}{studentId}{Sep}{createdBy}{Sep}{teamId}";
+            return this;
+        }
+
+        public QComment SetNewCommentToStudent()
+        {
+            Type = typeof(Setter);
+            Name = nameof(SetNewCommentToStudent);
+            Params = $"";
+            return this;
+        }
+
+        public QComment SetCommentToTeam()
+        {
+            Type = typeof(Setter);
+            Name = nameof(SetCommentToTeam);
+            Params = $"";
+            return this;
+        }
+
+        public QComment GetCommentsByTeam()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetCommentsByTeam);
+            Params = $"";
+            return this;
+        }
+
+        public QComment GetCommentsByStudent()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetCommentsByStudent);
+            Params = $"";
             return this;
         }
 
@@ -45,6 +78,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QComment NullifyComments()
         {
+            Type = typeof(Remove);
             Name = nameof(NullifyComments);
             Params = string.Empty;
             return this;

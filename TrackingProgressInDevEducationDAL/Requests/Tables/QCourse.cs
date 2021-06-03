@@ -31,6 +31,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
+        public QCourse GetAllCourses()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetAllCourses);
+            Params = string.Empty;
+            return this;
+        }
+
         /// <summary>
         /// Обнуление таблицы курсов и ключа identity
         /// </summary>

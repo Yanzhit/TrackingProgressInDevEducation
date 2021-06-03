@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QGroup : IQuery
     {
         public Type Type { get; set; }
-        public Type Test { get; } = typeof(Course);
+        public Type Test { get; } = typeof(Group);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -27,6 +27,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Type = typeof(Setter);
             Name = nameof(SetNewGroup);
             Params = $"{name}{Sep}{courseId}";
+            return this;
+        }
+
+        public QGroup GetGroupsByLector(int lectorId)
+        {
+            Type = typeof(Getter);
+            Name = GetType().Name;
+            Params = $"{lectorId}";
             return this;
         }
 

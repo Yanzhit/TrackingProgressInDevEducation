@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QStudent : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
+        public Type Type { get; set; }
         public Type Test { get; } = typeof(Student);
         public string Name { get; set; }
         public string Params { get; set; }
@@ -45,6 +45,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
                 bool? status
             )
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewStudent);
             Params = $"{name}{Sep}{surname}{Sep}{rate}{Sep}{groupId}{Sep}" +
                      $"{phone}{Sep}{email}{Sep}{contract}{Sep}{birthday}{Sep}" +
@@ -58,8 +59,24 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent GetAllStudents()
         {
-            Type = typeof(Student);
+            Type = typeof(Getter);
             Name = nameof(GetAllStudents);
+            Params = string.Empty;
+            return this;
+        }
+
+        public QStudent GetAllStudentsByGroup()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetAllStudentsByGroup);
+            Params = string.Empty;
+            return this;
+        }
+
+        public QStudent UpdStudentToGroup()
+        {
+            Type = typeof(Update);
+            Name = nameof(UpdStudentToGroup);
             Params = string.Empty;
             return this;
         }
@@ -70,6 +87,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent NullifyStudents()
         {
+            Type = typeof(Remove);
             Name = nameof(NullifyStudents);
             Params = string.Empty;
             return this;

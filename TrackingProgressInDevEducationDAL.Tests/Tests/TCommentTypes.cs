@@ -9,7 +9,7 @@ using TrackingProgressInDevEducationDAL.Tests.Expected;
 namespace TrackingProgressInDevEducationDAL.Tests.Tests
 {
     /// <summary>
-    /// Тестирование всех запросов работающих только с таблицей Типы коментариев
+    /// Тестирование всех запросов работающих только с таблицей Типы комментариев
     /// </summary>
     public class TCommentTypes : ATTests
     {
@@ -17,7 +17,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         /// Добавление нового типа коментария в таблицу
         /// </summary>
         /// <param name="query">Запрос</param>
-        /// <param name="commentType">Входящий тип коментария</param>
+        /// <param name="commentType">Входящий тип комментария</param>
         /// <param name="expected">Ожидаемый результат</param>
         [TestCaseSource(typeof(ECommentTypes), nameof(ECommentTypes.SetNewCType))]
         public void SetNewCTypeTest(IQuery query, CType commentType, object expected)

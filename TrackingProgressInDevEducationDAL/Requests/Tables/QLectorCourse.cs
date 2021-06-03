@@ -8,13 +8,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLectorCourse : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
+        public Type Type { get; set; }
         public Type Test { get; } = typeof(LectorCourse);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QLectorCourse SetNewLectorCourse(int lectorId, int courseId)
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewLectorCourse);
             Params = $"{lectorId}{Sep}{courseId}";
             return this;
@@ -22,6 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QLectorCourse NullifyCourse()
         {
+            Type = typeof(Remove);
             Name = nameof(NullifyCourse);
             Params = string.Empty;
             return this;

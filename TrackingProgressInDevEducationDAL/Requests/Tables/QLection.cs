@@ -31,17 +31,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        /// <summary>
-        /// Получить все лекции
-        /// </summary>
-        /// <returns>Подготовленный запрос</returns>
-        public QLection GetAllLector()
-        {
-            Type = typeof(Lector);
-            Name = nameof(GetAllLector);
-            Params = string.Empty;
-            return this;
-        }
 
         /// <summary>
         /// Обнуление таблицы лекций и ключа identity

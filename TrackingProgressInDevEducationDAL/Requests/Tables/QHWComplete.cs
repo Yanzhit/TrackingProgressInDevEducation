@@ -31,6 +31,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
+        public QHWComplete GetHomeWorkProcedureScore()
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetHomeWorkProcedureScore);
+            Params = string.Empty;
+            return this;
+        }
+
         /// <summary>
         /// Обнуление таблицы завершенных домашних заданий и ключа identity
         /// </summary>

@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QTeam : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
+        public Type Type { get; set; }
         public Type Test { get; } = typeof(Team);
         public string Name { get; set; }
         public string Params { get; set; }
@@ -23,8 +23,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTeam SetNewTeam(string name)
         {
+            Type = typeof(Setter);
             Name = nameof(SetNewTeam);
             Params = $"{name}";
+            return this;
+        }
+
+        public QTeam GetTeamById(int id)
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetTeamById);
+            Params = string.Empty;
             return this;
         }
 
@@ -34,6 +43,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTeam NullifyTeams()
         {
+            Type = typeof(Remove);
             Name = nameof(NullifyTeams);
             Params = string.Empty;
             return this;
