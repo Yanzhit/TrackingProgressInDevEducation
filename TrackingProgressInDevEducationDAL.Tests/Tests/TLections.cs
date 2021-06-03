@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewLectionTest(IQuery query, Lection lection, object expected)
         {
             PreparindDB(query.Type);
-            FacadeManager.Lections.SetNewLection(lection.CourseId, lection.LectorId, lection.StartedOn);
+            FacadeManager.Lections.SetNewLection(lection.GroupId, lection.LectorId, lection.StartedOn);
             //Assert.AreEqual(expected, actual);
         }
 

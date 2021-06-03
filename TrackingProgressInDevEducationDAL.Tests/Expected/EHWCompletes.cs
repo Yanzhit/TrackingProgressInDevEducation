@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -15,8 +16,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewHWComplete()
         {
-            yield return new object[] { new QHWComplete(), new HWComplete(2, 2, true), 1 };
-            yield return new object[] { new QHWComplete(), new HWComplete(1, 2, false), 1 };
+            yield return new object[] { new QHWComplete(), new HWComplete
+                (2, 2, true, DateTime.MaxValue, 1, DateTime.MaxValue)
+                , 1 };
+            yield return new object[] { new QHWComplete(), new HWComplete
+                (1, 2, false, DateTime.MaxValue, 1, DateTime.MaxValue), 1 };
         }
 
         /// <summary>

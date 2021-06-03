@@ -33,16 +33,16 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             (
                 string name,
                 string surname,
-                decimal rate,
-                int groupId,
+                decimal? rate,
+                int? groupId,
                 string phone,
                 string email,
                 string contract,
-                DateTime birthday,
+                DateTime? birthday,
                 string middleName,
                 string git,
-                int cityId,
-                bool status
+                int? cityId,
+                bool? status
             )
         {
             Name = nameof(SetNewStudent);
