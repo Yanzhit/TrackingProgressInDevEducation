@@ -21,12 +21,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Homeworks = new List<Homework>
             {
-                new("First"),
-                new("Level"),
-                new("Operand"),
-                new("Varies"),
-                new("Fail"),
-                new("God")
+                new("First","One"),
+                new("Level","Two"),
+                new("Operand","Tree"),
+                new("Varies","Try"),
+                new("Fail","Ew"),
+                new("God","non")
             };
         }
     }

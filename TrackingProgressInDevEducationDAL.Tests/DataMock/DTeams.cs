@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
@@ -21,11 +22,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Teams = new List<Team>
             {
-                new("Jujy`r"),
-                new("Jujy`rsadr"),
-                new("Пиво"),
-                new("Kjjw"),
-                new("ШГЩц")
+                new("Jujy`r", DateTime.MaxValue, DateTime.MaxValue),
+                new("Jujy`rsadr", DateTime.MaxValue, DateTime.MaxValue),
+                new("Пиво", DateTime.MaxValue, DateTime.MaxValue),
+                new("Kjjw", DateTime.MaxValue, DateTime.MaxValue),
+                new("ШГЩц", DateTime.MaxValue, DateTime.MaxValue)
             };
         }
     }

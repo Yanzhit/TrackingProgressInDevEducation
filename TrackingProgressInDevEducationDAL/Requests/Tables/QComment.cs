@@ -29,9 +29,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         (
             string text,
             int typeId,
-            int studentId,
+            int? studentId,
             int createdBy,
-            int teamId
+            int? teamId
         )
         {
             Name = nameof(SetNewComment);

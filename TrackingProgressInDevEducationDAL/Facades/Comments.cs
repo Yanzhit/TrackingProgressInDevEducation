@@ -22,9 +22,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         (
             string text,
             int typeId,
-            int studentId,
+            int? studentId,
             int createdBy,
-            int teamId
+            int? teamId
         )
         {
             return (Comment) Manager.Setter.Single

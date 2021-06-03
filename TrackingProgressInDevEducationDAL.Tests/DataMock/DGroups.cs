@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
@@ -23,14 +22,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Groups = new List<Group>
             {
-                new("Dev{ed} C# Base 1", 1),
-                new("Dev{ed} C# Front 2", 2),
-                new("Dev{ed} C# Mobile 3", 3),
-                new("Dev{ed} C# Back 4", 4),
-                new("Dev{ed} JAVA# Base 1", 5),
-                new("Dev{ed} JAVA# Front 2", 6),
-                new("Dev{ed} JAVA# Mobile 3", 7),
-                new("Dev{ed} C# Back 4", 8),
+                new("Dev{ed} C# Base 1", 1, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} C# Front 2", 2, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} C# Mobile 3", 3, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} C# Back 4", 4, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} JAVA# Base 1", 5, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} JAVA# Front 2", 6, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} JAVA# Mobile 3", 7, DateTime.MinValue, DateTime.MinValue),
+                new("Dev{ed} C# Back 4", 8, DateTime.MinValue, DateTime.MinValue)
             };
         }
     }
