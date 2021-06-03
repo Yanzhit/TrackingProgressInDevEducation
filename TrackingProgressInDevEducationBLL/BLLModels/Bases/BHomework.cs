@@ -9,7 +9,7 @@ using Group = System.Text.RegularExpressions.Group;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BHomework : BAbstractModel
+    public class BHomework
     {
         public string Name { get; set; }
 
