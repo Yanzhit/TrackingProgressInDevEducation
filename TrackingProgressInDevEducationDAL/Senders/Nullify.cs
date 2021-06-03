@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Senders
             Connection connection = new();
             using (IDbConnection dbConnection = connection.Connect())
             {
-                MethodInfo method = typeof(Repositories.Nullify).GetMethod(nameof(Repositories.Nullify.SeveralAsync));
+                MethodInfo method = typeof(Repositories.Nullify).GetMethod(nameof(Repositories.Nullify.Single));
                 return Refraction(query, dbConnection, method);
             }
         }

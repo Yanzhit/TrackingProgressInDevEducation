@@ -41,8 +41,9 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
                 //
                 //BCity tBCity = new BCity(tCity);
                 FacadeManager f = new FacadeManager();
-                Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
-                RequestViewTextBox.Text += $"{city.Text}";
+                City city = f.Cities.SetNewCity("Пирва");
+                //Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
+                RequestViewTextBox.Text += $"{city.Name}";
             }
         }
     }
