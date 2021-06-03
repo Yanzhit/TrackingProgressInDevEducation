@@ -11,6 +11,7 @@ AS
 		,[StudentId]
 		,[Status]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @HomeworkId

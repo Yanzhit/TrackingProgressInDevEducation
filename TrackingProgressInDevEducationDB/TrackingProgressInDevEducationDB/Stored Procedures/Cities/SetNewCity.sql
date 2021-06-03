@@ -1,15 +1,15 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCity]
 (
-	@Name NVARCHAR(50)	 	
+	@Name NVARCHAR(50)	
 )
 AS
 	INSERT [Cities]
 	(
 		[Name]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		@Name
-	) 	
-	RETURN(0)
---ZLoo (Все ок)
+	)
+--ZLoo (Все ок)	 w[pe[wp

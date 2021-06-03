@@ -14,6 +14,7 @@ AS
 		,[StartDate]
 		,[EndDate]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @Name

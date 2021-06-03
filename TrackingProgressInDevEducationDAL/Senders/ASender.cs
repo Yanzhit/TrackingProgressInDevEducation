@@ -13,7 +13,6 @@ namespace TrackingProgressInDevEducationDAL.Senders
         {
             string command = ConfigCommand(query);
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-            //object www = new();
             object obj = generic.Invoke(null, new object[] {dbConnection, command});
             return obj;
         }

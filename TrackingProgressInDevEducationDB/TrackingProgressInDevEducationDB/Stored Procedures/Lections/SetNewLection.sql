@@ -11,6 +11,7 @@ AS
 		,[LectorId]
 		,[StartedOn]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @GroupId

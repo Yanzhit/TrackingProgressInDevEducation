@@ -6,9 +6,12 @@ namespace TrackingProgressInDevEducationDAL.Repositories
 {
     public class Setter //: ASingle
     {
-        public static T Single<T>(IDbConnection connection, string command)
+        public static IEnumerable<T> Single<T>(IDbConnection connection, string command)
         {
-            return connection.QuerySingle<T>(command);
+            //var retval = connection.Execute(command);
+            var retval = connection.Query<T>(command);
+            var result = retval.GetType().ContainsGenericParameters;
+            return connection.Query<T>(command);
         }
 
         public static IEnumerable<T> Several<T>(IDbConnection connection, string command)

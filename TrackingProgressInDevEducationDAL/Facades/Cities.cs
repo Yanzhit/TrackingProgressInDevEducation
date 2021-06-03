@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<City> NullifyCities()
         {
-            return (List<City>)Manager.Nullify.Null(Query.NullifyCities());
+            return (List<City>)Manager.Setter.Single(Query.NullifyCities());
         }
     }
 }

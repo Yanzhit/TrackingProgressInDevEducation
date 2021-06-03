@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCity : IQuery
     {
-        public Type Type { get; } = typeof(City);
+        public Type Type { get; } = typeof(Result);
         public string Name { get; set; }
         public string Params { get; set; }
 

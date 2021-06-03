@@ -237,9 +237,9 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetVisitsByStudentJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\GetAllCourses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroupsByLector.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\SetNewEmailAndPasswordLectors.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdNewEmailAndPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllTestsByStudentIdJ.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\SetStudentToGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\UpdStudentToGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllStudentsByTeamJ.sql" />
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@ AS
 		 [Name]
 		,[Description]
 	)
+	OUTPUT INSERTED.Id
 	VALUES
 	(
 		 @Name
