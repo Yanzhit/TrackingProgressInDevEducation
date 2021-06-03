@@ -6,14 +6,14 @@ using TrackingProgressInDevEducationDAL.Repositories.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Repositories
 {
-    public class Setter : ISingle, ISeveral
+    public class Setter
     {
-        public async Task<T> SingleAsync<T>(IDbConnection connection, string command)
+        public static /*async Task<T>*/T SingleAsync<T>(IDbConnection connection, string command)
         {
-            return await connection.QuerySingleAsync<T>(command);
+            return /*await*/ connection.QuerySingle<T>(command);
         }
 
-        public async Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
+        public  static async Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
         {
             return await connection.QueryAsync<T>(command);
         }

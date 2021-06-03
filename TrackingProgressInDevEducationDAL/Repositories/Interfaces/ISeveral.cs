@@ -6,6 +6,9 @@ namespace TrackingProgressInDevEducationDAL.Repositories.Interfaces
 {
     public interface ISeveral
     {
-        Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command);
+        static Task<IEnumerable<T>> SeveralAsync<T>(IDbConnection connection, string command)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

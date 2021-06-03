@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Tests.Expected
@@ -14,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewCity()
         {
-            yield return new object[] {new QCity(), "Сарай", 1};
-            yield return new object[] {new QCity(), "Сарай", 1};
+            yield return new object[] {new QCity(), new City("Сарай"), 1};
+            yield return new object[] {new QCity(), new City("Сарай"), 1};
         }
 
         /// <summary>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
@@ -19,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Abstracts
         {
             string command = ConfigCommand(query);
             MethodInfo generic = method.MakeGenericMethod(query.Type);
-            object obj = generic.Invoke(this, new object[] {dbConnection, command});
+            object obj = generic.Invoke(null, new object[] {dbConnection, command});
             Disconnect(dbConnection);
             return obj;
         }

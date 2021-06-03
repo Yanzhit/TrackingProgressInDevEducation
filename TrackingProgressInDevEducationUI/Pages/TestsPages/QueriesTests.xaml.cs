@@ -38,7 +38,11 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
             {
                 //Student sss = FacadeStudent.GetByIdStudent(1);
                 //RequestViewTextBox.Text += $"{sss.Name} {sss.Surname} {sss.Rate}\n";
-                BCity tBCity = new BCity(tCity);
+                //
+                //BCity tBCity = new BCity(tCity);
+                FacadeManager f = new FacadeManager();
+                Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
+                RequestViewTextBox.Text += $"{city.Text}";
             }
         }
     }

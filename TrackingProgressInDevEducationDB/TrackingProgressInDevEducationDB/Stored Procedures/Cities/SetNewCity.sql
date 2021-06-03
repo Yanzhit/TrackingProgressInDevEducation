@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[AddCity]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCity]
 (
 	@Name NVARCHAR(50)
 )

@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL
     public class Connection
     {
         private readonly string _cs =
-            $@"Persist Security Info={F};User ID={User};Password={Password};Initial Catalog={DbTest};Server={Ip}";
+            $@"Persist Security Info={F};User ID={User};Password={Password};Initial Catalog={Db};Server={Ip}";
         
         public IDbConnection Connect()
         {
