@@ -2,46 +2,44 @@
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
-    public class HWComplete : AbstractModel
+    public class TestComplete : AbstractModel
     {
-        public int HomeworkId { get; set; }
+        public int TestId { get; set; }
         public int StudentId { get; set; }
         public bool Status { get; set; }
         public DateTime? ApproveDate { get; set; }
         public int? Score { get; set; }
-        public DateTime? CreatedOn { get; set; }
 
-        public HWComplete()
+        public TestComplete()
         {
         }
 
-        public HWComplete(int homeworkId, int studentId, bool status, DateTime? approveDate, int? score, DateTime? createdOn)
+        public TestComplete(int testId, int studentId, bool status, DateTime? approveDate, int? score)
         {
-            HomeworkId = homeworkId;
+            TestId = testId;
             StudentId = studentId;
             Status = status;
             ApproveDate = approveDate;
             Score = score;
-            CreatedOn = createdOn;
         }
 
         public override bool Equals(object obj)
         {
-            return Equals((HWComplete)obj);
+            return Equals((TestComplete)obj);
         }
 
-        private bool Equals(HWComplete other)
+        private bool Equals(TestComplete other)
         {
-            return HomeworkId == other.HomeworkId
+            return TestId == other.TestId
                    && StudentId == other.StudentId
                    && Status == other.Status
                    && ApproveDate == other.ApproveDate
-                   && Score == other.Score
-                   && CreatedOn == other.CreatedOn;
+                   && Score == other.Score;
         }
+
         public override int GetHashCode()
         {
-            return HashCode.Combine(HomeworkId, StudentId, Status, ApproveDate, Score, CreatedOn);
+            return HashCode.Combine(TestId, StudentId, Status, ApproveDate, Score);
         }
     }
 }

@@ -4,7 +4,7 @@ using AutoMapper;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCity : BAbstractModel
+    public class BCity
     {
         public string Name { get; set; }
 
@@ -32,16 +32,9 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 
             List<BCity> tmpBCities = new List<BCity>();
             tmpBCities = mapper.Map<List<BCity>>(cities);
-            foreach (var c in cities)
-            {
-                if (c.Name != null)
-                {
-
-                }
-            }
-
             return tmpBCities;
         }
+
         public override bool Equals(object obj)
         {
             return Equals((BCity)obj);
@@ -58,12 +51,4 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         }
     
     }
-
-    //var config = new MapperConfiguration(cfg => cfg.CreateMap<Empl, Person>()
-    //.ForMember(dest => dest.FullName, option => option.MapFrom(sorse => sorse.Name + sorse.LastName)));
-    //Mapper mapper = new Mapper(config);
-
-    //Empl empl = new Empl() { Name = "QQQ", LastName="qqq", Age = 100, Position = "QQQist" }
-
-    //Person person = mapper.Map<Person>(empl);
 }

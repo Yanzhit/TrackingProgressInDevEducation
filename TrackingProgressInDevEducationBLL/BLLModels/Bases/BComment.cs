@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BComment : BAbstractModel
+    public class BComment
     {
         public string Text { get; set; }
         public int TypeId { get; set; }
@@ -44,6 +45,17 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
                 this.TypeId = tmpBComment.TypeId;
             }
         }
+
+        public List<BComment> GetBComments(List<Comment> comments)
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<List<Comment>, List<BComment>>());
+            Mapper mapper = new Mapper(config);
+
+            List<BComment> tmpBComments = new List<BComment>();
+            tmpBComments = mapper.Map<List<BComment>>(comments);
+            return tmpBComments;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((BComment)obj);
