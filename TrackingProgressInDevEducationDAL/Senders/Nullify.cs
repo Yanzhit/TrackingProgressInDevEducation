@@ -12,12 +12,8 @@ namespace TrackingProgressInDevEducationDAL.Senders
             Connection connection = new();
             using (IDbConnection dbConnection = connection.Connect())
             {
-                string command = ConfigCommand(query);
                 MethodInfo method = typeof(Repositories.Nullify).GetMethod(nameof(Repositories.Nullify.SeveralAsync));
-                MethodInfo generic = method.MakeGenericMethod(query.Type);
-                object obj = generic.Invoke(this, new object[] {dbConnection, command});
-                Disconnect(dbConnection);
-                return obj;
+                return Refraction(query, dbConnection, method);
             }
         }
     }
