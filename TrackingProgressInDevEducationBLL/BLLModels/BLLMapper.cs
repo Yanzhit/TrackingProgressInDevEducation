@@ -282,6 +282,22 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 List<BTest> tmpBTests = mapper.Map<List<BTest>>(test);
                 return tmpBTests;
             }
+
+            public BTestComplete TestCompleteToBTestComplete(TestComplete testComplete)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<TestComplete, BTestComplete>());
+                Mapper mapper = new Mapper(config);
+                BTestComplete tmpBTestComplete = mapper.Map<BTestComplete>(testComplete);
+                return tmpBTestComplete;
+            }
+
+            public List<BTestComplete> TestCompletesToBTestCompletes(List<TestComplete> testComplete)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<TestComplete, BTestComplete>());
+                Mapper mapper = new Mapper(config);
+                List<BTestComplete> tmpBTestCompletes = mapper.Map<List<BTestComplete>>(testComplete);
+                return tmpBTestCompletes;
+            }
         }
 
         public class BLLToDTO
