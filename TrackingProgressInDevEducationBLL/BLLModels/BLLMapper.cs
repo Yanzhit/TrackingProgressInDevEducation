@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using TrackingProgressInDevEducationBLL.BLLModels.Bases;
+using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels
@@ -183,6 +184,22 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
                 Mapper mapper = new Mapper(config);
                 List<BLector> tmpBHomeworks = mapper.Map<List<BLector>>(lectors);
+                return tmpBHomeworks;
+            }
+
+            public BLectorCourse LectorCourseBLectorCourse(LectorCourse lectorCourse)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
+                Mapper mapper = new Mapper(config);
+                BLectorCourse tmpBHomework = mapper.Map<BLectorCourse>(lectorCourse);
+                return tmpBHomework;
+            }
+
+            public List<BLectorCourse> LectorCourseBLectorCourse(List<LectorCourse> lectorCourses)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
+                Mapper mapper = new Mapper(config);
+                List<BLectorCourse> tmpBHomeworks = mapper.Map<List<BLectorCourse>>(lectorCourses);
                 return tmpBHomeworks;
             }
         }
