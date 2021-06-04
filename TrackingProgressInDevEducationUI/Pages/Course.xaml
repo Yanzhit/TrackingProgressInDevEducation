@@ -22,7 +22,7 @@
         </Grid>
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Height="76" Width="190" Click="Logo_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
+                <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
 

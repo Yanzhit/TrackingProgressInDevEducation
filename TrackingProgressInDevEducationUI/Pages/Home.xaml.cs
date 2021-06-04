@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            // Нужно добавить обновление страницы
+            // обнуление всех страниц и перезаполнение страницы Home
         }
     }
 }

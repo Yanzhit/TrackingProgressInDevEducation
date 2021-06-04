@@ -32,7 +32,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-
+            SingleContents.GetContent().Home();
         }
     }
 }
