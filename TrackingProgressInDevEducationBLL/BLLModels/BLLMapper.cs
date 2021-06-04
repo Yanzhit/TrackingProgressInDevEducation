@@ -313,6 +313,22 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
             return tBStudents;
         }
 
+        public BVisit VisitToBVisit(Visit visit)
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Visit, BVisit>());
+            Mapper mapper = new Mapper(config);
+            BVisit tBVisit = mapper.Map<BVisit>(visit);
+            return tBVisit;
+        }
+
+        public List<BVisit> VisitToBVisit(List<Visit> visits)
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Visit, BVisit>());
+            Mapper mapper = new Mapper(config);
+            List<BVisit> tBVisits = mapper.Map<List<BVisit>>(visits);
+            return tBVisits;
+        }
+
         public City BCityToCity(BCity bCity)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<BCity, City>());
