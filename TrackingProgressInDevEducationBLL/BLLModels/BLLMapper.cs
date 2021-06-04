@@ -124,6 +124,21 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 List<BHomework> tmpBHomeworks = mapper.Map<List<BHomework>>(homeworks);
                 return tmpBHomeworks;
             }
+
+            public BHWComplete HWCompleteBHWComplete(HWComplete hwComplete)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
+                Mapper mapper = new Mapper(config);
+                BHWComplete tmpBHomework = mapper.Map<BHWComplete>(hwComplete);
+                return tmpBHomework;
+            }
+            public List<BHWComplete> HWCompletesBHWCompletes(List<HWComplete> hwCompletes)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
+                Mapper mapper = new Mapper(config);
+                List<BHWComplete> tmpBHomeworks = mapper.Map<List<BHWComplete>>(hwCompletes);
+                return tmpBHomeworks;
+            }
         }
 
         public class BLLToDTO
