@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resourses\Images\Education.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TrackingProgressInDevEducationBLL\TrackingProgressInDevEducationBLL.csproj" />
     <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Pages\Resourse\BackGroundMain.jpg" />
+    <Resource Include="Resourses\Images\BackGroundMain.jpg" />
+    <Resource Include="Resourses\Images\Education.jpg" />
   </ItemGroup>
 
   <ItemGroup>
