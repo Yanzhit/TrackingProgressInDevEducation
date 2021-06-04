@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            //_mainForm.Content = new Home(_mainForm);
+            SingleContents.GetContent().Home();
         }
     }
 }

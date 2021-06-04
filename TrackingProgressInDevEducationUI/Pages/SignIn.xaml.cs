@@ -34,9 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            /*
-             * Сюда можно о программе добавить
-             */
+            //Нужно добавить информацию о приложении
         }
     }
 }
