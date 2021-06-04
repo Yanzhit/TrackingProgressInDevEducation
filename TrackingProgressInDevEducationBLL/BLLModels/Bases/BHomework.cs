@@ -12,6 +12,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
     public class BHomework
     {
         public string Name { get; set; }
+        public string Deskription { get; set; }
 
         public BHomework()
         {
@@ -21,10 +22,10 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Homework, BHomework>());
             Mapper mapper = new Mapper(config);
+            BHomework tmpBHomework = mapper.Map<BHomework>(homework);
 
-            BHomework tmpBHomework = new BHomework();
-            tmpBHomework = mapper.Map<BHomework>(homework);
             this.Name = tmpBHomework.Name;
+            this.Deskription = tmpBHomework.Deskription;
         }
 
         public override bool Equals(object obj)
@@ -34,12 +35,13 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 
         private bool Equals(BHomework other)
         {
-            return Name == other.Name;
-        }
+            return Name == other.Name
+                   && Deskription == other.Deskription;
+        } 
 
         public override int GetHashCode()
         {
-            return (Name != null ? Name.GetHashCode() : 0);
+            return HashCode.Combine(Name, Deskription);
         }
     }
 }
