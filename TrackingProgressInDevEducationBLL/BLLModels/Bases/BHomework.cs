@@ -22,10 +22,10 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Homework, BHomework>());
             Mapper mapper = new Mapper(config);
+            BHomework tmpBHomework = mapper.Map<BHomework>(homework);
 
-            BHomework tmpBHomework = new BHomework();
-            tmpBHomework = mapper.Map<BHomework>(homework);
             this.Name = tmpBHomework.Name;
+            this.Deskription = tmpBHomework.Deskription;
         }
 
         public override bool Equals(object obj)

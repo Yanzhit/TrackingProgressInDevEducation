@@ -20,9 +20,8 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<CType, BCType>());
             Mapper mapper = new Mapper(config);
+            BCType tmpBCType = mapper.Map<BCType>(cType);
 
-            BCType tmpBCType = new BCType();
-            tmpBCType = mapper.Map<BCType>(cType);
             this.Name = tmpBCType.Name;
         }
 

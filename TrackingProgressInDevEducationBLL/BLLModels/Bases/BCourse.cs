@@ -22,9 +22,8 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Course, BCourse>());
             Mapper mapper = new Mapper(config);
+            BCourse tmpBCourse = mapper.Map<BCourse>(course);
 
-            BCourse tmpBCourse = new BCourse();
-            tmpBCourse = mapper.Map<BCourse>(course);
             this.Name = tmpBCourse.Name;
             this.StartedOn = tmpBCourse.StartedOn;
             this.FinishedOn = tmpBCourse.StartedOn;

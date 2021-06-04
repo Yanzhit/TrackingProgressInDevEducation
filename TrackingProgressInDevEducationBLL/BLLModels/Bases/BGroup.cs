@@ -24,11 +24,12 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, BGroup>());
             Mapper mapper = new Mapper(config);
+            BGroup tmpBGroup = mapper.Map<BGroup>(group);
 
-            BGroup tmpBGroup = new BGroup();
-            tmpBGroup = mapper.Map<BGroup>(group);
             this.Name = tmpBGroup.Name;
             this.CourseId = tmpBGroup.CourseId;
+            this.StartDate = tmpBGroup.StartDate;
+            this.EndDate = tmpBGroup.EndDate;
         }
 
         public override bool Equals(object obj)

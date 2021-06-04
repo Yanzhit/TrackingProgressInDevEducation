@@ -22,19 +22,14 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Comment, BComment>());
             Mapper mapper = new Mapper(config);
+            BComment tmpBComment = mapper.Map<BComment>(comment);
 
-            BComment tmpBComment = new BComment();
-            tmpBComment = mapper.Map<BComment>(comment);
-        }
-
-        public List<BComment> GetBComments(List<Comment> comments)
-        {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<List<Comment>, List<BComment>>());
-            Mapper mapper = new Mapper(config);
-
-            List<BComment> tmpBComments = new List<BComment>();
-            tmpBComments = mapper.Map<List<BComment>>(comments);
-            return tmpBComments;
+            this.Text = tmpBComment.Text;
+            this.TypeId = tmpBComment.TypeId;
+            this.StudentId = tmpBComment.StudentId;
+            this.CreatedBy = tmpBComment.CreatedBy;
+            this.TeamId = tmpBComment.TeamId;
+            this.Estimation = tmpBComment.Estimation;
         }
 
         public override bool Equals(object obj)
