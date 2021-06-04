@@ -9,23 +9,35 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="StudentsPage">
 
-    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250" HorizontalAlignment="Right" Width="900">
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="98" Margin="0,4,0,0" VerticalAlignment="Top" Width="880"/>
-        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="74" Margin="10,10,0,0" VerticalAlignment="Top" Width="229" Source="/Resourse/educationCore-LOGO.JPG" Stretch="Fill" />
-        <Label x:Name="NamePage" Content="Студенты колледжа" HorizontalAlignment="Left" Height="72" Margin="287,16,0,0" VerticalAlignment="Top" Width="308" FontSize="30"/>
-        <Button x:Name="AddStudentBtn" Content="Добавить студента" HorizontalAlignment="Left" Margin="650,10,0,0" VerticalAlignment="Top" Height="74" Width="229" FontSize="16"/>
-        <DataGrid x:Name="StudentGrid" Margin="10,116,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
+    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-470,-250" HorizontalAlignment="Right" Width="1270">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="339*"/>
+            <RowDefinition Height="361*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="StudentGrid" Margin="10,116,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E" Grid.RowSpan="2">
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="150"/>
-                <DataGridTextColumn Header="Имя" HeaderStringFormat="Имя" Width="150"/>
-                <DataGridTextColumn Header="Телефон" HeaderStringFormat="Телефон" Width="100"/>
-                <DataGridTextColumn Header="Email" HeaderStringFormat="Email" Width="100"/>
-                <DataGridTextColumn Header="Номер контракта" HeaderStringFormat="Номер контракта"/>
-                <DataGridTextColumn Header="Номер телефона" HeaderStringFormat="Номер телефона"/>
-                <DataGridTextColumn Header="Рейтинг" HeaderStringFormat="Рейтинг"/>
+                <DataGridTextColumn Header="Город" HeaderStringFormat="" Width="100">
+                    <DataGridTextColumn.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DataGridTextColumn.Foreground>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Курс" HeaderStringFormat="Курс" Width="100"/>
+                <DataGridTextColumn Header="Группа" HeaderStringFormat="Группа" Width="100"/>
+                <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="125"/>
+                <DataGridTextColumn Header="Имя" HeaderStringFormat="Имя" Width="125"/>
+                <DataGridTextColumn Header="Отчество" HeaderStringFormat="Отчество"/>
+                <DataGridTextColumn Header="Телефон" HeaderStringFormat="Телефон"/>
+                <DataGridTextColumn Header="email" HeaderStringFormat="email" Width="100"/>
+                <DataGridTextColumn Header="Git" HeaderStringFormat="Git" Width="100"/>
+                <DataGridTextColumn Header="DOB" HeaderStringFormat="DOB" Width="100"/>
+                <DataGridTextColumn Header="Rate" HeaderStringFormat="Rate" Width="50"/>
+                <DataGridTextColumn Header="#контракта" HeaderStringFormat="#контракта" Width="100"/>
             </DataGrid.Columns>
 
             <DataGrid.ItemsSource>
@@ -33,5 +45,9 @@
             </DataGrid.ItemsSource>
 
         </DataGrid>
+        <Button x:Name="AddStudentBtn" Content="Добавить студента" HorizontalAlignment="Left" Margin="450,25,0,0" VerticalAlignment="Top" Height="54" Width="173" FontSize="16" RenderTransformOrigin="0.457,0.574"/>
+        <Label x:Name="NamePage" Content="Студенты колледжа" HorizontalAlignment="Right" Height="46" Margin="0,30,25,0" VerticalAlignment="Top" Width="213" FontSize="22"/>
+        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="74" Margin="10,16,0,0" VerticalAlignment="Top" Width="229" Source="/Resourse/educationCore-LOGO.JPG" Stretch="Fill" />
+        <Button x:Name="AddStudentBtn_Copy" Content="Добавить студента" HorizontalAlignment="Left" Margin="260,26,0,0" VerticalAlignment="Top" Height="54" Width="173" FontSize="16"/>
     </Grid>
 </Page>
