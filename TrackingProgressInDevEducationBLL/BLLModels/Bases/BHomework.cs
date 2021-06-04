@@ -12,6 +12,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
     public class BHomework
     {
         public string Name { get; set; }
+        public string Deskription { get; set; }
 
         public BHomework()
         {
@@ -34,12 +35,13 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 
         private bool Equals(BHomework other)
         {
-            return Name == other.Name;
-        }
+            return Name == other.Name
+                   && Deskription == other.Deskription;
+        } 
 
         public override int GetHashCode()
         {
-            return (Name != null ? Name.GetHashCode() : 0);
+            return HashCode.Combine(Name, Deskription);
         }
     }
 }

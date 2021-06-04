@@ -20,10 +20,6 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
 
                 BCity tmpBCity = new BCity();
                 tmpBCity = mapper.Map<BCity>(city);
-                //if (tmpBCity.Name != null)
-                //{
-                //    this.Name = tmpBCity.Name;
-                //}
 
                 return tmpBCity;
             }
@@ -35,13 +31,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
 
                 List<BCity> tmpBCities = new List<BCity>();
                 tmpBCities = mapper.Map<List<BCity>>(cities);
-                //foreach (var c in cities)
-                //{
-                //    if (c.Name != null)
-                //    {
 
-                //    }
-                //}
                 return tmpBCities;
             }
         }

@@ -9,9 +9,10 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
     {
         public string Text { get; set; }
         public int TypeId { get; set; }
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
         public int CreatedBy { get; set; }
-        public int TeamId { get; set; }
+        public int? TeamId { get; set; }
+        public decimal? Estimation { get; set; }
 
         public BComment()
         {
@@ -24,26 +25,6 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 
             BComment tmpBComment = new BComment();
             tmpBComment = mapper.Map<BComment>(comment);
-            if (tmpBComment.Text != null)
-            {
-                this.Text = tmpBComment.Text;
-            }
-            if (tmpBComment.TypeId != null)
-            {
-                this.TypeId = tmpBComment.TypeId;
-            }
-            if (tmpBComment.StudentId != null)
-            {
-                this.StudentId = tmpBComment.StudentId;
-            }
-            if (tmpBComment.CreatedBy != null)
-            {
-                this.CreatedBy = tmpBComment.CreatedBy;
-            }
-            if (tmpBComment.TeamId != null)
-            {
-                this.TypeId = tmpBComment.TypeId;
-            }
         }
 
         public List<BComment> GetBComments(List<Comment> comments)
@@ -67,12 +48,13 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
                    && TypeId == other.TypeId
                    && StudentId == other.StudentId
                    && CreatedBy == other.CreatedBy
-                   && TeamId == other.TeamId;
+                   && TeamId == other.TeamId
+                   && Estimation == other.Estimation;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId);
+            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId, Estimation);
         }
     }
 }
