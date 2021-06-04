@@ -8,12 +8,28 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GroupInfoPage">
 
-    <Grid Background="#FFDED4D4">
-        <Image x:Name="image" HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" VerticalAlignment="Top" Width="158">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/Resourse/educationCore-LOGO.JPG"/>
-            </Image.OpacityMask>
-        </Image>
-
+    <Grid Background="#FFDED4D4" Margin="0,0,413,0">
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="45" Width="119">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BAddStudent" Content="Добавить студентов" HorizontalAlignment="Left" Margin="134,14,0,0" VerticalAlignment="Top" Height="36" Width="90" FontSize="9"/>
+        <Button x:Name="BJournal" Content="Журнал" HorizontalAlignment="Left" Margin="229,15,0,0" VerticalAlignment="Top" Height="35" Width="54"/>
+        <DataGrid x:Name="dataGrid" Margin="10,60,10,343">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата начала" HeaderStringFormat="Дата начала"/>
+                <DataGridCheckBoxColumn Header="Дата окончания" HeaderStringFormat="Дата окончания"/>
+                <DataGridCheckBoxColumn Header="Курс" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dataGrid1" Margin="10,112,10,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Студент" HeaderStringFormat="Студент" Width="150"/>
+                <DataGridTextColumn Header="Git" HeaderStringFormat="Git" Width="150"/>
+                <DataGridTextColumn Header="Рейтинг"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="LGroupName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
     </Grid>
 </Page>
