@@ -1,0 +1,19 @@
+﻿<Page x:Class="TrackingProgressInDevEducationUI.Pages.GroupInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GroupInfoPage">
+
+    <Grid Background="#FFDED4D4">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" VerticalAlignment="Top" Width="158">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/Resourse/educationCore-LOGO.JPG"/>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Page>
