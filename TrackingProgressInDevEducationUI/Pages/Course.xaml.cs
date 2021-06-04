@@ -16,15 +16,18 @@ using System.Windows.Shapes;
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Interaction logic for StudentPage.xaml
+    /// Логика взаимодействия для Course.xaml
     /// </summary>
-    public partial class StudentPage : Page
+    public partial class Course : Page
     {
-        private readonly MainForm _mainForm;
-        public StudentPage(MainForm mainForm)
+        public Course()
         {
             InitializeComponent();
-            _mainForm = mainForm;
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -2,20 +2,20 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=System.Runtime"
-    x:Class="TrackingProgressInDevEducationUI.Pages.HomePage"
+    x:Class="TrackingProgressInDevEducationUI.Pages.Home"
     x:TypeArguments="sys:String"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
     mc:Ignorable="d"
     d:DesignHeight="450" d:DesignWidth="800"
-    Title="HomePage"
+    Title="Home"
     >
 
     <Page.Resources>
         <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
     </Page.Resources>
-    
+
     <Grid Background="#91D4D1">
         <TextBox 
             HorizontalAlignment="Center" 
@@ -27,7 +27,7 @@
             FontSize="16" 
             FontWeight="Bold"
         />
-        
+
         <TextBox
             HorizontalAlignment="Center" 
             Height="98" 
@@ -40,7 +40,7 @@
             FontWeight="Bold" 
             Grid.Column="0"
         />
-        
+
         <TextBox 
             HorizontalAlignment="Left" 
             Height="98" 
@@ -52,7 +52,7 @@
             FontSize="16" 
             FontWeight="Bold"
         />
-        
+
         <TextBox x:Name="WelcomeBlock" 
             HorizontalAlignment="Center" 
             Height="34" 
@@ -65,37 +65,28 @@
             FontWeight="Bold" 
             BorderBrush="#FFE0DEDE"
         />
-        
+
         <Button 
             Content="Студенты колледжа" 
             Margin="612,22,0,0" 
         />
-        
+
         <Button 
             Content="Добавить курс" 
             Margin="612,110,0,0"              
         />
-        
+
         <Button  
             Content="Создать группу" 
             Margin="612,224,0,0" 
         />
-        
+
         <Button
             Style="{DynamicResource ButtonStyles}"
             Content="Создать команду" 
             Margin="636,358,0,0" 
         />
-        
-        <Image 
-            HorizontalAlignment="Left" 
-            Height="45" 
-            Margin="52,19,0,0" 
-            VerticalAlignment="Top" 
-            Width="110" 
-            Source="/Resourse/educationCore-LOGO.JPG"
-        />
-        
+
         <DataGrid HorizontalAlignment="Left" Height="60" Margin="52,223,0,0" VerticalAlignment="Top" Width="368">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Группа"/>
@@ -105,12 +96,17 @@
                 <DataGridTextColumn Header="Кол-во Студентов"/>
             </DataGrid.Columns>
         </DataGrid>
-        
+
         <Button
             Style="{DynamicResource ButtonStyles}" 
             Content="Журнал" 
             Margin="439,253,0,0" 
         />
-        
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </PageFunction>

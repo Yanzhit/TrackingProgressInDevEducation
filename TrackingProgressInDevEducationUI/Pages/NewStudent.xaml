@@ -10,7 +10,6 @@
 
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250" HorizontalAlignment="Right" Width="900">
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="98" Margin="0,3,0,0" VerticalAlignment="Top" Width="880"/>
-        <Image x:Name="ImageIcon" HorizontalAlignment="Left" Height="74" Margin="10,10,0,0" VerticalAlignment="Top" Width="229" Source="/Resourse/educationCore-LOGO.JPG" Stretch="Fill" />
         <Label x:Name="NamePage" Content="Создание нового студента" HorizontalAlignment="Left" Height="72" Margin="287,16,0,0" VerticalAlignment="Top" Width="308" FontSize="23" FontWeight="Bold"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="512" Margin="0,155,0,0" VerticalAlignment="Top" Width="772" Background="#FFF9EFEF">
             <Label x:Name="Surname" Content="Фамилия" HorizontalAlignment="Left" Height="35" Margin="36,49,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
@@ -33,6 +32,10 @@
 
             <Button x:Name="CreateCursesButton" Content="Создать" HorizontalAlignment="Left" Height="58" Margin="574,426,0,0" VerticalAlignment="Top" Width="181" FontSize="20" Background="#FFEC80A2"/>
         </Grid>
-
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

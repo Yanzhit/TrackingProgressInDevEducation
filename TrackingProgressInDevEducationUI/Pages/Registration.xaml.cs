@@ -14,18 +14,15 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class Registration : Page
     {
-        private readonly MainForm _mainForm;
         private readonly FacadeManager _manager = new();
-        public Registration(MainForm mainForm)
+        public Registration()
         {
             InitializeComponent();
-            _mainForm = mainForm;
         }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            SignIn signIn = new(_mainForm);
-            _mainForm.Content = signIn;
+            //_mainForm.Content = signIn;
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
@@ -110,6 +107,11 @@ namespace TrackingProgressInDevEducationUI.Pages
 
                 MessageBox.Show($"{ex.Message}{NewLine}{ExeptionEx}");
             }
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

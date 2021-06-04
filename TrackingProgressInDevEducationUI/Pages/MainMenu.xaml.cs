@@ -24,13 +24,11 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainMenu : Page
     {
-        private readonly MainForm _mainForm;
         private bool _isDevMod = true;
         private List<AbstractModel> _models = new List<AbstractModel>();
-        public MainMenu(MainForm mainForm)
+        public MainMenu()
         {
             InitializeComponent();
-            _mainForm = mainForm;
             PreInstall();
         }
 
@@ -44,8 +42,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void QueriesTestButton_Click(object sender, RoutedEventArgs e)
         {
-            QueriesTests queriesTests = new QueriesTests(_mainForm);
-            _mainForm.Content = queriesTests;
+            QueriesTests queriesTests = new QueriesTests();
+            Content = queriesTests;
         }
 
         private void DevModCheckBox_Checked(object sender, RoutedEventArgs e)

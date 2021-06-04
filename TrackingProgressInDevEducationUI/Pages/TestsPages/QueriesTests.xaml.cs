@@ -13,18 +13,16 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
     /// </summary>
     public partial class QueriesTests : Page
     {
-        private readonly MainForm _mainForm;
         public City tCity;
-        public QueriesTests(MainForm mainForm)
+        public QueriesTests()
         {
             InitializeComponent();
-            _mainForm = mainForm;
             tCity = new City("Вологдар");
         }
 
         private void SendQueries_Click(object sender, RoutedEventArgs e)
         {
-            IEnumerable<Student> students;
+            IEnumerable<TrackingProgressInDevEducationDAL.Models.Bases.Student> students;
             if (GetStudentsRadioButton.IsChecked == true)
             {
                 FacadeManager f = new FacadeManager();

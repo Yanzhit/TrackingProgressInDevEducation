@@ -12,26 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for Students.xaml
     /// </summary>
-    public partial class HomePage : PageFunction<String>
+    public partial class Students : Page
     {
-        private readonly MainForm _mainForm;
-        public HomePage(MainForm mainForm, string name)
+        public Students()
         {
             InitializeComponent();
-            _mainForm = mainForm;
-            Welcome(name);
         }
 
-        private void Welcome(string name)
+        private void StudentGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{name}";
+
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
