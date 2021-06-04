@@ -125,18 +125,33 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 return tmpBHomeworks;
             }
 
-            public BHWComplete HWCompleteBHWComplete(HWComplete hwComplete)
+            public BHWComplete HWCompleteToBHWComplete(HWComplete hwComplete)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
                 Mapper mapper = new Mapper(config);
                 BHWComplete tmpBHomework = mapper.Map<BHWComplete>(hwComplete);
                 return tmpBHomework;
             }
-            public List<BHWComplete> HWCompletesBHWCompletes(List<HWComplete> hwCompletes)
+            public List<BHWComplete> HWCompletesToBHWCompletes(List<HWComplete> hwCompletes)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
                 Mapper mapper = new Mapper(config);
                 List<BHWComplete> tmpBHomeworks = mapper.Map<List<BHWComplete>>(hwCompletes);
+                return tmpBHomeworks;
+            }
+
+            public BHWGroup HWGroupToBHWGroup(HWGroup hwGroup)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HWGroup, BHWGroup>());
+                Mapper mapper = new Mapper(config);
+                BHWGroup tmpBHomework = mapper.Map<BHWGroup>(hwGroup);
+                return tmpBHomework;
+            }
+            public List<BHWGroup> HWGroupToBHWGroup(List<HWGroup> hwGroups)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HWGroup, BHWGroup>());
+                Mapper mapper = new Mapper(config);
+                List<BHWGroup> tmpBHomeworks = mapper.Map<List<BHWGroup>>(hwGroups);
                 return tmpBHomeworks;
             }
         }
