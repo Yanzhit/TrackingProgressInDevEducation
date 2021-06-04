@@ -13,6 +13,8 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
     {
         public string Name { get; set; }
         public int CourseId { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         public BGroup()
         {
@@ -22,11 +24,12 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, BGroup>());
             Mapper mapper = new Mapper(config);
+            BGroup tmpBGroup = mapper.Map<BGroup>(group);
 
-            BGroup tmpBGroup = new BGroup();
-            tmpBGroup = mapper.Map<BGroup>(group);
             this.Name = tmpBGroup.Name;
             this.CourseId = tmpBGroup.CourseId;
+            this.StartDate = tmpBGroup.StartDate;
+            this.EndDate = tmpBGroup.EndDate;
         }
 
         public override bool Equals(object obj)
@@ -37,12 +40,14 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         private bool Equals(BGroup other)
         {
             return Name == other.Name
-                   && CourseId == other.CourseId;
+                   && CourseId == other.CourseId
+                   && StartDate == other.StartDate
+                   && EndDate == other.EndDate;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, CourseId);
+            return HashCode.Combine(Name, CourseId, StartDate, EndDate);
         }
     }
 }
