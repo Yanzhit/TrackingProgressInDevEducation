@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
             this.Name = tmpBTeam.Name;
             this.From = tmpBTeam.From;
-            this.To = tmpBTeams.To;
+            this.To = tmpBTeam.To;
         }
 
         public override bool Equals(object obj)

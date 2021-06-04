@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Windows.Documents;
+using TrackingProgressInDevEducationBLL.BLLModels;
 using TrackingProgressInDevEducationBLL.BLLModels.Bases;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
@@ -51,13 +52,14 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
                 //Comment city = f.Comments.SetNewComment("Привет", 1, 1, 1, 1);
                 //RequestViewTextBox.Text += $"{city.Name}";
 
-                List<BCity> BCities = new BCity().GetCities(new List<City>(f.Cities.GetAllCities()));
+                BLLMapper bMapper = new BLLMapper();
+                List<BCity> BCities = bMapper.CitiesToBCities(new List<City>(f.Cities.GetAllCities()));
                 foreach (var bcity in BCities)
                 {
                     RequestViewTextBox.Text += $"Вы добавили город в лист BLL моделей {bcity.Name}";
                 }
 
-                BCity tmpCity = new BCity().GetCity(tCity);
+                BCity tmpCity = bMapper.CityToBCity(tCity);
                 RequestViewTextBox.Text += $"Вы добавили город в лист BLL моделей {tmpCity.Name}";
             }
         }
