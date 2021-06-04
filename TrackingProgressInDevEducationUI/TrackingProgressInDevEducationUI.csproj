@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resourse\BackGroundMain.jpg" />
+    <Resource Include="Pages\Resourse\BackGroundMain.jpg" />
   </ItemGroup>
 
   <ItemGroup>

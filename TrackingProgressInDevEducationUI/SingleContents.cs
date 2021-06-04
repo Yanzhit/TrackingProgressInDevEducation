@@ -21,15 +21,20 @@ namespace TrackingProgressInDevEducationUI
         private MainMenu _mainMenu;
         private QueriesTests _queriesTests;
 
-
         private SingleContents()
         {
-            _main = new();
         }
-
-        public SingleContents GetContent()
+        private SingleContents(MainForm main)
+        {
+            _main = main;
+        }
+        public static SingleContents GetContent()
         {
             return _contents ??= new SingleContents();
+        }
+        public static SingleContents SetForm(MainForm main)
+        {
+            return _contents ??= new SingleContents(main);
         }
         public void Course()
         {
