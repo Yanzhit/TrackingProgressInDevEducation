@@ -25,14 +25,14 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
             Mapper mapper = new Mapper(config);
-            BHWComplete tmpBHomework = mapper.Map<BHWComplete>(hwComplete);
+            BHWComplete tmpHWBComplete = mapper.Map<BHWComplete>(hwComplete);
 
-            this.HomeworkId = tmpBHomework.HomeworkId;
-            this.StudentId = tmpBHomework.StudentId;
-            this.Status = tmpBHomework.Status;
-            this.ApproveDate = tmpBHomework.ApproveDate;
-            this.Score = tmpBHomework.Score;
-            this.CreatedOn = tmpBHomework.CreatedOn;
+            this.HomeworkId = tmpHWBComplete.HomeworkId;
+            this.StudentId = tmpHWBComplete.StudentId;
+            this.Status = tmpHWBComplete.Status;
+            this.ApproveDate = tmpHWBComplete.ApproveDate;
+            this.Score = tmpHWBComplete.Score;
+            this.CreatedOn = tmpHWBComplete.CreatedOn;
         }
 
         public override bool Equals(object obj)

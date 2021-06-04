@@ -22,11 +22,11 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
             Mapper mapper = new Mapper(config);
-            BLector tmpBHomework = mapper.Map<BLector>(lector);
+            BLector tmpBLector = mapper.Map<BLector>(lector);
 
-            this.FullName = tmpBHomework.FullName;
-            this.Email = tmpBHomework.Email;
-            this.Password = tmpBHomework.Password;
+            this.FullName = tmpBLector.FullName;
+            this.Email = tmpBLector.Email;
+            this.Password = tmpBLector.Password;
         }
         public override bool Equals(object obj)
         {

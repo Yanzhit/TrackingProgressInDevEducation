@@ -130,109 +130,109 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
                 Mapper mapper = new Mapper(config);
-                BHWComplete tmpBHomework = mapper.Map<BHWComplete>(hwComplete);
-                return tmpBHomework;
+                BHWComplete tmpHWBComplete = mapper.Map<BHWComplete>(hwComplete);
+                return tmpHWBComplete;
             }
             public List<BHWComplete> HWCompletesToBHWCompletes(List<HWComplete> hwCompletes)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
                 Mapper mapper = new Mapper(config);
-                List<BHWComplete> tmpBHomeworks = mapper.Map<List<BHWComplete>>(hwCompletes);
-                return tmpBHomeworks;
+                List<BHWComplete> tmpHWBCompletes = mapper.Map<List<BHWComplete>>(hwCompletes);
+                return tmpHWBCompletes;
             }
 
             public BHWGroup HWGroupToBHWGroup(HWGroup hwGroup)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWGroup, BHWGroup>());
                 Mapper mapper = new Mapper(config);
-                BHWGroup tmpBHomework = mapper.Map<BHWGroup>(hwGroup);
-                return tmpBHomework;
+                BHWGroup tmpBHWGroup = mapper.Map<BHWGroup>(hwGroup);
+                return tmpBHWGroup;
             }
             public List<BHWGroup> HWGroupToBHWGroup(List<HWGroup> hwGroups)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HWGroup, BHWGroup>());
                 Mapper mapper = new Mapper(config);
-                List<BHWGroup> tmpBHomeworks = mapper.Map<List<BHWGroup>>(hwGroups);
-                return tmpBHomeworks;
+                List<BHWGroup> tmpBHWGroups = mapper.Map<List<BHWGroup>>(hwGroups);
+                return tmpBHWGroups;
             }
 
             public BLection LectionToBLection(Lection lection)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Lection, BLection>());
                 Mapper mapper = new Mapper(config);
-                BLection tmpBHomework = mapper.Map<BLection>(lection);
-                return tmpBHomework;
+                BLection tmpBLection = mapper.Map<BLection>(lection);
+                return tmpBLection;
             }
             public List<BLection> LectionsToBLections(List<Lection> lections)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Lection, BLection>());
                 Mapper mapper = new Mapper(config);
-                List<BLection> tmpBHomeworks = mapper.Map<List<BLection>>(lections);
-                return tmpBHomeworks;
+                List<BLection> tmpBLections = mapper.Map<List<BLection>>(lections);
+                return tmpBLections;
             }
 
             public BLector LectorToBLector(Lector lector)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
                 Mapper mapper = new Mapper(config);
-                BLector tmpBHomework = mapper.Map<BLector>(lector);
-                return tmpBHomework;
+                BLector tmpBLector = mapper.Map<BLector>(lector);
+                return tmpBLector;
             }
 
             public List<BLector> LectorsToBLectors(List<Lector> lectors)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
                 Mapper mapper = new Mapper(config);
-                List<BLector> tmpBHomeworks = mapper.Map<List<BLector>>(lectors);
-                return tmpBHomeworks;
+                List<BLector> tmpBLectors = mapper.Map<List<BLector>>(lectors);
+                return tmpBLectors;
             }
 
             public BLectorCourse LectorCourseBLectorCourse(LectorCourse lectorCourse)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
                 Mapper mapper = new Mapper(config);
-                BLectorCourse tmpBHomework = mapper.Map<BLectorCourse>(lectorCourse);
-                return tmpBHomework;
+                BLectorCourse tmpBLectorCourse = mapper.Map<BLectorCourse>(lectorCourse);
+                return tmpBLectorCourse;
             }
 
             public List<BLectorCourse> LectorCoursesBLectorCourses(List<LectorCourse> lectorCourses)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
                 Mapper mapper = new Mapper(config);
-                List<BLectorCourse> tmpBHomeworks = mapper.Map<List<BLectorCourse>>(lectorCourses);
-                return tmpBHomeworks;
+                List<BLectorCourse> tmpBLectorCourses = mapper.Map<List<BLectorCourse>>(lectorCourses);
+                return tmpBLectorCourses;
             }
 
             public BLectorGroup LectorGroupToBLectorGroup(LectorGroup lectorGroup)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorGroup, BLectorGroup>());
                 Mapper mapper = new Mapper(config);
-                BLectorGroup tmpBHomework = mapper.Map<BLectorGroup>(lectorGroup);
-                return tmpBHomework;
+                BLectorGroup tmpBLectorGroup = mapper.Map<BLectorGroup>(lectorGroup);
+                return tmpBLectorGroup;
             }
 
             public List<BLectorGroup> LectorGroupsToBLectorGroups(List<LectorGroup> lectorGroups)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorGroup, BLectorGroup>());
                 Mapper mapper = new Mapper(config);
-                List<BLectorGroup> tmpBHomeworks = mapper.Map<List<BLectorGroup>>(lectorGroups);
-                return tmpBHomeworks;
+                List<BLectorGroup> tmpBLectorGroups = mapper.Map<List<BLectorGroup>>(lectorGroups);
+                return tmpBLectorGroups;
             }
 
             public BPayment PaymentToBPayment(Payment payment)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
                 Mapper mapper = new Mapper(config);
-                BPayment tmpBHomework = mapper.Map<BPayment>(payment);
-                return tmpBHomework;
+                BPayment tmpBPayment = mapper.Map<BPayment>(payment);
+                return tmpBPayment;
             }
 
             public List<BPayment> PaymentsToBPayments(List<Payment> payments)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
                 Mapper mapper = new Mapper(config);
-                List<BPayment> tmpBHomeworks = mapper.Map<List<BPayment>>(payments);
-                return tmpBHomeworks;
+                List<BPayment> tmpBPayments = mapper.Map<List<BPayment>>(payments);
+                return tmpBPayments;
             }
 
             public BStudent StudentBStudent(Student student)
@@ -248,6 +248,22 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, BStudent>());
                 Mapper mapper = new Mapper(config);
                 List<BStudent> tmpBStudents = mapper.Map<List<BStudent>>(students);
+                return tmpBStudents;
+            }
+
+            public BTeam TeamToBTeam(Team team)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Team, BTeam>());
+                Mapper mapper = new Mapper(config);
+                BTeam tmpBTeam = mapper.Map<BTeam>(team);
+                return tmpBTeam;
+            }
+
+            public List<BTeam> TeamsToBTeams(List<Team> teams)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Team, BTeam>());
+                Mapper mapper = new Mapper(config);
+                List<BTeam> tmpBStudents = mapper.Map<List<BTeam>>(teams);
                 return tmpBStudents;
             }
         }

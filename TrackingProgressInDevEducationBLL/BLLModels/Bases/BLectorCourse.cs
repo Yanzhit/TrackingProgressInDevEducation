@@ -17,10 +17,10 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
             Mapper mapper = new Mapper(config);
-            BLectorCourse tmpBHomework = mapper.Map<BLectorCourse>(lectorCourse);
+            BLectorCourse tmpBLectorCourse = mapper.Map<BLectorCourse>(lectorCourse);
 
-            this.LectorId = tmpBHomework.LectorId;
-            this.CourseId = tmpBHomework.CourseId;
+            this.LectorId = tmpBLectorCourse.LectorId;
+            this.CourseId = tmpBLectorCourse.CourseId;
         }
 
         public override bool Equals(object obj)

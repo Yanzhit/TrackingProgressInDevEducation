@@ -25,13 +25,13 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
             Mapper mapper = new Mapper(config);
-            BPayment tmpBHomework = mapper.Map<BPayment>(payment);
+            BPayment tmpBPayment = mapper.Map<BPayment>(payment);
 
-            this.StudentId = tmpBHomework.StudentId;
-            this.PaymentTo = tmpBHomework.PaymentTo;
-            this.PaymentOn = tmpBHomework.PaymentOn;
-            this.Amount = tmpBHomework.Amount;
-            this.Status = tmpBHomework.Status;
+            this.StudentId = tmpBPayment.StudentId;
+            this.PaymentTo = tmpBPayment.PaymentTo;
+            this.PaymentOn = tmpBPayment.PaymentOn;
+            this.Amount = tmpBPayment.Amount;
+            this.Status = tmpBPayment.Status;
         }
 
         public override bool Equals(object obj)
