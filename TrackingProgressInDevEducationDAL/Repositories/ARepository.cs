@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Repositories
 {
     public abstract class ARepository
     {
-        public ARepository()
+        protected ARepository()
         {
         }
 
