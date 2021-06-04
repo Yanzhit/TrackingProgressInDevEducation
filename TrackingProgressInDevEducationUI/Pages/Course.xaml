@@ -8,17 +8,19 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Course">
 
-    <Grid x:Name="Grid" Background="#FFE2D8D8" Margin="0,0,-100,-250
+    <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,-100,-250
           " HorizontalAlignment="Right" Width="900">
-        <Label x:Name="NamePage" Content="Создание нового курса" HorizontalAlignment="Left" Height="72" Margin="288,10,0,0" VerticalAlignment="Top" Width="575" FontSize="30"/>
-        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="512" Margin="0,155,0,0" VerticalAlignment="Top" Width="772" Background="#FFF9EFEF">
-            <Label x:Name="NameCursesText" Content="Название курса" HorizontalAlignment="Left" Height="69" Margin="36,49,0,0" VerticalAlignment="Top" Width="287" FontSize="28"/>
-            <Label x:Name="CourseDescriptionText" Content="Описание курса" HorizontalAlignment="Left" Height="130" Margin="36,196,0,0" VerticalAlignment="Top" Width="330" FontSize="28"/>
-            <TextBox x:Name="NameCursesTextBox" HorizontalAlignment="Left" Height="84" Margin="349,49,0,0" Text="Введите название..." TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
-            <TextBox x:Name="CourseDescriptionBoxText" HorizontalAlignment="Left" Height="219" Margin="349,196,0,0" Text="Введите описание..." TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE6E6E6"/>
+        <Label x:Name="NamePage" Content="Создание нового курса" HorizontalAlignment="Center" Height="56" Margin="0,20,0,0" VerticalAlignment="Top" Width="352" FontSize="30"/>
+        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="566" Margin="0,101,0,0" VerticalAlignment="Top" Width="850" Background="#FFF9EFEF">
+            <Label x:Name="NameCursesLabel" Content="Название курса" HorizontalAlignment="Left" Height="42" Margin="36,22,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
+            <Label x:Name="CourseDescriptionLabel" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,201,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
+            <TextBox x:Name="NameCursesTextBox" HorizontalAlignment="Left" Height="84" Margin="310,22,0,0" Text="Введите название..." TextWrapping="Wrap" VerticalAlignment="Top" Width="464" Background="#FFE4E4E4"/>
+            <TextBox x:Name="CourseDescriptionTextBox" HorizontalAlignment="Left" Height="219" Margin="310,127,0,0" Text="Введите описание..." TextWrapping="Wrap" VerticalAlignment="Top" Width="464" Background="#FFE6E6E6"/>
             <Button x:Name="CreateCursesButton" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="349,445,0,0" VerticalAlignment="Top" Width="389" FontSize="20" Background="#FFEC7979"/>
+            <Label x:Name="ChangeCourseLabel" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,365,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
+            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="310,366,0,0" VerticalAlignment="Top" Width="464" Height="56" RenderTransformOrigin="0.994,1.964"/>
         </Grid>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Height="76" Width="190" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
             </Button.Background>
