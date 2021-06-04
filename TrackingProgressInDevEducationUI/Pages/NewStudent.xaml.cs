@@ -20,11 +20,14 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class NewStudent : Page
     {
-        private readonly MainForm _mainForm;
-        public NewStudent(MainForm mainForm)
+        public NewStudent()
         {
             InitializeComponent();
-            _mainForm = mainForm;
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

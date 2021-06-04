@@ -23,6 +23,10 @@
         <Button Content="Регистрация" HorizontalAlignment="Left" Height="28" Margin="328,318,0,0" VerticalAlignment="Top" Width="148" Click="Registration_Click"/>
         <TextBlock HorizontalAlignment="Center" Height="22" Margin="0,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"><Run Language="ru-ru" Text="Новый пользователь?"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="41" Margin="262,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Информационное окно"/></TextBlock>
-
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resourse/educationCore-LOGO.JPG"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

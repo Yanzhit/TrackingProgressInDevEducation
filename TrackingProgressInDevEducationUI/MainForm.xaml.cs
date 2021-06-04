@@ -33,8 +33,7 @@ namespace TrackingProgressInDevEducationUI
         {
             //Запуск задержки
             await Task.Delay(TimeSpan.FromSeconds(2));
-            SignIn signIn = new SignIn(this);
-            this.Content = signIn;
+            //this.Content = signIn;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

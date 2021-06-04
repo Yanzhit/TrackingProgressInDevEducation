@@ -12,19 +12,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CoursePage.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class CoursePage : Page
+    public partial class Home : PageFunction<String>
     {
-        private readonly MainForm _mainForm;
-        public CoursePage(MainForm mainForm)
+        public Home()
         {
             InitializeComponent();
-            _mainForm = mainForm;
+            //Welcome();
+        }
+
+        private void Welcome(string name)
+        {
+            WelcomeBlock.Text = $"{Welcome2}{Sep}{name}";
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+            // Нужно добавить обновление страницы
         }
     }
 }
