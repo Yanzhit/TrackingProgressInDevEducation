@@ -29,6 +29,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
+        public QLector GetLoginAndPassword(string login, string password)
+        {
+            Type = typeof(Getter);
+            Name = nameof(GetLoginAndPassword);
+            Params = $"{login}{Sep}{password}";
+            return this;
+        }
+
         public QLector GetAllLectors()
         {
             Type = typeof(Getter);

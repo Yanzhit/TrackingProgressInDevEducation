@@ -53,11 +53,10 @@
             FontWeight="Bold"
         />
         
-        <TextBox 
+        <TextBox x:Name="WelcomeBlock" 
             HorizontalAlignment="Center" 
             Height="34" 
             Margin="0,21,0,0" 
-            Text="Приветствую, преподаватель!" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
             Width="352" 

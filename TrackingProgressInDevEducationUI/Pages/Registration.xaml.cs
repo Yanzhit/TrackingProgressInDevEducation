@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
 using System.Windows;
@@ -23,29 +24,69 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            SignIn signIn = new SignIn(_mainForm);
+            SignIn signIn = new(_mainForm);
             _mainForm.Content = signIn;
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            if (Password_Input.Text == PasswordRepeat_Input.Text)
+            bool isRegistration = Verification();
+            if (isRegistration)
             {
-
+                Dictionary<string, string> param = WriteParams(); 
+                //_manager.Lectors.SetNewLector(param["Name"], param["Email"], param["Password"]);
+                EmailSend(FullNameInput.Text, EmailInput.Text);
             }
-            Registrations();
         }
 
-        private void Registrations()
+        private Dictionary<string, string> WriteParams()
+        {
+            Dictionary<string, string> param = new()
+            {
+                {"Name", FullNameInput.Text}, {"Email", EmailInput.Text}, {"Password", PasswordInput.Text}
+            };
+            return param;
+        }
+
+        private bool Verification()
+        {
+            bool tmp = true;
+            if (FullNameInput.Text.Length is < 6 or > 50)
+            {
+                InfoText.Text += $"{ExepFNameLength}{NewLine}";
+                tmp = false;
+            }
+            if(EmailInput.Text.Length is < 1 or > 25)
+            {
+                InfoText.Text +=  $"{ExepEmailLength}{NewLine}";
+                tmp = false;
+            }
+
+            if (PasswordInput.Text.Length is < 1 or > 12)
+            {
+                InfoText.Text +=  $"{ExepPasswordLength}{NewLine}";
+                tmp = false;
+            }
+
+            if (PasswordInput.Text != PasswordRepeatInput.Text)
+            {
+                InfoText.Text +=  $"{ExepPasswordRepeat}{NewLine}";
+                tmp = false;
+            }
+
+            return tmp;
+        }
+
+        private void EmailSend(string user, string email)
         {
             try
             {
-                string user = "Станислав";
-                var mail = new MailMessage {From = new MailAddress("EducationCore@yandex.ru")};
-                mail.To.Add(new MailAddress("educationcore@mail.ru"));
-                mail.Subject = $"{Defines.Registration}";
-                mail.Body = $"{Welcome}{Gap}{user}";
-
+                MailMessage mail = new()
+                {
+                    From = new MailAddress(email),
+                    Subject = $"{Defines.Registration}",
+                    Body = $"{Welcome}{Gap}{user}"
+                };
                 SmtpClient client = new()
                 {
                     Host = Host,

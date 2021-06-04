@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -20,15 +21,14 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            _manager.Lectors.GetLectorById(1);
-
-            MainMenu menu = new MainMenu(_mainForm);
-            _mainForm.Content = menu;
+            Lector lector = _manager.Lectors.GetLoginAndPassword(Login.Text, Password.Text);
+            HomePage home = new(_mainForm, lector.FullName);
+            _mainForm.Content = home;
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration(_mainForm);
+            Registration registration = new(_mainForm);
             _mainForm.Content = registration;
         }
     }

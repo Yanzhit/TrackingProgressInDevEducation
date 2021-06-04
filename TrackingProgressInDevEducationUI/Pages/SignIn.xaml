@@ -16,8 +16,8 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button Content="Вход" HorizontalAlignment="Left" Height="27" Margin="328,249,0,0" VerticalAlignment="Top" Width="148" Click="SignIn_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="262,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="262,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="27" Margin="262,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="27" Margin="262,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"/>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="262,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Логин"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="262,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
         <Button Content="Регистрация" HorizontalAlignment="Left" Height="28" Margin="328,318,0,0" VerticalAlignment="Top" Width="148" Click="Registration_Click"/>

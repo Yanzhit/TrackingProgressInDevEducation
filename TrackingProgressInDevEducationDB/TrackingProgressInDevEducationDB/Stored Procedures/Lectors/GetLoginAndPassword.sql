@@ -6,5 +6,5 @@ AS
     ,[FullName]
     ,[Email] 
     ,[Password]
-	FROM [TrackingProgressInDevEducationDB].Lectors
+	FROM [TrackingProgressInDevEducationDB].[Lectors]
 	WHERE [Email] = @Login AND [Password] = @Password

@@ -11,7 +11,7 @@ AS
 		,[Email]
 		,[Password]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		 @FullName

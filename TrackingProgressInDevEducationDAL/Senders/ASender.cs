@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
@@ -32,7 +31,7 @@ namespace TrackingProgressInDevEducationDAL.Senders
             GetCommand(query);
             Type type = GetType(query.Type);
             _instatns = GetInstansClass(type);
-            _generic = method.MakeGenericMethod(query.Type);
+            _generic = method.MakeGenericMethod(query.Test);
         }
         private object GetInstansClass(Type type)
         {
