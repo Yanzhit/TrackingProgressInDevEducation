@@ -20,9 +20,11 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class StudentsPage : Page
     {
-        public StudentsPage()
+        private readonly MainForm _mainForm;
+        public StudentsPage(MainForm mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
         }
 
         private void StudentGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

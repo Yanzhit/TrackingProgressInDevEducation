@@ -40,9 +40,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             );
         }
 
-        public IEnumerable<AResult> SetNewCommentToStudent()
+        public AResult SetNewCommentToStudent()
         {
-            return (List<AResult>)Manager.Setter.Single(_query.SetNewCommentToStudent());
+            return (AResult)Manager.Setter.Single(_query.SetNewCommentToStudent());
         }
 
         public IEnumerable<AResult> SetCommentToTeam()
@@ -57,7 +57,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 
         public IEnumerable<AResult> GetCommentsByTeam()
         {
-            return (List<AResult>)Manager.Getter.Several(_query.GetCommentsByTeam());
+            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetCommentsByTeam());
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<AResult> NullifyComments()
         {
-            return (List<AResult>)Manager.Remove.Rem(_query.NullifyComments());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyComments());
         }
     }
 }

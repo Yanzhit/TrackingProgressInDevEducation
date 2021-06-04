@@ -20,9 +20,11 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class StudentPage : Page
     {
-        public StudentPage()
+        private readonly MainForm _mainForm;
+        public StudentPage(MainForm mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
         }
     }
 }

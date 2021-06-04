@@ -20,9 +20,11 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class HomePage : PageFunction<String>
     {
-        public HomePage()
+        private readonly MainForm _mainForm;
+        public HomePage(MainForm mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
         }
     }
 }

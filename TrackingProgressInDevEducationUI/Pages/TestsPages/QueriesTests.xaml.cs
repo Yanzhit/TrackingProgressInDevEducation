@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationUI.Pages.TestsPages
     /// </summary>
     public partial class QueriesTests : Page
     {
-        private MainForm _mainForm;
+        private readonly MainForm _mainForm;
         public City tCity;
         public QueriesTests(MainForm mainForm)
         {

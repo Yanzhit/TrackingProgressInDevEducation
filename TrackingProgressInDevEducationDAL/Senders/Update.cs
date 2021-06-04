@@ -1,18 +1,20 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Reflection;
+using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Senders
 {
     public class Update : ASender
     {
-        public object Upd(IQuery query)
+        public IEnumerable<AbstractModel> Upd(IQuery query)
         {
             Connection connection = new();
             using (IDbConnection dbConnection = connection.Connect())
             {
-                MethodInfo method = typeof(Repositories.Update).GetMethod(nameof(Repositories.Update.Single));
-                return Reflection(query, dbConnection, method);
+                MethodInfo method = typeof(Repositories.Update).GetMethod(nameof(Repositories.Update.Several));
+                return ReflectionSeveral(query, dbConnection, method);
             }
         }
     }

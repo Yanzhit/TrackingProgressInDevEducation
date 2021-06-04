@@ -12,12 +12,12 @@ namespace TrackingProgressInDevEducationDAL.Repositories
         {
         }
 
-        public T Single<T>(IDbConnection connection, string command)
+        public virtual T Single<T>(IDbConnection connection, string command)
         {
             return connection.QuerySingle<T>(command);
         }
 
-        public IEnumerable<T> Several<T>(IDbConnection connection, string command)
+        public virtual IEnumerable<T> Several<T>(IDbConnection connection, string command)
         {
             return connection.Query<T>(command);
         }

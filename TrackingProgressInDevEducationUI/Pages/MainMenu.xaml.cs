@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainMenu : Page
     {
-        private MainForm _mainForm;
+        private readonly MainForm _mainForm;
         private bool _isDevMod = true;
         private List<AbstractModel> _models = new List<AbstractModel>();
         public MainMenu(MainForm mainForm)

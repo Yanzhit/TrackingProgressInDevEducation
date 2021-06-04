@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TrackingProgressInDevEducationDAL
+﻿namespace TrackingProgressInDevEducationDAL
 {
     public static class Defines
     {
