@@ -218,6 +218,22 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 List<BLectorGroup> tmpBHomeworks = mapper.Map<List<BLectorGroup>>(lectorGroups);
                 return tmpBHomeworks;
             }
+
+            public BPayment PaymentToBPayment(Payment payment)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
+                Mapper mapper = new Mapper(config);
+                BPayment tmpBHomework = mapper.Map<BPayment>(payment);
+                return tmpBHomework;
+            }
+
+            public List<BPayment> PaymentToBPayment(List<Payment> payments)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
+                Mapper mapper = new Mapper(config);
+                List<BPayment> tmpBHomeworks = mapper.Map<List<BPayment>>(payments);
+                return tmpBHomeworks;
+            }
         }
 
         public class BLLToDTO
