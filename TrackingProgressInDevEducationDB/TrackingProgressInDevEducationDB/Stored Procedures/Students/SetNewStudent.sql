@@ -29,7 +29,7 @@ AS
 		,[CityId]
 		,[Status]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		 @Name

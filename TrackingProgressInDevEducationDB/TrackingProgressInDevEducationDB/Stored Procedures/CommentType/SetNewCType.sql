@@ -7,7 +7,7 @@ AS
 	(
 		[Name]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		@Name

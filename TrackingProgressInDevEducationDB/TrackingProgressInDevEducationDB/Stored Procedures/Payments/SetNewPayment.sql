@@ -15,7 +15,7 @@ AS
 		,[Amount]
 		,[Status]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		 @Student

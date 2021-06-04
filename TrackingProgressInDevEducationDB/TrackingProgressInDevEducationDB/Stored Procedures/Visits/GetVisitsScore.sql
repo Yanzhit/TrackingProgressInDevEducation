@@ -8,7 +8,7 @@ DECLARE @TableThirdTrimestr Table(Id int, StatusOn bit, startDate datetime, stud
 DECLARE @result Table(firstTrim DECIMAL(5,2), secondTrim DECIMAL(5,2), thirdTrim DECIMAL(5,2), General DECIMAL(5,2))
 
 
-INSERT INTO @TableMain (Id, StatusOn)
+INSERT INTO @TableMain (id, StatusOn)
 
 SELECT ROW_NUMBER() OVER(ORDER BY V.Id ASC) AS RowNumber
 	,V.VisitStatus
@@ -17,13 +17,13 @@ SELECT ROW_NUMBER() OVER(ORDER BY V.Id ASC) AS RowNumber
 	WHERE V.StudentId = @StudentId
 
 INSERT INTO @TableFirstTrimestr (Id, StatusOn)
-SELECT [@TableMain].Id, StatusOn FROM @TableMain WHERE Id <= 12
+SELECT [@TableMain].id, StatusOn FROM @TableMain WHERE id <= 12
 
 INSERT INTO @TableSecondTrimestr (id, StatusOn)
-SELECT [@TableMain].Id, StatusOn FROM @TableMain WHERE Id Between 13 AND 24
+SELECT [@TableMain].id, StatusOn FROM @TableMain WHERE id Between 13 AND 24
 
 INSERT INTO @TableThirdTrimestr (id, StatusOn)
-SELECT [@TableMain].Id, StatusOn FROM @TableMain WHERE Id Between 25 AND 36
+SELECT [@TableMain].id, StatusOn FROM @TableMain WHERE id Between 25 AND 36
 
 INSERT INTO @result(firstTrim, secondTrim, thirdTrim, General)
 SELECT
