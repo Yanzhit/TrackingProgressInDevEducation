@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Group">
 
-    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid Background="#FFDED4D4">
         <Grid HorizontalAlignment="Left" Height="309" Margin="39,111,0,0" VerticalAlignment="Top" Width="731" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" RenderTransformOrigin="0.456,0.49">
             <Button x:Name="button" Content="Создать" HorizontalAlignment="Left" Height="33" Margin="562,262,0,0" VerticalAlignment="Top" Width="137" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontSize="16"/>
             <Label x:Name="label1" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="44,33,0,0" VerticalAlignment="Top" Width="165" FontSize="14" RenderTransformOrigin="0.533,1.415"/>
