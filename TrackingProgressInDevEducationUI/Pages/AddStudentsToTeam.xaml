@@ -9,9 +9,9 @@
       Title="AddStudentsToTeam">
 
     <Grid Background="#FFDED5D4" Width="1280" Margin="0,0,-480,-270">
-        <Button x:Name="Logo" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="59" Width="143">
+        <Button x:Name="Logo" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="59" Width="143" Click="Logo_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/Pages/Resourse/educationCore.jpg"/>
+                <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
         <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="174,25,0,0" VerticalAlignment="Top" Height="29" Width="90"/>
