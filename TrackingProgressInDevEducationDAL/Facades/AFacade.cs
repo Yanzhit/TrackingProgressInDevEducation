@@ -1,4 +1,4 @@
-﻿namespace TrackingProgressInDevEducationDAL.Abstracts
+﻿namespace TrackingProgressInDevEducationDAL.Facades
 {
     public abstract class AFacade
     {

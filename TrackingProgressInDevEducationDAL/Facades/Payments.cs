@@ -1,14 +1,14 @@
 ﻿﻿using System;
 using System.Collections.Generic;
- using TrackingProgressInDevEducationDAL.Abstracts;
  using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Tables;
+ using TrackingProgressInDevEducationDAL.Models.Results;
+ using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Payments : AFacade
     {
-        public QPayment Query { get; init; }
+        private readonly QPayment _query  = new();
 
         /// <summary>
         /// Добавить платеж
@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="amount">Сумма</param>
         /// <param name="status">Статус платежа</param>
         /// <returns>Платеж</returns>
-        public Payment SetNewPayment
+        public AResult SetNewPayment
         (
             int studentId,
             DateTime paymentTo,
@@ -28,9 +28,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             bool status
         )
         {
-            return (Payment) Manager.Setter.Single
+            return (AResult) Manager.Setter.Single
             (
-                Query.SetNewPayment
+                _query.SetNewPayment
                 (
                     studentId,
                     paymentTo,
@@ -40,13 +40,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
                 ));
         }
 
+        public IEnumerable<AResult> GetPaymentsByGroup()
+        {
+            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetPaymentsByGroup());
+        }
+
         /// <summary>
         /// Обнуление платежей и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Payment> NullifyPayments()
+        public IEnumerable<AResult> NullifyPayments()
         {
-            return (IEnumerable<Payment>)Manager.Remove.Rem(Query.NullifyPayments());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyPayments());
         }
 
         /////// <summary>

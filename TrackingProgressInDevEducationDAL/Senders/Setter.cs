@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using System.Reflection;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Senders

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Groups : AFacade
     {
-        public QGroup Query { get; init; }
+        private readonly QGroup _query  = new();
 
         /// <summary>
         /// Создать новую Группу
@@ -15,18 +15,23 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="name">Имя Группы</param>
         /// <param name="courseId"></param>
         /// <returns>Группа</returns>
-        public Group SetNewGroup(string name, int courseId)
+        public AResult SetNewGroup(string name, int courseId)
         {
-            return (Group)Manager.Setter.Single(Query.SetNewGroup(name, courseId));
+            return (AResult)Manager.Setter.Single(_query.SetNewGroup(name, courseId));
+        }
+
+        public IEnumerable<Group> GetGroupsByLector(int lectorId)
+        {
+            return (IEnumerable<Group>)Manager.Getter.Several(_query.GetGroupsByLector(lectorId));
         }
 
         /// <summary>
         /// Обнуление таблицы Группы и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Group> NullifyGroups()
+        public IEnumerable<AResult> NullifyGroups()
         {
-            return (IEnumerable<Group>)Manager.Remove.Rem(Query.NullifyGroups());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyGroups());
         }
     }
 }

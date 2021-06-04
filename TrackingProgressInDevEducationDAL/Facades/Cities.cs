@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
@@ -9,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Cities : AFacade
     {
-        public QCity Query { get; init; }
+        private readonly QCity _query = new();
 
         /// <summary>
         /// Создать новый город
@@ -18,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Город</returns>
         public AResult SetNewCity(string name)
         {
-            return (AResult)Manager.Setter.Single(Query.SetNewCity(name));
+            return (AResult)Manager.Setter.Single(_query.SetNewCity(name));
         }
 
         /// <summary>
@@ -27,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<City> GetAllCities()
         {
-            return (IEnumerable<City>)Manager.Getter.Several(Query.GetAllCities());
+            return (IEnumerable<City>)Manager.Getter.Several(_query.GetAllCities());
         }
 
         /// <summary>
@@ -36,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns></returns>
         public IEnumerable<AResult> NullifyCities()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(Query.NullifyCities());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCities());
         }
     }
 }

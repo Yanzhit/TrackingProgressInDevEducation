@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Students : AFacade
     {
-        public QStudent Query { get; init; }
+        private readonly QStudent _query  = new();
 
         /// <summary>
         /// Добавить студента
@@ -26,7 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="cityId">Ид города</param>
         /// <param name="status">Статус</param>
         /// <returns>Студент</returns>
-        public Student SetNewStudent
+        public AResult SetNewStudent
         (
             string name,
             string surname,
@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
             bool? status
         )
         {
-            return (Student)Manager.Setter.Single(Query.SetNewStudent
+            return (AResult)Manager.Setter.Single(_query.SetNewStudent
                 (
                     name,
                     surname,
@@ -66,16 +66,26 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Студенты</returns>
         public IEnumerable<Student> GetAllStudents()
         {
-            return (IEnumerable<Student>)Manager.Getter.Several(Query.GetAllStudents());
+            return (IEnumerable<Student>)Manager.Getter.Several(_query.GetAllStudents());
+        }
+
+        public IEnumerable<Student> GetAllStudentsByGroup()
+        {
+            return (IEnumerable<Student>)Manager.Getter.Several(_query.GetAllStudentsByGroup());
+        }
+
+        public IEnumerable<Student> UpdStudentToGroup()
+        {
+            return (IEnumerable<Student>)Manager.Update.Upd(_query.UpdStudentToGroup());
         }
 
         /// <summary>
         /// Обнулить таблицу студентов
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Student> NullifyStudents()
+        public IEnumerable<AResult> NullifyStudents()
         {
-            return (IEnumerable<Student>)Manager.Remove.Rem(Query.NullifyStudents());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyStudents());
         }
 
     }

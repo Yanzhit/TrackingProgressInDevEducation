@@ -1,13 +1,13 @@
 ﻿﻿using System.Collections.Generic;
- using TrackingProgressInDevEducationDAL.Abstracts;
  using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Tables;
+ using TrackingProgressInDevEducationDAL.Models.Results;
+ using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class HWCompletes : AFacade
     {
-        public QHWComplete Query { get; init; }
+        private readonly QHWComplete _query  = new();
 
         /// <summary>
         /// Создать новое Завершенное ДЗ
@@ -16,18 +16,23 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="studentId">ID Студента</param>
         /// <param name="status">Статус Завершения ДЗ</param>
         /// <returns>Завершенное ДЗ</returns>
-        public HWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
+        public AResult SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            return (HWComplete)Manager.Setter.Single(Query.SetNewHWComplete(homeworkId, studentId, status));
+            return (AResult)Manager.Setter.Single(_query.SetNewHWComplete(homeworkId, studentId, status));
+        }
+
+        public IEnumerable<HWComplete> GetHomeWorkProcedureScore()
+        {
+            return (IEnumerable<HWComplete>)Manager.Getter.Several(_query.GetHomeWorkProcedureScore());
         }
 
         /// <summary>
         /// Обнуление таблицы Завершенного ДЗ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<HWComplete> NullifyHWComplete()
+        public IEnumerable<AResult> NullifyHWComplete()
         {
-            return (IEnumerable<HWComplete>)Manager.Remove.Rem(Query.NullifyHWComplete());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWComplete());
         }
     }
 }
