@@ -245,6 +245,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\UpdateVisitById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\SetNewCommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\NullifyCommentFor.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLoginAndPassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />
