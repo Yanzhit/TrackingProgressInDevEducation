@@ -195,7 +195,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 return tmpBHomework;
             }
 
-            public List<BLectorCourse> LectorCourseBLectorCourse(List<LectorCourse> lectorCourses)
+            public List<BLectorCourse> LectorCoursesBLectorCourses(List<LectorCourse> lectorCourses)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<LectorCourse, BLectorCourse>());
                 Mapper mapper = new Mapper(config);
@@ -227,12 +227,28 @@ namespace TrackingProgressInDevEducationBLL.BLLModels
                 return tmpBHomework;
             }
 
-            public List<BPayment> PaymentToBPayment(List<Payment> payments)
+            public List<BPayment> PaymentsToBPayments(List<Payment> payments)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
                 Mapper mapper = new Mapper(config);
                 List<BPayment> tmpBHomeworks = mapper.Map<List<BPayment>>(payments);
                 return tmpBHomeworks;
+            }
+
+            public BStudent StudentBStudent(Student student)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, BStudent>());
+                Mapper mapper = new Mapper(config);
+                BStudent tmpBStudent = mapper.Map<BStudent>(student);
+                return tmpBStudent;
+            }
+
+            public List<BStudent> BStudentsToStudents(List<Student> students)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, BStudent>());
+                Mapper mapper = new Mapper(config);
+                List<BStudent> tmpBStudents = mapper.Map<List<BStudent>>(students);
+                return tmpBStudents;
             }
         }
 
