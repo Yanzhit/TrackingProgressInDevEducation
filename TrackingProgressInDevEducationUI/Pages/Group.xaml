@@ -19,7 +19,7 @@
             <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="451"/>
             <DatePicker x:Name="DPEndDate" HorizontalAlignment="Left" Margin="293,194,0,0" VerticalAlignment="Top" Height="26" Width="139"/>
         </Grid>
-        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Center" Height="53" Margin="0,5,0,0" VerticalAlignment="Top" Width="292" FontSize="24"/>
+        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="498,10,0,0" VerticalAlignment="Top" Width="292" FontSize="24"/>
         <DatePicker x:Name="DPStartDate" HorizontalAlignment="Left" Margin="302,0,0,0" VerticalAlignment="Center" Height="26" Width="140"/>
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
             <Button.Background>
