@@ -17,6 +17,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class Registration : Page
     {
+        private readonly SingleContents _contents = SingleContents.GetContent();
         private readonly FacadeManager _manager = new();
         private Dictionary<string, string> _param;
         public Registration()
@@ -96,7 +97,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            SingleContents.GetContent().SignIn();
+            _contents.Home();
         }
     }
 }

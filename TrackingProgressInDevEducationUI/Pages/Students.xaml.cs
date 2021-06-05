@@ -20,6 +20,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class Students : Page
     {
+        private readonly SingleContents _contents = SingleContents.GetContent();
         public Students()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            SingleContents.GetContent().Home();
+            _contents.Home();
         }
     }
 }

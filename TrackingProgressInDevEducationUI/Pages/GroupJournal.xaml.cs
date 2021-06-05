@@ -20,9 +20,15 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class GroupJournal : Page
     {
+        private readonly SingleContents _contents = SingleContents.GetContent();
         public GroupJournal()
         {
             InitializeComponent();
+        }
+
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.Home();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using TrackingProgressInDevEducationDAL.Models.Bases;
+﻿using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Windows;
 using Course = TrackingProgressInDevEducationUI.Pages.Course;
@@ -11,19 +10,28 @@ namespace TrackingProgressInDevEducationUI
     {
         private static SingleContents _contents;
         private readonly MainForm _main;
-        private Verification _verification;
+        private AddStudentsToGroup _addStudentsToGroup;
+        private AddStudentsToTeam _addStudentsToTeam;
         private Course _course;
+        private CreateTeam _createTeam;
         private Group _group;
+        private GroupInfo _groupInfo;
+        private GroupJournal _groupJournal;
         private Home _home;
+        private MyProfile _myProfile;
         private NewStudent _newStudent;
         private Registration _registration;
         private SignIn _signIn;
+        private StudentProfile _studentProfile;
+        private StudentRate _studentRate;
         private Students _students;
-        private AddStudentsToTeam _addStudentsToTeam;
-        private GroupInfo _groupInfo;
+        private TeamInfo _teamInfo;
+        private TeamRate _teamRate;
+        private Verification _verification;
+        private DevMenu _devMenu;
 
         private SingleContents()
-        {// A recipient must be specified
+        {
         }
         private SingleContents(MainForm main)
         {
@@ -83,13 +91,13 @@ namespace TrackingProgressInDevEducationUI
             _students = new Students();
             _main.Content = _students;
         }
-        
+
         public void AddStudentsToTeam()
         {
             _addStudentsToTeam = new AddStudentsToTeam();
             _main.Content = _addStudentsToTeam;
         }
-        
+
         public void GroupInfo()
         {
             _groupInfo = new GroupInfo();
@@ -100,6 +108,51 @@ namespace TrackingProgressInDevEducationUI
         {
             _verification = new Verification(key, id);
             _verification.Show();
+        }
+        public void AddStudentsToGroup()
+        {
+            _addStudentsToGroup = new AddStudentsToGroup();
+            _main.Content = _addStudentsToGroup;
+        }
+        public void CreateTeam()
+        {
+            _createTeam = new CreateTeam();
+            _main.Content = _createTeam;
+        }
+        public void GroupJournal()
+        {
+            _groupJournal = new GroupJournal();
+            _main.Content = _groupJournal;
+        }
+        public void MyProfile()
+        {
+            _myProfile = new MyProfile();
+            _main.Content = _myProfile;
+        }
+        public void StudentProfile()
+        {
+            _studentProfile = new StudentProfile();
+            _main.Content = _studentProfile;
+        }
+        public void StudentRate()
+        {
+            _studentRate = new StudentRate();
+            _main.Content = _studentRate;
+        }
+        public void TeamInfo()
+        {
+            _teamInfo = new TeamInfo();
+            _main.Content = _teamInfo;
+        }
+        public void TeamRate()
+        {
+            _teamRate = new TeamRate();
+            _main.Content = _teamRate;
+        }
+        public void DevMenu()
+        {
+            _devMenu = new DevMenu();
+            _devMenu.Show();
         }
     }
 }
