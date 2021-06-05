@@ -30,7 +30,8 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="TabHomeworks" Header="Homeworks">
+            <TabItem x:Name="TabHomeworks" Header="Домашние задания
+                     ">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="DGHomeworks">
                         <DataGrid.Columns>
@@ -39,7 +40,8 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="TabTests" Header="Tests">
+            <TabItem x:Name="TabTests" Header="Тесты
+                     ">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="DGTests" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
