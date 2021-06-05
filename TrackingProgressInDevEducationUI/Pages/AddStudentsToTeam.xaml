@@ -9,12 +9,12 @@
       Title="AddStudentsToTeam">
 
     <Grid Background="#FFDED5D4" Width="1280" Margin="0,0,-480,-270">
-        <Button x:Name="Logo" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="59" Width="143" Click="Logo_Click">
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="143" Click="Logo_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
+                <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="174,25,0,0" VerticalAlignment="Top" Height="29" Width="90"/>
+        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="169,22,0,0" VerticalAlignment="Top" Height="28" Width="90"/>
         <Label x:Name="LPageName" Content="Добавление студентов в команду" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
         <DataGrid x:Name="dataGrid" Margin="10,74,10,10">
             <DataGrid.Columns>
@@ -34,7 +34,7 @@
                 <DataGridCheckBoxColumn Header="Check"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="BAddStudentToTeam" Content="Добавить" HorizontalAlignment="Left" Margin="274,25,0,0" VerticalAlignment="Top" Height="29" Width="90"/>
+        <Button x:Name="BAddStudentToTeam" Content="Добавить" HorizontalAlignment="Left" Margin="273,22,0,0" VerticalAlignment="Top" Height="28" Width="90"/>
 
     </Grid>
 </Page>
