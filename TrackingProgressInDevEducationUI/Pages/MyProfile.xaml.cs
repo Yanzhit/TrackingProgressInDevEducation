@@ -30,5 +30,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.Home();
         }
+
+        private void BAddCourse_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.Course();
+        }
     }
 }

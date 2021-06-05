@@ -14,7 +14,7 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="169,22,0,0" VerticalAlignment="Top" Height="28" Width="90"/>
+        <Button x:Name="BBack" Content="Назад" Margin="169,22,1021,670" Click="BBack_Click"/>
         <Label x:Name="LPageName" Content="Добавление студентов в группу" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
         <DataGrid x:Name="dgStudents" Margin="10,74,10,10">
             <DataGrid.Columns>

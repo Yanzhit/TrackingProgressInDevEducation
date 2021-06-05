@@ -19,6 +19,7 @@ namespace TrackingProgressInDevEducationUI.Windows
     /// </summary>
     public partial class DevMenu : Window
     {
+        private readonly SingleContents _contents = SingleContents.GetContent();
         public DevMenu()
         {
             InitializeComponent();
@@ -26,87 +27,87 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void AddStudentsToGroup_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.AddStudentsToGroup();
         }
 
         private void AddStudentsToTeam_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.AddStudentsToTeam();
         }
 
         private void Course_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.Course();
         }
 
         private void CreateTeam_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.CreateTeam();
         }
 
         private void Group_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.Group();
         }
 
         private void GroupInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.GroupInfo();
         }
 
         private void GroupJournal_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.GroupJournal();
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.Home();
         }
 
         private void MyProfile_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.MyProfile();
         }
 
         private void NewStudent_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.NewStudent();
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.Registration();
         }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.SignIn();
         }
 
         private void StudentProfile_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.StudentProfile();
         }
 
         private void StudentRate_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.StudentProfile();
         }
 
         private void Students_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.Students();
         }
 
         private void TeamInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.TeamInfo();
         }
 
         private void TeamRate_Click(object sender, RoutedEventArgs e)
         {
-
+            _contents.TeamRate();
         }
     }
 }

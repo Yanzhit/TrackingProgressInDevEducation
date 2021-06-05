@@ -38,7 +38,7 @@
             <Label x:Name="LMyCourses" Content="Мои Курсы:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
             <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top" Height="64" Width="379" Background="White"/>
         </Grid>
-        <Button x:Name="BAddCourse" Content="Добавить курс" HorizontalAlignment="Left" Margin="636,252,0,0" VerticalAlignment="Top" Height="28" Width="118"/>
+        <Button x:Name="BAddCourse" Content="Добавить курс" HorizontalAlignment="Left" Margin="636,252,0,0" VerticalAlignment="Top" Height="28" Width="118" Click="BAddCourse_Click"/>
         <Grid x:Name="GridCenter_Copy1" HorizontalAlignment="Center" Height="128" Margin="0,312,0,0" VerticalAlignment="Top" Width="780" Background="#FFF9EFEF">
             <Button x:Name="BCreateCurses2" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="440,486,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
             <Label x:Name="LChangeCourse2" Content="Выбрать курс" HorizontalAlignment="Left" Height="57" Margin="36,365,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>

@@ -37,5 +37,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             //Нужно добавить информацию о приложении
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.DevMenu();
+        }
     }
 }

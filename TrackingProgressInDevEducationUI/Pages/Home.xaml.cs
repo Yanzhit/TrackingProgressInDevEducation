@@ -89,5 +89,40 @@ namespace TrackingProgressInDevEducationUI.Pages
             int key = service.SmtpRun(param);
             _contents.Verification(key, _lector.Id);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.Group();
+        }
+
+        private void WelcomeBlock_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _contents.MyProfile();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            _contents.Students();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            _contents.GroupJournal();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            _contents.CreateTeam();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            _contents.TeamInfo();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            _contents.GroupInfo();
+        }
     }
 }

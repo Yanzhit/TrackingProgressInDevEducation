@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NewStudent">
 
-    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250" HorizontalAlignment="Right" Width="900">
+    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,0,-250" HorizontalAlignment="Left" Width="900">
         <Label x:Name="LNamePage" Content="Создание нового студента" HorizontalAlignment="Center" Height="72" Margin="0,11,0,0" VerticalAlignment="Top" Width="308" FontSize="23" FontWeight="Bold"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="623" Margin="0,67,0,0" VerticalAlignment="Top" Width="880" Background="#FFF9EFEF">
             <Label x:Name="LSurname" Content="Фамилия" HorizontalAlignment="Left" Height="34" Margin="105,18,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
