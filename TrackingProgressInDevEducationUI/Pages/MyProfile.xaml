@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StudentRate">
+      Title="MyProfile">
 
     <Grid Background="#FFDED5D4">
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">

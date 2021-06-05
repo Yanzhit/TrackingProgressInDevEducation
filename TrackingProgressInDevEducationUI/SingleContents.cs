@@ -15,7 +15,6 @@ namespace TrackingProgressInDevEducationUI
         private NewStudent _newStudent;
         private Registration _registration;
         private SignIn _signIn;
-        private Student _student;
         private Students _students;
         private AddStudentsToTeam _addStudentsToTeam;
         private GroupInfo _groupInfo;
@@ -68,12 +67,6 @@ namespace TrackingProgressInDevEducationUI
         {
             _signIn ??= new SignIn();
             _main.Content = _signIn;
-        }
-
-        public void Student()
-        {
-            _student ??= new Student();
-            _main.Content = _student;
         }
 
         public void Students()

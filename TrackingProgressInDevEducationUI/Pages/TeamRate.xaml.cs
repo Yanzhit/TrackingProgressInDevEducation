@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Interaction logic for StudentRate.xaml
+    /// Interaction logic for TeamRate.xaml
     /// </summary>
-    public partial class StudentRate : Page
+    public partial class TeamRate : Page
     {
-        public StudentRate()
+        public TeamRate()
         {
             InitializeComponent();
         }

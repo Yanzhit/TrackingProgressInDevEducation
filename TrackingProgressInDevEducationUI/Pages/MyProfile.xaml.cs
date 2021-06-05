@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Interaction logic for AddStudentsToTeam.xaml
+    /// Interaction logic for MyProfile.xaml
     /// </summary>
-    public partial class AddStudentsToGroup : Page
+    public partial class MyProfile : Page
     {
-        public AddStudentsToGroup()
+        public MyProfile()
         {
             InitializeComponent();
-        }
-
-        private void Logo_Click(object sender, RoutedEventArgs e)
-        {
-            SingleContents.GetContent().Home();
         }
     }
 }
