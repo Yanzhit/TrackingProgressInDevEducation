@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL.BLLModels;
+using TrackingProgressInDevEducationBLL.BLLModels.Bases;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
