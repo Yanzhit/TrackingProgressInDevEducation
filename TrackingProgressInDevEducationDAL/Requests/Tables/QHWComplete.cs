@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QHWComplete : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(HWComplete);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(HWComplete);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -25,9 +25,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewHWComplete);
-            Params = $"{homeworkId}{Sep}{studentId}{Sep}{status}";
+            Params = $"{SepStr}{homeworkId}{SepMid}{studentId}{SepMid}{status}{SepEnd}";
+            return this;
+        }
+
+        public QHWComplete GetHomeWorkProcedureScore()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetHomeWorkProcedureScore);
+            Params = string.Empty;
             return this;
         }
 
@@ -37,7 +45,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWComplete NullifyHWComplete()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyHWComplete);
             Params = string.Empty;
             return this;

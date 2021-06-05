@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
+using System.Text;
+using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
@@ -9,34 +12,45 @@ namespace TrackingProgressInDevEducationDAL.Senders
     public abstract class ASender
     {
         private string _command;
+        private object _instatns;
+        private MethodInfo _generic;
 
-        protected object Reflection(IQuery query, IDbConnection dbConnection, MethodInfo method)
+        protected AbstractModel ReflectionSingle(IQuery query, IDbConnection dbConnection, MethodInfo method)
+        {
+            Preparing(query, method);
+            return (AbstractModel)_generic.Invoke(_instatns, new object[] {dbConnection, _command});
+        }
+
+        protected IEnumerable<AbstractModel> ReflectionSeveral(IQuery query, IDbConnection dbConnection, MethodInfo method)
+        {
+            Preparing(query, method);
+            return (IEnumerable<AbstractModel>)_generic.Invoke(_instatns, new object[] {dbConnection, _command});
+        }
+
+        private void Preparing(IQuery query, MethodInfo method)
         {
             GetCommand(query);
-            Type type = GetType(query);
-            object instatns = GetInstansClass(type);
-            MethodInfo generic = method.MakeGenericMethod(query.Type);
-            object obj = generic.Invoke(instatns, new object[] {dbConnection, _command});
-            return obj;
+            Type type = GetType(query.QueryType);
+            _instatns = GetInstansClass(type);
+            _generic = method.MakeGenericMethod(query.ModelType);
         }
-
         private object GetInstansClass(Type type)
         {
-            ConstructorInfo magicConstructor = type.GetConstructor(Type.EmptyTypes);
-            return magicConstructor.Invoke(new object[]{});
+            ConstructorInfo constructor = type.GetConstructor(Type.EmptyTypes);
+            return constructor.Invoke(new object[]{});
         }
 
-        private Type GetType(IQuery query)
+        private Type GetType(Type type)
         {
-            if (query.Type.FullName == typeof(Models.Results.Setter).FullName)
+            if (type.FullName == typeof(Models.Results.Setter).FullName)
             {
                 return typeof(Repositories.Setter);
             }
-            if (query.Type.FullName == typeof(Models.Results.Update).FullName)
+            if (type.FullName == typeof(Models.Results.Update).FullName)
             {
                 return typeof(Repositories.Update);
             }
-            if(query.Type.FullName == typeof(Models.Results.Remove).FullName)
+            if(type.FullName == typeof(Models.Results.Remove).FullName)
             {
                 return typeof(Repositories.Remove);
             }

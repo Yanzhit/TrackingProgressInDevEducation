@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class TStudents : AFacade
     {
-        public QTStudent Query { get; init; }
+        private readonly QTStudent _query  = new();
 
         /// <summary>
         /// Добавить новую Команду к студентам
@@ -14,18 +14,30 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="teamId"></param>
         /// <param name="studentId"></param>
         /// <returns></returns>
-        public QTStudent SetNewTStudent(int teamId, int studentId)
+        public AResult SetNewTStudent(int teamId, int studentId)
         {
-            return (QTStudent)Manager.Setter.Single(Query.SetNewTStudent(teamId, studentId));
+            return (AResult)Manager.Setter.Single(_query.SetNewTStudent(teamId, studentId));
         }
 
+        public IEnumerable<QTStudent> GetAllStudents()
+        {
+            return (IEnumerable<QTStudent>)Manager.Getter.Several(_query.GetAllStudents());
+        }
+        public IEnumerable<QTStudent> GetAllStudentsByGroup()
+        {
+            return (IEnumerable<QTStudent>)Manager.Getter.Several(_query.GetAllStudentsByGroup());
+        }
+        public IEnumerable<AResult> UpdStudentToGroup()
+        {
+            return (IEnumerable<AResult>)Manager.Update.Upd(_query.UpdStudentToGroup());
+        }
         /// <summary>
         /// Обнуление таблицы Команда Студенты
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<QTStudent> NullifyTStudent()
+        public IEnumerable<AResult> NullifyTStudent()
         {
-            return (IEnumerable<QTStudent>)Manager.Remove.Rem(Query.NullifyTStudent());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTStudent());
         }
     }
 }

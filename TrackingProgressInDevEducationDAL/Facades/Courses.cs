@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
+using TrackingProgressInDevEducationDAL.Models.Results;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Courses : AFacade
     {
-        public QCourse Query { get; init; }
+        private readonly  QCourse  _query  = new();
 
         /// <summary>
         /// Создать новый Курс
@@ -17,18 +17,23 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="startedOn">Дата начала курса</param>
         /// <param name="finishedOn">Дата окончания курса</param>
         /// <returns>Курс</returns>
-        public Course SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
+        public AResult SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
-            return (Course)Manager.Setter.Single(Query.SetNewCourse(name, startedOn, finishedOn));
+            return (AResult)Manager.Setter.Single(_query.SetNewCourse(name, startedOn, finishedOn));
+        }
+
+        public IEnumerable<Course> GetAllCourses()
+        {
+            return (IEnumerable<Course>)Manager.Getter.Several(_query.GetAllCourses());
         }
 
         /// <summary>
         /// Обнуление таблицы Курсов и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Course> NullifyCourses()
+        public IEnumerable<AResult> NullifyCourses()
         {
-            return (IEnumerable<Course>)Manager.Remove.Rem(Query.NullifyCourses());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCourses());
         }
     }
 }

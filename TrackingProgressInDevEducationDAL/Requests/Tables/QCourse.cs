@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCourse : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Course);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Course);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -25,9 +25,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCourse SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewCourse);
-            Params = $"{name}{Sep}{startedOn}{Sep}{finishedOn}";
+            Params = $"{SepStr}{name}{SepMid}{startedOn}{SepMid}{finishedOn}{SepEnd}";
+            return this;
+        }
+
+        public QCourse GetAllCourses()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllCourses);
+            Params = string.Empty;
             return this;
         }
 

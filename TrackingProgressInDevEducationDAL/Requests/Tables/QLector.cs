@@ -8,31 +8,68 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLector : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
-        public Type Test { get; } = typeof(Lector);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Lector);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QLector SetNewLector(string fullName, string email, string password)
         {
+            QueryType = typeof(Setter);
             Name = nameof(SetNewLector);
-            Params = $"{fullName}{Sep}{email}{Sep}{password}";
-            return this;
-        }
-        public QLector NullifyLectors()
-        {
-            Name = nameof(NullifyLectors);
-            Params = string.Empty;
+            Params = @$"{SepStr}{fullName}{SepMid}{email}{SepMid}{password}{SepEnd}";
             return this;
         }
 
         public QLector GetLectorById(int id)
         {
-            Type = typeof(Lector);
+            QueryType = typeof(Getter);
             Name = nameof(GetLectorById);
             Params = $"{id}";
             return this;
         }
+
+        public QLector GetLoginAndPassword(string login, string password)
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetLoginAndPassword);
+            Params = $"{SepStr}{login}{SepMid}{password}{SepEnd}";
+            return this;
+        }
+
+        public QLector GetAllLectors()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllLectors);
+            Params = string.Empty;
+            return this;
+        }
+
+        public QLector UpdateAcrivationLector(int id, bool isActive)
+        {
+            QueryType = typeof(Update);
+            Name = nameof(UpdateAcrivationLector);
+            Params = $"{SepStr}{id}{SepMid}{isActive}{SepEnd}";
+            return this;
+        }
+
+        public QLector UpdNewEmailAndPasswordLectors()
+        {
+            QueryType = typeof(Update);
+            Name = nameof(UpdNewEmailAndPasswordLectors);
+            Params = $"";
+            return this;
+        }
+
+        public QLector NullifyLectors()
+        {
+            QueryType = typeof(Remove);
+            Name = nameof(NullifyLectors);
+            Params = string.Empty;
+            return this;
+        }
+
+        
 
         //public QLector GetLectors()
         //{

@@ -1,31 +1,36 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Teams : AFacade
     {
-        public QTeam Query { get; init; }
+        private readonly QTeam _query  = new();
 
         /// <summary>
         /// Добавить новую команду
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public Team SetNewTeam(string name)
+        public AResult SetNewTeam(string name)
         {
-            return (Team) Manager.Setter.Single(Query.SetNewTeam(name));
+            return (AResult) Manager.Setter.Single(_query.SetNewTeam(name));
+        }
+
+        public IEnumerable<Team> GetTeamById(int id)
+        {
+            return (IEnumerable<Team>)Manager.Getter.Single(_query.GetTeamById(id));
         }
 
         /// <summary>
         /// Обнулить таблицу команд
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Team> NullifyTeams()
+        public IEnumerable<AResult> NullifyTeams()
         {
-            return (IEnumerable<Team>)Manager.Remove.Rem(Query.NullifyTeams());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTeams());
         }
     }
 }

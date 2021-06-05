@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class CommentTypes : AFacade
     {
-        public QCommentType Query { get; init; }
+        private readonly QCommentType _query  = new();
 
         /// <summary>
         /// Создать новый тип комментария
@@ -16,16 +16,16 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Тип комментариев</returns>
         public CType SetNewCType(string name)
         {
-            return (CType)Manager.Setter.Single(Query.SetNewCType(name));
+            return (CType)Manager.Setter.Single(_query.SetNewCType(name));
         }
 
         /// <summary>
         /// Обнуление таблицы Типов комментариев и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<CType> NullifyCTypes()
+        public IEnumerable<AResult> NullifyCTypes()
         {
-            return (IEnumerable<CType>)Manager.Remove.Rem(Query.NullifyCTypes());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCTypes());
         }
     }
 }

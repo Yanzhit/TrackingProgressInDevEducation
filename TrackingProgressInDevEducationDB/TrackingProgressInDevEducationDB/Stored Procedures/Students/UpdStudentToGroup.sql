@@ -3,5 +3,5 @@
 	@GroupId int
 AS
 	UPDATE Students SET GroupId = @GroupId
-	OUTPUT DELETED.Id
+	OUTPUT DELETED.id
     WHERE id = @StudentId

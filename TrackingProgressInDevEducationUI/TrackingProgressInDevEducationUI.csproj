@@ -4,7 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resourses\Images\Education.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TrackingProgressInDevEducationBLL\TrackingProgressInDevEducationBLL.csproj" />
@@ -12,15 +17,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resourse\BackGroundMain.jpg" />
+    <Resource Include="Resourses\Images\BackGroundMain.jpg" />
+    <Resource Include="Resourses\Images\Education.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\AddStudentsToGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\StudentRate - Copy.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StudentRate.xaml.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Page Update="MainForm.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+    <Page Update="Pages\AddStudentsToGroup.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\SignIn.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Pages\TeanRate.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
 

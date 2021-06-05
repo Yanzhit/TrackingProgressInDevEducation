@@ -2,6 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewHW, NullifyHWs)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,8 +12,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QHomework : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Homework);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Homework);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -23,9 +24,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHomework SetNewHW(string name)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewHW);
-            Params = $"{name}";
+            Params = $"{SepStr}{name}{SepEnd}";
             return this;
         }
 
@@ -35,7 +36,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHomework NullifyHWs()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyHWs);
             Params = string.Empty;
             return this;

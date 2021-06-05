@@ -1,31 +1,31 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Homeworks : AFacade
     {
-        public QHomework Query { get; init; }
+        private readonly QHomework _query  = new();
 
         /// <summary>
         /// Создать новое ДЗ
         /// </summary>
         /// <param name="name">Имя ДЗ</param>
         /// <returns>ДЗ</returns>
-        public Homework SetNewHW(string name)
+        public AResult SetNewHW(string name)
         {
-            return (Homework)Manager.Setter.Single(Query.SetNewHW(name));
+            return (AResult)Manager.Setter.Single(_query.SetNewHW(name));
         }
 
         /// <summary>
         /// Обнуление таблицы ДЗ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Homework> NullifyHWs()
+        public IEnumerable<AResult> NullifyHWs()
         {
-            return (IEnumerable<Homework>)Manager.Remove.Rem(Query.NullifyHWs());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWs());
         }
     }
 }

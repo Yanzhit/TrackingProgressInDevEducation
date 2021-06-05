@@ -11,7 +11,7 @@ AS
 		,[StudentId]
 		,[Status]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		 @TestId

@@ -20,9 +20,11 @@ namespace TrackingProgressInDevEducationUI
     /// </summary>
     public partial class MainForm : Window
     {
+        private readonly SingleContents _contents;
         public MainForm()
         {
             InitializeComponent();
+            _contents = SingleContents.SetForm(this);
             _ = StartSignIn();
         }
 
@@ -33,8 +35,7 @@ namespace TrackingProgressInDevEducationUI
         {
             //Запуск задержки
             await Task.Delay(TimeSpan.FromSeconds(2));
-            SignIn signIn = new SignIn(this);
-            this.Content = signIn;
+            _contents.SignIn();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

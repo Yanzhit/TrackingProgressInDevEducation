@@ -2,6 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewCTypeБ NullifyCTypes))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,8 +12,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCommentType : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
-        public Type Test { get; } = typeof(CType);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(CType);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,7 +25,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public QCommentType SetNewCType(string name)
         {
             Name = nameof(SetNewCType);
-            Params = $"{name}";
+            Params = $"{SepStr}{name}{SepEnd}";
             return this;
         }
 

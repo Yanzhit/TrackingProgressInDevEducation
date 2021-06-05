@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:TrackingProgressInDevEducationUI"
         mc:Ignorable="d" Height="450" Width="800" Title="EducationCore App Team">
     <Window.Background>
-        <ImageBrush ImageSource="Resourse/BackGroundMain.jpg"/>
+        <ImageBrush ImageSource="Resourses/Images/BackGroundMain.jpg"/>
     </Window.Background>
 </Window>

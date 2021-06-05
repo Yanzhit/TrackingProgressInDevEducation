@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QVisit : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
-        public Type Test { get; } = typeof(Visit);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Visit);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -25,8 +25,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QVisit SetNewVisit(bool visitStatus, int studentId, int lectionId)
         {
+            QueryType = typeof(Setter);
             Name = nameof(SetNewVisit);
-            Params = $"{visitStatus}{Sep}{studentId}{Sep}{lectionId}";
+            Params = $"{SepStr}{visitStatus}{SepMid}{studentId}{SepMid}{lectionId}{SepEnd}";
+            return this;
+        }
+
+        public QVisit GetVisitsScore()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetVisitsScore);
+            Params = $"";
             return this;
         }
 
@@ -36,6 +45,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QVisit NullifyVisits()
         {
+            QueryType = typeof(Remove);
             Name = nameof(NullifyVisits);
             Params = string.Empty;
             return this;

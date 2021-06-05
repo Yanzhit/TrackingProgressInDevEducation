@@ -11,9 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QCity : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(City);
-
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(City);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity SetNewCity(string name)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewCity);
             Params = $"{name}";
             return this;
@@ -36,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity GetAllCities()
         {
-            Type = typeof(City);
+            QueryType = typeof(City);
             Name = nameof(GetAllCities);
             Params = string.Empty;
             return this;
@@ -48,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QCity NullifyCities()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyCities);
             Params = string.Empty;
             return this;

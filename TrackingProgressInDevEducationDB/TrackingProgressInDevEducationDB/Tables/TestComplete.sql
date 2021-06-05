@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [TrackingProgressInDevEducationDB].[TestComplete]
 (
-	[Id] INT IDENTITY (1, 1) NOT NULL,
+	[id] INT IDENTITY (1, 1) NOT NULL,
     [TestId] INT NOT NULL,
 	[StudentId]  INT NOT NULL,
     [Status]     BIT NOT NULL,

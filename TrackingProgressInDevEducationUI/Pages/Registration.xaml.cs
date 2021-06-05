@@ -1,6 +1,14 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Mail;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Controls;
-using TrackingProgressInDevEducationDAL.Facades;
+using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -9,45 +17,87 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class Registration : Page
     {
-        private readonly MainForm _mainForm;
-        public Registration(MainForm mainForm)
+        private readonly SingleContents _contents = SingleContents.GetContent();
+        private readonly FacadeManager _manager = new();
+        private Dictionary<string, string> _param;
+        public Registration()
         {
             InitializeComponent();
-            _mainForm = mainForm;
         }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            SignIn signIn = new SignIn(_mainForm);
-            _mainForm.Content = signIn;
+            //_mainForm.Content = signIn;
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            if (FullName_Input.Text.Length is <= 0 or > 50)
+            bool isRegistration = Verification();
+            if (isRegistration)
             {
-                return;
+                WriteParams();
+                NewUser();
+            }
+        }
+
+        private void NewUser()
+        {
+            Lector lector = _manager.Lectors.SetNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
+            if (lector.FullName == _param["FullName"]
+                && lector.Email == _param["Email"]
+                && lector.Password == _param["Password"])
+            {
+                SmtpService service = new();
+                int key = service.SmtpRun(_param);
+                if (key != -1)
+                {
+                    SingleContents.GetContent().Verification(key, lector.Id);
+                }
+            }
+        }
+
+        private void WriteParams()
+        {
+            _param = new Dictionary<string, string>
+            {
+                {"FullName", FullNameInput.Text},
+                {"Email", EmailInput.Text},
+                {"Password", PasswordInput.Text}
+            };
+        }
+
+        private bool Verification()
+        {
+            var tmp = true;
+            if (FullNameInput.Text.Length is < 6 or > 50)
+            {
+                InfoText.Text += $"{ExepFNameLength}{NewLine}";
+                tmp = false;
+            }
+            if(EmailInput.Text.Length is < 1 or > 25)
+            {
+                InfoText.Text +=  $"{ExepEmailLength}{NewLine}";
+                tmp = false;
             }
 
-            if (Email_Input.Text.Length is <= 0 or > 50)
+            if (PasswordInput.Text.Length is < 1 or > 12)
             {
-                return;
+                InfoText.Text +=  $"{ExepPasswordLength}{NewLine}";
+                tmp = false;
             }
 
-            if (Password_Input.Text.Length is <= 0 or > 50)
+            if (PasswordInput.Text != PasswordRepeatInput.Text)
             {
-                return;
+                InfoText.Text +=  $"{ExepPasswordRepeat}{NewLine}";
+                tmp = false;
             }
 
-            if (PasswordRepeat_Input.Text.Length is <= 0 or > 50)
-            {
-                return;
-            }
+            return tmp;
+        }
 
-            if (Password_Input.Text == PasswordRepeat_Input.Text)
-            {
-                //Lectors.SetNewLector(FullName_Input.Text, Email_Input.Text, Password_Input.Text);
-            }
+        private void Logo_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.Home();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public bool IsActivated { get; set; }
 
         public Lector()
         {
@@ -21,6 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             FullName = fullName;
             Email = email;
             Password = password;
+            IsActivated = false;
         }
         public override bool Equals(object obj)
         {
@@ -31,12 +33,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             return FullName == other.FullName
                    && Email == other.Email
-                   && Password == other.Password;
+                   && Password == other.Password
+                   && IsActivated == other.IsActivated;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(FullName, Email, Password);
+            return HashCode.Combine(FullName, Email, Password, IsActivated);
         }
     }
 }

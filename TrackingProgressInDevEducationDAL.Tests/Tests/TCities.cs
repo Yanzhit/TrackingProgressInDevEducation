@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
@@ -22,7 +20,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ECities), nameof(ECities.SetNewCity))]
         public void SetNewCitiesTest(IQuery query, City city, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             var actual = FacadeManager.Cities.SetNewCity(city.Name);
             Assert.AreEqual(expected, actual);
         }
@@ -35,7 +33,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ECities), nameof(ECities.GetAllCities))]
         public void GetAllCitiesTest(IQuery query, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.Cities.GetAllCities();
             //Assert.AreEqual(expected, actual);
         }
@@ -48,7 +46,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ECities), nameof(ECities.NullifyCities))]
         public void NullifyCitiesTest(IQuery query, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }

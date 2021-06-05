@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class HWGroups : AFacade 
     {
-        public QHWGroup Query { get; init; }
+        private readonly QHWGroup _query  = new();
 
         /// <summary>
         /// Создать новое ДЗ ГРУППЫ
@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="homeworkId">ID ДЗ</param>
         /// <param name="groupId">ID Группы</param>
         /// <returns>ДЗ ГРУППЫ</returns>
-        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
+        public AResult SetNewHWGroup(int homeworkId, int groupId)
         {
-            return (QHWGroup)Manager.Setter.Single(Query.SetNewHWGroup(homeworkId, groupId));
+            return (AResult)Manager.Setter.Single(_query.SetNewHWGroup(homeworkId, groupId));
         }
 
         /// <summary>
         /// Обнуление таблицы ДЗ ГРУППЫ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<QHWGroup> NullifyHWGroup()
+        public IEnumerable<AResult> NullifyHWGroup()
         {
-            return (IEnumerable<QHWGroup>)Manager.Remove.Rem(Query.NullifyHWGroup());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWGroup());
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using TrackingProgressInDevEducationDAL.Requests.Tables;
 using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Visits : AFacade
     {
-        public QVisit Query { get; init; }
+        private readonly QVisit _query = new();
 
         /// <summary>
         /// Добавить новое посещение
@@ -16,18 +16,23 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <param name="studentId"></param>
         /// <param name="lectionId"></param>
         /// <returns>Посещение</returns>
-        public Visit SetNewVisit(bool visitStatus, int studentId, int lectionId)
+        public AResult SetNewVisit(bool visitStatus, int studentId, int lectionId)
         {
-            return (Visit)Manager.Setter.Single(Query.SetNewVisit(visitStatus, studentId, lectionId));
+            return (AResult)Manager.Setter.Single(_query.SetNewVisit(visitStatus, studentId, lectionId));
+        }
+
+        public IEnumerable<Visit> GetVisitsScore()
+        {
+            return (IEnumerable<Visit>)Manager.Getter.Several(_query.GetVisitsScore());
         }
 
         /// <summary>
         /// Обнулить таблицу Посещений
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Visit> NullifyVisits()
+        public IEnumerable<AResult> NullifyVisits()
         {
-            return (IEnumerable<Visit>)Manager.Remove.Rem(Query.NullifyVisits());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyVisits());
         }
     }
 }

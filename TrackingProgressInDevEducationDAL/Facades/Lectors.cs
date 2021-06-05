@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Abstracts;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
     public class Lectors : AFacade 
     {
-        public QLector Query { get; init; }
+        private readonly QLector _query  = new();
 
         /// <summary>
         /// Создать нового Учителя
@@ -18,7 +18,12 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector SetNewLector(string fullName, string email, string password)
         {
-            return (Lector)Manager.Setter.Single(Query.SetNewLector(fullName, email, password));
+            return (Lector)Manager.Setter.Single(_query.SetNewLector(fullName, email, password));
+        }
+
+        public Lector UpdateAcrivationLector(int id, bool isActive)
+        {
+            return (Lector)Manager.Setter.Single(_query.UpdateAcrivationLector(id, isActive));
         }
 
         /// <summary>
@@ -28,16 +33,31 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <returns>Учитель</returns>
         public Lector GetLectorById(int id)
         {
-            return (Lector)Manager.Setter.Single(Query.GetLectorById(id));
+            return (Lector)Manager.Getter.Single(_query.GetLectorById(id));
+        }
+
+        public Lector GetLoginAndPassword(string login, string password)
+        {
+            return (Lector) Manager.Getter.Single(_query.GetLoginAndPassword(login, password));
+        }
+
+
+        public IEnumerable<Lector> GetAllLectors()
+        {
+            return (IEnumerable<Lector>)Manager.Getter.Several(_query.GetAllLectors());
+        }
+        public IEnumerable<AResult> UpdNewEmailAndPasswordLectors()
+        {
+            return (IEnumerable<AResult>)Manager.Update.Upd(_query.UpdNewEmailAndPasswordLectors());
         }
 
         /// <summary>
         /// Обнуление таблицы Учителей и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Lector> NullifyLectors()
+        public IEnumerable<AResult> NullifyLectors()
         {
-            return (IEnumerable<Lector>)Manager.Remove.Rem(Query.NullifyLectors());
+            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyLectors());
         }
     }
 }

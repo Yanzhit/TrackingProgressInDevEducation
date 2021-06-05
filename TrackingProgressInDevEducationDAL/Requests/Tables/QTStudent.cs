@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QTStudent : IQuery
     {
-        public Type Type { get; set; } = typeof(AResult);
-        public Type Test { get; } = typeof(TStudent);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(TStudent);
         public string Name { get; set; }
         public string Params { get; set; }
         
@@ -24,16 +24,42 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTStudent SetNewTStudent(int teamId, int studentId)
         {
+            QueryType = typeof(Setter);
             Name = nameof(SetNewTStudent);
-            Params = $"{teamId}{Sep}{studentId}";
+            Params = $"{SepStr}{teamId}{SepMid}{studentId}{SepEnd}";
             return this;
         }
+
+        public QTStudent GetAllStudents()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllStudents);
+            Params = $"";
+            return this;
+        }
+        public QTStudent GetAllStudentsByGroup()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllStudentsByGroup);
+            Params = $"";
+            return this;
+        }
+        public QTStudent UpdStudentToGroup()
+        {
+            QueryType = typeof(Update);
+            Name = nameof(UpdStudentToGroup);
+            Params = $"";
+            return this;
+        }
+
+
         /// <summary>
         /// Обнуление таблицы команд студентов и ключа identity
         /// </summary>
         /// <returns>Подготовленный запрос</returns>
         public QTStudent NullifyTStudent()
         {
+            QueryType = typeof(Remove);
             Name = nameof(NullifyTStudent);
             Params = string.Empty;
             return this;

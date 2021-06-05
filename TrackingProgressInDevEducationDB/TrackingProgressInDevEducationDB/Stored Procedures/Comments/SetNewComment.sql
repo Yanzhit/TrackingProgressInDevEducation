@@ -15,7 +15,7 @@ AS
 		,[CreatedBy]
 		,[TeamId]
 	)
-	OUTPUT INSERTED.Id
+	OUTPUT INSERTED.id
 	VALUES
 	(
 		 @Text
