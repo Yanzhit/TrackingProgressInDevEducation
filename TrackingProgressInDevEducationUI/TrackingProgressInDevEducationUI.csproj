@@ -25,6 +25,10 @@
     <Compile Update="Pages\AddStudentsToGroup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\StudentRate - Copy.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StudentRate.xaml.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +41,10 @@
     </Page>
     <Page Update="Pages\SignIn.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Pages\TeanRate.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
 
