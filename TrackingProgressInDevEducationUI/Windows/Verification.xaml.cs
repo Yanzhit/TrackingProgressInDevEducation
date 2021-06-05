@@ -19,9 +19,30 @@ namespace TrackingProgressInDevEducationUI.Windows
     /// </summary>
     public partial class Verification : Window
     {
-        public Verification()
+        private readonly int _key;
+        public Verification(int key)
         {
             InitializeComponent();
+            _key = key;
+        }
+
+        private void Check_Click(object sender, RoutedEventArgs e)
+        {
+            if (_key == Convert.ToInt32(InputKey.Text))
+            {
+                Info.Text = Defines.Congratulation;
+                this.Close();
+                SingleContents.GetContent().SignIn();
+            }
+            else
+            {
+                Info.Text = "Повторите ввод";
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

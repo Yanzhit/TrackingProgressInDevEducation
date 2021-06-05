@@ -40,19 +40,19 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-            Lector lector = _manager.Lectors.SetNewLector(_param["Name"], _param["Email"], _param["Password"]);
-            if (lector.FullName == _param["Name"]
-                && lector.Email == _param["Email"]
-                && lector.Password == _param["Password"])
-            {
+            //Lector lector = _manager.Lectors.SetNewLector(_param["Name"], _param["Email"], _param["Password"]);
+            //if (lector.FullName == _param["Name"]
+            //    && lector.Email == _param["Email"]
+            //    && lector.Password == _param["Password"])
+            //{
                 int key = GenerateKey();
                 bool send = EmailSend(key);
                 if (send)
                 {
                     _key = key;
-
+                    SingleContents.GetContent().Verification(_key);
                 }
-            }
+            //}
         }
 
         private int GenerateKey()
@@ -142,15 +142,6 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
             SingleContents.GetContent().SignIn();
-        }
-
-        private void CheckKey_Click(object sender, RoutedEventArgs e)
-        {
-            //if (_key == Convert.ToInt32(InputKey.Text))
-            //{
-            //    MessageBox.Show(Congratulation);
-            //    SingleContents.GetContent().SignIn();
-            //}
         }
     }
 }

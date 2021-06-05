@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationUI.Pages;
+using TrackingProgressInDevEducationUI.Windows;
 
 namespace TrackingProgressInDevEducationUI
 {
@@ -7,6 +8,7 @@ namespace TrackingProgressInDevEducationUI
     {
         private static SingleContents _contents;
         private readonly MainForm _main;
+        private Verification _verification;
         private Course _course;
         private Group _group;
         private Home _home;
@@ -90,6 +92,12 @@ namespace TrackingProgressInDevEducationUI
         {
             _groupInfo ??= new GroupInfo();
             _main.Content = _groupInfo;
+        }
+
+        public void Verification(int key)
+        {
+            _verification ??= new Verification(key);
+            _verification.Show();
         }
     }
 }
