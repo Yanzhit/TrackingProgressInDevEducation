@@ -10,9 +10,9 @@
       Title="Students">
 
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-551,-270" HorizontalAlignment="Right" Width="1338">
-        <Label x:Name="NamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,21,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
-        <Button x:Name="AddStudentBtn" Content="Добавить студента" HorizontalAlignment="Left" Margin="1040,19,0,0" VerticalAlignment="Top" Height="52" Width="230" FontSize="16"/>
-        <DataGrid x:Name="StudentGrid" Margin="10,93,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
+        <Label x:Name="NamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,4,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
+        <Button x:Name="AddStudentBtn" Content="Добавить студента" HorizontalAlignment="Left" Margin="1098,22,0,0" VerticalAlignment="Top" Height="28" Width="230" FontSize="16"/>
+        <DataGrid x:Name="StudentGrid" Margin="10,67,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
@@ -37,7 +37,7 @@
             </DataGrid.ItemsSource>
 
         </DataGrid>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="52" Width="143" Click="Logo_Click">
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
