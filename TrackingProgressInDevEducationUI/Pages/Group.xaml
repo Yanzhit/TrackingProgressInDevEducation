@@ -19,9 +19,9 @@
             <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="406"/>
             <DatePicker x:Name="datePicker_Copy" HorizontalAlignment="Left" Margin="293,194,0,0" VerticalAlignment="Top" Height="26" Width="139"/>
         </Grid>
-        <Label x:Name="label" Content="Создание новой группы" HorizontalAlignment="Center" Height="53" Margin="0,36,0,0" VerticalAlignment="Top" Width="291" FontSize="24"/>
+        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Center" Height="53" Margin="0,36,0,0" VerticalAlignment="Top" Width="291" FontSize="24"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="39,28,0,0" VerticalAlignment="Top" Height="59" Width="143" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
