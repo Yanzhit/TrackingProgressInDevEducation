@@ -9,7 +9,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Students">
 
-    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-480,-270" HorizontalAlignment="Right" Width="1280">
+    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-551,-270" HorizontalAlignment="Right" Width="1338">
         <Label x:Name="NamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,21,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
         <Button x:Name="AddStudentBtn" Content="Добавить студента" HorizontalAlignment="Left" Margin="1040,19,0,0" VerticalAlignment="Top" Height="52" Width="230" FontSize="16"/>
         <DataGrid x:Name="StudentGrid" Margin="10,93,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
@@ -17,13 +17,19 @@
                 <Style/>
             </DataGrid.CellStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="150"/>
-                <DataGridTextColumn Header="Имя" HeaderStringFormat="Имя" Width="150"/>
+                <DataGridTextColumn Header="Город" Width="125"/>
+                <DataGridTextColumn Header="Курс" Width="100"/>
+                <DataGridTextColumn Header="Группа" Width="100"/>
+                <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="125"/>
+                <DataGridTextColumn Header="Имя" HeaderStringFormat="Имя" Width="125"/>
+                <DataGridTextColumn Header="Отчество" Width="125"/>
+                <DataGridTextColumn Header="Преподователь" Width="100"/>
                 <DataGridTextColumn Header="Телефон" HeaderStringFormat="Телефон" Width="100"/>
+                <DataGridTextColumn Header="GIT" Width="100"/>
                 <DataGridTextColumn Header="Email" HeaderStringFormat="Email" Width="100"/>
-                <DataGridTextColumn Header="Номер контракта" HeaderStringFormat="Номер контракта"/>
-                <DataGridTextColumn Header="Номер телефона" HeaderStringFormat="Номер телефона"/>
+                <DataGridTextColumn Header="DOB" Width="60"/>
                 <DataGridTextColumn Header="Рейтинг" HeaderStringFormat="Рейтинг"/>
+                <DataGridTextColumn Header="Номер контракта" HeaderStringFormat="Номер контракта"/>
             </DataGrid.Columns>
 
             <DataGrid.ItemsSource>
