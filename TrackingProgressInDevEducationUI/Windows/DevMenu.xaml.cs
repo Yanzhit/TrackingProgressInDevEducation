@@ -92,7 +92,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void StudentRate_Click(object sender, RoutedEventArgs e)
         {
-            _contents.StudentProfile();
+            _contents.StudentRate();
         }
 
         private void Students_Click(object sender, RoutedEventArgs e)
