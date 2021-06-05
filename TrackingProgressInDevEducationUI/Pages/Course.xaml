@@ -16,7 +16,7 @@
             <Label x:Name="CourseDescriptionLabel" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,201,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
             <TextBox x:Name="NameCursesTextBox" HorizontalAlignment="Left" Height="84" Margin="310,22,0,0" Text="Введите название..." TextWrapping="Wrap" VerticalAlignment="Top" Width="464" Background="#FFE4E4E4"/>
             <TextBox x:Name="CourseDescriptionTextBox" HorizontalAlignment="Left" Height="219" Margin="310,127,0,0" Text="Введите описание..." TextWrapping="Wrap" VerticalAlignment="Top" Width="464" Background="#FFE6E6E6"/>
-            <Button x:Name="CreateCursesButton" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="349,445,0,0" VerticalAlignment="Top" Width="389" FontSize="20" Background="#FFEC7979"/>
+            <Button x:Name="CreateCursesButton" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="349,445,0,0" VerticalAlignment="Top" Width="389" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
             <Label x:Name="ChangeCourseLabel" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,365,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
             <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="310,366,0,0" VerticalAlignment="Top" Width="464" Height="56" RenderTransformOrigin="0.994,1.964"/>
         </Grid>

@@ -29,7 +29,7 @@
             <Label x:Name="Birthday" Content="Дата рождения" HorizontalAlignment="Left" Height="34" Margin="105,340,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="BirthdayTextBox" HorizontalAlignment="Left" Height="34" Margin="435,340,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
-            <Button x:Name="CreateCursesButton" Content="Создать" HorizontalAlignment="Left" Height="58" Margin="642,408,0,0" VerticalAlignment="Top" Width="182" FontSize="20" Background="#FFEC80A2"/>
+            <Button x:Name="CreateCursesButton" Content="Создать" HorizontalAlignment="Left" Height="58" Margin="642,408,0,0" VerticalAlignment="Top" Width="182" FontSize="20" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
             <Label x:Name="MiddleName" Content="Отчество" HorizontalAlignment="Left" Height="36" Margin="105,98,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="MiddleNameTextBox" HorizontalAlignment="Left" Height="34" Margin="435,98,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
             <Label x:Name="City" Content="Город" HorizontalAlignment="Left" Height="36" Margin="105,178,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
