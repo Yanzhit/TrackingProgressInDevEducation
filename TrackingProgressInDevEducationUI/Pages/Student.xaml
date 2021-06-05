@@ -9,25 +9,22 @@
       Title="Student">
 
     <Grid Background="#FFE0D4D4">
-        <Border BorderThickness="1" BorderBrush="Black" Margin="10,10,10,360">
-            <Label Content="Студент1" Margin="327,25,327,25"/>
-        </Border>
-        <DataGrid x:Name="dataGrid" Margin="10,126,10,225">
+        <DataGrid x:Name="dataGrid" Margin="10,86,10,265">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="123"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="label" Content="Посещаемость" HorizontalAlignment="Center" Margin="0,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
-        <Label x:Name="label_Copy" Content="Домашние задания" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
-        <DataGrid x:Name="dataGrid_Copy" Margin="10,261,10,90">
+        <Label x:Name="label" Content="Посещаемость" HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
+        <Label x:Name="label_Copy" Content="Домашние задания" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
+        <DataGrid x:Name="dataGrid_Copy" Margin="10,221,10,130">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="123"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="label_Copy1" Content="Комментарии" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Center" Margin="0,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="49" Text="Студент хорошо себя проявил"/>
-        <Button x:Name="button" Content="Добавить комментарий" HorizontalAlignment="Left" Margin="624,32,0,0" VerticalAlignment="Top" Height="34" Width="156"/>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+        <Label x:Name="label_Copy1" Content="Комментарии" HorizontalAlignment="Center" Margin="0,325,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.264,0.154"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Center" Margin="0,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="84" Text="Студент хорошо себя проявил"/>
+        <Button x:Name="button" Content="Добавить комментарий" HorizontalAlignment="Left" Margin="634,13,0,0" VerticalAlignment="Top" Height="34" Width="156"/>
+        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
