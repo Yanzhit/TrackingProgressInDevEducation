@@ -17,7 +17,7 @@
         <Button x:Name="BAddComment" Content="Добавить комментарий" HorizontalAlignment="Left" Margin="157,23,0,0" VerticalAlignment="Top" Height="28" Width="142"/>
         <Label x:Name="LPageName" Content="Команда - 001" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
         <TabControl x:Name="tabControl" Margin="10,67,10,10">
-            <TabItem Header="Список
+            <TabItem x:Name="TabList" Header="Список
                      ">
                 <Grid Background="#FFE5E5E5">
                     <Label x:Name="LStartDate" Content="Дата начала" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.303,-0.076"/>
@@ -32,7 +32,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Комментарии
+            <TabItem x:Name="TabComments" Header="Комментарии
                      ">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>

@@ -16,20 +16,20 @@
         </Button>
         <Button x:Name="BAddStudent" Content="Добавить студентов" HorizontalAlignment="Left" Margin="157,22,0,0" VerticalAlignment="Top" Height="28" Width="90" FontSize="9" RenderTransformOrigin="0.533,0.75"/>
         <Button x:Name="BJournal" Content="Журнал" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Height="28" Width="54"/>
-        <DataGrid x:Name="dataGrid" Margin="10,68,10,335">
+        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата начала" HeaderStringFormat="Дата начала"/>
                 <DataGridCheckBoxColumn Header="Дата окончания" HeaderStringFormat="Дата окончания"/>
                 <DataGridCheckBoxColumn Header="Курс" Width="150"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dataGrid1" Margin="10,120,10,10">
+        <DataGrid x:Name="DGStuntsOfGroup" Margin="10,120,10,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Студент" HeaderStringFormat="Студент" Width="150"/>
                 <DataGridTextColumn Header="Git" HeaderStringFormat="Git" Width="150"/>
                 <DataGridTextColumn Header="Рейтинг"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="LGroupName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
     </Grid>
 </Page>

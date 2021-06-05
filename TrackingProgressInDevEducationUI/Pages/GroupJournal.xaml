@@ -14,11 +14,11 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Label x:Name="label" Content="Журнал: Группа С#-001" HorizontalAlignment="Right" Margin="0,23,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.732" Background="#00000000"/>
+        <Label x:Name="LPageName" Content="Журнал: Группа С#-001" HorizontalAlignment="Right" Margin="0,23,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.732" Background="#00000000"/>
         <TabControl x:Name="tabGroupJournal" Margin="10,67,10,10">
-            <TabItem Header="Посещаемость">
+            <TabItem x:Name="TabAttendance" Header="Посещаемость">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGridAttendance" Grid.ColumnSpan="2">
+                    <DataGrid x:Name="DGAttendance" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Студент" Width="150"/>
                             <DataGridTextColumn Header="%" Width="50"/>
@@ -30,18 +30,18 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Homeworks">
+            <TabItem x:Name="TabHomeworks" Header="Homeworks">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGridHomeworks">
+                    <DataGrid x:Name="DGHomeworks">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Student" Width="125"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tests">
+            <TabItem x:Name="TabTests" Header="Tests">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGridTests">
+                    <DataGrid x:Name="DGTests" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Student" Width="125"/>
                         </DataGrid.Columns>
