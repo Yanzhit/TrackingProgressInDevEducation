@@ -4,7 +4,6 @@ using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Windows;
 using Course = TrackingProgressInDevEducationUI.Pages.Course;
 using Group = TrackingProgressInDevEducationUI.Pages.Group;
-using Student = TrackingProgressInDevEducationUI.Pages.Student;
 
 namespace TrackingProgressInDevEducationUI
 {
@@ -36,22 +35,22 @@ namespace TrackingProgressInDevEducationUI
         }
         public static SingleContents SetForm(MainForm main)
         {
-            return _contents ??= new SingleContents(main);
+            return _contents = new SingleContents(main);
         }
         public void Course()
         {
-            _course ??= new Course();
+            _course = new Course();
             _main.Content = _course;
         }
 
         public void Group()
         {
-            _group ??= new Group();
+            _group = new Group();
             _main.Content = _group;
         }
         public void Home()
         {
-            _home ??= new Home();
+            _home = new Home();
             _main.Content = _home;
         }
         public void Home(Lector lector)
@@ -62,38 +61,38 @@ namespace TrackingProgressInDevEducationUI
 
         public void NewStudent()
         {
-            _newStudent ??= new NewStudent();
+            _newStudent = new NewStudent();
             _main.Content = _newStudent;
         }
 
 
         public void Registration()
         {
-            _registration ??= new Registration();
+            _registration = new Registration();
             _main.Content = _registration;
         }
 
         public void SignIn()
         {
-            _signIn ??= new SignIn();
+            _signIn = new SignIn();
             _main.Content = _signIn;
         }
 
         public void Students()
         {
-            _students ??= new Students();
+            _students = new Students();
             _main.Content = _students;
         }
         
         public void AddStudentsToTeam()
         {
-            _addStudentsToTeam ??= new AddStudentsToTeam();
+            _addStudentsToTeam = new AddStudentsToTeam();
             _main.Content = _addStudentsToTeam;
         }
         
         public void GroupInfo()
         {
-            _groupInfo ??= new GroupInfo();
+            _groupInfo = new GroupInfo();
             _main.Content = _groupInfo;
         }
 
