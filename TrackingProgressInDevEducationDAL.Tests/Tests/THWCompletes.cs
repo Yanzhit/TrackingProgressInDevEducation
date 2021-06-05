@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EHWCompletes), nameof(EHWCompletes.SetNewHWComplete))]
         public void SetNewHWCompleteTest(IQuery query, HWComplete hWComplete, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.HWCompletes.SetNewHWComplete(hWComplete.HomeworkId, hWComplete.StudentId, hWComplete.Status);
             //Assert.AreEqual(expected, actual);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EHomeworks), nameof(EHomeworks.NullifyHWs))]
         public void NullifyHWCompleteTest(IQuery query, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.HWCompletes.NullifyHWComplete();
             //Assert.AreEqual(expected, actual);
         }

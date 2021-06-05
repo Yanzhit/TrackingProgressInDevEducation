@@ -224,7 +224,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetNewCourseToLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetNewHomeworkGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetNewHWById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetNewHWForStudentByGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetNewLectorGroupById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\SetStudentToTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\UpdateCityById.sql" />
@@ -247,6 +246,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\SetNewCommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\NullifyCommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLoginAndPassword.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdateAcrivationLector.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

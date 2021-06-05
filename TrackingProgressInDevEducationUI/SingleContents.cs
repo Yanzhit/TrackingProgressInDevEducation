@@ -1,6 +1,10 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Windows;
+using Course = TrackingProgressInDevEducationUI.Pages.Course;
+using Group = TrackingProgressInDevEducationUI.Pages.Group;
+using Student = TrackingProgressInDevEducationUI.Pages.Student;
 
 namespace TrackingProgressInDevEducationUI
 {
@@ -50,6 +54,12 @@ namespace TrackingProgressInDevEducationUI
             _home ??= new Home();
             _main.Content = _home;
         }
+        public void Home(Lector lector)
+        {
+            _home = new Home(lector);
+            _main.Content = _home;
+        }
+
         public void NewStudent()
         {
             _newStudent ??= new NewStudent();
@@ -87,9 +97,9 @@ namespace TrackingProgressInDevEducationUI
             _main.Content = _groupInfo;
         }
 
-        public void Verification(int key)
+        public void Verification(int key, int id)
         {
-            _verification ??= new Verification(key);
+            _verification = new Verification(key, id);
             _verification.Show();
         }
     }

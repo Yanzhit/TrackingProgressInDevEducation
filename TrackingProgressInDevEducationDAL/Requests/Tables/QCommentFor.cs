@@ -7,14 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QCommentFor : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(CommentFor);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(CommentFor);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QCommentFor SetNewCType()
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewCType);
             Params = $"";
             return this;
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QCommentFor NullifyCTypes()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyCTypes);
             Params = $"";
             return this;

@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QHWGroup : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(HWGroup);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(HWGroup);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,9 +24,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewHWGroup);
-            Params = $"{homeworkId}{Sep}{groupId}";
+            Params = $"{SepStr}{homeworkId}{SepMid}{groupId}{SepEnd}";
             return this;
         }
 
@@ -36,7 +36,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QHWGroup NullifyHWGroup()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyHWGroup);
             Params = string.Empty;
             return this;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -24,7 +25,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             Lector lector = _manager.Lectors.GetLoginAndPassword(Login.Text, Password.Text);
-            _contents.Home();
+            _contents.Home(lector);
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)

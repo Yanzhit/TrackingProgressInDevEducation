@@ -8,8 +8,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QStudent : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Student);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Student);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -45,11 +45,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
                 bool? status
             )
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewStudent);
-            Params = $"{name}{Sep}{surname}{Sep}{rate}{Sep}{groupId}{Sep}" +
-                     $"{phone}{Sep}{email}{Sep}{contract}{Sep}{birthday}{Sep}" +
-                     $"{middleName}{Sep}{git}{Sep}{cityId}{Sep}{status}";
+            Params = $"{SepStr}{name}{SepMid}{surname}{SepMid}{rate}{SepMid}{groupId}{SepMid}" +
+                     $"{phone}{SepMid}{email}{SepMid}{contract}{SepMid}{birthday}{SepMid}" +
+                     $"{middleName}{SepMid}{git}{SepMid}{cityId}{SepMid}{status}{SepEnd}";
             return this;
         }
 
@@ -59,7 +59,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent GetAllStudents()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetAllStudents);
             Params = string.Empty;
             return this;
@@ -67,7 +67,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QStudent GetAllStudentsByGroup()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetAllStudentsByGroup);
             Params = string.Empty;
             return this;
@@ -75,7 +75,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QStudent UpdStudentToGroup()
         {
-            Type = typeof(Update);
+            QueryType = typeof(Update);
             Name = nameof(UpdStudentToGroup);
             Params = string.Empty;
             return this;
@@ -87,7 +87,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QStudent NullifyStudents()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyStudents);
             Params = string.Empty;
             return this;

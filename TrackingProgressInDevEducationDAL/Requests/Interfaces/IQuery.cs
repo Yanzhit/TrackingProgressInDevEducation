@@ -8,12 +8,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Interfaces
         /// <summary>
         /// Тайп модели на базе которой работаем
         /// </summary>
-        Type Type { get; set; }
+        Type QueryType { get; set; }
 
         /// <summary>
         /// Тип модели для Unit тестов
         /// </summary>
-        Type Test { get; }
+        Type ModelType { get; }
         /// <summary>
         /// Название процедуры(Берется из названия метода) не допускается различий
         /// </summary>
@@ -22,6 +22,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Interfaces
         /// <summary>
         /// Параметры запросов
         /// </summary>
-        string Params { get; set; }
+        String Params { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
+using System.Text;
 using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
@@ -29,9 +30,9 @@ namespace TrackingProgressInDevEducationDAL.Senders
         private void Preparing(IQuery query, MethodInfo method)
         {
             GetCommand(query);
-            Type type = GetType(query.Type);
+            Type type = GetType(query.QueryType);
             _instatns = GetInstansClass(type);
-            _generic = method.MakeGenericMethod(query.Test);
+            _generic = method.MakeGenericMethod(query.ModelType);
         }
         private object GetInstansClass(Type type)
         {

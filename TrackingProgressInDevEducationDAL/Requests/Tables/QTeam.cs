@@ -2,6 +2,7 @@
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewTeam, NullifyTeams))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -11,8 +12,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QTeam : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Team);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Team);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -23,15 +24,15 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTeam SetNewTeam(string name)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewTeam);
-            Params = $"{name}";
+            Params = $"{SepStr}{name}{SepEnd}";
             return this;
         }
 
         public QTeam GetTeamById(int id)
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetTeamById);
             Params = string.Empty;
             return this;
@@ -43,7 +44,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QTeam NullifyTeams()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyTeams);
             Params = string.Empty;
             return this;

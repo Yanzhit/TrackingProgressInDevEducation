@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EHWGroups), nameof(EHWGroups.SetNewHWGroup))]
         public void SetNewHWGroupTest(IQuery query, HWGroup hWGroup, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.HWGroups.SetNewHWGroup(hWGroup.HomeworkId, hWGroup.GroupId);
             //Assert.AreEqual(expected, actual);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EHWGroups), nameof(EHWGroups.NullifyHWGroup))]
         public void NullifyHWGroupTest(IQuery query, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.HWGroups.NullifyHWGroup();
             //Assert.AreEqual(expected, actual);
         }

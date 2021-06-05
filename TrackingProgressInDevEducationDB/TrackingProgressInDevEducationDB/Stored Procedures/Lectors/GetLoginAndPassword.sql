@@ -6,5 +6,7 @@ AS
     ,[FullName]
     ,[Email] 
     ,[Password]
+	,[IsActivated]
+
 	FROM [TrackingProgressInDevEducationDB].[Lectors]
 	WHERE [Email] = @Login AND [Password] = @Password

@@ -8,8 +8,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QPayment : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Payment);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Payment);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -22,16 +22,16 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             bool status
         )
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(SetNewPayment);
-            Params = $"{studentId}{Sep}{paymentTo}{Sep}{paymentOn}" +
-                     $"{Sep}{amount}{Sep}{status}";
+            Params = $"{SepStr}{studentId}{SepMid}{paymentTo}{SepMid}{paymentOn}" +
+                     $"{SepMid}{amount}{SepMid}{status}{SepEnd}";
             return this;
         }
 
         public QPayment GetPaymentsByGroup()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetPaymentsByGroup);
             Params = string.Empty;
             return this;
@@ -39,7 +39,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QPayment NullifyPayments()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyPayments);
             Params = string.Empty;
             return this;

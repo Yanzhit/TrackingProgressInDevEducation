@@ -7,14 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QTestComplete : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(TestComplete);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(TestComplete);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QTestComplete SetNewTC()
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewTC);
             Params = "";
             return this;
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QTestComplete GetTestScore()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetTestScore);
             Params = "";
             return this;
@@ -30,7 +30,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QTestComplete NullifyTCs()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyTCs);
             Params = "";
             return this;

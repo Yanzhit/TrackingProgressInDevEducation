@@ -21,6 +21,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (Lector)Manager.Setter.Single(_query.SetNewLector(fullName, email, password));
         }
 
+        public Lector UpdateAcrivationLector(int id, bool isActive)
+        {
+            return (Lector)Manager.Setter.Single(_query.UpdateAcrivationLector(id, isActive));
+        }
+
         /// <summary>
         /// Вернуть учителя по ID
         /// </summary>

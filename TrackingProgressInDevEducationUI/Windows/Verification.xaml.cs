@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationDAL;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationUI.Windows
 {
@@ -20,9 +22,11 @@ namespace TrackingProgressInDevEducationUI.Windows
     public partial class Verification : Window
     {
         private readonly int _key;
-        public Verification(int key)
+        private readonly int _id;
+        public Verification(int key, int id)
         {
             InitializeComponent();
+            _id = id;
             _key = key;
         }
 
@@ -31,8 +35,17 @@ namespace TrackingProgressInDevEducationUI.Windows
             if (_key == Convert.ToInt32(InputKey.Text))
             {
                 Info.Text = Defines.Congratulation;
-                this.Close();
-                SingleContents.GetContent().SignIn();
+                FacadeManager f = new();
+                Lector lector = f.Lectors.UpdateAcrivationLector(_id,true);
+                if (lector.IsActivated == true)
+                {
+                    this.Close();
+                    SingleContents.GetContent().SignIn();
+                }
+                else
+                {
+                    Info.Text = "Ошибка активации аккаунта";
+                }
             }
             else
             {

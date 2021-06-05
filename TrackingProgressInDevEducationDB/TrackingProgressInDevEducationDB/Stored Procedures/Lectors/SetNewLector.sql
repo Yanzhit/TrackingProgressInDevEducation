@@ -5,6 +5,8 @@
 	,@Password NVARCHAR(50)
 )
 AS
+	DECLARE @isActive BIT = 0
+
 	INSERT [Lectors]
 	(
 		 [FullName]
@@ -12,12 +14,18 @@ AS
 		,[Password]
 		,[IsActivated]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT
+	
+		 INSERTED.[id]
+		,INSERTED.[FullName]
+		,INSERTED.[Email]
+		,INSERTED.[Password]
+	
 	VALUES
 	(
 		 @FullName
 		,@Email
 		,@Password
-		,0
+		,@isActive
 	)
---ZLoo (Все ок)
+--ZLoo (Все ок)				   --CAST(@Email as nvarchar(50))
