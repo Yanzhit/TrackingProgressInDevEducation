@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ELectors), nameof(ELectors.SetNewLector))]
         public void SetNewLectorTest(IQuery query, Lector lector, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.Lectors.SetNewLector(lector.FullName, lector.Email, lector.Password);
             //Assert.AreEqual(expected, actual);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ELectors), nameof(ELectors.NullifyLectors))]
         public void NullifyLectorsTest(IQuery query, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.Lectors.NullifyLectors();
             //Assert.AreEqual(expected, actual);
         }

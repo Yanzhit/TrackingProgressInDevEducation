@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ELections), nameof(ELections.SetNewLection))]
         public void SetNewLectionTest(IQuery query, Lection lection, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.Lections.SetNewLection(lection.GroupId, lection.LectorId, lection.StartedOn);
             //Assert.AreEqual(expected, actual);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ELections), nameof(ELections.NullifyLections))]
         public void NullifyLectionsTest(IQuery query, object expected)
         {
-            PreparindDB(query.Type);
+            PreparindDB(query.QueryType);
             FacadeManager.Lections.NullifyLections();
             //Assert.AreEqual(expected, actual);
         }

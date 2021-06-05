@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EComments), nameof(EComments.SetNewComment))]
         public void SetNewCommentTest(IQuery query, Comment comment, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.Comments.SetNewComment
             (
                 comment.Text, 
@@ -41,7 +41,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(EComments), nameof(EComments.NullifyComments))]
         public void NullifyCommentsTest(IQuery query, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }

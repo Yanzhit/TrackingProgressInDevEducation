@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ECommentTypes), nameof(ECommentTypes.SetNewCType))]
         public void SetNewCTypeTest(IQuery query, CType commentType, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.CTypes.SetNewCType(commentType.Name);
             //Assert.AreEqual(expected, actual);
         }
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         [TestCaseSource(typeof(ECommentTypes), nameof(ECommentTypes.NullifyCTypes))]
         public void NullifyCTypesTest(IQuery query, object expected)
         {
-            PreparindDB(query.Test);
+            PreparindDB(query.ModelType);
             FacadeManager.CTypes.NullifyCTypes();
             //Assert.AreEqual(expected, actual);
         }

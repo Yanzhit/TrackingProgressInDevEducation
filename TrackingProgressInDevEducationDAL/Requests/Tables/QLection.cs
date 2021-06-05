@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QLection : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Lection);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Lection);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -25,9 +25,9 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QLection SetNewLection(int groupId, int lectorId, DateTime startedOn)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewLection);
-            Params = $"{groupId}{Sep}{lectorId}{Sep}{startedOn}";
+            Params = $"{SepStr}{groupId}{SepMid}{lectorId}{SepMid}{startedOn}{SepEnd}";
             return this;
         }
 
@@ -38,7 +38,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QLection NullifyLections()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyLections);
             Params = string.Empty;
             return this;

@@ -3,9 +3,17 @@
     public static class Defines
     {
         /// <summary>
-        /// Разделитель параметров в запросах, указывается после каждого параметра, если за ним идёт следующий параметр.
+        /// Разделитель параметров в запросах, указывается в начале строки.
         /// </summary>
-        public const string Sep = ", ";
+        public const string SepStr = "N'";
+        /// <summary>
+        /// Разделитель параметров в запросах, указывается между параметров
+        /// </summary>
+        public const string SepMid = "', N'";
+        /// <summary>
+        /// Разделитель параметров в запросах, указывается в конце строки.
+        /// </summary>
+        public const string SepEnd = "'";
 
         /// <summary>
         /// Ip адрес сервера базы данных

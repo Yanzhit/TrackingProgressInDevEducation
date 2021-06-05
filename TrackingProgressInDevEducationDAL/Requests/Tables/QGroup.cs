@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QGroup : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Group);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Group);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -24,17 +24,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QGroup SetNewGroup(string name, int courseId)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewGroup);
-            Params = $"{name}{Sep}{courseId}";
+            Params = $"{SepStr}{name}{SepMid}{courseId}{SepStr}";
             return this;
         }
 
         public QGroup GetGroupsByLector(int lectorId)
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = GetType().Name;
-            Params = $"{lectorId}";
+            Params = $"{SepStr}{lectorId}{SepEnd}";
             return this;
         }
 
@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QGroup NullifyGroups()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyGroups);
             Params = string.Empty;
             return this;

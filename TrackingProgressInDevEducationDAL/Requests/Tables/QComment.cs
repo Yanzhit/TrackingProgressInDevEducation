@@ -11,8 +11,8 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     /// </summary>
     public class QComment: IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Comment);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Comment);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -34,15 +34,15 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             int? teamId
         )
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewComment);
-            Params = $"{text}{Sep}{typeId}{Sep}{studentId}{Sep}{createdBy}{Sep}{teamId}";
+            Params = $"{SepStr}{text}{SepMid}{typeId}{SepMid}{studentId}{SepMid}{createdBy}{SepMid}{teamId}{SepEnd}";
             return this;
         }
 
         public QComment SetNewCommentToStudent()
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewCommentToStudent);
             Params = $"";
             return this;
@@ -50,7 +50,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QComment SetCommentToTeam()
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetCommentToTeam);
             Params = $"";
             return this;
@@ -58,7 +58,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QComment GetCommentsByTeam()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetCommentsByTeam);
             Params = $"";
             return this;
@@ -66,7 +66,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QComment GetCommentsByStudent()
         {
-            Type = typeof(Getter);
+            QueryType = typeof(Getter);
             Name = nameof(GetCommentsByStudent);
             Params = $"";
             return this;
@@ -78,7 +78,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <returns>Подготовленный запрос</returns>
         public QComment NullifyComments()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyComments);
             Params = string.Empty;
             return this;

@@ -7,14 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QTest : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(Test);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(Test);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QTest SetNewTest()
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewTest);
             Params = "";
             return this;
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 
         public QTest NullifyTests()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyTests);
             Params = "";
             return this;

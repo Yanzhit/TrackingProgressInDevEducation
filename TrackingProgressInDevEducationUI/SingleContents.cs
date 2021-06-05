@@ -94,9 +94,9 @@ namespace TrackingProgressInDevEducationUI
             _main.Content = _groupInfo;
         }
 
-        public void Verification(int key)
+        public void Verification(int key, int id)
         {
-            _verification ??= new Verification(key);
+            _verification ??= new Verification(key, id);
             _verification.Show();
         }
     }

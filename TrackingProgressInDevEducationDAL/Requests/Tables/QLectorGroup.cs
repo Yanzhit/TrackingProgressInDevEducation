@@ -8,22 +8,22 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     public class QLectorGroup : IQuery
     {
-        public Type Type { get; set; }
-        public Type Test { get; } = typeof(LectorGroup);
+        public Type QueryType { get; set; }
+        public Type ModelType { get; } = typeof(LectorGroup);
         public string Name { get; set; }
         public string Params { get; set; }
 
         public QLectorGroup SetNewLectorGroup(int lectorId, int groupId)
         {
-            Type = typeof(Setter);
+            QueryType = typeof(Setter);
             Name = nameof(SetNewLectorGroup);
-            Params = $"{lectorId}{Sep}{groupId}";
+            Params = $"{SepStr}{lectorId}{SepMid}{groupId}{SepEnd}";
             return this;
         }
 
         public QLectorGroup NullifyLectorGroup()
         {
-            Type = typeof(Remove);
+            QueryType = typeof(Remove);
             Name = nameof(NullifyLectorGroup);
             Params = string.Empty;
             return this;

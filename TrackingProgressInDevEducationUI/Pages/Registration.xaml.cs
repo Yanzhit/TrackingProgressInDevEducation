@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using TrackingProgressInDevEducationDAL;
@@ -40,19 +42,19 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-            //Lector lector = _manager.Lectors.SetNewLector(_param["Name"], _param["Email"], _param["Password"]);
-            //if (lector.FullName == _param["Name"]
-            //    && lector.Email == _param["Email"]
-            //    && lector.Password == _param["Password"])
-            //{
+            Lector lector = _manager.Lectors.SetNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
+            if (lector.FullName == _param["FullName"]
+                && lector.Email == _param["Email"]
+                && lector.Password == _param["Password"])
+            {
                 int key = GenerateKey();
-                bool send = EmailSend(key);
+                bool send = true; //EmailSend(key);
                 if (send)
                 {
                     _key = key;
-                    SingleContents.GetContent().Verification(_key);
+                    SingleContents.GetContent().Verification(_key, lector.Id);
                 }
-            //}
+            }
         }
 
         private int GenerateKey()
@@ -65,7 +67,9 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _param = new Dictionary<string, string>
             {
-                {"Name", FullNameInput.Text}, {"Email", EmailInput.Text}, {"Password", PasswordInput.Text}
+                {"FullName", FullNameInput.Text},
+                {"Email", EmailInput.Text},
+                {"Password", PasswordInput.Text}
             };
         }
 
