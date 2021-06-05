@@ -17,7 +17,6 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class Registration : Page
     {
-        private int _key;
         private readonly FacadeManager _manager = new();
         private Dictionary<string, string> _param;
         public Registration()
@@ -47,20 +46,13 @@ namespace TrackingProgressInDevEducationUI.Pages
                 && lector.Email == _param["Email"]
                 && lector.Password == _param["Password"])
             {
-                int key = GenerateKey();
-                bool send = true; //EmailSend(key);
-                if (send)
+                SmtpService service = new();
+                int key = service.SmtpRun(_param);
+                if (key != -1)
                 {
-                    _key = key;
-                    SingleContents.GetContent().Verification(_key, lector.Id);
+                    SingleContents.GetContent().Verification(key, lector.Id);
                 }
             }
-        }
-
-        private int GenerateKey()
-        {
-            Random random = new();
-            return random.Next(1000, 9999);
         }
 
         private void WriteParams()
@@ -100,47 +92,6 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
 
             return tmp;
-        }
-
-        private bool EmailSend(int key)
-        {
-            bool send = true;
-            try
-            {
-                MailMessage mail = new()
-                {
-                    From = new MailAddress(From),
-                    Subject = $"{Defines.Registration}",
-                    Body = $"{Welcome}{Gap}{_param["Name"]}{NewLine}{VerifyRegistr}{NewLine}{key}"
-                };
-                mail.To.Add(_param["Email"]);
-                SmtpClient client = new()
-                {
-                    Host = Host,
-                    Port = Port,
-                    EnableSsl = true,
-                    Credentials = new NetworkCredential(Email, Password)
-                };
-                client.Send(mail);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show($"{Defines.FormatException}");
-                send = false;
-                
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show($"{Defines.ArgumentException}");
-                send = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}{NewLine}{ExeptionEx}");
-                send = false;
-            }
-
-            return send;
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
