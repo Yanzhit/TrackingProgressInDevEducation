@@ -26,7 +26,7 @@
             <Label x:Name="LSoftSkills" Content="Soft Skills" HorizontalAlignment="Left" Margin="258,118,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="10,0,0,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
             <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="258,236,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="LHardSkills_Copy2" Content="Rate" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="LRate" Content="Rate" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,283" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
             <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,165" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
             <TextBox x:Name="TBCommonRate" HorizontalAlignment="Left" Margin="645,0,0,47" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
