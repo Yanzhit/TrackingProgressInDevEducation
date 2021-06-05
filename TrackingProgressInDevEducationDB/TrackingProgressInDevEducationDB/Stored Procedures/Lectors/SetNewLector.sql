@@ -10,6 +10,7 @@ AS
 		 [FullName]
 		,[Email]
 		,[Password]
+		,[IsActivated]
 	)
 	OUTPUT INSERTED.id
 	VALUES
@@ -17,5 +18,6 @@ AS
 		 @FullName
 		,@Email
 		,@Password
+		,0
 	)
 --ZLoo (Все ок)

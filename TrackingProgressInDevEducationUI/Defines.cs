@@ -3,7 +3,9 @@
     public static class Defines
     {
         public const string Email = "educationcoreteam@gmail.com";
-        public const string Password = "CoreTeamEducation";
+        public const string From = "educationcoreteam@gmail.com";
+        public const string VerifyRegistr = "Для окончания регистрации, укажите данный код:";
+        public const string Password = "mqdyzcgsuhsltorr";
         public const string Host = "smtp.gmail.com";
         public const int Port = 587;
         public const string NewLine = "\n";
@@ -19,5 +21,6 @@
         public const string ExepPasswordLength  = "Пароль не соответствует разрешенной длине";
         public const string ExepFNameLength  = "ФИО не соответствует разрешенной длине";
         public const string ExepEmailLength  = "Email не соответствует разрешенной длине";
+        public const string Congratulation = "Поздравляем Вас с регистрацией!";
     }
 }

@@ -26,7 +26,7 @@
         <Button x:Name="SignInButton" Content="Вход" HorizontalAlignment="Left" Margin="321,366,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="SignIn_Click"/>
         <TextBlock HorizontalAlignment="Left" Height="19" Margin="331,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.646,0.632"><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
         <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="58" Margin="243,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
-        <TextBox x:Name="EmailInput" HorizontalAlignment="Left" Margin="327,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="EmailInput" HorizontalAlignment="Left" Margin="284,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
         <TextBlock x:Name="TextEmail" HorizontalAlignment="Left" Height="19" Margin="328,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Электронная почта"/></TextBlock>
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
             <Button.Background>

@@ -26,6 +26,7 @@
     <TargetFrameworkProfile />
     <DefaultSchema>TrackingProgressInDevEducationDB</DefaultSchema>
     <PermissionSet>UNSAFE</PermissionSet>
+    <GenerateSqlClrSymbols>True</GenerateSqlClrSymbols>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>

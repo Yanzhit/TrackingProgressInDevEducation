@@ -1,6 +1,5 @@
 ﻿using System;
 using TrackingProgressInDevEducationUI.Pages;
-using TrackingProgressInDevEducationUI.Pages.TestsPages;
 
 namespace TrackingProgressInDevEducationUI
 {
@@ -16,13 +15,11 @@ namespace TrackingProgressInDevEducationUI
         private SignIn _signIn;
         private Student _student;
         private Students _students;
-
-
-        private MainMenu _mainMenu;
-        private QueriesTests _queriesTests;
+        private AddStudentsToTeam _addStudentsToTeam;
+        private GroupInfo _groupInfo;
 
         private SingleContents()
-        {
+        {// A recipient must be specified
         }
         private SingleContents(MainForm main)
         {
@@ -82,16 +79,17 @@ namespace TrackingProgressInDevEducationUI
             _students ??= new Students();
             _main.Content = _students;
         }
-
-        public void MainMenu()
+        
+        public void AddStudentsToTeam()
         {
-            _mainMenu ??= new MainMenu();
-            _main.Content = _mainMenu;
+            _addStudentsToTeam ??= new AddStudentsToTeam();
+            _main.Content = _addStudentsToTeam;
         }
-        public void QueriesTests()
+        
+        public void GroupInfo()
         {
-            _queriesTests ??= new QueriesTests();
-            _main.Content = _queriesTests;
+            _groupInfo ??= new GroupInfo();
+            _main.Content = _groupInfo;
         }
     }
 }
