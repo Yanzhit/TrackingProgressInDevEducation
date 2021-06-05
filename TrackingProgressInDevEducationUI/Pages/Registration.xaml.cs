@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             Lector lector = _manager.Lectors.SetNewLector(_param["Name"], _param["Email"], _param["Password"]);
             if (lector.FullName == _param["Name"]
-                && lector.Email == _param["Name"]
+                && lector.Email == _param["Email"]
                 && lector.Password == _param["Password"])
             {
                 int key = GenerateKey();
@@ -50,8 +50,7 @@ namespace TrackingProgressInDevEducationUI.Pages
                 if (send)
                 {
                     _key = key;
-                    
- 
+
                 }
             }
         }
@@ -108,7 +107,7 @@ namespace TrackingProgressInDevEducationUI.Pages
                 {
                     From = new MailAddress(From),
                     Subject = $"{Defines.Registration}",
-                    Body = $"{Welcome}{Gap}{_param["Name"]}{NewLine}{VerifyRegistr}{Gap}{key}"
+                    Body = $"{Welcome}{Gap}{_param["Name"]}{NewLine}{VerifyRegistr}{NewLine}{key}"
                 };
                 mail.To.Add(_param["Email"]);
                 SmtpClient client = new()
@@ -147,11 +146,11 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void CheckKey_Click(object sender, RoutedEventArgs e)
         {
-            if (_key == Convert.ToInt32(InputKey.Text))
-            {
-                MessageBox.Show(Congratulation);
-                SingleContents.GetContent().SignIn();
-            }
+            //if (_key == Convert.ToInt32(InputKey.Text))
+            //{
+            //    MessageBox.Show(Congratulation);
+            //    SingleContents.GetContent().SignIn();
+            //}
         }
     }
 }
