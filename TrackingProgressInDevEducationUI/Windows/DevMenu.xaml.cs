@@ -117,8 +117,8 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BLLManager bll = new BLLManager();
-            var ss = bll.QSingIns.GetLoginAndPassword(new LectorQuery("Kozlov.s.v.1992@gmail.com",""));
+            OperationLogics operation = new OperationLogics();
+            var sss =operation.GetLoginAndPassword(new LectorQuery("Kozlov.s.v.1992@gmail.com",""));
         }
     }
 }

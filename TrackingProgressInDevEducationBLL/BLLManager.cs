@@ -1,9 +1,11 @@
-﻿using TrackingProgressInDevEducationBLL.Requests;
+﻿using TrackingProgressInDevEducationBLL.Answers;
+using TrackingProgressInDevEducationBLL.Queries;
 
 namespace TrackingProgressInDevEducationBLL
 {
     public class BLLManager
     {
-        public QSingIns QSingIns => new();
+        public QSignIns QSignIns => new();
+        public ASignIns ASignIns => new();
     }
 }
