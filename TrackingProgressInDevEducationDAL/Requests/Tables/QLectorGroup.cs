@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -13,11 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QLectorGroup SetNewLectorGroup(int lectorId, int groupId)
+        public QLectorGroup SetNewLectorGroup(LectorGroup LGroup)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewLectorGroup);
-            Params = $"{SepStr}{lectorId}{SepMid}{groupId}{SepEnd}";
+            Params = $"{SepStr}{LGroup.LectorId}{SepMid}{LGroup.GroupId}{SepEnd}";
             return this;
         }
 

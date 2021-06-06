@@ -12,13 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Добавить новое посещение
         /// </summary>
-        /// <param name="visitStatus"></param>
-        /// <param name="studentId"></param>
-        /// <param name="lectionId"></param>
+        /// <param name="visit">Объект данных</param>
         /// <returns>Посещение</returns>
-        public AResult SetNewVisit(bool visitStatus, int studentId, int lectionId)
+        public AResult SetNewVisit(Visit visit)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewVisit(visitStatus, studentId, lectionId));
+            return (AResult)Manager.Setter.Single(_query.SetNewVisit(visit));
         }
 
         public IEnumerable<Visit> GetVisitsScore()

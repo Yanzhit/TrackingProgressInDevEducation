@@ -12,16 +12,16 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Добавить новую команду
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="team">Объект данных</param>
         /// <returns></returns>
-        public AResult SetNewTeam(string name)
+        public AResult SetNewTeam(Team team)
         {
-            return (AResult) Manager.Setter.Single(_query.SetNewTeam(name));
+            return (AResult) Manager.Setter.Single(_query.SetNewTeam(team));
         }
 
-        public IEnumerable<Team> GetTeamById(int id)
+        public IEnumerable<Team> GetTeamById(Team team)
         {
-            return (IEnumerable<Team>)Manager.Getter.Single(_query.GetTeamById(id));
+            return (IEnumerable<Team>)Manager.Getter.Single(_query.GetTeamById(team));
         }
 
         /// <summary>

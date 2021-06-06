@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewVisit(проверить входные параметры), NullifyVisits))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,15 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового посещения
         /// </summary>
-        /// <param name="visitStatus">Статус посещения (0;1)</param>
-        /// <param name="studentId">id студента</param>
-        /// <param name="lectionId">id лекции</param>
+        /// <param name="visit">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QVisit SetNewVisit(bool visitStatus, int studentId, int lectionId)
+        public QVisit SetNewVisit(Visit visit)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewVisit);
-            Params = $"{SepStr}{visitStatus}{SepMid}{studentId}{SepMid}{lectionId}{SepEnd}";
+            Params = $"{SepStr}{visit.VisitStatus}{SepMid}{visit.StudentId}{SepMid}{visit.LectionId}{SepEnd}";
             return this;
         }
 

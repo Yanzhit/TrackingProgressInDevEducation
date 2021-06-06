@@ -4,7 +4,7 @@ using System.Data;
 using System.Reflection;
 using System.Text;
 using TrackingProgressInDevEducationDAL.Models;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Senders

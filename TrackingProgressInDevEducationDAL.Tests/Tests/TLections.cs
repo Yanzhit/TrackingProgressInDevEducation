@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -17,12 +17,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         /// </summary>
         /// <param name="query">Запрос</param>
         /// <param name="lection">Входящяя лекция</param>
-        /// <param name="expected">Ожидаемый результат</param>
         [TestCaseSource(typeof(ELections), nameof(ELections.SetNewLection))]
-        public void SetNewLectionTest(IQuery query, Lection lection, object expected)
+        public void SetNewLectionTest(IQuery query, Lection lection)
         {
             PreparindDB(query.QueryType);
-            DalManager.Lections.SetNewLection(lection.GroupId, lection.LectorId, lection.StartedOn);
+            DalManager.Lections.SetNewLection(lection);
             //Assert.AreEqual(expected, actual);
         }
 

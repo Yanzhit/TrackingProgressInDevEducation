@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 using TrackingProgressInDevEducationDAL.Models;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 
 namespace TrackingProgressInDevEducationDAL.Senders
 {

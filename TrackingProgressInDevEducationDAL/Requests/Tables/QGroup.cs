@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewGroup, NullifyGroups)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,22 +18,21 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание новой группы
         /// </summary>
-        /// <param name="name">Имя группы</param>
-        /// <param name="courseId">id курса</param>
+        /// <param name="group">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QGroup SetNewGroup(string name, int courseId)
+        public QGroup SetNewGroup(Group group)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewGroup);
-            Params = $"{SepStr}{name}{SepMid}{courseId}{SepStr}";
+            Params = $"{SepStr}{group.Name}{SepMid}{group.CourseId}{SepStr}";
             return this;
         }
 
-        public QGroup GetGroupsByLector(int lectorId)
+        public QGroup GetGroupsByLector(Group group)
         {
             QueryType = typeof(Getter);
             Name = GetType().Name;
-            Params = $"{SepStr}{lectorId}{SepEnd}";
+            Params = $"{SepStr}{group.Id}{SepEnd}"; // Либо в модели поля не хватает, либо что-то не то с запросом, проверить!
             return this;
         }
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewCTypeБ NullifyCTypes))
@@ -20,12 +19,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создания нового типа комментария
         /// </summary>
-        /// <param name="name">Название типа комментария</param>
+        /// <param name="cType">Объект данных</param>
         /// <returns></returns>
-        public QCommentType SetNewCType(string name)
+        public QCommentType SetNewCType(CType cType)
         {
             Name = nameof(SetNewCType);
-            Params = $"{SepStr}{name}{SepEnd}";
+            Params = $"{SepStr}{cType.Name}{SepEnd}";
             return this;
         }
 

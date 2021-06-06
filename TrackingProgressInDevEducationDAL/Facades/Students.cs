@@ -13,51 +13,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Добавить студента
         /// </summary>
-        /// <param name="name">Имя</param>
-        /// <param name="surname">Фамилия</param>
-        /// <param name="rate">Рейтинг</param>
-        /// <param name="groupId">Ид Группы</param>
-        /// <param name="phone">Телефон</param>
-        /// <param name="email">Эл.почта</param>
-        /// <param name="contract">Контракт</param>
-        /// <param name="birthday">День рождения</param>
-        /// <param name="middleName">Отчество</param>
-        /// <param name="git">Гитхаб</param>
-        /// <param name="cityId">Ид города</param>
-        /// <param name="status">Статус</param>
+        /// <param name="student">объект данных</param>
         /// <returns>Студент</returns>
-        public AResult SetNewStudent
-        (
-            string name,
-            string surname,
-            decimal? rate,
-            int? groupId,
-            string phone,
-            string email,
-            string contract,
-            DateTime? birthday,
-            string middleName,
-            string git,
-            int? cityId,
-            bool? status
-        )
+        public AResult SetNewStudent(Student student)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewStudent
-                (
-                    name,
-                    surname,
-                    rate,
-                    groupId,
-                    phone,
-                    email,
-                    contract,
-                    birthday,
-                    middleName,
-                    git,
-                    cityId,
-                    status
-                )
-            );
+            return (AResult)Manager.Setter.Single(_query.SetNewStudent(student));
         }
 
         /// <summary>

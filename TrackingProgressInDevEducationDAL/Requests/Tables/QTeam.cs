@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewTeam, NullifyTeams))
@@ -20,21 +19,21 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового команды
         /// </summary>
-        /// <param name="name">Название команды</param>
+        /// <param name="team">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QTeam SetNewTeam(string name)
+        public QTeam SetNewTeam(Team team)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewTeam);
-            Params = $"{SepStr}{name}{SepEnd}";
+            Params = $"{SepStr}{team.Name}{SepEnd}";
             return this;
         }
 
-        public QTeam GetTeamById(int id)
+        public QTeam GetTeamById(Team team)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetTeamById);
-            Params = string.Empty;
+            Params = $"{SepStr}{team.Id}{SepEnd}";
             return this;
         }
 

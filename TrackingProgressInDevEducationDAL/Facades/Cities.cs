@@ -12,11 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новый город
         /// </summary>
-        /// <param name="name">Имя города</param>
+        /// <param name="city">Объект данных</param>
         /// <returns>Город</returns>
-        public AResult SetNewCity(string name)
+        public City SetNewCity(City city)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewCity(name));
+            return (City)Manager.Setter.Single(_query.SetNewCity(city));
         }
 
         /// <summary>
@@ -32,9 +32,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Городов и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyCities()
+        public IEnumerable<City> NullifyCities()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCities());
+            return (IEnumerable<City>)Manager.Remove.Rem(_query.NullifyCities());
         }
     }
 }

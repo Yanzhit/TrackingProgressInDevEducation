@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewHWCompleteTest(IQuery query, HWComplete hWComplete, object expected)
         {
             PreparindDB(query.QueryType);
-            DalManager.HWCompletes.SetNewHWComplete(hWComplete.HomeworkId, hWComplete.StudentId, hWComplete.Status);
+            DalManager.HWCompletes.SetNewHWComplete(hWComplete);
             //Assert.AreEqual(expected, actual);
         }
 

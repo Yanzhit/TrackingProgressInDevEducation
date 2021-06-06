@@ -9,9 +9,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
     {
         private readonly QLectorCourse _query  = new();
 
-        public AResult SetNewLectorCourse(int lectorId, int courseId)
+        public AResult SetNewLectorCourse(LectorCourse lCourse)
         {
-            return (AResult) Manager.Setter.Single(_query.SetNewLectorCourse(lectorId, courseId));
+            return (AResult) Manager.Setter.Single(_query.SetNewLectorCourse(lCourse));
         }
 
         /// <summary>

@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewTStudent, NullifyTStudent))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -15,18 +14,17 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public Type ModelType { get; } = typeof(TStudent);
         public string Name { get; set; }
         public string Params { get; set; }
-        
+
         /// <summary>
         /// Создание новой команды
         /// </summary>
-        /// <param name="teamId">id команды</param>
-        /// <param name="studentId">id студента</param>
+        /// <param name="tStudent">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QTStudent SetNewTStudent(int teamId, int studentId)
+        public QTStudent SetNewTStudent(TStudent tStudent)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewTStudent);
-            Params = $"{SepStr}{teamId}{SepMid}{studentId}{SepEnd}";
+            Params = $"{SepStr}{tStudent.TeamId}{SepMid}{tStudent.StudentId}{SepEnd}";
             return this;
         }
 

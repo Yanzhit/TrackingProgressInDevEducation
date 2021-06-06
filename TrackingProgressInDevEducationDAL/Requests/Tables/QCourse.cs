@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewCourse, NullifyCourses)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -17,17 +16,15 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Params { get; set; }
 
         /// <summary>
-        /// Создание нового курса
+        /// Создать новый курс
         /// </summary>
-        /// <param name="name">Название курса</param>
-        /// <param name="startedOn">Дата начала курса</param>
-        /// <param name="finishedOn">Дата завершения курса</param>
+        /// <param name="course">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QCourse SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
+        public QCourse SetNewCourse(Course course)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewCourse);
-            Params = $"{SepStr}{name}{SepMid}{startedOn}{SepMid}{finishedOn}{SepEnd}";
+            Params = $"{SepStr}{course.Name}{SepMid}{course.StartedOn}{SepMid}{course.FinishedOn}{SepEnd}";
             return this;
         }
 

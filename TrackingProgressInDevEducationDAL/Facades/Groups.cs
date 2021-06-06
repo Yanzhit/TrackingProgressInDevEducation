@@ -12,17 +12,16 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новую Группу
         /// </summary>
-        /// <param name="name">Имя Группы</param>
-        /// <param name="courseId"></param>
+        /// <param name="group">Объект данных</param>
         /// <returns>Группа</returns>
-        public AResult SetNewGroup(string name, int courseId)
+        public AResult SetNewGroup(Group group)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewGroup(name, courseId));
+            return (AResult)Manager.Setter.Single(_query.SetNewGroup(group));
         }
 
-        public IEnumerable<Group> GetGroupsByLector(int lectorId)
+        public IEnumerable<Group> GetGroupsByLector(Group group)
         {
-            return (IEnumerable<Group>)Manager.Getter.Several(_query.GetGroupsByLector(lectorId));
+            return (IEnumerable<Group>)Manager.Getter.Several(_query.GetGroupsByLector(group));
         }
 
         /// <summary>

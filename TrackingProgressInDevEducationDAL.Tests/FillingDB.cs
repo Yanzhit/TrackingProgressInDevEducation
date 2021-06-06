@@ -69,7 +69,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<City> cities = manager.DCities.Cities;
             foreach (var city in cities)
             {
-                _manager.Cities.SetNewCity(city.Name);
+                _manager.Cities.SetNewCity(city);
             }
         }
 
@@ -78,14 +78,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Comment> comments = manager.DComments.Comments;
             foreach (var comment in comments)
             {
-                _manager.Comments.SetNewComment
-                (
-                    comment.Text,
-                    comment.TypeId,
-                    comment.StudentId,
-                    comment.CreatedBy,
-                    comment.TeamId
-                );
+                _manager.Comments.SetNewComment(comment);
             }
         }
 
@@ -94,7 +87,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<CType> cTypes = manager.DCTypes.CTypes;
             foreach (var cType in cTypes)
             {
-                _manager.CTypes.SetNewCType(cType.Name);
+                _manager.CTypes.SetNewCType(cType);
             }
         }
 
@@ -103,7 +96,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Course> courses = manager.DCourses.Courses;
             foreach (var course in courses)
             {
-                _manager.Courses.SetNewCourse(course.Name, course.StartedOn, course.FinishedOn);
+                _manager.Courses.SetNewCourse(course);
             }
         }
 
@@ -112,7 +105,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Group> groups = manager.DGroups.Groups;
             foreach (var group in groups)
             {
-                _manager.Groups.SetNewGroup(group.Name, group.CourseId);
+                _manager.Groups.SetNewGroup(group);
             }
         }
         private void FillingHWComplete(ManagerMocks manager)
@@ -120,7 +113,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<HWComplete> hwCompletes = manager.DHWCompletes.HWCompletes;
             foreach (var hwComplete in hwCompletes)
             {
-                _manager.HWCompletes.SetNewHWComplete(hwComplete.HomeworkId, hwComplete.StudentId, hwComplete.Status);
+                _manager.HWCompletes.SetNewHWComplete(hwComplete);
             }
         }
 
@@ -129,7 +122,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<HWGroup> hwGroups = manager.DHWGroups.HWGroups;
             foreach (var hwGroup in hwGroups)
             {
-                _manager.HWGroups.SetNewHWGroup(hwGroup.HomeworkId, hwGroup.GroupId);
+                _manager.HWGroups.SetNewHWGroup(hwGroup);
             }
         }
 
@@ -138,7 +131,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Homework> homeworks = manager.DHomeworks.Homeworks;
             foreach (var hwGroup in homeworks)
             {
-                _manager.Homeworks.SetNewHW(hwGroup.Name);
+                _manager.Homeworks.SetNewHW(hwGroup);
             }
         }
 
@@ -156,7 +149,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<LectorGroup> lectorGroups = manager.DLectorGroups.LectorGroups;
             foreach (var lectorGroup in lectorGroups)
             {
-                _manager.LectorGroups.SetNewLectorGroup(lectorGroup.LectorId, lectorGroup.GroupId);
+                _manager.LectorGroups.SetNewLectorGroup(lectorGroup);
             }
         }
 
@@ -165,7 +158,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Lector> lectors = manager.DLectors.Lectors;
             foreach (var lector in lectors)
             {
-                _manager.Lectors.SetNewLector(lector.FullName, lector.Email, lector.Password);
+                _manager.Lectors.SetNewLector(lector);
             }
         }
 
@@ -174,14 +167,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Payment> payments = manager.DPayments.Payments;
             foreach (var payment in payments)
             {
-                _manager.Payments.SetNewPayment
-                (
-                    payment.StudentId,
-                    payment.PaymentTo,
-                    payment.PaymentOn,
-                    payment.Amount,
-                    payment.Status
-                );
+                _manager.Payments.SetNewPayment(payment);
             }
         }
 
@@ -190,21 +176,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Student> students = manager.DStudents.Students;
             foreach (var student in students)
             {
-                _manager.Students.SetNewStudent
-                (
-                    student.Name,
-                    student.Surname,
-                    student.Rate,
-                    student.GroupId,
-                    student.Phone,
-                    student.Email,
-                    student.Contract,
-                    student.Birthday,
-                    student.MiddleName,
-                    student.Git,
-                    student.CityId,
-                    student.Status
-                );
+                _manager.Students.SetNewStudent(student);
             }
         }
         private void FillingTeams(ManagerMocks manager)
@@ -212,7 +184,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Team> teams = manager.DTeams.Teams;
             foreach (var team in teams)
             {
-                _manager.Teams.SetNewTeam(team.Name);
+                _manager.Teams.SetNewTeam(team);
             }
         }
 
@@ -221,7 +193,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<TStudent> tStudents = manager.DTStudents.TStudents;
             foreach (var tStudent in tStudents)
             {
-                _manager.TStudents.SetNewTStudent(tStudent.TeamId, tStudent.StudentId);
+                _manager.TStudents.SetNewTStudent(tStudent);
             }
         }
 
@@ -230,7 +202,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Visit> visits = manager.DVisits.Visits;
             foreach (var visit in visits)
             {
-                _manager.Visits.SetNewVisit(visit.VisitStatus, visit.StudentId, visit.LectionId);
+                _manager.Visits.SetNewVisit(visit);
             }
         }
     }

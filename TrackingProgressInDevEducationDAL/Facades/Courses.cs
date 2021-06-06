@@ -13,13 +13,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новый Курс
         /// </summary>
-        /// <param name="name">Имя курса</param>
-        /// <param name="startedOn">Дата начала курса</param>
-        /// <param name="finishedOn">Дата окончания курса</param>
+        /// <param name="course">Объект данных</param>
         /// <returns>Курс</returns>
-        public AResult SetNewCourse(string name, DateTime startedOn, DateTime finishedOn)
+        public AResult SetNewCourse(Course course)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewCourse(name, startedOn, finishedOn));
+            return (AResult)Manager.Setter.Single(_query.SetNewCourse(course));
         }
 
         public IEnumerable<Course> GetAllCourses()

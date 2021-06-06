@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCTypeTest(IQuery query, CType commentType, object expected)
         {
             PreparindDB(query.ModelType);
-            DalManager.CTypes.SetNewCType(commentType.Name);
+            DalManager.CTypes.SetNewCType(commentType);
             //Assert.AreEqual(expected, actual);
         }
 
