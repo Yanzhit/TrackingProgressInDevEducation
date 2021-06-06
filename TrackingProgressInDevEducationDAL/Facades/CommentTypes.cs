@@ -12,11 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новый тип комментария
         /// </summary>
-        /// <param name="name">Имя типа комментария</param>
+        /// <param name="cType">Объект данных</param>
         /// <returns>Тип комментариев</returns>
-        public CType SetNewCType(string name)
+        public CType SetNewCType(CType cType)
         {
-            return (CType)Manager.Setter.Single(_query.SetNewCType(name));
+            return (CType)Manager.Setter.Single(_query.SetNewCType(cType));
         }
 
         /// <summary>

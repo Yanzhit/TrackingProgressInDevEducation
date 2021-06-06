@@ -13,13 +13,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новую Лекцию
         /// </summary>
-        /// <param name="courseId">ID Группы</param>
-        /// <param name="lectorId">ID Учителя</param>
-        /// /// <param name="startedOn">Начало Лекции</param>
+        /// <param name="lection">Объект данных</param>
         /// <returns>Лекция</returns>
-        public AResult SetNewLection(int courseId, int lectorId, DateTime startedOn)
+        public AResult SetNewLection(Lection lection)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewLection(courseId, lectorId, startedOn));
+            return (AResult)Manager.Setter.Single(_query.SetNewLection(lection));
         }
 
         ///// <summary>

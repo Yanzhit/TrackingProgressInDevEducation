@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewLection, GetAllLector, NullifyLections))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,15 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создания новую лекцию
         /// </summary>
-        /// <param name="groupId">id групп</param>
-        /// <param name="lectorId">id преподавателя</param>
-        /// <param name="startedOn">Дата начала</param>
+        /// <param name="lection">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QLection SetNewLection(int groupId, int lectorId, DateTime startedOn)
+        public QLection SetNewLection(Lection lection)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewLection);
-            Params = $"{SepStr}{groupId}{SepMid}{lectorId}{SepMid}{startedOn}{SepEnd}";
+            Params = $"{SepStr}{lection.GroupId}{SepMid}{lection.LectorId}{SepMid}{lection.StartedOn}{SepEnd}";
             return this;
         }
 

@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCitiesTest(IQuery query, City city, object expected)
         {
             PreparindDB(query.ModelType);
-            var actual = DalManager.Cities.SetNewCity(city.Name);
+            var actual = DalManager.Cities.SetNewCity(city);
             Assert.AreEqual(expected, actual);
         }
 

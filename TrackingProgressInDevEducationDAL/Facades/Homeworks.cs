@@ -12,11 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новое ДЗ
         /// </summary>
-        /// <param name="name">Имя ДЗ</param>
+        /// <param name="homework">Объект данных</param>
         /// <returns>ДЗ</returns>
-        public AResult SetNewHW(string name)
+        public AResult SetNewHW(Homework homework)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHW(name));
+            return (AResult)Manager.Setter.Single(_query.SetNewHW(homework));
         }
 
         /// <summary>

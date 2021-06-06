@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -11,12 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новое ДЗ ГРУППЫ
         /// </summary>
-        /// <param name="homeworkId">ID ДЗ</param>
-        /// <param name="groupId">ID Группы</param>
+        /// <param name="hwGroup">Объект данных</param>
         /// <returns>ДЗ ГРУППЫ</returns>
-        public AResult SetNewHWGroup(int homeworkId, int groupId)
+        public AResult SetNewHWGroup(HWGroup hwGroup)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHWGroup(homeworkId, groupId));
+            return (AResult)Manager.Setter.Single(_query.SetNewHWGroup(hwGroup));
         }
 
         /// <summary>

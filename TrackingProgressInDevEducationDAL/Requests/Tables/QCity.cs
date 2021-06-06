@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 //ZLoo (Свойства все, Методы(SetNewCity, GetAllCities, NullifyCities))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,13 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового города
         /// </summary>
-        /// <param name="name">Название города</param>
+        /// <param name="city">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QCity SetNewCity(string name)
+        public QCity SetNewCity(City city)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewCity);
-            Params = $"{name}";
+            Params = $"{city.Name}";
             return this;
         }
 

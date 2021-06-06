@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -16,40 +15,15 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового студента
         /// </summary>
-        /// <param name="name">Имя студента</param>
-        /// <param name="surname">Фамилия студента</param>
-        /// <param name="rate">Рейтинг студента</param>
-        /// <param name="groupId">id группы студента</param>
-        /// <param name="phone">Контактный телефон студента</param>
-        /// <param name="email">Контактная электронная почта студента</param>
-        /// <param name="contract">№ контракта студента</param>
-        /// <param name="birthday">День рождения студента</param>
-        /// <param name="middleName">Отчество студента</param>
-        /// <param name="git">Ссылка на Git аккаунт студента </param>
-        /// <param name="cityId">id города студента</param>
-        /// <param name="status">Статус студента, обучается/выпустился (0;1)</param>
+        /// <param name="student">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QStudent SetNewStudent
-            (
-                string name,
-                string surname,
-                decimal? rate,
-                int? groupId,
-                string phone,
-                string email,
-                string contract,
-                DateTime? birthday,
-                string middleName,
-                string git,
-                int? cityId,
-                bool? status
-            )
+        public QStudent SetNewStudent(Student student)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewStudent);
-            Params = $"{SepStr}{name}{SepMid}{surname}{SepMid}{rate}{SepMid}{groupId}{SepMid}" +
-                     $"{phone}{SepMid}{email}{SepMid}{contract}{SepMid}{birthday}{SepMid}" +
-                     $"{middleName}{SepMid}{git}{SepMid}{cityId}{SepMid}{status}{SepEnd}";
+            Params = $"{SepStr}{student.Name}{SepMid}{student.Surname}{SepMid}{student.Rate}{SepMid}{student.GroupId}{SepMid}" +
+                     $"{student.Phone}{SepMid}{student.Email}{SepMid}{student.Contract}{SepMid}{student.Birthday}{SepMid}" +
+                     $"{student.MiddleName}{SepMid}{student.Git}{SepMid}{student.CityId}{SepMid}{student.Status}{SepEnd}";
             return this;
         }
 

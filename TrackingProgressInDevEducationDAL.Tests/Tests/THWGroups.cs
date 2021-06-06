@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewHWGroupTest(IQuery query, HWGroup hWGroup, object expected)
         {
             PreparindDB(query.QueryType);
-            DalManager.HWGroups.SetNewHWGroup(hWGroup.HomeworkId, hWGroup.GroupId);
+            DalManager.HWGroups.SetNewHWGroup(hWGroup);
             //Assert.AreEqual(expected, actual);
         }
 

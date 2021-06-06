@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 //ZLoo (Свойства все, Методы(SetNewHW, NullifyHWs)
@@ -20,13 +19,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Запросы к таблице домашних заданий
         /// </summary>
-        /// <param name="name">Название домашнего задания</param>
+        /// <param name="homework">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QHomework SetNewHW(string name)
+        public QHomework SetNewHW(Homework homework)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewHW);
-            Params = $"{SepStr}{name}{SepEnd}";
+            Params = $"{SepStr}{homework.Name}{SepEnd}";
             return this;
         }
 

@@ -13,31 +13,13 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Добавить платеж
         /// </summary>
-        /// <param name="studentId">ИД Студента</param>
-        /// <param name="paymentTo">Оплатить до</param>
-        /// <param name="paymentOn">Оплачено</param>
-        /// <param name="amount">Сумма</param>
-        /// <param name="status">Статус платежа</param>
+        /// <param name="payment">Объект данных</param>
         /// <returns>Платеж</returns>
-        public AResult SetNewPayment
-        (
-            int studentId,
-            DateTime paymentTo,
-            DateTime paymentOn,
-            decimal amount,
-            bool status
-        )
+        public AResult SetNewPayment(Payment payment)
         {
             return (AResult) Manager.Setter.Single
             (
-                _query.SetNewPayment
-                (
-                    studentId,
-                    paymentTo,
-                    paymentOn,
-                    amount,
-                    status
-                ));
+                _query.SetNewPayment(payment));
         }
 
         public IEnumerable<AResult> GetPaymentsByGroup()

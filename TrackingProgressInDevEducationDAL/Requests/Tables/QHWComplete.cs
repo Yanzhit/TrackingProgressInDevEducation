@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWComplete, NullifyHWComplete)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,15 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового завершенного домашнего задания
         /// </summary>
-        /// <param name="homeworkId">id домашнего задания</param>
-        /// <param name="studentId">id студента, на которого назначено домашнее задание</param>
-        /// <param name="status">Статус выполнения домашнего задания (1;0)</param>
+        /// <param name="hwComplete">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QHWComplete SetNewHWComplete(int homeworkId, int studentId, bool status)
+        public QHWComplete SetNewHWComplete(HWComplete hwComplete)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewHWComplete);
-            Params = $"{SepStr}{homeworkId}{SepMid}{studentId}{SepMid}{status}{SepEnd}";
+            Params = $"{SepStr}{hwComplete.HomeworkId}{SepMid}{hwComplete.StudentId}{SepMid}{hwComplete.Status}{SepEnd}";
             return this;
         }
 

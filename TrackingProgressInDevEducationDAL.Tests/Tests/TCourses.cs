@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
+using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 using TrackingProgressInDevEducationDAL.Tests.Expected;
 
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCourseTest(IQuery query, Course course, object expected)
         {
             PreparindDB(query.ModelType);
-            DalManager.Courses.SetNewCourse(course.Name, course.StartedOn, course.FinishedOn);
+            DalManager.Courses.SetNewCourse(course);
             //Assert.AreEqual(expected, actual);
         }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {

@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewHWGroup, NullifyHWGroup)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,14 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создание нового завершенного домашнего задания групп
         /// </summary>
-        /// <param name="homeworkId">id домашнего задания</param>
-        /// <param name="groupId">id групп</param>
+        /// <param name="hwGroup">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QHWGroup SetNewHWGroup(int homeworkId, int groupId)
+        public QHWGroup SetNewHWGroup(HWGroup hwGroup)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewHWGroup);
-            Params = $"{SepStr}{homeworkId}{SepMid}{groupId}{SepEnd}";
+            Params = $"{SepStr}{hwGroup.HomeworkId}{SepMid}{hwGroup.GroupId}{SepEnd}";
             return this;
         }
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -13,27 +12,27 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QLector SetNewLector(string fullName, string email, string password)
+        public QLector SetNewLector(Lector lector)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewLector);
-            Params = @$"{SepStr}{fullName}{SepMid}{email}{SepMid}{password}{SepEnd}";
+            Params = @$"{SepStr}{lector.FullName}{SepMid}{lector.Email}{SepMid}{lector.Password}{SepEnd}";
             return this;
         }
 
-        public QLector GetLectorById(int id)
+        public QLector GetLectorById(Lector lector)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetLectorById);
-            Params = $"{id}";
+            Params = $"{lector.Id}";
             return this;
         }
 
-        public QLector GetLoginAndPassword(Lector model)
+        public QLector GetLoginAndPassword(Lector lector)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetLoginAndPassword);
-            Params = $"{SepStr}{model.Email}{SepMid}{model.Password}{SepEnd}";
+            Params = $"{SepStr}{lector.Email}{SepMid}{lector.Password}{SepEnd}";
             return this;
         }
 
@@ -45,11 +44,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QLector UpdateAcrivationLector(int id, bool isActive)
+        public QLector UpdateAcrivationLector(Lector lector)
         {
             QueryType = typeof(Update);
             Name = nameof(UpdateAcrivationLector);
-            Params = $"{SepStr}{id}{SepMid}{isActive}{SepEnd}";
+            Params = $"{SepStr}{lector.Id}{SepMid}{lector.IsActivated}{SepEnd}";
             return this;
         }
 

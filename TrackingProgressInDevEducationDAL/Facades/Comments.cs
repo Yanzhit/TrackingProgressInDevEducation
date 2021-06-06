@@ -12,61 +12,43 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новый курс
         /// </summary>
-        /// <param name="text">Текст комментария</param>
-        /// <param name="typeId">ID типа</param>
-        /// <param name="studentId">ID студента</param>
-        /// <param name="createdBy">ID преподавателя, создавшего комментарий</param>
-        /// <param name="teamId">ID команды</param>
+        /// <param name="comment">Объект данных</param>
         /// <returns>Комментарий</returns>
-        public AResult SetNewComment
-        (
-            string text,
-            int typeId,
-            int? studentId,
-            int createdBy,
-            int? teamId
-        )
+        public Comment SetNewComment(Comment comment)
         {
-            return (AResult) Manager.Setter.Single
+            return (Comment) Manager.Setter.Single
             (
-                _query.SetNewComment
-                (
-                    text,
-                    typeId,
-                    studentId,
-                    createdBy,
-                    teamId
-                )
+                _query.SetNewComment(comment)
             );
         }
 
-        public AResult SetNewCommentToStudent()
+        public Comment SetNewCommentToStudent()
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewCommentToStudent());
+            return (Comment)Manager.Setter.Single(_query.SetNewCommentToStudent());
         }
 
-        public IEnumerable<AResult> SetCommentToTeam()
+        public IEnumerable<Comment> SetCommentToTeam()
         {
-            return (List<AResult>)Manager.Setter.Several(_query.SetCommentToTeam());
+            return (List<Comment>)Manager.Setter.Several(_query.SetCommentToTeam());
         }
 
-        public IEnumerable<AResult> GetCommentsByStudent()
+        public IEnumerable<Comment> GetCommentsByStudent()
         {
-            return (List<AResult>)Manager.Getter.Several(_query.GetCommentsByStudent());
+            return (List<Comment>)Manager.Getter.Several(_query.GetCommentsByStudent());
         }
 
-        public IEnumerable<AResult> GetCommentsByTeam()
+        public IEnumerable<Comment> GetCommentsByTeam()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetCommentsByTeam());
+            return (IEnumerable<Comment>)Manager.Getter.Several(_query.GetCommentsByTeam());
         }
 
         /// <summary>
         /// Обнуление таблицы Комментариев и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyComments()
+        public IEnumerable<Comment> NullifyComments()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyComments());
+            return (IEnumerable<Comment>)Manager.Remove.Rem(_query.NullifyComments());
         }
     }
 }

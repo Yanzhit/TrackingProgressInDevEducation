@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(NullifyComments)(В SetNewComment нужно до настроить входящие параметры (null)))
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -19,24 +18,15 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         /// <summary>
         /// Создания нового комментария
         /// </summary>
-        /// <param name="text">Текст комментария</param>
-        /// <param name="typeId">id типа комментария</param>
-        /// <param name="studentId">id студента на которого написан комментарий</param>
-        /// <param name="createdBy">id создателя комментария</param>
-        /// <param name="teamId">id командного комментария</param>
+        /// <param name="comment">Объект данных</param>
         /// <returns>Подготовленный запрос</returns>
-        public QComment SetNewComment
-        (
-            string text,
-            int typeId,
-            int? studentId,
-            int createdBy,
-            int? teamId
-        )
+        public QComment SetNewComment(Comment comment)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewComment);
-            Params = $"{SepStr}{text}{SepMid}{typeId}{SepMid}{studentId}{SepMid}{createdBy}{SepMid}{teamId}{SepEnd}";
+            Params = $"{SepStr}{comment.Text}{SepMid}{comment.TypeId}{SepMid}" +
+                     $"{comment.StudentId}{SepMid}{comment.CreatedBy}{SepMid}" +
+                     $"{comment.TeamId}{SepEnd}";
             return this;
         }
 

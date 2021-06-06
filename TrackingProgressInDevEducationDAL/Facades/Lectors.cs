@@ -12,28 +12,26 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать нового Учителя
         /// </summary>
-        /// <param name="fullName">Полное имя</param>
-        /// <param name="email">Эл.почта</param>
-        /// /// <param name="password">Пароль</param>
+        /// <param name="lector">Объект данных</param>
         /// <returns>Учитель</returns>
-        public Lector SetNewLector(string fullName, string email, string password)
+        public Lector SetNewLector(Lector lector)
         {
-            return (Lector)Manager.Setter.Single(_query.SetNewLector(fullName, email, password));
+            return (Lector)Manager.Setter.Single(_query.SetNewLector(lector));
         }
 
-        public Lector UpdateAcrivationLector(int id, bool isActive)
+        public Lector UpdateAcrivationLector(Lector lector)
         {
-            return (Lector)Manager.Setter.Single(_query.UpdateAcrivationLector(id, isActive));
+            return (Lector)Manager.Setter.Single(_query.UpdateAcrivationLector(lector));
         }
 
         /// <summary>
         /// Вернуть учителя по ID
         /// </summary>
-        /// <param name="id">ID</param>
+        /// <param name="lector">Объект данных</param>
         /// <returns>Учитель</returns>
-        public Lector GetLectorById(int id)
+        public Lector GetLectorById(Lector lector)
         {
-            return (Lector)Manager.Getter.Single(_query.GetLectorById(id));
+            return (Lector)Manager.Getter.Single(_query.GetLectorById(lector));
         }
 
         public Lector GetLoginAndPassword(Lector model)

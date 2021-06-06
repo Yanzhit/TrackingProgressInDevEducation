@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -11,12 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Добавить новую Команду к студентам
         /// </summary>
-        /// <param name="teamId"></param>
-        /// <param name="studentId"></param>
+        /// <param name="tStudent">Объект данных</param>
         /// <returns></returns>
-        public AResult SetNewTStudent(int teamId, int studentId)
+        public AResult SetNewTStudent(TStudent tStudent)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewTStudent(teamId, studentId));
+            return (AResult)Manager.Setter.Single(_query.SetNewTStudent(tStudent));
         }
 
         public IEnumerable<QTStudent> GetAllStudents()

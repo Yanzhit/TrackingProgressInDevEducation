@@ -13,9 +13,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Создание нового Лектора Группы
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> SetNewLectorGroup(int lectorId, int groupId)
+        public IEnumerable<AResult> SetNewLectorGroup(LectorGroup lGroup)
         {
-            return (IEnumerable<AResult>)Manager.Setter.Single(_query.SetNewLectorGroup(lectorId, groupId));
+            return (IEnumerable<AResult>)Manager.Setter.Single(_query.SetNewLectorGroup(lGroup));
         }
 
         /// <summary>

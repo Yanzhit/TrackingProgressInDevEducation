@@ -12,13 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// <summary>
         /// Создать новое Завершенное ДЗ
         /// </summary>
-        /// <param name="homeworkId">ID ДЗ</param>
-        /// <param name="studentId">ID Студента</param>
-        /// <param name="status">Статус Завершения ДЗ</param>
+        /// <param name="hWComplete">Объект данных</param>
         /// <returns>Завершенное ДЗ</returns>
-        public AResult SetNewHWComplete(int homeworkId, int studentId, bool status)
+        public AResult SetNewHWComplete(HWComplete hWComplete)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHWComplete(homeworkId, studentId, status));
+            return (AResult)Manager.Setter.Single(_query.SetNewHWComplete(hWComplete));
         }
 
         public IEnumerable<HWComplete> GetHomeWorkProcedureScore()

@@ -1,7 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
-using TrackingProgressInDevEducationDAL.Requests.Interfaces;
 using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
@@ -13,19 +12,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QPayment SetNewPayment
-        (
-            int studentId,
-            DateTime paymentTo,
-            DateTime paymentOn,
-            decimal amount,
-            bool status
-        )
+        public QPayment SetNewPayment(Payment payment)
         {
             QueryType = typeof(Getter);
             Name = nameof(SetNewPayment);
-            Params = $"{SepStr}{studentId}{SepMid}{paymentTo}{SepMid}{paymentOn}" +
-                     $"{SepMid}{amount}{SepMid}{status}{SepEnd}";
+            Params = $"{SepStr}{payment.StudentId}{SepMid}{payment.PaymentTo}{SepMid}{payment.PaymentOn}" +
+                     $"{SepMid}{payment.Amount}{SepMid}{payment.Status}{SepEnd}";
             return this;
         }
 
