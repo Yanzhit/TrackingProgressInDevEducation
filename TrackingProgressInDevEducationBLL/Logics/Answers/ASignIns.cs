@@ -2,7 +2,7 @@
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
-namespace TrackingProgressInDevEducationBLL.Answers
+namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
     /// <summary>
     /// Все ответы на запросы от BD для страницы SignIn

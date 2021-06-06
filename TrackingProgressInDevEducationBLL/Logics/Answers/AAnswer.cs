@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using System.Reflection;
 using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Transfers;
-using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models;
 
-namespace TrackingProgressInDevEducationBLL.Answers
+namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
-    public class AAnswer
+    public class AAnswer : ARequest
     {
-        private Type[] _type;
-        private MethodInfo _methodSingle;
-        private MethodInfo _methodSeveral;
-
-
-        protected void WriteTypes(ITransfer transfer)
+        protected override void WriteTypes(ITransfer transfer)
         {
             _type = new[]
             {
@@ -46,25 +40,6 @@ namespace TrackingProgressInDevEducationBLL.Answers
             GetMethodSeveral();
             MethodInfo generic = GetGenericSeveral();
             return (IEnumerable<ADTOAnswer>)generic.Invoke(null, new object[] { model });
-        }
-
-        private MethodInfo GetGenericSingle()
-        {
-            return _methodSingle.MakeGenericMethod(_type);
-        }
-        private MethodInfo GetGenericSeveral()
-        {
-            return _methodSeveral.MakeGenericMethod(_type);
-        }
-
-        private void GetMethodSingle()
-        {
-            _methodSingle =  typeof(Mappers).GetMethod(nameof(Mappers.SingleMapping));
-        }
-
-        private void GetMethodSeveral()
-        {
-            _methodSeveral = typeof(Mappers).GetMethod(nameof(Mappers.SeveralMapping));
         }
     }
 }

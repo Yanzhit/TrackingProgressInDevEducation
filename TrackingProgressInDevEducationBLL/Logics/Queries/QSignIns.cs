@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationBLL.Models;
-using TrackingProgressInDevEducationBLL.Models.SignIn;
+﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 
-namespace TrackingProgressInDevEducationBLL.Queries
+namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
     /// <summary>
     /// Все запросы к BD со странице SignIn

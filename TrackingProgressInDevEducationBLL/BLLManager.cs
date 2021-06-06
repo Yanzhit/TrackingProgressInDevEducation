@@ -1,5 +1,5 @@
-﻿using TrackingProgressInDevEducationBLL.Answers;
-using TrackingProgressInDevEducationBLL.Queries;
+﻿using TrackingProgressInDevEducationBLL.Logics.Answers;
+using TrackingProgressInDevEducationBLL.Logics.Queries;
 
 namespace TrackingProgressInDevEducationBLL
 {
