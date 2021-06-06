@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewLectorTest(IQuery query, Lector lector, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Lectors.SetNewLector(lector.FullName, lector.Email, lector.Password);
+            DalManager.Lectors.SetNewLector(lector.FullName, lector.Email, lector.Password);
             //Assert.AreEqual(expected, actual);
         }
 
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyLectorsTest(IQuery query, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Lectors.NullifyLectors();
+            DalManager.Lectors.NullifyLectors();
             //Assert.AreEqual(expected, actual);
         }
     }

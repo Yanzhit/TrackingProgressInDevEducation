@@ -13,9 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TrackingProgressInDevEducationBLL.BLLModels;
-using TrackingProgressInDevEducationBLL.BLLModels.Bases;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationUI.Defines;
 using MessageBox = System.Windows.Forms.MessageBox;
 using MessageBoxOptions = System.Windows.Forms.MessageBoxOptions;
@@ -28,22 +25,22 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class Home : PageFunction<String>
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
-        private Lector _lector;
+        //private Lector _lector;
         public Home()
         {
             InitializeComponent();
             //Welcome();
         }
-        public Home(Lector lector)
-        {
-            InitializeComponent();
-            _lector = lector;
-            if (!_lector.IsActivated)
-            {
-                Check();
-            }
-            Welcome();
-        }
+        //public Home(/*Lector lector*/)
+        //{
+        //    InitializeComponent();
+        //    _lector = lector;
+        //    if (!_lector.IsActivated)
+        //    {
+        //        Check();
+        //    }
+        //    Welcome();
+        //}
 
         private void Check()
         {
@@ -69,7 +66,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Welcome()
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{_lector}";
+            //WelcomeBlock.Text = $"{Welcome2}{Sep}{_lector}";
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -82,12 +79,12 @@ namespace TrackingProgressInDevEducationUI.Pages
             SmtpService service = new();
             var param = new Dictionary<string, string>
             {
-                {"FullName", _lector.FullName},
-                {"Email", _lector.Email},
-                {"Password", _lector.Password}
+               // {"FullName", _lector.FullName},
+                //{"Email", _lector.Email},
+                //{"Password", _lector.Password}
             };
             int key = service.SmtpRun(param);
-            _contents.Verification(key, _lector.Id);
+           // _contents.Verification(key, _lector.Id);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

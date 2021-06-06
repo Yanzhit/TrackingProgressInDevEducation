@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewHWTest(IQuery query, Homework homework, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Homeworks.SetNewHW(homework.Name);
+            DalManager.Homeworks.SetNewHW(homework.Name);
             //Assert.AreEqual(expected, actual);
         }
 
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Homeworks.NullifyHWs();
+            DalManager.Homeworks.NullifyHWs();
             //Assert.AreEqual(expected, actual);
         }
     }

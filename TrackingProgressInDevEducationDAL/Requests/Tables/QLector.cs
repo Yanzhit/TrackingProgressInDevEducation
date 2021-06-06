@@ -29,11 +29,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QLector GetLoginAndPassword(string login, string password)
+        public QLector GetLoginAndPassword(Lector model)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetLoginAndPassword);
-            Params = $"{SepStr}{login}{SepMid}{password}{SepEnd}";
+            Params = $"{SepStr}{model.Email}{SepMid}{model.Password}{SepEnd}";
             return this;
         }
 

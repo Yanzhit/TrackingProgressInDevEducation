@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewLectionTest(IQuery query, Lection lection, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Lections.SetNewLection(lection.GroupId, lection.LectorId, lection.StartedOn);
+            DalManager.Lections.SetNewLection(lection.GroupId, lection.LectorId, lection.StartedOn);
             //Assert.AreEqual(expected, actual);
         }
 
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyLectionsTest(IQuery query, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.Lections.NullifyLections();
+            DalManager.Lections.NullifyLections();
             //Assert.AreEqual(expected, actual);
         }
     }

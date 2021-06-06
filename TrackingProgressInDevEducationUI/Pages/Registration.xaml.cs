@@ -6,8 +6,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using TrackingProgressInDevEducationDAL;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
@@ -18,7 +16,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class Registration : Page
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
-        private readonly FacadeManager _manager = new();
+       // private readonly DALManager _manager = new();
         private Dictionary<string, string> _param;
         public Registration()
         {
@@ -42,18 +40,18 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-            Lector lector = _manager.Lectors.SetNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
-            if (lector.FullName == _param["FullName"]
-                && lector.Email == _param["Email"]
-                && lector.Password == _param["Password"])
-            {
-                SmtpService service = new();
-                int key = service.SmtpRun(_param);
-                if (key != -1)
-                {
-                    SingleContents.GetContent().Verification(key, lector.Id);
-                }
-            }
+           // Lector lector = _manager.Lectors.SetNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
+            //if (lector.FullName == _param["FullName"]
+            //    && lector.Email == _param["Email"]
+            //    && lector.Password == _param["Password"])
+            //{
+            //    SmtpService service = new();
+            //    int key = service.SmtpRun(_param);
+            //    if (key != -1)
+            //    {
+            //        SingleContents.GetContent().Verification(key, lector.Id);
+            //    }
+            //}
         }
 
         private void WriteParams()

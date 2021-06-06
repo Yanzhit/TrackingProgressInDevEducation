@@ -1,5 +1,4 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationUI.Pages;
+﻿using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Windows;
 using Course = TrackingProgressInDevEducationUI.Pages.Course;
 using Group = TrackingProgressInDevEducationUI.Pages.Group;
@@ -61,11 +60,11 @@ namespace TrackingProgressInDevEducationUI
             _home = new Home();
             _main.Content = _home;
         }
-        public void Home(Lector lector)
-        {
-            _home = new Home(lector);
-            _main.Content = _home;
-        }
+        //public void Home(Lector lector)
+        //{
+        //    _home = new Home(lector);
+        //    _main.Content = _home;
+        //}
 
         public void NewStudent()
         {

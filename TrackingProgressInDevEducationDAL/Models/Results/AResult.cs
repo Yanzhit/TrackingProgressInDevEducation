@@ -2,8 +2,6 @@
 {
     public abstract class AResult : AbstractModel
     {
-        public int Id { get; set; }
-
         public AResult()
         {
         }

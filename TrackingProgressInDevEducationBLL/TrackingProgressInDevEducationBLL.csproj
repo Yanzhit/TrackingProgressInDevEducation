@@ -5,6 +5,57 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\AddStudentsToGroup\**" />
+    <Compile Remove="Models\AddStudentsToTeam\**" />
+    <Compile Remove="Models\Course\**" />
+    <Compile Remove="Models\CreateTeam\**" />
+    <Compile Remove="Models\GroupInfo\**" />
+    <Compile Remove="Models\GroupJournal\**" />
+    <Compile Remove="Models\Group\**" />
+    <Compile Remove="Models\Home\**" />
+    <Compile Remove="Models\MyProfile\**" />
+    <Compile Remove="Models\NewStudent\**" />
+    <Compile Remove="Models\Registration\**" />
+    <Compile Remove="Models\StudentProfile\**" />
+    <Compile Remove="Models\StudentRate\**" />
+    <Compile Remove="Models\Students\**" />
+    <Compile Remove="Models\TeamInfo\**" />
+    <Compile Remove="Models\TeamRate\**" />
+    <EmbeddedResource Remove="Models\AddStudentsToGroup\**" />
+    <EmbeddedResource Remove="Models\AddStudentsToTeam\**" />
+    <EmbeddedResource Remove="Models\Course\**" />
+    <EmbeddedResource Remove="Models\CreateTeam\**" />
+    <EmbeddedResource Remove="Models\GroupInfo\**" />
+    <EmbeddedResource Remove="Models\GroupJournal\**" />
+    <EmbeddedResource Remove="Models\Group\**" />
+    <EmbeddedResource Remove="Models\Home\**" />
+    <EmbeddedResource Remove="Models\MyProfile\**" />
+    <EmbeddedResource Remove="Models\NewStudent\**" />
+    <EmbeddedResource Remove="Models\Registration\**" />
+    <EmbeddedResource Remove="Models\StudentProfile\**" />
+    <EmbeddedResource Remove="Models\StudentRate\**" />
+    <EmbeddedResource Remove="Models\Students\**" />
+    <EmbeddedResource Remove="Models\TeamInfo\**" />
+    <EmbeddedResource Remove="Models\TeamRate\**" />
+    <None Remove="Models\AddStudentsToGroup\**" />
+    <None Remove="Models\AddStudentsToTeam\**" />
+    <None Remove="Models\Course\**" />
+    <None Remove="Models\CreateTeam\**" />
+    <None Remove="Models\GroupInfo\**" />
+    <None Remove="Models\GroupJournal\**" />
+    <None Remove="Models\Group\**" />
+    <None Remove="Models\Home\**" />
+    <None Remove="Models\MyProfile\**" />
+    <None Remove="Models\NewStudent\**" />
+    <None Remove="Models\Registration\**" />
+    <None Remove="Models\StudentProfile\**" />
+    <None Remove="Models\StudentRate\**" />
+    <None Remove="Models\Students\**" />
+    <None Remove="Models\TeamInfo\**" />
+    <None Remove="Models\TeamRate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 

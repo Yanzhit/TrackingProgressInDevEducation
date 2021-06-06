@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCitiesTest(IQuery query, City city, object expected)
         {
             PreparindDB(query.ModelType);
-            var actual = FacadeManager.Cities.SetNewCity(city.Name);
+            var actual = DalManager.Cities.SetNewCity(city.Name);
             Assert.AreEqual(expected, actual);
         }
 
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void GetAllCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.ModelType);
-            FacadeManager.Cities.GetAllCities();
+            DalManager.Cities.GetAllCities();
             //Assert.AreEqual(expected, actual);
         }
 
@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.ModelType);
-            FacadeManager.Comments.NullifyComments();
+            DalManager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }
     }
