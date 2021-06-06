@@ -3,17 +3,28 @@
 namespace TrackingProgressInDevEducationBLL.Models.SignIn
 {
     /// <summary>
-    /// Получение лектора.
+    /// Модель данных для ответа на запрос со страницы SignIn(определяется именем папки, которое соответствует конкретным страницам
+    /// Модель для ответа из DAL в UI
     /// </summary>
     public class LectorAnswer : ADTOAnswer
     {
+        /// <summary>
+        /// Проверка на активность аккаунта
+        /// </summary>
         public bool IsActivated { get; set; }
         
-
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public LectorAnswer()
         {
         }
 
+        /// <summary>
+        /// Конструктор для подготовки ответа
+        /// </summary>
+        /// <param name="id">Идентификатор объекта</param>
+        /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
         public LectorAnswer(int id, bool isActivated)
         {
             Id = id;

@@ -8,6 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
     {
         public Type Query { get; set; } = typeof(LectorQuery);
         public Type Base { get; set; } = typeof(Lector);
+
         public Type Answer { get; set; } = typeof(LectorAnswer);
     }
 }

@@ -60,10 +60,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Facades\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
   </ItemGroup>
 

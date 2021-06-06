@@ -10,8 +10,6 @@ namespace TrackingProgressInDevEducationBLL.Answers
 {
     public class AAnswer
     {
-        protected readonly Mappers Mappers = new();
-        protected readonly DALManager Manager = new();
         private Type[] _type;
         private MethodInfo _methodSingle;
         private MethodInfo _methodSeveral;
