@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Windows"
         mc:Ignorable="d"
-        Title="" Height="200" Width="300">
-    <Grid>
+        Title="" Height="250" Width="350">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Center" Width="350">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="250*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Check" Content="Подтвердить" Grid.Column="1" HorizontalAlignment="Left" Margin="180,148,0,0" VerticalAlignment="Top" Width="92" Height="22" Click="Check_Click"/>
+        <Button x:Name="Check" Content="Подтвердить" Grid.Column="1" HorizontalAlignment="Left" Margin="201,148,0,0" VerticalAlignment="Top" Width="98" Height="32" Click="Check_Click"/>
         <TextBox x:Name="InputKey" Grid.Column="1" HorizontalAlignment="Center" Margin="0,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="39"/>
         <Button Content="Запросить&#xD;&#xA;повторно" Grid.Column="1" HorizontalAlignment="Left" Margin="30,143,0,0" VerticalAlignment="Top" Width="76" Height="37" Click="Button_Click"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="8,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

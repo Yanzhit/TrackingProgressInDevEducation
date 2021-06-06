@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
@@ -8,14 +9,14 @@ namespace TrackingProgressInDevEducationDAL.Facades
     {
         private readonly QTest _query = new();
    
-        public IEnumerable<AResult> SetNewTest()
+        public IEnumerable<Test> SetNewTest()
         {
-            return (IEnumerable<AResult>)Manager.Setter.Single(_query.SetNewTest());
+            return (IEnumerable<Test>)Manager.Setter.Single(_query.SetNewTest());
         }
 
-        public IEnumerable<AResult> NullifyTests()
+        public IEnumerable<Test> NullifyTests()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTests());
+            return (IEnumerable<Test>)Manager.Remove.Rem(_query.NullifyTests());
         }
     }
 }

@@ -9,18 +9,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
     {
         private readonly QLectorCourse _query  = new();
 
-        public AResult SetNewLectorCourse(LectorCourse lCourse)
+        public LectorCourse SetNewLectorCourse(LectorCourse lCourse)
         {
-            return (AResult) Manager.Setter.Single(_query.SetNewLectorCourse(lCourse));
+            return (LectorCourse) Manager.Setter.Single(_query.SetNewLectorCourse(lCourse));
         }
 
         /// <summary>
         /// Обнуление таблицы Лекторы Курсы
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyCourse()
+        public IEnumerable<LectorCourse> NullifyCourse()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCourse());
+            return (IEnumerable<LectorCourse>)Manager.Remove.Rem(_query.NullifyCourse());
         }
     }
 }

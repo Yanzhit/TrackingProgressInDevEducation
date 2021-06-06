@@ -7,49 +7,49 @@ namespace TrackingProgressInDevEducationDAL.Facades
     public class Joins : AFacade 
     {
         private readonly QJoins _query  = new();
-        public IEnumerable<AResult> GetAllCoursesByLectorJ()
+        public IEnumerable<Joins> GetAllCoursesByLectorJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetAllCoursesByLectorJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllCoursesByLectorJ());
         }
 
-        public IEnumerable<AResult> GetAllStudentsByTeamJ()
+        public IEnumerable<Joins> GetAllStudentsByTeamJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetAllStudentsByTeamJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllStudentsByTeamJ());
         }
 
-        public IEnumerable<AResult> GetAllTeamsByLectorJ()
+        public IEnumerable<Joins> GetAllTeamsByLectorJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetAllTeamsByLectorJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllTeamsByLectorJ());
         }
 
-        public IEnumerable<AResult> GetAllTestsByStudentIdJ()
+        public IEnumerable<Joins> GetAllTestsByStudentIdJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetAllTestsByStudentIdJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllTestsByStudentIdJ());
         }
 
-        public IEnumerable<AResult> GetGroupByIdJ()
+        public IEnumerable<Joins> GetGroupByIdJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetGroupByIdJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetGroupByIdJ());
         }
 
-        public IEnumerable<AResult> GetHWComplitingByStudentJ()
+        public IEnumerable<Joins> GetHWComplitingByStudentJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetHWComplitingByStudentJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetHWComplitingByStudentJ());
         }
 
-        public IEnumerable<AResult> GetNotActualTeamByStudentIdJ()
+        public IEnumerable<Joins> GetNotActualTeamByStudentIdJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetNotActualTeamByStudentIdJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetNotActualTeamByStudentIdJ());
         }
 
-        public IEnumerable<AResult> GetStudentByIdJ()
+        public IEnumerable<Joins> GetStudentByIdJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetStudentByIdJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetStudentByIdJ());
         }
 
-        public IEnumerable<AResult> GetVisitsByStudentJ()
+        public IEnumerable<Joins> GetVisitsByStudentJ()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetVisitsByStudentJ());
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetVisitsByStudentJ());
         }
     }
 }

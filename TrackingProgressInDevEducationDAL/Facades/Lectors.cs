@@ -44,18 +44,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (IEnumerable<Lector>)Manager.Getter.Several(_query.GetAllLectors());
         }
-        public IEnumerable<AResult> UpdNewEmailAndPasswordLectors()
+        public IEnumerable<Lector> UpdNewEmailAndPasswordLectors()
         {
-            return (IEnumerable<AResult>)Manager.Update.Upd(_query.UpdNewEmailAndPasswordLectors());
+            return (IEnumerable<Lector>)Manager.Update.Upd(_query.UpdNewEmailAndPasswordLectors());
         }
 
         /// <summary>
         /// Обнуление таблицы Учителей и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyLectors()
+        public IEnumerable<Lector> NullifyLectors()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyLectors());
+            return (IEnumerable<Lector>)Manager.Remove.Rem(_query.NullifyLectors());
         }
     }
 }

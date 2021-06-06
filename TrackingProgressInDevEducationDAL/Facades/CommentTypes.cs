@@ -23,9 +23,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Типов комментариев и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyCTypes()
+        public IEnumerable<CType> NullifyCTypes()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCTypes());
+            return (IEnumerable<CType>)Manager.Remove.Rem(_query.NullifyCTypes());
         }
     }
 }

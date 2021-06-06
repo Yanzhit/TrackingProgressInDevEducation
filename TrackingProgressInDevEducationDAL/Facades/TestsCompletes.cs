@@ -9,9 +9,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
     {
         private readonly QTestComplete _query = new();
         
-        public IEnumerable<AResult> SetNewTC()
+        public IEnumerable<TestComplete> SetNewTC()
         {
-            return (IEnumerable<AResult>)Manager.Setter.Single(_query.SetNewTC());
+            return (IEnumerable<TestComplete>)Manager.Setter.Single(_query.SetNewTC());
         }
 
         public IEnumerable<TestComplete> GetTestScore()
@@ -19,9 +19,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (IEnumerable<TestComplete>)Manager.Getter.Single(_query.GetTestScore());
         }
 
-        public IEnumerable<AResult> NullifyTCs()
+        public IEnumerable<TestComplete> NullifyTCs()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTCs());
+            return (IEnumerable<TestComplete>)Manager.Remove.Rem(_query.NullifyTCs());
         }
         
     }

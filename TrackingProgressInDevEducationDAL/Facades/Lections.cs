@@ -15,9 +15,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="lection">Объект данных</param>
         /// <returns>Лекция</returns>
-        public AResult SetNewLection(Lection lection)
+        public Lection SetNewLection(Lection lection)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewLection(lection));
+            return (Lection)Manager.Setter.Single(_query.SetNewLection(lection));
         }
 
         ///// <summary>
@@ -33,9 +33,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Лекций и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyLections()
+        public IEnumerable<Lection> NullifyLections()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyLections());
+            return (IEnumerable<Lection>)Manager.Remove.Rem(_query.NullifyLections());
         }
     }
 }

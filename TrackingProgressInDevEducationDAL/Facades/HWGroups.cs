@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="hwGroup">Объект данных</param>
         /// <returns>ДЗ ГРУППЫ</returns>
-        public AResult SetNewHWGroup(HWGroup hwGroup)
+        public HWGroup SetNewHWGroup(HWGroup hwGroup)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHWGroup(hwGroup));
+            return (HWGroup)Manager.Setter.Single(_query.SetNewHWGroup(hwGroup));
         }
 
         /// <summary>
         /// Обнуление таблицы ДЗ ГРУППЫ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyHWGroup()
+        public IEnumerable<HWGroup> NullifyHWGroup()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWGroup());
+            return (IEnumerable<HWGroup>)Manager.Remove.Rem(_query.NullifyHWGroup());
         }
     }
 }

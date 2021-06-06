@@ -14,9 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="visit">Объект данных</param>
         /// <returns>Посещение</returns>
-        public AResult SetNewVisit(Visit visit)
+        public Visit SetNewVisit(Visit visit)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewVisit(visit));
+            return (Visit)Manager.Setter.Single(_query.SetNewVisit(visit));
         }
 
         public IEnumerable<Visit> GetVisitsScore()
@@ -28,9 +28,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнулить таблицу Посещений
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyVisits()
+        public IEnumerable<Visit> NullifyVisits()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyVisits());
+            return (IEnumerable<Visit>)Manager.Remove.Rem(_query.NullifyVisits());
         }
     }
 }

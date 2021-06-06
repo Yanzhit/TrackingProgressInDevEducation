@@ -9,14 +9,14 @@ namespace TrackingProgressInDevEducationDAL.Facades
     {
         private readonly QCommentFor _query = new();
     
-        public AResult SetNewCType()
+        public CommentFor SetNewCType()
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewCType());
+            return (CommentFor)Manager.Setter.Single(_query.SetNewCType());
         }
 
-        public IEnumerable<AResult> NullifyCTypes()
+        public IEnumerable<CommentFor> NullifyCTypes()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCTypes());
+            return (IEnumerable<CommentFor>)Manager.Remove.Rem(_query.NullifyCTypes());
         }
     }
 }

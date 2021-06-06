@@ -14,9 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="hWComplete">Объект данных</param>
         /// <returns>Завершенное ДЗ</returns>
-        public AResult SetNewHWComplete(HWComplete hWComplete)
+        public HWComplete SetNewHWComplete(HWComplete hWComplete)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHWComplete(hWComplete));
+            return (HWComplete)Manager.Setter.Single(_query.SetNewHWComplete(hWComplete));
         }
 
         public IEnumerable<HWComplete> GetHomeWorkProcedureScore()
@@ -28,9 +28,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Завершенного ДЗ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyHWComplete()
+        public IEnumerable<HWComplete> NullifyHWComplete()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWComplete());
+            return (IEnumerable<HWComplete>)Manager.Remove.Rem(_query.NullifyHWComplete());
         }
     }
 }

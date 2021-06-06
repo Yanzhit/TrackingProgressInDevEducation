@@ -14,9 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="group">Объект данных</param>
         /// <returns>Группа</returns>
-        public AResult SetNewGroup(Group group)
+        public Group SetNewGroup(Group group)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewGroup(group));
+            return (Group)Manager.Setter.Single(_query.SetNewGroup(group));
         }
 
         public IEnumerable<Group> GetGroupsByLector(Group group)
@@ -28,9 +28,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Группы и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyGroups()
+        public IEnumerable<Group> NullifyGroups()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyGroups());
+            return (IEnumerable<Group>)Manager.Remove.Rem(_query.NullifyGroups());
         }
     }
 }

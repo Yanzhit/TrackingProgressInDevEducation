@@ -15,9 +15,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="course">Объект данных</param>
         /// <returns>Курс</returns>
-        public AResult SetNewCourse(Course course)
+        public Course SetNewCourse(Course course)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewCourse(course));
+            return (Course)Manager.Setter.Single(_query.SetNewCourse(course));
         }
 
         public IEnumerable<Course> GetAllCourses()
@@ -29,9 +29,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Курсов и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyCourses()
+        public IEnumerable<Course> NullifyCourses()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyCourses());
+            return (IEnumerable<Course>)Manager.Remove.Rem(_query.NullifyCourses());
         }
     }
 }

@@ -14,18 +14,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="homework">Объект данных</param>
         /// <returns>ДЗ</returns>
-        public AResult SetNewHW(Homework homework)
+        public Homework SetNewHW(Homework homework)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewHW(homework));
+            return (Homework)Manager.Setter.Single(_query.SetNewHW(homework));
         }
 
         /// <summary>
         /// Обнуление таблицы ДЗ и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyHWs()
+        public IEnumerable<Homework> NullifyHWs()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyHWs());
+            return (IEnumerable<Homework>)Manager.Remove.Rem(_query.NullifyHWs());
         }
     }
 }

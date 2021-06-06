@@ -15,25 +15,25 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="payment">Объект данных</param>
         /// <returns>Платеж</returns>
-        public AResult SetNewPayment(Payment payment)
+        public Payment SetNewPayment(Payment payment)
         {
-            return (AResult) Manager.Setter.Single
+            return (Payment) Manager.Setter.Single
             (
                 _query.SetNewPayment(payment));
         }
 
-        public IEnumerable<AResult> GetPaymentsByGroup()
+        public IEnumerable<Payment> GetPaymentsByGroup()
         {
-            return (IEnumerable<AResult>)Manager.Getter.Several(_query.GetPaymentsByGroup());
+            return (IEnumerable<Payment>)Manager.Getter.Several(_query.GetPaymentsByGroup());
         }
 
         /// <summary>
         /// Обнуление платежей и ключа identity
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyPayments()
+        public IEnumerable<Payment> NullifyPayments()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyPayments());
+            return (IEnumerable<Payment>)Manager.Remove.Rem(_query.NullifyPayments());
         }
 
         /////// <summary>

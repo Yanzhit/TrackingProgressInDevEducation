@@ -13,18 +13,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Создание нового Лектора Группы
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> SetNewLectorGroup(LectorGroup lGroup)
+        public IEnumerable<LectorGroup> SetNewLectorGroup(LectorGroup lGroup)
         {
-            return (IEnumerable<AResult>)Manager.Setter.Single(_query.SetNewLectorGroup(lGroup));
+            return (IEnumerable<LectorGroup>)Manager.Setter.Single(_query.SetNewLectorGroup(lGroup));
         }
 
         /// <summary>
         /// Обнуление таблицы Лекторы Группы
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyLectorGroup()
+        public IEnumerable<LectorGroup> NullifyLectorGroup()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyLectorGroup());
+            return (IEnumerable<LectorGroup>)Manager.Remove.Rem(_query.NullifyLectorGroup());
         }
     }
 }

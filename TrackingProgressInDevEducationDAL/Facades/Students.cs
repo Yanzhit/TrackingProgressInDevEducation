@@ -15,9 +15,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="student">объект данных</param>
         /// <returns>Студент</returns>
-        public AResult SetNewStudent(Student student)
+        public Student SetNewStudent(Student student)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewStudent(student));
+            return (Student)Manager.Setter.Single(_query.SetNewStudent(student));
         }
 
         /// <summary>
@@ -43,9 +43,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнулить таблицу студентов
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyStudents()
+        public IEnumerable<Student> NullifyStudents()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyStudents());
+            return (IEnumerable<Student>)Manager.Remove.Rem(_query.NullifyStudents());
         }
 
     }

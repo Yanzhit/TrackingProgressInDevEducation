@@ -14,9 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="team">Объект данных</param>
         /// <returns></returns>
-        public AResult SetNewTeam(Team team)
+        public Team SetNewTeam(Team team)
         {
-            return (AResult) Manager.Setter.Single(_query.SetNewTeam(team));
+            return (Team) Manager.Setter.Single(_query.SetNewTeam(team));
         }
 
         public IEnumerable<Team> GetTeamById(Team team)
@@ -28,9 +28,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнулить таблицу команд
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyTeams()
+        public IEnumerable<Team> NullifyTeams()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTeams());
+            return (IEnumerable<Team>)Manager.Remove.Rem(_query.NullifyTeams());
         }
     }
 }

@@ -14,9 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="tStudent">Объект данных</param>
         /// <returns></returns>
-        public AResult SetNewTStudent(TStudent tStudent)
+        public TStudent SetNewTStudent(TStudent tStudent)
         {
-            return (AResult)Manager.Setter.Single(_query.SetNewTStudent(tStudent));
+            return (TStudent)Manager.Setter.Single(_query.SetNewTStudent(tStudent));
         }
 
         public IEnumerable<QTStudent> GetAllStudents()
@@ -27,17 +27,17 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (IEnumerable<QTStudent>)Manager.Getter.Several(_query.GetAllStudentsByGroup());
         }
-        public IEnumerable<AResult> UpdStudentToGroup()
+        public IEnumerable<TStudent> UpdStudentToGroup()
         {
-            return (IEnumerable<AResult>)Manager.Update.Upd(_query.UpdStudentToGroup());
+            return (IEnumerable<TStudent>)Manager.Update.Upd(_query.UpdStudentToGroup());
         }
         /// <summary>
         /// Обнуление таблицы Команда Студенты
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<AResult> NullifyTStudent()
+        public IEnumerable<TStudent> NullifyTStudent()
         {
-            return (IEnumerable<AResult>)Manager.Remove.Rem(_query.NullifyTStudent());
+            return (IEnumerable<TStudent>)Manager.Remove.Rem(_query.NullifyTStudent());
         }
     }
 }
