@@ -8,26 +8,33 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BLector
+    public class BLector : AbstractBModel
     {
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public bool isActivated { get; set; }
 
         public BLector()
         {
         }
 
-        public BLector(Lector lector)
+        public BLector(string login, string password)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
-            Mapper mapper = new Mapper(config);
-            BLector tmpBLector = mapper.Map<BLector>(lector);
-
-            this.FullName = tmpBLector.FullName;
-            this.Email = tmpBLector.Email;
-            this.Password = tmpBLector.Password;
+            FullName = login;
+            Password = password;
         }
+
+        //public BLector(Lector lector)
+        //{
+        //    var config = new MapperConfiguration(cfg => cfg.CreateMap<Lector, BLector>());
+        //    Mapper mapper = new Mapper(config);
+        //    BLector tmpBLector = mapper.Map<BLector>(lector);
+
+        //    this.FullName = tmpBLector.FullName;
+        //    this.Email = tmpBLector.Email;
+        //    this.Password = tmpBLector.Password;
+        //}
         public override bool Equals(object obj)
         {
             return Equals((BLector)obj);

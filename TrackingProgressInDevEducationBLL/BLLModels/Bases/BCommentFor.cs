@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCommentFor
+    public class BCommentFor : AbstractBModel
     {
         public string Name { get; set; }
 
@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BCommentFor(CommentFor commentFor)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Comment, BComment>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BCommentFor tmpBCommentFor = mapper.Map<BCommentFor>(commentFor);
 
             this.Name = tmpBCommentFor.Name;
@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public List<BCommentFor> GetBComments(List<CommentFor> commentsFor)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<CommentFor, BCommentFor>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             List<BCommentFor> tmpBComments = mapper.Map<List<BCommentFor>>(commentsFor);
             return tmpBComments;
         }

@@ -1,10 +1,10 @@
 ﻿using System;
 using AutoMapper;
-using TrackingProgressInDevEducationBLL.BLLModels.Bases;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
-namespace TrackingProgressInDevEducationDAL.Models.Bases
+namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BTeam
+    public class BTeam : AbstractBModel
     {
         public string Name { get; set; }
         public DateTime? From { get; set; }
@@ -17,7 +17,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public BTeam(Team team)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Team, BTeam>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BTeam tmpBTeam = mapper.Map<BTeam>(team);
 
             this.Name = tmpBTeam.Name;

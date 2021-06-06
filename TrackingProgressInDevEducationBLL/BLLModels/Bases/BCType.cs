@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCType
+    public class BCType : AbstractBModel
     {
         public string Name { get; set; }
 
@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BCType(CType cType)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<CType, BCType>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BCType tmpBCType = mapper.Map<BCType>(cType);
 
             this.Name = tmpBCType.Name;

@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BHWComplete
+    public class BHWComplete : AbstractBModel
     {
         public int HomeworkId { get; set; }
         public int StudentId { get; set; }
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BHWComplete(HWComplete hwComplete)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<HWComplete, BHWComplete>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BHWComplete tmpHWBComplete = mapper.Map<BHWComplete>(hwComplete);
 
             this.HomeworkId = tmpHWBComplete.HomeworkId;

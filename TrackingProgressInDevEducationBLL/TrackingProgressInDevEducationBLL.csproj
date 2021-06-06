@@ -12,4 +12,25 @@
     <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BLLModels\AddStudentsToGroup\" />
+    <Folder Include="BLLModels\AddStudentsToTeam\" />
+    <Folder Include="BLLModels\Course\" />
+    <Folder Include="BLLModels\CreateTeam\" />
+    <Folder Include="BLLModels\Group\" />
+    <Folder Include="BLLModels\GroupInfo\" />
+    <Folder Include="BLLModels\GroupJournal\" />
+    <Folder Include="BLLModels\Home\" />
+    <Folder Include="BLLModels\MyProfile\" />
+    <Folder Include="BLLModels\NewStudent\" />
+    <Folder Include="BLLModels\Registration\" />
+    <Folder Include="BLLModels\StudentProfile\" />
+    <Folder Include="BLLModels\StudentRate\" />
+    <Folder Include="BLLModels\Students\" />
+    <Folder Include="BLLModels\TeamInfo\" />
+    <Folder Include="BLLModels\TeamRate\" />
+    <Folder Include="Facades\" />
+    <Folder Include="Tasks\" />
+  </ItemGroup>
+
 </Project>

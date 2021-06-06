@@ -5,7 +5,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BComment
+    public class BComment : AbstractBModel
     {
         public string Text { get; set; }
         public int TypeId { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BComment(Comment comment)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Comment, BComment>());
-            Mapper mapper = new Mapper(config);
+            var mapper = new AutoMapper.Mapper(config);
             BComment tmpBComment = mapper.Map<BComment>(comment);
 
             this.Text = tmpBComment.Text;

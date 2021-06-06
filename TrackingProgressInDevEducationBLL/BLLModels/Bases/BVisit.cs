@@ -4,7 +4,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BVisit
+    public class BVisit : AbstractBModel
     {
         public bool VisitStatus { get; set; }
         public int StudentId { get; set; }
@@ -17,7 +17,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BVisit(Visit visit)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Visit, BVisit>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BVisit tBVisit = mapper.Map<BVisit>(visit);
 
             this.VisitStatus = tBVisit.VisitStatus;

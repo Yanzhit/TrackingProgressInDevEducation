@@ -4,7 +4,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BTestComplete
+    public class BTestComplete : AbstractBModel
     {
         public int TestId { get; set; }
         public int StudentId { get; set; }
@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BTestComplete(TestComplete testComplete)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<TestComplete, BTestComplete>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BTestComplete tmpBTestComplete = mapper.Map<BTestComplete>(testComplete);
 
             this.TestId = tmpBTestComplete.TestId;

@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BLection
+    public class BLection : AbstractBModel
     {
         public int GroupId { get; set; }
         public int LectorId { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BLection(Lection lection)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Lection, BLection>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BLection tmpBLection = mapper.Map<BLection>(lection);
 
             this.GroupId = tmpBLection.GroupId;

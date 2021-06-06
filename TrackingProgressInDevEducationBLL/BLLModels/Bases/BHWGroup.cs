@@ -9,7 +9,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BHWGroup
+    public class BHWGroup : AbstractBModel
     {
         public int HomeworkId { get; set; }
         public int GroupId { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BHWGroup(HWGroup hwGroup)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<HWGroup, BHWGroup>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BHWGroup tmpBHWGroup = mapper.Map<BHWGroup>(hwGroup);
 
             this.HomeworkId = tmpBHWGroup.HomeworkId;

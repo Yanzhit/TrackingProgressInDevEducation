@@ -4,7 +4,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BTest
+    public class BTest : AbstractBModel
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BTest(Test test)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Test, BTest>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BTest tmpBTest = mapper.Map<BTest>(test);
 
             this.Name = tmpBTest.Name;

@@ -8,7 +8,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCourse
+    public class BCourse : AbstractBModel
     {
         public string Name { get; set; }
         public DateTime StartedOn { get; set; }
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BCourse(Course course)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Course, BCourse>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BCourse tmpBCourse = mapper.Map<BCourse>(course);
 
             this.Name = tmpBCourse.Name;

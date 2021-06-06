@@ -9,7 +9,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BPayment
+    public class BPayment : AbstractBModel
     {
         public int StudentId { get; set; }
         public DateTime PaymentTo { get; set; }
@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BPayment(Payment payment)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Payment, BPayment>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BPayment tmpBPayment = mapper.Map<BPayment>(payment);
 
             this.StudentId = tmpBPayment.StudentId;

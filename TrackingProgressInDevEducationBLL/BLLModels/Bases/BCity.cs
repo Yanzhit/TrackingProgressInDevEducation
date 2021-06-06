@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Bases;
+﻿using TrackingProgressInDevEducationDAL.Models.Bases;
 using AutoMapper;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BCity
+    public class BCity : AbstractBModel
     {
         public string Name { get; set; }
 
@@ -15,7 +14,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BCity(City city)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<City, BCity>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BCity tmpBCity = mapper.Map<BCity>(city);
 
             this.Name = tmpBCity.Name;

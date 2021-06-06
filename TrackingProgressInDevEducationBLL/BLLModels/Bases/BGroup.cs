@@ -9,7 +9,7 @@ using Group = System.Text.RegularExpressions.Group;
 
 namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
 {
-    public class BGroup
+    public class BGroup : AbstractBModel
     {
         public string Name { get; set; }
         public int CourseId { get; set; }
@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationBLL.BLLModels.Bases
         public BGroup(Group group)
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, BGroup>());
-            Mapper mapper = new Mapper(config);
+            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
             BGroup tmpBGroup = mapper.Map<BGroup>(group);
 
             this.Name = tmpBGroup.Name;
