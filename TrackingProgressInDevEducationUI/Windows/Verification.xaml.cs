@@ -11,8 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TrackingProgressInDevEducationDAL;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationUI.Windows
 {
@@ -35,17 +33,17 @@ namespace TrackingProgressInDevEducationUI.Windows
             if (_key == Convert.ToInt32(InputKey.Text))
             {
                 Info.Text = Defines.Congratulation;
-                FacadeManager f = new();
-                Lector lector = f.Lectors.UpdateAcrivationLector(_id,true);
-                if (lector.IsActivated == true)
-                {
-                    this.Close();
-                    SingleContents.GetContent().SignIn();
-                }
-                else
-                {
-                    Info.Text = "Ошибка активации аккаунта";
-                }
+                //DALManager f = new();
+                //Lector lector = f.Lectors.UpdateAcrivationLector(_id,true);
+                //if (lector.IsActivated == true)
+                //{
+                //    this.Close();
+                //    SingleContents.GetContent().SignIn();
+                //}
+                //else
+                //{
+                //    Info.Text = "Ошибка активации аккаунта";
+                //}
             }
             else
             {

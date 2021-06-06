@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Bases;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationUI.Windows
 {
@@ -108,6 +113,12 @@ namespace TrackingProgressInDevEducationUI.Windows
         private void TeamRate_Click(object sender, RoutedEventArgs e)
         {
             _contents.TeamRate();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BLLManager bll = new BLLManager();
+            var ss = bll.QSingIns.GetLoginAndPassword(new LectorQuery("Kozlov.s.v.1992@gmail.com",""));
         }
     }
 }

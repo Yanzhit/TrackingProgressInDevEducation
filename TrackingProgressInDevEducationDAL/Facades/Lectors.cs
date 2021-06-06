@@ -36,9 +36,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (Lector)Manager.Getter.Single(_query.GetLectorById(id));
         }
 
-        public Lector GetLoginAndPassword(string login, string password)
+        public Lector GetLoginAndPassword(string email, string password)
         {
-            return (Lector) Manager.Getter.Single(_query.GetLoginAndPassword(login, password));
+            return (Lector)Manager.Getter.Single(_query.GetLoginAndPassword(email, password));
         }
 
 

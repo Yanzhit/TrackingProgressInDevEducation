@@ -5,7 +5,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 {
     public class NullifyDB
     {
-        private readonly FacadeManager _manager = new();
+        private readonly DALManager _manager = new();
 
         public void Nullify(Type type) 
         {

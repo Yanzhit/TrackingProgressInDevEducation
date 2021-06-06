@@ -4,9 +4,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using TrackingProgressInDevEducationBLL.BLLModels.Bases;
-using TrackingProgressInDevEducationBLL.BLLModels.SignIn;
-using TrackingProgressInDevEducationBLL.Tasks;
+using TrackingProgressInDevEducationBLL.Models.Bases;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
 
 //using TrackingProgressInDevEducationDAL;
 //using TrackingProgressInDevEducationDAL.Models.Bases;
@@ -20,7 +19,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class SignIn : Page
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
-        //private readonly FacadeManager _manager = new();
+        //private readonly DALManager _manager = new();
         public SignIn()
         {
             InitializeComponent();
@@ -28,9 +27,9 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            BLector bLector = new BLector(Login.Text, Password.Text);
-            TaskPreparing task = new();
-            var ttt = task.PreparingBaseModels(bLector);
+            //LectorDTO lectorDTO = new LectorDTO(Login.Text, Password.Text);
+            //TaskPreparing task = new();
+           // var ttt = task.PreparingBaseModels(bLector);
             //Lector
             //Lector lector = _manager.Lectors.GetLoginAndPassword(Login.Text, Password.Text);
             // _contents.Home(lector);

@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewHWCompleteTest(IQuery query, HWComplete hWComplete, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.HWCompletes.SetNewHWComplete(hWComplete.HomeworkId, hWComplete.StudentId, hWComplete.Status);
+            DalManager.HWCompletes.SetNewHWComplete(hWComplete.HomeworkId, hWComplete.StudentId, hWComplete.Status);
             //Assert.AreEqual(expected, actual);
         }
 
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyHWCompleteTest(IQuery query, object expected)
         {
             PreparindDB(query.QueryType);
-            FacadeManager.HWCompletes.NullifyHWComplete();
+            DalManager.HWCompletes.NullifyHWComplete();
             //Assert.AreEqual(expected, actual);
         }
     }

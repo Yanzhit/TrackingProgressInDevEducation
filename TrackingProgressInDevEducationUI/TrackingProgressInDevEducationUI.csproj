@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TrackingProgressInDevEducationBLL\TrackingProgressInDevEducationBLL.csproj" />
-    <ProjectReference Include="..\TrackingProgressInDevEducationDAL\TrackingProgressInDevEducationDAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
     
     public class FillingDB
     {
-        private readonly FacadeManager _manager = new();
+        private readonly DALManager _manager = new();
 
         public void Filling(Type type, ManagerMocks manager)
         {

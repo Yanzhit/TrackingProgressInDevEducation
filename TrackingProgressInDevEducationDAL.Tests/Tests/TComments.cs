@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewCommentTest(IQuery query, Comment comment, object expected)
         {
             PreparindDB(query.ModelType);
-            FacadeManager.Comments.SetNewComment
+            DalManager.Comments.SetNewComment
             (
                 comment.Text, 
                 comment.TypeId, 
@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void NullifyCommentsTest(IQuery query, object expected)
         {
             PreparindDB(query.ModelType);
-            FacadeManager.Comments.NullifyComments();
+            DalManager.Comments.NullifyComments();
             //Assert.AreEqual(expected, actual);
         }
     }

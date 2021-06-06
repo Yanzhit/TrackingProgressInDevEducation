@@ -1,7 +1,10 @@
-﻿namespace TrackingProgressInDevEducationBLL.Facades
+﻿using TrackingProgressInDevEducationDAL;
+
+namespace TrackingProgressInDevEducationBLL.Facades
 {
     public abstract class AFacade
     {
-        //protected readonly MapperManager Manager = new();
+        protected readonly Mappers Mappers = new();
+        protected readonly TrackingProgressInDevEducationDAL.DALManager Manager = new();
     }
 }
