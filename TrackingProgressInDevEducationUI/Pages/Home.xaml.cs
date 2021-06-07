@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationUI.Defines;
 using MessageBox = System.Windows.Forms.MessageBox;
 using MessageBoxOptions = System.Windows.Forms.MessageBoxOptions;
@@ -25,66 +27,22 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class Home : PageFunction<String>
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
+        
         //private Lector _lector;
         public Home()
         {
             InitializeComponent();
-            //Welcome();
-        }
-        //public Home(/*Lector lector*/)
-        //{
-        //    InitializeComponent();
-        //    _lector = lector;
-        //    if (!_lector.IsActivated)
-        //    {
-        //        Check();
-        //    }
-        //    Welcome();
-        //}
-
-        private void Check()
-        {
-            DialogResult result = MessageBox.Show
-            (
-                "Необходимо подтверждение электронной почты",
-                "Предупреждение",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1,
-                MessageBoxOptions.DefaultDesktopOnly
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                Activated();
-            }
-            else
-            {
-                _contents.SignIn();
-            }
+            Welcome();
         }
 
         private void Welcome()
         {
-            //WelcomeBlock.Text = $"{Welcome2}{Sep}{_lector}";
+            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.Lector}";
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
             _contents.SignIn();
-        }
-
-        private void Activated()
-        {
-            SmtpService service = new();
-            var param = new Dictionary<string, string>
-            {
-               // {"FullName", _lector.FullName},
-                //{"Email", _lector.Email},
-                //{"Password", _lector.Password}
-            };
-            int key = service.SmtpRun(param);
-           // _contents.Verification(key, _lector.Id);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationUI.Pages;
+﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
+using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Windows;
 using Course = TrackingProgressInDevEducationUI.Pages.Course;
 using Group = TrackingProgressInDevEducationUI.Pages.Group;
@@ -7,6 +8,7 @@ namespace TrackingProgressInDevEducationUI
 {
     public class SingleContents
     {
+        public LectorAnswer Lector;
         private static SingleContents _contents;
         private readonly MainForm _main;
         private AddStudentsToGroup _addStudentsToGroup;
@@ -60,11 +62,12 @@ namespace TrackingProgressInDevEducationUI
             _home = new Home();
             _main.Content = _home;
         }
-        //public void Home(Lector lector)
-        //{
-        //    _home = new Home(lector);
-        //    _main.Content = _home;
-        //}
+        public void Home(LectorAnswer lector)
+        {
+            Lector = lector;
+            _home = new Home();
+            _main.Content = _home;
+        }
 
         public void NewStudent()
         {

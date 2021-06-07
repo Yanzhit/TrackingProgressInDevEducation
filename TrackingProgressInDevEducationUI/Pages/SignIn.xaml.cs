@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.Bases;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
+using static TrackingProgressInDevEducationUI.Defines;
+using MessageBox = System.Windows.Forms.MessageBox;
+using MessageBoxOptions = System.Windows.Forms.MessageBoxOptions;
 
 //using TrackingProgressInDevEducationDAL;
 //using TrackingProgressInDevEducationDAL.Models.Bases;
@@ -18,6 +23,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     // ReSharper disable once RedundantExtendsListEntry
     public partial class SignIn : Page
     {
+        private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
         //private readonly DALManager _manager = new();
         public SignIn()
@@ -27,13 +33,63 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            //LectorDTO lectorDTO = new LectorDTO(Login.Text, Password.Text);
-            //TaskPreparing task = new();
-           // var ttt = task.PreparingBaseModels(bLector);
-            //Lector
-            //Lector lector = _manager.Lectors.GetLoginAndPassword(Login.Text, Password.Text);
-            // _contents.Home(lector);
+            var query = new LectorQuery(Login.Text, Password.Text);
+            LectorAnswer answer = _operation.GetLoginAndPassword(query);
+            if (answer != null)
+            {
+                if (answer.IsActivated)
+                {
+                    _contents.Home(answer);
+                }
+                else
+                {
+                    CheckActive(answer);
+                }
+            }
+            else
+            {
+                Info.Text = $"{ExcepEntrance}";
+            }
         }
+
+        private void CheckActive(LectorAnswer answer)
+        {
+            DialogResult result = MessageBox.Show
+            (
+                $"{NoActive}",
+                $"{Warning}",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Activated(answer);
+            }
+            else
+            {
+                MessageBox.Show($"{Warning1}" +
+                                $"{Warning2}");
+                MessageBox.Show($"{ErrorActive}" +
+                                $"{ErrorActive1}{Email}{NewLine}" +
+                                $"{ErrorActive2}");
+            }
+        }
+
+        private void Activated(LectorAnswer answer)
+        {
+            SmtpService service = new();
+            var param = new Dictionary<string, string>
+            {
+                {"FullName", answer.FullName},
+                {"Email", answer.Email}
+            };
+            int key = service.SmtpRun(param);
+            _contents.Verification(key, answer.Id);
+        }
+
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {

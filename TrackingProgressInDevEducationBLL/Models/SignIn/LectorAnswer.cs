@@ -8,6 +8,9 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
     /// </summary>
     public class LectorAnswer : ADTOAnswer
     {
+        public string FullName { get; set; }
+        public string Email { get; set; }
+
         /// <summary>
         /// Проверка на активность аккаунта
         /// </summary>
@@ -25,9 +28,13 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// </summary>
         /// <param name="id">Идентификатор объекта</param>
         /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
-        public LectorAnswer(int id, bool isActivated)
+        /// <param name="email">"Электронная почта</param>
+        /// <param name="fullName">Передаваемое  имя</param>
+        public LectorAnswer(int id, string email, string fullName, bool isActivated)
         {
             Id = id;
+            FullName = fullName;
+            Email = email;
             IsActivated = isActivated;
         }
 
