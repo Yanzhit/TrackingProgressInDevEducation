@@ -14,10 +14,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         /// </summary>
         /// <param name="model">Входящая модель от DAL для обработки</param>
         /// <returns>Модель ответа с вложенными данными</returns>
-        public LectorAnswer GetLoginAndPassword(Lector model)
+        public AGetLector GetLoginAndPassword(Lector model)
         {
             WriteTypes(new SignInLector());
-            return (LectorAnswer)GetModelBaseSingle(model);
+            return (AGetLector)GetModelBaseSingle(model);
         }
     }
 }

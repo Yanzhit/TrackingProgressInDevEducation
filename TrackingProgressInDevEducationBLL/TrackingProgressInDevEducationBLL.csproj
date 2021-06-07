@@ -15,7 +15,6 @@
     <Compile Remove="Models\Home\**" />
     <Compile Remove="Models\MyProfile\**" />
     <Compile Remove="Models\NewStudent\**" />
-    <Compile Remove="Models\Registration\**" />
     <Compile Remove="Models\StudentProfile\**" />
     <Compile Remove="Models\StudentRate\**" />
     <Compile Remove="Models\Students\**" />
@@ -31,7 +30,6 @@
     <EmbeddedResource Remove="Models\Home\**" />
     <EmbeddedResource Remove="Models\MyProfile\**" />
     <EmbeddedResource Remove="Models\NewStudent\**" />
-    <EmbeddedResource Remove="Models\Registration\**" />
     <EmbeddedResource Remove="Models\StudentProfile\**" />
     <EmbeddedResource Remove="Models\StudentRate\**" />
     <EmbeddedResource Remove="Models\Students\**" />
@@ -47,7 +45,6 @@
     <None Remove="Models\Home\**" />
     <None Remove="Models\MyProfile\**" />
     <None Remove="Models\NewStudent\**" />
-    <None Remove="Models\Registration\**" />
     <None Remove="Models\StudentProfile\**" />
     <None Remove="Models\StudentRate\**" />
     <None Remove="Models\Students\**" />

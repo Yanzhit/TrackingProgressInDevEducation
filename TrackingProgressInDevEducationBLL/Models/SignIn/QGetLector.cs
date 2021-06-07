@@ -6,7 +6,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
     /// Модель данных для запроса со страницы SignIn(определяется именем папки, которое соответствует конкретным страницам
     /// Модель для запроса из UI в DAL
     /// </summary>
-    public class LectorQuery : ADTOQuery
+    public class QGetLector : ADTOQuery
     {
         /// <summary>
         /// Электронная почта 
@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public LectorQuery()
+        public QGetLector()
         {
         }
 
@@ -30,7 +30,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// </summary>
         /// <param name="email">Электронная почта </param>
         /// <param name="password">Пароль</param>
-        public LectorQuery(string email, string password)
+        public QGetLector(string email, string password)
         {
             Email = email;
             Password = password;
@@ -38,10 +38,10 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
 
         public override bool Equals(object obj)
         {
-            return Equals((LectorQuery)obj);
+            return Equals((QGetLector)obj);
         }
 
-        private bool Equals(LectorQuery other)
+        private bool Equals(QGetLector other)
         {
             return Email == other.Email
                    && Password == other.Password;
@@ -51,6 +51,5 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         {
             return HashCode.Combine(Email, Password);
         }
-
     }
 }

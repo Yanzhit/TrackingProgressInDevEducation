@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
         
-        //private Lector _lector;
+        //private AGetLector _lector;
         public Home()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Welcome()
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.Lector}";
+            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.AGetLector}";
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
