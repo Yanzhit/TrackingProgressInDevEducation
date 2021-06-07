@@ -8,9 +8,9 @@ namespace TrackingProgressInDevEducationBLL.Transfers
     {
         public Registrations SetNewLector()
         {
-            Query = typeof(QNewLector);
+            Query = typeof(QSetLector);
             Base = typeof(Lector);
-            Answer = typeof(ANewLector);
+            Answer = typeof(ASetLector);
             return this;
         }
     }

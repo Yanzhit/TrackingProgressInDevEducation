@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using TrackingProgressInDevEducationDAL.Repositories;
-using Getter = TrackingProgressInDevEducationDAL.Senders.Getter;
-using Remove = TrackingProgressInDevEducationDAL.Senders.Remove;
-using Setter = TrackingProgressInDevEducationDAL.Senders.Setter;
-using Update = TrackingProgressInDevEducationDAL.Senders.Update;
+﻿using TrackingProgressInDevEducationDAL.Senders;
 
 
 namespace TrackingProgressInDevEducationDAL

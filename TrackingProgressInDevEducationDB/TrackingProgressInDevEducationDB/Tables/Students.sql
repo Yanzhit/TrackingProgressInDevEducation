@@ -7,7 +7,7 @@
     [Phone] NVARCHAR(50) NULL, 
     [Email] NVARCHAR(50) NULL, 
     [Contract] NVARCHAR(50) NULL, 
-    [Birthday] DATE NULL, 
+    [Birthday] NVARCHAR(50) NULL, 
     [MiddleName] NVARCHAR(50) NULL, 
     [Git] NVARCHAR(50) NULL, 
     [CityId] INT NULL, 

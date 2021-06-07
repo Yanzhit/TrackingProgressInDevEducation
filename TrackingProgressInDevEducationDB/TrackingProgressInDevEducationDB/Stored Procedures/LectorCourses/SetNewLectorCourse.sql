@@ -9,7 +9,7 @@ AS
 		 [LectorId]
 		,[CourseId]
 	)
-	OUTPUT INSERTED.LectorId, INSERTED.CourseId
+	OUTPUT INSERTED.[LectorId], INSERTED.[CourseId]
 	VALUES
 	(
 		 @LectorId

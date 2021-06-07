@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Transfers;
@@ -14,7 +13,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     {
         protected override void WriteTypes(ATransfer aTransfer)
         {
-            _type = new[]
+            Type = new[]
             {
                 aTransfer.Query,
                 aTransfer.Base

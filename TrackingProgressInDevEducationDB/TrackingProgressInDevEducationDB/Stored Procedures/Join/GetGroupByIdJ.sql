@@ -6,5 +6,5 @@ select G.[id]
       ,G.[StartDate] 
       ,G.[EndDate] 
       FROM [TrackingProgressInDevEducationDB].Groups G
-      JOIN [TrackingProgressInDevEducationDB].Courses C ON G.CourseId = C.id
-where G.id=@id
+      JOIN [TrackingProgressInDevEducationDB].Courses C ON G.CourseId = C.[id]
+where G.[id]=@id

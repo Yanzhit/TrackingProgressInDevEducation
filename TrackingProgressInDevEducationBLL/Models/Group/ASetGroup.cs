@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
     /// Модель данных для ответа на запрос со страницы Group(определяется именем папки, которое соответствует конкретным страницам
     /// Модель для ответа из DAL в UI
     /// </summary>
-    public class GroupAnswer : ADTOAnswer
+    public class ANewGroup : ADTOAnswer
     {
         public string Name { get; set; }
         public int CourseId { get; set; }
@@ -17,7 +17,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public GroupAnswer()
+        public ANewGroup()
         {
         }
 
@@ -28,7 +28,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
         /// <param name="email">"Электронная почта</param>
         /// <param name="fullName">Передаваемое  имя</param>
-        public GroupAnswer(string name, int courseId, DateTime startDate, DateTime endDate)
+        public ANewGroup(string name, int courseId, DateTime startDate, DateTime endDate)
         {
             Name = name;
             CourseId = courseId;
@@ -38,10 +38,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
 
         public override bool Equals(object obj)
         {
-            return Equals((GroupAnswer)obj);
+            return Equals((ANewGroup)obj);
         }
 
-        private bool Equals(GroupAnswer other)
+        private bool Equals(ANewGroup other)
         {
             return Id == other.Id;
         }

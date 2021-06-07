@@ -7,7 +7,7 @@
 	,@Phone NVARCHAR(50)
 	,@Email NVARCHAR(50)
 	,@Contract NVARCHAR(50)
-	,@Birthday DATE
+	,@Birthday NVARCHAR(50)
 	,@MiddleName NVARCHAR(50)
 	,@Git NVARCHAR(50)
 	,@CityId INT
@@ -29,7 +29,7 @@ AS
 		,[CityId]
 		,[Status]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.[id]
 		  ,INSERTED.[Name]
 		,INSERTED.[Surname]
 		,INSERTED.[Rate]

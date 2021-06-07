@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace TrackingProgressInDevEducationDAL.Tests.Abstract
+﻿namespace TrackingProgressInDevEducationDAL.Tests.Abstract
 {
     public class AExpected
     {

@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
@@ -8,15 +7,15 @@ using TrackingProgressInDevEducationDAL.Tests.Expected;
 namespace TrackingProgressInDevEducationDAL.Tests.Tests
 {
     /// <summary>
-    /// Тестирование всех запросов работающих только с таблицей Коментариев
+    /// Тестирование всех запросов работающих только с таблицей Комментариев
     /// </summary>
     public class TComments : ATTests
     {
         /// <summary>
-        /// Добавление нового коментария в таблицу
+        /// Добавление нового комментария в таблицу
         /// </summary>
         /// <param name="query">Запрос</param>
-        /// <param name="comment">Входящий коментарий</param>
+        /// <param name="comment">Входящий комментарий</param>
         /// <param name="expected">Ожидаемый результат</param>
         [TestCaseSource(typeof(EComments), nameof(EComments.SetNewComment))]
         public void SetNewCommentTest(IQuery query, Comment comment, object expected)

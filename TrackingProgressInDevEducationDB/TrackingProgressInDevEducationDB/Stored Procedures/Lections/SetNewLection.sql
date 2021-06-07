@@ -2,7 +2,7 @@
 (
 	 @GroupId INT
 	,@LectorId INT
-	,@StartedOn DATE
+	,@StartedOn NVARCHAR(50)
 )
 AS
 	INSERT [Lections]
@@ -11,7 +11,7 @@ AS
 		,[LectorId]
 		,[StartedOn]
 	)
-	OUTPUT INSERTED.id, INSERTED.GroupId, INSERTED.LectorId, INSERTED.StartedOn
+	OUTPUT INSERTED.[id], INSERTED.[GroupId], INSERTED.[LectorId], INSERTED.[StartedOn]
 	VALUES
 	(
 		 @GroupId

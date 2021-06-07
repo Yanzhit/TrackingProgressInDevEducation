@@ -39,7 +39,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var sss = operation.SetNewGroup(new GroupQuery("name", 1, DateTime.MaxValue, DateTime.Now));
+            var sss = operation.SetNewGroup(new QSetGroup("name", 1, DateTime.MaxValue, DateTime.Now));
 
         }
 

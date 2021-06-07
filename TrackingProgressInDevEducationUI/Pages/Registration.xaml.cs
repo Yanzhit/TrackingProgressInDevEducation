@@ -42,9 +42,9 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-            var query = new QNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
+            var query = new QSetLector(_param["FullName"], _param["Email"],  _param["Password"]);
 
-            ANewLector answer = _operation.SetNewLector(query);
+            ASetLector answer = _operation.SetNewLector(query);
 
             if (answer.FullName == _param["FullName"]
                 && answer.Email == _param["Email"]

@@ -1,10 +1,10 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetVisitsScore]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetVisitsScore]																				
 	@StudentId int
 AS
 DECLARE @TableMain Table(id int, StatusOn bit)
-DECLARE @TableFirstTrimestr Table(id int, StatusOn bit, startDate datetime, studId int)
-DECLARE @TableSecondTrimestr Table(id int, StatusOn bit, startDate datetime, studId int)
-DECLARE @TableThirdTrimestr Table(id int, StatusOn bit, startDate datetime, studId int)
+DECLARE @TableFirstTrimestr Table(id int, StatusOn bit, startDate nvarchar(50), studId int)
+DECLARE @TableSecondTrimestr Table(id int, StatusOn bit, startDate nvarchar(50), studId int)
+DECLARE @TableThirdTrimestr Table(id int, StatusOn bit, startDate nvarchar(50), studId int)
 DECLARE @result Table(firstTrim DECIMAL(5,2), secondTrim DECIMAL(5,2), thirdTrim DECIMAL(5,2), General DECIMAL(5,2))
 
 

@@ -9,7 +9,7 @@ AS
 		 [TeamId]
 		,[StudentId]
 	)
-	OUTPUT INSERTED.StudentId, INSERTED.TeamId
+	OUTPUT INSERTED.[StudentId], INSERTED.[TeamId]
 	VALUES
 	(
 		 @TeamId

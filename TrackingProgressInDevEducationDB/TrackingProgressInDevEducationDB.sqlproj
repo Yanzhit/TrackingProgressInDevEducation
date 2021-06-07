@@ -104,7 +104,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Tables\CommentType.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\Payments.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\HomeworkComplete.sql" />
-    <Build Include="SQLQuery.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\SetNewTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\SetNewStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />

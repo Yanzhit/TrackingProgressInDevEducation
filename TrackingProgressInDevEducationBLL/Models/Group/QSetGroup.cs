@@ -7,7 +7,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
     /// Модель данных для запроса со страницы Group(определяется именем папки, которое соответствует конкретным страницам
     /// Модель для запроса из UI в DAL
     /// </summary>
-    public class GroupQuery : ADTOQuery
+    public class QSetGroup : ADTOQuery
     {
         /// <summary>
         /// Имя группы 
@@ -29,7 +29,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public GroupQuery()
+        public QSetGroup()
         {
 
         }
@@ -40,7 +40,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <param name="courseId">id группы</param>
         /// <param name="dataStartCousrses">дата начала курса</param>
         /// <param name="dataEndCousrses">дата окончания курса</param>
-        public GroupQuery(string name, int courseId, DateTime startDate, DateTime endDate)
+        public QSetGroup(string name, int courseId, DateTime startDate, DateTime endDate)
         {
             Name = name;
             CourseId = courseId;
@@ -50,10 +50,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
 
         public override bool Equals(object obj)
         {
-            return Equals((GroupQuery)obj);
+            return Equals((QSetGroup)obj);
         }
 
-        private bool Equals(GroupQuery other)
+        private bool Equals(QSetGroup other)
         {
             return Name == other.Name
                    && CourseId == other.CourseId

@@ -15,8 +15,6 @@ namespace TrackingProgressInDevEducationDAL.Tests
             _fillingDB =  new FillingDB();
         }
 
-        
-
         /// <summary>
         /// Обнуление таблиц по модели
         /// </summary>

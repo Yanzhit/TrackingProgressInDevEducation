@@ -1,8 +1,6 @@
-﻿﻿using System;
-using System.Collections.Generic;
- using TrackingProgressInDevEducationDAL.Models.Bases;
- using TrackingProgressInDevEducationDAL.Models.Results;
- using TrackingProgressInDevEducationDAL.Requests.Tables;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {

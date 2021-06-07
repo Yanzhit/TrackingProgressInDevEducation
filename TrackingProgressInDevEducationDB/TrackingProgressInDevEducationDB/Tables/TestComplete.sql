@@ -4,7 +4,7 @@
     [TestId] INT NOT NULL,
 	[StudentId]  INT NOT NULL,
     [Status]     BIT NOT NULL,
-    [ApproveDate] DATE NULL, 
+    [ApproveDate] NVARCHAR(50) NULL, 
     [Score] INT NULL,
 	CONSTRAINT [PK_TESTCOMPLETE] PRIMARY KEY CLUSTERED ([id] ASC), 
     CONSTRAINT [TestComplete_fk0] FOREIGN KEY ([TestId]) REFERENCES [TrackingProgressInDevEducationDB].[Tests] ([id]),

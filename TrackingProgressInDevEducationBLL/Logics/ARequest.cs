@@ -12,17 +12,17 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <summary>
         /// Массив типов данных для создания метода с необходимыми типами.
         /// </summary>
-        protected Type[] _type;
+        protected Type[] Type;
 
         /// <summary>
         /// Метод-Инфо для запроса работающего с одним объектом данных
         /// </summary>
-        protected MethodInfo _methodSingle;
+        protected MethodInfo MethodSingle;
 
         /// <summary>
         /// Метод-Инфо для запроса работающего с множественными объектами данных
         /// </summary>
-        protected MethodInfo _methodSeveral;
+        protected MethodInfo MethodSeveral;
 
         /// <summary>
         /// Запись используемых типов в массив типов
@@ -35,7 +35,7 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// </summary>
         protected void GetMethodSingle()
         {
-            _methodSingle = typeof(Mappers).GetMethod(nameof(Mappers.SingleMapping));
+            MethodSingle = typeof(Mappers).GetMethod(nameof(Mappers.SingleMapping));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// </summary>
         protected void GetMethodSeveral()
         {
-            _methodSeveral = typeof(Mappers).GetMethod(nameof(Mappers.SeveralMapping));
+            MethodSeveral = typeof(Mappers).GetMethod(nameof(Mappers.SeveralMapping));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <returns></returns>
         protected MethodInfo GetGenericSingle()
         {
-            return _methodSingle.MakeGenericMethod(_type);
+            return MethodSingle.MakeGenericMethod(Type);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <returns></returns>
         protected MethodInfo GetGenericSeveral()
         {
-            return _methodSeveral.MakeGenericMethod(_type);
+            return MethodSeveral.MakeGenericMethod(Type);
         }
     }
 }

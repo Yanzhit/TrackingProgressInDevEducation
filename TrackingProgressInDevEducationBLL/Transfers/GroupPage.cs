@@ -4,10 +4,14 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
-    public class GroupPage : ITransfer
+    public class GroupPage : ATransfer
     {
-        public Type Query { get; set; } = typeof(GroupQuery);
-        public Type Base { get; set; } = typeof(Group);
-        public Type Answer { get; set; } = typeof(GroupAnswer);
+        public GroupPage SetNewGroup()
+        {
+            Query = typeof(QSetGroup);
+            Base = typeof(Group);
+            Answer = typeof(ANewGroup);
+            return this;
+        }
     }
 }

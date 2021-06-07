@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TrackingProgressInDevEducationDAL.Models.Results;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
@@ -9,7 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         private readonly QJoins _query  = new();
         public IEnumerable<Joins> GetAllCoursesByLectorJ()
         {
-            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllCoursesByLectorJ());
+            return (IEnumerable<Joins>) Manager.Getter.Several(_query.GetAllCoursesByLectorJ());
         }
 
         public IEnumerable<Joins> GetAllStudentsByTeamJ()

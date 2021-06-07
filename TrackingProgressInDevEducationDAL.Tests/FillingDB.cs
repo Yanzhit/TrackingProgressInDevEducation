@@ -4,7 +4,6 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
-    
     public class FillingDB
     {
         private readonly DALManager _manager = new();

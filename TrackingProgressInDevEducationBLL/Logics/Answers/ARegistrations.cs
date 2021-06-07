@@ -6,10 +6,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
     public class ARegistrations : AAnswer
     {
-        public ANewLector SetNewLector(AbstractModel model)
+        public ASetLector SetNewLector(AbstractModel model)
         {
             WriteTypes(new Registrations().SetNewLector());
-            return (ANewLector)GetModelBaseSingle(model);
+            return (ASetLector)GetModelBaseSingle(model);
         }
     }
 }

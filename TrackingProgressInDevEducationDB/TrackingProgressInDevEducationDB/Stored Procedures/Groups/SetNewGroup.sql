@@ -2,8 +2,8 @@
 (
 	 @Name NVARCHAR(50)
 	,@CourseId INT
-	,@StartDate DATE
-	,@EndDate DATE
+	,@StartDate NVARCHAR(50)
+	,@EndDate NVARCHAR(50)
 )
 AS 
 	IF @StartDate = null SET @StartDate = GetDate()

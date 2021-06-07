@@ -11,7 +11,7 @@ AS
 		,[StudentId]
 		,[LectionId]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.[id]
 	,INSERTED.[VisitStatus]
 		,INSERTED.[StudentId]
 		,INSERTED.[LectionId]

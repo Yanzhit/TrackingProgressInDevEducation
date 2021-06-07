@@ -1,8 +1,8 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewNewPayment]
 (
 	 @Student INT
-	,@DateTo DATE
-	,@PaymentDate DATE
+	,@DateTo NVARCHAR(50)
+	,@PaymentDate NVARCHAR(50)
 	,@Amount DECIMAL(10)
 	,@Status BIT
 )
@@ -15,7 +15,7 @@ AS
 		,[Amount]
 		,[Status]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.[id]
 	VALUES
 	(
 		 @Student
