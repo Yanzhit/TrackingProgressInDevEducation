@@ -12,12 +12,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     /// </summary>
     public abstract class AQuery : ARequest
     {
-        protected override void WriteTypes(ITransfer transfer)
+        protected override void WriteTypes(ATransfer aTransfer)
         {
             _type = new[]
             {
-                transfer.Query,
-                transfer.Base
+                aTransfer.Query,
+                aTransfer.Base
             };
         }
 

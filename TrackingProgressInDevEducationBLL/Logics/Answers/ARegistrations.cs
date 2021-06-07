@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
     {
         public ANewLector SetNewLector(AbstractModel model)
         {
-            WriteTypes(new RegistrationNewLector());
+            WriteTypes(new Registrations().SetNewLector());
             return (ANewLector)GetModelBaseSingle(model);
         }
     }

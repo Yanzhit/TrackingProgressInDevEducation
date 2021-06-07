@@ -9,7 +9,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     {
         public AbstractModel SetNewLector(QNewLector qNewLector)
         {
-            WriteTypes(new RegistrationNewLector());
+            WriteTypes(new Registrations().SetNewLector());
             return GetModelBaseSingle(qNewLector);
         }
     }

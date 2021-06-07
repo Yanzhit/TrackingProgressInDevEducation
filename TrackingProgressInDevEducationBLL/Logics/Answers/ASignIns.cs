@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         /// <returns>Модель ответа с вложенными данными</returns>
         public AGetLector GetLoginAndPassword(Lector model)
         {
-            WriteTypes(new SignInLector());
+            WriteTypes(new SignIn().GetLectorByLoginAndPassword());
             return (AGetLector)GetModelBaseSingle(model);
         }
     }
