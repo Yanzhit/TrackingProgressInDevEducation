@@ -17,6 +17,15 @@ namespace TrackingProgressInDevEducationBLL
         /// Ответы на запросы со страниц SignIn
         /// </summary>
         public ASignIns ASignIns => new();
+        /// <summary>
+        /// Запрос со страниц Group
+        /// </summary>
+        public QGroup QGroup => new();
+
+        /// <summary>
+        /// Ответы на запросы со страниц Group
+        /// </summary>
+        public AGroups AGroups => new();
 
         public QRegistrations QRegistrations => new();
         public ARegistrations ARegistrations => new();

@@ -1,6 +1,5 @@
 ﻿using System;
 using AutoMapper;
-using Group = System.Text.RegularExpressions.Group;
 
 namespace TrackingProgressInDevEducationBLL.Models.Bases
 {
@@ -15,17 +14,17 @@ namespace TrackingProgressInDevEducationBLL.Models.Bases
         {
         }
 
-        public GroupDTO(Group group)
-        {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, GroupDTO>());
-            AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
-            GroupDTO tmpGroupDTO = mapper.Map<GroupDTO>(group);
+        //public GroupDTO(Group group)
+        //{
+        //    var config = new MapperConfiguration(cfg => cfg.CreateMap<Group, GroupDTO>());
+        //    AutoMapper.Mapper mapper = new AutoMapper.Mapper(config);
+        //    GroupDTO tmpGroupDTO = mapper.Map<GroupDTO>(group);
 
-            this.Name = tmpGroupDTO.Name;
-            this.CourseId = tmpGroupDTO.CourseId;
-            this.StartDate = tmpGroupDTO.StartDate;
-            this.EndDate = tmpGroupDTO.EndDate;
-        }
+        //    this.Name = tmpGroupDTO.Name;
+        //    this.CourseId = tmpGroupDTO.CourseId;
+        //    this.StartDate = tmpGroupDTO.StartDate;
+        //    this.EndDate = tmpGroupDTO.EndDate;
+        //}
 
         public override bool Equals(object obj)
         {
