@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
+﻿using TrackingProgressInDevEducationBLL.Models.Group;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -29,6 +30,12 @@ namespace TrackingProgressInDevEducationBLL
             Lector model = (Lector)_bllManager.QSignIns.GetLoginAndPassword(lectorQuery);
             Lector modelReturned = _dalManager.Lectors.GetLoginAndPassword(model);
             return _bllManager.ASignIns.GetLoginAndPassword(modelReturned);
+        }
+        public GroupAnswer SetNewGroup(GroupQuery groupQuery)
+        {
+            Group model = (Group)_bllManager.QGroup.SetNewGroup(groupQuery);
+            Group modelReturned = _dalManager.Groups.SetNewGroup(model);
+            return _bllManager.AGroups.SetNewGroup(modelReturned);
         }
     }
 }

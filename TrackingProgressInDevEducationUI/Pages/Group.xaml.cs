@@ -12,7 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Group;
+/*
+SetNewGroups
+GetAllCurses
+*/
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
@@ -30,5 +35,17 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.Home();
         }
+
+        private void BCreatGroup_Click(object sender, RoutedEventArgs e)
+        {
+            OperationLogics operation = new OperationLogics();
+            var sss = operation.SetNewGroup(new GroupQuery("name", 1, DateTime.MaxValue, DateTime.Now));
+
+        }
+
+        //private Course WriteAllCursesInComboBox ()
+        //{
+
+        //}
     }
 }

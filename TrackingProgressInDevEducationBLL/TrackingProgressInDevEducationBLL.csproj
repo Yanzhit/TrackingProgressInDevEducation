@@ -11,7 +11,6 @@
     <Compile Remove="Models\CreateTeam\**" />
     <Compile Remove="Models\GroupInfo\**" />
     <Compile Remove="Models\GroupJournal\**" />
-    <Compile Remove="Models\Group\**" />
     <Compile Remove="Models\Home\**" />
     <Compile Remove="Models\MyProfile\**" />
     <Compile Remove="Models\NewStudent\**" />
@@ -27,7 +26,6 @@
     <EmbeddedResource Remove="Models\CreateTeam\**" />
     <EmbeddedResource Remove="Models\GroupInfo\**" />
     <EmbeddedResource Remove="Models\GroupJournal\**" />
-    <EmbeddedResource Remove="Models\Group\**" />
     <EmbeddedResource Remove="Models\Home\**" />
     <EmbeddedResource Remove="Models\MyProfile\**" />
     <EmbeddedResource Remove="Models\NewStudent\**" />
@@ -43,7 +41,6 @@
     <None Remove="Models\CreateTeam\**" />
     <None Remove="Models\GroupInfo\**" />
     <None Remove="Models\GroupJournal\**" />
-    <None Remove="Models\Group\**" />
     <None Remove="Models\Home\**" />
     <None Remove="Models\MyProfile\**" />
     <None Remove="Models\NewStudent\**" />
