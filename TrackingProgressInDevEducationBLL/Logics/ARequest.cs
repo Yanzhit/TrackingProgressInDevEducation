@@ -27,8 +27,8 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <summary>
         /// Запись используемых типов в массив типов
         /// </summary>
-        /// <param name="transfer">Интерфейс хранящий в себе используемые данные конкретным объектом</param>
-        protected abstract void WriteTypes(ITransfer transfer);
+        /// <param name="aTransfer">Интерфейс хранящий в себе используемые данные конкретным объектом</param>
+        protected abstract void WriteTypes(ATransfer aTransfer);
 
         /// <summary>
         /// Получение необходимого метода для запроса на один объект

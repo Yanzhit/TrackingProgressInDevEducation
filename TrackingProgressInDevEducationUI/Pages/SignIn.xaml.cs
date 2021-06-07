@@ -33,8 +33,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            var query = new LectorQuery(Login.Text, Password.Text);
-            LectorAnswer answer = _operation.GetLoginAndPassword(query);
+            var query = new QGetLector(Login.Text, Password.Text);
+            AGetLector answer = _operation.GetLectorByLoginAndPassword(query);
             if (answer != null)
             {
                 if (answer.IsActivated)
@@ -52,7 +52,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
         }
 
-        private void CheckActive(LectorAnswer answer)
+        private void CheckActive(AGetLector answer)
         {
             DialogResult result = MessageBox.Show
             (
@@ -78,7 +78,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
         }
 
-        private void Activated(LectorAnswer answer)
+        private void Activated(AGetLector answer)
         {
             SmtpService service = new();
             var param = new Dictionary<string, string>

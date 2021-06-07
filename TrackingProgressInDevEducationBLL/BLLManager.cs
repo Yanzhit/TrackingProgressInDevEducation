@@ -17,5 +17,8 @@ namespace TrackingProgressInDevEducationBLL
         /// Ответы на запросы со страниц SignIn
         /// </summary>
         public ASignIns ASignIns => new();
+
+        public QRegistrations QRegistrations => new();
+        public ARegistrations ARegistrations => new();
     }
 }

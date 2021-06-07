@@ -6,7 +6,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
     /// Модель данных для ответа на запрос со страницы SignIn(определяется именем папки, которое соответствует конкретным страницам
     /// Модель для ответа из DAL в UI
     /// </summary>
-    public class LectorAnswer : ADTOAnswer
+    public class AGetLector : ADTOAnswer
     {
         public string FullName { get; set; }
         public string Email { get; set; }
@@ -19,7 +19,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public LectorAnswer()
+        public AGetLector()
         {
         }
 
@@ -30,7 +30,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
         /// <param name="email">"Электронная почта</param>
         /// <param name="fullName">Передаваемое  имя</param>
-        public LectorAnswer(int id, string email, string fullName, bool isActivated)
+        public AGetLector(int id, string email, string fullName, bool isActivated)
         {
             Id = id;
             FullName = fullName;
@@ -40,10 +40,10 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
 
         public override bool Equals(object obj)
         {
-            return Equals((LectorAnswer)obj);
+            return Equals((AGetLector)obj);
         }
 
-        private bool Equals(LectorAnswer other)
+        private bool Equals(AGetLector other)
         {
             return Id == other.Id
                 && IsActivated == other.IsActivated;

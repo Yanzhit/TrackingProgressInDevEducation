@@ -6,6 +6,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Registration;
 using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Pages
@@ -16,7 +18,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class Registration : Page
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
-       // private readonly DALManager _manager = new();
+        private readonly OperationLogics _operation = new OperationLogics();
         private Dictionary<string, string> _param;
         public Registration()
         {
@@ -40,18 +42,21 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-           // Lector lector = _manager.Lectors.SetNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
-            //if (lector.FullName == _param["FullName"]
-            //    && lector.Email == _param["Email"]
-            //    && lector.Password == _param["Password"])
-            //{
-            //    SmtpService service = new();
-            //    int key = service.SmtpRun(_param);
-            //    if (key != -1)
-            //    {
-            //        SingleContents.GetContent().Verification(key, lector.Id);
-            //    }
-            //}
+            var query = new QNewLector(_param["FullName"], _param["Email"],  _param["Password"]);
+
+            ANewLector answer = _operation.SetNewLector(query);
+
+            if (answer.FullName == _param["FullName"]
+                && answer.Email == _param["Email"]
+                && answer.Password == _param["Password"])
+            {
+                SmtpService service = new();
+                int key = service.SmtpRun(_param);
+                if (key != -1)
+                {
+                    _contents.Verification(key, answer.Id);
+                }
+            }
         }
 
         private void WriteParams()
@@ -67,18 +72,18 @@ namespace TrackingProgressInDevEducationUI.Pages
         private bool Verification()
         {
             var tmp = true;
-            if (FullNameInput.Text.Length is < 6 or > 50)
+            if (FullNameInput.Text.Length is < FullNameCharMin or > FullNameCharMax)
             {
                 InfoText.Text += $"{ExcepFNameLength}{NewLine}";
                 tmp = false;
             }
-            if(EmailInput.Text.Length is < 1 or > 25)
+            if(EmailInput.Text.Length is < EmailCharMin or > EmailCharMax)
             {
                 InfoText.Text +=  $"{ExcepEmailLength}{NewLine}";
                 tmp = false;
             }
 
-            if (PasswordInput.Text.Length is < 1 or > 12)
+            if (PasswordInput.Text.Length is < PasswordCharMin or > PasswordCharMax)
             {
                 InfoText.Text +=  $"{ExcepPasswordLength}{NewLine}";
                 tmp = false;

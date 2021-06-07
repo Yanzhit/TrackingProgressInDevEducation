@@ -32,5 +32,12 @@
         public const string ErrorActive = "Если вам не удается активировать аккаунт, пожалуйста свяжитесь с нами";
         public const string ErrorActive1 = ", по электронной почте: ";
         public const string ErrorActive2 = "Мы с радостью поможем решить вашу проблему";
+
+        public const int EmailCharMin = 6;
+        public const int EmailCharMax = 20;
+        public const int PasswordCharMin = 3;
+        public const int PasswordCharMax = 12;
+        public const int FullNameCharMin = 6;
+        public const int FullNameCharMax = 25;
     }
 }

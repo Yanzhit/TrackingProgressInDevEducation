@@ -9,12 +9,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
     public class AAnswer : ARequest
     {
-        protected override void WriteTypes(ITransfer transfer)
+        protected override void WriteTypes(ATransfer aTransfer)
         {
             _type = new[]
             {
-                transfer.Base,
-                transfer.Answer
+                aTransfer.Base,
+                aTransfer.Answer
             };
         }
 

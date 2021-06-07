@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
+﻿using TrackingProgressInDevEducationBLL.Models.Registration;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -22,13 +23,20 @@ namespace TrackingProgressInDevEducationBLL
         /// <summary>
         /// Запрос на получение лектора, по логину и паролю
         /// </summary>
-        /// <param name="lectorQuery">Входящая модель данных для отправки в DAL</param>
+        /// <param name="qGetLector">Входящая модель данных для отправки в DAL</param>
         /// <returns>Конечная модель данных для отправки в UI</returns>
-        public LectorAnswer GetLoginAndPassword(LectorQuery lectorQuery)
+        public AGetLector GetLectorByLoginAndPassword(QGetLector qGetLector)
         {
-            Lector model = (Lector)_bllManager.QSignIns.GetLoginAndPassword(lectorQuery);
-            Lector modelReturned = _dalManager.Lectors.GetLoginAndPassword(model);
-            return _bllManager.ASignIns.GetLoginAndPassword(modelReturned);
+            Lector model = (Lector)_bllManager.QSignIns.GetLectorByLoginAndPassword(qGetLector);
+            Lector modelReturned = _dalManager.Lectors.GetLectorByLoginAndPassword(model);
+            return _bllManager.ASignIns.GetLectorByLoginAndPassword(modelReturned);
+        }
+
+        public ANewLector SetNewLector(QNewLector qNewLector)
+        {
+            Lector model = (Lector)_bllManager.QRegistrations.SetNewLector(qNewLector);
+            Lector modelReturned = _dalManager.Lectors.SetNewLector(model);
+            return _bllManager.ARegistrations.SetNewLector(modelReturned);
         }
     }
 }
