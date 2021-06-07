@@ -9,6 +9,7 @@ AS
 		 [LectorId]
 		,[GroupId]
 	)
+	OUTPUT INSERTED.LectorId, INSERTED.[GroupId]
 	VALUES
 	(
 		 @LectorId

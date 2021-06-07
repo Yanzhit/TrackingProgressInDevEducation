@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetGroupsByLector]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetGroupsByLectorJ]
 	@LectorId int
 AS
 SELECT 

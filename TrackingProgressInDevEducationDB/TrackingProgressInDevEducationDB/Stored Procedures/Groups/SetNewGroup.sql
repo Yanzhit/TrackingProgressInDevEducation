@@ -14,7 +14,7 @@ AS
 		,[StartDate]
 		,[EndDate]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.id, INSERTED.[Name], INSERTED.CourseId, INSERTED.StartDate, INSERTED.EndDate
 	VALUES
 	(
 		 @Name

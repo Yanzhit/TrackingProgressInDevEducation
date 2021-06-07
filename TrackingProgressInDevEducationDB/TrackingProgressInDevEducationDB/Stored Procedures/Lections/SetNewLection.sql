@@ -11,7 +11,7 @@ AS
 		,[LectorId]
 		,[StartedOn]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.id, INSERTED.GroupId, INSERTED.LectorId, INSERTED.StartedOn
 	VALUES
 	(
 		 @GroupId

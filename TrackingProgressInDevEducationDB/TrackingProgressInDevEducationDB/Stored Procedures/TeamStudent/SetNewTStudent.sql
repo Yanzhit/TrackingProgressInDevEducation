@@ -9,6 +9,7 @@ AS
 		 [TeamId]
 		,[StudentId]
 	)
+	OUTPUT INSERTED.StudentId, INSERTED.TeamId
 	VALUES
 	(
 		 @TeamId

@@ -30,6 +30,18 @@ AS
 		,[Status]
 	)
 	OUTPUT INSERTED.id
+		  ,INSERTED.[Name]
+		,INSERTED.[Surname]
+		,INSERTED.[Rate]
+		,INSERTED.[GroupId]
+		,INSERTED.[Phone]
+		,INSERTED.[Email]
+		,INSERTED.[Contract]
+		,INSERTED.[Birthday]
+		,INSERTED.[MiddleName]
+		,INSERTED.[Git]
+		,INSERTED.[CityId]
+		,INSERTED.[Status]
 	VALUES
 	(
 		 @Name

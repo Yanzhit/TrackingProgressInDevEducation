@@ -9,6 +9,7 @@ AS
 		 [HomeworkId]
 		,[GroupId]
 	)
+	OUTPUT INSERTED.HomeworkId, INSERTED.GroupId
 	VALUES
 	(
 		 @HomeworkId
