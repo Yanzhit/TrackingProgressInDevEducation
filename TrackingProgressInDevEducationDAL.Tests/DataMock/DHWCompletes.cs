@@ -22,11 +22,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             HWCompletes = new List<HWComplete>
             {
-                new (1, 4, true, DateTime.MinValue, 1, DateTime.MaxValue),
-                new (2, 2, false, DateTime.MinValue, 1, DateTime.MaxValue),
-                new (3, 3, true, DateTime.MinValue, 1, DateTime.MaxValue),
-                new (1, 1, false, DateTime.MinValue, 1, DateTime.MaxValue),
-                new (2, 2, false, DateTime.MinValue, 1, DateTime.MaxValue)
+                new (1, 4, true, "DateTime.MinValue", 1, "DateTime.MaxValue"),
+                new (2, 2, false, "DateTime.MinValue", 1, "DateTime.MaxValue"),
+                new (3, 3, true, "DateTime.MinValue", 1, "DateTime.MaxValue"),
+                new (1, 1, false, "DateTime.MinValue", 1, "DateTime.MaxValue"),
+                new (2, 2, false, "DateTime.MinValue", 1, "DateTime.MaxValue")
             };
         }
     }

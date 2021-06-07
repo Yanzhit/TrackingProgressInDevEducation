@@ -22,12 +22,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Lections = new List<Lection>
             {
-                new(1,3,DateTime.MaxValue),
-                new(1,3,DateTime.MaxValue),
-                new(1,3,DateTime.MaxValue),
-                new(1,3,DateTime.MinValue),
-                new(1,3,DateTime.MinValue),
-                new(1,3,DateTime.MinValue)
+                new(1,3,"DateTime.MaxValue"),
+                new(1,3,"DateTime.MaxValue"),
+                new(1,3,"DateTime.MaxValue"),
+                new(1,3,"DateTime.MaxValue"),
+                new(1,3,"DateTime.MaxValue"),
+                new(1,3,"DateTime.MaxValue")
             };
         }
     }

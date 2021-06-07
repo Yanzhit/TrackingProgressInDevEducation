@@ -22,10 +22,10 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Payments = new List<Payment>
             {
-                new(1, DateTime.MinValue, DateTime.MaxValue, 10m, true),
-                new(3, DateTime.MinValue, DateTime.MinValue, 10m, true),
-                new(2, DateTime.MinValue, DateTime.MaxValue, 10m, true),
-                new(1, DateTime.MinValue, DateTime.MaxValue, 10m, true),
+                new(1, "DateTime.MinValue", "DateTime.MaxValue", 10m, true),
+                new(3, "DateTime.MinValue", "DateTime.MaxValue", 10m, true),
+                new(2, "DateTime.MinValue", "DateTime.MaxValue", 10m, true),
+                new(1, "DateTime.MinValue", "DateTime.MaxValue", 10m, true)
             };
         }
     }

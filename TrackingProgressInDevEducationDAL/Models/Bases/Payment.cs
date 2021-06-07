@@ -5,8 +5,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     public class Payment : AbstractModel
     {
         public int StudentId { get; set; }
-        public DateTime PaymentTo { get; set; }
-        public DateTime PaymentOn { get; set; }
+        public string PaymentTo { get; set; }
+        public string PaymentOn { get; set; }
         public decimal Amount { get; set; }
         public bool Status { get; set; }
 
@@ -17,8 +17,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public Payment
         (
             int studentId,
-            DateTime paymentTo,
-            DateTime paymentOn,
+            string paymentTo,
+            string paymentOn,
             decimal amount,
             bool status
         )

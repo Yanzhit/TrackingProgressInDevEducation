@@ -5,14 +5,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     public class Team : AbstractModel
     {
         public string Name { get; set; }
-        public DateTime? From { get; set; }
-        public DateTime? To { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
 
         public Team()
         {
         }
 
-        public Team(string name, DateTime? from, DateTime? to)
+        public Team(string name, string from, string to)
         {
             Name = name;
             From = from;

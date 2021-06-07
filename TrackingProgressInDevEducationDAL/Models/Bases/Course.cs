@@ -5,14 +5,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     public class Course : AbstractModel
     {
         public string Name { get; set; }
-        public DateTime StartedOn { get; set; }
-        public DateTime FinishedOn { get; set; }
+        public string StartedOn { get; set; }
+        public string FinishedOn { get; set; }
 
         public Course()
         {
         }
 
-        public Course(string name, DateTime startedOn, DateTime finishedOn)
+        public Course(string name, string startedOn, string finishedOn)
         {
             Name = name;
             StartedOn = startedOn;

@@ -6,13 +6,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
     {
         public int GroupId { get; set; }
         public int LectorId { get; set; }
-        public DateTime StartedOn { get; set; }
+        public string StartedOn { get; set; }
 
         public Lection()
         {
         }
 
-        public Lection(int groupId, int lectorId, DateTime startedOn)
+        public Lection(int groupId, int lectorId, string startedOn)
         {
             GroupId = groupId;
             LectorId = lectorId;

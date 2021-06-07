@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Contract { get; set; }
-        public DateTime? Birthday { get; set; }
+        public string Birthday { get; set; }
         public string MiddleName { get; set; }
         public string Git { get; set; }
         public int? CityId { get; set; }
@@ -30,7 +30,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             string phone,
             string email,
             string contract,
-            DateTime? birthday,
+            string birthday,
             string middleName,
             string git,
             int? cityId,

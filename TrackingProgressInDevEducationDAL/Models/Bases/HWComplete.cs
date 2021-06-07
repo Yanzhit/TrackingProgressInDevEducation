@@ -7,15 +7,15 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int HomeworkId { get; set; }
         public int StudentId { get; set; }
         public bool Status { get; set; }
-        public DateTime? ApproveDate { get; set; }
+        public string ApproveDate { get; set; }
         public int? Score { get; set; }
-        public DateTime? CreatedOn { get; set; }
+        public string CreatedOn { get; set; }
 
         public HWComplete()
         {
         }
 
-        public HWComplete(int homeworkId, int studentId, bool status, DateTime? approveDate, int? score, DateTime? createdOn)
+        public HWComplete(int homeworkId, int studentId, bool status, string approveDate, int? score, string createdOn)
         {
             HomeworkId = homeworkId;
             StudentId = studentId;

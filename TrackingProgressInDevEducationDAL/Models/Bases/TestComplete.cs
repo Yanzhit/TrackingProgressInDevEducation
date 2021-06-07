@@ -7,14 +7,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int TestId { get; set; }
         public int StudentId { get; set; }
         public bool Status { get; set; }
-        public DateTime? ApproveDate { get; set; }
+        public string ApproveDate { get; set; }
         public int? Score { get; set; }
 
         public TestComplete()
         {
         }
 
-        public TestComplete(int testId, int studentId, bool status, DateTime? approveDate, int? score)
+        public TestComplete(int testId, int studentId, bool status, string approveDate, int? score)
         {
             TestId = testId;
             StudentId = studentId;
