@@ -118,7 +118,7 @@ namespace TrackingProgressInDevEducationUI.Windows
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var sss =operation.GetLoginAndPassword(new QGetLector("Kozlov.s.v.1992@gmail.com",""));
+            var sss =operation.GetLectorByLoginAndPassword(new QGetLector("Kozlov.s.v.1992@gmail.com",""));
         }
     }
 }

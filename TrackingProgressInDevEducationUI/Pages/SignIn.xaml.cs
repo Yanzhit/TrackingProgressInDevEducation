@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             var query = new QGetLector(Login.Text, Password.Text);
-            AGetLector answer = _operation.GetLoginAndPassword(query);
+            AGetLector answer = _operation.GetLectorByLoginAndPassword(query);
             if (answer != null)
             {
                 if (answer.IsActivated)

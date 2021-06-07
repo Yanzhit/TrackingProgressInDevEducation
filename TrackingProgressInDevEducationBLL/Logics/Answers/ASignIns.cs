@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         /// </summary>
         /// <param name="model">Входящая модель от DAL для обработки</param>
         /// <returns>Модель ответа с вложенными данными</returns>
-        public AGetLector GetLoginAndPassword(Lector model)
+        public AGetLector GetLectorByLoginAndPassword(Lector model)
         {
             WriteTypes(new SignIn().GetLectorByLoginAndPassword());
             return (AGetLector)GetModelBaseSingle(model);

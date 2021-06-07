@@ -14,7 +14,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         /// </summary>
         /// <param name="qGetLector">Модель с данными для запроса</param>
         /// <returns>Абстрактную модель данных после ответа от сервера</returns>
-        public AbstractModel GetLoginAndPassword(QGetLector qGetLector)
+        public AbstractModel GetLectorByLoginAndPassword(QGetLector qGetLector)
         {
             WriteTypes(new SignIn().GetLectorByLoginAndPassword());
             return GetModelBaseSingle(qGetLector);

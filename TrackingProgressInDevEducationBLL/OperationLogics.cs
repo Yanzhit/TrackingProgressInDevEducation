@@ -25,11 +25,11 @@ namespace TrackingProgressInDevEducationBLL
         /// </summary>
         /// <param name="qGetLector">Входящая модель данных для отправки в DAL</param>
         /// <returns>Конечная модель данных для отправки в UI</returns>
-        public AGetLector GetLoginAndPassword(QGetLector qGetLector)
+        public AGetLector GetLectorByLoginAndPassword(QGetLector qGetLector)
         {
-            Lector model = (Lector)_bllManager.QSignIns.GetLoginAndPassword(qGetLector);
-            Lector modelReturned = _dalManager.Lectors.GetLoginAndPassword(model);
-            return _bllManager.ASignIns.GetLoginAndPassword(modelReturned);
+            Lector model = (Lector)_bllManager.QSignIns.GetLectorByLoginAndPassword(qGetLector);
+            Lector modelReturned = _dalManager.Lectors.GetLectorByLoginAndPassword(model);
+            return _bllManager.ASignIns.GetLectorByLoginAndPassword(modelReturned);
         }
 
         public ANewLector SetNewLector(QNewLector qNewLector)
