@@ -12,6 +12,9 @@ AS
 		,[LectionId]
 	)
 	OUTPUT INSERTED.id
+	,INSERTED.[VisitStatus]
+		,INSERTED.[StudentId]
+		,INSERTED.[LectionId]
 	VALUES
 	(
 		 @VisitStatus

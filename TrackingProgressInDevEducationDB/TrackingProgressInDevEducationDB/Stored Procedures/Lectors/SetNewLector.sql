@@ -20,6 +20,7 @@ AS
 		,INSERTED.[FullName]
 		,INSERTED.[Email]
 		,INSERTED.[Password]
+		,INSERTED.IsActivated
 	
 	VALUES
 	(

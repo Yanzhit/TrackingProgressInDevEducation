@@ -6,5 +6,5 @@
 	@Estimation decimal
 AS
 	INSERT Comments ([Text], TeamId, TypeId, CreatedBy, CommentFor, Estimation)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.id, INSERTED.TeamId, INSERTED.TypeId, INSERTED.CreatedBy, INSERTED.CommentFor, INSERTED.Estimation
 	VALUES (@Text, @TeamId, @CommentType, @Lector, 1, @Estimation)

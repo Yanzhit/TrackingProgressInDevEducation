@@ -12,6 +12,9 @@ AS
 		,[Status]
 	)
 	OUTPUT INSERTED.id
+	,INSERTED.[TestId]
+		,INSERTED.[StudentId]
+		,INSERTED.[Status]
 	VALUES
 	(
 		 @TestId

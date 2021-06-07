@@ -11,7 +11,7 @@ AS
 		,[StudentId]
 		,[Status]
 	)
-	OUTPUT INSERTED.id
+	OUTPUT INSERTED.id, INSERTED.HomeworkId, INSERTED.StudentId, INSERTED.[Status]
 	VALUES
 	(
 		 @HomeworkId

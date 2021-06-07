@@ -10,6 +10,8 @@ AS
 		,[Description]
 	)
 	OUTPUT INSERTED.id
+	 ,INSERTED.[Name]
+		,INSERTED.[Description]
 	VALUES
 	(
 		 @Name

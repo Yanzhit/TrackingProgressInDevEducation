@@ -180,7 +180,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetNotActualTeamByStudentIdJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetVisitsByStudentJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\GetAllCourses.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroupsByLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdNewEmailAndPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllTestsByStudentIdJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\UpdStudentToGroup.sql" />
@@ -247,6 +246,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\NullifyCommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorByLoginAndPassword.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdateAcrivationLector.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetGroupsByLectorJ.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

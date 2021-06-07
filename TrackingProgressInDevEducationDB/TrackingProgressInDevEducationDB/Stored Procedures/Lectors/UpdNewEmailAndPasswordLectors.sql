@@ -4,5 +4,5 @@
 	@Password nvarchar (50)
 AS
 	UPDATE Lectors SET Email = @Email, [Password] = @Password
-	OUTPUT DELETED.id
+	OUTPUT INSERTED.id, INSERTED.Email, INSERTED.[Password]
 	WHERE id = @Id
