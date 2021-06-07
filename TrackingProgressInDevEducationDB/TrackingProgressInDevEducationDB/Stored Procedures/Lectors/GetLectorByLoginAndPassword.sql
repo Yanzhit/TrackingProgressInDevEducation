@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetLoginAndPassword]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetLectorByLoginAndPassword]
 	@Login nvarchar (50),
 	@Password nvarchar (50)
 AS

@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Windows
             {
                 Info.Text = Defines.Congratulation;
                 //DALManager f = new();
-                //AGetLector aGetLector = f.Lectors.UpdateAcrivationLector(_id,true);
+                //AGetLector aGetLector = f.Lectors.UpdateActivationLector(_id,true);
                 //if (aGetLector.IsActivated == true)
                 //{
                 //    this.Close();
