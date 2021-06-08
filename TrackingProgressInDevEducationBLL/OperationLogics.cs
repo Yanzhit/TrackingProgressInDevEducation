@@ -1,6 +1,7 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.Registration;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
 ﻿using TrackingProgressInDevEducationBLL.Models.Group;
+using TrackingProgressInDevEducationBLL.Models.Verification;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -24,27 +25,34 @@ namespace TrackingProgressInDevEducationBLL
         /// <summary>
         /// Запрос на получение лектора, по логину и паролю
         /// </summary>
-        /// <param name="qGetLector">Входящая модель данных для отправки в DAL</param>
+        /// <param name="getLectorQ">Входящая модель данных для отправки в DAL</param>
         /// <returns>Конечная модель данных для отправки в UI</returns>
-        public AGetLector GetLectorByLoginAndPassword(QGetLector qGetLector)
+        public GetLectorA GetLectorByLoginAndPassword(GetLectorQ getLectorQ)
         {
-            Lector model = (Lector)_bllManager.QSignIns.GetLectorByLoginAndPassword(qGetLector);
+            var model = (Lector)_bllManager.SignInsQ.GetLectorByLoginAndPassword(getLectorQ);
             Lector modelReturned = _dalManager.Lectors.GetLectorByLoginAndPassword(model);
-            return _bllManager.ASignIns.GetLectorByLoginAndPassword(modelReturned);
+            return _bllManager.SignInsA.GetLectorByLoginAndPassword(modelReturned);
         }
 
-        public ANewGroup SetNewGroup(QSetGroup qSetGroup)
+        public SetGroupA SetNewGroup(SetGroupQ setGroupQ)
         {
-            Group model = (Group)_bllManager.QGroup.SetNewGroup(qSetGroup);
+            var model = (Group)_bllManager.GroupsQ.SetNewGroup(setGroupQ);
             Group modelReturned = _dalManager.Groups.SetNewGroup(model);
-            return _bllManager.AGroups.SetNewGroup(modelReturned);
+            return _bllManager.GroupsA.SetNewGroup(modelReturned);
         }
 
-        public ASetLector SetNewLector(QSetLector qSetLector)
+        public SetLectorA SetNewLector(SetLectorQ setLectorQ)
         {
-            Lector model = (Lector)_bllManager.QRegistrations.SetNewLector(qSetLector);
+            var model = (Lector)_bllManager.RegistrationsQ.SetNewLector(setLectorQ);
             Lector modelReturned = _dalManager.Lectors.SetNewLector(model);
-            return _bllManager.ARegistrations.SetNewLector(modelReturned);
+            return _bllManager.RegistrationsA.SetNewLector(modelReturned);
+        }
+
+        public UpdLectorA UpdateAcrivationLector(UpdLectorQ updLectorQ)
+        {
+            var model = (Lector)_bllManager.VerificationsQ.UpdateActivationLector(updLectorQ);
+            Lector modelReturned = _dalManager.Lectors.UpdateAcrivationLector(model);
+            return _bllManager.VerificationsA.UpdateActivationLector(modelReturned);
         }
     }
 }

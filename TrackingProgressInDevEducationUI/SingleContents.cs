@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationUI
 {
     public class SingleContents
     {
-        public AGetLector AGetLector;
+        public GetLectorA Lector;
         private static SingleContents _contents;
         private readonly MainForm _main;
         private AddStudentsToGroup _addStudentsToGroup;
@@ -62,9 +62,9 @@ namespace TrackingProgressInDevEducationUI
             _home = new Home();
             _main.Content = _home;
         }
-        public void Home(AGetLector aGetLector)
+        public void Home(GetLectorA lector)
         {
-            AGetLector = aGetLector;
+            Lector = lector;
             _home = new Home();
             _main.Content = _home;
         }

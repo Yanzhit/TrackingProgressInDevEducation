@@ -18,7 +18,7 @@
         <Button x:Name="MyProfile" Content="MyProfile" HorizontalAlignment="Left" Margin="35,335,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="MyProfile_Click"/>
         <Button x:Name="NewStudent" Content="NewStudent" HorizontalAlignment="Left" Margin="227,39,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="NewStudent_Click"/>
         <Button x:Name="Registration" Content="Registration" HorizontalAlignment="Left" Margin="227,76,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="Registration_Click"/>
-        <Button x:Name="SignIn" Content="SignIn" HorizontalAlignment="Left" Margin="227,113,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="SignIn_Click"/>
+        <Button x:Name="SignIn" Content="SignIns" HorizontalAlignment="Left" Margin="227,113,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="SignIn_Click"/>
         <Button x:Name="StudentProfile" Content="StudentProfile" HorizontalAlignment="Left" Margin="227,150,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="StudentProfile_Click"/>
         <Button x:Name="StudentRate" Content="StudentRate" HorizontalAlignment="Left" Margin="227,187,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="StudentRate_Click"/>
         <Button x:Name="Students" Content="Students" HorizontalAlignment="Left" Margin="227,224,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="Students_Click"/>

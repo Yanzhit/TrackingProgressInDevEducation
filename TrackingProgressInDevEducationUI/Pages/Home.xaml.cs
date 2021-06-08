@@ -1,23 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Forms;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
-using TrackingProgressInDevEducationBLL.Models.SignIn;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using static TrackingProgressInDevEducationUI.Defines;
-using MessageBox = System.Windows.Forms.MessageBox;
-using MessageBoxOptions = System.Windows.Forms.MessageBoxOptions;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -37,7 +22,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Welcome()
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.AGetLector}";
+            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.Lector}";
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)

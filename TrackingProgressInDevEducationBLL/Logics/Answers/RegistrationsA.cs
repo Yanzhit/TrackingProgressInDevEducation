@@ -4,12 +4,12 @@ using TrackingProgressInDevEducationDAL.Models;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
-    public class ARegistrations : AAnswer
+    public class RegistrationsA : AAnswer
     {
-        public ASetLector SetNewLector(AbstractModel model)
+        public SetLectorA SetNewLector(AbstractModel model)
         {
             WriteTypes(new Registrations().SetNewLector());
-            return (ASetLector)GetModelBaseSingle(model);
+            return (SetLectorA)GetModelBaseSingle(model);
         }
     }
 }

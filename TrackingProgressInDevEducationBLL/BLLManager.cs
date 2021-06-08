@@ -9,25 +9,27 @@ namespace TrackingProgressInDevEducationBLL
     public class BLLManager
     {
         /// <summary>
-        /// Запрос со страниц SignIn
+        /// Запрос со страниц SignIns
         /// </summary>
-        public QSignIns QSignIns => new();
+        public SignInsQ SignInsQ => new();
 
         /// <summary>
-        /// Ответы на запросы со страниц SignIn
+        /// Ответы на запросы со страниц SignIns
         /// </summary>
-        public ASignIns ASignIns => new();
+        public SignInsA SignInsA => new();
         /// <summary>
         /// Запрос со страниц Group
         /// </summary>
-        public QGroup QGroup => new();
+        public GroupsQ GroupsQ => new();
 
         /// <summary>
         /// Ответы на запросы со страниц Group
         /// </summary>
-        public AGroups AGroups => new();
+        public GroupsA GroupsA => new();
 
-        public QRegistrations QRegistrations => new();
-        public ARegistrations ARegistrations => new();
+        public RegistrationsQ RegistrationsQ => new();
+        public RegistrationsA RegistrationsA => new();
+        public VerificationsQ VerificationsQ => new();
+        public VerificationsA VerificationsA => new();
     }
 }

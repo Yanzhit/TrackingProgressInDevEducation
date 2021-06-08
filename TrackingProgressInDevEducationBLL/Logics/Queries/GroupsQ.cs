@@ -4,17 +4,17 @@ using TrackingProgressInDevEducationDAL.Models;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
-    public class QGroup : AQuery
+    public class GroupsQ : AQuery
     {
         /// <summary>
         /// Создать новую группу
         /// </summary>
-        /// <param name="qSetGroup">Модель с данными для запроса</param>
+        /// <param name="setGroupQ">Модель с данными для запроса</param>
         /// <returns>Абстрактную модель данных после ответа от сервера</returns>
-        public AbstractModel SetNewGroup(QSetGroup qSetGroup)
+        public AbstractModel SetNewGroup(SetGroupQ setGroupQ)
         {
-            WriteTypes(new GroupPage().SetNewGroup());
-            return GetModelBaseSingle(qSetGroup);
+            WriteTypes(new Groups().SetNewGroup());
+            return GetModelBaseSingle(setGroupQ);
         }
     }
 }

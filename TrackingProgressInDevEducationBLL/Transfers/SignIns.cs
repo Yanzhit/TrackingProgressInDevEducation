@@ -3,13 +3,13 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
-    public class SignIn : ATransfer
+    public class SignIns : ATransfer
     {
-        public SignIn GetLectorByLoginAndPassword()
+        public SignIns GetLectorByLoginAndPassword()
         {
-            Query  = typeof(QGetLector);
+            Query  = typeof(GetLectorQ);
             Base  = typeof(Lector);
-            Answer  = typeof(AGetLector);
+            Answer  = typeof(GetLectorA);
             return this;
         }
     }
