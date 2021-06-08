@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.NewStudent;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -20,6 +22,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class NewStudent : Page
     {
+        private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
         public NewStudent()
         {
@@ -29,6 +32,13 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
             _contents.Home();
+        }
+
+        private void BCreateStudent_Click(object sender, RoutedEventArgs e)
+        {
+            OperationLogics operation = new OperationLogics();
+            var setNewGroup = operation.SetNewStudent(new SetNewStudentQ(TBName.Text, TBSurname.Text, TBMiddleName.Text, TBPhone.Text, TBBirthday.Text));
+            MessageBox.Show("Студент" + " " + TBName.Text + " Создан!");
         }
     }
 }

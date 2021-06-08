@@ -23,6 +23,11 @@ namespace TrackingProgressInDevEducationBLL
         public GroupsQ GroupsQ => new();
 
         /// <summary>
+        /// Ответы на запросы со страниц Group
+        /// </summary>
+        public GroupsA GroupsA => new();
+
+        /// <summary>
         /// Запрос со страниц Group
         /// </summary>
         public CoursesQ CoursesQ => new();
@@ -30,12 +35,18 @@ namespace TrackingProgressInDevEducationBLL
         /// <summary>
         /// Ответы на запросы со страниц Group
         /// </summary>
-        public GroupsA GroupsA => new();
+        public CoursesA CoursesA => new();
+
 
         /// <summary>
-        /// Ответы на запросы со страниц Group
+        /// Запрос со страниц NewStudent
         /// </summary>
-        public CoursesA CoursesA => new();
+        public NewStudentsQ NewStudentQ => new();
+
+        /// <summary>
+        /// Ответы на запросы со страниц NewStudent
+        /// </summary>
+        public NewStudentsA NewStudentA => new();
 
         public RegistrationsQ RegistrationsQ => new();
         public RegistrationsA RegistrationsA => new();
