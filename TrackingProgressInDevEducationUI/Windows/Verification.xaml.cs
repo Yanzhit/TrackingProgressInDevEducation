@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationUI.Windows
                 Info.Text = Defines.Congratulation;
                 var query = new UpdLectorQ(_id, true);
                 UpdLectorA answer = _operation.UpdateAcrivationLector(query);
-                if (answer.IsActivated == true)
+                if (answer.IsActivated)
                 {
                     this.Close();
                     SingleContents.GetContent().SignIn();

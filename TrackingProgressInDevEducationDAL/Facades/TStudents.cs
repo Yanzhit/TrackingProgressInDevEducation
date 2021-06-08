@@ -17,19 +17,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (TStudent)Manager.Setter.Single(_query.SetNewTStudent(tStudent));
         }
-
-        public IEnumerable<QTStudent> GetAllStudents()
-        {
-            return (IEnumerable<QTStudent>)Manager.Getter.Several(_query.GetAllStudents());
-        }
-        public IEnumerable<QTStudent> GetAllStudentsByGroup()
-        {
-            return (IEnumerable<QTStudent>)Manager.Getter.Several(_query.GetAllStudentsByGroup());
-        }
-        public IEnumerable<TStudent> UpdStudentToGroup()
-        {
-            return (IEnumerable<TStudent>)Manager.Update.Upd(_query.UpdStudentToGroup());
-        }
+       
         /// <summary>
         /// Обнуление таблицы Команда Студенты
         /// </summary>

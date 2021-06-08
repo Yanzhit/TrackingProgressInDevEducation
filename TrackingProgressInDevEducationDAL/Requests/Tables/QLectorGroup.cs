@@ -12,11 +12,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QLectorGroup SetNewLectorGroup(LectorGroup LGroup)
+        public QLectorGroup SetNewLectorGroup(LectorGroup lGroup)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewLectorGroup);
-            Params = $"{SepStr}{LGroup.LectorId}{SepMid}{LGroup.GroupId}{SepEnd}";
+            Params = $"{SepStr}{lGroup.LectorId}{SepMid}{lGroup.GroupId}{SepEnd}";
             return this;
         }
 

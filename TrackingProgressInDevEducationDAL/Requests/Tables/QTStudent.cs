@@ -27,30 +27,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = $"{SepStr}{tStudent.TeamId}{SepMid}{tStudent.StudentId}{SepEnd}";
             return this;
         }
-
-        public QTStudent GetAllStudents()
-        {
-            QueryType = typeof(Getter);
-            Name = nameof(GetAllStudents);
-            Params = $"";
-            return this;
-        }
-        public QTStudent GetAllStudentsByGroup()
-        {
-            QueryType = typeof(Getter);
-            Name = nameof(GetAllStudentsByGroup);
-            Params = $"";
-            return this;
-        }
-        public QTStudent UpdStudentToGroup()
-        {
-            QueryType = typeof(Update);
-            Name = nameof(UpdStudentToGroup);
-            Params = $"";
-            return this;
-        }
-
-
+        
         /// <summary>
         /// Обнуление таблицы команд студентов и ключа identity
         /// </summary>
@@ -62,5 +39,27 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = string.Empty;
             return this;
         }
+
+        //public QTStudent GetAllTStudents()
+        //{
+        //    QueryType = typeof(Getter);
+        //    Name = nameof(GetAllTStudents);
+        //    Params = $"";
+        //    return this;
+        //}
+        //public QTStudent GetAllTStudentsByGroup()
+        //{
+        //    QueryType = typeof(Getter);
+        //    Name = nameof(GetAllTStudentsByGroup);
+        //    Params = $"";
+        //    return this;
+        //}
+        //public QTStudent UpdTStudentToGroup()
+        //{
+        //    QueryType = typeof(Update);
+        //    Name = nameof(UpdTStudentToGroup);
+        //    Params = $"";
+        //    return this;
+        //}
     }
 }

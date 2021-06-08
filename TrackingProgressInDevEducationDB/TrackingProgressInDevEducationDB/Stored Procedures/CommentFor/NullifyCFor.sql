@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyCommentFor]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[NullifyCFor]
 AS
 DELETE FROM [TrackingProgressInDevEducationDB].[CommentFor]
 OUTPUT DELETED.id

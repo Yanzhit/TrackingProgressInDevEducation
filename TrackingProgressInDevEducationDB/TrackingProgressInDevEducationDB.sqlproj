@@ -241,8 +241,8 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\UpdatePaymentTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\UpdateTeamById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\UpdateVisitById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\SetNewCommentFor.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\NullifyCommentFor.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\SetNewCFor.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentFor\NullifyCFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorByLoginAndPassword.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdateAcrivationLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetGroupsByLectorJ.sql" />

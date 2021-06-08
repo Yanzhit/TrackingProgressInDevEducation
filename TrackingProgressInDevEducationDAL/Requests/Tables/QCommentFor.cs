@@ -11,18 +11,18 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        public QCommentFor SetNewCType()
+        public QCommentFor SetNewCFor()
         {
             QueryType = typeof(Setter);
-            Name = nameof(SetNewCType);
+            Name = nameof(SetNewCFor);
             Params = $"";
             return this;
         }
 
-        public QCommentFor NullifyCTypes()
+        public QCommentFor NullifyCFor()
         {
             QueryType = typeof(Remove);
-            Name = nameof(NullifyCTypes);
+            Name = nameof(NullifyCFor);
             Params = $"";
             return this;
         }

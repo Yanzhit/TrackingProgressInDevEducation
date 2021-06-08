@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCommentFor]
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCFor]
 	@Name NVARCHAR(50)	
 
 AS
