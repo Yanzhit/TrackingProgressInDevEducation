@@ -39,8 +39,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var sss = operation.SetNewGroup(new SetGroupQ("name", 1, DateTime.MaxValue, DateTime.Now));
-
+            var sss = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, 1, DPStartDate.Text, DPEndDate.Text));
         }
 
         //private Course WriteAllCursesInComboBox ()

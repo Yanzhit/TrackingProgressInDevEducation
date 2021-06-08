@@ -20,11 +20,11 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <summary>
         /// Дата началы курса
         /// </summary>
-        public DateTime StartDate { get; set; }
+        public string StartDate { get; set; }
         /// <summary>
         /// Дата окончания курса
         /// </summary>
-        public DateTime EndDate { get; set; }
+        public string EndDate { get; set; }
        
         /// <summary>
         /// Конструктор по умолчанию
@@ -40,7 +40,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <param name="courseId">id группы</param>
         /// <param name="dataStartCousrses">дата начала курса</param>
         /// <param name="dataEndCousrses">дата окончания курса</param>
-        public SetGroupQ(string name, int courseId, DateTime startDate, DateTime endDate)
+        public SetGroupQ(string name, int courseId, string startDate, string endDate)
         {
             Name = name;
             CourseId = courseId;
