@@ -3,7 +3,7 @@
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
     /// <summary>
-    /// Типы моделей используемые для запроса со страницы SignIns для Lectora
+    /// Абстракция класса трансфера
     /// </summary>
     public abstract class ATransfer
     {
