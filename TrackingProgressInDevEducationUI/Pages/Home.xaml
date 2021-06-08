@@ -96,7 +96,7 @@
             </Button.Background>
         </Button>
         <Button Content="Журнал группы" HorizontalAlignment="Left" Height="56" Margin="476,351,0,0" VerticalAlignment="Top" Width="161" Click="Button_Click_2"/>
-        <Button Content="Создать команду" HorizontalAlignment="Left" Height="50" Margin="379,72,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_3"/>
+        <Button Content="Создать команду" HorizontalAlignment="Left" Height="50" Margin="379,101,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_3"/>
         <Button Content="Страница команды в зависимости от выбранной тимы" HorizontalAlignment="Left" Height="47" Margin="20,379,0,0" VerticalAlignment="Top" Width="323" Click="Button_Click_4"/>
         <Button Content="Страница группы в зависимости от выбранной тимы" HorizontalAlignment="Left" Height="42" Margin="182,295,0,0" VerticalAlignment="Top" Width="352" Click="Button_Click_5"/>
 

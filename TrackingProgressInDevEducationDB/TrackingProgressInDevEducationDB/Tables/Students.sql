@@ -2,7 +2,7 @@
     [id]      INT            IDENTITY (1, 1) NOT NULL,
     [Name]    NVARCHAR (50)  NULL,
     [Surname] NVARCHAR (50)  NULL,
-    [Rate]    DECIMAL (6, 2) NULL,
+    [Rate]    INT NULL,
     [GroupId] INT NULL, 
     [Phone] NVARCHAR(50) NULL, 
     [Email] NVARCHAR(50) NULL, 
