@@ -54,5 +54,11 @@ namespace TrackingProgressInDevEducationBLL
             Lector modelReturned = _dalManager.Lectors.UpdateAcrivationLector(model);
             return _bllManager.VerificationsA.UpdateActivationLector(modelReturned);
         }
+        public SetCoursesA GetAllCurses(SetCoursesQ setCoursesQ)
+        {
+            var model = (Course)_bllManager.CoursesQ.GetAllCourses(setCoursesQ);
+            Course modelReturned = (Course)_dalManager.Courses.GetAllCourses();
+            return _bllManager.CoursesA.GetSetCourses(modelReturned);
+        }
     }
 }

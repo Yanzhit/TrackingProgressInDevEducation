@@ -16,7 +16,7 @@
             <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="65,145,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
             <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="65,194,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
             <TextBox x:Name="TBGroupName" HorizontalAlignment="Left" Height="29" Margin="293,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="451" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
-            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="451">
+            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="451" SelectionChanged="CBChangeCourse_SelectionChanged">
                 <TextBlock>  </TextBlock>
                 <TextBlock>C# Base</TextBlock>
                 <TextBlock>C# Front</TextBlock>
