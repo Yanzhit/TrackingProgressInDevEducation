@@ -39,8 +39,8 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreateStudent_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var setNewGroup = operation.SetNewStudent(new SetNewStudentQ(TBName.Text, TBSurname.Text, TBMiddleName.Text, TBPhone.Text, TBBirthday.Text));
-            MessageBox.Show("Студент" + " " + TBName.Text + " Создан!");
+            var setNewStudent = operation.SetNewStudent(new SetNewStudentQ(TBName.Text, TBSurname.Text, TBMiddleName.Text, TBPhone.Text, TBBirthday.Text));
+            MessageBox.Show("Студент" + setNewStudent.Name + TBName.Text + " Создан!");
         }
 
         private void GetAllCitiesInPage()
