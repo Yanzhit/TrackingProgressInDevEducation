@@ -5,6 +5,7 @@ using TrackingProgressInDevEducationBLL.Models.Verification;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.Models.MainPage;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -60,6 +61,13 @@ namespace TrackingProgressInDevEducationBLL
             var model = (Course)_bllManager.CoursesQ.GetAllCourses(setCoursesQ);
             IEnumerable<Course> modelReturned = _dalManager.Courses.GetAllCourses();
             return (List<SetCoursesA>)_bllManager.CoursesA.GetSetCourses(modelReturned);
+        }
+
+        public List<GetGroupsByLectorA> GetGroupsByLector(GetGroupsByLectorQ getGroupsByLectorQ)
+        {
+            var model = (Group)_bllManager.MainPagesQ.GetGroupsByLectorQ(getGroupsByLectorQ);
+            IEnumerable<Group> modelReturned = _dalManager.Groups.GetGroupsByLector(model);
+            return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorA(modelReturned);
         }
     }
 }

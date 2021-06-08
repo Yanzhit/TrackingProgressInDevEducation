@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
-            _contents.Home();
+            _contents.MainPage();
         }
 
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)

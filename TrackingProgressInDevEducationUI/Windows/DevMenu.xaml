@@ -25,6 +25,7 @@
         <Button x:Name="TeamInfo" Content="TeamInfo" HorizontalAlignment="Left" Margin="227,261,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="TeamInfo_Click"/>
         <Button x:Name="TeamRate" Content="TeamRate" HorizontalAlignment="Left" Margin="227,298,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="TeamRate_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="527,76,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click"/>
+        <Button x:Name="Main_Page" Content="Main Page" HorizontalAlignment="Left" Margin="227,335,0,0" VerticalAlignment="Top" Height="32" Width="173" Click="MainPage_Click"/>
 
     </Grid>
 </Window>

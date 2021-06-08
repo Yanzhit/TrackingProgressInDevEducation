@@ -28,6 +28,7 @@ namespace TrackingProgressInDevEducationUI
         private Students _students;
         private TeamInfo _teamInfo;
         private TeamRate _teamRate;
+        private MainPage _mainPage;
         private Verification _verification;
         private DevMenu _devMenu;
 
@@ -67,6 +68,19 @@ namespace TrackingProgressInDevEducationUI
             Lector = lector;
             _home = new Home();
             _main.Content = _home;
+        }
+
+        public void MainPage()
+        {
+            _mainPage = new MainPage();
+            _main.Content = _mainPage;
+        }
+
+        public void MainPage(GetLectorA lector)
+        {
+            Lector = lector;
+            _mainPage = new MainPage();
+            _main.Content = _mainPage;
         }
 
         public void NewStudent()

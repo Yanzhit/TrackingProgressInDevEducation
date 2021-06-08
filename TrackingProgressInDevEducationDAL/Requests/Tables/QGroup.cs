@@ -31,7 +31,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public QGroup GetGroupsByLector(Group group)
         {
             QueryType = typeof(Getter);
-            Name = GetType().Name;
+            Name = nameof(GetGroupsByLector);
             Params = $"{SepStr}{group.Id}{SepEnd}"; // Либо в модели поля не хватает, либо что-то не то с запросом, проверить!
             return this;
         }

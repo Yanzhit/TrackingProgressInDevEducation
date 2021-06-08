@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using TrackingProgressInDevEducationBLL;
-using TrackingProgressInDevEducationBLL.Models.Bases;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
 using static TrackingProgressInDevEducationUI.Defines;
 using MessageBox = System.Windows.Forms.MessageBox;
@@ -39,7 +38,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             {
                 if (answer.IsActivated)
                 {
-                    _contents.Home(answer);
+                    _contents.MainPage(answer);
                 }
                 else
                 {

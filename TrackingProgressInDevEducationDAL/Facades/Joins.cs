@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
@@ -29,6 +30,10 @@ namespace TrackingProgressInDevEducationDAL.Facades
         public IEnumerable<Joins> GetGroupByIdJ()
         {
             return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetGroupByIdJ());
+        }
+        public IEnumerable<Joins> GetGroupByLectorJ(GetGroupByLectorJ lector)
+        {
+            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetGroupByLectorJ(lector));
         }
 
         public IEnumerable<Joins> GetHWComplitingByStudentJ()

@@ -17,21 +17,11 @@
     </Page.Resources>
 
     <Grid Background="#91D4D1">
-        <TextBox 
-            HorizontalAlignment="Center" 
-            Height="98" Margin="0,77,0,0" 
-            Text="МОИ КУРСЫ &#xD;&#xA;JAVA&#xD;&#xA;C#" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top" 
-            Width="780" 
-            FontSize="16" 
-            FontWeight="Bold"
-        />
 
         <TextBox
             HorizontalAlignment="Center" 
-            Height="110" 
-            Margin="0,180,0,0" 
+            Height="180" 
+            Margin="0,108,0,0" 
             Text="МОИ ГРУППЫ" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
@@ -41,13 +31,13 @@
         />
 
         <TextBox 
-            HorizontalAlignment="Left" 
-            Height="112" 
-            Margin="10,295,0,0" 
+            HorizontalAlignment="Center" 
+            Height="147" 
+            Margin="0,293,0,0" 
             Text="МОИ КОМАНДЫ&#xD;&#xA;Команда - 001" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
-            Width="769" 
+            Width="780" 
             FontSize="16" 
             FontWeight="Bold"
         />
@@ -60,22 +50,22 @@
             VerticalAlignment="Top" 
             Width="352" 
             Background="#FFE0DEDE" 
-            FontSize="18" 
+            FontSize="16" 
             FontWeight="Bold" 
             BorderBrush="#FFE0DEDE" TextChanged="WelcomeBlock_TextChanged"
         />
 
         <Button 
             Content="Студенты колледжа" 
-            Margin="596,106,0,313" HorizontalAlignment="Left" Width="164" Click="Button_Click_1" 
+            Margin="0,67,0,352" HorizontalAlignment="Center" Width="780" Click="Button_Click_1" 
         />
 
         <Button  
             Content="Создать группу" 
-            Margin="616,247,60,168" Click="Button_Click" 
+            Margin="645,133,31,282" Click="Button_Click" 
         />
 
-        <DataGrid HorizontalAlignment="Left" Height="60" Margin="52,223,0,0" VerticalAlignment="Top" Width="368">
+        <DataGrid HorizontalAlignment="Left" Height="60" Margin="10,133,0,0" VerticalAlignment="Top" Width="368">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Группа"/>
                 <DataGridTextColumn Header="Курс"/>
@@ -84,21 +74,13 @@
                 <DataGridTextColumn Header="Кол-во Студентов"/>
             </DataGrid.Columns>
         </DataGrid>
-
-        <Button
-            Style="{DynamicResource ButtonStyles}" 
-            Content="Журнал" 
-            Margin="439,253,0,0" 
-        />
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button Content="Журнал группы" HorizontalAlignment="Left" Height="56" Margin="476,351,0,0" VerticalAlignment="Top" Width="161" Click="Button_Click_2"/>
-        <Button Content="Создать команду" HorizontalAlignment="Left" Height="50" Margin="379,101,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_3"/>
-        <Button Content="Страница команды в зависимости от выбранной тимы" HorizontalAlignment="Left" Height="47" Margin="20,379,0,0" VerticalAlignment="Top" Width="323" Click="Button_Click_4"/>
-        <Button Content="Страница группы в зависимости от выбранной тимы" HorizontalAlignment="Left" Height="42" Margin="182,295,0,0" VerticalAlignment="Top" Width="352" Click="Button_Click_5"/>
+        <Button Content="Журнал группы" HorizontalAlignment="Left" Height="56" Margin="440,133,0,0" VerticalAlignment="Top" Width="161" Click="Button_Click_2"/>
+        <Button Content="Создать команду" HorizontalAlignment="Left" Height="34" Margin="666,316,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_3"/>
 
     </Grid>
 </PageFunction>

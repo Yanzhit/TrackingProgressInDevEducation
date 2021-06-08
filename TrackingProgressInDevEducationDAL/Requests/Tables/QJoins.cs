@@ -1,5 +1,7 @@
 ﻿using System;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Models.Results;
+using static TrackingProgressInDevEducationDAL.Defines;
 
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
@@ -44,6 +46,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             QueryType = typeof(Getter);
             Name = nameof(GetGroupByIdJ);
             Params = "";
+            return this;
+        }
+        public QJoins GetGroupByLectorJ(GetGroupByLectorJ lector)
+        {
+            ModelType = typeof(GetGroupByLectorJ);
+            QueryType = typeof(Getter);
+            Name = nameof(GetGroupByLectorJ);
+            Params = $"{SepStr}{lector.Id}{SepEnd}";
             return this;
         }
         public QJoins GetHWComplitingByStudentJ()

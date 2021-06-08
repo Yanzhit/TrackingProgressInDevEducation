@@ -29,8 +29,4 @@
     <ProjectReference Include="..\TrackingProgressInDevEducationDB\TrackingProgressInDevEducationDB.sqlproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Others\" />
-  </ItemGroup>
-
 </Project>
