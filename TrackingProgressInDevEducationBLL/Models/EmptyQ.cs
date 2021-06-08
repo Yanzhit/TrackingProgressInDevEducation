@@ -1,6 +1,6 @@
 ﻿namespace TrackingProgressInDevEducationBLL.Models
 {
-    public class EmptyQ : ADTO
+    public class EmptyQ : ADTOQuery
     {
         
     }

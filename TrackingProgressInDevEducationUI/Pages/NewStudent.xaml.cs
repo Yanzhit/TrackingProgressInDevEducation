@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 
 namespace TrackingProgressInDevEducationUI.Pages
@@ -27,6 +28,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         public NewStudent()
         {
             InitializeComponent();
+            GetAllCitiesInPage();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -39,6 +41,16 @@ namespace TrackingProgressInDevEducationUI.Pages
             OperationLogics operation = new OperationLogics();
             var setNewGroup = operation.SetNewStudent(new SetNewStudentQ(TBName.Text, TBSurname.Text, TBMiddleName.Text, TBPhone.Text, TBBirthday.Text));
             MessageBox.Show("Студент" + " " + TBName.Text + " Создан!");
+        }
+
+        private void GetAllCitiesInPage()
+        {
+            OperationLogics operation = new OperationLogics();
+            List<SetCityA> getAllCities = operation.GetAllCities(new EmptyQ());
+            foreach (var city in getAllCities)
+            {
+                CBChangeCity.Items.Add(city.Name);
+            }
         }
     }
 }
