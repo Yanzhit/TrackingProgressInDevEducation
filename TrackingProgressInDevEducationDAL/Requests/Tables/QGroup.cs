@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewGroup);
-            Params = $"{SepStr}{group.Name}{SepMid}{group.CourseId}{SepStr}";
+            Params = $"{SepStr}{group.Name}{SepMid}{group.CourseId}{SepMid}{group.StartDate}{SepMid}{group.EndDate}{SepEnd}";
             return this;
         }
 
