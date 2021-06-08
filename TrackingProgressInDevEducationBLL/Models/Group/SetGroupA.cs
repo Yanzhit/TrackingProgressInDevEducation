@@ -24,10 +24,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <summary>
         /// Конструктор для подготовки ответа
         /// </summary>
-        /// <param name="id">Идентификатор объекта</param>
-        /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
-        /// <param name="email">"Электронная почта</param>
-        /// <param name="fullName">Передаваемое  имя</param>
+        /// <param name="name">название группы</param>
+        /// <param name="courseId">ид курса</param>
+        /// <param name="startDate">дата создания группы</param>
+        /// <param name="endDate">дата окончания группы</param>
         public SetGroupA(string name, int courseId, string startDate, string endDate)
         {
             Name = name;
@@ -43,7 +43,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
 
         private bool Equals(SetGroupA other)
         {
-            return Id == other.Id;
+            return Id == other.Id
+                && CourseId == other.CourseId
+                && StartDate == other.StartDate
+                && EndDate == other.EndDate;
         }
 
         public override int GetHashCode()

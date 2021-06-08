@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Bases
     {
         public int GroupId { get; set; }
         public int LectorId { get; set; }
-        public DateTime StartedOn { get; set; }
+        public string StartedOn { get; set; }
 
         public LectionDTO()
         {

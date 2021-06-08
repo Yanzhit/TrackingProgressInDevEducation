@@ -7,8 +7,8 @@ namespace TrackingProgressInDevEducationBLL.Models.Bases
     public class CourseDTO : ADTOAnswer
     {
         public string Name { get; set; }
-        public DateTime StartedOn { get; set; }
-        public DateTime FinishedOn { get; set; }
+        public string StartedOn { get; set; }
+        public string FinishedOn { get; set; }
 
         public CourseDTO()
         {

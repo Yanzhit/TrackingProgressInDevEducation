@@ -23,9 +23,19 @@ namespace TrackingProgressInDevEducationBLL
         public GroupsQ GroupsQ => new();
 
         /// <summary>
+        /// Запрос со страниц Group
+        /// </summary>
+        public CoursesQ CoursesQ => new();
+
+        /// <summary>
         /// Ответы на запросы со страниц Group
         /// </summary>
         public GroupsA GroupsA => new();
+
+        /// <summary>
+        /// Ответы на запросы со страниц Group
+        /// </summary>
+        public CoursesA CoursesA => new();
 
         public RegistrationsQ RegistrationsQ => new();
         public RegistrationsA RegistrationsA => new();

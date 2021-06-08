@@ -29,6 +29,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         public Group()
         {
             InitializeComponent();
+            GetAllCursesInPage();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -39,12 +40,23 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var sss = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, 1, DPStartDate.Text, DPEndDate.Text));
+            var setNewGroup = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, CBChangeCourse.SelectedIndex, DPStartDate.Text, DPEndDate.Text));
         }
 
-        //private Course WriteAllCursesInComboBox ()
-        //{
+        private void CBChangeCourse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
 
-        //}
+        private void GetAllCursesInPage()
+        {
+            OperationLogics operation = new OperationLogics();
+            List<SetCoursesA> getAllCurses = operation.GetAllCurses(new SetCoursesQ());
+            foreach (var course in getAllCurses)
+            {
+                CBChangeCourse.Items.Add(course.Name);
+            }
+            
+        }
     }
 }

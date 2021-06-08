@@ -16,13 +16,7 @@
             <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="65,145,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
             <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="65,194,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
             <TextBox x:Name="TBGroupName" HorizontalAlignment="Left" Height="29" Margin="293,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="451" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
-            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="451">
-                <TextBlock>  </TextBlock>
-                <TextBlock>C# Base</TextBlock>
-                <TextBlock>C# Front</TextBlock>
-                <TextBlock>Java Base</TextBlock>
-                <TextBlock>Java Front</TextBlock>
-            </ComboBox>
+            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="293,88,0,0" VerticalAlignment="Top" Width="451" SelectionChanged="CBChangeCourse_SelectionChanged"/>
             <DatePicker x:Name="DPEndDate" HorizontalAlignment="Left" Margin="293,194,0,0" VerticalAlignment="Top" Height="26" Width="139"/>
         </Grid>
         <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="498,10,0,0" VerticalAlignment="Top" Width="292" FontSize="24"/>

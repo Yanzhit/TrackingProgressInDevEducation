@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             return Single(model);
         }
 
-        protected IEnumerable<ADTOAnswer> GetModelBaseSeveral(AbstractModel model)
+        protected IEnumerable<ADTOAnswer> GetModelBaseSeveral(IEnumerable<AbstractModel> model)
         {
             return Several(model);
         }
@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             return (ADTOAnswer)generic.Invoke(null, new object[] { model });
         }
 
-        private IEnumerable<ADTOAnswer> Several(AbstractModel model)
+        private IEnumerable<ADTOAnswer> Several(IEnumerable<AbstractModel> model)
         {
             GetMethodSeveral();
             MethodInfo generic = GetGenericSeveral();
