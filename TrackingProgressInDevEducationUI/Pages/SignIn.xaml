@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SignIn">
+      Title="SignIns">
 
     <Grid>
         <Grid.Background>

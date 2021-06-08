@@ -12,5 +12,5 @@
     CONSTRAINT [Comment_fk1] FOREIGN KEY ([StudentId]) REFERENCES [TrackingProgressInDevEducationDB].[Students] ([id]),
     CONSTRAINT [Comment_fk2] FOREIGN KEY ([CreatedBy]) REFERENCES [TrackingProgressInDevEducationDB].[Lectors] ([id]), 
     CONSTRAINT [Comment_fk3] FOREIGN KEY ([TeamId]) REFERENCES [TrackingProgressInDevEducationDB].[Teams]([id]), 
-    CONSTRAINT [Comment_fk4] FOREIGN KEY ([CommentFor]) REFERENCES [TrackingProgressInDevEducationDB].[CommentFor]([Id])
+    CONSTRAINT [Comment_fk4] FOREIGN KEY ([CommentFor]) REFERENCES [TrackingProgressInDevEducationDB].[CommentFor]([id])
 );

@@ -4,12 +4,12 @@ using TrackingProgressInDevEducationDAL.Models;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
-    public class QRegistrations : AQuery
+    public class RegistrationsQ : AQuery
     {
-        public AbstractModel SetNewLector(QSetLector qSetLector)
+        public AbstractModel SetNewLector(SetLectorQ setLectorQ)
         {
             WriteTypes(new Registrations().SetNewLector());
-            return GetModelBaseSingle(qSetLector);
+            return GetModelBaseSingle(setLectorQ);
         }
     }
 }

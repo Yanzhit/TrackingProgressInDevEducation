@@ -18,7 +18,7 @@ using MessageBoxOptions = System.Windows.Forms.MessageBoxOptions;
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SignIn.xaml
+    /// Логика взаимодействия для SignIns.xaml
     /// </summary>
     // ReSharper disable once RedundantExtendsListEntry
     public partial class SignIn : Page
@@ -33,8 +33,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            var query = new QGetLector(Login.Text, Password.Text);
-            AGetLector answer = _operation.GetLectorByLoginAndPassword(query);
+            var query = new GetLectorQ(Login.Text, Password.Text);
+            GetLectorA answer = _operation.GetLectorByLoginAndPassword(query);
             if (answer != null)
             {
                 if (answer.IsActivated)
@@ -52,7 +52,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
         }
 
-        private void CheckActive(AGetLector answer)
+        private void CheckActive(GetLectorA answer)
         {
             DialogResult result = MessageBox.Show
             (
@@ -78,7 +78,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
         }
 
-        private void Activated(AGetLector answer)
+        private void Activated(GetLectorA answer)
         {
             SmtpService service = new();
             var param = new Dictionary<string, string>

@@ -2,17 +2,17 @@
 
 namespace TrackingProgressInDevEducationBLL.Models.Registration
 {
-    public class QSetLector : ADTOQuery
+    public class SetLectorA : ADTOAnswer
     {
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public QSetLector()
+        public SetLectorA()
         {
         }
 
-        public QSetLector(string fullName, string email, string password)
+        public SetLectorA(string fullName, string email, string password)
         {
             FullName = fullName;
             Email = email;
@@ -20,10 +20,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
         }
         public override bool Equals(object obj)
         {
-            return Equals((QSetLector)obj);
+            return Equals((SetLectorA)obj);
         }
 
-        private bool Equals(QSetLector other)
+        private bool Equals(SetLectorA other)
         {
             return  FullName == other.FullName 
                     && Email == other.Email
