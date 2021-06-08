@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationDAL.Models.Bases;
+﻿using TrackingProgressInDevEducationBLL.Models;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -13,14 +14,14 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки GetAllCities()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(City);
             //Answer = typeof();
             return this;
         }
         public ПодготовленныеБолванки NullifyCities()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(City);
             //Answer = typeof();
             return this;
@@ -62,7 +63,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyComments()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Comment);
             //Answer = typeof();
             return this;
@@ -76,7 +77,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyCFor()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(CommentFor);
             //Answer = typeof();
             return this;
@@ -90,7 +91,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyCTypes()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(CType);
             //Answer = typeof();
             return this;
@@ -104,14 +105,14 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки GetAllCourses()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Course);
             //Answer = typeof();
             return this;
         }
         public ПодготовленныеБолванки NullifyCourses()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Course);
             //Answer = typeof();
             return this;
@@ -132,7 +133,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyGroups()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Group);
             //Answer = typeof();
             return this;
@@ -145,7 +146,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             return this;
         }public ПодготовленныеБолванки NullifyHWs()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Homework);
             //Answer = typeof();
             return this;
@@ -166,7 +167,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyHWComplete()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(HWComplete);
             //Answer = typeof();
             return this;
@@ -180,7 +181,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyHWGroup()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(HWGroup);
             //Answer = typeof();
             return this;
@@ -256,7 +257,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         }
         public ПодготовленныеБолванки NullifyLections()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Lection);
             //Answer = typeof();
             return this;
@@ -285,7 +286,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки GetAllLectors()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Lector);
             //Answer = typeof();
             return this;
@@ -309,7 +310,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyLectors()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Lector);
             //Answer = typeof();
             return this;
@@ -325,7 +326,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyCourse()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(LectorCourse);
             //Answer = typeof();
             return this;
@@ -341,7 +342,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyLectorGroup()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(LectorGroup);
             //Answer = typeof();
             return this;
@@ -365,7 +366,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyPayments()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Payment);
             //Answer = typeof();
             return this;
@@ -381,7 +382,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки GetAllStudents()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Student);
             //Answer = typeof();
             return this;
@@ -405,7 +406,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyStudents()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Student);
             //Answer = typeof();
             return this;
@@ -429,7 +430,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyTeams()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Team);
             //Answer = typeof();
             return this;
@@ -445,7 +446,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyTests()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Test);
             //Answer = typeof();
             return this;
@@ -469,7 +470,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyTCs()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(TestComplete);
             //Answer = typeof();
             return this;
@@ -485,7 +486,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyTStudent()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(TStudent);
             //Answer = typeof();
             return this;
@@ -509,7 +510,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         
         public ПодготовленныеБолванки NullifyVisits()
         {
-            //Query = typeof();
+            Query = typeof(EmptyQ);
             Base = typeof(Visit);
             //Answer = typeof();
             return this;
