@@ -40,7 +40,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var setNewGroup = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, 1, DPStartDate.Text, DPEndDate.Text));
+            var setNewGroup = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, CBChangeCourse.SelectedIndex, DPStartDate.Text, DPEndDate.Text));
         }
 
         private void CBChangeCourse_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -52,7 +52,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             OperationLogics operation = new OperationLogics();
             List<SetCoursesA> getAllCurses = operation.GetAllCurses(new SetCoursesQ());
-            CBChangeCourse.ItemsSource = getAllCurses[0].Name;
+            foreach (var course in getAllCurses)
+            {
+                CBChangeCourse.Items.Add(course.Name);
+            }
+            
         }
     }
 }
