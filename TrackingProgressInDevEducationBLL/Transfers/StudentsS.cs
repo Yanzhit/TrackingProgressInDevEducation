@@ -7,9 +7,9 @@ namespace TrackingProgressInDevEducationBLL.Transfers
     {
         public StudentsS SetNewStudent()
         {
-            Query = typeof(SetNewStudentA);
+            Query = typeof(SetNewStudentQ);
             Base = typeof(Student);
-            Answer = typeof(SetNewStudentQ);
+            Answer = typeof(SetNewStudentA);
             return this;
         }
     }
