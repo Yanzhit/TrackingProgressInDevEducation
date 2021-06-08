@@ -8,20 +8,20 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
 {
     public class SetCoursesQ : ADTOQuery
     {
-        /// <summary>
-        /// Название курса
-        /// </summary>
-        public string Name { get; set; }
+        ///// <summary>
+        ///// Название курса
+        ///// </summary>
+        //public string Name { get; set; }
 
-        /// <summary>
-        /// Дата начала курса 
-        /// </summary>
-        public string StartedOn { get; set; }
+        ///// <summary>
+        ///// Дата начала курса 
+        ///// </summary>
+        //public string StartedOn { get; set; }
 
-        /// <summary>
-        /// Дата окончания курса
-        /// </summary>
-        public string FinishedOn { get; set; }
+        ///// <summary>
+        ///// Дата окончания курса
+        ///// </summary>
+        //public string FinishedOn { get; set; }
 
         /// <summary>
         /// Конструктор по умолчанию
@@ -49,14 +49,15 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
 
         private bool Equals(SetCoursesQ other)
         {
-            return Name == other.Name
-                && StartedOn == other.StartedOn
-                && FinishedOn == other.FinishedOn;
+            return true;
+                //Name == other.Name
+                //&& StartedOn == other.StartedOn
+                //&& FinishedOn == other.FinishedOn;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name);
+            return HashCode.Combine(true);
         }
     }
 }

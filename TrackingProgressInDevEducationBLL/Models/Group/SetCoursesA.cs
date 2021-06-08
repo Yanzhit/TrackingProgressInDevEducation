@@ -13,8 +13,6 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
     public class SetCoursesA : ADTOAnswer
     {
         public string Name { get; set; }
-        public string StartedOn { get; set; }
-        public string FinishedOn { get; set; }
 
         /// <summary>
         /// Конструктор по умолчанию
@@ -29,11 +27,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// <param name="name">Название курса</param>
         /// <param name="startedOn">начала курса</param>
         /// <param name="finishedOn">конец курса</param>
-        public SetCoursesA(string name, string startedOn, string finishedOn)
+        public SetCoursesA(int id, string name)
         {
+            Id = id;
             Name = name;
-            StartedOn = startedOn;
-            FinishedOn = finishedOn;
         }
         public override bool Equals(object obj)
         {
@@ -43,14 +40,12 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         private bool Equals(SetCoursesA other)
         {
             return Id == other.Id
-                && Name == other.Name
-                && StartedOn == other.StartedOn
-                && FinishedOn == other.FinishedOn;
+                && Name == other.Name;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return HashCode.Combine(Id, Name);
         }
 
     }

@@ -19,10 +19,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         /// </summary>
         /// <param name="model">Входящая модель от DAL для обработки</param>
         /// <returns>Модель ответа с вложенными данными</returns>
-        public SetCoursesA GetSetCourses(Course model)
+        public IEnumerable<SetCoursesA> GetSetCourses(IEnumerable<Course> model)
         {
             WriteTypes(new Courses().GetAllCourses());
-            return (SetCoursesA)GetModelBaseSeveral(model);
+            return (IEnumerable<SetCoursesA>)GetModelBaseSeveral(model);
         }
     }
 }

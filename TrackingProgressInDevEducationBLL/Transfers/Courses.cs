@@ -1,4 +1,5 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.Group;
+using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -7,7 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public Courses GetAllCourses()
         {
             Query = typeof(SetCoursesQ);
-            Base = typeof(Courses);
+            Base = typeof(Course);
             Answer = typeof(SetCoursesA);
             return this;
         }

@@ -1,4 +1,6 @@
-﻿using TrackingProgressInDevEducationBLL.Models.Group;
+﻿using System.Collections;
+using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
 
@@ -15,7 +17,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         public AbstractModel GetAllCourses(SetCoursesQ setCoursesQ)
         {
             WriteTypes(new Courses().GetAllCourses());
-            return GetModelBaseSeveral(setCoursesQ);
+            return GetModelBaseSingle(setCoursesQ);
         }
     }
 }

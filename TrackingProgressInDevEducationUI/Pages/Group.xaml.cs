@@ -51,7 +51,8 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void GetAllCursesInPage()
         {
             OperationLogics operation = new OperationLogics();
-            var getAllCurses = operation.GetAllCurses(new SetCoursesQ());
+            List<SetCoursesA> getAllCurses = operation.GetAllCurses(new SetCoursesQ());
+            CBChangeCourse.ItemsSource = getAllCurses[0].Name;
         }
     }
 }
