@@ -22,6 +22,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Password = lector.Password;
             IsActivated = lector.IsActivated;
         }
+        public Lector(object obj) : base(obj)
+        {
+            var lector = (Lector) obj;
+            Login = lector.Login;
+            FullName = lector.FullName;
+            Email = lector.Email;
+            Password = lector.Password;
+            IsActivated = lector.IsActivated;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Lector)obj);

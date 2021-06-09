@@ -21,13 +21,13 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             HWGroups = new List<HWGroup>
             {
-                new(1,2),
-                new(2,2),
-                new(3,2),
-                new(1,1),
-                new(1,2),
-                new(3,2),
-                new(1,1)
+                new(new object[] {1,2}),
+                new(new object[] {2,2}),
+                new(new object[] {3,2}),
+                new(new object[] {1,1}),
+                new(new object[] {1,2}),
+                new(new object[] {3,2}),
+                new(new object[] {1,1})
             };
         }
     }

@@ -16,6 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             TeamId = tStudent.TeamId;
             StudentId = tStudent.StudentId;
         }
+        public TStudent(object obj) : base(obj)
+        {
+            var tStudent = (TStudent) obj;
+            TeamId = tStudent.TeamId;
+            StudentId = tStudent.StudentId;
+        }
 
         public override bool Equals(object obj)
         {

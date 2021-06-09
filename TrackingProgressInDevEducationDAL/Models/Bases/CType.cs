@@ -14,7 +14,11 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             Name = cType.Name;
         }
-
+        public CType(object obj) : base(obj)
+        {
+            var cType = (CType) obj;
+            Name = cType.Name;
+        }
         public override bool Equals(object obj)
         {
             return Equals((CType)obj);

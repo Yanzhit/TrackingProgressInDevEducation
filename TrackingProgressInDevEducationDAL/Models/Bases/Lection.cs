@@ -18,6 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             LectorId = lection.LectorId;
             StartedOn = lection.StartedOn;
         }
+        public Lection(object obj) : base(obj)
+        {
+            var lection = (Lection) obj;
+            GroupId = lection.GroupId;
+            LectorId = lection.LectorId;
+            StartedOn = lection.StartedOn;
+        }
 
         public override bool Equals(object obj)
         {

@@ -10,6 +10,11 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             Name = commentFor.Name;
         }
+        public CommentFor(object obj) : base(obj)
+        {
+            var commentFor = (CommentFor) obj;
+            Name = commentFor.Name;
+        }
         public override bool Equals(object obj)
         {
             return Equals((CommentFor)obj);

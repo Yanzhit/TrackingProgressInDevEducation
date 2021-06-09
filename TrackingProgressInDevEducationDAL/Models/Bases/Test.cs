@@ -16,6 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Name = test.Name;
             Description = test.Description;
         }
+        public Test(object obj) : base (obj)
+        {
+            var test = (Test) obj;
+            Name = test.Name;
+            Description = test.Description;
+        }
 
         public override bool Equals(object obj)
         {

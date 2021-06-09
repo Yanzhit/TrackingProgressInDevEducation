@@ -6,9 +6,8 @@
         {
         }
 
-        public Getter(int id):base(id)
+        public Getter(Getter getter) : base(getter)
         {
-            Id = id;
         }
     }
 }

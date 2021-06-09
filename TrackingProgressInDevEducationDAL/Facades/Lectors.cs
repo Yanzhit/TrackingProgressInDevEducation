@@ -43,9 +43,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (IEnumerable<Lector>)Manager.Getter.Several(_query.GetAllLectors());
         }
-        public IEnumerable<Lector> UpdNewEmailAndPasswordLectors()
+        public IEnumerable<Lector> UpdEmailLectors(Lector model)
         {
-            return (IEnumerable<Lector>)Manager.Update.Upd(_query.UpdNewEmailAndPasswordLectors());
+            return (IEnumerable<Lector>)Manager.Update.Upd(_query.UpdEmailLectors(model));
+        }
+        public IEnumerable<Lector> UpdPasswordLectors(Lector model)
+        {
+            return (IEnumerable<Lector>)Manager.Update.Upd(_query.UpdPasswordLectors(model));
+        }
+
+        public IEnumerable<Lector> UpdLoginLectors(Lector model)
+        {
+            return (IEnumerable<Lector>)Manager.Update.Upd(_query.UpdLoginLectors(model));
         }
 
         /// <summary>

@@ -36,6 +36,22 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             CityId = student.CityId;
             Status = student.Status;
         }
+        public Student(object obj) : base(obj)
+        {
+            var student = (Student) obj;
+            Name = student.Name;
+            Surname = student.Surname;
+            Rate = student.Rate;
+            GroupId = student.GroupId;
+            Phone = student.Phone;
+            Email = student.Email;
+            Contract = student.Contract;
+            Birthday = student.Birthday;
+            MiddleName = student.MiddleName;
+            Git = student.Git;
+            CityId = student.CityId;
+            Status = student.Status;
+        }
 
         public override bool Equals(object obj)
         {

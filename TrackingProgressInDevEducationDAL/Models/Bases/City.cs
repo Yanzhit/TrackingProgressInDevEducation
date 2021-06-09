@@ -14,6 +14,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             Name = city.Name;
         }
+        public City(object obj) : base(obj)
+        {
+            var city = (City) obj;
+            Name = city.Name;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((City)obj);

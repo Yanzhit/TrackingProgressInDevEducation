@@ -16,10 +16,10 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewHWComplete()
         {
-            yield return new object[] { new QHWComplete(), new HWComplete(2, 2, true,
-                "DateTime.MaxValue", 1, "DateTime.MaxValue"), 1 };
-            yield return new object[] { new QHWComplete(), new HWComplete(1, 2, false,
-                "DateTime.MaxValue", 1, "DateTime.MaxValue"), 1 };
+            yield return new object[] { new QHWComplete(), new HWComplete(new object[] {2, 2, true,
+                "DateTime.MaxValue", 1, "DateTime.MaxValue"}), 1 };
+            yield return new object[] { new QHWComplete(), new HWComplete(new object[] {1, 2, false,
+                "DateTime.MaxValue", 1, "DateTime.MaxValue"}), 1 };
         }
 
         /// <summary>

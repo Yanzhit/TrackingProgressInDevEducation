@@ -16,7 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             LectorId = lectorGroup.LectorId;
             GroupId = lectorGroup.GroupId;
         }
-
+        public LectorGroup(object obj) : base(obj)
+        {
+            var lectorGroup = (LectorGroup) obj;
+            LectorId = lectorGroup.LectorId;
+            GroupId = lectorGroup.GroupId;
+        }
         public override bool Equals(object obj)
         {
             return Equals((LectorGroup)obj);

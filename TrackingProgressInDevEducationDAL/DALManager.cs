@@ -1,5 +1,4 @@
 ﻿using TrackingProgressInDevEducationDAL.Facades;
-using TrackingProgressInDevEducationDAL.Models.Facades;
 
 namespace TrackingProgressInDevEducationDAL
 {

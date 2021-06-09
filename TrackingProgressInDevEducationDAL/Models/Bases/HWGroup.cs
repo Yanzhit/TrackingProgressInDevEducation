@@ -16,6 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             HomeworkId = hwGroup.HomeworkId;
             GroupId = hwGroup.GroupId;
         }
+        public HWGroup(object obj) : base(obj)
+        {
+            var hwGroup = (HWGroup) obj;
+            HomeworkId = hwGroup.HomeworkId;
+            GroupId = hwGroup.GroupId;
+        }
 
         public override bool Equals(object obj)
         {

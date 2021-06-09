@@ -22,6 +22,15 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             ApproveDate = complete.ApproveDate;
             Score = complete.Score;
         }
+        public TestComplete(object obj) : base(obj)
+        {
+            var complete = (TestComplete) obj;
+            TestId = complete.TestId;
+            StudentId = complete.StudentId;
+            Status = complete.Status;
+            ApproveDate = complete.ApproveDate;
+            Score = complete.Score;
+        }
 
         public override bool Equals(object obj)
         {

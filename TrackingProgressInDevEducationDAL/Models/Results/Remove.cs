@@ -6,9 +6,8 @@
         {
         }
 
-        public Remove(int id):base(id)
+        public Remove(Remove remove):base(remove)
         {
-            Id = id;
         }
     }
 }

@@ -10,6 +10,11 @@
         {
             Id = model.Id;
         }
+        protected AbstractModel(object obj)
+        {
+            var model = (AbstractModel)obj;
+            Id = model.Id;
+        }
 
         public override bool Equals(object obj)
         {

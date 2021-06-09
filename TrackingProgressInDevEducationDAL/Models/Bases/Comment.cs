@@ -25,6 +25,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             TeamId = comment.TeamId;
             Estimation = comment.Estimation;
         }
+        public Comment(object obj) : base(obj)
+        {
+            var comment = (Comment) obj;
+            Text = comment.Text;
+            TypeId = comment.TypeId;
+            StudentId = comment.StudentId;
+            CreatedBy = comment.CreatedBy;
+            TeamId = comment.TeamId;
+            Estimation = comment.Estimation;
+        }
         public override bool Equals(object obj)
         {
             return Equals((Comment)obj);

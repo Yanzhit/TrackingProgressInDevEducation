@@ -16,6 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Name = homework.Name;
             Deskription = homework.Deskription;
         }
+        public Homework(object obj) : base(obj)
+        {
+            var homework = (Homework) obj;
+            Name = homework.Name;
+            Deskription = homework.Deskription;
+        }
 
         public override bool Equals(object obj)
         {

@@ -22,14 +22,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Courses = new List<Course>
             {
-                new ("C# - default", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("C# - Front", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("C# - Back", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("C# - Mobile", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("Java - default", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("Java - Front", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("Java - Back", "DateTime.MinValue", "DateTime.MaxValue"),
-                new ("Java - Mobile", "DateTime.MinValue", "DateTime.MaxValue")
+                new(new object[] {"C# - default", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"C# - Front", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"C# - Back", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"C# - Mobile", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"Java - default", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"Java - Front", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"Java - Back", "DateTime.MinValue", "DateTime.MaxValue"}),
+                new(new object[] {"Java - Mobile", "DateTime.MinValue", "DateTime.MaxValue"})
             };
         }
     }

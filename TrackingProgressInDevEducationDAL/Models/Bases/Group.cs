@@ -20,6 +20,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             StartDate = group.StartDate;
             EndDate = group.EndDate;
         }
+        public Group(object obj) : base(obj)
+        {
+            var group = (Group) obj;
+            Name = group.Name;
+            CourseId = group.CourseId;
+            StartDate = group.StartDate;
+            EndDate = group.EndDate;
+        }
 
         public override bool Equals(object obj)
         {

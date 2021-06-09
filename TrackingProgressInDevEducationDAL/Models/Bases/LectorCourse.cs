@@ -16,6 +16,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             LectorId = lectorCourse.LectorId;
             CourseId = lectorCourse.CourseId;
         }
+        public LectorCourse(object obj) : base(obj)
+        {
+            var lectorCourse = (LectorCourse) obj;
+            LectorId = lectorCourse.LectorId;
+            CourseId = lectorCourse.CourseId;
+        }
 
         public override bool Equals(object obj)
         {

@@ -16,8 +16,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewLection()
         {
-            yield return new object[] { new QLection(), new Lection(2, 1, "DateTime.MaxValue"), 1 };
-            yield return new object[] { new QLection(), new Lection(1, 2, "DateTime.MaxValue"), 1 };
+            yield return new object[] { new QLection(), new Lection(new object[] {2, 1, "DateTime.MaxValue"}), 1 };
+            yield return new object[] { new QLection(), new Lection(new object[] {1, 2, "DateTime.MaxValue"}), 1 };
         }
 
         /// <summary>

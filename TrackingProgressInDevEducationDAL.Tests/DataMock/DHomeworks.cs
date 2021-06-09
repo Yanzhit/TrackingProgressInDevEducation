@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         /// <summary>
         /// Список домашнего задания для заполнения BD
         /// </summary>
-        public List<Homework> Homeworks;
+        public readonly List<Homework> Homeworks;
 
         /// <summary>
         /// Инициализация базы домашнего задания
@@ -21,12 +21,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Homeworks = new List<Homework>
             {
-                new("First","One"),
-                new("Level","Two"),
-                new("Operand","Tree"),
-                new("Varies","Try"),
-                new("Fail","Ew"),
-                new("God","non")
+                new(new object[] {"First","One"}),
+                new(new object[] {"Level","Two"}),
+                new(new object[] {"Operand","Tree"}),
+                new(new object[] {"Varies","Try"}),
+                new(new object[] {"Fail","Ew"}),
+                new(new object[] {"God","non"})
             };
         }
     }

@@ -15,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewHW()
         {
-            yield return new object[] { new QHomework(), new Homework("C# dz","rrr"), 1 };
-            yield return new object[] { new QHomework(), new Homework("Java dz", "III"), 1 };
+            yield return new object[] { new QHomework(), new Homework(new object[] {"C# dz","rrr"}), 1 };
+            yield return new object[] { new QHomework(), new Homework(new object[] {"Java dz", "III"}), 1 };
         }
         /// <summary>
         /// Очистка таблицы домашних работ

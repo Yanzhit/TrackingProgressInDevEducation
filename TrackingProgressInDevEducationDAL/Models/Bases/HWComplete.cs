@@ -24,6 +24,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Score = hwComplete.Score;
             CreatedOn = hwComplete.CreatedOn;
         }
+        public HWComplete(object obj) : base(obj)
+        {
+            var hwComplete = (HWComplete) obj;
+            HomeworkId = hwComplete.HomeworkId;
+            StudentId = hwComplete.StudentId;
+            Status = hwComplete.Status;
+            ApproveDate = hwComplete.ApproveDate;
+            Score = hwComplete.Score;
+            CreatedOn = hwComplete.CreatedOn;
+        }
 
         public override bool Equals(object obj)
         {

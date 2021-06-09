@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         /// <summary>
         /// Список типов комментариев для заполнения BD
         /// </summary>
-        public List<CType> CTypes;
+        public readonly List<CType> CTypes;
 
         /// <summary>
         /// Инициализация базы типов комментариев
@@ -21,10 +21,10 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             CTypes = new List<CType>
             {
-                new("Общий"),
-                new("Soft"),
-                new("Hard"),
-                new("Team")
+                new(new object[] {"Общий"}),
+                new(new object[] {"Soft"}),
+                new(new object[] {"Hard"}),
+                new(new object[] {"Team"})
             };
         }
     }

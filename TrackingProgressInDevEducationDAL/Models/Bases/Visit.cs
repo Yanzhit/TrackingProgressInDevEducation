@@ -18,6 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             StudentId = visit.StudentId;
             LectionId = visit.LectionId;
         }
+        public Visit(object  obj) : base(obj)
+        {
+            var visit = (Visit) obj;
+            VisitStatus = visit.VisitStatus;
+            StudentId = visit.StudentId;
+            LectionId = visit.LectionId;
+        }
 
         public override bool Equals(object obj)
         {

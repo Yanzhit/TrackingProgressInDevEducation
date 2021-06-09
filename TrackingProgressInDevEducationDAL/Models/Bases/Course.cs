@@ -18,7 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             StartedOn = course.StartedOn;
             FinishedOn = course.FinishedOn;
         }
-
+        public Course(object obj) : base(obj)
+        {
+            var course = (Course)obj;
+            Name = course.Name;
+            StartedOn = course.StartedOn;
+            FinishedOn = course.FinishedOn;
+        }
         public override bool Equals(object obj)
         {
             return Equals((Course)obj);

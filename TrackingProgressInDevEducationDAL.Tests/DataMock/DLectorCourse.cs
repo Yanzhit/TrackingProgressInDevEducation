@@ -21,13 +21,13 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             LectorCourses = new List<LectorCourse>
             {
-                new(1, 2),
-                new(2, 1),
-                new(3, 2),
-                new(2, 3),
-                new(3, 1),
-                new(2, 2),
-                new(2, 1)
+                new(new object[] {1, 2}),
+                new(new object[] {2, 1}),
+                new(new object[] {3, 2}),
+                new(new object[] {2, 3}),
+                new(new object[] {3, 1}),
+                new(new object[] {2, 2}),
+                new(new object[] {2, 1})
             };
         }
     }

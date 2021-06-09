@@ -21,11 +21,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Visits = new List<Visit>
             {
-                new(true, 3, 1),
-                new(true, 3, 4),
-                new(false, 2, 1),
-                new(false, 1, 3),
-                new(true, 3, 2),
+                new(new object[] {true, 3, 1}),
+                new(new object[] {true, 3, 4}),
+                new(new object[] {false, 2, 1}),
+                new(new object[] {false, 1, 3}),
+                new(new object[] {true, 3, 2}),
             };
         }
     }

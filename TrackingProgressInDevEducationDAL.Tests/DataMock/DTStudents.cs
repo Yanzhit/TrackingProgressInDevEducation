@@ -21,12 +21,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             TStudents = new List<TStudent>
             {
-                new(1,5),
-                new(2,2),
-                new(3,4),
-                new(4,1),
-                new(1,3),
-                new(2,5)
+                new(new object[] {1, 5}),
+                new(new object[] {2, 2}),
+                new(new object[] {3, 4}),
+                new(new object[] {4, 1}),
+                new(new object[] {1, 3}),
+                new(new object[] {2, 5})
             };
         }
     }

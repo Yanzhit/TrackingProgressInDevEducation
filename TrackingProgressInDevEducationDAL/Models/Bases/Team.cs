@@ -18,6 +18,13 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             From = team.From;
             To = team.To;
         }
+        public Team(object obj) : base(obj)
+        {
+            var team = (Team) obj;
+            Name = team.Name;
+            From = team.From;
+            To = team.To;
+        }
 
         public override bool Equals(object obj)
         {

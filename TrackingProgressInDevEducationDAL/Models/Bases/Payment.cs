@@ -22,6 +22,15 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Amount = payment.Amount;
             Status = payment.Status;
         }
+        public Payment(object obj) : base(obj)
+        {
+            var payment = (Payment) obj;
+            StudentId = payment.StudentId;
+            PaymentTo = payment.PaymentTo;
+            PaymentOn = payment.PaymentOn;
+            Amount = payment.Amount;
+            Status = payment.Status;
+        }
 
         public override bool Equals(object obj)
         {

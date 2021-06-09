@@ -15,8 +15,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewHWGroup()
         {
-            yield return new object[] { new QHWGroup(), new HWGroup(2, 1), 1 };
-            yield return new object[] { new QHWGroup(), new HWGroup(1, 2), 1 };
+            yield return new object[] { new QHWGroup(), new HWGroup(new object[] {2, 1}), 1 };
+            yield return new object[] { new QHWGroup(), new HWGroup(new object[] {1, 2}), 1 };
         }
 
         /// <summary>
