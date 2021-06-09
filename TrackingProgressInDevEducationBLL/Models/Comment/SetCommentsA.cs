@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationBLL.Models.Comment
 {
@@ -19,6 +15,35 @@ namespace TrackingProgressInDevEducationBLL.Models.Comment
         {
         }
 
+        public SetCommentsA(string text, int typeId, int studentId, int createdBy, int teamId, int estimation)
+        {
+            Text = text;
+            TypeId = typeId;
+            StudentId = studentId;
+            CreatedBy = createdBy;
+            TeamId = teamId;
+            Estimation = estimation;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((SetCommentsA)obj);
+        }
+
+        private bool Equals(SetCommentsA other)
+        {
+            return Text == other.Text
+                   && TypeId == other.TypeId
+                   && StudentId == other.StudentId
+                   && CreatedBy == other.CreatedBy
+                   && TeamId == other.TeamId
+                   && Estimation == other.Estimation;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId, Estimation);
+        }
 
     }
 }

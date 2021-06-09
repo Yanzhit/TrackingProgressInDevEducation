@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace TrackingProgressInDevEducationBLL.Models.Comment
 {
     public class SetCommentsQ : ADTOQuery
