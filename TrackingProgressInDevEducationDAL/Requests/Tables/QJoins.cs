@@ -27,11 +27,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = "";
             return this;
         }
-        public QJoins GetAllTeamsByLectorJ()
+        public QJoins GetAllTeamsByLectorJ(GetAllTeamsByLectorJ lectorJ)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetAllTeamsByLectorJ);
-            Params = "";
+            Params = $"{SepStr}{lectorJ.Id}{SepEnd}";
             return this;
         }
         public QJoins GetAllTestsByStudentIdJ()

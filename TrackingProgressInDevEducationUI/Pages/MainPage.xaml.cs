@@ -43,13 +43,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableGroup()
         {
-            //  GetGroupsByLectorA.ItemsSource = RenderGroup();
-            //List<GetGroupsByLectorA> getGroups = (List<GetGroupsByLectorA>)RenderGroup();
             GetGroupsByLectorA.ItemsSource = (List<GetGroupsByLectorA>)RenderGroup();
-            //foreach (var item in getGroups)
-            //{
-            //    GetGroupsByLectorA.Items.Add(item);
-            //}
         }
 
         private IEnumerable<GetGroupsByLectorA> RenderGroup()

@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationBLL.Models.MainPage
 {
-    class GetAllTeamsByLectorJA : ADTOAnswer
+    public class GetAllTeamsByLectorJA : ADTOAnswer
     {
         public string Name { get; set; }
         public string From { get; set; }
         public string To { get; set; }
+        public int StudentCount { get; set; }
 
         public GetAllTeamsByLectorJA()
         {
         }
 
-        public GetAllTeamsByLectorJA(int id, string name, string from, string to)
+        public GetAllTeamsByLectorJA(int id, string name, string from, string to, int studCount)
         {
             Id = id;
             Name = name;
             From = from;
             To = to;
+            StudentCount = studCount;
         }
 
         public override bool Equals(object obj)
@@ -32,14 +34,15 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
         private bool Equals(GetAllTeamsByLectorJA other)
         {
             return Id == other.Id
-                   &&Name == other.Name
+                   && Name == other.Name
                    && From == other.From
-                   && To == other.To;
+                   && To == other.To
+                   && StudentCount == other.StudentCount;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, From, To);
+            return HashCode.Combine(Id, Name, From, To, StudentCount);
         }
     }
 }

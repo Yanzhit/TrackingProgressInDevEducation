@@ -85,13 +85,11 @@
                   Grid.ColumnSpan="4" Grid.Row="3">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = ID}"  IsReadOnly="True" Header="ID" Width="30"/>
+                <DataGridTextColumn Binding ="{Binding Path = Id}"  IsReadOnly="True" Header="ID" Width="30"/>
                 <DataGridTextColumn Binding ="{Binding Path = Name}"  IsReadOnly="True" Header="Наименование" Width="150"/>
-                <DataGridTextColumn Binding ="{Binding Path = StockAmount}" IsReadOnly="True" Header="Остаток" Width="90"/>
-                <DataGridTextColumn Binding ="{Binding Path = MeasureUnitName}" IsReadOnly="True" Header="Ед. измер." Width="100" />
-                <DataGridTextColumn Binding ="{Binding Path = WholesalePrice}" IsReadOnly="True" Header="Цена опт." Width="100"/>
-                <DataGridTextColumn Binding ="{Binding Path = RetailPrice}" IsReadOnly="True" Header="Цена розн." Width="100"/>
-                <DataGridTextColumn Binding ="{Binding Path = LastSupplyDate}" IsReadOnly="True" Header="Дата последней поставки" Width="*"/>
+                <DataGridTextColumn Binding ="{Binding Path = From}" IsReadOnly="True" Header="Остаток" Width="90"/>
+                <DataGridTextColumn Binding ="{Binding Path = To}" IsReadOnly="True" Header="Ед. измер." Width="100" />
+                <DataGridTextColumn Binding ="{Binding Path = StudentCount}" IsReadOnly="True" Header="Цена опт." Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
 

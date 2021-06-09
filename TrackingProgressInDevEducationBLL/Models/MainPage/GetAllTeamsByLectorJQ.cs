@@ -6,21 +6,17 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationBLL.Models.MainPage
 {
-    class GetAllTeamsByLectorJQ : ADTOQuery
+    public class GetAllTeamsByLectorJQ : ADTOQuery
     {
-        public string Name { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
+        public int Id { get; set; }
 
         public GetAllTeamsByLectorJQ()
         {
         }
 
-        public GetAllTeamsByLectorJQ(string name, string from, string to)
+        public GetAllTeamsByLectorJQ(int id)
         {
-            Name = name;
-            From = from;
-            To = to;
+            Id = id;
         }
 
         public override bool Equals(object obj)
@@ -30,14 +26,12 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
 
         private bool Equals(GetAllTeamsByLectorJQ other)
         {
-            return Name == other.Name
-                   && From == other.From
-                   && To == other.To;
+            return Id == other.Id;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, From, To);
+            return HashCode.Combine(Id);
         }
     }
 }
