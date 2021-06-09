@@ -4,11 +4,11 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class TestComplete : AbstractModel
     {
-        public int TestId { get; }
-        public int StudentId { get; }
-        public bool Status { get; }
-        public string ApproveDate { get; }
-        public int? Score { get; }
+        public int TestId  { get; set; }
+        public int StudentId  { get; set; }
+        public bool Status  { get; set; }
+        public string ApproveDate  { get; set; }
+        public int? Score  { get; set; }
 
         public TestComplete()
         {

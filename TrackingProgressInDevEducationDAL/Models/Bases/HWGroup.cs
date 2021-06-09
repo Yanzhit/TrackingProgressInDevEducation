@@ -4,8 +4,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class HWGroup : AbstractModel
     {
-        public int HomeworkId { get; }
-        public int GroupId { get; }
+        public int HomeworkId  { get; set; }
+        public int GroupId  { get; set; }
 
         public HWGroup()
         {

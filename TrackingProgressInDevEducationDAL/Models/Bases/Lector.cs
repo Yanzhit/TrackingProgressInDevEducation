@@ -4,16 +4,25 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lector : AbstractModel
     {
-        public string Login { get; }
-        public string FullName { get; }
-        public string Email { get; }
-        public string Password { get; }
-        public bool IsActivated { get; }
+        public string Login { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public bool IsActivated { get; set; }
 
         public Lector()
         {
         }
 
+        public Lector(int id, string login, string fullName, string email, string password, bool isActivated)
+        {
+            Id = id;
+            Login = login;
+            FullName = fullName;
+            Email = email;
+            Password = password;
+            IsActivated = isActivated;
+        }
         public Lector(Lector lector) : base(lector)
         {
             Login = lector.Login;

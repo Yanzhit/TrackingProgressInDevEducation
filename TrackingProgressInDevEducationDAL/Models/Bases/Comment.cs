@@ -5,12 +5,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Comment : AbstractModel
     {
-        public string Text { get; }
-        public int TypeId { get;}
-        public int? StudentId { get; }
-        public int CreatedBy { get; }
-        public int? TeamId { get; }
-        public int? Estimation { get; }
+        public string Text { get; set; }
+        public int TypeId { get; set; }
+        public int? StudentId { get; set; }
+        public int CreatedBy { get; set; }
+        public int? TeamId { get; set; }
+        public int? Estimation { get; set; }
 
         public Comment()
         {

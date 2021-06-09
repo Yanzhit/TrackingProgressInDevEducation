@@ -42,11 +42,12 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void NewUser()
         {
-            var query = new SetLectorQ(_param["FullName"], _param["Email"],  _param["Password"]);
+            var query = new SetLectorQ(_param["Login"], _param["FullName"], _param["Email"],  _param["Password"]);
 
             SetLectorA answer = _operation.SetNewLector(query);
 
-            if (answer.FullName == _param["FullName"]
+            if (answer.Login == _param["Login"]
+                && answer.FullName == _param["FullName"]
                 && answer.Email == _param["Email"]
                 && answer.Password == _param["Password"])
             {
@@ -63,6 +64,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _param = new Dictionary<string, string>
             {
+                {"Login", LoginInput.Text},
                 {"FullName", FullNameInput.Text},
                 {"Email", EmailInput.Text},
                 {"Password", PasswordInput.Text}

@@ -4,11 +4,11 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Payment : AbstractModel
     {
-        public int StudentId { get; }
-        public string PaymentTo { get; }
-        public string PaymentOn { get; }
-        public decimal Amount { get; }
-        public bool Status { get; }
+        public int StudentId  { get; set; }
+        public string PaymentTo  { get; set; }
+        public string PaymentOn  { get; set; }
+        public decimal Amount  { get; set; }
+        public bool Status  { get; set; }
 
         public Payment()
         {

@@ -4,9 +4,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Visit : AbstractModel
     {
-        public bool VisitStatus { get; }
-        public int StudentId { get; }
-        public int LectionId { get; }
+        public bool VisitStatus  { get; set; }
+        public int StudentId  { get; set; }
+        public int LectionId  { get; set; }
 
         public Visit()
         {

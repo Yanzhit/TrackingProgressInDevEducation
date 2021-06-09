@@ -4,8 +4,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Homework : AbstractModel
     {
-        public string Name { get; }
-        public string Deskription { get; }
+        public string Name  { get; set; }
+        public string Deskription  { get; set; }
 
         public Homework()
         {

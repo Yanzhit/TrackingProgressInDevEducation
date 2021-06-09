@@ -4,6 +4,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
 {
     public class SetLectorA : ADTOAnswer
     {
+        public string Login { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -12,8 +13,9 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
         {
         }
 
-        public SetLectorA(string fullName, string email, string password)
+        public SetLectorA(string login, string fullName, string email, string password)
         {
+            Login = login;
             FullName = fullName;
             Email = email;
             Password = password;
