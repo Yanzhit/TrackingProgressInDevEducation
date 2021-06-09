@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
         }
 
-        public Student(Student student) : base(student.Id)
+        public Student(Student student) : base(student)
         {
             Name = student.Name;
             Surname = student.Surname;
@@ -45,6 +45,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         private bool Equals(Student actual)
         {
             return actual != null
+                   && Id == actual.Id
                    && Name == actual.Name
                    && Surname == actual.Surname
                    && Rate == actual.Rate
@@ -63,6 +64,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             var hashCode = new HashCode();
             hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
             hashCode.Add(Name);
             hashCode.Add(Surname);
             hashCode.Add(Rate);

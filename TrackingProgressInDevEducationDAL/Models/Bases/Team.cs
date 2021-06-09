@@ -4,19 +4,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Team : AbstractModel
     {
-        public string Name { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
+        public string Name { get; }
+        public string From { get; }
+        public string To { get; }
 
         public Team()
         {
         }
 
-        public Team(string name, string from, string to)
+        public Team(Team team) : base(team)
         {
-            Name = name;
-            From = from;
-            To = to;
+            Name = team.Name;
+            From = team.From;
+            To = team.To;
         }
 
         public override bool Equals(object obj)
@@ -26,14 +26,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Team other)
         {
-            return Name == other.Name
+            return Id == other.Id 
+                   && Name == other.Name
                    && From == other.From
                    && To == other.To;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, From, To);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            hashCode.Add(From);
+            hashCode.Add(To);
+            return hashCode.ToHashCode();
         }
     }
 }

@@ -6,9 +6,9 @@
         protected AbstractModel()
         {
         }
-        protected AbstractModel(int id)
+        protected AbstractModel(AbstractModel model)
         {
-            Id = id;
+            Id = model.Id;
         }
 
         public override bool Equals(object obj)

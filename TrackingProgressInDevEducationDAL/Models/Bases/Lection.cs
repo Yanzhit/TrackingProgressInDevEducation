@@ -4,19 +4,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lection : AbstractModel
     {
-        public int GroupId { get; set; }
-        public int LectorId { get; set; }
-        public string StartedOn { get; set; }
+        public int GroupId { get; }
+        public int LectorId { get; }
+        public string StartedOn { get; }
 
         public Lection()
         {
         }
 
-        public Lection(int groupId, int lectorId, string startedOn)
+        public Lection(Lection lection) : base(lection)
         {
-            GroupId = groupId;
-            LectorId = lectorId;
-            StartedOn = startedOn;
+            GroupId = lection.GroupId;
+            LectorId = lection.LectorId;
+            StartedOn = lection.StartedOn;
         }
 
         public override bool Equals(object obj)
@@ -26,14 +26,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Lection other)
         {
-            return GroupId == other.GroupId
+            return Id == other.Id
+                   && GroupId == other.GroupId
                    && LectorId == other.LectorId
                    && StartedOn == other.StartedOn;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(GroupId, LectorId, StartedOn);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(GroupId);
+            hashCode.Add(LectorId);
+            hashCode.Add(StartedOn);
+            return hashCode.ToHashCode();
         }
     }
 }

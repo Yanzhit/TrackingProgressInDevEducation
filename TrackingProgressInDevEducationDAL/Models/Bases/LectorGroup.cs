@@ -4,17 +4,17 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class LectorGroup : AbstractModel
     {
-        public int LectorId { get; set; }
-        public int GroupId { get; set; }
+        public int LectorId { get; }
+        public int GroupId { get; }
 
         public LectorGroup()
         {
         }
 
-        public LectorGroup(int lectorId, int groupId)
+        public LectorGroup(LectorGroup lectorGroup) : base(lectorGroup)
         {
-            LectorId = lectorId;
-            GroupId = groupId;
+            LectorId = lectorGroup.LectorId;
+            GroupId = lectorGroup.GroupId;
         }
 
         public override bool Equals(object obj)
@@ -24,13 +24,17 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(LectorGroup other)
         {
-            return LectorId == other.LectorId
+            return Id == other.Id
+                   && LectorId == other.LectorId
                    && GroupId == other.GroupId;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(LectorId, GroupId);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            return hashCode.ToHashCode();
         }
     }
 }

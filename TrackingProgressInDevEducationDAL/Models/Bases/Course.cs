@@ -4,19 +4,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Course : AbstractModel
     {
-        public string Name { get; set; }
-        public string StartedOn { get; set; }
-        public string FinishedOn { get; set; }
+        public string Name { get; }
+        public string StartedOn { get; }
+        public string FinishedOn { get; }
 
         public Course()
         {
         }
 
-        public Course(string name, string startedOn, string finishedOn, int id) : base(id)
+        public Course(Course course) : base(course)
         {
-            Name = name;
-            StartedOn = startedOn;
-            FinishedOn = finishedOn;
+            Name = course.Name;
+            StartedOn = course.StartedOn;
+            FinishedOn = course.FinishedOn;
         }
 
         public override bool Equals(object obj)
@@ -26,14 +26,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Course other)
         {
-            return Name == other.Name
+            return Id == other.Id
+                   && Name == other.Name
                    && StartedOn == other.StartedOn
                    && FinishedOn == other.FinishedOn;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, StartedOn, FinishedOn);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            hashCode.Add(StartedOn);
+            hashCode.Add(FinishedOn);
+            return hashCode.ToHashCode();
         }
     }
 }

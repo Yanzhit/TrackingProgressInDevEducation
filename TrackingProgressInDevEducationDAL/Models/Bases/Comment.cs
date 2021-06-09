@@ -1,36 +1,29 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 
 namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Comment : AbstractModel
     {
-        public string Text { get; set; }
-        public int TypeId { get; set; }
-        public int? StudentId { get; set; }
-        public int CreatedBy { get; set; }
-        public int? TeamId { get; set; }
-        public decimal? Estimation { get; set; }
+        public string Text { get; }
+        public int TypeId { get;}
+        public int? StudentId { get; }
+        public int CreatedBy { get; }
+        public int? TeamId { get; }
+        public int? Estimation { get; }
 
         public Comment()
         {
         }
 
-        public Comment
-            (
-                string text,
-                int typeId,
-                int? studentId,
-                int createdBy,
-                int? teamId,
-                int? estimation,
-                int id) : base(id)
+        public Comment(Comment comment) : base(comment)
         {
-            Text = text;
-            TypeId = typeId;
-            StudentId = studentId;
-            CreatedBy = createdBy;
-            TeamId = teamId;
-            Estimation = estimation;
+            Text = comment.Text;
+            TypeId = comment.TypeId;
+            StudentId = comment.StudentId;
+            CreatedBy = comment.CreatedBy;
+            TeamId = comment.TeamId;
+            Estimation = comment.Estimation;
         }
         public override bool Equals(object obj)
         {
@@ -39,7 +32,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Comment other)
         {
-            return Text == other.Text
+            return Id == other.Id
+                   && Text == other.Text
                    && TypeId == other.TypeId
                    && StudentId == other.StudentId
                    && CreatedBy == other.CreatedBy
@@ -49,7 +43,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId, Estimation);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Text);
+            hashCode.Add(TypeId);
+            hashCode.Add(StudentId);
+            hashCode.Add(CreatedBy);
+            hashCode.Add(TeamId);
+            hashCode.Add(Estimation);
+            return hashCode.ToHashCode();
         }
     }
 }

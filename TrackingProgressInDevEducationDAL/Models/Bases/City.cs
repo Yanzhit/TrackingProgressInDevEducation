@@ -1,16 +1,18 @@
-﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
+﻿using System;
+
+namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class City : AbstractModel
     {
-        public string Name { get; set; }
+        public string Name { get; }
         
         public City()
         {
         }
 
-        public City(string name, int id) : base(id)
+        public City(City city) : base(city)
         {
-            Name = name;
+            Name = city.Name;
         }
         public override bool Equals(object obj)
         {
@@ -19,12 +21,17 @@
 
         private bool Equals(City other)
         {
-            return Name == other.Name;
+            return Id == other.Id 
+                && Name == other.Name;
         }
 
         public override int GetHashCode()
         {
-            return (Name != null ? Name.GetHashCode() : 0);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            return hashCode.ToHashCode();
         }
     }
 }

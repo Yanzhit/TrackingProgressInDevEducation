@@ -4,25 +4,25 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class HWComplete : AbstractModel
     {
-        public int HomeworkId { get; set; }
-        public int StudentId { get; set; }
-        public bool Status { get; set; }
-        public string ApproveDate { get; set; }
-        public int? Score { get; set; }
-        public string CreatedOn { get; set; }
+        public int HomeworkId { get; }
+        public int StudentId { get; }
+        public bool Status { get; }
+        public string ApproveDate { get; }
+        public int? Score { get; }
+        public string CreatedOn { get; }
 
         public HWComplete()
         {
         }
 
-        public HWComplete(int homeworkId, int studentId, bool status, string approveDate, int? score, string createdOn)
+        public HWComplete(HWComplete hwComplete) : base(hwComplete)
         {
-            HomeworkId = homeworkId;
-            StudentId = studentId;
-            Status = status;
-            ApproveDate = approveDate;
-            Score = score;
-            CreatedOn = createdOn;
+            HomeworkId = hwComplete.HomeworkId;
+            StudentId = hwComplete.StudentId;
+            Status = hwComplete.Status;
+            ApproveDate = hwComplete.ApproveDate;
+            Score = hwComplete.Score;
+            CreatedOn = hwComplete.CreatedOn;
         }
 
         public override bool Equals(object obj)
@@ -32,7 +32,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(HWComplete other)
         {
-            return HomeworkId == other.HomeworkId
+            return Id == other.Id
+                   && HomeworkId == other.HomeworkId
                    && StudentId == other.StudentId
                    && Status == other.Status
                    && ApproveDate == other.ApproveDate
@@ -41,7 +42,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         }
         public override int GetHashCode()
         {
-            return HashCode.Combine(HomeworkId, StudentId, Status, ApproveDate, Score, CreatedOn);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(HomeworkId);
+            hashCode.Add(StudentId);
+            hashCode.Add(Status);
+            hashCode.Add(ApproveDate);
+            hashCode.Add(Score);
+            hashCode.Add(CreatedOn);
+            return hashCode.ToHashCode();
         }
     }
 }

@@ -4,17 +4,17 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Homework : AbstractModel
     {
-        public string Name { get; set; }
-        public string Deskription { get; set; }
+        public string Name { get; }
+        public string Deskription { get; }
 
         public Homework()
         {
         }
 
-        public Homework(string name, string deskription)
+        public Homework(Homework homework) : base(homework)
         {
-            Name = name;
-            Deskription = deskription;
+            Name = homework.Name;
+            Deskription = homework.Deskription;
         }
 
         public override bool Equals(object obj)
@@ -24,13 +24,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Homework other)
         {
-            return Name == other.Name
+            return Id == other.Id
+                   && Name == other.Name
                    && Deskription == other.Deskription;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Deskription);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            hashCode.Add(Deskription);
+            return hashCode.ToHashCode();
         }
     }
 }
