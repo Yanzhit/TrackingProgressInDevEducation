@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -21,6 +22,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class StudentRate : Page
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
+        private readonly OperationLogics _operation = new OperationLogics();
         public StudentRate()
         {
             InitializeComponent();
@@ -30,6 +32,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
             _contents.MainPage();
+        }
+
+        private void BAddComentStudent_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
