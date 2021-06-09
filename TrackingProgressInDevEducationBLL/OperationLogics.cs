@@ -5,6 +5,8 @@ using TrackingProgressInDevEducationBLL.Models.Verification;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.Models;
+using TrackingProgressInDevEducationBLL.Models.NewStudent;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -42,6 +44,13 @@ namespace TrackingProgressInDevEducationBLL
             return _bllManager.GroupsA.SetNewGroup(modelReturned);
         }
 
+        public SetNewStudentA SetNewStudent(SetNewStudentQ setNewStudentQ)
+        {
+            var model = (Student)_bllManager.NewStudentQ.SetNewStudent(setNewStudentQ);
+            Student modelReturned = _dalManager.Students.SetNewStudent(model);
+            return _bllManager.NewStudentA.SetNewStudent(modelReturned);
+        }
+
         public SetLectorA SetNewLector(SetLectorQ setLectorQ)
         {
             var model = (Lector)_bllManager.RegistrationsQ.SetNewLector(setLectorQ);
@@ -55,11 +64,19 @@ namespace TrackingProgressInDevEducationBLL
             Lector modelReturned = _dalManager.Lectors.UpdateAcrivationLector(model);
             return _bllManager.VerificationsA.UpdateActivationLector(modelReturned);
         }
+
         public List<SetCoursesA> GetAllCurses(SetCoursesQ setCoursesQ)
         {
             _bllManager.CoursesQ.GetAllCourses(setCoursesQ);
             IEnumerable<Course> modelReturned = _dalManager.Courses.GetAllCourses();
             return (List<SetCoursesA>)_bllManager.CoursesA.GetSetCourses(modelReturned);
+        }
+
+        public List<SetCityA> GetAllCities(EmptyQ emptyQ)
+        {
+            var model = (City)_bllManager.CityQ.GetAllCities(emptyQ);
+            IEnumerable<City> modelReturned = _dalManager.Cities.GetAllCities();
+            return (List<SetCityA>)_bllManager.CityA.GetAllCities(modelReturned);
         }
     }
 }

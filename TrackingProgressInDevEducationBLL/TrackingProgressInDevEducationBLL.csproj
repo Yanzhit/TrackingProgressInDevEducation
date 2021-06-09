@@ -13,7 +13,6 @@
     <Compile Remove="Models\GroupJournal\**" />
     <Compile Remove="Models\Home\**" />
     <Compile Remove="Models\MyProfile\**" />
-    <Compile Remove="Models\NewStudent\**" />
     <Compile Remove="Models\StudentProfile\**" />
     <Compile Remove="Models\StudentRate\**" />
     <Compile Remove="Models\Students\**" />
@@ -27,7 +26,6 @@
     <EmbeddedResource Remove="Models\GroupJournal\**" />
     <EmbeddedResource Remove="Models\Home\**" />
     <EmbeddedResource Remove="Models\MyProfile\**" />
-    <EmbeddedResource Remove="Models\NewStudent\**" />
     <EmbeddedResource Remove="Models\StudentProfile\**" />
     <EmbeddedResource Remove="Models\StudentRate\**" />
     <EmbeddedResource Remove="Models\Students\**" />
@@ -41,7 +39,6 @@
     <None Remove="Models\GroupJournal\**" />
     <None Remove="Models\Home\**" />
     <None Remove="Models\MyProfile\**" />
-    <None Remove="Models\NewStudent\**" />
     <None Remove="Models\StudentProfile\**" />
     <None Remove="Models\StudentRate\**" />
     <None Remove="Models\Students\**" />

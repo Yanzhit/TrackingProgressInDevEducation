@@ -8,16 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NewStudent">
 
-    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,0,-250" HorizontalAlignment="Left" Width="900">
+    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250">
         <Label x:Name="LNamePage" Content="Создание нового студента" HorizontalAlignment="Center" Height="72" Margin="0,11,0,0" VerticalAlignment="Top" Width="308" FontSize="23" FontWeight="Bold"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="623" Margin="0,67,0,0" VerticalAlignment="Top" Width="880" Background="#FFF9EFEF">
-            <Label x:Name="LSurname" Content="Фамилия" HorizontalAlignment="Left" Height="34" Margin="105,18,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LSurname" Content="Фамилия*" HorizontalAlignment="Left" Height="34" Margin="105,18,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBSurname" HorizontalAlignment="Left" Height="34" Margin="435,18,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
-            <Label x:Name="LName" Content="Имя" HorizontalAlignment="Left" Height="34" Margin="105,57,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LName" Content="Имя*" HorizontalAlignment="Left" Height="34" Margin="105,57,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBName" HorizontalAlignment="Left" Height="34" Margin="435,57,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
-            <Label x:Name="LPhone" Content="Телефон" HorizontalAlignment="Left" Height="34" Margin="105,217,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LPhone" Content="Телефон*" HorizontalAlignment="Left" Height="34" Margin="105,217,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBPhone" HorizontalAlignment="Left" Height="34" Margin="435,217,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
             <Label x:Name="LEmail" Content="Email" HorizontalAlignment="Left" Height="34" Margin="105,257,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
@@ -26,16 +26,16 @@
             <Label x:Name="LContractNumber" Content="Номер контракта" HorizontalAlignment="Left" Height="36" Margin="105,135,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBContractNumber" HorizontalAlignment="Left" Height="36" Margin="435,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
-            <Label x:Name="LBirthday" Content="Дата рождения" HorizontalAlignment="Left" Height="34" Margin="105,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="34" Margin="105,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBBirthday" HorizontalAlignment="Left" Height="34" Margin="435,336,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
 
-            <Button x:Name="BCreateCurses" Content="Создать" HorizontalAlignment="Left" Height="28" Margin="642,408,0,0" VerticalAlignment="Top" Width="182" FontSize="18" Background="#FFE1909F"/>
-            <Label x:Name="LMiddleName" Content="Отчество" HorizontalAlignment="Left" Height="36" Margin="105,95,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Button x:Name="BCreateStudent" Content="Создать" HorizontalAlignment="Left" Height="28" Margin="642,408,0,0" VerticalAlignment="Top" Width="182" FontSize="18" Background="#FFE1909F" Click="BCreateStudent_Click"/>
+            <Label x:Name="LMiddleName" Content="Отчество*" HorizontalAlignment="Left" Height="36" Margin="105,95,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBMiddleName" HorizontalAlignment="Left" Height="34" Margin="435,96,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
             <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="36" Margin="105,176,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBCity" HorizontalAlignment="Left" Height="36" Margin="435,176,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
             <Label x:Name="LGit" Content="Git" HorizontalAlignment="Left" Height="34" Margin="105,297,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <TextBox x:Name="TBGit" HorizontalAlignment="Left" Height="34" Margin="435,297,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="435,176,0,0" VerticalAlignment="Top" Width="389" Height="36"/>
         </Grid>
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
             <Button.Background>
