@@ -14,15 +14,6 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
         }
 
-        public Lector(int id, string login, string fullName, string email, string password, bool isActivated)
-        {
-            Id = id;
-            Login = login;
-            FullName = fullName;
-            Email = email;
-            Password = password;
-            IsActivated = isActivated;
-        }
         public Lector(Lector lector) : base(lector)
         {
             Login = lector.Login;

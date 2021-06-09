@@ -1,6 +1,5 @@
 ﻿using System;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers

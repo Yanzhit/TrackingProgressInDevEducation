@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void Check_Click(object sender, RoutedEventArgs e)
         {
-            if (_key == Convert.ToInt32(InputKey.Text))
+            if (_key.ToString() == InputKey.Text)
             {
                 Info.Text = Defines.Congratulation;
                 var query = new UpdLectorQ(_id, true);
