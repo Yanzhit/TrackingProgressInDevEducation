@@ -48,11 +48,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = "";
             return this;
         }
-        public QJoins GetGroupByLectorJ(GetGroupByLectorJ lector)
+        public QJoins GetGroupsByLectorJ(GetGroupByLectorJ lector)
         {
             ModelType = typeof(GetGroupByLectorJ);
             QueryType = typeof(Getter);
-            Name = nameof(GetGroupByLectorJ);
+            Name = nameof(GetGroupsByLectorJ);
             Params = $"{SepStr}{lector.Id}{SepEnd}";
             return this;
         }

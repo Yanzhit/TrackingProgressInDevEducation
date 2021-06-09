@@ -70,10 +70,10 @@
         
             <DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Id}"  IsReadOnly="True" Header="ID" Width="30"/>
-                <DataGridTextColumn Binding ="{Binding Path = Name}"  IsReadOnly="True" Header="Наименование" Width="150"/>
-                <DataGridTextColumn Binding ="{Binding Path = CourseId}" IsReadOnly="True" Header="Курс" Width="90"/>
+                <DataGridTextColumn Binding ="{Binding Path = NameG}"  IsReadOnly="True" Header="Группа" Width="150"/>
                 <DataGridTextColumn Binding ="{Binding Path = StartDate}" IsReadOnly="True" Header="Дата начала" Width="100" />
                 <DataGridTextColumn Binding ="{Binding Path = EndDate}" IsReadOnly="True" Header="Дата конца" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = NameC}"  IsReadOnly="True" Header="Курс" Width="150"/>
             </DataGrid.Columns>
         </DataGrid>
 

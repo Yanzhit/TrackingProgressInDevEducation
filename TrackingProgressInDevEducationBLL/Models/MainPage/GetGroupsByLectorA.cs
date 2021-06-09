@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace TrackingProgressInDevEducationBLL.Models.MainPage
 {
-    public class GetGroupsByLectorA: ADTOAnswer
+    public class GetGroupsByLectorA : ADTOAnswer
     {
-        public string Name { get; set; }
-        public int CourseId { get; set; }
+        public string NameG { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public string NameC { get; set; }
 
         public GetGroupsByLectorA()
         {
         }
 
-        public GetGroupsByLectorA(int id, string name, int courseId, string startDate, string endDate)
+        public GetGroupsByLectorA(int id, string nameG, string startDate, string endDate, string nameC)
         {
             Id = id;
-            Name = name;
-            CourseId = courseId;
+            NameG = nameG;
             StartDate = startDate;
             EndDate = endDate;
+            NameC = nameC;
         }
 
         public override bool Equals(object obj)
@@ -34,15 +34,15 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
         private bool Equals(GetGroupsByLectorA other)
         {
             return Id == other.Id
-                   && Name == other.Name
-                   && CourseId == other.CourseId
+                   && NameG == other.NameG
                    && StartDate == other.StartDate
-                   && EndDate == other.EndDate;
+                   && EndDate == other.EndDate
+                   && NameC == other.NameC;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Name, CourseId, StartDate, EndDate);
+            return HashCode.Combine(Id, NameG, StartDate, EndDate, NameC);
         }
     }
 }
