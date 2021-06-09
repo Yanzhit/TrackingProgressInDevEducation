@@ -37,7 +37,7 @@
             <TextBox x:Name="TBGit" HorizontalAlignment="Left" Height="34" Margin="435,297,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
             <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="435,176,0,0" VerticalAlignment="Top" Width="389" Height="36"/>
             <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="36" Margin="105,461,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="435,461,0,0" VerticalAlignment="Top" Width="389" Height="36" SelectionChanged="CBChangeGroup_SelectionChanged"/>
+            <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="435,461,0,0" VerticalAlignment="Top" Width="389" Height="36"/>
         </Grid>
         <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
             <Button.Background>

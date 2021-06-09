@@ -29,6 +29,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             InitializeComponent();
             GetCitiesInPage();
+            GetGroups();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -49,9 +50,10 @@ namespace TrackingProgressInDevEducationUI.Pages
             {
                 CBChangeCity.Items.Add(city.Name);
             }
+            CBChangeCity.SelectedIndex = 0;
         }
 
-        private void CBChangeGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void GetGroups()
         {
             List<GetGroupsA> answer = _operation.GetGroups(new EmptyQ());
             {
@@ -59,6 +61,7 @@ namespace TrackingProgressInDevEducationUI.Pages
                 {
                     CBChangeGroup.Items.Add(group.Name);
                 }
+                CBChangeGroup.SelectedIndex = 0;
             }
         }
     }
