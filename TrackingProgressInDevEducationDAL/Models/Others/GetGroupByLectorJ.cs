@@ -18,15 +18,22 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
         {
         }
 
-        public GetGroupByLectorJ(int id, string nameG, string startDate, 
-            string endDate, string nameC, int studCount)
+        public GetGroupByLectorJ(GetGroupByLectorJ lectorJ) : base(lectorJ)
         {
-            Id = id;
-            NameG = nameG;
-            StartDate = startDate;
-            EndDate = endDate;
-            NameG = nameG;
-            StudCount = studCount;
+            NameG = lectorJ.NameG;
+            StartDate = lectorJ.StartDate;
+            EndDate = lectorJ.EndDate;
+            NameG = lectorJ.NameG;
+            StudCount = lectorJ.StudCount;
+        }
+        public GetGroupByLectorJ(object obj) : base(obj)
+        {
+            var lectorJ = (GetGroupByLectorJ) obj;
+            NameG = lectorJ.NameG;
+            StartDate = lectorJ.StartDate;
+            EndDate = lectorJ.EndDate;
+            NameG = lectorJ.NameG;
+            StudCount = lectorJ.StudCount;
         }
 
         public override bool Equals(object obj)
