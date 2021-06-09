@@ -23,10 +23,5 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             Answer = typeof(GetAllTeamsByLectorJA);
             return this;
         }
-
-        internal ATransfer GetGroupByLectorJ()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

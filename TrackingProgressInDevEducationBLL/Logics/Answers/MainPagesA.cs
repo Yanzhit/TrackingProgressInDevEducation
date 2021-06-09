@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
     {
         public IEnumerable<GetGroupsByLectorA> GetGroupsByLectorA(IEnumerable<AbstractModel> model)
         {
-            WriteTypes(new MainPage().GetGroupByLectorJ());
+            WriteTypes(new MainPage().GetGroupsByLectorJ());
             return (IEnumerable<GetGroupsByLectorA>)GetModelBaseSeveral(model);
         }
     }
