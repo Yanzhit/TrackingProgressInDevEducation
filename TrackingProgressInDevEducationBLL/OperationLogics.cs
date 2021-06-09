@@ -57,7 +57,7 @@ namespace TrackingProgressInDevEducationBLL
         }
         public List<SetCoursesA> GetAllCurses(SetCoursesQ setCoursesQ)
         {
-            var model = (Course)_bllManager.CoursesQ.GetAllCourses(setCoursesQ);
+            _bllManager.CoursesQ.GetAllCourses(setCoursesQ);
             IEnumerable<Course> modelReturned = _dalManager.Courses.GetAllCourses();
             return (List<SetCoursesA>)_bllManager.CoursesA.GetSetCourses(modelReturned);
         }

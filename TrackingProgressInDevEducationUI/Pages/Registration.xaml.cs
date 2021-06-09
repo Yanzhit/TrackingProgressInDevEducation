@@ -94,7 +94,6 @@ namespace TrackingProgressInDevEducationUI.Pages
                 InfoText.Text +=  $"{ExcepPasswordRepeat}{NewLine}";
                 tmp = false;
             }
-
             return tmp;
         }
 

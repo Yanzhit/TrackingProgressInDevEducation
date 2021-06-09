@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
-namespace TrackingProgressInDevEducationDAL.Facades
+namespace TrackingProgressInDevEducationDAL.Models.Facades
 {
     public class Courses : AFacade
     {
