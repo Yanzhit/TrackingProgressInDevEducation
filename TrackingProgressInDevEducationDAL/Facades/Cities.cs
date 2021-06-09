@@ -22,7 +22,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Получить все города
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<City> GetAllCities()
+        public IEnumerable<City> GetCities()
         {
             return (IEnumerable<City>)Manager.Getter.Several(_query.GetAllCities());
         }

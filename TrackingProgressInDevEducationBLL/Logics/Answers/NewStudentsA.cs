@@ -27,10 +27,16 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             return (SetNewStudentA) GetModelBaseSingle(model);
         }
 
-        public IEnumerable<SetCityA> GetAllCities(IEnumerable<AbstractModel> model)
+        public IEnumerable<GetCityA> GetCities(IEnumerable<AbstractModel> model)
         {
-            WriteTypes(new NewStudents().GetAllCities());
-            return (IEnumerable<SetCityA>)GetModelBaseSeveral(model);
+            WriteTypes(new NewStudents().GetCities());
+            return (IEnumerable<GetCityA>)GetModelBaseSeveral(model);
+        }
+
+        public IEnumerable<GetGroupsA> GetGroups(IEnumerable<AbstractModel> model)
+        {
+            WriteTypes(new NewStudents().GetGroups());
+            return (IEnumerable<GetGroupsA>)GetModelBaseSeveral(model);
         }
     }
 }

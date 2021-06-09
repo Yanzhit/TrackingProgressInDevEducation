@@ -7,4 +7,3 @@
     CONSTRAINT [PK_GROUPS] PRIMARY KEY CLUSTERED ([id] ASC),
     CONSTRAINT [Group_fk0] FOREIGN KEY ([CourseId]) REFERENCES [TrackingProgressInDevEducationDB].[Courses] ([id])
 );
-

@@ -82,7 +82,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             var param = new Dictionary<string, string>
             {
                 {"FullName", answer.FullName},
-                {"Login", answer.Login}
+                {"Email", answer.Email}
             };
             int key = service.SmtpRun(param);
             _contents.Verification(key, answer.Id);

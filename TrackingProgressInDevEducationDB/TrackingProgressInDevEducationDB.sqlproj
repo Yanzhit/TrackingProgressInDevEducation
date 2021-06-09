@@ -189,7 +189,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetCommentTypeById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetCommentTypes.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetCourseById.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetGroups.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetHWByGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetHWById.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Others\GetHWGroupById.sql" />
@@ -248,6 +247,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetGroupsByLectorJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdEmailLectors.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroups.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

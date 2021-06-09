@@ -34,7 +34,7 @@
         public const string ErrorActive2 = "Мы с радостью поможем решить вашу проблему";
 
         public const int EmailCharMin = 6;
-        public const int EmailCharMax = 20;
+        public const int EmailCharMax = 30;
         public const int PasswordCharMin = 3;
         public const int PasswordCharMax = 12;
         public const int FullNameCharMin = 6;

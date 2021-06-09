@@ -10,23 +10,24 @@ using TrackingProgressInDevEducationDAL.Models;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
-    /// <summary>
-    /// Создать новую группу
-    /// </summary>
-    /// <param name="setGroupQ">Модель с данными для запроса</param>
-    /// <returns>Абстрактную модель данных после ответа от сервера</returns>
     public class NewStudentsQ : AQuery
     {
-        public AbstractModel SetNewStudent(SetNewStudentQ setNewStudentQ)
+        public AbstractModel SetNewStudent(SetNewStudentQ query)
         {
             WriteTypes(new NewStudents().SetNewStudent());
-            return GetModelBaseSingle(setNewStudentQ);
+            return GetModelBaseSingle(query);
         }
 
-        public AbstractModel GetAllCities(EmptyQ setCityQ)
+        public AbstractModel GetCities(EmptyQ query)
         {
-            WriteTypes(new NewStudents().GetAllCities());
-            return GetModelBaseSingle(setCityQ);
+            WriteTypes(new NewStudents().GetCities());
+            return GetModelBaseSingle(query);
+        }
+        
+        public AbstractModel GetGroups(EmptyQ query)
+        {
+            WriteTypes(new NewStudents().GetGroups());
+            return GetModelBaseSingle(query);
         }
     }
 }

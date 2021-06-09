@@ -3,7 +3,7 @@
     [Name]    NVARCHAR (50)  NULL,
     [Surname] NVARCHAR (50)  NULL,
     [Rate]    INT NULL,
-    [GroupId] INT NULL, 
+    [GroupId] INT NULL DEFAULT 2, 
     [Phone] NVARCHAR(50) NULL, 
     [Email] NVARCHAR(50) NULL, 
     [Contract] NVARCHAR(50) NULL, 
