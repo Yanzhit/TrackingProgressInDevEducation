@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using static TrackingProgressInDevEducationDAL.Defines;
 //ZLoo (Свойства все, Методы(SetNewGroup, NullifyGroups)
@@ -28,13 +29,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QGroup GetGroupsByLector(Group group)
-        {
-            QueryType = typeof(Getter);
-            Name = GetType().Name;
-            Params = $"{SepStr}{group.Id}{SepEnd}"; // Либо в модели поля не хватает, либо что-то не то с запросом, проверить!
-            return this;
-        }
+       
 
         /// <summary>
         /// Обнуление таблицы групп и ключа identity

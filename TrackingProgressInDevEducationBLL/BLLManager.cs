@@ -63,5 +63,7 @@ namespace TrackingProgressInDevEducationBLL
         public RegistrationsA RegistrationsA => new();
         public VerificationsQ VerificationsQ => new();
         public VerificationsA VerificationsA => new();
+        public MainPagesA MainPagesA => new();
+        public MainPagesQ MainPagesQ => new();
     }
 }

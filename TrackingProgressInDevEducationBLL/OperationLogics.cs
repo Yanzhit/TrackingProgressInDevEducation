@@ -7,6 +7,8 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
+using TrackingProgressInDevEducationBLL.Models.MainPage;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -70,6 +72,13 @@ namespace TrackingProgressInDevEducationBLL
             _bllManager.CoursesQ.GetAllCourses(setCoursesQ);
             IEnumerable<Course> modelReturned = _dalManager.Courses.GetAllCourses();
             return (List<SetCoursesA>)_bllManager.CoursesA.GetSetCourses(modelReturned);
+        }
+
+        public List<GetGroupsByLectorA> GetGroupsByLector(GetGroupsByLectorQ getGroupsByLectorQ)
+        {
+            var model = (GetGroupByLectorJ)_bllManager.MainPagesQ.GetGroupsByLectorQ(getGroupsByLectorQ);
+            IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
+            return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorA(modelReturned);
         }
 
         public List<SetCityA> GetAllCities(EmptyQ emptyQ)

@@ -33,6 +33,12 @@ namespace TrackingProgressInDevEducationDAL
         /// <summary>
         /// Фасад для выполненного дз.
         /// </summary>
+        /// 
+        public Joins Joins => new();
+
+        /// <summary>
+        /// Фасад для выполненного дз.
+        /// </summary>
         public HWCompletes HWCompletes => new();
 
         /// <summary>
