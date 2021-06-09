@@ -35,5 +35,16 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.Course();
         }
+
+        private void BLogout_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.Lector = null;
+            _contents.SignIn();
+        }
+
+        private void BChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

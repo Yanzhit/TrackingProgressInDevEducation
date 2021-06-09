@@ -22,12 +22,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Lectors = new List<Lector>
             {
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ")
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
+                new("Wood","Петров Митя М", "iieqw@MailAddress.ru", "QQQ")
             };
         }
     }

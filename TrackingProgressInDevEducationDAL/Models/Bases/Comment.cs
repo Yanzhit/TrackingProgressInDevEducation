@@ -22,8 +22,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
                 int? studentId,
                 int createdBy,
                 int? teamId,
-                decimal? estimation
-            )
+                int? estimation,
+                int id) : base(id)
         {
             Text = text;
             TypeId = typeId;

@@ -3,10 +3,11 @@
 	@Password nvarchar (50)
 AS
 	SELECT [id]
+	,[Login]
     ,[FullName]
     ,[Email] 
     ,[Password]
 	,[IsActivated]
 
 	FROM [TrackingProgressInDevEducationDB].[Lectors]
-	WHERE [Email] = @Login AND [Password] = @Password
+	WHERE [Login] = @Login AND [Password] = @Password

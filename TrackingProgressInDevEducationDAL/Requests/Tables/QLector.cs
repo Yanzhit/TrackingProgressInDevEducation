@@ -32,7 +32,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         {
             QueryType = typeof(Getter);
             Name = nameof(GetLectorByLoginAndPassword);
-            Params = $"{SepStr}{lector.Email}{SepMid}{lector.Password}{SepEnd}";
+            Params = $"{SepStr}{lector.Login}{SepMid}{lector.Password}{SepEnd}";
             return this;
         }
 
@@ -52,11 +52,27 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QLector UpdNewEmailAndPasswordLectors()
+        public QLector UpdEmailLectors(Lector lector)
         {
             QueryType = typeof(Update);
-            Name = nameof(UpdNewEmailAndPasswordLectors);
-            Params = $"";
+            Name = nameof(UpdEmailLectors);
+            Params = $"{SepStr}{lector.Id}{SepMid}{lector.Email}{SepEnd}";
+            return this;
+        }
+
+        public QLector UpdPasswordLectors(Lector lector)
+        {
+            QueryType = typeof(Update);
+            Name = nameof(UpdPasswordLectors);
+            Params = $"{SepStr}{lector.Id}{SepMid}{lector.Password}{SepEnd}";
+            return this;
+        }
+
+        public QLector UpdLoginLectors(Lector lector)
+        {
+            QueryType = typeof(Update);
+            Name = nameof(UpdLoginLectors);
+            Params = $"{SepStr}{lector.Id}{SepMid}{lector.Login}{SepEnd}";
             return this;
         }
 

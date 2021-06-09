@@ -4,6 +4,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lector : AbstractModel
     {
+        public string Login { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -13,8 +14,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
         }
 
-        public Lector(string fullName, string email, string password)
+        public Lector(string login, string fullName, string email, string password)
         {
+            Login = login;
             FullName = fullName;
             Email = email;
             Password = password;
@@ -27,7 +29,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Lector other)
         {
-            return FullName == other.FullName
+            return Login == other.Login
+                   && FullName == other.FullName
                    && Email == other.Email
                    && Password == other.Password
                    && IsActivated == other.IsActivated;
@@ -35,7 +38,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(FullName, Email, Password, IsActivated);
+            return HashCode.Combine(Login, FullName, Email, Password, IsActivated);
         }
     }
 }

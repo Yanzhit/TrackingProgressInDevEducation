@@ -3,7 +3,7 @@
 	 @Student INT
 	,@DateTo NVARCHAR(50)
 	,@PaymentDate NVARCHAR(50)
-	,@Amount DECIMAL(10)
+	,@Amount INT
 	,@Status BIT
 )
 AS

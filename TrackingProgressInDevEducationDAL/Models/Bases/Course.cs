@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
         }
 
-        public Course(string name, string startedOn, string finishedOn)
+        public Course(string name, string startedOn, string finishedOn, int id) : base(id)
         {
             Name = name;
             StartedOn = startedOn;

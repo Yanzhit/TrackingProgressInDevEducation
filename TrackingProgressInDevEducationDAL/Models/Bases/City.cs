@@ -8,7 +8,7 @@
         {
         }
 
-        public City(string name)
+        public City(string name, int id) : base(id)
         {
             Name = name;
         }
