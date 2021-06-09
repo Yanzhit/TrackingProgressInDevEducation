@@ -16,8 +16,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewCity()
         {
-            yield return new object[] {new QCity(), new City("Сарай"), new Setter(11)};
-            yield return new object[] {new QCity(), new City("Мука"), new Setter(12)};
+            yield return new object[] {new QCity(), new City("Сарай"), new Setter()};
+            yield return new object[] {new QCity(), new City("Мука"), new Setter()};
         }
 
         /// <summary>

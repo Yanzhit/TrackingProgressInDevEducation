@@ -1,6 +1,7 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewLector]
 (
-	 @FullName NVARCHAR(50)
+	 @Login NVARCHAR(50)
+	,@FullName NVARCHAR(50)
 	,@Email NVARCHAR(50)
 	,@Password NVARCHAR(50)
 )
@@ -9,7 +10,8 @@ AS
 
 	INSERT [Lectors]
 	(
-		 [FullName]
+		 [Login]
+		,[FullName]
 		,[Email]
 		,[Password]
 		,[IsActivated]
@@ -17,6 +19,7 @@ AS
 	OUTPUT
 	
 		 INSERTED.[id]
+		,INSERTED.[Login]
 		,INSERTED.[FullName]
 		,INSERTED.[Email]
 		,INSERTED.[Password]
@@ -24,9 +27,10 @@ AS
 	
 	VALUES
 	(
-		 @FullName
+	     @Login
+		,@FullName
 		,@Email
 		,@Password
 		,@isActive
 	)
---ZLoo (Все ок)				   --CAST(@Email as nvarchar(50))
+--ZLoo (Все ок)

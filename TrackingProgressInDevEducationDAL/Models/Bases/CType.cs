@@ -1,18 +1,24 @@
-﻿namespace TrackingProgressInDevEducationDAL.Models.Bases
+﻿using System;
+
+namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class CType : AbstractModel
     {
-        public string Name { get; set; }
+        public string Name { get; }
 
         public CType()
         {
         }
 
-        public CType(string name)
+        public CType(CType cType) : base(cType)
         {
-            Name = name;
+            Name = cType.Name;
         }
-
+        public CType(object obj) : base(obj)
+        {
+            var cType = (CType) obj;
+            Name = cType.Name;
+        }
         public override bool Equals(object obj)
         {
             return Equals((CType)obj);
@@ -20,12 +26,17 @@
 
         private bool Equals(CType other)
         {
-            return Name == other.Name;
+            return Id == other.Id
+                   && Name == other.Name;
         }
 
         public override int GetHashCode()
         {
-            return (Name != null ? Name.GetHashCode() : 0);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            return hashCode.ToHashCode();
         }
     }
 }

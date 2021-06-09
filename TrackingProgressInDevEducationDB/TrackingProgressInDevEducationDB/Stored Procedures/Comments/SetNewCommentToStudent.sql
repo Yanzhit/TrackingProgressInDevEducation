@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCommentToStudent](@Text nvarchar(50), @TypeId int, @StudentId int, @CreatedBy int, @Estimation decimal)
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetNewCommentToStudent](@Text nvarchar(50), @TypeId int, @StudentId int, @CreatedBy int, @Estimation int)
 AS
 INSERT [Comments] ([Text], [TypeId], [StudentId], [CreatedBy],CommentFor, Estimation)
 OUTPUT INSERTED.id, INSERTED.[Text], INSERTED.TypeId, INSERTED.StudentId, INSERTED.CreatedBy, INSERTED.CommentFor, INSERTED.Estimation 

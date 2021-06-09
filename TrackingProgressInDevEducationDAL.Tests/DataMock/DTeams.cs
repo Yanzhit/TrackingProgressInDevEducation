@@ -22,11 +22,11 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Teams = new List<Team>
             {
-                new("Jujy`r", "DateTime.MaxValue", "DateTime.MaxValue"),
-                new("Jujadr", "DateTime.MaxValue", "DateTime.MaxValue"),
-                new("Пиво", "DateTime.MaxValue", "DateTime.MaxValue"),
-                new("Kjjw", "DateTime.MaxValue", "DateTime.MaxValue"),
-                new("ШГЩц", "DateTime.MaxValue", "DateTime.MaxValue")
+                new(new object[] {"Jujy`r", "DateTime.MaxValue", "DateTime.MaxValue"}),
+                new(new object[] {"Jujadr", "DateTime.MaxValue", "DateTime.MaxValue"}),
+                new(new object[] {"Пиво", "DateTime.MaxValue", "DateTime.MaxValue"}),
+                new(new object[] {"Kjjw", "DateTime.MaxValue", "DateTime.MaxValue"}),
+                new(new object[] {"ШГЩц", "DateTime.MaxValue", "DateTime.MaxValue"})
             };
         }
     }

@@ -16,8 +16,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
         /// <returns></returns>
         public static IEnumerable SetNewLector()
         {
-            yield return new object[] { new QLector(), new Lector("Вася", "лгбт", "ВадимГрут"), 1 };
-            yield return new object[] { new QLector(), new Lector("Петя", "ЖМЖ", "Волоннн"), 1 };
+            yield return new object[] { new QLector(), new Lector(new []{"Wood","Вася", "лгбт", "ВадимГрут"}), 1};
+            yield return new object[] { new QLector(), new Lector(new []{"Cool","Петя", "ЖМЖ", "Волоннн"}), 1 };
         }
 
         /// <summary>

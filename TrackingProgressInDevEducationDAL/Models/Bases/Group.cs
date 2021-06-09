@@ -4,21 +4,29 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
    public class Group : AbstractModel
     {
-        public string Name { get; set; }
-        public int CourseId { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public string Name { get; }
+        public int CourseId { get; }
+        public string StartDate { get; }
+        public string EndDate { get; }
 
         public Group()
         {
         }
 
-        public Group(string name, int courseId, string startDate, string endDate)
+        public Group(Group group) : base(group)
         {
-            Name = name;
-            CourseId = courseId;
-            StartDate = startDate;
-            EndDate = endDate;
+            Name = group.Name;
+            CourseId = group.CourseId;
+            StartDate = group.StartDate;
+            EndDate = group.EndDate;
+        }
+        public Group(object obj) : base(obj)
+        {
+            var group = (Group) obj;
+            Name = group.Name;
+            CourseId = group.CourseId;
+            StartDate = group.StartDate;
+            EndDate = group.EndDate;
         }
 
         public override bool Equals(object obj)
@@ -28,7 +36,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Group other)
         {
-            return Name == other.Name
+            return Id == other.Id
+                   && Name == other.Name
                    && CourseId == other.CourseId
                    && StartDate == other.StartDate
                    && EndDate == other.EndDate;
@@ -36,7 +45,14 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, CourseId, StartDate, EndDate);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            hashCode.Add(CourseId);
+            hashCode.Add(StartDate);
+            hashCode.Add(EndDate);
+            return hashCode.ToHashCode();
         }
     }
 }

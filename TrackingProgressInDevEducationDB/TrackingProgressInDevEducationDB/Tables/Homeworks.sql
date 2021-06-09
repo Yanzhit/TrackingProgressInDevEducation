@@ -4,4 +4,3 @@
     [Deskription] NVARCHAR(50) NULL, 
     CONSTRAINT [PK_HOMEWORKS] PRIMARY KEY CLUSTERED ([id] ASC)
 );
-

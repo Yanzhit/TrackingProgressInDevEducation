@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Net.Mail;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Tests.Abstract;
 
@@ -22,12 +21,12 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Lectors = new List<Lector>
             {
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ"),
-                new("Петров Митя М", "iieqw@MailAddress.ru", "QQQ")
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"}),
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"}),
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"}),
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"}),
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"}),
+                new(new object[] {"Wood", "Петров Митя М", "iieqw@MailAddress.ru", "QQQ"})
             };
         }
     }

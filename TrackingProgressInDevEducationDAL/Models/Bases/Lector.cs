@@ -4,22 +4,34 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lector : AbstractModel
     {
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public bool IsActivated { get; set; }
+        public string Login { get; }
+        public string FullName { get; }
+        public string Email { get; }
+        public string Password { get; }
+        public bool IsActivated { get; }
 
         public Lector()
         {
         }
 
-        public Lector(string fullName, string email, string password)
+        public Lector(Lector lector) : base(lector)
         {
-            FullName = fullName;
-            Email = email;
-            Password = password;
-            IsActivated = false;
+            Login = lector.Login;
+            FullName = lector.FullName;
+            Email = lector.Email;
+            Password = lector.Password;
+            IsActivated = lector.IsActivated;
         }
+        public Lector(object obj) : base(obj)
+        {
+            var lector = (Lector) obj;
+            Login = lector.Login;
+            FullName = lector.FullName;
+            Email = lector.Email;
+            Password = lector.Password;
+            IsActivated = lector.IsActivated;
+        }
+
         public override bool Equals(object obj)
         {
             return Equals((Lector)obj);
@@ -27,7 +39,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Lector other)
         {
-            return FullName == other.FullName
+            return Id == other.Id
+                   && Login == other.Login
+                   && FullName == other.FullName
                    && Email == other.Email
                    && Password == other.Password
                    && IsActivated == other.IsActivated;
@@ -35,7 +49,15 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(FullName, Email, Password, IsActivated);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Login);
+            hashCode.Add(FullName);
+            hashCode.Add(Email);
+            hashCode.Add(Password);
+            hashCode.Add(IsActivated);
+            return hashCode.ToHashCode();
         }
     }
 }

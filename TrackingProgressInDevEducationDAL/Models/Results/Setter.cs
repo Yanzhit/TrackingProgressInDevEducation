@@ -6,9 +6,8 @@
         {
         }
 
-        public Setter(int id):base(id)
+        public Setter(Setter setter) : base(setter)
         {
-            Id = id;
         }
 
         protected bool Equals(Setter other)

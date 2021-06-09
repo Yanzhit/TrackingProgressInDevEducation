@@ -29,7 +29,6 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             InitializeComponent();
         }
-
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             var query = new GetLectorQ(Login.Text, Password.Text);

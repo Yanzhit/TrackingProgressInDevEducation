@@ -179,7 +179,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetNotActualTeamByStudentIdJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetVisitsByStudentJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\GetAllCourses.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdNewEmailAndPasswordLectors.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdLoginLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllTestsByStudentIdJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\UpdStudentToGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllStudentsByTeamJ.sql" />
@@ -246,6 +246,8 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorByLoginAndPassword.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdateAcrivationLector.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetGroupsByLectorJ.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdPasswordLectors.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdEmailLectors.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

@@ -2,7 +2,7 @@
 (
 	 @Name NVARCHAR(50)
 	,@Surname NVARCHAR(50)
-	,@Rate DECIMAL(6,2)
+	,@Rate INT
 	,@GroupId INT
 	,@Phone NVARCHAR(50)
 	,@Email NVARCHAR(50)

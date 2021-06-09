@@ -4,11 +4,16 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class CommentFor : AbstractModel
     {
-        public string Name { get; set; }
+        public string Name { get; }
 
-        public CommentFor(string name)
+        public CommentFor(CommentFor commentFor) : base(commentFor)
         {
-            Name = name;
+            Name = commentFor.Name;
+        }
+        public CommentFor(object obj) : base(obj)
+        {
+            var commentFor = (CommentFor) obj;
+            Name = commentFor.Name;
         }
         public override bool Equals(object obj)
         {
@@ -17,12 +22,17 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(CommentFor other)
         {
-            return Name == other.Name;
+            return Id == other.Id
+                   && Name == other.Name;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name != null ? Name.GetHashCode() : 0);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(Name);
+            return hashCode.ToHashCode();
         }
     }
 }

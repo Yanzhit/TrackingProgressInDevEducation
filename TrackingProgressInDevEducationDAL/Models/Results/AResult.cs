@@ -6,9 +6,8 @@
         {
         }
         
-        public AResult(int id)
+        public AResult(AResult result) : base(result)
         {
-            Id = id;
         }
         public override bool Equals(object obj)
         {

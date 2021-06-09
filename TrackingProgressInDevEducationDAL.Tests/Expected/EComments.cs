@@ -23,13 +23,13 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
             yield return new object[]
             {
                 new QComment(),
-                new Comment("", 2, 3, 1, 1, 1),
+                new Comment(new object[] {"", 2, 3, 1, 1, 1}),
                 1
             };
             yield return new object[]
            {
                 new QComment(),
-                new Comment("", 3, 1, 2, 3, 2),
+                new Comment(new object[] {"", 3, 1, 2, 3, 2}),
                 1
            };
         }

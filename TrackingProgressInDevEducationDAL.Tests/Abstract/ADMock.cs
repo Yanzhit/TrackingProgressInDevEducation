@@ -2,5 +2,6 @@
 {
     public abstract class ADMock
     {
+        protected object[] Obj;
     }
 }

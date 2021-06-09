@@ -4,17 +4,23 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class HWGroup : AbstractModel
     {
-        public int HomeworkId { get; set; }
-        public int GroupId { get; set; }
+        public int HomeworkId { get; }
+        public int GroupId { get; }
 
         public HWGroup()
         {
         }
 
-        public HWGroup(int homeworkId, int groupId)
+        public HWGroup(HWGroup hwGroup) : base(hwGroup)
         {
-            HomeworkId = homeworkId;
-            GroupId = groupId;
+            HomeworkId = hwGroup.HomeworkId;
+            GroupId = hwGroup.GroupId;
+        }
+        public HWGroup(object obj) : base(obj)
+        {
+            var hwGroup = (HWGroup) obj;
+            HomeworkId = hwGroup.HomeworkId;
+            GroupId = hwGroup.GroupId;
         }
 
         public override bool Equals(object obj)
@@ -24,13 +30,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(HWGroup other)
         {
-            return HomeworkId == other.HomeworkId
+            return Id == other.Id
+                   && HomeworkId == other.HomeworkId
                    && GroupId == other.GroupId;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(HomeworkId, GroupId);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(HomeworkId);
+            hashCode.Add(GroupId);
+            return hashCode.ToHashCode();
         }
     }
 }

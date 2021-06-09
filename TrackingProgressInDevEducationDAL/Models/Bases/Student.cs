@@ -4,51 +4,53 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Student : AbstractModel
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public decimal? Rate { get; set; }
-        public int? GroupId { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Contract { get; set; }
-        public string Birthday { get; set; }
-        public string MiddleName { get; set; }
-        public string Git { get; set; }
-        public int? CityId { get; set; }
-        public bool? Status { get; set; }
+        public string Name { get; }
+        public string Surname { get; }
+        public int? Rate { get; }
+        public int? GroupId { get; }
+        public string Phone { get; }
+        public string Email { get; }
+        public string Contract { get; }
+        public string Birthday { get; }
+        public string MiddleName { get; }
+        public string Git { get; }
+        public int? CityId { get; }
+        public bool? Status { get; }
 
         public Student()
         {
         }
 
-        public Student
-        (
-            string name,
-            string surname,
-            decimal? rate,
-            int? groupId,
-            string phone,
-            string email,
-            string contract,
-            string birthday,
-            string middleName,
-            string git,
-            int? cityId,
-            bool? status
-        )
+        public Student(Student student) : base(student)
         {
-            Name = name;
-            Surname = surname;
-            Rate = rate;
-            GroupId = groupId;
-            Phone = phone;
-            Email = email;
-            Contract = contract;
-            Birthday = birthday;
-            MiddleName = middleName;
-            Git = git;
-            CityId = cityId;
-            Status = status;
+            Name = student.Name;
+            Surname = student.Surname;
+            Rate = student.Rate;
+            GroupId = student.GroupId;
+            Phone = student.Phone;
+            Email = student.Email;
+            Contract = student.Contract;
+            Birthday = student.Birthday;
+            MiddleName = student.MiddleName;
+            Git = student.Git;
+            CityId = student.CityId;
+            Status = student.Status;
+        }
+        public Student(object obj) : base(obj)
+        {
+            var student = (Student) obj;
+            Name = student.Name;
+            Surname = student.Surname;
+            Rate = student.Rate;
+            GroupId = student.GroupId;
+            Phone = student.Phone;
+            Email = student.Email;
+            Contract = student.Contract;
+            Birthday = student.Birthday;
+            MiddleName = student.MiddleName;
+            Git = student.Git;
+            CityId = student.CityId;
+            Status = student.Status;
         }
 
         public override bool Equals(object obj)
@@ -59,6 +61,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         private bool Equals(Student actual)
         {
             return actual != null
+                   && Id == actual.Id
                    && Name == actual.Name
                    && Surname == actual.Surname
                    && Rate == actual.Rate
@@ -77,6 +80,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         {
             var hashCode = new HashCode();
             hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
             hashCode.Add(Name);
             hashCode.Add(Surname);
             hashCode.Add(Rate);

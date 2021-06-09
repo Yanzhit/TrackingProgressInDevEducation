@@ -4,17 +4,23 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class TStudent : AbstractModel
     {
-        public int TeamId { get; set; }
-        public int StudentId { get; set; }
+        public int TeamId { get; }
+        public int StudentId { get; }
 
         public TStudent()
         {
         }
 
-        public TStudent(int teamId, int studentId)
+        public TStudent(TStudent tStudent) : base(tStudent)
         {
-            TeamId = teamId;
-            StudentId = studentId;
+            TeamId = tStudent.TeamId;
+            StudentId = tStudent.StudentId;
+        }
+        public TStudent(object obj) : base(obj)
+        {
+            var tStudent = (TStudent) obj;
+            TeamId = tStudent.TeamId;
+            StudentId = tStudent.StudentId;
         }
 
         public override bool Equals(object obj)
@@ -24,13 +30,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(TStudent other)
         {
-            return TeamId == other.TeamId
+            return Id == other.Id
+                   && TeamId == other.TeamId
                    && StudentId == other.StudentId;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(TeamId, StudentId);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(TeamId);
+            hashCode.Add(StudentId);
+            return hashCode.ToHashCode();
         }
     }
 }

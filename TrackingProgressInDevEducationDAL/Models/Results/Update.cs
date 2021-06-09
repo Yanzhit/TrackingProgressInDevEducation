@@ -6,9 +6,8 @@
         {
         }
 
-        public Update(int id):base(id)
+        public Update(Update update) : base(update)
         {
-            Id = id;
         }
     }
 }

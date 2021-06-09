@@ -12,4 +12,4 @@ AS
 	(
 		@Name
 	)
---ZLoo (Все ок)	 w[pe[wp
+--ZLoo (Все ок)

@@ -19,13 +19,13 @@ namespace TrackingProgressInDevEducationDAL.Tests.Expected
             yield return new object[]
             {
                 new QComment(),
-                new Group("", 2, "DateTime.MaxValue", "DateTime.Now"),
+                new Group(new object[] {"", 2, "DateTime.MaxValue", "DateTime.Now"}),
                 1
             };
             yield return new object[]
             {
                 new QComment(),
-                new Group("", 1, "DateTime.MaxValue", "DateTime.Now"),
+                new Group(new object[] {"", 1, "DateTime.MaxValue", "DateTime.Now"}),
                 1
             };
         }

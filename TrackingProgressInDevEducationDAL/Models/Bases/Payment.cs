@@ -4,30 +4,32 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Payment : AbstractModel
     {
-        public int StudentId { get; set; }
-        public string PaymentTo { get; set; }
-        public string PaymentOn { get; set; }
-        public decimal Amount { get; set; }
-        public bool Status { get; set; }
+        public int StudentId { get; }
+        public string PaymentTo { get; }
+        public string PaymentOn { get; }
+        public decimal Amount { get; }
+        public bool Status { get; }
 
         public Payment()
         {
         }
 
-        public Payment
-        (
-            int studentId,
-            string paymentTo,
-            string paymentOn,
-            decimal amount,
-            bool status
-        )
+        public Payment(Payment payment) : base(payment)
         {
-            StudentId = studentId;
-            PaymentTo = paymentTo;
-            PaymentOn = paymentOn;
-            Amount = amount;
-            Status = status;
+            StudentId = payment.StudentId;
+            PaymentTo = payment.PaymentTo;
+            PaymentOn = payment.PaymentOn;
+            Amount = payment.Amount;
+            Status = payment.Status;
+        }
+        public Payment(object obj) : base(obj)
+        {
+            var payment = (Payment) obj;
+            StudentId = payment.StudentId;
+            PaymentTo = payment.PaymentTo;
+            PaymentOn = payment.PaymentOn;
+            Amount = payment.Amount;
+            Status = payment.Status;
         }
 
         public override bool Equals(object obj)
@@ -37,16 +39,25 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 
         private bool Equals(Payment other)
         {
-            return StudentId == other.StudentId
-                   && PaymentTo.Equals(other.PaymentTo)
-                   && PaymentOn.Equals(other.PaymentOn)
+            return Id == other.Id
+                   && StudentId == other.StudentId
+                   && PaymentTo == other.PaymentTo
+                   && PaymentOn == other.PaymentOn
                    && Amount == other.Amount
                    && Status == other.Status;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(StudentId, PaymentTo, PaymentOn, Amount, Status);
+            var hashCode = new HashCode();
+            hashCode.Add(base.GetHashCode());
+            hashCode.Add(Id);
+            hashCode.Add(StudentId);
+            hashCode.Add(PaymentTo);
+            hashCode.Add(PaymentOn);
+            hashCode.Add(Amount);
+            hashCode.Add(Status);
+            return hashCode.ToHashCode();
         }
     }
 }
