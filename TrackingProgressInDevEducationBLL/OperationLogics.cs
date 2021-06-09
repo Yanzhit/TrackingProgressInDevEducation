@@ -81,6 +81,13 @@ namespace TrackingProgressInDevEducationBLL
             return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorA(modelReturned);
         }
 
+        public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
+        {
+            var model = (GetAllTeamsByLectorJ)_bllManager.MainPagesQ.GetAllTeamsByLectorJ(getTeamssByLectorQ);
+            IEnumerable<GetAllTeamsByLectorJ> modelReturned = _dalManager.Joins.GetAllTeamsByLectorJ(model);
+            return (List<GetAllTeamsByLectorJA>)_bllManager.MainPagesA.GetAllTeamsByLectorJA(modelReturned);
+        }
+
         public List<SetCityA> GetAllCities(EmptyQ emptyQ)
         {
             var model = (City)_bllManager.CityQ.GetAllCities(emptyQ);

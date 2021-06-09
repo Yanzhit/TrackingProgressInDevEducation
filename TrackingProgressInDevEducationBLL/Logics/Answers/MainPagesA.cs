@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
@@ -15,6 +16,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         {
             WriteTypes(new MainPage().GetGroupsByLectorJ());
             return (IEnumerable<GetGroupsByLectorA>)GetModelBaseSeveral(model);
+        }
+
+        public IEnumerable<GetAllTeamsByLectorJA> GetAllTeamsByLectorJA(IEnumerable<AbstractModel> model)
+        {
+            WriteTypes(new MainPage().GetAllTeamsByLectorJ());
+            return (IEnumerable<GetAllTeamsByLectorJA>)GetModelBaseSeveral(model);
         }
     }
 }

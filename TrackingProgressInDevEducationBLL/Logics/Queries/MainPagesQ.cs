@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
@@ -14,6 +15,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         public AbstractModel GetGroupsByLectorQ(GetGroupsByLectorQ model)
         {
             WriteTypes(new MainPage().GetGroupsByLectorJ());
+            return (AbstractModel)GetModelBaseSingle(model);
+        }
+
+        public AbstractModel GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ model)
+        {
+            WriteTypes(new MainPage().GetAllTeamsByLectorJ());
             return (AbstractModel)GetModelBaseSingle(model);
         }
     }

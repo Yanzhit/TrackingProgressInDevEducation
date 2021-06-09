@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public MainPage GetAllTeamsByLectorJ()
         {
             Query = typeof(GetAllTeamsByLectorJQ);
-            //Base = typeof();
+            Base = typeof(GetAllTeamsByLectorJ);
             Answer = typeof(GetAllTeamsByLectorJA);
             return this;
         }
