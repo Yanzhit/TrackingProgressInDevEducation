@@ -29,6 +29,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         }
         public QJoins GetAllTeamsByLectorJ(GetAllTeamsByLectorJ lectorJ)
         {
+            ModelType = typeof(GetAllTeamsByLectorJ);
             QueryType = typeof(Getter);
             Name = nameof(GetAllTeamsByLectorJ);
             Params = $"{SepStr}{lectorJ.Id}{SepEnd}";

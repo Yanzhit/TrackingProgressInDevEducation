@@ -48,12 +48,17 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private IEnumerable<GetGroupsByLectorA> RenderGroup()
         {
-            GetGroupsByLectorQ query = new GetGroupsByLectorQ(_contents.Lector.Id); 
+            var query = new GetGroupsByLectorQ(_contents.Lector.Id); 
             return _operation.GetGroupsByLector(query);
         }
         private void TableTeam()
         {
-
+            GetTeamsByLectorA.ItemsSource = RenderTeam();
+        }
+        private IEnumerable<GetAllTeamsByLectorJA> RenderTeam()
+        {
+            var query = new GetAllTeamsByLectorJQ(_contents.Lector.Id);
+            return _operation.GetAllTeamsByLectorJ(query);
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
