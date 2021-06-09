@@ -62,19 +62,19 @@
             Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="0"
         />
         <DataGrid x:Name="GetGroupsByLectorA" Width="784"  FontSize="16" 
-                  AutoGenerateColumns="False" CanUserAddRows ="False" 
+                  AutoGenerateColumns="True" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
                   VerticalAlignment="Top" Margin="5,5,0,0"
                   Grid.ColumnSpan="4" Grid.Row="2">
         
-            <DataGrid.Columns>
+            <!--<DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Id}"  IsReadOnly="True" Header="ID" Width="30"/>
                 <DataGridTextColumn Binding ="{Binding Path = NameG}"  IsReadOnly="True" Header="Группа" Width="150"/>
                 <DataGridTextColumn Binding ="{Binding Path = StartDate}" IsReadOnly="True" Header="Дата начала" Width="100" />
                 <DataGridTextColumn Binding ="{Binding Path = EndDate}" IsReadOnly="True" Header="Дата конца" Width="100"/>
                 <DataGridTextColumn Binding ="{Binding Path = NameC}"  IsReadOnly="True" Header="Курс" Width="150"/>
-            </DataGrid.Columns>
+            </DataGrid.Columns>-->
         </DataGrid>
 
         <DataGrid x:Name="GetTeamsByLectorA" Width="784"  FontSize="16" 
@@ -86,10 +86,10 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Id}"  IsReadOnly="True" Header="ID" Width="30"/>
-                <DataGridTextColumn Binding ="{Binding Path = Name}"  IsReadOnly="True" Header="Наименование" Width="150"/>
-                <DataGridTextColumn Binding ="{Binding Path = From}" IsReadOnly="True" Header="Остаток" Width="90"/>
-                <DataGridTextColumn Binding ="{Binding Path = To}" IsReadOnly="True" Header="Ед. измер." Width="100" />
-                <DataGridTextColumn Binding ="{Binding Path = StudentCount}" IsReadOnly="True" Header="Цена опт." Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Name}"  IsReadOnly="True" Header="Name" Width="150"/>
+                <DataGridTextColumn Binding ="{Binding Path = From}" IsReadOnly="True" Header="DateFrom" Width="90"/>
+                <DataGridTextColumn Binding ="{Binding Path = To}" IsReadOnly="True" Header="Forever" Width="100" />
+                <DataGridTextColumn Binding ="{Binding Path = StudentCount}" IsReadOnly="True" Header="Сколько тебе лет" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
 
