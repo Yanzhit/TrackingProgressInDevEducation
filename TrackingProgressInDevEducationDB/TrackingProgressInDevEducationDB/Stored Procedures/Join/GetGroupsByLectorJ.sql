@@ -3,10 +3,10 @@
 AS
 SELECT 
 	 G.[id]
-	,G.[Name]
+	,G.[Name] [NameG]
 	,G.[StartDate]
 	,G.[EndDate]
-	,C.[Name]
+	,C.[Name] [NameC]
 	,COUNT(S.[id]) [StudCount]
 	FROM Groups G
 	LEFT JOIN Lector_Group LG ON G.[id] = LG.GroupId
