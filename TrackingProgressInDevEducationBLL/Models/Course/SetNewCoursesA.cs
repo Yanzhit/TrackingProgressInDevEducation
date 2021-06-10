@@ -20,9 +20,6 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
         /// Конструктор для подготовки ответа
         /// </summary>
         /// <param name="name">название группы</param>
-        /// <param name="courseId">ид курса</param>
-        /// <param name="startDate">дата создания группы</param>
-        /// <param name="endDate">дата окончания группы</param>
         public SetNewCoursesA(string name)
         {
             Name = name;

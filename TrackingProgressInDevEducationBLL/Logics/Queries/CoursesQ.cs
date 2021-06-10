@@ -12,7 +12,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         /// <summary>
         /// Показать все курсы
         /// </summary>
-        /// <param name="setGroupQ">Модель с данными для запроса</param>
+        /// <param name="setCoursesQ">Модель с данными для запроса</param>
         /// <returns>Абстрактную модель данных после ответа от сервера</returns>
         public AbstractModel GetAllCourses(SetCoursesQ setCoursesQ)
         {

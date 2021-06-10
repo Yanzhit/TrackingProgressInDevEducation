@@ -37,7 +37,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BCreateCurses_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var setNewCourses = operation.SetNewCourse(new SetNewCoursesQ());
+            var setNewCourses = operation.SetNewCourse(new SetNewCoursesQ(TBNameCurses.Text, TBCourseDescription.Text));
             MessageBox.Show("Курс " + TBNameCurses.Text + " Созданн!");
         }
         private void GetAllCursesInPage()
