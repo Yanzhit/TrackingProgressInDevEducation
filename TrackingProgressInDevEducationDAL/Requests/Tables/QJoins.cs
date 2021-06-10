@@ -12,6 +12,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
+        public QJoins GetAllStudentsByGroup(GetAllStudentsByGroup getAllStudentsByGroup)
+        {
+            ModelType = typeof(GetAllStudentsByGroup);
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllStudentsByGroup);
+            Params = $"{SepStr}{getAllStudentsByGroup.Id}{SepEnd}";
+            return this;
+        }
         public QJoins GetAllCoursesByLectorJ()
         {
             QueryType = typeof(Getter);

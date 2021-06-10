@@ -76,5 +76,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
 
         }
+
+        private void GetAllStudentsByGroupA_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

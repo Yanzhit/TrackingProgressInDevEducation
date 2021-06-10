@@ -90,7 +90,7 @@ namespace TrackingProgressInDevEducationBLL
         public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
         {
             var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
-            IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Students.GetAllStudentsByGroup(model);
+            IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
             return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
         }
 

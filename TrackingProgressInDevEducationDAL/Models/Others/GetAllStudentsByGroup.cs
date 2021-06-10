@@ -39,8 +39,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
             && Name == other.Name
             && Surname == other.Surname
             && Git == other.Git
-            && Rate == other.Rate;     
-            }
+            && Rate == other.Rate;
+        }
 
         public override int GetHashCode()
         {

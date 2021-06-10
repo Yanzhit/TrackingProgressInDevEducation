@@ -1,5 +1,5 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.GroupInfo;
-using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public GroupInfos GetAllStudentsByGroup()
         {
             Query = typeof(GetAllStudentsByGroupQ);
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsByGroup);
             Answer = typeof(GetAllStudentsByGroupA);
             return this;
         }

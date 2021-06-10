@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using static TrackingProgressInDevEducationDAL.Defines;
 
@@ -35,14 +36,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         {
             QueryType = typeof(Getter);
             Name = nameof(GetAllStudents);
-            Params = string.Empty;
-            return this;
-        }
-
-        public QStudent GetAllStudentsByGroup()
-        {
-            QueryType = typeof(Getter);
-            Name = nameof(GetAllStudentsByGroup);
             Params = string.Empty;
             return this;
         }
