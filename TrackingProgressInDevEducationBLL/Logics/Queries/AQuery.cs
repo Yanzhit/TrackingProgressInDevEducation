@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     {
         protected override void WriteTypes(ATransfer aTransfer)
         {
-            Type = new[]
+            Types = new[]
             {
                 aTransfer.Query,
                 aTransfer.Base
@@ -44,7 +44,8 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         {
             GetMethodSingle();
             MethodInfo generic = GetGenericSingle();
-            return (AbstractModel)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (AbstractModel)generic.Invoke(Instants, new object[] { model });
         }
 
         /// <summary>
@@ -56,7 +57,8 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         {
             GetMethodSeveral();
             MethodInfo generic = GetGenericSeveral();
-            return (IEnumerable<AbstractModel>)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (IEnumerable<AbstractModel>)generic.Invoke(Instants, new object[] { model });
         }
     }
 }
