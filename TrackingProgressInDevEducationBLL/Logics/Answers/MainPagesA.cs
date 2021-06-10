@@ -18,7 +18,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             return (IEnumerable<GetGroupsByLectorA>)GetModelBaseSeveral(model);
         }
 
-        public IEnumerable<GetAllTeamsByLectorJA> GetAllTeamsByLectorJA(IEnumerable<AbstractModel> model)
+        public IEnumerable<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(IEnumerable<AbstractModel> model)
         {
             WriteTypes(new MainPage().GetAllTeamsByLectorJ());
             return (IEnumerable<GetAllTeamsByLectorJA>)GetModelBaseSeveral(model);

@@ -20,19 +20,19 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
             };
         }
 
-        protected AbstractModel GetModelBaseSingle(ADTOQuery adtoQuery)
+        protected AbstractModel GetModelBaseSingle(ADTOQuery model)
         {
-            return Single(adtoQuery);
+            return Single(model);
         }
 
         /// <summary>
         /// Получение базовой модели для получение списка объектов из BD
         /// </summary>
-        /// <param name="adtoQuery">Абстракция контейнера данных запроса</param>
+        /// <param name="model">Абстракция контейнера данных запроса</param>
         /// <returns>Список абстрактную модель данных</returns>
-        protected IEnumerable<AbstractModel> GetModelBaseSeveral(ADTOQuery adtoQuery)
+        protected IEnumerable<AbstractModel> GetModelBaseSeveral(ADTOQuery model)
         {
-            return Several(adtoQuery);
+            return Several(model);
         }
 
         /// <summary>

@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         public SetNewStudentA SetNewStudent(AbstractModel model)
         {
             WriteTypes(new NewStudents().SetNewStudent());
-            return (SetNewStudentA) GetModelBaseSingle(model);
+            return (SetNewStudentA)GetModelBaseSingle(model);
         }
 
         public IEnumerable<GetCityA> GetCities(IEnumerable<AbstractModel> model)
