@@ -18,7 +18,6 @@ namespace TrackingProgressInDevEducationUI
         private Group _group;
         private GroupInfo _groupInfo;
         private GroupJournal _groupJournal;
-        private Home _home;
         private MyProfile _myProfile;
         private NewStudent _newStudent;
         private Registration _registration;
@@ -57,17 +56,6 @@ namespace TrackingProgressInDevEducationUI
         {
             _group = new Group();
             _main.Content = _group;
-        }
-        public void Home()
-        {
-            _home = new Home();
-            _main.Content = _home;
-        }
-        public void Home(GetLectorA lector)
-        {
-            Lector = lector;
-            _home = new Home();
-            _main.Content = _home;
         }
 
         public void MainPage()

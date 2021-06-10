@@ -64,11 +64,6 @@ namespace TrackingProgressInDevEducationUI.Windows
             _contents.GroupJournal();
         }
 
-        private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            _contents.Home();
-        }
-
         private void MyProfile_Click(object sender, RoutedEventArgs e)
         {
             _contents.MyProfile();

@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Welcome()
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.Lector.FullName}";
+            WelcomeBlock.Content = $"{Welcome2}{Sep}{_contents.Lector.FullName}";
         }
         private void WriteTable()
         {
@@ -66,11 +66,6 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         }
 
-        private void WelcomeBlock_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_Student(object sender, RoutedEventArgs e)
         {
             _contents.Students();
@@ -84,6 +79,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void Button_Click_CreateTeam(object sender, RoutedEventArgs e)
         {
             _contents.CreateTeam();
+        }
+
+        private void WelcomeBlock_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.MyProfile();
         }
     }
 }
