@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Group;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -24,11 +26,30 @@ namespace TrackingProgressInDevEducationUI.Pages
         public Course()
         {
             InitializeComponent();
+            GetAllCursesInPage();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
             _contents.MainPage();
         }
+
+        private void BCreateCurses_Click(object sender, RoutedEventArgs e)
+        {
+            OperationLogics operation = new OperationLogics();
+            var setNewCourses = operation.SetNewCourse(new SetNewCoursesQ());
+            MessageBox.Show("Курс " + TBNameCurses.Text + " Созданн!");
+        }
+        private void GetAllCursesInPage()
+        {
+            OperationLogics operation = new OperationLogics();
+            List<SetCoursesA> getAllCurses = operation.GetAllCurses(new SetCoursesQ());
+            foreach (var course in getAllCurses)
+            {
+                CBChangeCourse.Items.Add(course.Name);
+            }
+        }
+
+        
     }
 }

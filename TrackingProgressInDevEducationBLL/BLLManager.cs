@@ -1,5 +1,6 @@
 ﻿using TrackingProgressInDevEducationBLL.Logics.Answers;
 using TrackingProgressInDevEducationBLL.Logics.Queries;
+using TrackingProgressInDevEducationBLL.Models.Group;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -12,6 +13,14 @@ namespace TrackingProgressInDevEducationBLL
         /// Запрос со страниц SignIns
         /// </summary>
         public SignInsQ SignInsQ => new();
+        /// <summary>
+        /// Запрос со страниц Курса
+        /// </summary>
+        public NewCoureQ NewCoureQ => new();
+        /// <summary>
+        /// Запрос со страниц Курса
+        /// </summary>
+        public SenNewCourse SenNewCourse => new();
 
         /// <summary>
         /// Ответы на запросы со страниц SignIns
@@ -37,9 +46,14 @@ namespace TrackingProgressInDevEducationBLL
         /// </summary>
         public CoursesA CoursesA => new();
 
-
         /// <summary>
         /// Запрос со страниц NewStudent
+        /// Ответы на запросы со страниц Courses
+        /// </summary>
+        public SetNewCoursesA SetNewCoursesA => new();
+        
+        /// <summary>
+        /// Ответы на запросы со страниц Group
         /// </summary>
         public NewStudentsQ NewStudentQ => new();
 
