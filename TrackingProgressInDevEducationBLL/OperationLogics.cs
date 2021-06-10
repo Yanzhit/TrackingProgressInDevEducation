@@ -9,6 +9,7 @@ using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationDAL.Models.Others;
+using TrackingProgressInDevEducationBLL.Models.Comment;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -87,5 +88,13 @@ namespace TrackingProgressInDevEducationBLL
             IEnumerable<City> modelReturned = _dalManager.Cities.GetAllCities();
             return (List<SetCityA>)_bllManager.CityA.GetAllCities(modelReturned);
         }
+
+        public SetCommentsA SetNewComment(SetCommentsQ setCommentsQ)
+        {
+            var model = (Comment)_bllManager.CommentsQ.SetNewComment(setCommentsQ);
+            Comment modelReturned = _dalManager.Comments.SetNewComment(model);
+            return _bllManager.CommentsA.SetNewComment(modelReturned);
+        }
+
     }
 }

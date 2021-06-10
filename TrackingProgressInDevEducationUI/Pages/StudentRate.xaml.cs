@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Comment;
+
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -22,7 +24,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class StudentRate : Page
     {
         private readonly SingleContents _contents = SingleContents.GetContent();
-        private readonly OperationLogics _operation = new OperationLogics();
+        //private readonly OperationLogics _operation = new OperationLogics();
         public StudentRate()
         {
             InitializeComponent();
@@ -36,7 +38,22 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BAddComentStudent_Click(object sender, RoutedEventArgs e)
         {
+            OperationLogics operation = new OperationLogics();
+            var setNewComment = operation.SetNewComment(new SetCommentsQ(TBHardSkills.Text, ?,  ? , ?, TBHardSkillsRate.Text));
+            MessageBox.Show("Комментарий добавлен");
 
+            //Text = text;
+            //TypeId = typeId;
+            //StudentId = studentId;
+            //CreatedBy = createdBy;
+            //TeamId = teamId;
+            //Estimation = estimation;
+
+        }
+
+        private void BBack_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.StudentProfile();
         }
     }
 }
