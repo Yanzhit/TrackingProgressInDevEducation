@@ -9,6 +9,7 @@ using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationDAL.Models.Others;
+using TrackingProgressInDevEducationBLL.Models.GroupInfo;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -85,6 +86,12 @@ namespace TrackingProgressInDevEducationBLL
             var model = (GetGroupByLectorJ)_bllManager.MainPagesQ.GetGroupsByLectorQ(getGroupsByLectorQ);
             IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
             return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorA(modelReturned);
+        }
+        public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
+        {
+            var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
+            IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Students.GetAllStudentsByGroup(model);
+            return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
         }
 
         public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)

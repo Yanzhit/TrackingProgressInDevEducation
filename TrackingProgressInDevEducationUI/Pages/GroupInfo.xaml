@@ -16,7 +16,7 @@
         </Button>
         <Button x:Name="BAddStudent" Content="Добавить студентов" HorizontalAlignment="Left" Margin="157,22,0,0" VerticalAlignment="Top" Height="28" Width="90" FontSize="9" RenderTransformOrigin="0.533,0.75" Click="BAddStudent_Click"/>
         <Button x:Name="BJournal" Content="Журнал" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Height="28" Width="54" Click="BJournal_Click"/>
-        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335">
+        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335" SelectionChanged="DGGroupInfo_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата начала" HeaderStringFormat="Дата начала"/>
                 <DataGridCheckBoxColumn Header="Дата окончания" HeaderStringFormat="Дата окончания"/>

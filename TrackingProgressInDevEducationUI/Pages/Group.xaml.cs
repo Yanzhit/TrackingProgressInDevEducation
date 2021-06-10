@@ -45,7 +45,8 @@ namespace TrackingProgressInDevEducationUI.Pages
             foreach (var course in getAllCurses)
             {
                 CBChangeCourse.Items.Add(course.Name);
-            } 
+            }
+            CBChangeCourse.SelectedIndex = 0;
         }
     }
 }

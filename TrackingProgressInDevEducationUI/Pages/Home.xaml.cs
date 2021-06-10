@@ -64,5 +64,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.GroupInfo();
         }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
