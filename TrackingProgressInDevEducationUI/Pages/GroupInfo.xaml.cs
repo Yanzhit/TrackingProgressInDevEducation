@@ -27,38 +27,38 @@ namespace TrackingProgressInDevEducationUI.Pages
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
 
-        public GroupInfo()
+        public GroupInfo(int id = 2)
         {
             InitializeComponent();
             NameGroup();
-            WriteTable();
+            WriteTable(id);
         }
 
         private void NameGroup()
         {
             LPageName.Content = $"ghfghfgh";
         }
-        private void WriteTable()
+        private void WriteTable(int id)
         {
-            TableCourses();
-            TableStudent();
+            TableCourses(id);
+            TableStudent(id);
         }
-        private void TableCourses()
+        private void TableCourses(int id)
         {
-            GetAllCoursesByGroupA.ItemsSource = RenderCourse();
+            GetAllCoursesByGroupA.ItemsSource = RenderCourse(id);
         }
-        private void TableStudent()
+        private void TableStudent(int id)
         {
-            GetAllStudentsByGroupA.ItemsSource = RenderGroup();
+            GetAllStudentsByGroupA.ItemsSource = RenderGroup(id);
         }
-        private IEnumerable<GetAllStudentsByGroupA> RenderGroup()
+        private IEnumerable<GetAllStudentsByGroupA> RenderGroup(int id)
         {
-            var query = new GetAllStudentsByGroupQ(2/*нужно апракинуть группу*/);
+            var query = new GetAllStudentsByGroupQ(id);
             return _operation.GetAllStudentsByGroup(query);
         }
-        private IEnumerable<GetAllCoursesByGroupA> RenderCourse()
+        private IEnumerable<GetAllCoursesByGroupA> RenderCourse(int id)
         {
-            var query = new GetAllCoursesByGroupQ(2/*нужно апракинуть группу*/);
+            var query = new GetAllCoursesByGroupQ(id);
             return _operation.GetAllCoursesByGroup(query);
         }
 
@@ -75,16 +75,6 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BJournal_Click(object sender, RoutedEventArgs e)
         {
             _contents.GroupJournal();
-        }
-
-        private void DGGroupInfo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void GetAllStudentsByGroupA_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        } 
     }
 }

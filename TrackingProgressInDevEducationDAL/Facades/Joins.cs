@@ -27,9 +27,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetAllTestsByStudentIdJ());
         }
 
-        public IEnumerable<Joins> GetGroupByIdJ()
+        public IEnumerable<GetGroupByIdJ> GetGroupByIdJ()
         {
-            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetGroupByIdJ());
+            return (IEnumerable<GetGroupByIdJ>)Manager.Getter.Several(_query.GetGroupByIdJ());
         }
         public IEnumerable<GetGroupByLectorJ> GetGroupByLectorJ(GetGroupByLectorJ lector)
         {

@@ -17,5 +17,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             WriteTypes(new GroupInfos().GetAllCoursesByGroup());
             return (IEnumerable<GetAllCoursesByGroupA>)GetModelBaseSeveral(model);
         }
+        public IEnumerable<GetGroupByIdJA> GetGroupByIdJA(IEnumerable<AbstractModel> model)
+        {
+            WriteTypes(new GroupInfos().GetGroupByIdJ());
+            return (IEnumerable<GetGroupByIdJA>)GetModelBaseSeveral(model);
+        }
     }
 }

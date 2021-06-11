@@ -19,5 +19,12 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             Answer = typeof(GetAllCoursesByGroupA);
             return this;
         }
+        public GroupInfos GetGroupByIdJ()
+        {
+            Query = typeof(GetGroupByIdJQ);
+            Base = typeof(GetGroupByIdJ);
+            Answer = typeof(GetGroupByIdJA);
+            return this;
+        }
     }
 }

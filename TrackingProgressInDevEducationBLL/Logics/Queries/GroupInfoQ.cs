@@ -16,5 +16,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
             WriteTypes(new GroupInfos().GetAllCoursesByGroup());
             return (AbstractModel)GetModelBaseSingle(model);
         }
+        public AbstractModel GetGroupByIdJ(GetGroupByIdJQ model)
+        {
+            WriteTypes(new GroupInfos().GetGroupByIdJ());
+            return (AbstractModel)GetModelBaseSingle(model);
+        }
     }
 }

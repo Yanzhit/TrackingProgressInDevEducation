@@ -85,5 +85,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.CreateTeam();
         }
+
+        private void GetTeamsByLectorA_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
