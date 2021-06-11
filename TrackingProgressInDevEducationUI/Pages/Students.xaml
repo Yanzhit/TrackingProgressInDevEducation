@@ -12,12 +12,33 @@
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-551,-270" HorizontalAlignment="Right" Width="1338">
         <Label x:Name="LNamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,4,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
         <Button x:Name="BAddStudent" Content="Добавить студента" HorizontalAlignment="Left" Margin="1098,22,0,0" VerticalAlignment="Top" Height="28" Width="230" FontSize="16" Click="BAddStudent_Click"/>
+        <!--<DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
+                  AutoGenerateColumns="True" CanUserAddRows ="False" 
+                  CanUserDeleteRows="False"
+                  Background="White" HorizontalAlignment="Center" 
+                  VerticalAlignment="Top" Margin="0,120,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged">-->
         <DataGrid x:Name="DGStudent" Margin="10,67,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Город" Width="125"/>
+            <!--public string Name { get; set; }
+        public string Surname { get; set; }
+        public int? Rate { get; set; }
+        public int? GroupId { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Contract { get; set; }
+        public string Birthday { get; set; }
+        public string MiddleName { get; set; }
+        public string Git { get; set; }
+        public int? CityId { get; set; }
+        public bool? Status { get; set; }-->
+            <!--<DataGrid.Columns>
+                 DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Surname" Width="125"/>
+                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
+                <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
+                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Rate" Width="50"/>
+                <DataGridTextColumn Binding ="{Binding Path = CityId}" IsReadOnly="True" Name Header="Город" Width="125"/>
                 <DataGridTextColumn Header="Курс" Width="100"/>
                 <DataGridTextColumn Header="Группа" Width="100"/>
                 <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="125"/>
@@ -30,7 +51,7 @@
                 <DataGridTextColumn Header="DOB" Width="60"/>
                 <DataGridTextColumn Header="Рейтинг" HeaderStringFormat="Рейтинг"/>
                 <DataGridTextColumn Header="Номер контракта" HeaderStringFormat="Номер контракта"/>
-            </DataGrid.Columns>
+            </DataGrid.Columns>-->
 
             <DataGrid.ItemsSource>
                 <SqlClient:SqlConnectionStringBuilder/>
