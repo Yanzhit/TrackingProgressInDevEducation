@@ -30,11 +30,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QComment SetNewCommentToStudent()
+        public QComment SetNewCommentToStudent(Comment comment)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewCommentToStudent);
-            Params = $"";
+            Params = $"{SepStr}{comment.Text}{SepMid}{comment.TypeId}{SepMid}" +
+                     $"{comment.StudentId}{SepMid}{comment.CreatedBy}{SepMid}" +
+                     $"{comment.Estimation}{SepEnd}";
             return this;
         }
 

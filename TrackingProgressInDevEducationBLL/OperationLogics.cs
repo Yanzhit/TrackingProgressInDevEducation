@@ -88,12 +88,12 @@ namespace TrackingProgressInDevEducationBLL
             IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
             return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorJ(modelReturned);
         }
-        public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
-        {
-            var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
-            IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
-            return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
-        }
+        //public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
+        //{
+        //    var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
+        //    IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
+        //    return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
+        //}
 
         public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
         {
@@ -116,12 +116,11 @@ namespace TrackingProgressInDevEducationBLL
             return (List<GetGroupsA>)_bllManager.CityA.GetGroups(modelReturned);
         }
 
-        public SetCommentsA SetNewComment(SetCommentsQ setCommentsQ)
+        public SetCommentsA SetNewCommentToStudent(SetCommentsQ setCommentsQ)
         {
-            var model = (Comment)_bllManager.CommentsQ.SetNewComment(setCommentsQ);
-            Comment modelReturned = _dalManager.Comments.SetNewComment(model);
-            return _bllManager.CommentsA.SetNewComment(modelReturned);
+            var model = (Comment)_bllManager.CommentsQ.SetNewCommentToStudent(setCommentsQ);
+            Comment modelReturned = _dalManager.Comments.SetNewCommentToStudent(model);
+            return _bllManager.CommentsA.SetNewCommentToStudent(modelReturned);
         }
-
     }
 }

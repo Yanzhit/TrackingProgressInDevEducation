@@ -21,9 +21,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             );
         }
 
-        public Comment SetNewCommentToStudent()
+        public Comment SetNewCommentToStudent(Comment comment)
         {
-            return (Comment)Manager.Setter.Single(_query.SetNewCommentToStudent());
+            return (Comment)Manager.Setter.Single(_query.SetNewCommentToStudent(comment));
         }
 
         public IEnumerable<Comment> SetCommentToTeam()

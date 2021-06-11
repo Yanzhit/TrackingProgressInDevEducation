@@ -54,7 +54,8 @@ namespace TrackingProgressInDevEducationUI.Pages
         private IEnumerable<GetAllStudentsByGroupA> RenderGroup()
         {
             var query = new GetAllStudentsByGroupQ(2/*нужно апракинуть группу*/);
-            return _operation.GetAllStudentsByGroup(query);
+            //return _operation.GetAllStudentsByGroup(query);
+            return null;
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)

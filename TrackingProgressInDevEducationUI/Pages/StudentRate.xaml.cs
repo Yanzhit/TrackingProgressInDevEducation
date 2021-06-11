@@ -39,7 +39,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BAddComentStudent_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var setNewComment = operation.SetNewComment(new SetCommentsQ(TBHardSkills.Text, ?,  ? , ?, TBHardSkillsRate.Text));
+            var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBHardSkills.Text, 1,  10 , 3, Convert.ToInt32(TBHardSkillsRate.Text)));
+            //(new SetCommentsQ(TBSoftSkills.Text, 2,  10 , 3, Convert.ToInt32(TBSoftSkillsRate.Text)));
+            //(new SetCommentsQ(TBCommon.Text, 3,  10 , 3, Convert.ToInt32(TBCommonRate.Text)));
+
             MessageBox.Show("Комментарий добавлен");
 
             //Text = text;

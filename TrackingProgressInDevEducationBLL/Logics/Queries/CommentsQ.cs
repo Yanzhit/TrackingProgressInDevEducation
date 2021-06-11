@@ -6,10 +6,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
     public class CommentsQ : AQuery
     {
-        public AbstractModel SetNewComment(SetCommentsQ setCommentsQ)
+        public AbstractModel SetNewCommentToStudent(SetCommentsQ model)
         {
-            WriteTypes(new Comments().SetNewComment());
-            return GetModelBaseSingle(setCommentsQ);
+            WriteTypes(new Comments().SetNewCommentToStudent());
+            return GetModelBaseSingle(model);
         }
     }
 }

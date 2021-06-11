@@ -5,7 +5,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
 {
     public class Comments : ATransfer
     {
-        public Comments SetNewComment()
+        public Comments SetNewCommentToStudent()
         {
             Query = typeof(SetCommentsQ);
             Base = typeof(Comment);

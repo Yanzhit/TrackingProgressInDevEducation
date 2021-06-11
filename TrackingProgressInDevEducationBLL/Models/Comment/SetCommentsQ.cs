@@ -8,20 +8,18 @@ namespace TrackingProgressInDevEducationBLL.Models.Comment
         public int TypeId { get; set; }
         public int? StudentId { get; set; }
         public int CreatedBy { get; set; }
-        public int? TeamId { get; set; }
         public int? Estimation { get; set; }
 
         public SetCommentsQ()
         {
         }
 
-        public SetCommentsQ(string text, int typeId, int studentId, int createdBy, int teamId, int estimation)
+        public SetCommentsQ(string text, int typeId, int studentId, int createdBy, int estimation)
         {
             Text = text;
             TypeId = typeId;
             StudentId = studentId;
             CreatedBy = createdBy;
-            TeamId = teamId;
             Estimation = estimation;
         }
 
@@ -36,13 +34,12 @@ namespace TrackingProgressInDevEducationBLL.Models.Comment
                    && TypeId == other.TypeId
                    && StudentId == other.StudentId
                    && CreatedBy == other.CreatedBy
-                   && TeamId == other.TeamId
                    && Estimation == other.Estimation;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, TeamId, Estimation);
+            return HashCode.Combine(Text, TypeId, StudentId, CreatedBy, Estimation);
         }
 
     }
