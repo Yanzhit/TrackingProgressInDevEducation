@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewCourse);
-            Params = $"{SepStr}{course.Name}{SepMid}{course.StartedOn}{SepMid}{course.FinishedOn}{SepEnd}";
+            Params = $"{SepStr}{course.Name}{SepMid}{course.Description}{SepEnd}";
             return this;
         }
 

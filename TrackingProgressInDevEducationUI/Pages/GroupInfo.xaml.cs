@@ -12,18 +12,49 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.GroupInfo;
+using TrackingProgressInDevEducationBLL.Models.MainPage;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
     /// <summary>
-    /// Interaction logic for GroupInfo.xaml
+    /// 
+    /// GetAllStudentsByGroup
     /// </summary>
     public partial class GroupInfo : Page
     {
+        private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
+
         public GroupInfo()
         {
             InitializeComponent();
+            NameGroup();
+            WriteTable();
+        }
+
+        private void NameGroup()
+        {
+            LPageName.Content = $"ghfghfgh";
+        }
+        private void WriteTable()
+        {
+            TableCourses();
+            TableStudent();
+        }
+        private void TableCourses()
+        {
+
+        }
+        private void TableStudent()
+        {
+            GetAllStudentsByGroupA.ItemsSource = RenderGroup();
+        }
+        private IEnumerable<GetAllStudentsByGroupA> RenderGroup()
+        {
+            var query = new GetAllStudentsByGroupQ(2/*нужно апракинуть группу*/);
+            return _operation.GetAllStudentsByGroup(query);
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -39,6 +70,16 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BJournal_Click(object sender, RoutedEventArgs e)
         {
             _contents.GroupJournal();
+        }
+
+        private void DGGroupInfo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void GetAllStudentsByGroupA_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

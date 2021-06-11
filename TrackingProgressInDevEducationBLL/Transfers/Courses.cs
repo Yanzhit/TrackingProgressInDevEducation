@@ -12,5 +12,12 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             Answer = typeof(SetCoursesA);
             return this;
         }
+        public Courses SetNewCourse()
+        {
+            Query = typeof(SetNewCoursesQ);
+            Base = typeof(Course);
+            Answer = typeof(SetNewCoursesA);
+            return this;
+        }
     }
 }

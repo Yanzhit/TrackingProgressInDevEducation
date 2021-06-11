@@ -1,26 +1,24 @@
 ﻿using System;
 
-namespace TrackingProgressInDevEducationBLL.Models.MainPage
+namespace TrackingProgressInDevEducationBLL.Models.GroupInfo
 {
-    public class GetAllTeamsByLectorJQ : ADTOQuery
+    public class GetAllStudentsByGroupQ : ADTOQuery
     {
         public int Id { get; set; }
-
-        public GetAllTeamsByLectorJQ()
+        public GetAllStudentsByGroupQ()
         {
         }
 
-        public GetAllTeamsByLectorJQ(int id)
+        public GetAllStudentsByGroupQ(int id)
         {
             Id = id;
         }
-
         public override bool Equals(object obj)
         {
-            return Equals((GetAllTeamsByLectorJQ)obj);
+            return Equals((GetAllStudentsByGroupQ)obj);
         }
 
-        private bool Equals(GetAllTeamsByLectorJQ other)
+        private bool Equals(GetAllStudentsByGroupQ other)
         {
             return Id == other.Id;
         }

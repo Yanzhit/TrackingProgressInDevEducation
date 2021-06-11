@@ -2,6 +2,7 @@
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
 
+
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
     public class MainPagesQ : AQuery

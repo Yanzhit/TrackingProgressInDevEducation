@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
@@ -25,11 +26,6 @@ namespace TrackingProgressInDevEducationDAL.Facades
         public IEnumerable<Student> GetAllStudents()
         {
             return (IEnumerable<Student>)Manager.Getter.Several(_query.GetAllStudents());
-        }
-
-        public IEnumerable<Student> GetAllStudentsByGroup()
-        {
-            return (IEnumerable<Student>)Manager.Getter.Several(_query.GetAllStudentsByGroup());
         }
 
         public IEnumerable<Student> UpdStudentToGroup()
