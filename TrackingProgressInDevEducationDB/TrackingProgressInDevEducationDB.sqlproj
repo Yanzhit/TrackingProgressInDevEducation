@@ -248,6 +248,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdPasswordLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdEmailLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroups.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllCoursesByGroup.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

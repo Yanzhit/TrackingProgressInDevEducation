@@ -39,6 +39,10 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (IEnumerable<GetAllStudentsByGroup>)Manager.Getter.Several(_query.GetAllStudentsByGroup(getAllStudentsByGroup));
         }
+        public IEnumerable<GetAllCoursesByGroup> GetAllCoursesByGroup(GetAllCoursesByGroup getAllCoursesByGroup)
+        {
+            return (IEnumerable<GetAllCoursesByGroup>)Manager.Getter.Several(_query.GetAllCoursesByGroup(getAllCoursesByGroup));
+        }
 
         public IEnumerable<Joins> GetHWComplitingByStudentJ()
         {

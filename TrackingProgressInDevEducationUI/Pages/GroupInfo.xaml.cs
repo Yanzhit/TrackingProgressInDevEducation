@@ -45,7 +45,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableCourses()
         {
-
+            GetAllCoursesByGroupA.ItemsSource = RenderCourse();
         }
         private void TableStudent()
         {
@@ -55,6 +55,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             var query = new GetAllStudentsByGroupQ(2/*нужно апракинуть группу*/);
             return _operation.GetAllStudentsByGroup(query);
+        }
+        private IEnumerable<GetAllCoursesByGroupA> RenderCourse()
+        {
+            var query = new GetAllCoursesByGroupQ(2/*нужно апракинуть группу*/);
+            return _operation.GetAllCoursesByGroup(query);
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)

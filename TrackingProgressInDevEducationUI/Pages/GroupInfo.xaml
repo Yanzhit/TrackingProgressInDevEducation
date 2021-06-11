@@ -16,24 +16,29 @@
         </Button>
         <Button x:Name="BAddStudent" Content="Добавить студентов" HorizontalAlignment="Left" Margin="157,22,0,0" VerticalAlignment="Top" Height="28" Width="90" FontSize="9" RenderTransformOrigin="0.533,0.75" Click="BAddStudent_Click"/>
         <Button x:Name="BJournal" Content="Журнал" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Height="28" Width="54" Click="BJournal_Click"/>
-        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335" SelectionChanged="DGGroupInfo_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата начала" HeaderStringFormat="Дата начала"/>
-                <DataGridCheckBoxColumn Header="Дата окончания" HeaderStringFormat="Дата окончания"/>
-                <DataGridCheckBoxColumn Header="Курс" Width="200"/>
-            </DataGrid.Columns>
-        </DataGrid>
         <DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
-                  Background="White" HorizontalAlignment="Center" 
-                  VerticalAlignment="Top" Margin="0,120,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged">
+                  Background="White" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" Margin="10,225,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Surname" Width="125"/>
                 <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
                 <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
                 <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Rate" Width="50"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="GetAllCoursesByGroupA" Width="537"  FontSize="26" 
+                  AutoGenerateColumns="False" CanUserAddRows ="False" 
+                  CanUserDeleteRows="False"
+                  Background="White" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" Margin="10,75,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged" Height="124">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
+                <DataGridTextColumn Binding ="{Binding Path = Description}" IsReadOnly="True" Header="Description" Width="525" />
+
             </DataGrid.Columns>
         </DataGrid>
         <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
