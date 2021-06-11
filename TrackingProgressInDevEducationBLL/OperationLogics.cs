@@ -1,6 +1,6 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.Registration;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
-﻿using TrackingProgressInDevEducationBLL.Models.Group;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.Verification;
 using TrackingProgressInDevEducationDAL;
 using TrackingProgressInDevEducationDAL.Models.Bases;
@@ -87,11 +87,11 @@ namespace TrackingProgressInDevEducationBLL
             IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
             return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorJ(modelReturned);
         }
-        public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
+        public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ query)
         {
-            var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
+            var model = (GetAllStudentsByGroup)_bllManager.GroupInfosQ.GetAllStudentsByGroup(query);
             IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
-            return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
+            return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfosA.GetAllStudentsByGroupA(modelReturned);
         }
 
         public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
