@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.Comment;
 
@@ -40,17 +29,12 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             OperationLogics operation = new OperationLogics();
             var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBHardSkills.Text, 1,  10 , 3, Convert.ToInt32(TBHardSkillsRate.Text)));
-            //(new SetCommentsQ(TBSoftSkills.Text, 2,  10 , 3, Convert.ToInt32(TBSoftSkillsRate.Text)));
-            //(new SetCommentsQ(TBCommon.Text, 3,  10 , 3, Convert.ToInt32(TBCommonRate.Text)));
+            
+            // !!!  необходимо получить из другой страницы studentId,  createdBy
+            //var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBSoftSkills.Text, 2, 10, 3, Convert.ToInt32(TBSoftSkillsRate.Text)));
+            //var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBCommon.Text, 3,  10 , 3, Convert.ToInt32(TBCommonRate.Text)));
 
             MessageBox.Show("Комментарий добавлен");
-
-            //Text = text;
-            //TypeId = typeId;
-            //StudentId = studentId;
-            //CreatedBy = createdBy;
-            //TeamId = teamId;
-            //Estimation = estimation;
 
         }
 
