@@ -13,26 +13,26 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     {
         protected override void WriteTypes(ATransfer aTransfer)
         {
-            Type = new[]
+            Types = new[]
             {
                 aTransfer.Query,
                 aTransfer.Base
             };
         }
 
-        protected AbstractModel GetModelBaseSingle(ADTOQuery adtoQuery)
+        protected AbstractModel GetModelBaseSingle(ADTOQuery model)
         {
-            return Single(adtoQuery);
+            return Single(model);
         }
 
         /// <summary>
         /// Получение базовой модели для получение списка объектов из BD
         /// </summary>
-        /// <param name="adtoQuery">Абстракция контейнера данных запроса</param>
+        /// <param name="model">Абстракция контейнера данных запроса</param>
         /// <returns>Список абстрактную модель данных</returns>
-        protected IEnumerable<AbstractModel> GetModelBaseSeveral(ADTOQuery adtoQuery)
+        protected IEnumerable<AbstractModel> GetModelBaseSeveral(ADTOQuery model)
         {
-            return Several(adtoQuery);
+            return Several(model);
         }
 
         /// <summary>
@@ -44,7 +44,8 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         {
             GetMethodSingle();
             MethodInfo generic = GetGenericSingle();
-            return (AbstractModel)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (AbstractModel)generic.Invoke(Instants, new object[] { model });
         }
 
         /// <summary>
@@ -56,7 +57,8 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         {
             GetMethodSeveral();
             MethodInfo generic = GetGenericSeveral();
-            return (IEnumerable<AbstractModel>)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (IEnumerable<AbstractModel>)generic.Invoke(Instants, new object[] { model });
         }
     }
 }

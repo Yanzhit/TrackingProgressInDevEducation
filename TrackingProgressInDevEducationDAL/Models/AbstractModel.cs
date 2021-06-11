@@ -2,7 +2,7 @@
 {
     public abstract  class AbstractModel
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         protected AbstractModel()
         {
         }

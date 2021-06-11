@@ -9,10 +9,11 @@ namespace TrackingProgressInDevEducationBLL.Logics
     /// </summary>
     public abstract class ARequest
     {
+        protected object Instants;
         /// <summary>
         /// Массив типов данных для создания метода с необходимыми типами.
         /// </summary>
-        protected Type[] Type;
+        protected Type[] Types;
 
         /// <summary>
         /// Метод-Инфо для запроса работающего с одним объектом данных
@@ -52,7 +53,7 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <returns></returns>
         protected MethodInfo GetGenericSingle()
         {
-            return MethodSingle.MakeGenericMethod(Type);
+            return MethodSingle.MakeGenericMethod(Types);
         }
 
         /// <summary>
@@ -61,7 +62,13 @@ namespace TrackingProgressInDevEducationBLL.Logics
         /// <returns></returns>
         protected MethodInfo GetGenericSeveral()
         {
-            return MethodSeveral.MakeGenericMethod(Type);
+            return MethodSeveral.MakeGenericMethod(Types);
+        }
+
+        protected void GetInstansClass()
+        {
+            ConstructorInfo constructor = typeof(Mappers).GetConstructor(Type.EmptyTypes);
+            Instants = constructor.Invoke(new object[]{});
         }
     }
 }

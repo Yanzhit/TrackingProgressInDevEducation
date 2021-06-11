@@ -6,10 +6,10 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
     public class VerificationsQ : AQuery
     {
-        public AbstractModel UpdateActivationLector(UpdLectorQ updLectorQ)
+        public AbstractModel UpdateActivationLector(UpdLectorQ model)
         {
             WriteTypes(new Verifications().UpdateActivationLector());
-            return GetModelBaseSingle(updLectorQ);
+            return GetModelBaseSingle(model);
         }
     }
 }

@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
-    
+
     <Page.Resources>
         <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
     </Page.Resources>
@@ -47,27 +47,13 @@
         <Button Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="4" Grid.Row="3" 
                 Margin="0,30,0,30" 
         />
-
-        <TextBox x:Name="WelcomeBlock" 
-            HorizontalAlignment="Stretch" 
-            Height="Auto" 
-            Margin="0,10,0,0" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Stretch" 
-            Width="Auto" 
-            Background="#FFE0DEDE" 
-            FontSize="16" 
-            FontWeight="Bold" 
-            BorderBrush="#FFE0DEDE" TextChanged="WelcomeBlock_TextChanged"
-            Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="0"
-        />
         <DataGrid x:Name="GetGroupsByLectorA" Width="784"  FontSize="16" 
                   AutoGenerateColumns="True" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
                   VerticalAlignment="Top" Margin="5,5,0,0"
                   Grid.ColumnSpan="4" Grid.Row="2">
-        
+
             <!--<DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Id}"  IsReadOnly="True" Header="ID" Width="30"/>
                 <DataGridTextColumn Binding ="{Binding Path = NameG}"  IsReadOnly="True" Header="Группа" Width="150"/>
@@ -92,6 +78,7 @@
                 <DataGridTextColumn Binding ="{Binding Path = StudentCount}" IsReadOnly="True" Header="Сколько тебе лет" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="WelcomeBlock" Content="u" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="36" Margin="31,5,0,0" VerticalAlignment="Top" Width="359" Click="WelcomeBlock_Click"/>
 
     </Grid>
 </Page>

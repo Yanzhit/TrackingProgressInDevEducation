@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
     {
         protected override void WriteTypes(ATransfer aTransfer)
         {
-            Type = new[]
+            Types = new[]
             {
                 aTransfer.Base,
                 aTransfer.Answer
@@ -31,14 +31,16 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         {
             GetMethodSingle();
             MethodInfo generic = GetGenericSingle();
-            return (ADTOAnswer)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (ADTOAnswer)generic.Invoke(Instants, new object[] { model });
         }
 
         private IEnumerable<ADTOAnswer> Several(IEnumerable<AbstractModel> model)
         {
             GetMethodSeveral();
             MethodInfo generic = GetGenericSeveral();
-            return (IEnumerable<ADTOAnswer>)generic.Invoke(null, new object[] { model });
+            GetInstansClass();
+            return (IEnumerable<ADTOAnswer>)generic.Invoke(Instants, new object[] { model });
         }
     }
 }

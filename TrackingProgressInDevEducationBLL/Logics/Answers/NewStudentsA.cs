@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
@@ -24,7 +19,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         public SetNewStudentA SetNewStudent(AbstractModel model)
         {
             WriteTypes(new NewStudents().SetNewStudent());
-            return (SetNewStudentA) GetModelBaseSingle(model);
+            return (SetNewStudentA)GetModelBaseSingle(model);
         }
 
         public IEnumerable<GetCityA> GetCities(IEnumerable<AbstractModel> model)

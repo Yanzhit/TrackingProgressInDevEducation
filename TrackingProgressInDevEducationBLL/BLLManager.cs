@@ -63,7 +63,31 @@ namespace TrackingProgressInDevEducationBLL
         public RegistrationsA RegistrationsA => new();
         public VerificationsQ VerificationsQ => new();
         public VerificationsA VerificationsA => new();
-        public MainPagesA MainPagesA => new();
         public MainPagesQ MainPagesQ => new();
+        public MainPagesA MainPagesA => new();
+        public AddStudentsToGroupsQ AddStudentsToGroupsQ => new();
+        public AddStudentsToGroupsA AddStudentsToGroupsA => new();
+        public AddStudentsToTeamsQ AddStudentsToTeamsQ => new();
+        public AddStudentsToTeamsA AddStudentsToTeamsA => new();
+        public CitiesQ CitiesQ => new();
+        public CitiesA CitiesA => new();
+        public CreateTeamsQ CreateTeamsQ => new();
+        public CreateTeamsA CreateTeamsA => new();
+        public GroupInfosQ GroupInfosQ => new();
+        public GroupInfosA GroupInfosA => new();
+        public GroupJournalsQ GroupJournalsQ => new();
+        public GroupJournalsA GroupJournalsA => new();
+        public MyProfilesQ MyProfilesQ => new();
+        public MyProfilesA MyProfilesA => new();
+        public StudentProfilesQ StudentProfilesQ => new();
+        public StudentProfilesA StudentProfilesA => new();
+        public StudentRatesQ StudentRatesQ => new();
+        public StudentRatesA StudentRatesA => new();
+        public StudentsSQ StudentsSQ => new();
+        public StudentsSA StudentsSA => new();
+        public TeamInfosQ TeamInfosQ => new();
+        public TeamInfosA TeamInfosA => new();
+        public TeamRatesQ TeamRatesQ => new();
+        public TeamRatesA TeamRatesA => new();
     }
 }
