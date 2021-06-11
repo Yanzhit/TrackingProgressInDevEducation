@@ -4,8 +4,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class TStudent : AbstractModel
     {
-        public int TeamId { get; }
-        public int StudentId { get; }
+        public int TeamId  { get; set; }
+        public int StudentId  { get; set; }
 
         public TStudent()
         {

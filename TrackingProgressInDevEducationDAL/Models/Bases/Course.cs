@@ -4,9 +4,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Course : AbstractModel
     {
-        public string Name { get; }
-        public string StartedOn { get; }
-        public string FinishedOn { get; }
+        public string Name { get; set; }
+        public string StartedOn { get; set; }
+        public string FinishedOn { get; set; }
+        public string Description { get; set; }
 
         public Course()
         {
@@ -17,6 +18,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Name = course.Name;
             StartedOn = course.StartedOn;
             FinishedOn = course.FinishedOn;
+            Description = course.Description;
         }
         public Course(object obj) : base(obj)
         {
@@ -24,6 +26,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             Name = course.Name;
             StartedOn = course.StartedOn;
             FinishedOn = course.FinishedOn;
+            Description = course.Description;
         }
         public override bool Equals(object obj)
         {

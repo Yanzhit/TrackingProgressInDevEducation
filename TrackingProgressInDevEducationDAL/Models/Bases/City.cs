@@ -4,7 +4,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class City : AbstractModel
     {
-        public string Name { get; }
+        public string Name { get; set; }
         
         public City()
         {

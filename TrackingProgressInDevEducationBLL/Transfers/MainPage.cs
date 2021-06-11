@@ -1,6 +1,5 @@
 ﻿using System;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
@@ -19,7 +18,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public MainPage GetAllTeamsByLectorJ()
         {
             Query = typeof(GetAllTeamsByLectorJQ);
-            //Base = typeof();
+            Base = typeof(GetAllTeamsByLectorJ);
             Answer = typeof(GetAllTeamsByLectorJA);
             return this;
         }

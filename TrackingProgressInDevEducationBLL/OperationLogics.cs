@@ -9,6 +9,7 @@ using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationDAL.Models.Others;
+using TrackingProgressInDevEducationBLL.Models.GroupInfo;
 using TrackingProgressInDevEducationBLL.Models.Comment;
 
 namespace TrackingProgressInDevEducationBLL
@@ -60,6 +61,12 @@ namespace TrackingProgressInDevEducationBLL
             Lector modelReturned = _dalManager.Lectors.SetNewLector(model);
             return _bllManager.RegistrationsA.SetNewLector(modelReturned);
         }
+        public SetNewCoursesA SetNewCourse(SetNewCoursesQ setNewCoursesQ)
+        {
+            var model = (Course)_bllManager.NewCoureQ.SetNewCourse(setNewCoursesQ);
+            Course modelReturned = _dalManager.Courses.SetNewCourse(model);
+            return _bllManager.SenNewCourse.SetNewCourse(modelReturned);
+        }
 
         public UpdLectorA UpdateAcrivationLector(UpdLectorQ updLectorQ)
         {
@@ -77,16 +84,36 @@ namespace TrackingProgressInDevEducationBLL
 
         public List<GetGroupsByLectorA> GetGroupsByLector(GetGroupsByLectorQ getGroupsByLectorQ)
         {
-            var model = (GetGroupByLectorJ)_bllManager.MainPagesQ.GetGroupsByLectorQ(getGroupsByLectorQ);
+            var model = (GetGroupByLectorJ)_bllManager.MainPagesQ.GetGroupsByLectorJ(getGroupsByLectorQ);
             IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
-            return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorA(modelReturned);
+            return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorJ(modelReturned);
+        }
+        public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ getAllStudentsByGroupQ)
+        {
+            var model = (GetAllStudentsByGroup)_bllManager.GroupInfoQ.GetAllStudentsByGroup(getAllStudentsByGroupQ);
+            IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
+            return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfoA.GetAllStudentsByGroupA(modelReturned);
         }
 
-        public List<SetCityA> GetAllCities(EmptyQ emptyQ)
+        public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
         {
-            var model = (City)_bllManager.CityQ.GetAllCities(emptyQ);
-            IEnumerable<City> modelReturned = _dalManager.Cities.GetAllCities();
-            return (List<SetCityA>)_bllManager.CityA.GetAllCities(modelReturned);
+            var model = (GetAllTeamsByLectorJ)_bllManager.MainPagesQ.GetAllTeamsByLectorJ(getTeamssByLectorQ);
+            IEnumerable<GetAllTeamsByLectorJ> modelReturned = _dalManager.Joins.GetAllTeamsByLectorJ(model);
+            return (List<GetAllTeamsByLectorJA>)_bllManager.MainPagesA.GetAllTeamsByLectorJ(modelReturned);
+        }
+
+        public List<GetCityA> GetCities(EmptyQ emptyQ)
+        {
+            var model = (City)_bllManager.CityQ.GetCities(emptyQ);
+            IEnumerable<City> modelReturned = _dalManager.Cities.GetCities();
+            return (List<GetCityA>)_bllManager.CityA.GetCities(modelReturned);
+        }
+        
+        public List<GetGroupsA> GetGroups(EmptyQ emptyQ)
+        {
+            var model = (Group)_bllManager.CityQ.GetGroups(emptyQ);
+            IEnumerable<Group> modelReturned = _dalManager.Groups.GetGroups();
+            return (List<GetGroupsA>)_bllManager.CityA.GetGroups(modelReturned);
         }
 
         public SetCommentsA SetNewComment(SetCommentsQ setCommentsQ)

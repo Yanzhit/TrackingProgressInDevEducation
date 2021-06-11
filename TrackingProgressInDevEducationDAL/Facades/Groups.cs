@@ -23,6 +23,15 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Обнуление таблицы Группы и ключа identity
         /// </summary>
         /// <returns></returns>
+        public IEnumerable<Group> GetGroups()
+        {
+            return (IEnumerable<Group>)Manager.Getter.Several(_query.GetGroups());
+        }
+        
+        /// <summary>
+        /// Обнуление таблицы Группы и ключа identity
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Group> NullifyGroups()
         {
             return (IEnumerable<Group>)Manager.Remove.Rem(_query.NullifyGroups());

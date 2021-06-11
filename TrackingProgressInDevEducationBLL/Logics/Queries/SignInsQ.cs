@@ -12,12 +12,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         /// <summary>
         /// Получить лектора по логину и паролю
         /// </summary>
-        /// <param name="getLectorQ">Модель с данными для запроса</param>
+        /// <param name="model">Модель с данными для запроса</param>
         /// <returns>Абстрактную модель данных после ответа от сервера</returns>
-        public AbstractModel GetLectorByLoginAndPassword(GetLectorQ getLectorQ)
+        public AbstractModel GetLectorByLoginAndPassword(GetLectorQ model)
         {
             WriteTypes(new SignIns().GetLectorByLoginAndPassword());
-            return GetModelBaseSingle(getLectorQ);
+            return GetModelBaseSingle(model);
         }
     }
 }

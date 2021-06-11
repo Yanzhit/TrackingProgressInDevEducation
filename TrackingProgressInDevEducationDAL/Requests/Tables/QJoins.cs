@@ -12,6 +12,14 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
+        public QJoins GetAllStudentsByGroup(GetAllStudentsByGroup getAllStudentsByGroup)
+        {
+            ModelType = typeof(GetAllStudentsByGroup);
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllStudentsByGroup);
+            Params = $"{SepStr}{getAllStudentsByGroup.Id}{SepEnd}";
+            return this;
+        }
         public QJoins GetAllCoursesByLectorJ()
         {
             QueryType = typeof(Getter);
@@ -27,11 +35,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = "";
             return this;
         }
-        public QJoins GetAllTeamsByLectorJ()
+        public QJoins GetAllTeamsByLectorJ(GetAllTeamsByLectorJ lectorJ)
         {
+            ModelType = typeof(GetAllTeamsByLectorJ);
             QueryType = typeof(Getter);
             Name = nameof(GetAllTeamsByLectorJ);
-            Params = "";
+            Params = $"{SepStr}{lectorJ.Id}{SepEnd}";
             return this;
         }
         public QJoins GetAllTestsByStudentIdJ()
@@ -48,11 +57,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = "";
             return this;
         }
-        public QJoins GetGroupByLectorJ(GetGroupByLectorJ lector)
+        public QJoins GetGroupsByLectorJ(GetGroupByLectorJ lector)
         {
             ModelType = typeof(GetGroupByLectorJ);
             QueryType = typeof(Getter);
-            Name = nameof(GetGroupByLectorJ);
+            Name = nameof(GetGroupsByLectorJ);
             Params = $"{SepStr}{lector.Id}{SepEnd}";
             return this;
         }

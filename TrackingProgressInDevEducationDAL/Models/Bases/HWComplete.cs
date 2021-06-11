@@ -4,12 +4,12 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class HWComplete : AbstractModel
     {
-        public int HomeworkId { get; }
-        public int StudentId { get; }
-        public bool Status { get; }
-        public string ApproveDate { get; }
-        public int? Score { get; }
-        public string CreatedOn { get; }
+        public int HomeworkId  { get; set; }
+        public int StudentId  { get; set; }
+        public bool Status  { get; set; }
+        public string ApproveDate  { get; set; }
+        public int? Score  { get; set; }
+        public string CreatedOn  { get; set; }
 
         public HWComplete()
         {

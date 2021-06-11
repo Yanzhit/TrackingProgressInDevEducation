@@ -3,6 +3,6 @@
 	@Login nvarchar (50),
 	@Password nvarchar (50)
 AS
-	UPDATE Lectors SET [Login] = @Login, [Password] = @Password
+	UPDATE Lectors SET [Login] = @Login
 	OUTPUT INSERTED.[id], INSERTED.[Login], INSERTED.[Password]
-	WHERE [id] = @Id
+	WHERE [id] = @Id AND [Password] = @Password

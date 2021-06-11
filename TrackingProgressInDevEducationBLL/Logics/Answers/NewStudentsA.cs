@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Answers
 {
@@ -24,13 +19,19 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
         public SetNewStudentA SetNewStudent(AbstractModel model)
         {
             WriteTypes(new NewStudents().SetNewStudent());
-            return (SetNewStudentA) GetModelBaseSingle(model);
+            return (SetNewStudentA)GetModelBaseSingle(model);
         }
 
-        public IEnumerable<SetCityA> GetAllCities(IEnumerable<AbstractModel> model)
+        public IEnumerable<GetCityA> GetCities(IEnumerable<AbstractModel> model)
         {
-            WriteTypes(new NewStudents().GetAllCities());
-            return (IEnumerable<SetCityA>)GetModelBaseSeveral(model);
+            WriteTypes(new NewStudents().GetCities());
+            return (IEnumerable<GetCityA>)GetModelBaseSeveral(model);
+        }
+
+        public IEnumerable<GetGroupsA> GetGroups(IEnumerable<AbstractModel> model)
+        {
+            WriteTypes(new NewStudents().GetGroups());
+            return (IEnumerable<GetGroupsA>)GetModelBaseSeveral(model);
         }
     }
 }

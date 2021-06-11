@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Cities : AFacade
+    public class Cities : AFacade, ICities
     {
         private readonly QCity _query = new();
 
@@ -22,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Получить все города
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<City> GetAllCities()
+        public IEnumerable<City> GetCities()
         {
             return (IEnumerable<City>)Manager.Getter.Several(_query.GetAllCities());
         }

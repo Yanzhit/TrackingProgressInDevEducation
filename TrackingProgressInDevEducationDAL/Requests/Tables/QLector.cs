@@ -16,7 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         {
             QueryType = typeof(Setter);
             Name = nameof(SetNewLector);
-            Params = @$"{SepStr}{lector.FullName}{SepMid}{lector.Email}{SepMid}{lector.Password}{SepEnd}";
+            Params = @$"{SepStr}{lector.Login}{SepMid}{lector.FullName}{SepMid}{lector.Email}{SepMid}{lector.Password}{SepEnd}";
             return this;
         }
 

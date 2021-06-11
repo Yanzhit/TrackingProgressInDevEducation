@@ -9,12 +9,12 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
         /// <summary>
         /// Создать новую группу
         /// </summary>
-        /// <param name="setGroupQ">Модель с данными для запроса</param>
+        /// <param name="model">Модель с данными для запроса</param>
         /// <returns>Абстрактную модель данных после ответа от сервера</returns>
-        public AbstractModel SetNewGroup(SetGroupQ setGroupQ)
+        public AbstractModel SetNewGroup(SetGroupQ model)
         {
             WriteTypes(new Groups().SetNewGroup());
-            return GetModelBaseSingle(setGroupQ);
+            return GetModelBaseSingle(model);
         }
     }
 }

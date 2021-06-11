@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrackingProgressInDevEducationBLL.Models.NewStudent
+﻿namespace TrackingProgressInDevEducationBLL.Models.NewStudent
 {
-    public class SetCityA : ADTOAnswer
+    public class GetGroupsA : ADTOAnswer
     {
         public string Name { get; set; }
 
-        public SetCityA()
+        public GetGroupsA()
         {
         }
 
-        public SetCityA(int id, string name)
+        public GetGroupsA(int id, string name)
         {
             Id = id;
             Name = name;
         }
         public override bool Equals(object obj)
         {
-            return Equals((SetCityA)obj);
+            return Equals((GetGroupsA)obj);
         }
 
-        private bool Equals(SetCityA other)
+        private bool Equals(GetGroupsA other)
         {
             return Name == other.Name;
         }

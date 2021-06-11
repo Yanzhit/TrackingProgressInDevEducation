@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationBLL.Models.NewStudent
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public decimal? Rate { get; set; }
+        public int? Rate { get; set; }
         public int? GroupId { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
@@ -32,7 +32,7 @@ namespace TrackingProgressInDevEducationBLL.Models.NewStudent
             string middleName,
             string phone,
             string birthday,
-            decimal? rate = null,
+            int? rate = null,
             int? groupId = null,
             string email = null,
             string contract = null,

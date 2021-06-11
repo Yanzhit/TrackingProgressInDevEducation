@@ -4,10 +4,10 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
    public class Group : AbstractModel
     {
-        public string Name { get; }
-        public int CourseId { get; }
-        public string StartDate { get; }
-        public string EndDate { get; }
+        public string Name  { get; set; }
+        public int CourseId  { get; set; }
+        public string StartDate  { get; set; }
+        public string EndDate  { get; set; }
 
         public Group()
         {

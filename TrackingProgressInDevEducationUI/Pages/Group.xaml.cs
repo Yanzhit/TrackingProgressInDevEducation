@@ -46,6 +46,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             {
                 CBChangeCourse.Items.Add(course.Name);
             }
+            CBChangeCourse.SelectedIndex = 0;
         }
     }
 }

@@ -8,6 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
     /// </summary>
     public class GetLectorA : ADTOAnswer
     {
+        public string Login { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
 
@@ -30,9 +31,10 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <param name="isActivated">Параметр проверки на активацию аккаунта</param>
         /// <param name="email">"Электронная почта</param>
         /// <param name="fullName">Передаваемое  имя</param>
-        public GetLectorA(int id, string email, string fullName, bool isActivated)
+        public GetLectorA(string login, int id, string email, string fullName, bool isActivated)
         {
             Id = id;
+            Login = login;
             FullName = fullName;
             Email = email;
             IsActivated = isActivated;

@@ -4,9 +4,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Lection : AbstractModel
     {
-        public int GroupId { get; }
-        public int LectorId { get; }
-        public string StartedOn { get; }
+        public int GroupId  { get; set; }
+        public int LectorId  { get; set; }
+        public string StartedOn  { get; set; }
 
         public Lection()
         {

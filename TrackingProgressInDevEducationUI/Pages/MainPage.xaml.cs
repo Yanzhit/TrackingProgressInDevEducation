@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Welcome()
         {
-            WelcomeBlock.Text = $"{Welcome2}{Sep}{_contents.Lector.FullName}";
+            WelcomeBlock.Content = $"{Welcome2}{Sep}{_contents.Lector.FullName}";
         }
         private void WriteTable()
         {
@@ -43,30 +43,25 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableGroup()
         {
-            //  GetGroupsByLectorA.ItemsSource = RenderGroup();
-            List<GetGroupsByLectorA> getGroups = (List<GetGroupsByLectorA>)RenderGroup();
-            foreach (var item in getGroups)
-            {
-                GetGroupsByLectorA.Items.Add(123);
-            }
+            GetGroupsByLectorA.ItemsSource = (List<GetGroupsByLectorA>)RenderGroup();
         }
 
         private IEnumerable<GetGroupsByLectorA> RenderGroup()
         {
-            GetGroupsByLectorQ query = new GetGroupsByLectorQ(_contents.Lector.Id); 
+            var query = new GetGroupsByLectorQ(_contents.Lector.Id); 
             return _operation.GetGroupsByLector(query);
         }
         private void TableTeam()
         {
-
+            GetTeamsByLectorA.ItemsSource = RenderTeam();
+        }
+        private IEnumerable<GetAllTeamsByLectorJA> RenderTeam()
+        {
+            var query = new GetAllTeamsByLectorJQ(_contents.Lector.Id);
+            return _operation.GetAllTeamsByLectorJ(query);
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void WelcomeBlock_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -84,6 +79,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void Button_Click_CreateTeam(object sender, RoutedEventArgs e)
         {
             _contents.CreateTeam();
+        }
+
+        private void WelcomeBlock_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.MyProfile();
         }
     }
 }

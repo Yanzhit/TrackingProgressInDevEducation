@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <summary>
         /// Электронная почта 
         /// </summary>
-        public string Email { get; set; }
+        public string Login { get; set; }
 
         /// <summary>
         /// Пароль
@@ -28,11 +28,11 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
         /// <summary>
         /// Конструктор для данного запроса
         /// </summary>
-        /// <param name="email">Электронная почта </param>
+        /// <param name="login">Электронная почта </param>
         /// <param name="password">Пароль</param>
-        public GetLectorQ(string email, string password)
+        public GetLectorQ(string login, string password)
         {
-            Email = email;
+            Login = login;
             Password = password;
         }
 
@@ -43,13 +43,13 @@ namespace TrackingProgressInDevEducationBLL.Models.SignIn
 
         private bool Equals(GetLectorQ other)
         {
-            return Email == other.Email
+            return Login == other.Login
                    && Password == other.Password;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Email, Password);
+            return HashCode.Combine(Login, Password);
         }
     }
 }

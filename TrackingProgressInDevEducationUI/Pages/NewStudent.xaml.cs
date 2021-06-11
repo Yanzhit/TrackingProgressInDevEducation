@@ -28,7 +28,8 @@ namespace TrackingProgressInDevEducationUI.Pages
         public NewStudent()
         {
             InitializeComponent();
-            GetAllCitiesInPage();
+            GetCitiesInPage();
+            GetGroups();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -38,18 +39,29 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BCreateStudent_Click(object sender, RoutedEventArgs e)
         {
-            OperationLogics operation = new OperationLogics();
-            var setNewStudent = operation.SetNewStudent(new SetNewStudentQ(TBName.Text, TBSurname.Text, TBMiddleName.Text, TBPhone.Text, TBBirthday.Text));
-            MessageBox.Show("Студент" + setNewStudent.Name + TBName.Text + " Создан!");
+            var answer = _operation.SetNewStudent(new SetNewStudentQ(groupId: 2, name: "asdqw", cityId:1, email:"qeqew"));
+            MessageBox.Show("Студент" + TBName.Text + " Создан!");
         }
 
-        private void GetAllCitiesInPage()
+        private void GetCitiesInPage()
         {
-            OperationLogics operation = new OperationLogics();
-            List<SetCityA> getAllCities = operation.GetAllCities(new EmptyQ());
-            foreach (var city in getAllCities)
+            List<GetCityA> answer = _operation.GetCities(new EmptyQ());
+            foreach (var city in answer)
             {
                 CBChangeCity.Items.Add(city.Name);
+            }
+            CBChangeCity.SelectedIndex = 0;
+        }
+
+        private void GetGroups()
+        {
+            List<GetGroupsA> answer = _operation.GetGroups(new EmptyQ());
+            {
+                foreach (var group in answer)
+                {
+                    CBChangeGroup.Items.Add(group.Name);
+                }
+                CBChangeGroup.SelectedIndex = 0;
             }
         }
     }

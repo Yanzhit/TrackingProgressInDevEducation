@@ -43,18 +43,22 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
+        public QGroup GetGroups()
+        {
+            QueryType = typeof(Getter);
+            Name = nameof(GetGroups);
+            Params = string.Empty;
+            return this;
+        }
+
+
         //public QGroup GetGroupById(int id)
         //{
         //    Name = nameof(GetGroupById);
         //    Params = $"{id}";
         //    return this;
         //}
-        //public QGroup GetGroups()
-        //{
-        //    Name = nameof(GetGroups);
-        //    Params = string.Empty;
-        //    return this;
-        //}
+
         //public QGroup RemoveGroupById(int id)
         //{
         //    Name = nameof(RemoveGroupById);

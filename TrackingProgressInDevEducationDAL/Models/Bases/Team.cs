@@ -4,9 +4,9 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Team : AbstractModel
     {
-        public string Name { get; }
-        public string From { get; }
-        public string To { get; }
+        public string Name  { get; set; }
+        public string From  { get; set; }
+        public string To  { get; set; }
 
         public Team()
         {

@@ -4,18 +4,18 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class Student : AbstractModel
     {
-        public string Name { get; }
-        public string Surname { get; }
-        public int? Rate { get; }
-        public int? GroupId { get; }
-        public string Phone { get; }
-        public string Email { get; }
-        public string Contract { get; }
-        public string Birthday { get; }
-        public string MiddleName { get; }
-        public string Git { get; }
-        public int? CityId { get; }
-        public bool? Status { get; }
+        public string Name  { get; set; }
+        public string Surname  { get; set; }
+        public int? Rate  { get; set; }
+        public int? GroupId  { get; set; }
+        public string Phone  { get; set; }
+        public string Email  { get; set; }
+        public string Contract  { get; set; }
+        public string Birthday  { get; set; }
+        public string MiddleName  { get; set; }
+        public string Git  { get; set; }
+        public int? CityId  { get; set; }
+        public bool? Status  { get; set; }
 
         public Student()
         {

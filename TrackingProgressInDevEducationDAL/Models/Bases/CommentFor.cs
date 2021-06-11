@@ -4,7 +4,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
 {
     public class CommentFor : AbstractModel
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
         public CommentFor(CommentFor commentFor) : base(commentFor)
         {

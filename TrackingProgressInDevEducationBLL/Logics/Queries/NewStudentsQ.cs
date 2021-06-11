@@ -1,32 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrackingProgressInDevEducationBLL.Models;
+﻿using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Transfers;
 using TrackingProgressInDevEducationDAL.Models;
 
 namespace TrackingProgressInDevEducationBLL.Logics.Queries
 {
-    /// <summary>
-    /// Создать новую группу
-    /// </summary>
-    /// <param name="setGroupQ">Модель с данными для запроса</param>
-    /// <returns>Абстрактную модель данных после ответа от сервера</returns>
     public class NewStudentsQ : AQuery
     {
-        public AbstractModel SetNewStudent(SetNewStudentQ setNewStudentQ)
+        public AbstractModel SetNewStudent(SetNewStudentQ model)
         {
             WriteTypes(new NewStudents().SetNewStudent());
-            return GetModelBaseSingle(setNewStudentQ);
+            return GetModelBaseSingle(model);
         }
 
-        public AbstractModel GetAllCities(EmptyQ setCityQ)
+        public AbstractModel GetCities(EmptyQ model)
         {
-            WriteTypes(new NewStudents().GetAllCities());
-            return GetModelBaseSingle(setCityQ);
+            WriteTypes(new NewStudents().GetCities());
+            return GetModelBaseSingle(model);
+        }
+        
+        public AbstractModel GetGroups(EmptyQ model)
+        {
+            WriteTypes(new NewStudents().GetGroups());
+            return GetModelBaseSingle(model);
         }
     }
 }

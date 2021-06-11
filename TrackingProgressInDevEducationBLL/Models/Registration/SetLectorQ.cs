@@ -4,6 +4,7 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
 {
     public class SetLectorQ : ADTOQuery
     {
+        public string Login { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -12,8 +13,9 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
         {
         }
 
-        public SetLectorQ(string fullName, string email, string password)
+        public SetLectorQ(string login, string fullName, string email, string password)
         {
+            Login = login;
             FullName = fullName;
             Email = email;
             Password = password;
@@ -25,14 +27,15 @@ namespace TrackingProgressInDevEducationBLL.Models.Registration
 
         private bool Equals(SetLectorQ other)
         {
-            return  FullName == other.FullName 
+            return  Login == other.Login
+                    && FullName == other.FullName 
                     && Email == other.Email
                     && Password == other.Password;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(FullName, Email, Password);
+            return HashCode.Combine(Login, FullName, Email, Password);
         }
     }
 }

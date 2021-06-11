@@ -14,11 +14,19 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             return this;
         }
 
-        public NewStudents GetAllCities()
+        public NewStudents GetCities()
         {
             Query = typeof(EmptyQ);
             Base = typeof(City);
-            Answer = typeof(SetCityA);
+            Answer = typeof(GetCityA);
+            return this;
+        }
+
+        public NewStudents GetGroups()
+        {
+            Query = typeof(EmptyQ);
+            Base = typeof(Group);
+            Answer = typeof(GetGroupsA);
             return this;
         }
     }
