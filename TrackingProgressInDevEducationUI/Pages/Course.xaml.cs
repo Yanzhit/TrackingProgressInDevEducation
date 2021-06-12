@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Course;
 using TrackingProgressInDevEducationBLL.Models.Group;
 
 namespace TrackingProgressInDevEducationUI.Pages

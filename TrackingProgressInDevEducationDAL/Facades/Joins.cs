@@ -59,9 +59,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetStudentByIdJ());
         }
 
-        public IEnumerable<Joins> GetVisitsByStudentJ()
+        public IEnumerable<GetVisitsByStudentJ> GetVisitsByStudentJ(GetVisitsByStudentJ model)
         {
-            return (IEnumerable<Joins>)Manager.Getter.Several(_query.GetVisitsByStudentJ());
+            return (IEnumerable<GetVisitsByStudentJ>)Manager.Getter.Several(_query.GetVisitsByStudentJ(model));
         }
     }
 }

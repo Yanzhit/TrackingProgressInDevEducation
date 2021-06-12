@@ -8,7 +8,6 @@
     <Compile Remove="Models\AddStudentsToGroup\**" />
     <Compile Remove="Models\AddStudentsToTeam\**" />
     <Compile Remove="Models\CreateTeam\**" />
-    <Compile Remove="Models\GroupJournal\**" />
     <Compile Remove="Models\Home\**" />
     <Compile Remove="Models\MyProfile\**" />
     <Compile Remove="Models\StudentProfile\**" />
@@ -18,7 +17,6 @@
     <EmbeddedResource Remove="Models\AddStudentsToGroup\**" />
     <EmbeddedResource Remove="Models\AddStudentsToTeam\**" />
     <EmbeddedResource Remove="Models\CreateTeam\**" />
-    <EmbeddedResource Remove="Models\GroupJournal\**" />
     <EmbeddedResource Remove="Models\Home\**" />
     <EmbeddedResource Remove="Models\MyProfile\**" />
     <EmbeddedResource Remove="Models\StudentProfile\**" />
@@ -28,7 +26,6 @@
     <None Remove="Models\AddStudentsToGroup\**" />
     <None Remove="Models\AddStudentsToTeam\**" />
     <None Remove="Models\CreateTeam\**" />
-    <None Remove="Models\GroupJournal\**" />
     <None Remove="Models\Home\**" />
     <None Remove="Models\MyProfile\**" />
     <None Remove="Models\StudentProfile\**" />

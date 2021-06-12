@@ -95,11 +95,12 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = "";
             return this;
         }
-        public QJoins GetVisitsByStudentJ()
+        public QJoins GetVisitsByStudentJ(GetVisitsByStudentJ model)
         {
+            ModelType = typeof(GetVisitsByStudentJ);
             QueryType = typeof(Getter);
             Name = nameof(GetVisitsByStudentJ);
-            Params = "";
+            Params = $"{SepStr}{model.StudentId}{SepEnd}";
             return this;
         }
 

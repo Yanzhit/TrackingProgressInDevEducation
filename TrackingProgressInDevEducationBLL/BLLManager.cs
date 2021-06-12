@@ -1,5 +1,6 @@
 ﻿using TrackingProgressInDevEducationBLL.Logics.Answers;
 using TrackingProgressInDevEducationBLL.Logics.Queries;
+using TrackingProgressInDevEducationBLL.Models.Course;
 using TrackingProgressInDevEducationBLL.Models.Group;
 
 namespace TrackingProgressInDevEducationBLL

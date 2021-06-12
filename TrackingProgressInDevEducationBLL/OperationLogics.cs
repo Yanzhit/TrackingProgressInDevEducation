@@ -11,6 +11,8 @@ using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationBLL.Models.GroupInfo;
 using TrackingProgressInDevEducationBLL.Models.Comment;
+using TrackingProgressInDevEducationBLL.Models.Course;
+using TrackingProgressInDevEducationBLL.Models.GroupJournal;
 using TrackingProgressInDevEducationBLL.Models.Students;
 
 namespace TrackingProgressInDevEducationBLL
@@ -50,9 +52,9 @@ namespace TrackingProgressInDevEducationBLL
         }
         public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
         {
-            var model = (GetGroupByIdJ)_bllManager.GroupInfoQ.GetGroupByIdJ(getGroupByIdJQ);
+            var model = (GetGroupByIdJ)_bllManager.GroupInfosQ.GetGroupByIdJ(getGroupByIdJQ);
             GetGroupByIdJ modelReturned = _dalManager.Joins.GetGroupByIdJ(model);
-            return _bllManager.GroupInfoA.GetGroupByIdJA(modelReturned);
+            return _bllManager.GroupInfosA.GetGroupByIdJA(modelReturned);
         }
         
         public SetNewStudentA SetNewStudent(SetNewStudentQ setNewStudentQ)
@@ -103,9 +105,9 @@ namespace TrackingProgressInDevEducationBLL
         }
         public List<GetAllCoursesByGroupA> GetAllCoursesByGroup(GetAllCoursesByGroupQ getAllCoursesByGroupQ)
         {
-            var model = (GetAllCoursesByGroup)_bllManager.GroupInfoQ.GetAllCoursesByGroup(getAllCoursesByGroupQ);
+            var model = (GetAllCoursesByGroup)_bllManager.GroupInfosQ.GetAllCoursesByGroup(getAllCoursesByGroupQ);
             IEnumerable<GetAllCoursesByGroup> modelReturned = _dalManager.Joins.GetAllCoursesByGroup(model);
-            return (List<GetAllCoursesByGroupA>)_bllManager.GroupInfoA.GetAllCoursesByGroupA(modelReturned);
+            return (List<GetAllCoursesByGroupA>)_bllManager.GroupInfosA.GetAllCoursesByGroupA(modelReturned);
         }
 
         public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
@@ -141,6 +143,13 @@ namespace TrackingProgressInDevEducationBLL
             var model = (Student)_bllManager.StudentsSQ.GetAllStudents(emptyQ);
             IEnumerable<Student> modelReturned = _dalManager.Students.GetAllStudents();
             return (List<GetAllStudentsA>)_bllManager.StudentsSA.GetAllStudents(modelReturned);
+        }
+
+        public List<GetVisitsByStudentJA> GetVisitsByStudentJ(GetVisitsByStudentJQ query)
+        {
+            var model = (GetVisitsByStudentJ)_bllManager.GroupJournalsQ.GetVisitsByStudentJ(query);
+            IEnumerable<GetVisitsByStudentJ> modelReturned = _dalManager.Joins.GetVisitsByStudentJ(model);
+            return (List<GetVisitsByStudentJA>)_bllManager.GroupJournalsA.GetVisitsByStudentJ(modelReturned);
         }
     }
 }

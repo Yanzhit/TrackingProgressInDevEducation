@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-namespace TrackingProgressInDevEducationBLL.Models.Group
+namespace TrackingProgressInDevEducationBLL.Models.Course
 {
     /// <summary>
     /// Модель данных для запроса со страницы Course (определяется именем папки, которое соответствует конкретным страницам

@@ -241,13 +241,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             //Answer = typeof();
             return this;
         }
-        public ПодготовленныеБолванки GetVisitsByStudentJ()
-        {
-            //Query = typeof();
-            //Base = typeof();
-            //Answer = typeof();
-            return this;
-        }
+       
         public ПодготовленныеБолванки SetNewLection()
         {
             //Query = typeof();
