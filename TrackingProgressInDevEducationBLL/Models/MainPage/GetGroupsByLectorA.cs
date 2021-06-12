@@ -12,18 +12,20 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
         public string StartDate { get; set; }
         public string EndDate { get; set; }
         public string NameC { get; set; }
+        public int StudCount { get; set; }
 
         public GetGroupsByLectorA()
         {
         }
 
-        public GetGroupsByLectorA(int id, string nameG, string startDate, string endDate, string nameC)
+        public GetGroupsByLectorA(int id, string nameG, string startDate, string endDate, string nameC, int studCount)
         {
             Id = id;
             NameG = nameG;
             StartDate = startDate;
             EndDate = endDate;
             NameC = nameC;
+            StudCount = studCount;
         }
 
         public override bool Equals(object obj)
@@ -37,12 +39,13 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
                    && NameG == other.NameG
                    && StartDate == other.StartDate
                    && EndDate == other.EndDate
-                   && NameC == other.NameC;
+                   && NameC == other.NameC
+                   && StudCount == other.StudCount;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, NameG, StartDate, EndDate, NameC);
+            return HashCode.Combine(Id, NameG, StartDate, EndDate, NameC, StudCount);
         }
     }
 }
