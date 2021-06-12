@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableCourses(int id)
         {
-            GetGroupByIdJA.Items.Add(RenderCourse(id));
+            //GetGroupByIdJA.Items.Add(RenderCourse(id));
         }
         private void TableStudent(int id)
         {
@@ -55,13 +55,13 @@ namespace TrackingProgressInDevEducationUI.Pages
             var query = new GetAllStudentsByGroupQ(id);
             return _operation.GetAllStudentsByGroup(query);
         }
-        private GetGroupByIdJA RenderCourse(int id)
-        {
-            var query = new GetGroupByIdJQ(id);
-            var result =  _operation.GetGroupByIdJ(query);
-            NameGroup(result.NameG);
-            return result;
-        }
+        //private GetGroupByIdJA RenderCourse(int id)
+        //{
+        //    var query = new GetGroupByIdJQ(id);
+        //    var result =  _operation.GetGroupByIdJ(query);
+        //    NameGroup(result.NameG);
+        //    return result;
+        //}
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {

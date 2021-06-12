@@ -48,12 +48,12 @@ namespace TrackingProgressInDevEducationBLL
             Group modelReturned = _dalManager.Groups.SetNewGroup(model);
             return _bllManager.GroupsA.SetNewGroup(modelReturned);
         }
-        public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
-        {
-            var model = (GetGroupByIdJ)_bllManager.GroupInfoQ.GetGroupByIdJ(getGroupByIdJQ);
-            GetGroupByIdJ modelReturned = _dalManager.Joins.GetGroupByIdJ(model);
-            return _bllManager.GroupInfoA.GetGroupByIdJA(modelReturned);
-        }
+        //public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
+        //{
+        //    var model = (GetGroupByIdJ)_bllManager.GroupInfoQ.GetGroupByIdJ(getGroupByIdJQ);
+        //    GetGroupByIdJ modelReturned = _dalManager.Joins.GetGroupByIdJ(model);
+        //    return _bllManager.GroupInfoA.GetGroupByIdJA(modelReturned);
+        //}
         
         public SetNewStudentA SetNewStudent(SetNewStudentQ setNewStudentQ)
         {
@@ -101,12 +101,12 @@ namespace TrackingProgressInDevEducationBLL
             IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
             return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfosA.GetAllStudentsByGroupA(modelReturned);
         }
-        public List<GetAllCoursesByGroupA> GetAllCoursesByGroup(GetAllCoursesByGroupQ getAllCoursesByGroupQ)
-        {
-            var model = (GetAllCoursesByGroup)_bllManager.GroupInfoQ.GetAllCoursesByGroup(getAllCoursesByGroupQ);
-            IEnumerable<GetAllCoursesByGroup> modelReturned = _dalManager.Joins.GetAllCoursesByGroup(model);
-            return (List<GetAllCoursesByGroupA>)_bllManager.GroupInfoA.GetAllCoursesByGroupA(modelReturned);
-        }
+        //public List<GetAllCoursesByGroupA> GetAllCoursesByGroup(GetAllCoursesByGroupQ getAllCoursesByGroupQ)
+        //{
+        //    var model = (GetAllCoursesByGroup)_bllManager.GroupInfoQ.GetAllCoursesByGroup(getAllCoursesByGroupQ);
+        //    IEnumerable<GetAllCoursesByGroup> modelReturned = _dalManager.Joins.GetAllCoursesByGroup(model);
+        //    return (List<GetAllCoursesByGroupA>)_bllManager.GroupInfoA.GetAllCoursesByGroupA(modelReturned);
+        //}
 
         public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
         {
@@ -134,6 +134,13 @@ namespace TrackingProgressInDevEducationBLL
             var model = (Comment)_bllManager.CommentsQ.SetNewCommentToStudent(setCommentsQ);
             Comment modelReturned = _dalManager.Comments.SetNewCommentToStudent(model);
             return _bllManager.CommentsA.SetNewCommentToStudent(modelReturned);
+        }
+
+        public List<GetCommentsByStudentA> GetCommentsByStudent(GetCommentsByStudentQ getCommentsByStudentQ)
+        {
+            var model = (Comment)_bllManager.CommentsQ.GetCommentsByStudent(getCommentsByStudentQ);
+            IEnumerable<Comment> modelReturned = _dalManager.Comments.GetCommentsByStudent(model);
+            return (List<GetCommentsByStudentA>)_bllManager.CommentsA.GetCommentsByStudent(modelReturned);
         }
 
         public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)

@@ -20,17 +20,20 @@
             <TabItem x:Name="TabPerformance" Header="Успеваемость">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem x:Name="TabComments" Header="Комментарии">
+            <TabItem x:Name="TabComments" Header="Комментарии" Height="20" VerticalAlignment="Top">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="GetCommentsByStudent"  FontSize="16" 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="GetCommentsByStudentA"  FontSize="16" 
                               AutoGenerateColumns="False" CanUserAddRows ="False" 
                               CanUserDeleteRows="False"
                               Background="White" HorizontalAlignment="Left" 
-                              VerticalAlignment="Top" Margin="0,0,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged" Width="770">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding ="{Binding Path = Comments}"  IsReadOnly="True" Header="Комментарии" Width="700"/>
-                        <DataGridTextColumn Binding ="{Binding Path = Estimation}" IsReadOnly="True" Header="Оценка" Width="70"/>
-                    </DataGrid.Columns>
+                              VerticalAlignment="Top" Margin="0,0,0,0" Width="770">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding ="{Binding Path = Comments}"  IsReadOnly="True" Header="Комментарии" Width="700"/>
+                            <DataGridTextColumn Binding ="{Binding Path = Estimation}" IsReadOnly="True" Header="Оценка" Width="70"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </TabItem>

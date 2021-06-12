@@ -12,5 +12,13 @@ namespace TrackingProgressInDevEducationBLL.Transfers
             Answer = typeof(SetCommentsA);
             return this;
         }
+
+        public Comments GetCommentsByStudent()
+        {
+            Query = typeof(GetCommentsByStudentQ);
+            Base = typeof(Comment);
+            Answer = typeof(GetCommentsByStudentA);
+            return this;
+        }
     }
 }
