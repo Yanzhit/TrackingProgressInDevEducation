@@ -1,7 +1,7 @@
 ﻿using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Models.Students;
-using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public StudentsS GetAllStudents()
         {
             Query = typeof(EmptyQ);
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             Answer = typeof(GetAllStudentsA);
             return this;
         }

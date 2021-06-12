@@ -23,23 +23,23 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// Получить всех студентов
         /// </summary>
         /// <returns>Студенты</returns>
-        public IEnumerable<Student> GetAllStudents()
+        public IEnumerable<GetAllStudentsJ> GetAllStudents()
         {
-            return (IEnumerable<Student>)Manager.Getter.Several(_query.GetAllStudents());
+            return (IEnumerable<GetAllStudentsJ>)Manager.Getter.Several(_query.GetAllStudents());
         }
 
-        public IEnumerable<Student> UpdStudentToGroup()
+        public IEnumerable<GetAllStudentsJ> UpdStudentToGroup()
         {
-            return (IEnumerable<Student>)Manager.Update.Upd(_query.UpdStudentToGroup());
+            return (IEnumerable<GetAllStudentsJ>)Manager.Update.Upd(_query.UpdStudentToGroup());
         }
 
         /// <summary>
         /// Обнулить таблицу студентов
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Student> NullifyStudents()
+        public IEnumerable<GetAllStudentsJ> NullifyStudents()
         {
-            return (IEnumerable<Student>)Manager.Remove.Rem(_query.NullifyStudents());
+            return (IEnumerable<GetAllStudentsJ>)Manager.Remove.Rem(_query.NullifyStudents());
         }
 
     }

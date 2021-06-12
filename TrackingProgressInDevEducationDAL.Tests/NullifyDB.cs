@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Payment):
                     NullifyTablePayments();
                     break;
-                case nameof(Student):
+                case nameof(GetAllStudentsJ):
                   //  NullifyTableStudents();
                     break;
                 case nameof(Team):

@@ -13,14 +13,14 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         /// <summary>
         /// Список студентов для заполнения BD
         /// </summary>
-        public List<Student> Students { get; }
+        public List<GetAllStudentsJ> Students { get; }
 
         /// <summary>
         /// Инициализация базы студентов
         /// </summary>
         public DStudents()
         {
-            Students = new List<Student>
+            Students = new List<GetAllStudentsJ>
             {
                 new(new object[] {"s", "s", 58m, 3, "567", "we@ya.ru", "07#971"
                     , "DateTime.MinValue", "op1", "wqw.git", 3, true}),

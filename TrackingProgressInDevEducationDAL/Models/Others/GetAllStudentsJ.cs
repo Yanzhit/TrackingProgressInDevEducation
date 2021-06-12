@@ -1,32 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TrackingProgressInDevEducationBLL.Models.Students
+namespace TrackingProgressInDevEducationDAL.Models.Others
 {
-    public class GetAllStudentsA : ADTOAnswer
+    public class GetAllStudentsJ : AbstractModel
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int? Rate { get; set; }
-        public string GroupName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Contract { get; set; }
-        public string Birthday { get; set; }
-        public string MiddleName { get; set; }
-        public string Git { get; set; }
-        public string? CityName { get; set; }
-        public bool? Status { get; set; }
+        public string Name  { get; set; }
+        public string Surname  { get; set; }
+        public int? Rate  { get; set; }
+        public string GroupName  { get; set; }
+        public string Phone  { get; set; }
+        public string Email  { get; set; }
+        public string Contract  { get; set; }
+        public string Birthday  { get; set; }
+        public string MiddleName  { get; set; }
+        public string Git  { get; set; }
+        public string? CityName  { get; set; }
+        public bool? Status  { get; set; }
         public string CourseName { get; set; }
 
-        public GetAllStudentsA()
+        public GetAllStudentsJ()
         {
         }
 
-        public GetAllStudentsA(GetAllStudentsA student)
+        public GetAllStudentsJ(GetAllStudentsJ student) : base(student)
         {
             Name = student.Name;
             Surname = student.Surname;
@@ -42,9 +38,9 @@ namespace TrackingProgressInDevEducationBLL.Models.Students
             Status = student.Status;
             CourseName = student.CourseName;
         }
-        public GetAllStudentsA(object obj)
+        public GetAllStudentsJ(object obj) : base(obj)
         {
-            var student = (GetAllStudentsA)obj;
+            var student = (GetAllStudentsJ) obj;
             Name = student.Name;
             Surname = student.Surname;
             Rate = student.Rate;
@@ -62,10 +58,10 @@ namespace TrackingProgressInDevEducationBLL.Models.Students
 
         public override bool Equals(object obj)
         {
-            return Equals((GetAllStudentsA)obj);
+            return Equals((GetAllStudentsJ)obj);
         }
 
-        private bool Equals(GetAllStudentsA actual)
+        private bool Equals(GetAllStudentsJ actual)
         {
             return actual != null
                    && Id == actual.Id

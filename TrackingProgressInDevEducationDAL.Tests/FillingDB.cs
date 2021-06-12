@@ -48,7 +48,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
                 case nameof(Payment):
                     FillingPayments(manager);
                     break;
-                case nameof(Student):
+                case nameof(GetAllStudentsJ):
                     FillingStudents(manager);
                     break;
                 case nameof(Team):
@@ -172,7 +172,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void FillingStudents(ManagerMocks manager)
         {
-            List<Student> students = manager.DStudents.Students;
+            List<GetAllStudentsJ> students = manager.DStudents.Students;
             foreach (var student in students)
             {
                 _manager.Students.SetNewStudent(student);

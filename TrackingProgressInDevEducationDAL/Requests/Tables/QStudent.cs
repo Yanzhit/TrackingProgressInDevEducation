@@ -9,7 +9,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QStudent : IQuery
     {
         public Type QueryType { get; set; }
-        public Type ModelType { get; } = typeof(Student);
+        public Type ModelType { get; } = typeof(GetAllStudentsJ);
         public string Name { get; set; }
         public string Params { get; set; }
 

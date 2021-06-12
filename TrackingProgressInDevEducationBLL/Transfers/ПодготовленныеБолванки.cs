@@ -1,5 +1,6 @@
 ﻿using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -375,7 +376,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public ПодготовленныеБолванки SetNewStudent()
         {
             //Query = typeof();
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             //Answer = typeof();
             return this;
         }
@@ -383,7 +384,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public ПодготовленныеБолванки GetAllStudents()
         {
             Query = typeof(EmptyQ);
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             //Answer = typeof();
             return this;
         }
@@ -391,7 +392,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public ПодготовленныеБолванки GetAllStudentsByGroup()
         {
             //Query = typeof();
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             //Answer = typeof();
             return this;
         }
@@ -399,7 +400,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public ПодготовленныеБолванки UpdStudentToGroup()
         {
             //Query = typeof();
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             //Answer = typeof();
             return this;
         }
@@ -407,7 +408,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public ПодготовленныеБолванки NullifyStudents()
         {
             Query = typeof(EmptyQ);
-            Base = typeof(Student);
+            Base = typeof(GetAllStudentsJ);
             //Answer = typeof();
             return this;
         }
