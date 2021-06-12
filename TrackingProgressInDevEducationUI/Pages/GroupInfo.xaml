@@ -20,24 +20,24 @@
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="10,225,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged">
+                  VerticalAlignment="Top" Margin="10,225,0,0">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Surname" Width="125"/>
-                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
+                <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Фамилия" Width="125"/>
+                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Имя" Width="135"/>
                 <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
-                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Rate" Width="50"/>
+                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Райтинг" Width="50"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="GetAllCoursesByGroupA" Width="537"  FontSize="26" 
+        <DataGrid x:Name="GetGroupByIdJA" Width="537"  FontSize="26" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="10,75,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged" Height="124">
+                  VerticalAlignment="Top" Margin="10,75,0,0">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
-                <DataGridTextColumn Binding ="{Binding Path = Description}" IsReadOnly="True" Header="Description" Width="525" />
+                <DataGridTextColumn Binding ="{Binding Path = NameC}" IsReadOnly="True" Header="Курс" Width="135"/>
+                <DataGridTextColumn Binding ="{Binding Path = Description}" IsReadOnly="True" Header="Описание" Width="525" />
 
             </DataGrid.Columns>
         </DataGrid>

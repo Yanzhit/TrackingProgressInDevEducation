@@ -30,13 +30,12 @@ namespace TrackingProgressInDevEducationUI.Pages
         public GroupInfo(int id = 2)
         {
             InitializeComponent();
-            NameGroup();
             WriteTable(id);
         }
 
-        private void NameGroup()
+        private void NameGroup(string name)
         {
-            LPageName.Content = $"ghfghfgh";
+            LPageName.Content = name;
         }
         private void WriteTable(int id)
         {
@@ -45,7 +44,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableCourses(int id)
         {
-            GetAllCoursesByGroupA.ItemsSource = RenderCourse(id);
+            GetGroupByIdJA.Items.Add(RenderCourse(id));
         }
         private void TableStudent(int id)
         {
@@ -56,10 +55,12 @@ namespace TrackingProgressInDevEducationUI.Pages
             var query = new GetAllStudentsByGroupQ(id);
             return _operation.GetAllStudentsByGroup(query);
         }
-        private IEnumerable<GetAllCoursesByGroupA> RenderCourse(int id)
+        private GetGroupByIdJA RenderCourse(int id)
         {
-            var query = new GetAllCoursesByGroupQ(id);
-            return _operation.GetAllCoursesByGroup(query);
+            var query = new GetGroupByIdJQ(id);
+            var result =  _operation.GetGroupByIdJ(query);
+            NameGroup(result.NameG);
+            return result;
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)

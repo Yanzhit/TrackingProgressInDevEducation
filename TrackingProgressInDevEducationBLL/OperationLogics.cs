@@ -46,7 +46,13 @@ namespace TrackingProgressInDevEducationBLL
             Group modelReturned = _dalManager.Groups.SetNewGroup(model);
             return _bllManager.GroupsA.SetNewGroup(modelReturned);
         }
-
+        public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
+        {
+            var model = (GetGroupByIdJ)_bllManager.GroupInfoQ.GetGroupByIdJ(getGroupByIdJQ);
+            GetGroupByIdJ modelReturned = _dalManager.Joins.GetGroupByIdJ(model);
+            return _bllManager.GroupInfoA.GetGroupByIdJA(modelReturned);
+        }
+        
         public SetNewStudentA SetNewStudent(SetNewStudentQ setNewStudentQ)
         {
             var model = (Student)_bllManager.NewStudentQ.SetNewStudent(setNewStudentQ);
@@ -66,7 +72,7 @@ namespace TrackingProgressInDevEducationBLL
             Course modelReturned = _dalManager.Courses.SetNewCourse(model);
             return _bllManager.SenNewCourse.SetNewCourse(modelReturned);
         }
-
+        
         public UpdLectorA UpdateAcrivationLector(UpdLectorQ updLectorQ)
         {
             var model = (Lector)_bllManager.VerificationsQ.UpdateActivationLector(updLectorQ);
