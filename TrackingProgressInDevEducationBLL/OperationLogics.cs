@@ -10,6 +10,7 @@ using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationBLL.Models.GroupInfo;
+using TrackingProgressInDevEducationBLL.Models.Comment;
 using TrackingProgressInDevEducationBLL.Models.Students;
 
 namespace TrackingProgressInDevEducationBLL
@@ -126,6 +127,13 @@ namespace TrackingProgressInDevEducationBLL
             var model = (Group)_bllManager.CityQ.GetGroups(emptyQ);
             IEnumerable<Group> modelReturned = _dalManager.Groups.GetGroups();
             return (List<GetGroupsA>)_bllManager.CityA.GetGroups(modelReturned);
+        }
+
+        public SetCommentsA SetNewCommentToStudent(SetCommentsQ setCommentsQ)
+        {
+            var model = (Comment)_bllManager.CommentsQ.SetNewCommentToStudent(setCommentsQ);
+            Comment modelReturned = _dalManager.Comments.SetNewCommentToStudent(model);
+            return _bllManager.CommentsA.SetNewCommentToStudent(modelReturned);
         }
 
         public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)
