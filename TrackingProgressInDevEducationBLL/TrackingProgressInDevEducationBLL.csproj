@@ -13,7 +13,6 @@
     <Compile Remove="Models\MyProfile\**" />
     <Compile Remove="Models\StudentProfile\**" />
     <Compile Remove="Models\StudentRate\**" />
-    <Compile Remove="Models\Students\**" />
     <Compile Remove="Models\TeamInfo\**" />
     <Compile Remove="Models\TeamRate\**" />
     <EmbeddedResource Remove="Models\AddStudentsToGroup\**" />
@@ -24,7 +23,6 @@
     <EmbeddedResource Remove="Models\MyProfile\**" />
     <EmbeddedResource Remove="Models\StudentProfile\**" />
     <EmbeddedResource Remove="Models\StudentRate\**" />
-    <EmbeddedResource Remove="Models\Students\**" />
     <EmbeddedResource Remove="Models\TeamInfo\**" />
     <EmbeddedResource Remove="Models\TeamRate\**" />
     <None Remove="Models\AddStudentsToGroup\**" />
@@ -35,7 +33,6 @@
     <None Remove="Models\MyProfile\**" />
     <None Remove="Models\StudentProfile\**" />
     <None Remove="Models\StudentRate\**" />
-    <None Remove="Models\Students\**" />
     <None Remove="Models\TeamInfo\**" />
     <None Remove="Models\TeamRate\**" />
   </ItemGroup>

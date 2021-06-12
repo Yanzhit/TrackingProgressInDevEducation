@@ -21,7 +21,8 @@ namespace TrackingProgressInDevEducationBLL.Models.GroupInfo
         public GetAllStudentsByGroupA()
         {  
         }
-        public GetAllStudentsByGroupA(string name, string surname, int? rate, int? groupId, string phone, string email, string contract, string birthday, string middleName, string git, int? cityId, bool? status)
+        public GetAllStudentsByGroupA(string name, string surname, int? rate, int? groupId, string phone,
+            string email, string contract, string birthday, string middleName, string git, int? cityId, bool? status)
         {
             Name = name;
             Surname = surname;
