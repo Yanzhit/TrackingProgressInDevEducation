@@ -8,6 +8,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
         public int CourseId  { get; set; }
         public string StartDate  { get; set; }
         public string EndDate  { get; set; }
+        public int StudCount { get; set; }
 
         public Group()
         {
@@ -19,6 +20,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             CourseId = group.CourseId;
             StartDate = group.StartDate;
             EndDate = group.EndDate;
+            StudCount = group.StudCount;
         }
         public Group(object obj) : base(obj)
         {
@@ -27,6 +29,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             CourseId = group.CourseId;
             StartDate = group.StartDate;
             EndDate = group.EndDate;
+            StudCount = group.StudCount;
         }
 
         public override bool Equals(object obj)
@@ -40,7 +43,8 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
                    && Name == other.Name
                    && CourseId == other.CourseId
                    && StartDate == other.StartDate
-                   && EndDate == other.EndDate;
+                   && EndDate == other.EndDate
+                   && StudCount == other.StudCount;
         }
 
         public override int GetHashCode()
@@ -52,6 +56,7 @@ namespace TrackingProgressInDevEducationDAL.Models.Bases
             hashCode.Add(CourseId);
             hashCode.Add(StartDate);
             hashCode.Add(EndDate);
+            hashCode.Add(StudCount);
             return hashCode.ToHashCode();
         }
     }
