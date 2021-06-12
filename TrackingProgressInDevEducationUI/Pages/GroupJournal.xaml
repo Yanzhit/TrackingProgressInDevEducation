@@ -18,6 +18,10 @@
         <TabControl x:Name="tabGroupJournal" Margin="10,67,10,10">
             <TabItem x:Name="TabAttendance" Header="Посещаемость">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="611*"/>
+                    </Grid.ColumnDefinitions>
                     <DataGrid x:Name="DGAttendance" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Студент" Width="150"/>

@@ -6,7 +6,14 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Pages/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/ButtonBackStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/ButtonAddStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/LogoStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/BigTextBoxStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/LittleTextBoxStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/ExitButtonStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/OtherButtonStyles.xaml"/>
+                <ResourceDictionary Source="Pages/Styles/ButtonCreatStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

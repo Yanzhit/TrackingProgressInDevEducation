@@ -35,6 +35,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.GroupInfo();
         }
-        
+
+        private void dgStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
