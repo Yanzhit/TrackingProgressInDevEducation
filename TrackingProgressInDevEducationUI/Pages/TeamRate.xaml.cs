@@ -30,8 +30,14 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BAddComentToTeam_Click(object sender, RoutedEventArgs e)
         {
             OperationLogics operation = new OperationLogics();
-            var setNewComment = operation.SetCommentToTeam(new SetCommentsToTeamQ(TBHardSkills.Text, 1, 3, 1, Convert.ToInt32(TBHardSkillsRate.Text)));
-
+            //var setNewComment = operation.SetNewCommentToStudent(new SetCommentsToTeamQ()
+            //    {
+            //        CreatedBy = 1,
+            //        Estimation = 1,
+            //        TeamId = 1,
+            //        Text = TBHardSkills.Text,
+            //        TypeId = Convert.ToInt32(TBHardSkillsRate.Text)
+            //    });
             // !!!  необходимо получить из другой страницы TypeId,  createdBy
             //      Запрос для TBSoftSkills
             //  var setNewComment = operation.SetCommentToTeam(new SetCommentsToTeamQ(TBSoftSkills.Text, 1, 3, 1, Convert.ToInt32(TBSoftSkillsRate.Text)));

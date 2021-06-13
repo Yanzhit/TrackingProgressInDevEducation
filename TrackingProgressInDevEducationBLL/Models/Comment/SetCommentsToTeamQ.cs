@@ -15,13 +15,13 @@ namespace TrackingProgressInDevEducationBLL.Models.Comment
         {
         }
 
-        public SetCommentsToTeamQ(string text, int typeId, int createdBy, int teamId, int estimation)
+        public SetCommentsToTeamQ(SetCommentsToTeamQ model)
         {
-            Text = text;
-            TypeId = typeId;            
-            CreatedBy = createdBy;
-            TeamId = teamId;
-            Estimation = estimation;
+            Text = model.Text;
+            TypeId = model.TypeId;            
+            CreatedBy = model.CreatedBy;
+            TeamId = model.TeamId;
+            Estimation = model.Estimation;
         }
 
         public override bool Equals(object obj)
