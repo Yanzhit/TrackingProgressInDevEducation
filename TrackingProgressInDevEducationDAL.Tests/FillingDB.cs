@@ -184,7 +184,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Team> teams = manager.DTeams.Teams;
             foreach (var team in teams)
             {
-                _manager.Teams.SetNewTeam(team);
+                //_manager.Teams.SetNewTeam(team);
             }
         }
 

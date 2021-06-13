@@ -49,6 +49,6 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BAddStudent1" Style="{StaticResource ButtonAddStyles}" Content="Добавить студента" Margin="316,16,0,0"  Width="186" Height="40"/>
+        <Button x:Name="BAddStudent1" Style="{StaticResource ButtonAddStyles}" Content="Добавить студента" Margin="288,10,0,0"  Width="186" Height="40" Click="BAddStudent_Click"/>
     </Grid>
 </Page>
