@@ -11,35 +11,39 @@
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-100,-250">
         <Label x:Name="LNamePage" Content="Создание нового студента" HorizontalAlignment="Center" Height="72" Margin="0,11,0,0" VerticalAlignment="Top" Width="308" FontSize="23" FontWeight="Bold"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="623" Margin="0,67,0,0" VerticalAlignment="Top" Width="880" Background="#FFF9EFEF">
-            <Label x:Name="LSurname" Content="Фамилия*" HorizontalAlignment="Left" Height="34" Margin="105,18,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBSurname" HorizontalAlignment="Left" Height="34" Margin="435,18,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="71*"/>
+                <ColumnDefinition Width="809*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="LSurname" Content="Фамилия*" HorizontalAlignment="Left" Height="34" Margin="34,18,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox  Style="{StaticResource LittleTextBoxStyles}" x:Name="TBSurname" Margin="369,10,0,583" Grid.Column="1" />
 
-            <Label x:Name="LName" Content="Имя*" HorizontalAlignment="Left" Height="34" Margin="105,57,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBName" HorizontalAlignment="Left" Height="34" Margin="435,57,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Label x:Name="LName" Content="Имя*" HorizontalAlignment="Left" Height="34" Margin="34,57,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBName" Margin="369,57,0,536" Grid.Column="1" />
 
-            <Label x:Name="LPhone" Content="Телефон*" HorizontalAlignment="Left" Height="34" Margin="105,217,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBPhone" HorizontalAlignment="Left" Height="34" Margin="435,217,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Label x:Name="LPhone" Content="Телефон*" HorizontalAlignment="Left" Height="34" Margin="34,217,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBPhone" Margin="369,217,0,376" Grid.Column="1" />
 
-            <Label x:Name="LEmail" Content="Email" HorizontalAlignment="Left" Height="34" Margin="105,257,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBEmail" HorizontalAlignment="Left" Height="36" Margin="435,256,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Label x:Name="LEmail" Content="Email" HorizontalAlignment="Left" Height="34" Margin="34,257,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBEmail" Margin="364,261,0,332" Grid.Column="1"/>
 
-            <Label x:Name="LContractNumber" Content="Номер контракта" HorizontalAlignment="Left" Height="36" Margin="105,135,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBContractNumber" HorizontalAlignment="Left" Height="36" Margin="435,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Label x:Name="LContractNumber" Content="Номер контракта" HorizontalAlignment="Left" Height="36" Margin="34,135,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBContractNumber" Margin="364,141,0,452" Grid.Column="1" />
 
-            <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="34" Margin="105,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBBirthday" HorizontalAlignment="Left" Height="34" Margin="435,336,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
+            <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="34" Margin="34,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBBirthday" Margin="369,340,0,253" Grid.Column="1" />
 
-            <Button x:Name="BCreateStudent" Content="Создать" HorizontalAlignment="Left" Height="28" Margin="642,408,0,0" VerticalAlignment="Top" Width="182" FontSize="18" Background="#FFE1909F" Click="BCreateStudent_Click"/>
-            <Label x:Name="LMiddleName" Content="Отчество*" HorizontalAlignment="Left" Height="36" Margin="105,95,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBMiddleName" HorizontalAlignment="Left" Height="34" Margin="435,96,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
-            <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="36" Margin="105,176,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <Label x:Name="LGit" Content="Git" HorizontalAlignment="Left" Height="34" Margin="105,297,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <TextBox x:Name="TBGit" HorizontalAlignment="Left" Height="34" Margin="435,297,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFE4E4E4"/>
-            <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="435,176,0,0" VerticalAlignment="Top" Width="389" Height="36"/>
-            <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="36" Margin="105,461,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="435,461,0,0" VerticalAlignment="Top" Width="389" Height="36"/>
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateStudent" Content="Создать" Margin="571,408,0,0" Click="BCreateStudent_Click" Grid.Column="1"/>
+            <Label x:Name="LMiddleName" Content="Отчество*" HorizontalAlignment="Left" Height="36" Margin="34,95,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBMiddleName" Margin="369,101,0,492" Grid.Column="1" />
+            <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="36" Margin="34,176,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <Label x:Name="LGit" Content="Git" HorizontalAlignment="Left" Height="34" Margin="34,297,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGit" Margin="364,301,0,292" Grid.Column="1" />
+            <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="364,176,0,0" VerticalAlignment="Top" Width="389" Height="36" Grid.Column="1"/>
+            <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="36" Margin="34,461,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left" Grid.Column="1"/>
+            <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="364,461,0,0" VerticalAlignment="Top" Width="389" Height="36" Grid.Column="1"/>
         </Grid>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>

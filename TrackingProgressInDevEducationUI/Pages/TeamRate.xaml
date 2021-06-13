@@ -9,13 +9,13 @@
       Title="TeamRate">
 
     <Grid Background="#FFE0D5D4">
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
         <Label x:Name="LPageName" Content="Оценка команды" HorizontalAlignment="Right" Margin="0,14,10,0" VerticalAlignment="Top" Width="154" Height="44" FontSize="18"/>
-        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="166,22,0,0" VerticalAlignment="Top" Height="28" Width="90" Click="BBack_Click"/>
+        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="166,22,0,0" Click="BBack_Click"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="369" Margin="0,71,0,0" VerticalAlignment="Top" Width="780" Background="#FFF9EFEF">
             <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="440,486,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
             <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="10,0,0,256" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>

@@ -15,19 +15,19 @@
             <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="51" Margin="36,22,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
             <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,201,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
             <TextBox 
-                     Style="{StaticResource TextBoxStyles}"
+                     Style="{StaticResource BigTextBoxStyles}"
                      x:Name="TBNameCurses" 
                      Margin="264,22,56,512" 
-                     Text="Введите название..." TextChanged="TBNameCurses_TextChanged" Width="560" Height="85" 
+                     Text="Введите название..." TextChanged="TBNameCurses_TextChanged"
             />
             <TextBox 
-                Style="{StaticResource TextBoxStyles}"
+                Style="{StaticResource BigTextBoxStyles}"
                 x:Name="TBCourseDescription" 
                      Margin="264,187,0,347" 
                      Text="Введите описание..." />
-            <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Center" Height="38" Margin="0,470,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F" Click="BCreateCurses_Click"/>
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="0,356,0,0" Click="BCreateCurses_Click" HorizontalAlignment="Center"/>
         </Grid>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>

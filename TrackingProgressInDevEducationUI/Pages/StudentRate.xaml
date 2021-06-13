@@ -9,22 +9,22 @@
       Title="StudentRate">
 
     <Grid Background="#FFDED5D4">
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
         <Label x:Name="LPageName" Content="Оценка студента" HorizontalAlignment="Right" Margin="0,14,10,0" VerticalAlignment="Top" Width="154" Height="44" FontSize="18"/>
-        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Margin="166,22,0,0" VerticalAlignment="Top" Height="28" Width="90"/>
+        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="178,20,0,0" />
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="369" Margin="0,71,0,0" VerticalAlignment="Top" Width="780" Background="#FFF9EFEF">
             <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="440,486,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
             <Label x:Name="LChangeCourse" Content="Выбрать курс" HorizontalAlignment="Left" Height="57" Margin="36,365,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
             <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Margin="288,366,0,0" VerticalAlignment="Top" Width="561" Height="56" RenderTransformOrigin="0.994,1.964"/>
-            <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="10,0,0,256" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <TextBox Style="{StaticResource BigTextBoxStyles}" x:Name="TBHardSkills" Margin="10,0,0,256" />
             <Label x:Name="LHardSkills" Content="Hard Skills" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBSoftSkills" HorizontalAlignment="Left" Margin="10,0,0,138" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <TextBox Style="{StaticResource BigTextBoxStyles}" x:Name="TBSoftSkills" Margin="11,149,0,135" />
             <Label x:Name="LSoftSkills" Content="Soft Skills" HorizontalAlignment="Left" Margin="258,118,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="10,0,0,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <TextBox Style="{StaticResource BigTextBoxStyles}" x:Name="TBCommon" Margin="11,267,0,17" />
             <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="258,236,0,0" VerticalAlignment="Top"/>
             <Label x:Name="LRate" Content="Rate" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,283" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
