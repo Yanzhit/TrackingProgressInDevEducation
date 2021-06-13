@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 
@@ -51,7 +52,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void Group_Click(object sender, RoutedEventArgs e)
         {
-            _contents.Group();
+            _contents.WinNewGroup();
         }
 
         private void GroupInfo_Click(object sender, RoutedEventArgs e)
@@ -103,13 +104,7 @@ namespace TrackingProgressInDevEducationUI.Windows
         {
             _contents.TeamInfo();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OperationLogics operation = new OperationLogics();
-            var sss =operation.GetLectorByLoginAndPassword(new GetLectorQ("Kozlov.s.v.1992@gmail.com",""));
-        }
-
+        
         private void MainPage_Click(object sender, RoutedEventArgs e)
         {
             _contents.MainPage();

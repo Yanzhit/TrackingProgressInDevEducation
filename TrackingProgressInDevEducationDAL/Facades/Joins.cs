@@ -63,5 +63,18 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (IEnumerable<GetVisitsByStudentJ>)Manager.Getter.Several(_query.GetVisitsByStudentJ(model));
         }
+
+        /// <summary>
+        /// Получить всех студентов
+        /// </summary>
+        /// <returns>Студенты</returns>
+        public IEnumerable<GetAllStudentsJ> GetAllStudents()
+        {
+            return (IEnumerable<GetAllStudentsJ>)Manager.Getter.Several(_query.GetAllStudentsJ());
+        }
+        public SetNewGroupJ SetNewGroupJ(SetNewGroupJ group)
+        {
+            return (SetNewGroupJ)Manager.Setter.Single(_query.SetNewGroupJ(group));
+        }
     }
 }

@@ -46,8 +46,8 @@ namespace TrackingProgressInDevEducationBLL
 
         public SetGroupA SetNewGroup(SetGroupQ setGroupQ)
         {
-            var model = (Group)_bllManager.GroupsQ.SetNewGroup(setGroupQ);
-            Group modelReturned = _dalManager.Groups.SetNewGroup(model);
+            var model = (SetNewGroupJ)_bllManager.GroupsQ.SetNewGroup(setGroupQ);
+            SetNewGroupJ modelReturned = _dalManager.Joins.SetNewGroupJ(model);
             return _bllManager.GroupsA.SetNewGroup(modelReturned);
         }
         public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
@@ -148,7 +148,7 @@ namespace TrackingProgressInDevEducationBLL
         public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)
         {
             var model = (GetAllStudentsJ)_bllManager.StudentsSQ.GetAllStudents(emptyQ);
-            IEnumerable<GetAllStudentsJ> modelReturned = _dalManager.Students.GetAllStudents();
+            IEnumerable<GetAllStudentsJ> modelReturned = _dalManager.Joins.GetAllStudents();
             return (List<GetAllStudentsA>)_bllManager.StudentsSA.GetAllStudents(modelReturned);
         }
 
