@@ -59,7 +59,5 @@
         public const string StudentToTeamT = "Добавление новой команды";
         public const int StudentToTeamW = 400;
         public const int StudentToTeamH = 400;
-
-
     }
 }

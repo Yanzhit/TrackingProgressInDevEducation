@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.GroupInfo;
-using TrackingProgressInDevEducationBLL.Models.MainPage;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
