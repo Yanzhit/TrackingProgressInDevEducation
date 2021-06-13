@@ -1,4 +1,6 @@
 ﻿using System;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Pages.Secondary;
@@ -11,7 +13,9 @@ namespace TrackingProgressInDevEducationUI
 {
     public class SingleContents
     {
-        public GetLectorA Lector;
+        public GetLectorA Lector { get; set; }
+        public SetGroupA NewGroup{ get; set; }
+        public OperationLogics OperationLogics { get; set; } = new OperationLogics();
         private static SingleContents _contents;
         private readonly MainForm _main;
         private AddStudentsToGroup _addStudentsToGroup;
@@ -58,11 +62,7 @@ namespace TrackingProgressInDevEducationUI
             _main.Content = _course;
         }
 
-        public void Group()
-        {
-            _group = new Group();
-            _main.Content = _group;
-        }
+       
 
         public void MainPage()
         {
@@ -164,6 +164,14 @@ namespace TrackingProgressInDevEducationUI
             _devMenu = new DevMenu();
             _devMenu.Show();
         }
+        
+        public void WinNewGroup()
+        {
+            _additionalWindows = new AdditionalWindows() { Title = NewGroupT, Width = NewGroupW, Height = NewGroupH };
+            _group = new Group();
+            _additionalWindows.Content = _group;
+            _additionalWindows.ShowDialog();
+        }
 
         public void WinStudentToGroup()
         {
@@ -175,10 +183,15 @@ namespace TrackingProgressInDevEducationUI
         
         public void WinStudentToTeam()
         {
-            _additionalWindows = new AdditionalWindows() { Title = AddStudentToGroupT, Width = AddStudentToGroupW, Height = AddStudentToGroupH };
+            _additionalWindows = new AdditionalWindows() { Title = StudentToTeamT, Width = StudentToTeamW, Height = StudentToTeamH };
             _addStudentToTeams = new AddStudentToTeams();
             _additionalWindows.Content = _addStudentToGroup;
             _additionalWindows.ShowDialog();
+        }
+
+        public void CloseAdditionalWindows()
+        {
+            _additionalWindows.Close();
         }
     }
 }

@@ -4,19 +4,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
 {
     public class GetAllStudentsJ : AbstractModel
     {
-        public string Name  { get; set; }
+        public string NameS { get; set; }
+        public string NameG { get; set; }
+        public string NameC { get; set; }
+        public string NameCr { get; set; }
         public string Surname  { get; set; }
         public int? Rate  { get; set; }
-        public string GroupName  { get; set; }
         public string Phone  { get; set; }
         public string Email  { get; set; }
         public string Contract  { get; set; }
         public string Birthday  { get; set; }
         public string MiddleName  { get; set; }
         public string Git  { get; set; }
-        public string? CityName  { get; set; }
         public bool? Status  { get; set; }
-        public string CourseName { get; set; }
 
         public GetAllStudentsJ()
         {
@@ -24,38 +24,21 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
 
         public GetAllStudentsJ(GetAllStudentsJ student) : base(student)
         {
-            Name = student.Name;
+            NameS = student.NameS;
+            NameG = student.NameG;
+            NameC = student.NameC;
+            NameCr = student.NameCr;
             Surname = student.Surname;
             Rate = student.Rate;
-            GroupName = student.GroupName;
             Phone = student.Phone;
             Email = student.Email;
             Contract = student.Contract;
             Birthday = student.Birthday;
             MiddleName = student.MiddleName;
             Git = student.Git;
-            CityName = student.CityName;
             Status = student.Status;
-            CourseName = student.CourseName;
         }
-        public GetAllStudentsJ(object obj) : base(obj)
-        {
-            var student = (GetAllStudentsJ) obj;
-            Name = student.Name;
-            Surname = student.Surname;
-            Rate = student.Rate;
-            GroupName = student.GroupName;
-            Phone = student.Phone;
-            Email = student.Email;
-            Contract = student.Contract;
-            Birthday = student.Birthday;
-            MiddleName = student.MiddleName;
-            Git = student.Git;
-            CityName = student.CityName;
-            Status = student.Status;
-            CourseName = student.CourseName;
-        }
-
+      
         public override bool Equals(object obj)
         {
             return Equals((GetAllStudentsJ)obj);
@@ -65,19 +48,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
         {
             return actual != null
                    && Id == actual.Id
-                   && Name == actual.Name
+                   && NameS == actual.NameS
+                   && NameG == actual.NameG
+                   && NameC == actual.NameC
+                   && NameCr == actual.NameCr
                    && Surname == actual.Surname
                    && Rate == actual.Rate
-                   && GroupName == actual.GroupName
                    && Phone == actual.Phone
                    && Email == actual.Email
                    && Contract == actual.Contract
                    && Birthday == actual.Birthday
                    && MiddleName == actual.MiddleName
                    && Git == actual.Git
-                   && CityName == actual.CityName
-                   && Status == actual.Status
-                   && CourseName == actual.CourseName;
+                   && Status == actual.Status;
         }
 
         public override int GetHashCode()
@@ -85,19 +68,19 @@ namespace TrackingProgressInDevEducationDAL.Models.Others
             var hashCode = new HashCode();
             hashCode.Add(base.GetHashCode());
             hashCode.Add(Id);
-            hashCode.Add(Name);
+            hashCode.Add(NameS);
+            hashCode.Add(NameG);
+            hashCode.Add(NameC);
+            hashCode.Add(NameCr);
             hashCode.Add(Surname);
             hashCode.Add(Rate);
-            hashCode.Add(GroupName);
             hashCode.Add(Phone);
             hashCode.Add(Email);
             hashCode.Add(Contract);
             hashCode.Add(Birthday);
             hashCode.Add(MiddleName);
             hashCode.Add(Git);
-            hashCode.Add(CityName);
             hashCode.Add(Status);
-            hashCode.Add(CourseName);
             return hashCode.ToHashCode();
         }
     }

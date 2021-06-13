@@ -9,7 +9,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
     public class QStudent : IQuery
     {
         public Type QueryType { get; set; }
-        public Type ModelType { get; } = typeof(GetAllStudentsJ);
+        public Type ModelType { get; } = typeof(Student);
         public string Name { get; set; }
         public string Params { get; set; }
 
@@ -28,17 +28,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        /// <summary>
-        /// Получить всех студентов из таблицы
-        /// </summary>
-        /// <returns>Подготовленный запрос</returns>
-        public QStudent GetAllStudents()
-        {
-            QueryType = typeof(Getter);
-            Name = nameof(GetAllStudents);
-            Params = string.Empty;
-            return this;
-        }
 
         public QStudent UpdStudentToGroup()
         {

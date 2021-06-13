@@ -103,6 +103,31 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = $"{SepStr}{model.StudentId}{SepEnd}";
             return this;
         }
+        /// <summary>
+        /// Получить всех студентов из таблицы
+        /// </summary>
+        /// <returns>Подготовленный запрос</returns>
+        public QJoins GetAllStudentsJ()
+        {
+            ModelType = typeof(GetAllStudentsJ);
+            QueryType = typeof(Getter);
+            Name = nameof(GetAllStudentsJ);
+            Params = $"{SepStr}{null}{SepEnd}";
+            return this;
+        }
 
+        /// <summary>
+        /// Создание новой группы
+        /// </summary>
+        /// <param name="group">Объект данных</param>
+        /// <returns>Подготовленный запрос</returns>
+        public QJoins SetNewGroupJ(SetNewGroupJ group)
+        {
+            ModelType = typeof(SetNewGroupJ);
+            QueryType = typeof(Setter);
+            Name = nameof(SetNewGroupJ);
+            Params = $"{SepStr}{group.GroupId}{SepMid}{group.LectorId}{SepMid}{group.Name}{SepMid}{group.CourseId}{SepMid}{group.StartDate}{SepMid}{group.EndDate}{SepEnd}";
+            return this;
+        }
     }
 }

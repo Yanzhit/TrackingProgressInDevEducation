@@ -23,7 +23,7 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void SetNewGroupTest(IQuery query, Group group, object expected)
         {
             PreparindDB(query.ModelType);
-            DalManager.Groups.SetNewGroup(group);
+            // DalManager.Joins.SetNewGroup(group);
             //Assert.AreEqual(expected, actual);
         }
         /// <summary>

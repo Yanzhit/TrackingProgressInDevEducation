@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.MainPage;
 using static TrackingProgressInDevEducationUI.Defines;
 
@@ -25,6 +27,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     {
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
+        private ObservableCollection<GetGroupsByLectorA> _groups = new ObservableCollection<GetGroupsByLectorA>();
         public MainPage()
         {
             InitializeComponent();
@@ -40,10 +43,21 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             TableGroup();
             TableTeam();
+            WriteGroup();
         }
         private void TableGroup()
         {
-            GetGroupsByLectorA.ItemsSource = (List<GetGroupsByLectorA>)RenderGroup();
+            _groups.Clear();
+            var pp = (List<GetGroupsByLectorA>)RenderGroup();
+            foreach (var p in pp)
+            {
+                _groups.Add(p);
+            }
+        }
+
+        private void WriteGroup()
+        {
+            GetGroupsByLectorA.ItemsSource = _groups;
         }
 
         private IEnumerable<GetGroupsByLectorA> RenderGroup()
@@ -73,7 +87,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Button_Click_CreateGroups(object sender, RoutedEventArgs e)
         {
-            _contents.Group();
+            _contents.WinNewGroup();
+            TableGroup();
         }
 
         private void Button_Click_CreateTeam(object sender, RoutedEventArgs e)
