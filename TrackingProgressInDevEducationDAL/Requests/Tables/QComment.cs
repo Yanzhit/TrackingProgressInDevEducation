@@ -56,11 +56,11 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QComment GetCommentsByStudent()
+        public QComment GetCommentsByStudent(Comment comment)
         {
             QueryType = typeof(Getter);
             Name = nameof(GetCommentsByStudent);
-            Params = $"";
+            Params = $"{SepStr}{comment.Text}{SepMid}{comment.Estimation}{SepEnd}";
             return this;
         }
 

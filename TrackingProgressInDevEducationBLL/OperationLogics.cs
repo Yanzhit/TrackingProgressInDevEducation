@@ -138,6 +138,13 @@ namespace TrackingProgressInDevEducationBLL
             return _bllManager.CommentsA.SetNewCommentToStudent(modelReturned);
         }
 
+        public List<GetCommentsByStudentA> GetCommentsByStudent(GetCommentsByStudentQ getCommentsByStudentQ)
+        {
+            var model = (Comment)_bllManager.CommentsQ.GetCommentsByStudent(getCommentsByStudentQ);
+            IEnumerable<Comment> modelReturned = _dalManager.Comments.GetCommentsByStudent(model);
+            return (List<GetCommentsByStudentA>)_bllManager.CommentsA.GetCommentsByStudent(modelReturned);
+        }
+
         public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)
         {
             var model = (GetAllStudentsJ)_bllManager.StudentsSQ.GetAllStudents(emptyQ);

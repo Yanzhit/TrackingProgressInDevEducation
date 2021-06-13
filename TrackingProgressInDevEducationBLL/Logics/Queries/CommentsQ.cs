@@ -11,5 +11,11 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
             WriteTypes(new Comments().SetNewCommentToStudent());
             return GetModelBaseSingle(model);
         }
+
+        public AbstractModel GetCommentsByStudent(GetCommentsByStudentQ model)
+        {
+            WriteTypes(new Comments().GetCommentsByStudent());
+            return GetModelBaseSingle(model);
+        }
     }
 }

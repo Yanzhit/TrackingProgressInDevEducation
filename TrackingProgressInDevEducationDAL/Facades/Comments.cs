@@ -31,9 +31,9 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (List<Comment>)Manager.Setter.Several(_query.SetCommentToTeam());
         }
 
-        public IEnumerable<Comment> GetCommentsByStudent()
+        public IEnumerable<Comment> GetCommentsByStudent(Comment comment)
         {
-            return (List<Comment>)Manager.Getter.Several(_query.GetCommentsByStudent());
+            return (List<Comment>)Manager.Getter.Several(_query.GetCommentsByStudent(comment));
         }
 
         public IEnumerable<Comment> GetCommentsByTeam()
