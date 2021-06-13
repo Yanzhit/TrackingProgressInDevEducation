@@ -17,8 +17,8 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button Style="{StaticResource OtherButtonStyles}" Content="Вход" Margin="493,332,0,0" Click="SignIn_Click" Height="28" Width="148"/>
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Login" Margin="400,194,0,496" />
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Password" Margin="398,266,0,424" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Login" Margin="400,194,0,496" TextAlignment="Center" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Password" Margin="398,266,0,424" TextAlignment="Center" />
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="428,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Логин"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="420,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
         <Button Style="{StaticResource ButtonCreatStyles}" Content="Регистрация" Margin="493,412,0,0" Click="Registration_Click" />

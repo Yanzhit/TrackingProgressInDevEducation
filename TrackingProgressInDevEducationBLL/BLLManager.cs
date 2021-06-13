@@ -14,10 +14,12 @@ namespace TrackingProgressInDevEducationBLL
         /// Запрос со страниц SignIns
         /// </summary>
         public SignInsQ SignInsQ => new();
+
         /// <summary>
         /// Запрос со страниц Курса
         /// </summary>
         public NewCoureQ NewCoureQ => new();
+
         /// <summary>
         /// Запрос со страниц Курса
         /// </summary>
@@ -27,6 +29,7 @@ namespace TrackingProgressInDevEducationBLL
         /// Ответы на запросы со страниц SignIns
         /// </summary>
         public SignInsA SignInsA => new();
+
         /// <summary>
         /// Запрос со страниц Group
         /// </summary>
@@ -52,7 +55,7 @@ namespace TrackingProgressInDevEducationBLL
         /// Ответы на запросы со страниц Courses
         /// </summary>
         public SetNewCoursesA SetNewCoursesA => new();
-        
+
         /// <summary>
         /// Ответы на запросы со страниц Group
         /// </summary>

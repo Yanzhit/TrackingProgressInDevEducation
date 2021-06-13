@@ -40,5 +40,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
 
         }
+
+        private void BAddStudentToGroup_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.WinStudentToGroup();
+        }
     }
 }
