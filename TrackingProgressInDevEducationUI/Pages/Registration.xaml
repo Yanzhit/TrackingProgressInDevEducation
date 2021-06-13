@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Registration">
 
     <Grid>
@@ -16,24 +16,24 @@
                 <GradientStop Color="#FFBDBDBD" Offset="0.209"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="RegistrationButton" Content="Зарегистрироваться" Margin="301,320,0,0" Click="Registration_Click"/>
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="FullNameInput" Margin="196,87,0,333" />
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordInput" Margin="196,220,0,200" />
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordRepeatInput" Margin="196,267,0,153"/>
-        <TextBlock x:Name="TextName" HorizontalAlignment="Center" Height="19" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
-        <TextBlock x:Name="TextPassword" HorizontalAlignment="Center" Height="20" Margin="0,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
-        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="314,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Повторите п"/><Run Text="ароль"/></TextBlock>
-        <Button Style="{StaticResource OtherButtonStyles}" x:Name="SignInButton" Content="Вход" Margin="306,382,0,0" Click="SignIn_Click"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="318,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.646,0.632"><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
-        <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="58" Margin="246,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="EmailInput" Margin="196,177,0,243" />
-        <TextBlock x:Name="TextEmail" HorizontalAlignment="Left" Height="19" Margin="314,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Электронная почта"/></TextBlock>
+        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="RegistrationButton" Content="Зарегистрироваться" Margin="532,474,0,0" Click="Registration_Click" Height="37" Width="158"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="FullNameInput" Margin="445,203,0,487" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordInput" Margin="445,377,0,313" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordRepeatInput" Margin="445,432,0,258"/>
+        <TextBlock x:Name="TextName" HorizontalAlignment="Left" Height="19" Margin="604,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
+        <TextBlock x:Name="TextPassword" HorizontalAlignment="Left" Height="20" Margin="591,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="560,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Повторите п"/><Run Text="ароль"/></TextBlock>
+        <Button Style="{StaticResource OtherButtonStyles}" x:Name="SignInButton" Content="Вход" Margin="550,553,0,0" Click="SignIn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="553,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.646,0.632"><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
+        <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="58" Margin="477,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="EmailInput" Margin="445,318,0,372" />
+        <TextBlock x:Name="TextEmail" HorizontalAlignment="Left" Height="19" Margin="560,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Электронная почта"/></TextBlock>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="LoginInput" Margin="196,132,0,288" />
-        <TextBlock x:Name="TextLogin" HorizontalAlignment="Left" Height="19" Margin="336,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="LoginInput" Margin="445,262,0,428" />
+        <TextBlock x:Name="TextLogin" HorizontalAlignment="Left" Height="19" Margin="604,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Логин"/></TextBlock>
     </Grid>
 </Page>

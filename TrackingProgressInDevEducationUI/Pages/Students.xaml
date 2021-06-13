@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       xmlns:SqlClient="clr-namespace:System.Data.SqlClient;assembly=System.Data.SqlClient" x:Class="TrackingProgressInDevEducationUI.Pages.Students"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Students">
 
-    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-551,-270" HorizontalAlignment="Right" Width="1338">
+    <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,0,0">
         <Label x:Name="LNamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,4,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
         <!--<DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
                   AutoGenerateColumns="True" CanUserAddRows ="False" 

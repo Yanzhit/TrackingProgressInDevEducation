@@ -5,11 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Course">
 
-    <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,-100,-250
-          " HorizontalAlignment="Right" Width="900">
+    <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,0,0">
         <Label x:Name="LPageName" Content="Создание нового курса" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="352" FontSize="30" Margin="0,10,0,0"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="619" Margin="0,71,0,0" VerticalAlignment="Top" Width="880" Background="#FFF9EFEF">
             <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="51" Margin="36,22,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>

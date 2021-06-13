@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Group">
 
     <Grid Background="#FFDED4D4">
-        <Grid HorizontalAlignment="Center" Height="373" Margin="0,67,0,0" VerticalAlignment="Top" Width="780" Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49">
+        <Grid HorizontalAlignment="Center" Height="373" Margin="0,0,0,0"  Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition Width="71*"/>
@@ -22,9 +22,10 @@
             <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="223,32,0,311" Grid.Column="1" />
             <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="223,88,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged" Grid.Column="1"/>
             <DatePicker x:Name="DPEndDate" HorizontalAlignment="Left" Margin="223,194,0,0" VerticalAlignment="Top" Height="26" Width="139" Grid.Column="1"/>
+            <DatePicker x:Name="DPStartDate" HorizontalAlignment="Left" Margin="223,148,0,0" VerticalAlignment="Top" Height="26" Width="140" Grid.Column="1"/>
+            <DatePicker x:Name="DPEndDate_Copy" HorizontalAlignment="Left" Margin="224,194,0,0" VerticalAlignment="Top" Height="26" Width="139" Grid.Column="1"/>
         </Grid>
         <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="498,10,0,0" VerticalAlignment="Top" Width="292" FontSize="24"/>
-        <DatePicker x:Name="DPStartDate" HorizontalAlignment="Left" Margin="302,0,0,0" VerticalAlignment="Center" Height="26" Width="140"/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>

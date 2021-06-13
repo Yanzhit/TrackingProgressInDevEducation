@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="TeamRate">
 
     <Grid Background="#FFE0D5D4">
@@ -16,13 +16,13 @@
         </Button>
         <Label x:Name="LPageName" Content="Оценка команды" HorizontalAlignment="Right" Margin="0,14,10,0" VerticalAlignment="Top" Width="154" Height="44" FontSize="18"/>
         <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="166,22,0,0" Click="BBack_Click"/>
-        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="369" Margin="0,71,0,0" VerticalAlignment="Top" Width="780" Background="#FFF9EFEF">
-            <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="440,486,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
-            <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="10,0,0,256" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="589" Margin="0,71,0,0" VerticalAlignment="Top" Width="1056" Background="#FFF9EFEF">
+            <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="645,471,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
+            <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="12,0,0,476" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
             <Label x:Name="LHardSkills" Content="Hard Skills" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBSoftSkills" HorizontalAlignment="Left" Margin="10,0,0,138" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <TextBox x:Name="TBSoftSkills" HorizontalAlignment="Left" Margin="10,0,0,353" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
             <Label x:Name="LSoftSkills" Content="Soft Skills" HorizontalAlignment="Left" Margin="258,118,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="10,0,0,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="12,0,0,229" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
             <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="258,236,0,0" VerticalAlignment="Top"/>
             <Label x:Name="LRate" Content="Rate" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,283" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
