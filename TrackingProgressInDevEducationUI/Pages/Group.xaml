@@ -9,23 +9,28 @@
       Title="Group">
 
     <Grid Background="#FFDED4D4">
-        <Grid HorizontalAlignment="Center" Height="373" Margin="0,0,0,0"  Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="71*"/>
-            </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatGroup" Content="Создать" Margin="512,263,0,0" Click="BCreatGroup_Click" Grid.Column="1"/>
-            <Label x:Name="LGroupName" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="65,33,0,0" VerticalAlignment="Top" Width="165" FontSize="14" RenderTransformOrigin="0.533,1.415" Grid.ColumnSpan="2"/>
-            <Label x:Name="TBChangeCourse" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="65,88,0,0" VerticalAlignment="Top" Width="165" FontSize="14" Grid.ColumnSpan="2"/>
-            <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="65,145,0,0" VerticalAlignment="Top" Width="165" FontSize="14" Grid.ColumnSpan="2"/>
-            <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="65,194,0,0" VerticalAlignment="Top" Width="165" FontSize="14" Grid.ColumnSpan="2"/>
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="223,32,0,311" Grid.Column="1" />
-            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="223,88,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged" Grid.Column="1"/>
-            <DatePicker x:Name="DPEndDate" HorizontalAlignment="Left" Margin="223,194,0,0" VerticalAlignment="Top" Height="26" Width="139" Grid.Column="1"/>
-            <DatePicker x:Name="DPStartDate" HorizontalAlignment="Left" Margin="223,148,0,0" VerticalAlignment="Top" Height="26" Width="140" Grid.Column="1"/>
-            <DatePicker x:Name="DPEndDate_Copy" HorizontalAlignment="Left" Margin="224,194,0,0" VerticalAlignment="Top" Height="26" Width="139" Grid.Column="1"/>
+        <Grid HorizontalAlignment="Center" Height="542" Margin="0,122,0,56"  Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49" Width="1084">
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatGroup" Content="Создать" Margin="0,394,0,0" Click="BCreatGroup_Click" HorizontalAlignment="Center"/>
+            <Label x:Name="LGroupName" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="216,104,0,0" VerticalAlignment="Top" Width="225" FontSize="18" RenderTransformOrigin="0.533,1.415">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.194"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.529"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="TBChangeCourse" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="216,161,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
+            <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="216,218,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
+            <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="216,267,0,0" VerticalAlignment="Top" Width="193" FontSize="18"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="472,106,0,406" />
+            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="472,161,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged"/>
+            <DatePicker x:Name="DPEndDate" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
+            <DatePicker x:Name="DPStartDate" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+            <DatePicker x:Name="DPEndDate_Copy" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
         </Grid>
-        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="498,10,0,0" VerticalAlignment="Top" Width="292" FontSize="24"/>
+        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="919,10,0,0" VerticalAlignment="Top" Width="351" FontSize="30"/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>

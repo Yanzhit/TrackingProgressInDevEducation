@@ -11,7 +11,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="50" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                    <Border CornerRadius="25" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
                         <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
