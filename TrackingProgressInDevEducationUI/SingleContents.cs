@@ -34,6 +34,7 @@ namespace TrackingProgressInDevEducationUI
         private DevMenu _devMenu;
         private AdditionalWindows _additionalWindows;
         private AddStudentToGroup _addStudentToGroup;
+        private AddStudentToTeams _addStudentToTeams;
 
         private SingleContents()
         {
@@ -167,6 +168,14 @@ namespace TrackingProgressInDevEducationUI
         {
             _additionalWindows = new AdditionalWindows(){Title = AddStudentToGroupT, Width = AddStudentToGroupW, Height = AddStudentToGroupH};
             _addStudentToGroup = new AddStudentToGroup();
+            _additionalWindows.Content = _addStudentToGroup;
+            _additionalWindows.ShowDialog();
+        }
+        
+        public void WinStudentToTeam()
+        {
+            _additionalWindows = new AdditionalWindows() { Title = AddStudentToGroupT, Width = AddStudentToGroupW, Height = AddStudentToGroupH };
+            _addStudentToTeams = new AddStudentToTeams();
             _additionalWindows.Content = _addStudentToGroup;
             _additionalWindows.ShowDialog();
         }
