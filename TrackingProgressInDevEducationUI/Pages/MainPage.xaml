@@ -12,7 +12,7 @@
         <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
     </Page.Resources>
 
-    <Grid Background ="#91D4D1">
+    <Grid Background ="#91D4D1" Margin="0,0,30,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -26,22 +26,22 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Height="52" Width="142"
-                Click="Logo_Click" Grid.Row="0" Grid.Column="0">
+        <Button  Style="{StaticResource LogoStyles}" x:Name="Logo">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
 
         <Button 
+            Style="{StaticResource OtherButtonStyles}"
             Content="Студенты колледжа" 
-            HorizontalAlignment="Center" Width="780" Click="Button_Click_Student" 
-            Grid.ColumnSpan ="5" Grid.Row ="1"
+            Click="Button_Click_Student" Grid.ColumnSpan="2" Margin="100,10,0,0" Grid.Row="1" Grid.Column="1" Width="162" 
         />
 
-        <Button  
+        <Button 
+            Style="{StaticResource ButtonCreatStyles}"
             Content="Создать группу" Click="Button_Click_CreateGroups" Grid.Column="4" Grid.Row="2" 
-            Margin="0,30,0,30" 
+            Margin="0,30,0,0" 
         />
 
         <Button Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="4" Grid.Row="3" 

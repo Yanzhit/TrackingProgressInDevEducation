@@ -9,7 +9,7 @@
       Title="GroupJournal">
 
     <Grid Background="#FFDED4D4">
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
@@ -19,10 +19,19 @@
             <TabItem x:Name="TabAttendance" Header="Посещаемость">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="104*"/>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="611*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="DGVisits" HorizontalAlignment="Left" Height="325" VerticalAlignment="Center" Width="754" Grid.ColumnSpan="2" Margin="10,0,0,0" MouseLeftButtonDown="DGVisits_MouseLeftButtonDown"/>
+                    <DataGrid x:Name="DGAttendance" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Студент" Width="150"/>
+                            <DataGridTextColumn Header="%" Width="50"/>
+                            <DataGridCheckBoxColumn Header="Date1"/>
+                        </DataGrid.Columns>
+                        <CheckBox/>
+                        <CheckBox/>
+                        <CheckBox/>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem x:Name="TabHomeworks" Header="Домашние задания

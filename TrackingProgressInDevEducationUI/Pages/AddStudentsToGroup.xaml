@@ -9,14 +9,25 @@
       Title="AddStudentsToGroup">
 
     <Grid Background="#FFDED5D4" Width="1280" Margin="0,0,-480,-270">
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button 
+            Style="{StaticResource LogoStyles}"
+            x:Name="Logo" 
+                Content="" 
+                Margin="10,10,0,0" 
+                Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BBack" Content="Назад" Margin="169,22,1021,670" Click="BBack_Click"/>
+        <Button 
+            Style="{StaticResource ButtonBackStyles}"
+            x:Name="BBack" 
+            Content="Назад" 
+            Margin="169,22,0,0" 
+            Click="BBack_Click"/>
         <Label x:Name="LPageName" Content="Добавление студентов в группу" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
-        <DataGrid x:Name="dgStudents" Margin="10,74,10,10">
+        <DataGrid 
+            x:Name="dgStudents" Margin="10,74,10,10" SelectionChanged="dgStudents_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="# Контракта"/>
                 <DataGridCheckBoxColumn Header="Фамилия" Width="125"/>
@@ -34,7 +45,13 @@
                 <DataGridCheckBoxColumn Header="Check"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="BAddStudentToGroup" Content="Добавить" HorizontalAlignment="Left" Margin="273,22,0,0" VerticalAlignment="Top" Height="28" Width="90"/>
+        <Button 
+            Style="{StaticResource ButtonAddStyles}"
+            x:Name="BAddStudentToGroup" 
+            Content="Добавить" 
+            Margin="324,22,0,0" 
+            RenderTransformOrigin="1.649,0.632"
+        />
 
     </Grid>
 </Page>

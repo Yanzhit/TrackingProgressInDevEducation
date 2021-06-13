@@ -16,24 +16,24 @@
                 <GradientStop Color="#FFBDBDBD" Offset="0.209"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="RegistrationButton" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="321,320,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="Registration_Click"/>
-        <TextBox x:Name="FullNameInput" HorizontalAlignment="Left" Margin="326,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordInput" HorizontalAlignment="Left" Margin="326,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordRepeatInput" HorizontalAlignment="Left" Margin="326,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="RegistrationButton" Content="Зарегистрироваться" Margin="158,325,0,0" Click="Registration_Click"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="FullNameInput" Margin="196,105,0,315" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordInput" Margin="196,238,0,182" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="PasswordRepeatInput" Margin="196,285,0,135"/>
         <TextBlock x:Name="TextName" HorizontalAlignment="Left" Height="19" Margin="326,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
         <TextBlock x:Name="TextPassword" HorizontalAlignment="Left" Height="20" Margin="326,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
         <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="326,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Повторите п"/><Run Text="ароль"/></TextBlock>
-        <Button x:Name="SignInButton" Content="Вход" HorizontalAlignment="Left" Margin="321,366,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.8,-1.603" Click="SignIn_Click"/>
+        <Button Style="{StaticResource OtherButtonStyles}" x:Name="SignInButton" Content="Вход" Margin="321,366,0,0" Click="SignIn_Click"/>
         <TextBlock HorizontalAlignment="Left" Height="19" Margin="331,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.646,0.632"><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
         <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="58" Margin="246,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
-        <TextBox x:Name="EmailInput" HorizontalAlignment="Left" Margin="284,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="EmailInput" Margin="196,195,0,225" />
         <TextBlock x:Name="TextEmail" HorizontalAlignment="Left" Height="19" Margin="326,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Электронная почта"/></TextBlock>
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="52,18,0,0" VerticalAlignment="Top" Height="40" Width="108" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="LoginInput" HorizontalAlignment="Left" Margin="326,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="LoginInput" Margin="196,150,0,270" />
         <TextBlock x:Name="TextLogin" HorizontalAlignment="Left" Height="19" Margin="326,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Language="ru-ru" Text="Логин"/></TextBlock>
     </Grid>
 </Page>

@@ -51,6 +51,9 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
         }
 
-        
+        private void TBNameCurses_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

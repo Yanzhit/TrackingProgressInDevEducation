@@ -9,7 +9,7 @@
       Title="StudentProfile">
 
     <Grid Background="#FFDED4D4">
-        <Button x:Name="Logo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Logo_Click">
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
@@ -63,7 +63,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Добавить комментарий" HorizontalAlignment="Left" Height="27" Margin="532,49,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click"/>
+        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="532,49,0,0" Click="Button_Click"/>
 
     </Grid>
 </Page>
