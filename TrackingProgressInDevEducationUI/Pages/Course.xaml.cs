@@ -27,7 +27,6 @@ namespace TrackingProgressInDevEducationUI.Pages
         public Course()
         {
             InitializeComponent();
-            GetAllCursesInPage();
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)
@@ -40,15 +39,6 @@ namespace TrackingProgressInDevEducationUI.Pages
             OperationLogics operation = new OperationLogics();
             var setNewCourses = operation.SetNewCourse(new SetNewCoursesQ(TBNameCurses.Text, TBCourseDescription.Text));
             MessageBox.Show("Курс " + TBNameCurses.Text + " Созданн!");
-        }
-        private void GetAllCursesInPage()
-        {
-            OperationLogics operation = new OperationLogics();
-            List<SetCoursesA> getAllCurses = operation.GetAllCurses(new SetCoursesQ());
-            foreach (var course in getAllCurses)
-            {
-                CBChangeCourse.Items.Add(course.Name);
-            }
         }
 
         private void TBNameCurses_TextChanged(object sender, TextChangedEventArgs e)

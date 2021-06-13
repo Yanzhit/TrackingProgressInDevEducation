@@ -14,8 +14,6 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BAddStudent" Content="Добавить студентов" HorizontalAlignment="Left" Margin="157,22,0,0" VerticalAlignment="Top" Height="28" Width="90" FontSize="9" RenderTransformOrigin="0.533,0.75" Click="BAddStudent_Click"/>
-        <Button x:Name="BJournal" Content="Журнал" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Height="28" Width="54" Click="BJournal_Click"/>
         <DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
@@ -24,7 +22,7 @@
 
         <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студентов" Margin="157,22,0,0" Click="BAddStudent_Click" Width="149"/>
         <Button Style="{StaticResource OtherButtonStyles}" x:Name="BJournal" Content="Журнал" Margin="324,22,0,0" Click="BJournal_Click"/>
-        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335" SelectionChanged="DGGroupInfo_SelectionChanged">
+        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Фамилия" Width="125"/>
                 <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Имя" Width="135"/>
@@ -44,6 +42,6 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/></DataGrid>
     </Grid>
 </Page>

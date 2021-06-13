@@ -22,15 +22,7 @@
                         <ColumnDefinition Width="163*"/>
                         <ColumnDefinition Width="611*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="DGAttendance" Grid.ColumnSpan="2">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Студент" Width="150"/>
-                            <DataGridTextColumn Header="%" Width="50"/>
-                            <DataGridCheckBoxColumn Header="Date1"/>
-                        </DataGrid.Columns>
-                        <CheckBox/>
-                        <CheckBox/>
-                        <CheckBox/>
+                    <DataGrid x:Name="DGVisits" Grid.ColumnSpan="2">
                     </DataGrid>
                 </Grid>
             </TabItem>
