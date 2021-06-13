@@ -19,12 +19,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         private DataTable _dT;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
-        public GroupJournal(int id = 2)
+        public GroupJournal(int id)
         {
             InitializeComponent();
             InitialisationDT();
             WriteData(id);
-            
         }
 
         private void InitialisationDT()
@@ -57,7 +56,14 @@ namespace TrackingProgressInDevEducationUI.Pages
             name[0] = fullName;
             for (var i = 1; i <= ttt.Count; i++)
             {
-                name[i] = ttt[i - 1].VisitStatus;
+                if (ttt[i - 1].VisitStatus != true)
+                {
+                    name[i] = false;
+                }
+                else
+                {
+                    name[i] = ttt[i - 1].VisitStatus;
+                }
                 _dictionary.Add($"{key}x{i}", ttt[i - 1].Id);
             }
             _dT.Rows.Add(name);

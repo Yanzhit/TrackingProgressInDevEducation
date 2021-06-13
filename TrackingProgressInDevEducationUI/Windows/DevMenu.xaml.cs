@@ -42,7 +42,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void Course_Click(object sender, RoutedEventArgs e)
         {
-            _contents.Course();
+            _contents.WinNewCourse();
         }
 
         private void CreateTeam_Click(object sender, RoutedEventArgs e)
@@ -57,7 +57,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void GroupInfo_Click(object sender, RoutedEventArgs e)
         {
-            _contents.GroupInfo();
+            _contents.GroupInfo(2);
         }
 
         private void GroupJournal_Click(object sender, RoutedEventArgs e)

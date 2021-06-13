@@ -23,40 +23,42 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class GroupInfo : Page
     {
+        private int _id;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
 
-        public GroupInfo(int id = 2)
+        public GroupInfo(int id)
         {
             InitializeComponent();
-            WriteTable(id);
+            _id = id;
+            WriteTable();
         }
 
         private void NameGroup(string name)
         {
             LPageName.Content = name;
         }
-        private void WriteTable(int id)
+        private void WriteTable()
         {
-            TableCourses(id);
-            TableStudent(id);
+            TableCourses();
+            TableStudent();
         }
-        private void TableCourses(int id)
+        private void TableCourses()
         {
-            //GetGroupByIdJA.Items.Add(RenderCourse(id));
+            //GetGroupByIdJA.Items.Add(RenderCourse(_id));
         }
-        private void TableStudent(int id)
+        private void TableStudent()
         {
-            GetAllStudentsByGroupA.ItemsSource = RenderGroup(id);
+            GetAllStudentsByGroupA.ItemsSource = RenderGroup();
         }
-        private IEnumerable<GetAllStudentsByGroupA> RenderGroup(int id)
+        private IEnumerable<GetAllStudentsByGroupA> RenderGroup()
         {
-            var query = new GetAllStudentsByGroupQ(id);
+            var query = new GetAllStudentsByGroupQ(_id);
             return _operation.GetAllStudentsByGroup(query);
         }
-        //private GetGroupByIdJA RenderCourse(int id)
+        //private GetGroupByIdJA RenderCourse()
         //{
-        //    var query = new GetGroupByIdJQ(id);
+        //    var query = new GetGroupByIdJQ(_id);
         //    var result =  _operation.GetGroupByIdJ(query);
         //    NameGroup(result.NameG);
         //    return result;
@@ -74,7 +76,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BJournal_Click(object sender, RoutedEventArgs e)
         {
-            _contents.GroupJournal(2);
+            _contents.GroupJournal(_id);
         } 
     }
 }

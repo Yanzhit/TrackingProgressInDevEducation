@@ -33,7 +33,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BAddCourse_Click(object sender, RoutedEventArgs e)
         {
-            _contents.Course();
+            _contents.WinNewCourse();
         }
 
         private void BLogout_Click(object sender, RoutedEventArgs e)

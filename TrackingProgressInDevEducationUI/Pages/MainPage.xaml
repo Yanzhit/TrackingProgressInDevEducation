@@ -54,7 +54,14 @@
                   Grid.ColumnSpan="4" Grid.Row="2">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding NameG}"  IsReadOnly="True" Header="Группа" Width="200"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Группа"  Content="{Binding NameG}" Width="200" Click="TableGroup_Click" Tag="{Binding Path=Id}"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTextColumn Binding ="{Binding NameG}"  IsReadOnly="True" Header="Группа" Width="200"/>-->
                 <DataGridTextColumn Binding ="{Binding NameC}"  IsReadOnly="True" Header="Курс" Width="200"/>
                 <DataGridTextColumn Binding ="{Binding StartDate}" IsReadOnly="True" Header="Дата начала" Width="200" />
                 <DataGridTextColumn Binding ="{Binding EndDate}" IsReadOnly="True" Header="Дата окончания" Width="100"/>

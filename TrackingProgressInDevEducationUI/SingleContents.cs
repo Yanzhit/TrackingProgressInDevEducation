@@ -58,13 +58,6 @@ namespace TrackingProgressInDevEducationUI
         {
             return _contents = new SingleContents(main);
         }
-        public void Course()
-        {
-            _course = new Course();
-            _main.Content = _course;
-        }
-
-       
 
         public void MainPage()
         {
@@ -110,9 +103,9 @@ namespace TrackingProgressInDevEducationUI
             _main.Content = _addStudentsToTeam;
         }
 
-        public void GroupInfo()
+        public void GroupInfo(int id)
         {
-            _groupInfo = new GroupInfo();
+            _groupInfo = new GroupInfo(id);
             _main.Content = _groupInfo;
         }
 
@@ -163,6 +156,13 @@ namespace TrackingProgressInDevEducationUI
             _devMenu.Show();
         }
         
+        public void WinNewCourse()
+        {
+            _additionalWindows = new AdditionalWindows() { Title = NewCourseT, Width = NewCourseW, Height = NewCourseH };
+            _course = new Course();
+            _additionalWindows.Content = _course;
+            _additionalWindows.ShowDialog();
+        }
         public void WinNewGroup()
         {
             _additionalWindows = new AdditionalWindows() { Title = NewGroupT, Width = NewGroupW, Height = NewGroupH };

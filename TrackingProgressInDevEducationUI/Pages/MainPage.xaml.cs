@@ -28,8 +28,8 @@ namespace TrackingProgressInDevEducationUI.Pages
         private int _tmp;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
-        private ObservableCollection<GetGroupsByLectorA> _groups = new();
-        private ObservableCollection<GetAllTeamsByLectorJA> _teams = new();
+        private readonly ObservableCollection<GetGroupsByLectorA> _groups = new();
+        private readonly ObservableCollection<GetAllTeamsByLectorJA> _teams = new();
         public MainPage()
         {
             InitializeComponent();
@@ -123,6 +123,12 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             var id = (int)(sender as Button).Tag;
             _contents.GroupJournal(id);
+        }
+
+        private void TableGroup_Click(object sender, RoutedEventArgs e)
+        {
+            var id = (int)(sender as Button).Tag;
+            _contents.GroupInfo(id);
         }
     }
 }
