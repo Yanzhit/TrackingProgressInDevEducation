@@ -31,7 +31,6 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="160,16,0,0" Height="40" />
 
     </Grid>
 </Page>

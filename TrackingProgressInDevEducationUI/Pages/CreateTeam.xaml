@@ -15,7 +15,6 @@
             </Button.Background>
         </Button>
         <Label x:Name="LPageName" Content="Создание команды" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Height="44" FontSize="30" FlowDirection="RightToLeft"/>
-        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="160,16,0,0" Click="BBack_Click" Height="40"/>
         <Grid HorizontalAlignment="Center" Height="542" Margin="0,122,0,0" VerticalAlignment="Top" Width="1084" Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49">
             <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatGroup" Content="Создать" Margin="0,406,0,0" HorizontalAlignment="Center" Height="40" />
             <Label x:Name="LTeamName" Content="НАЗВАНИЕ КОМАНДЫ" HorizontalAlignment="Left" Margin="102,107,0,0" VerticalAlignment="Top" Width="302" FontSize="22" RenderTransformOrigin="0.533,1.415"/>
