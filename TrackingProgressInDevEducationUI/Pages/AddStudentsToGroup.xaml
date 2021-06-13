@@ -50,7 +50,7 @@
             x:Name="BAddStudentToGroup" 
             Content="Добавить" 
             Margin="324,22,0,0" 
-            RenderTransformOrigin="1.649,0.632"
+            RenderTransformOrigin="1.649,0.632" Click="BAddStudentToGroup_Click"
         />
 
     </Grid>

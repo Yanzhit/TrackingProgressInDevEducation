@@ -34,7 +34,7 @@
                 <DataGridCheckBoxColumn Header="Check"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudentToTeam" Content="Добавить" Margin="339,24,0,0"/>
+        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudentToTeam" Content="Добавить" Margin="339,24,0,0" Click="BAddStudentToTeam_Click"/>
 
     </Grid>
 </Page>
