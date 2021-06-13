@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationDAL.Models.Bases;
-using TrackingProgressInDevEducationDAL.Requests.Tables;
 
-namespace TrackingProgressInDevEducationBLL.Tests.Expected
+namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
 {
     public class ELectors
     {

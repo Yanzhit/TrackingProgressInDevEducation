@@ -11,7 +11,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
     public class StudentsSA : AAnswer
     {
         /// <summary>
-        /// Ответ от BD на запрос получения всех судентовв
+        /// Ответ от BD на запрос получения всех студентов
         /// </summary>
         /// <param name="model">Входящая модель от DAL для обработки</param>
         /// <returns>Модель ответа с вложенными данными</returns>

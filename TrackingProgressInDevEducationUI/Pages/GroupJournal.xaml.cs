@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.GroupInfo;
 using TrackingProgressInDevEducationBLL.Models.GroupJournal;
@@ -83,7 +84,7 @@ namespace TrackingProgressInDevEducationUI.Pages
             _contents.MainPage();
         }
 
-        private void DGVisits_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void DGVisits_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DataGrid dg = (DataGrid)sender;
             var id = _dictionary[$"{dg.SelectedIndex}x{dg.CurrentCell.Column.DisplayIndex}"];
