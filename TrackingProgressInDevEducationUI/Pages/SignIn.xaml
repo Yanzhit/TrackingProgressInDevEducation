@@ -39,7 +39,7 @@
             </TextBlock.RenderTransform><Run Language="ru-ru" Text="Пароль"/></TextBlock>
         <Button Style="{StaticResource ButtonCreatStyles}" Content="Регистрация" Margin="0,418,0,0" Click="Registration_Click" HorizontalAlignment="Center" />
         <TextBlock HorizontalAlignment="Center" Margin="0,391,0,0" TextWrapping="Wrap" Width="124" Height="22" VerticalAlignment="Top"><Run Language="ru-ru" Text="Новый пользователь?"/></TextBlock>
-        <TextBlock x:Name="Info" HorizontalAlignment="Center" Height="86" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Информационное окно"/></TextBlock>
+        <TextBlock x:Name="Info" HorizontalAlignment="Center" Height="86" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FlowDirection="LeftToRight" Text=""/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click" Margin="10,10,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="UniformToFill"/>

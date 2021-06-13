@@ -47,7 +47,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <TextBlock x:Name="TextName" HorizontalAlignment="Left" Height="19" Margin="602,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"><Run Language="ru-ru" Text="ФИО"/></TextBlock>
-        <TextBlock x:Name="TextPassword" HorizontalAlignment="Left" Height="20" Margin="598,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="TextPassword" HorizontalAlignment="Left" Height="20" Margin="598,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -56,7 +56,7 @@
                     <TranslateTransform Y="20"/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Language="ru-ru" Text="Пароль"/></TextBlock>
-        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="566,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="TextPasswordRepeat" HorizontalAlignment="Left" Height="19" Margin="566,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,7 +84,7 @@
                     <TranslateTransform Y="2"/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Зарегистрированы"/><Run Language="ru-ru" Text="?"/></TextBlock>
-        <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="84" Margin="477,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"><Run Language="ru-ru" Text="Инфо окно, отображает ошибки при регистрации"/></TextBlock>
+        <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Height="84" Margin="445,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Text=""/>
         <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="EmailInput" Margin="445,235,0,455" RenderTransformOrigin="0.5,0.5" >
             <TextBox.RenderTransform>
                 <TransformGroup>

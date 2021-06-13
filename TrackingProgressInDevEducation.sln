@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingProgressInDevEducat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingProgressInDevEducationUI", "TrackingProgressInDevEducationUI\TrackingProgressInDevEducationUI.csproj", "{E2A62E58-96B7-47B9-AB13-D8E8A289AE80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingProgressInDevEducationBLL.Tests", "TrackingProgressInDevEducationBLL.Tests\TrackingProgressInDevEducationBLL.Tests.csproj", "{136E8616-BCA0-45DC-BA27-B6EEDD85FE5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingProgressInDevEducationBLL.Tests", "TrackingProgressInDevEducationBLL.Tests\TrackingProgressInDevEducationBLL.Tests.csproj", "{136E8616-BCA0-45DC-BA27-B6EEDD85FE5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
