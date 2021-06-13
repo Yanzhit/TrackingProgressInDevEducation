@@ -77,7 +77,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="315,16,0,0" Click="Button_Click" Width="186" Height="40"/>
+        <Button x:Name="BAddComment" Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="315,16,0,0" Click="Button_Click" Width="186" Height="40"/>
         <Button 
             Style="{StaticResource ButtonBackStyles}"
             x:Name="BBack" 
