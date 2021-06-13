@@ -49,7 +49,6 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label x:Name="label" Content="Куда-то ещё нужно добавить среднее значение за тримместр на каждой вкладке" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
