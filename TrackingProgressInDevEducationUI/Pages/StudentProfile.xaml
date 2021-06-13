@@ -77,13 +77,13 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="315,20,0,0" Click="Button_Click" Width="186"/>
+        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="315,16,0,0" Click="Button_Click" Width="186" Height="40"/>
         <Button 
             Style="{StaticResource ButtonBackStyles}"
             x:Name="BBack" 
             Content="Назад" 
-            Margin="160,20,0,0" 
-            Click="BBack_Click"/>
+            Margin="160,16,0,0" 
+            Click="BBack_Click" Height="40"/>
 
     </Grid>
 </Page>

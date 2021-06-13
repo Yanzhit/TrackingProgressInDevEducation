@@ -15,7 +15,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="LPageName" Content="Оценка команды" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="289" Height="56" FontSize="30" FlowDirection="RightToLeft"/>
-        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="160,22,0,0" Click="BBack_Click"/>
+        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="159,16,0,0" Click="BBack_Click" Height="40"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="542" Margin="0,122,0,0" VerticalAlignment="Top" Width="1028" Background="#FFF9EFEF">
             <TextBox Style="{StaticResource BigTextBoxStyles}" x:Name="TBHardSkills" Margin="75,56,0,400" />
             <Label x:Name="LHardSkills" Content="Hard Skills" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" FontSize="22"/>
@@ -27,7 +27,7 @@
             <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="813,0,0,422" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" Height="40" MaxLength="3"/>
             <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="813,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="40" MaxLength="3"/>
             <TextBox x:Name="TBCommonRate" HorizontalAlignment="Left" Margin="813,0,0,106" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" Height="40" MaxLength="3" FontSize="18" RenderTransformOrigin="0.581,1.025"/>
-            <Button x:Name="BAddComentStudent" Content="Добавить" Height="32" Margin="802,477,0,0" Width="102" Background="#FFE1909F" FontSize="16" Click="BAddComentStudent_Click" Style="{DynamicResource ButtonCreatStyles}" RenderTransformOrigin="-0.515,0.578"/>
+            <Button x:Name="BAddComentStudent" Content="Добавить" Height="40" Margin="787,479,0,0" Width="132" Background="#FFE1909F" FontSize="16" Click="BAddComentStudent_Click" Style="{DynamicResource ButtonCreatStyles}" RenderTransformOrigin="-0.515,0.578"/>
         </Grid>
 
     </Grid>

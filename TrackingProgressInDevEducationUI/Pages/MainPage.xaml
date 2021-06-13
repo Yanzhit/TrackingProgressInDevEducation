@@ -33,24 +33,24 @@
         <Button 
             Style="{StaticResource OtherButtonStyles}"
             Content="Студенты колледжа" 
-            Click="Button_Click_Student" Grid.Row="1" Grid.Column="1" Width="640" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+            Click="Button_Click_Student" Grid.Column="1" Width="640" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="40" Margin="0,76,0,0" Grid.RowSpan="2" 
         />
 
         <Button 
             Style="{StaticResource ButtonCreatStyles}"
             Content="Создать группу" Click="Button_Click_CreateGroups" Grid.Column="3" Grid.Row="1" 
-            Margin="100,57,0,0" Grid.ColumnSpan="2" 
+            Margin="100,57,0,0" Grid.ColumnSpan="2" Height="40" Grid.RowSpan="2" 
         />
 
         <Button Style="{StaticResource ButtonCreatStyles}"
                 Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="3" Grid.Row="2" 
-                Margin="100,248,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                Margin="100,244,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="40" 
         />
         <DataGrid x:Name="GetGroupsByLectorA" Width="Auto"  FontSize="16" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="54,0,0,0"
+                  VerticalAlignment="Top" Margin="54,17,0,0"
                   Grid.ColumnSpan="4" Grid.Row="2">
 
             <DataGrid.Columns>
