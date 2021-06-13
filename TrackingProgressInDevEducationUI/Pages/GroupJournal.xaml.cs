@@ -15,7 +15,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class GroupJournal : Page
     {
-        private Dictionary<string, int> _dictionary = new();
+        private readonly Dictionary<string, int> _dictionary = new();
         private DataTable _dT;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();

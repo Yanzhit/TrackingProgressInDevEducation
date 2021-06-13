@@ -25,7 +25,6 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-        private int _tmp;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
         private readonly ObservableCollection<GetGroupsByLectorA> _groups = new();
