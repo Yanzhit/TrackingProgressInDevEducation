@@ -14,6 +14,8 @@ using TrackingProgressInDevEducationBLL.Models.Comment;
 using TrackingProgressInDevEducationBLL.Models.Course;
 using TrackingProgressInDevEducationBLL.Models.GroupJournal;
 using TrackingProgressInDevEducationBLL.Models.Students;
+using TrackingProgressInDevEducationBLL.Models.Team;
+using TrackingProgressInDevEducationBLL.Transfers;
 
 namespace TrackingProgressInDevEducationBLL
 {
@@ -49,6 +51,13 @@ namespace TrackingProgressInDevEducationBLL
             var model = (SetNewGroupJ)_bllManager.GroupsQ.SetNewGroup(setGroupQ);
             SetNewGroupJ modelReturned = _dalManager.Joins.SetNewGroupJ(model);
             return _bllManager.GroupsA.SetNewGroup(modelReturned);
+        }
+
+        public SetTeamA SetNewTeam(SetTeamQ setTeamQ)
+        {
+            var model = (SetNewTeams) _bllManager.TeamsQ.SetNewTeam(setTeamQ);
+            Team modelReturned = _dalManager.Teams.SetNewTeams(model);
+            return _bllManager.TeamsA.SetNewTeam(modelReturned);
         }
         public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
         {

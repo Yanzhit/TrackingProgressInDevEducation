@@ -13,7 +13,7 @@ namespace TrackingProgressInDevEducationDAL.Facades
         /// </summary>
         /// <param name="team">Объект данных</param>
         /// <returns></returns>
-        public Team SetNewTeam(Team team)
+        public Team SetNewTeams(Team team)
         {
             return (Team) Manager.Setter.Single(_query.SetNewTeam(team));
         }

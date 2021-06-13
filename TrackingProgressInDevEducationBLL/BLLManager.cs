@@ -126,5 +126,7 @@ namespace TrackingProgressInDevEducationBLL
         public TeamInfosA TeamInfosA => new();
         public TeamRatesQ TeamRatesQ => new();
         public TeamRatesA TeamRatesA => new();
+        public TeamsQ TeamsQ => new();
+        public TeamsA TeamsA => new();
     }
 }
