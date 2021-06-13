@@ -11,9 +11,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0.996"/>
-                <GradientStop Color="#FFAFFFDE" Offset="0.62"/>
-                <GradientStop Color="#FF7EB253" Offset="0.084"/>
+                <GradientStop Color="#FFC4D5FF" Offset="0.004"/>
+                <GradientStop Color="#FFF6C8CF" Offset="0.947"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Button Style="{StaticResource OtherButtonStyles}" Content="Вход" Margin="0,340,0,0" Click="SignIn_Click" Height="28" Width="148" HorizontalAlignment="Center"/>

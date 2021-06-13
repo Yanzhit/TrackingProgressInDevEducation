@@ -14,8 +14,8 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
-        <Label x:Name="LPageName" Content="Мой профиль" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="202" Height="44" FontSize="30"/>
-        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="166,22,0,0" />
+        <Label x:Name="LPageName" Content="Мой профиль" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="202" Height="52" FontSize="30" FlowDirection="RightToLeft"/>
+        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="160,22,0,0" />
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="205" Margin="0,122,0,0" VerticalAlignment="Top" Width="1084" Background="#FFF9EFEF">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="761*"/>

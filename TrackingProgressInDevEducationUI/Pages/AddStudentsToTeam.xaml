@@ -14,8 +14,8 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="166,22,0,0" Click="BBack_Click"/>
-        <Label x:Name="LPageName" Content="Добавление студентов в команду" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
+        <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="160,20,0,0" Click="BBack_Click"/>
+        <Label x:Name="LPageName" Content="Добавление студентов в команду" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="489" Height="52" FontSize="30" FlowDirection="RightToLeft"/>
         <DataGrid x:Name="dgStudents" Margin="10,74,10,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="# Контракта"/>
@@ -34,7 +34,7 @@
                 <DataGridCheckBoxColumn Header="Check"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudentToTeam" Content="Добавить" Margin="339,24,0,0" Click="BAddStudentToTeam_Click"/>
+        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudentToTeam" Content="Добавить" Margin="315,20,0,0" Click="BAddStudentToTeam_Click"/>
 
     </Grid>
 </Page>

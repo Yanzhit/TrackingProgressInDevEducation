@@ -10,7 +10,7 @@
       Title="Students">
 
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,0,0">
-        <Label x:Name="LNamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,4,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
+        <Label x:Name="LNamePage" Content="Студенты колледжа" HorizontalAlignment="Left" Height="52" Margin="962,10,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486" FlowDirection="RightToLeft"/>
         <!--<DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
                   AutoGenerateColumns="True" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
@@ -19,7 +19,7 @@
         <DataGrid x:Name="DGStudent" AutoGenerateColumns="True" CanUserAddRows ="False" 
                   CanUserDeleteRows="False" Margin="10,67,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True"
                   SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
-        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студента" Margin="1098,22,0,0" Click="BAddStudent_Click"/>
+            <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студента" Margin="1098,22,0,0" Click="BAddStudent_Click"/>
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
@@ -40,7 +40,7 @@
             </DataGrid.Columns>
 
 
-                <!--<DataGrid.ItemsSource>
+            <!--<DataGrid.ItemsSource>
                 <SqlClient:SqlConnectionStringBuilder/>
             </DataGrid.ItemsSource>-->
         </DataGrid>

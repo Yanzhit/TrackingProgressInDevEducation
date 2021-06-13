@@ -30,7 +30,7 @@
             <DatePicker x:Name="DPStartDate" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
             <DatePicker x:Name="DPEndDate_Copy" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
         </Grid>
-        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="919,10,0,0" VerticalAlignment="Top" Width="351" FontSize="30"/>
+        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="919,10,0,0" VerticalAlignment="Top" Width="351" FontSize="30" FlowDirection="RightToLeft"/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>

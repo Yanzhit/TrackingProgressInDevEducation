@@ -14,8 +14,8 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Label x:Name="LPageName" Content="Профиль студента:" HorizontalAlignment="Left" Margin="407,18,0,0" VerticalAlignment="Top" Width="166" Height="44" FontSize="18"/>
-        <Label x:Name="LPageName_Copy" Content="Иванов Иван Иванович" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="212" Height="44" FontSize="18"/>
+        <Label x:Name="LPageName" Content="Профиль студента" HorizontalAlignment="Left" Margin="535,6,0,0" VerticalAlignment="Top" Width="264" Height="52" FontSize="30" RenderTransformOrigin="-1.102,0.705"/>
+        <Label x:Name="LPageName_Copy" Content="Иванов Иван Иванович" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="361" Height="44" FontSize="22" FlowDirection="RightToLeft"/>
         <TabControl x:Name="tabControl" Margin="10,67,10,10">
             <TabItem x:Name="TabPerformance" Header="Успеваемость">
                 <Grid Background="#FFE5E5E5"/>
@@ -77,7 +77,13 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="532,49,0,0" Click="Button_Click"/>
+        <Button Style="{StaticResource ButtonAddStyles}" Content="Добавить комментарий" Margin="315,20,0,0" Click="Button_Click" Width="186"/>
+        <Button 
+            Style="{StaticResource ButtonBackStyles}"
+            x:Name="BBack" 
+            Content="Назад" 
+            Margin="160,20,0,0" 
+            Click="BBack_Click"/>
 
     </Grid>
 </Page>

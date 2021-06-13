@@ -33,25 +33,25 @@
         <Button 
             Style="{StaticResource OtherButtonStyles}"
             Content="Студенты колледжа" 
-            Click="Button_Click_Student" Grid.Row="1" Grid.Column="1" Width="162" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+            Click="Button_Click_Student" Grid.Row="1" Grid.Column="1" Width="640" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
         />
 
         <Button 
             Style="{StaticResource ButtonCreatStyles}"
             Content="Создать группу" Click="Button_Click_CreateGroups" Grid.Column="3" Grid.Row="1" 
-            Margin="100,59,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+            Margin="100,57,0,0" Grid.ColumnSpan="2" 
         />
 
         <Button Style="{StaticResource ButtonCreatStyles}"
-                Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="3" Grid.Row="3" 
-                Margin="100,10,0,0" Grid.ColumnSpan="2" 
+                Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="3" Grid.Row="2" 
+                Margin="100,248,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" 
         />
         <DataGrid x:Name="GetGroupsByLectorA" Width="Auto"  FontSize="16" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="54,59,0,0"
-                  Grid.ColumnSpan="4" Grid.Row="1">
+                  VerticalAlignment="Top" Margin="54,0,0,0"
+                  Grid.ColumnSpan="4" Grid.Row="2">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Binding ="{Binding NameG}"  IsReadOnly="True" Header="Группа" Width="200"/>
@@ -73,7 +73,7 @@
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="54,10,0,0"
+                  VerticalAlignment="Top" Margin="54,21,0,0"
                   Grid.ColumnSpan="4" Grid.Row="3">
 
             <DataGrid.Columns>
