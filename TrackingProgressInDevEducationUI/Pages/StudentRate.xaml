@@ -24,8 +24,8 @@
             <TextBox Style="{StaticResource BigTextBoxStyles}" x:Name="TBCommon" Margin="75,374,0,84" />
             <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="305,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,2.735" FontSize="22"/>
             <Label x:Name="LRate" Content="Оценка" HorizontalAlignment="Left" Margin="810,10,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="813,0,0,422" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" Height="40" MaxLength="3"/>
-            <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="813,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="40" MaxLength="3"/>
+            <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="813,0,0,422" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" Height="40" MaxLength="3" FontSize="18"/>
+            <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="813,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="40" MaxLength="3" FontSize="18"/>
             <TextBox x:Name="TBCommonRate" HorizontalAlignment="Left" Margin="813,0,0,106" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" Height="40" MaxLength="3" FontSize="18" RenderTransformOrigin="0.581,1.025"/>
             <Button x:Name="BAddComentStudent" Content="Добавить" Height="40" Margin="802,477,0,0" Width="102" Background="#FFE1909F" FontSize="16" Click="BAddComentStudent_Click" Style="{DynamicResource ButtonCreatStyles}" RenderTransformOrigin="-0.515,0.578"/>
         </Grid>
