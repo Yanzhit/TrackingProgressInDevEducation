@@ -16,6 +16,8 @@
         </Button>
         <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddComment" Content="Добавить комментарий" Margin="314,16,0,0" Click="BAddComment_Click" Width="182" Height="40"/>
         <Label x:Name="LPageName" Content="Команда - 001" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="464" Height="57" FontSize="30" FlowDirection="RightToLeft"/>
+        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudents" Content="Добавить участников" Height="40" Margin="532,16,0,0" Width="182" Background="#FFDDDDDD" FontSize="16" Click="BAddStudents_Click"/>
+        <Label x:Name="label" Content="Выбрано ... участников" HorizontalAlignment="Left" Margin="632,271,0,0" VerticalAlignment="Top" Width="184" Height="34" FontSize="14"/>
         <TabControl x:Name="tabControl" Margin="10,67,10,10">
             <TabItem x:Name="TabList" Header="Список
                      ">

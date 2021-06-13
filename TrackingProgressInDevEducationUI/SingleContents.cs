@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
+using TrackingProgressInDevEducationBLL.Models.Team;
 using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Pages.Secondary;
 using TrackingProgressInDevEducationUI.Windows;
@@ -16,7 +17,7 @@ namespace TrackingProgressInDevEducationUI
     {
         public GetLectorA Lector { get; set; }
         public SetGroupA NewGroup{ get; set; }
-        //public SetGroupA NewTeam{ get; set; }
+        public SetTeamA NewTeam{ get; set; }
         public OperationLogics OperationLogics { get; set; } = new OperationLogics();
         private static SingleContents _contents;
         private readonly MainForm _main;
