@@ -42,5 +42,12 @@
         public const int FullNameCharMax = 110;
         public const int LoginCharMin = 3;
         public const int LoginCharMax = 25;
+
+
+        public const string AddStudentToGroupT = "Добавление нового студента";
+        public const int AddStudentToGroupW = 400;
+        public const int AddStudentToGroupH = 400;
+
+
     }
 }

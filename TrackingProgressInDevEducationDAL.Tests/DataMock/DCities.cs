@@ -21,16 +21,16 @@ namespace TrackingProgressInDevEducationDAL.Tests.DataMock
         {
             Cities = new List<City>
             {
-                new(new object[] {"СПБ"}),
-                new(new object[] {"Москва"}),
-                new(new object[] {"Владимир"}),
-                new(new object[] {"Самара"}),
-                new(new object[] {"Саратов"}),
-                new(new object[] {"Омск"}),
-                new(new object[] {"Оренбург"}),
-                new(new object[] {"Новгород"}),
-                new(new object[] {"Орск"}),
-                new(new object[] {"Тверь"})
+                new City {Name ="СПБ"},
+                new City {Name ="Москва"},
+                new City {Name ="Владимир"},
+                new City {Name ="Самара"},
+                new City {Name ="Саратов"},
+                new City {Name ="Омск"},
+                new City {Name ="Оренбург"},
+                new City {Name ="Новгород"},
+                new City {Name ="Орск"},
+                new City {Name ="Тверь"}
             };
         }
     }

@@ -1,8 +1,10 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationUI.Pages;
+using TrackingProgressInDevEducationUI.Pages.Secondary;
 using TrackingProgressInDevEducationUI.Windows;
 using Course = TrackingProgressInDevEducationUI.Pages.Course;
 using Group = TrackingProgressInDevEducationUI.Pages.Group;
+using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI
 {
@@ -30,6 +32,8 @@ namespace TrackingProgressInDevEducationUI
         private MainPage _mainPage;
         private Verification _verification;
         private DevMenu _devMenu;
+        private AdditionalWindows _additionalWindows;
+        private AddStudentToGroup _addStudentToGroup;
 
         private SingleContents()
         {
@@ -157,6 +161,14 @@ namespace TrackingProgressInDevEducationUI
         {
             _devMenu = new DevMenu();
             _devMenu.Show();
+        }
+
+        public void WinStudentToGroup()
+        {
+            _additionalWindows = new AdditionalWindows(){Title = AddStudentToGroupT, Width = AddStudentToGroupW, Height = AddStudentToGroupH};
+            _addStudentToGroup = new AddStudentToGroup();
+            _additionalWindows.Content = _addStudentToGroup;
+            _additionalWindows.ShowDialog();
         }
     }
 }

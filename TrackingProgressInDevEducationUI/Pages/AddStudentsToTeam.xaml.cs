@@ -35,6 +35,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.TeamInfo();
         }
-        
+
+        private void BAddStudentToTeam_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
