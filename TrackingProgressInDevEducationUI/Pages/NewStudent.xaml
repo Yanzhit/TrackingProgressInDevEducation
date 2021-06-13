@@ -15,20 +15,20 @@
 
             <Label x:Name="LName" Content="Имя*" HorizontalAlignment="Left" Height="34" Margin="193,96,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
-            <Label x:Name="LPhone" Content="Телефон*" HorizontalAlignment="Left" Height="34" Margin="193,256,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LPhone" Content="Телефон*" HorizontalAlignment="Left" Height="40" Margin="193,256,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
             <Label x:Name="LEmail" Content="Email" HorizontalAlignment="Left" Height="34" Margin="193,296,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
-            <Label x:Name="LContractNumber" Content="Номер контракта" HorizontalAlignment="Left" Height="36" Margin="193,174,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LContractNumber" Content="Номер контракта" HorizontalAlignment="Left" Height="41" Margin="193,174,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
-            <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="34" Margin="193,375,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="39" Margin="193,375,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
             <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateStudent" Content="Создать" Margin="650,482,0,0" Click="BCreateStudent_Click" RenderTransformOrigin="0.532,-0.309" Height="40"/>
             <Label x:Name="LMiddleName" Content="Отчество*" HorizontalAlignment="Left" Height="36" Margin="193,134,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
-            <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="36" Margin="193,215,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="41" Margin="193,215,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <Label x:Name="LGit" Content="Git" HorizontalAlignment="Left" Height="34" Margin="193,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="546,215,0,0" VerticalAlignment="Top" Width="347" Height="36"/>
-            <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="36" Margin="193,414,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
+            <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="43" Margin="193,414,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="546,414,0,0" VerticalAlignment="Top" Width="347" Height="36"/>
             <TextBox  Style="{StaticResource LittleTextBoxStyles}" x:Name="TBSurname" Margin="543,59,0,453" />
             <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBName" Margin="543,98,0,414" />
