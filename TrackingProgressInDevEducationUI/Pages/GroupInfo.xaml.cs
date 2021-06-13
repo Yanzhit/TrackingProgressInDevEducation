@@ -75,7 +75,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BJournal_Click(object sender, RoutedEventArgs e)
         {
-            _contents.GroupJournal();
+            _contents.GroupJournal(2);
         } 
     }
 }

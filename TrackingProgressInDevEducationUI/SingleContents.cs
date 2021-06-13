@@ -1,4 +1,5 @@
-﻿using TrackingProgressInDevEducationBLL.Models.SignIn;
+﻿using System;
+using TrackingProgressInDevEducationBLL.Models.SignIn;
 using TrackingProgressInDevEducationUI.Pages;
 using TrackingProgressInDevEducationUI.Pages.Secondary;
 using TrackingProgressInDevEducationUI.Windows;
@@ -128,9 +129,9 @@ namespace TrackingProgressInDevEducationUI
             _createTeam = new CreateTeam();
             _main.Content = _createTeam;
         }
-        public void GroupJournal()
+        public void GroupJournal(int id)
         {
-            _groupJournal = new GroupJournal();
+            _groupJournal = new GroupJournal(id);
             _main.Content = _groupJournal;
         }
         public void MyProfile()

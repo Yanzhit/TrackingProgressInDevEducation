@@ -61,7 +61,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void GroupJournal_Click(object sender, RoutedEventArgs e)
         {
-            _contents.GroupJournal();
+            _contents.GroupJournal(2);
         }
 
         private void MyProfile_Click(object sender, RoutedEventArgs e)

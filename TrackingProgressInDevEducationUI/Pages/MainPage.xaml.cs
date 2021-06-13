@@ -90,5 +90,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.MyProfile();
         }
+
+        private void Table_Click(object sender, RoutedEventArgs e)
+        {
+            _contents.GroupJournal(2); // add real Id
+        }
     }
 }
