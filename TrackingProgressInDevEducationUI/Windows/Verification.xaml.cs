@@ -2,6 +2,7 @@
 using System.Windows;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.Verification;
+using static TrackingProgressInDevEducationUI.Defines;
 
 namespace TrackingProgressInDevEducationUI.Windows
 {
@@ -18,6 +19,12 @@ namespace TrackingProgressInDevEducationUI.Windows
             InitializeComponent();
             _id = id;
             _key = key;
+            Preparing();
+        }
+
+        private void Preparing()
+        {
+            Info.Text = $"{VerificationText}";
         }
 
         private void Check_Click(object sender, RoutedEventArgs e)

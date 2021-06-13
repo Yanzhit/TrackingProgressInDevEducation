@@ -37,10 +37,5 @@ namespace TrackingProgressInDevEducationUI
             await Task.Delay(TimeSpan.FromSeconds(2));
             _contents.SignIn();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

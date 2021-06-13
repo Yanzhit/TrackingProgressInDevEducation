@@ -32,6 +32,7 @@
         public const string ErrorActive = "Если вам не удается активировать аккаунт, пожалуйста свяжитесь с нами";
         public const string ErrorActive1 = ", по электронной почте: ";
         public const string ErrorActive2 = "Мы с радостью поможем решить вашу проблему";
+        public const string VerificationText = "Укажите проверочный код, отправленый на почту в окошно ниже";
 
         public const int EmailCharMin = 6;
         public const int EmailCharMax = 30;

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Windows"
         mc:Ignorable="d"
         Title="" Height="250" Width="350">
-    <Grid Margin="0,0,0,0" HorizontalAlignment="Center" Width="350">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Center" Width="350" Background="#FF44B6BB">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="250*"/>
@@ -15,7 +15,7 @@
         <TextBox x:Name="InputKey" Grid.Column="1" HorizontalAlignment="Center" Margin="0,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="51" MaxLines="1" MaxLength="4" FontSize="20" FontWeight="Bold"/>
         <Button Content="Запросить&#xD;&#xA;повторно" Grid.Column="1" HorizontalAlignment="Left" Margin="44,154,0,0" VerticalAlignment="Top" Width="105" Height="50" Click="Button_Click"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="48,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" Text="Не пришел код?" IsReadOnly="True"/>
-        <TextBox x:Name="Info" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" IsReadOnly="True"/>
+        <TextBox x:Name="Info" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" IsReadOnly="True" Background="#FF44B6BB"/>
 
     </Grid>
 </Window>
