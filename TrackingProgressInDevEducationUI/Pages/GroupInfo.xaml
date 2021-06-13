@@ -18,30 +18,31 @@
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="10,225,0,0">
+                  VerticalAlignment="Top" Margin="119,168,0,0">
 
-        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студентов" Margin="157,22,0,0" Click="BAddStudent_Click" Width="149"/>
-        <Button Style="{StaticResource OtherButtonStyles}" x:Name="BJournal" Content="Журнал" Margin="324,22,0,0" Click="BJournal_Click"/>
-        <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Фамилия" Width="125"/>
-                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Имя" Width="135"/>
-                <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
-                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Райтинг" Width="50"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid x:Name="GetGroupByIdJA" Width="537"  FontSize="26" 
+            <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студентов" Margin="157,22,0,0" Click="BAddStudent_Click" Width="149"/>
+            <Button Style="{StaticResource OtherButtonStyles}" x:Name="BJournal" Content="Журнал" Margin="324,22,0,0" Click="BJournal_Click"/>
+            <DataGrid x:Name="DGGroupInfo" Margin="10,68,10,335">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Фамилия" Width="125"/>
+                    <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Имя" Width="135"/>
+                    <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
+                    <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Райтинг" Width="50"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid x:Name="GetGroupByIdJA" Width="537"  FontSize="26" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
                   VerticalAlignment="Top" Margin="10,75,0,0">
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = NameC}" IsReadOnly="True" Header="Курс" Width="135"/>
-                <DataGridTextColumn Binding ="{Binding Path = Description}" IsReadOnly="True" Header="Описание" Width="525" />
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding ="{Binding Path = NameC}" IsReadOnly="True" Header="Курс" Width="135"/>
+                    <DataGridTextColumn Binding ="{Binding Path = Description}" IsReadOnly="True" Header="Описание" Width="525" />
 
-            </DataGrid.Columns>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/>
         </DataGrid>
-        <Label x:Name="LPageName" Content="Группа C#-001" HorizontalAlignment="Right" Margin="0,20,4,0" VerticalAlignment="Top" Width="95"/></DataGrid>
     </Grid>
 </Page>

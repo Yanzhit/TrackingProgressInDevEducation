@@ -9,7 +9,7 @@
       Title="Course">
 
     <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,0,0">
-        <Label x:Name="LPageName" Content="Создание нового курса" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="352" FontSize="30" Margin="918,10,0,0"/>
+        <Label x:Name="LPageName" Content="Создание нового курса" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="352" FontSize="30" Margin="918,10,0,0" FlowDirection="RightToLeft"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="542" Margin="0,122,0,0" VerticalAlignment="Top" Width="1084" Background="#FFF9EFEF">
             <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="52" Margin="143,105,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
             <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="44" Margin="143,292,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>

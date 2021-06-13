@@ -14,8 +14,8 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg"/>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddComment" Content="Добавить комментарий" Margin="157,23,0,0" Click="BAddComment_Click"/>
-        <Label x:Name="LPageName" Content="Команда - 001" HorizontalAlignment="Right" Margin="0,18,10,0" VerticalAlignment="Top" Width="291" Height="44" FontSize="18"/>
+        <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddComment" Content="Добавить комментарий" Margin="315,20,0,0" Click="BAddComment_Click" Width="182"/>
+        <Label x:Name="LPageName" Content="Команда - 001" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="464" Height="57" FontSize="30" FlowDirection="RightToLeft"/>
         <TabControl x:Name="tabControl" Margin="10,67,10,10">
             <TabItem x:Name="TabList" Header="Список
                      ">
