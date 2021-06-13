@@ -40,5 +40,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.AddStudentsToTeam();
         }
+
+        private void BCreatGroup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

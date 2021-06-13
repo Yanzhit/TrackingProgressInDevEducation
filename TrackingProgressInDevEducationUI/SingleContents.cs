@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL;
 using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.SignIn;
@@ -15,6 +16,7 @@ namespace TrackingProgressInDevEducationUI
     {
         public GetLectorA Lector { get; set; }
         public SetGroupA NewGroup{ get; set; }
+        //public SetGroupA NewTeam{ get; set; }
         public OperationLogics OperationLogics { get; set; } = new OperationLogics();
         private static SingleContents _contents;
         private readonly MainForm _main;
@@ -124,11 +126,7 @@ namespace TrackingProgressInDevEducationUI
             _addStudentsToGroup = new AddStudentsToGroup();
             _main.Content = _addStudentsToGroup;
         }
-        public void CreateTeam()
-        {
-            _createTeam = new CreateTeam();
-            _main.Content = _createTeam;
-        }
+       
         public void GroupJournal(int id)
         {
             _groupJournal = new GroupJournal(id);
@@ -170,6 +168,13 @@ namespace TrackingProgressInDevEducationUI
             _additionalWindows = new AdditionalWindows() { Title = NewGroupT, Width = NewGroupW, Height = NewGroupH };
             _group = new Group();
             _additionalWindows.Content = _group;
+            _additionalWindows.ShowDialog();
+        }
+        public void WinNewTeam()
+        {
+            _additionalWindows = new AdditionalWindows() { Title = NewTeamT, Width = NewTeamW, Height = NewTeamH };
+            _createTeam = new CreateTeam();
+            _additionalWindows.Content = _createTeam;
             _additionalWindows.ShowDialog();
         }
 

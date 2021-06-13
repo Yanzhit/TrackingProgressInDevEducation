@@ -28,7 +28,6 @@
             <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="472,161,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged"/>
             <DatePicker x:Name="DPEndDate" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
             <DatePicker x:Name="DPStartDate" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-            <DatePicker x:Name="DPEndDate_Copy" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
         </Grid>
         <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="919,10,0,0" VerticalAlignment="Top" Width="351" FontSize="30"/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">

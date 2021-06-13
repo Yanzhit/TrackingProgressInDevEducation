@@ -47,7 +47,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void CreateTeam_Click(object sender, RoutedEventArgs e)
         {
-            _contents.CreateTeam();
+            _contents.WinNewTeam();
         }
 
         private void Group_Click(object sender, RoutedEventArgs e)

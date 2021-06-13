@@ -25,9 +25,11 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+        private int _tmp;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
-        private ObservableCollection<GetGroupsByLectorA> _groups = new ObservableCollection<GetGroupsByLectorA>();
+        private ObservableCollection<GetGroupsByLectorA> _groups = new();
+        private ObservableCollection<GetAllTeamsByLectorJA> _teams = new();
         public MainPage()
         {
             InitializeComponent();
@@ -43,21 +45,26 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             TableGroup();
             TableTeam();
-            WriteGroup();
+            SetGroup();
+            SetTeam();
         }
         private void TableGroup()
         {
             _groups.Clear();
-            var pp = (List<GetGroupsByLectorA>)RenderGroup();
-            foreach (var p in pp)
+            var groups = (List<GetGroupsByLectorA>)RenderGroup();
+            foreach (var group in groups)
             {
-                _groups.Add(p);
+                _groups.Add(group);
             }
         }
 
-        private void WriteGroup()
+        private void SetGroup()
         {
             GetGroupsByLectorA.ItemsSource = _groups;
+        }
+        private void SetTeam()
+        {
+            GetTeamsByLectorA.ItemsSource = _teams;
         }
 
         private IEnumerable<GetGroupsByLectorA> RenderGroup()
@@ -67,7 +74,12 @@ namespace TrackingProgressInDevEducationUI.Pages
         }
         private void TableTeam()
         {
-            GetTeamsByLectorA.ItemsSource = RenderTeam();
+            _teams.Clear();
+            var teams = (List<GetAllTeamsByLectorJA>)RenderTeam();
+            foreach (var team in teams)
+            {
+                _teams.Add(team);
+            }
         }
         private IEnumerable<GetAllTeamsByLectorJA> RenderTeam()
         {
@@ -93,7 +105,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Button_Click_CreateTeam(object sender, RoutedEventArgs e)
         {
-            _contents.CreateTeam();
+            _contents.WinNewTeam();
+            TableTeam();
         }
 
         private void GetTeamsByLectorA_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -108,7 +121,8 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void Table_Click(object sender, RoutedEventArgs e)
         {
-            _contents.GroupJournal(2); // add real Id
+            var id = (int)(sender as Button).Tag;
+            _contents.GroupJournal(id);
         }
     }
 }

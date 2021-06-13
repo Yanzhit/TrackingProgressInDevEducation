@@ -17,18 +17,25 @@ namespace TrackingProgressInDevEducationBLL.Models.MainPage
         {
         }
 
-        public GetAllTeamsByLectorJA(int id, string name, string from, string to, int studCount)
+        public GetAllTeamsByLectorJA(GetAllTeamsByLectorJA model)
         {
-            Id = id;
-            Name = name;
-            From = from;
-            To = to;
-            StudentCount = studCount;
+            Id = model.Id;
+            Name = model.Name;
+            From = model.From;
+            To = model.To;
+            StudentCount = model.StudentCount;
         }
 
         public override bool Equals(object obj)
         {
-            return Equals((GetAllTeamsByLectorJA)obj);
+            if (obj is GetAllTeamsByLectorJA)
+            {
+                return Equals((GetAllTeamsByLectorJA)obj);
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private bool Equals(GetAllTeamsByLectorJA other)

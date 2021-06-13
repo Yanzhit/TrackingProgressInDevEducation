@@ -150,7 +150,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkComplete\SetNewHWComplete.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\CommentFor.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\HomeworkGroup\SetNewHWGroup.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Courses\SetNewCourse.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\CommentType\SetNewCType.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\GetLectorById.sql" />

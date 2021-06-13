@@ -35,17 +35,20 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void WriteData(int id)
         {
             List<GetAllStudentsByGroupA> students = WriteDGridStudents(id);
-            var visits = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(students[0].Id));
-            PreparingDGVisitsColumm(visits);
-            int key = 0;
-            foreach (var student in students)
+            if (students.Count != 0)
             {
-                var visit = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(student.Id));
-                PreparingDGVisitsRows(visit, $"{student.Surname} {student.Name}", key);
-                key++;
-            }
+                var visits = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(students[0].Id));
+                PreparingDGVisitsColumm(visits);
+                int key = 0;
+                foreach (var student in students)
+                {
+                    var visit = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(student.Id));
+                    PreparingDGVisitsRows(visit, $"{student.Surname} {student.Name}", key);
+                    key++;
+                }
 
-            DGVisits.ItemsSource = _dT.DefaultView;
+                DGVisits.ItemsSource = _dT.DefaultView;
+            }
         }
 
         private void PreparingDGVisitsRows(List<GetVisitsByStudentJA> ttt, string fullName, int key)
