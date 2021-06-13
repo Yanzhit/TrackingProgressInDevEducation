@@ -24,7 +24,7 @@
                 x:Name="TBCourseDescription" 
                      Margin="372,271,0,186" 
                      Text="Введите описание..." Background="White" />
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="0,436,0,0" Click="BCreateCurses_Click" HorizontalAlignment="Center"/>
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="0,436,0,0" Click="BCreateCurses_Click" HorizontalAlignment="Center" Height="40.2"/>
         </Grid>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>

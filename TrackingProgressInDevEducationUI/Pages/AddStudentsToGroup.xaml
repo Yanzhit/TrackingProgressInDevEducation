@@ -23,8 +23,8 @@
             Style="{StaticResource ButtonBackStyles}"
             x:Name="BBack" 
             Content="Назад" 
-            Margin="160,20,0,0" 
-            Click="BBack_Click"/>
+            Margin="163,16,0,0" 
+            Click="BBack_Click" Height="40"/>
         <Label x:Name="LPageName" Content="Добавление студентов в группу" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="484" Height="52" FontSize="30" FlowDirection="RightToLeft"/>
         <DataGrid 
             x:Name="dgStudents" Margin="10,74,10,10" SelectionChanged="dgStudents_SelectionChanged">
@@ -49,8 +49,8 @@
             Style="{StaticResource ButtonAddStyles}"
             x:Name="BAddStudentToGroup" 
             Content="Добавить" 
-            Margin="315,19,0,0" 
-            RenderTransformOrigin="1.649,0.632" Click="BAddStudentToGroup_Click"
+            Margin="315,16,0,0" 
+            RenderTransformOrigin="1.649,0.632" Click="BAddStudentToGroup_Click" Height="40"
         />
 
     </Grid>

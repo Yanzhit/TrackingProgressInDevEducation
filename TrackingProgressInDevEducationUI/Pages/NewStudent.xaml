@@ -23,7 +23,7 @@
 
             <Label x:Name="LBirthday" Content="Дата рождения*" HorizontalAlignment="Left" Height="34" Margin="193,375,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
 
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateStudent" Content="Создать" Margin="650,482,0,0" Click="BCreateStudent_Click" RenderTransformOrigin="0.532,-0.309"/>
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateStudent" Content="Создать" Margin="650,482,0,0" Click="BCreateStudent_Click" RenderTransformOrigin="0.532,-0.309" Height="40"/>
             <Label x:Name="LMiddleName" Content="Отчество*" HorizontalAlignment="Left" Height="36" Margin="193,134,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <Label x:Name="LCity" Content="Город" HorizontalAlignment="Left" Height="36" Margin="193,215,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <Label x:Name="LGit" Content="Git" HorizontalAlignment="Left" Height="34" Margin="193,336,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
