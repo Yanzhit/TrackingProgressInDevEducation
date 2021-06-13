@@ -14,15 +14,16 @@
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Label x:Name="LPageName" Content="Журнал: Группа С#-001" HorizontalAlignment="Right" Margin="0,23,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.732" Background="#00000000"/>
+        <Label x:Name="LPageName" Content="Журнал: Группа С#-001" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.732" Background="#00000000" FontSize="30" FlowDirection="RightToLeft"/>
         <TabControl x:Name="tabGroupJournal" Margin="10,67,10,10">
             <TabItem x:Name="TabAttendance" Header="Посещаемость">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="163*"/>
-                        <ColumnDefinition Width="611*"/>
+                        <ColumnDefinition Width="264*"/>
+                        <ColumnDefinition Width="239*"/>
+                        <ColumnDefinition Width="751*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="DGVisits" Grid.ColumnSpan="2">
+                    <DataGrid x:Name="DGVisits" Grid.ColumnSpan="3">
                     </DataGrid>
                 </Grid>
             </TabItem>
@@ -47,7 +48,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label x:Name="label" Content="Куда-то ещё нужно добавить среднее значение за тримместр на каждой вкладке" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Куда-то ещё нужно добавить среднее значение за тримместр на каждой вкладке" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

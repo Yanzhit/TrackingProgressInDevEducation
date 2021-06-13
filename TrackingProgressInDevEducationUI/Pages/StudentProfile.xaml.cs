@@ -59,5 +59,10 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             _contents.StudentRate();
         }
+
+        private void BBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
