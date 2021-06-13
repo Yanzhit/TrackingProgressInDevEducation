@@ -76,24 +76,31 @@ namespace TrackingProgressInDevEducationUI.Pages
             var tmp = true;
             if (FullNameInput.Text.Length is < FullNameCharMin or > FullNameCharMax)
             {
-                InfoText.Text += $"{ExcepFNameLength}{NewLine}";
+                InfoText.Text = $"{ExcepFNameLength}{NewLine}";
                 tmp = false;
             }
-            if(EmailInput.Text.Length is < EmailCharMin or > EmailCharMax)
+
+            if (LoginInput.Text.Length is < LoginCharMin or > LoginCharMax)
             {
-                InfoText.Text +=  $"{ExcepEmailLength}{NewLine}";
+                InfoText.Text = $"{ExcepFNameLength}{NewLine}";
+                tmp = false;
+            }
+
+            if (EmailInput.Text.Length is < EmailCharMin or > EmailCharMax)
+            {
+                InfoText.Text =  $"{ExcepEmailLength}{NewLine}";
                 tmp = false;
             }
 
             if (PasswordInput.Text.Length is < PasswordCharMin or > PasswordCharMax)
             {
-                InfoText.Text +=  $"{ExcepPasswordLength}{NewLine}";
+                InfoText.Text =  $"{ExcepPasswordLength}{NewLine}";
                 tmp = false;
             }
 
             if (PasswordInput.Text != PasswordRepeatInput.Text)
             {
-                InfoText.Text +=  $"{ExcepPasswordRepeat}{NewLine}";
+                InfoText.Text =  $"{ExcepPasswordRepeat}{NewLine}";
                 tmp = false;
             }
             return tmp;

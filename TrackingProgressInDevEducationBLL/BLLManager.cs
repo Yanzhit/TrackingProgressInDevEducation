@@ -63,7 +63,6 @@ namespace TrackingProgressInDevEducationBLL
         /// </summary>
         public NewStudentsA NewStudentA => new();
 
-
         /// <summary>
         /// Запрос со страниц NewStudent
         /// </summary>
@@ -74,7 +73,7 @@ namespace TrackingProgressInDevEducationBLL
         /// </summary>
         public NewStudentsA CityA => new();
 
-        // <summary>
+        /// <summary>
         /// Запрос со страниц Students
         /// </summary>
         public StudentsSA StudentsA => new();

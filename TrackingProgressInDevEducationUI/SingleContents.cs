@@ -111,7 +111,7 @@ namespace TrackingProgressInDevEducationUI
         public void Verification(int key, int id)
         {
             _verification = new Verification(key, id);
-            _verification.Show();
+            _verification.ShowDialog();
         }
         public void AddStudentsToGroup()
         {

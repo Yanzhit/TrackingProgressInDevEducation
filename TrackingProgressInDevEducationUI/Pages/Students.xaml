@@ -37,12 +37,12 @@
                 <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Рейтинг" Width="60"/>
                 <DataGridTextColumn Binding ="{Binding Path = Contract}" IsReadOnly="True" Header="Номер контракта" Width="100"/>
                 <DataGridTextColumn Binding ="{Binding Path = Status}" IsReadOnly="True" Header="Статус" Width="60"/>
-            </DataGrid.Columns>-->
+            </DataGrid.Columns>
 
-            <!--<DataGrid.ItemsSource>
+
+                <!--<DataGrid.ItemsSource>
                 <SqlClient:SqlConnectionStringBuilder/>
             </DataGrid.ItemsSource>-->
-
         </DataGrid>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>

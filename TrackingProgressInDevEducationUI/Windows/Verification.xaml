@@ -6,16 +6,34 @@
         xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Windows"
         mc:Ignorable="d"
         Title="" Height="250" Width="350">
-    <Grid Margin="0,0,0,0" HorizontalAlignment="Center" Width="350" Background="#FF44B6BB">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Center" Width="350">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF105331"/>
+                <GradientStop Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="250*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Check" Content="Подтвердить" Grid.Column="1" HorizontalAlignment="Left" Margin="214,154,0,0" VerticalAlignment="Top" Width="105" Height="50" Click="Check_Click"/>
-        <TextBox x:Name="InputKey" Grid.Column="1" HorizontalAlignment="Center" Margin="0,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="51" MaxLines="1" MaxLength="4" FontSize="20" FontWeight="Bold"/>
-        <Button Content="Запросить&#xD;&#xA;повторно" Grid.Column="1" HorizontalAlignment="Left" Margin="44,154,0,0" VerticalAlignment="Top" Width="105" Height="50" Click="Button_Click"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="48,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" Text="Не пришел код?" IsReadOnly="True"/>
-        <TextBox x:Name="Info" Grid.Column="1" HorizontalAlignment="Center" Height="31" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" IsReadOnly="True" Background="#FF44B6BB"/>
+        <Button x:Name="Check" Content="Подтвердить" Grid.Column="1" HorizontalAlignment="Left" Margin="214,154,0,0" VerticalAlignment="Top" Width="105" Height="50" Click="Check_Click" Style="{DynamicResource OtherButtonStyles}">
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="InputKey" Grid.Column="1" HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="51" MaxLines="1" MaxLength="4" FontSize="36" FontWeight="Bold" Style="{DynamicResource LittleTextBoxStyles}">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="Запросить&#xD;&#xA;повторно" Grid.Column="1" HorizontalAlignment="Left" Margin="44,154,0,0" VerticalAlignment="Top" Width="105" Height="50" Click="Button_Click" Style="{DynamicResource OtherButtonStyles}">
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"/>
+            </Button.Background>
+        </Button>
+        <TextBox Grid.Column="1" Margin="48,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" Text="Не пришел код?" IsReadOnly="True" Style="{DynamicResource LittleTextBoxStyles}" Background="{x:Null}"/>
+        <TextBox x:Name="Info" Grid.Column="1" HorizontalAlignment="Center" Height="38" Margin="0,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" IsReadOnly="True" Style="{DynamicResource LittleTextBoxStyles}" Background="{x:Null}"/>
 
     </Grid>
 </Window>

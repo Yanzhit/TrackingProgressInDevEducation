@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationDAL.Tests
 {
@@ -175,7 +176,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<GetAllStudentsJ> students = manager.DStudents.Students;
             foreach (var student in students)
             {
-                _manager.Students.SetNewStudent(student);
+               // _manager.Students.SetNewStudent(student);
             }
         }
         private void FillingTeams(ManagerMocks manager)

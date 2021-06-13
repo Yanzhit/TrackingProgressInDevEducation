@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrackingProgressInDevEducationUI"
-        mc:Ignorable="d" Height="450" Width="800" Title="EducationCore" Icon="/Resourses/Images/BackGroundMain.jpg">
+        mc:Ignorable="d" Height="720" Title="EducationCore" Icon="/Resourses/Images/BackGroundMain.jpg" Width="1280" MinWidth="1280" MinHeight="720" MaxWidth="1280" MaxHeight="720" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
     <Window.Background>
         <ImageBrush ImageSource="Resourses/Images/BackGroundMain.jpg"/>
     </Window.Background>

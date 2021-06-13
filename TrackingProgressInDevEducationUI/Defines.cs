@@ -35,10 +35,12 @@
         public const string VerificationText = "Укажите проверочный код, отправленый на почту в окошно ниже";
 
         public const int EmailCharMin = 6;
-        public const int EmailCharMax = 30;
+        public const int EmailCharMax = 50;
         public const int PasswordCharMin = 3;
         public const int PasswordCharMax = 12;
         public const int FullNameCharMin = 6;
-        public const int FullNameCharMax = 25;
+        public const int FullNameCharMax = 110;
+        public const int LoginCharMin = 3;
+        public const int LoginCharMax = 25;
     }
 }
