@@ -16,19 +16,36 @@
                 <GradientStop Color="#FF7EB253" Offset="0.084"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Style="{StaticResource OtherButtonStyles}" Content="Вход" Margin="493,332,0,0" Click="SignIn_Click" Height="28" Width="148"/>
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Login" Margin="400,194,0,496" TextAlignment="Center" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
-        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Password" Margin="398,266,0,424" TextAlignment="Center" />
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="428,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Логин"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="420,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
-        <Button Style="{StaticResource ButtonCreatStyles}" Content="Регистрация" Margin="493,412,0,0" Click="Registration_Click" />
-        <TextBlock HorizontalAlignment="Left" Margin="501,385,0,0" TextWrapping="Wrap" Width="124" Height="22" VerticalAlignment="Top"><Run Language="ru-ru" Text="Новый пользователь?"/></TextBlock>
-        <TextBlock x:Name="Info" HorizontalAlignment="Center" Height="41" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Информационное окно"/></TextBlock>
-        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click" Margin="51,30,0,0">
+        <Button Style="{StaticResource OtherButtonStyles}" Content="Вход" Margin="0,340,0,0" Click="SignIn_Click" Height="28" Width="148" HorizontalAlignment="Center"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Login" Margin="0,200,0,490" TextAlignment="Center" FontWeight="Normal" TextWrapping="Wrap" HorizontalAlignment="Center" />
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="Password" Margin="0,252,0,438" TextAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="18"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Center" Height="22" Margin="0,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Height="22" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="18"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+        <Button Style="{StaticResource ButtonCreatStyles}" Content="Регистрация" Margin="0,418,0,0" Click="Registration_Click" HorizontalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,391,0,0" TextWrapping="Wrap" Width="124" Height="22" VerticalAlignment="Top"><Run Language="ru-ru" Text="Новый пользователь?"/></TextBlock>
+        <TextBlock x:Name="Info" HorizontalAlignment="Center" Height="86" Margin="0,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294"><Run Language="ru-ru" Text="Информационное окно"/></TextBlock>
+        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click" Margin="10,10,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource OtherButtonStyles}" Content="DevMenu" Height="33" Margin="1024,30,0,0" Width="142" Click="Button_Click"/>
+        <Button Style="{StaticResource OtherButtonStyles}" Content="DevMenu" Height="33" Margin="1128,10,0,0" Width="142" Click="Button_Click"/>
     </Grid>
 </Page>

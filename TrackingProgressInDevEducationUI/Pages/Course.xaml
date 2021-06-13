@@ -9,22 +9,22 @@
       Title="Course">
 
     <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,0,0">
-        <Label x:Name="LPageName" Content="Создание нового курса" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="352" FontSize="30" Margin="0,10,0,0"/>
-        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="619" Margin="0,71,0,0" VerticalAlignment="Top" Width="880" Background="#FFF9EFEF">
-            <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="51" Margin="36,22,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
-            <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="57" Margin="36,201,0,0" VerticalAlignment="Top" Width="223" FontSize="28"/>
+        <Label x:Name="LPageName" Content="Создание нового курса" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="352" FontSize="30" Margin="918,10,0,0"/>
+        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="542" Margin="0,122,0,0" VerticalAlignment="Top" Width="1084" Background="#FFF9EFEF">
+            <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="52" Margin="143,105,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
+            <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="44" Margin="143,292,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
             <TextBox 
                      Style="{StaticResource BigTextBoxStyles}"
                      x:Name="TBNameCurses" 
-                     Margin="264,22,56,512" 
-                     Text="Введите название..." TextChanged="TBNameCurses_TextChanged"
+                     Margin="372,88,0,368" 
+                     Text="Введите название..." TextChanged="TBNameCurses_TextChanged" Background="White"
             />
             <TextBox 
                 Style="{StaticResource BigTextBoxStyles}"
                 x:Name="TBCourseDescription" 
-                     Margin="264,187,0,347" 
-                     Text="Введите описание..." />
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="0,356,0,0" Click="BCreateCurses_Click" HorizontalAlignment="Center"/>
+                     Margin="372,271,0,186" 
+                     Text="Введите описание..." Background="White" />
+            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="0,436,0,0" Click="BCreateCurses_Click" HorizontalAlignment="Center"/>
         </Grid>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
             <Button.Background>
