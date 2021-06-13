@@ -40,11 +40,13 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             return this;
         }
 
-        public QComment SetCommentToTeam()
+        public QComment SetCommentToTeam(Comment comment)
         {
             QueryType = typeof(Setter);
             Name = nameof(SetCommentToTeam);
-            Params = $"";
+            Params = $"{SepStr}{comment.Text}{SepMid}{comment.TypeId}{SepMid}" +
+                     $"{comment.CreatedBy}{SepMid}{comment.TeamId}{SepMid}" +
+                     $"{comment.Estimation}{SepEnd}";
             return this;
         }
 

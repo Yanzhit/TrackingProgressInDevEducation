@@ -19,5 +19,11 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
             WriteTypes(new Comments().GetCommentsByStudent());
             return (IEnumerable<GetCommentsByStudentA>)GetModelBaseSeveral(model);
         }
+
+        public SetCommentsToTeamA SetCommentToTeam(Comment model)
+        {
+            WriteTypes(new Comments().SetCommentToTeam());
+            return (SetCommentsToTeamA)GetModelBaseSingle(model);
+        }
     }
 }
