@@ -106,7 +106,6 @@
     <Build Include="TrackingProgressInDevEducationDB\Tables\HomeworkComplete.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Teams\SetNewTeam.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\SetNewStudent.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\SetNewGroup.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Homeworks\SetNewHW.sql" />
     <Build Include="SQLHelper.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\SetNewLector.sql" />
@@ -117,7 +116,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Tables\Cities.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Tables\Lector_Courses.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Security\Schemas\TrackingProgressInDevEducationDB.sql" />
-    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetAllStudents.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\GetAllStudentsJ.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Students\SetNewStudent.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\GetAllCities.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Cities\NullifyCities.sql" />
@@ -249,6 +248,7 @@
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Lectors\UpdEmailLectors.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Groups\GetGroups.sql" />
     <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\GetAllCoursesByGroup.sql" />
+    <Build Include="TrackingProgressInDevEducationDB\Stored Procedures\Join\SetNewGroupJ.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackingProgressInDevEducationDB.refactorlog" />

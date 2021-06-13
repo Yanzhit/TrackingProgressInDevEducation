@@ -1,20 +1,21 @@
-﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllStudents] @Status BIT
+﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[GetAllStudentsJ] @Status BIT
 AS
+	IF @Status = '' SET @Status = 1
 	SELECT 	
 		 S.[id]
-		,S.[Name]
+		,S.[Name] [NameS]
 		,[Surname]
 		,[Rate]
-		,G.[Name]
+		,G.[Name] [NameG]
 		,[Phone]
 		,[Email]
 		,[Contract]
 		,[Birthday]
 		,[MiddleName]
 		,[Git]
-		,C.[Name]
+		,C.[Name] [NameC]
 		,[Status]
-		,Cr.[Name]
+		,Cr.[Name] [NameCr]
 
 	FROM [Students] S
 	LEFT JOIN [TrackingProgressInDevEducationDB].[Groups] G ON G.ID = S.GroupId

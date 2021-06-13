@@ -3,7 +3,7 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using static TrackingProgressInDevEducationDAL.Defines;
-//ZLoo (Свойства все, Методы(SetNewGroup, NullifyGroups)
+//ZLoo (Свойства все, Методы(SetNewGroupJ, NullifyGroups)
 namespace TrackingProgressInDevEducationDAL.Requests.Tables
 {
     /// <summary>
@@ -16,18 +16,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        /// <summary>
-        /// Создание новой группы
-        /// </summary>
-        /// <param name="group">Объект данных</param>
-        /// <returns>Подготовленный запрос</returns>
-        public QGroup SetNewGroup(Group group)
-        {
-            QueryType = typeof(Setter);
-            Name = nameof(SetNewGroup);
-            Params = $"{SepStr}{group.Name}{SepMid}{group.CourseId}{SepMid}{group.StartDate}{SepMid}{group.EndDate}{SepEnd}";
-            return this;
-        }
+       
 
        
 

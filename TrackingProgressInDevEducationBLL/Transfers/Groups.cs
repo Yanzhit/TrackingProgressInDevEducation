@@ -1,5 +1,6 @@
 ﻿using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Transfers
 {
@@ -8,7 +9,7 @@ namespace TrackingProgressInDevEducationBLL.Transfers
         public Groups SetNewGroup()
         {
             Query = typeof(SetGroupQ);
-            Base = typeof(Group);
+            Base = typeof(SetNewGroupJ);
             Answer = typeof(SetGroupA);
             return this;
         }

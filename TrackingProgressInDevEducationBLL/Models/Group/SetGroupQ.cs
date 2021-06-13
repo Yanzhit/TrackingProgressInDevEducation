@@ -9,43 +9,16 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
     /// </summary>
     public class SetGroupQ : ADTOQuery
     {
-        /// <summary>
-        /// Имя группы 
-        /// </summary>
         public string Name { get; set; }
-        /// <summary>
-        /// ID Курса 
-        /// </summary>
+        public int? GroupId { get; set; }
+        public int LectorId { get; set; }
         public int CourseId { get; set; }
-        /// <summary>
-        /// Дата началы курса
-        /// </summary>
         public string StartDate { get; set; }
-        /// <summary>
-        /// Дата окончания курса
-        /// </summary>
         public string EndDate { get; set; }
-       
-        /// <summary>
-        /// Конструктор по умолчанию
-        /// </summary>
+
         public SetGroupQ()
         {
 
-        }
-        /// <summary>
-        /// Конструктор для данного запроса
-        /// </summary>
-        /// <param name="nameGroup">название группы </param>
-        /// <param name="courseId">id группы</param>
-        /// <param name="dataStartCousrses">дата начала курса</param>
-        /// <param name="dataEndCousrses">дата окончания курса</param>
-        public SetGroupQ(string name, int courseId, string startDate, string endDate)
-        {
-            Name = name;
-            CourseId = courseId;
-            StartDate = startDate;
-            EndDate = endDate;
         }
 
         public override bool Equals(object obj)

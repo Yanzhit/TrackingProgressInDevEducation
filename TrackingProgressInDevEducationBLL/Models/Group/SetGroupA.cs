@@ -9,6 +9,8 @@ namespace TrackingProgressInDevEducationBLL.Models.Group
     /// </summary>
     public class SetGroupA : ADTOAnswer
     {
+        public int? GroupId { get; set; } 
+        public int? LectorId { get; set; }
         public string Name { get; set; }
         public int CourseId { get; set; }
         public string StartDate { get; set; }

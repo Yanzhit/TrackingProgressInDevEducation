@@ -47,6 +47,14 @@
         public const string AddStudentToGroupT = "Добавление нового студента";
         public const int AddStudentToGroupW = 400;
         public const int AddStudentToGroupH = 400;
+        
+        public const string NewGroupT = "Добавление новой группы";
+        public const int NewGroupW = 750;
+        public const int NewGroupH = 450;
+        
+        public const string StudentToTeamT = "Добавление новой команды";
+        public const int StudentToTeamW = 400;
+        public const int StudentToTeamH = 400;
 
 
     }

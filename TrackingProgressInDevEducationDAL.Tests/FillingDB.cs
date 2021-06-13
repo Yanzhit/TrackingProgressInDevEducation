@@ -105,7 +105,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
             List<Group> groups = manager.DGroups.Groups;
             foreach (var group in groups)
             {
-                _manager.Groups.SetNewGroup(group);
+              //  _manager.Joins.SetNewGroupJ(group);
             }
         }
         private void FillingHWComplete(ManagerMocks manager)

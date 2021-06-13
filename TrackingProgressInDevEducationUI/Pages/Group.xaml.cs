@@ -28,9 +28,17 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)
         {
-            OperationLogics operation = new OperationLogics();
-            var setNewGroup = operation.SetNewGroup(new SetGroupQ(TBGroupName.Text, CBChangeCourse.SelectedIndex+1, DPStartDate.Text, DPEndDate.Text));
-            MessageBox.Show("Группа"+" "+ TBGroupName.Text+" Созданна!");
+            _contents.NewGroup = _contents.OperationLogics.SetNewGroup(new SetGroupQ()
+            {
+                GroupId = null,
+                LectorId = _contents.Lector.Id,
+                CourseId = CBChangeCourse.SelectedIndex + 1,
+                Name = TBGroupName.Text,
+                StartDate = DPStartDate.Text,
+                EndDate = DPEndDate.Text
+            });
+
+            _contents.CloseAdditionalWindows();
         }
 
         private void CBChangeCourse_SelectionChanged(object sender, SelectionChangedEventArgs e)
