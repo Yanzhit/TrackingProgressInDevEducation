@@ -16,10 +16,18 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
                     Email = "q1@ya.ru", FullName = "Rio", Id = 3,
                     IsActivated = true, Login = "Mob", Password = "Draco"
                 },
-                new GetLectorA("Mob", 3, "q1@ya.ru", "Rio", true)
+                new GetLectorA("Mob", 3, "q1qwe@ya.ru", "Rio", true)
             };
-
-            //yield return new object[] { new QLector(), 1 };
+            yield return new object[]
+            {
+                new GetLectorQ("Web", "Draco"),
+                new Lector
+                {
+                    Email = "q1qwe@ya.ru", FullName = "Blue Red Black", Id = 8,
+                    IsActivated = false, Login = "Web", Password = "Draco"
+                },
+                new GetLectorA("Web", 8, "q1qwe@ya.ru", "Blue Red Black", false)
+            };
         }
     }
 }

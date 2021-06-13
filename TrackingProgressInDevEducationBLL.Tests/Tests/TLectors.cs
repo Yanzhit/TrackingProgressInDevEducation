@@ -20,7 +20,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         }
 
         [TestCaseSource(typeof(ELectors), nameof(ELectors.GetLectorByLoginAndPassword))]
-        public void Qqq(GetLectorQ query, Lector expectedA, GetLectorA expected)
+        public void GetLectorByLoginAndPasswor(GetLectorQ query, Lector expectedA, GetLectorA expected)
         {
             var model = (Lector) BLLManager.SignInsQ.GetLectorByLoginAndPassword(query);
 
