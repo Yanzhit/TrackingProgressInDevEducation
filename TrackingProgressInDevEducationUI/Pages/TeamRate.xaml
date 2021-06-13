@@ -17,17 +17,17 @@
         <Label x:Name="LPageName" Content="Оценка команды" HorizontalAlignment="Right" Margin="0,14,10,0" VerticalAlignment="Top" Width="154" Height="44" FontSize="18"/>
         <Button Style="{StaticResource ButtonBackStyles}" x:Name="BBack" Content="Назад" Margin="166,22,0,0" Click="BBack_Click"/>
         <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="589" Margin="0,71,0,0" VerticalAlignment="Top" Width="1056" Background="#FFF9EFEF">
-            <Button x:Name="BCreateCurses" Content="Создать курс" HorizontalAlignment="Left" Height="38" Margin="645,471,0,0" VerticalAlignment="Top" Width="388" FontSize="20" Background="#FFE1909F"/>
-            <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="12,0,0,476" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
-            <Label x:Name="LHardSkills" Content="Hard Skills" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBSoftSkills" HorizontalAlignment="Left" Margin="10,0,0,353" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
-            <Label x:Name="LSoftSkills" Content="Soft Skills" HorizontalAlignment="Left" Margin="258,118,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="12,0,0,229" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
-            <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="258,236,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="LRate" Content="Rate" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,283" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
-            <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="645,0,0,165" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
-            <TextBox x:Name="TBCommonRate" HorizontalAlignment="Left" Margin="645,0,0,47" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28"/>
+            <Button x:Name="BAddComentToTeam" Content="Добавить" HorizontalAlignment="Left" Height="38" Margin="750,479,0,0" VerticalAlignment="Top" Width="192" FontSize="20" Background="#FFE1909F" Click="BAddComentToTeam_Click"/>
+            <TextBox x:Name="TBHardSkills" HorizontalAlignment="Left" Margin="60,31,0,476" TextWrapping="Wrap" Width="558"/>
+            <Label x:Name="LHardSkills" Content="Hard Skills" HorizontalAlignment="Left" Margin="306,0,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBSoftSkills" HorizontalAlignment="Left" Margin="58,0,0,353" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <Label x:Name="LSoftSkills" Content="Soft Skills" HorizontalAlignment="Left" Margin="306,118,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBCommon" HorizontalAlignment="Left" Margin="60,0,0,229" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="558" Height="82"/>
+            <Label x:Name="LCommon" Content="Common" HorizontalAlignment="Left" Margin="306,236,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="LRate" Content="Rate" HorizontalAlignment="Left" Margin="829,0,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBHardSkillsRate" HorizontalAlignment="Left" Margin="817,0,0,503" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28" MaxLength="3"/>
+            <TextBox x:Name="TBSoftSkillsRate" HorizontalAlignment="Left" Margin="817,0,0,385" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28" MaxLength="3"/>
+            <TextBox x:Name="TBCommonRate" HorizontalAlignment="Left" Margin="817,0,0,267" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" Height="28" MaxLength="3"/>
         </Grid>
 
     </Grid>

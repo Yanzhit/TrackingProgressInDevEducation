@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using TrackingProgressInDevEducationBLL;
+using TrackingProgressInDevEducationBLL.Models.Comment;
 
 namespace TrackingProgressInDevEducationUI.Pages
 {
@@ -34,6 +25,20 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void BBack_Click(object sender, RoutedEventArgs e)
         {
             _contents.TeamInfo();
+        }
+
+        private void BAddComentToTeam_Click(object sender, RoutedEventArgs e)
+        {
+            OperationLogics operation = new OperationLogics();
+            var setNewComment = operation.SetCommentToTeam(new SetCommentsToTeamQ(TBHardSkills.Text, 1, 3, 1, Convert.ToInt32(TBHardSkillsRate.Text)));
+
+            // !!!  необходимо получить из другой страницы TypeId,  createdBy
+            //      Запрос для TBSoftSkills
+            //  var setNewComment = operation.SetCommentToTeam(new SetCommentsToTeamQ(TBSoftSkills.Text, 1, 3, 1, Convert.ToInt32(TBSoftSkillsRate.Text)));
+            //      Запрос для TTBCommon
+            //  var setNewComment = operation.SetCommentToTeam(new SetCommentsToTeamQ(TBCommon.Text, 1, 3, 1, Convert.ToInt32(TBCommonRate.Text)));
+
+            MessageBox.Show("Комментарий добавлен");
         }
     }
 }

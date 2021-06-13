@@ -26,10 +26,15 @@ namespace TrackingProgressInDevEducationDAL.Facades
             return (Comment)Manager.Setter.Single(_query.SetNewCommentToStudent(comment));
         }
 
-        public IEnumerable<Comment> SetCommentToTeam()
+        public Comment SetCommentToTeam(Comment comment)
         {
-            return (List<Comment>)Manager.Setter.Several(_query.SetCommentToTeam());
+            return (Comment)Manager.Setter.Single(_query.SetCommentToTeam(comment));
         }
+
+        //public IEnumerable<Comment> SetCommentToTeam()
+        //{
+        //    return (List<Comment>)Manager.Setter.Several(_query.SetCommentToTeam());
+        //}
 
         public IEnumerable<Comment> GetCommentsByStudent(Comment comment)
         {

@@ -17,8 +17,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         public StudentRate()
         {
             InitializeComponent();
-        }
-        
+        }        
 
         private void Logo_Click(object sender, RoutedEventArgs e)
         {
@@ -29,9 +28,11 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             OperationLogics operation = new OperationLogics();
             var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBHardSkills.Text, 1,  10 , 3, Convert.ToInt32(TBHardSkillsRate.Text)));
-            
+
             // !!!  необходимо получить из другой страницы studentId,  createdBy
+            //      Запрос для TBSoftSkills
             //var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBSoftSkills.Text, 2, 10, 3, Convert.ToInt32(TBSoftSkillsRate.Text)));
+            //      Запрос для TTBCommon
             //var setNewComment = operation.SetNewCommentToStudent(new SetCommentsQ(TBCommon.Text, 3,  10 , 3, Convert.ToInt32(TBCommonRate.Text)));
 
             MessageBox.Show("Комментарий добавлен");

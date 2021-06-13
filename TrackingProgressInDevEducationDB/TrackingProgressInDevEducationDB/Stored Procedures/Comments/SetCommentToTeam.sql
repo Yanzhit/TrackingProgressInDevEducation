@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [TrackingProgressInDevEducationDB].[SetCommentToTeam]
-	@TeamId int,
 	@Text nvarchar (250),
-	@CommentType int,
-	@Lector int,
+	@TypeId int,
+	@CreatedBy int,
+	@TeamId int,
 	@Estimation int
 AS
-	INSERT Comments ([Text], TeamId, TypeId, CreatedBy, CommentFor, Estimation)
-	OUTPUT INSERTED.id, INSERTED.TeamId, INSERTED.TypeId, INSERTED.CreatedBy, INSERTED.CommentFor, INSERTED.Estimation
-	VALUES (@Text, @TeamId, @CommentType, @Lector, 1, @Estimation)
+	INSERT Comments ([Text], TypeId, CreatedBy, TeamId, CommentFor, Estimation)
+    OUTPUT INSERTED.id, INSERTED.[Text], INSERTED.TypeId, INSERTED.CreatedBy, INSERTED.TeamId, INSERTED.CommentFor, INSERTED.Estimation 
+	VALUES (@Text, @TypeId, @CreatedBy, @TeamId, 1, @Estimation)
