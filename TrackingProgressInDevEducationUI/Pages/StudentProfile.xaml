@@ -25,7 +25,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="GetCommentsByStudentA"  FontSize="16" 
+                    <DataGrid x:Name="GetCommentsByStudentA" FontSize="16" 
                               AutoGenerateColumns="False" CanUserAddRows ="False" 
                               CanUserDeleteRows="False"
                               Background="White" HorizontalAlignment="Left" 

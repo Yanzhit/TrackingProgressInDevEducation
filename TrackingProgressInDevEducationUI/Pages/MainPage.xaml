@@ -8,7 +8,7 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="MainPage">
 
-    <Grid Background ="#91D4D1" Margin="0,0,0,0">
+    <Grid Background ="#FFDED4D4" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -22,7 +22,9 @@
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button  Style="{StaticResource LogoStyles}" x:Name="Logo">
+        <Grid HorizontalAlignment="Left" Margin="40,43,0,10"  Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49" Width="1196" Grid.ColumnSpan="5" Grid.RowSpan="3" Grid.Row="1"/>
+
+        <Button  Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
             </Button.Background>
@@ -31,32 +33,32 @@
         <Button 
             Style="{StaticResource OtherButtonStyles}"
             Content="Студенты колледжа" 
-            Click="Button_Click_Student" Grid.ColumnSpan="2" Margin="100,10,0,0" Grid.Row="1" Grid.Column="1" Width="162" 
+            Click="Button_Click_Student" Grid.Row="1" Grid.Column="1" Width="162" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
         />
 
         <Button 
             Style="{StaticResource ButtonCreatStyles}"
-            Content="Создать группу" Click="Button_Click_CreateGroups" Grid.Column="4" Grid.Row="2" 
-            Margin="0,30,0,0" 
+            Content="Создать группу" Click="Button_Click_CreateGroups" Grid.Column="3" Grid.Row="1" 
+            Margin="100,59,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" 
         />
 
         <Button Style="{StaticResource ButtonCreatStyles}"
-                Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="4" Grid.Row="3" 
-                Margin="0,30,0,30" 
+                Content="Создать команду" Click="Button_Click_CreateTeam" Grid.Column="3" Grid.Row="3" 
+                Margin="100,10,0,0" Grid.ColumnSpan="2" 
         />
         <DataGrid x:Name="GetGroupsByLectorA" Width="Auto"  FontSize="16" 
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="5,5,0,0"
-                  Grid.ColumnSpan="4" Grid.Row="2">
-        
+                  VerticalAlignment="Top" Margin="54,59,0,0"
+                  Grid.ColumnSpan="4" Grid.Row="1">
+
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = NameG}"  IsReadOnly="True" Header="Группа" Width="200"/>
-                <DataGridTextColumn Binding ="{Binding Path = NameC}"  IsReadOnly="True" Header="Курс" Width="200"/>
-                <DataGridTextColumn Binding ="{Binding Path = StartDate}" IsReadOnly="True" Header="Дата начала" Width="200" />
-                <DataGridTextColumn Binding ="{Binding Path = EndDate}" IsReadOnly="True" Header="Дата окончания" Width="200"/>
-                <DataGridTextColumn Binding ="{Binding Path = StudCount}" IsReadOnly="True" Header="Кол-во студентов" Width="150"/>
+                <DataGridTextColumn Binding ="{Binding NameG}"  IsReadOnly="True" Header="Группа" Width="200"/>
+                <DataGridTextColumn Binding ="{Binding NameC}"  IsReadOnly="True" Header="Курс" Width="200"/>
+                <DataGridTextColumn Binding ="{Binding StartDate}" IsReadOnly="True" Header="Дата начала" Width="200" />
+                <DataGridTextColumn Binding ="{Binding EndDate}" IsReadOnly="True" Header="Дата окончания" Width="200"/>
+                <DataGridTextColumn Binding ="{Binding StudCount}" IsReadOnly="True" Header="Кол-во студентов" Width="150"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -71,17 +73,18 @@
                   AutoGenerateColumns="False" CanUserAddRows ="False" 
                   CanUserDeleteRows="False"
                   Background="White" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top" Margin="5,5,0,0"
+                  VerticalAlignment="Top" Margin="54,10,0,0"
                   Grid.ColumnSpan="4" Grid.Row="3">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Binding ="{Binding Path = Name}"  IsReadOnly="True" Header="Команда" Width="400"/>
-                <DataGridTextColumn Binding ="{Binding Path = From}" IsReadOnly="True" Header="Дата начала" Width="250"/>
-                <DataGridTextColumn Binding ="{Binding Path = To}" IsReadOnly="True" Header="Дата окончания" Width="250" />
-                <DataGridTextColumn Binding ="{Binding Path = StudentCount}" IsReadOnly="True" Header="Кол-во студентов" Width="200"/>
+                <DataGridTextColumn Binding ="{Binding Name}"  IsReadOnly="True" Header="Команда" Width="250
+                                    "/>
+                <DataGridTextColumn Binding ="{Binding From}" IsReadOnly="True" Header="Дата начала" Width="250"/>
+                <DataGridTextColumn Binding ="{Binding To}" IsReadOnly="True" Header="Дата окончания" Width="250" />
+                <DataGridTextColumn Binding ="{Binding StudentCount}" IsReadOnly="True" Header="Кол-во студентов" Width="200"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="WelcomeBlock" Content="u" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="36" Margin="31,5,0,0" VerticalAlignment="Top" Width="359" Click="WelcomeBlock_Click"/>
+        <Button x:Name="WelcomeBlock" Content="u" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" Height="36" Margin="0,18,0,0" VerticalAlignment="Top" Width="360" Click="WelcomeBlock_Click"/>
 
     </Grid>
 </Page>
