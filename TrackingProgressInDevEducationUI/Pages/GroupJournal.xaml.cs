@@ -14,6 +14,7 @@ namespace TrackingProgressInDevEducationUI.Pages
     /// </summary>
     public partial class GroupJournal : Page
     {
+        private Dictionary<string, int> _dictionary = new();
         private DataTable _dT;
         private readonly OperationLogics _operation = new();
         private readonly SingleContents _contents = SingleContents.GetContent();
@@ -35,23 +36,25 @@ namespace TrackingProgressInDevEducationUI.Pages
             List<GetAllStudentsByGroupA> students = WriteDGridStudents(id);
             var visits = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(students[0].Id));
             PreparingDGVisitsColumm(visits);
-
+            int key = 0;
             foreach (var student in students)
             {
                 var visit = _operation.GetVisitsByStudentJ(new GetVisitsByStudentJQ(student.Id));
-                PreparingDGVisitsRows(visit, $"{student.Surname} {student.Name}");
+                PreparingDGVisitsRows(visit, $"{student.Surname} {student.Name}", key);
+                key++;
             }
 
             DGVisits.ItemsSource = _dT.DefaultView;
         }
 
-        private void PreparingDGVisitsRows(List<GetVisitsByStudentJA> ttt, string fullName)
+        private void PreparingDGVisitsRows(List<GetVisitsByStudentJA> ttt, string fullName, int key)
         {
             DataRow name = _dT.NewRow();
             name[0] = fullName;
             for (var i = 1; i <= ttt.Count; i++)
             {
-                name[i] = ttt[i-1].VisitStatus;
+                name[i] = ttt[i - 1].VisitStatus;
+                _dictionary.Add($"{key}x{i}", ttt[i - 1].Id);
             }
             _dT.Rows.Add(name);
         }
@@ -71,9 +74,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private List<GetAllStudentsByGroupA> WriteDGridStudents(int id)
         {
-            var student = _operation.GetAllStudentsByGroup(new GetAllStudentsByGroupQ(id));
-            //DGStudents.ItemsSource = student;
-            return student;
+            return _operation.GetAllStudentsByGroup(new GetAllStudentsByGroupQ(id));
         }
 
 
@@ -82,5 +83,10 @@ namespace TrackingProgressInDevEducationUI.Pages
             _contents.MainPage();
         }
 
+        private void DGVisits_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DataGrid dg = (DataGrid)sender;
+            var id = _dictionary[$"{dg.SelectedIndex}x{dg.CurrentCell.Column.DisplayIndex}"];
+        }
     }
 }

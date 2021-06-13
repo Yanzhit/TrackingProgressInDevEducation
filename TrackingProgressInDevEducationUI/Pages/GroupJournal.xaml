@@ -19,9 +19,10 @@
             <TabItem x:Name="TabAttendance" Header="Посещаемость">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="104*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="DGVisits" HorizontalAlignment="Center" Height="345" VerticalAlignment="Center" Width="754"/>
+                    <DataGrid x:Name="DGVisits" HorizontalAlignment="Left" Height="325" VerticalAlignment="Center" Width="754" Grid.ColumnSpan="2" Margin="10,0,0,0" MouseLeftButtonDown="DGVisits_MouseLeftButtonDown"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="TabHomeworks" Header="Домашние задания
@@ -44,7 +45,6 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <DataGrid Height="301" Width="329"/>
         </TabControl>
         <Label x:Name="label" Content="Куда-то ещё нужно добавить среднее значение за тримместр на каждой вкладке" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top"/>
 
