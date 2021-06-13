@@ -140,8 +140,8 @@ namespace TrackingProgressInDevEducationBLL
 
         public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)
         {
-            var model = (Student)_bllManager.StudentsSQ.GetAllStudents(emptyQ);
-            IEnumerable<Student> modelReturned = _dalManager.Students.GetAllStudents();
+            var model = (GetAllStudentsJ)_bllManager.StudentsSQ.GetAllStudents(emptyQ);
+            IEnumerable<GetAllStudentsJ> modelReturned = _dalManager.Students.GetAllStudents();
             return (List<GetAllStudentsA>)_bllManager.StudentsSA.GetAllStudents(modelReturned);
         }
 

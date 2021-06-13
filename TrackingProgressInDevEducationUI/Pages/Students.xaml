@@ -11,46 +11,37 @@
 
     <Grid x:Name="Grid" Background="#FFDCD2D2" Margin="0,0,-551,-270" HorizontalAlignment="Right" Width="1338">
         <Label x:Name="LNamePage" Content="Студенты колледжа" HorizontalAlignment="Center" Height="52" Margin="0,4,0,0" VerticalAlignment="Top" Width="308" FontSize="30" RenderTransformOrigin="1.094,0.486"/>
+        <!--<DataGrid x:Name="GetAllStudentsByGroupA" Width="437"  FontSize="16" 
+                  AutoGenerateColumns="True" CanUserAddRows ="False" 
+                  CanUserDeleteRows="False"
+                  Background="White" HorizontalAlignment="Center" 
+                  VerticalAlignment="Top" Margin="0,120,0,0" SelectionChanged="GetAllStudentsByGroupA_SelectionChanged">-->
+        <DataGrid x:Name="DGStudent" AutoGenerateColumns="True" CanUserAddRows ="False" 
+                  CanUserDeleteRows="False" Margin="10,67,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True"
+                  SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
         <Button Style="{StaticResource ButtonAddStyles}" x:Name="BAddStudent" Content="Добавить студента" Margin="1098,22,0,0" Click="BAddStudent_Click"/>
-        <DataGrid x:Name="DGStudent" Margin="10,67,10,10" BorderBrush="#FFF0F0F0" IsSynchronizedWithCurrentItem="True" SelectionChanged="StudentGrid_SelectionChanged" AlternatingRowBackground="#FFA08E8E">
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
-            <!--public string Name { get; set; }
-        public string Surname { get; set; }
-        public int? Rate { get; set; }
-        public int? GroupId { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Contract { get; set; }
-        public string Birthday { get; set; }
-        public string MiddleName { get; set; }
-        public string Git { get; set; }
-        public int? CityId { get; set; }
-        public bool? Status { get; set; }-->
-            <!--<DataGrid.Columns>
-                 DataGridTextColumn Binding ="{Binding Path = Surname}"  IsReadOnly="True" Header="Surname" Width="125"/>
-                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Name" Width="135"/>
-                <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Git" Width="125" />
-                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Rate" Width="50"/>
-                <DataGridTextColumn Binding ="{Binding Path = CityId}" IsReadOnly="True" Name Header="Город" Width="125"/>
-                <DataGridTextColumn Header="Курс" Width="100"/>
-                <DataGridTextColumn Header="Группа" Width="100"/>
-                <DataGridTextColumn Header="Фамилия" HeaderStringFormat="Фамилия" Width="125"/>
-                <DataGridTextColumn Header="Имя" HeaderStringFormat="Имя" Width="125"/>
-                <DataGridTextColumn Header="Отчество" Width="125"/>
-                <DataGridTextColumn Header="Преподователь" Width="100"/>
-                <DataGridTextColumn Header="Телефон" HeaderStringFormat="Телефон" Width="100"/>
-                <DataGridTextColumn Header="GIT" Width="100"/>
-                <DataGridTextColumn Header="Email" HeaderStringFormat="Email" Width="100"/>
-                <DataGridTextColumn Header="DOB" Width="60"/>
-                <DataGridTextColumn Header="Рейтинг" HeaderStringFormat="Рейтинг"/>
-                <DataGridTextColumn Header="Номер контракта" HeaderStringFormat="Номер контракта"/>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding ="{Binding Path = CityName}" IsReadOnly="True" Header="Город" Width="125"/>
+                <DataGridTextColumn Binding ="{Binding Path = CourseName}" IsReadOnly="True" Header="Курс" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = GroupName}" IsReadOnly="True" Header="Группа" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Surname}" IsReadOnly="True" Header="Фамилия" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Name}" IsReadOnly="True" Header="Имя" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = MiddleName}" IsReadOnly="True" Header="Отчество" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Phone}" IsReadOnly="True" Header="Телефон" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Git}" IsReadOnly="True" Header="Github" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Email}" IsReadOnly="True" Header="Email" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Birthday}" IsReadOnly="True" Header="Дата рождения" Width="60"/>
+                <DataGridTextColumn Binding ="{Binding Path = Rate}" IsReadOnly="True" Header="Рейтинг" Width="60"/>
+                <DataGridTextColumn Binding ="{Binding Path = Contract}" IsReadOnly="True" Header="Номер контракта" Width="100"/>
+                <DataGridTextColumn Binding ="{Binding Path = Status}" IsReadOnly="True" Header="Статус" Width="60"/>
             </DataGrid.Columns>-->
 
-            <DataGrid.ItemsSource>
+            <!--<DataGrid.ItemsSource>
                 <SqlClient:SqlConnectionStringBuilder/>
-            </DataGrid.ItemsSource>
+            </DataGrid.ItemsSource>-->
 
         </DataGrid>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
