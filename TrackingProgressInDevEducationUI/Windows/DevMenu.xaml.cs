@@ -72,7 +72,8 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void NewStudent_Click(object sender, RoutedEventArgs e)
         {
-            _contents.NewStudent();
+            _contents.WinNewStudent();
+            _contents.CloseAdditionalWindows();
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
@@ -102,7 +103,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void TeamInfo_Click(object sender, RoutedEventArgs e)
         {
-            _contents.TeamInfo(2);
+            _contents.TeamInfo(2, "22");
         }
         
         private void MainPage_Click(object sender, RoutedEventArgs e)

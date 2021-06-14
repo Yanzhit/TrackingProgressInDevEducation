@@ -34,7 +34,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BBack_Click(object sender, RoutedEventArgs e)
         {
-            _contents.TeamInfo(2);
+            _contents.TeamInfo(2, "2");
         }
 
         private void BCreatGroup_Click(object sender, RoutedEventArgs e)

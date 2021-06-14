@@ -52,6 +52,7 @@ namespace TrackingProgressInDevEducationUI.Pages
                 Birthday = DPBDate.Text,
                 GroupId = CBChangeGroup.SelectedIndex + 1
             });
+            _contents.CloseAdditionalWindows();
         }
 
         private void GetCitiesInPage()
