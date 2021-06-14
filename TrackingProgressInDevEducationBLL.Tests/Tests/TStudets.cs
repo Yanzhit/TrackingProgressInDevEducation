@@ -1,7 +1,5 @@
 ﻿using Moq;
 using NUnit.Framework;
-using System.Collections.Generic;
-using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.NewStudent;
 using TrackingProgressInDevEducationBLL.Tests.Expecteds;
 using TrackingProgressInDevEducationDAL.Facades.Interfaces;
@@ -11,19 +9,19 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TStudets : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<IStudents> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<IStudents>();
         }
 
-        [TestCaseSource(typeof(EStudets), nameof(EStudets.GetCities))]
+        [TestCaseSource(typeof(EStudets), nameof(EStudets.SetNewStudent))]
         public void GetCities(SetNewStudentQ query, Student expectedA, SetNewStudentA expected)
         {
             var model = (Student)BLLManager.NewStudentQ.SetNewStudent(query);
-            Mock.Setup(mock => mock.GetCities(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.SetNewStudent(model)).Returns(expectedA);
             var actual = BLLManager.NewStudentA.SetNewStudent(expectedA);
             Assert.AreEqual(actual, expected);
         }

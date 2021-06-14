@@ -10,7 +10,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
 {
     public class EGroups
     {
-        public static IEnumerable SetNewCourse()
+        public static IEnumerable GetGroups()
         {
             yield return new object[]
            {

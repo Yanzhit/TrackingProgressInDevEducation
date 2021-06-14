@@ -19,6 +19,7 @@ namespace TrackingProgressInDevEducationDAL.Facades.Interfaces
         IEnumerable<GetVisitsByStudentJ> GetVisitsByStudentJ(GetVisitsByStudentJ model);
         IEnumerable<GetAllStudentsJ> GetAllStudents();
         SetNewGroupJ SetNewGroupJ(SetNewGroupJ group);
+        SetNewTeams SetNewTeam(SetNewTeams team);
 
 
     }
