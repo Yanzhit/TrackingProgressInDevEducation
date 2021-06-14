@@ -24,7 +24,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
                     CourseId = 1,
                     StartDate = "22.21.22",
                     EndDate = "22.22.22"
-        },
+                },
                 new SetGroupA("Name", 1, "22.21.22", "22.22.22")
             };
             yield return new object[]
@@ -36,7 +36,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
                     CourseId = 1,
                     StartDate = "22.21.21",
                     EndDate = "22.22.23"
-        },
+                },
                 new SetGroupA("Name11", 1, "22.21.21", "22.22.23")
             };
         }
