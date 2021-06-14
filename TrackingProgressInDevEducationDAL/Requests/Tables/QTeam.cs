@@ -1,5 +1,6 @@
 ﻿using System;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Models.Results;
 using static TrackingProgressInDevEducationDAL.Defines;
 
@@ -16,18 +17,6 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
         public string Name { get; set; }
         public string Params { get; set; }
 
-        /// <summary>
-        /// Создание нового команды
-        /// </summary>
-        /// <param name="team">Объект данных</param>
-        /// <returns>Подготовленный запрос</returns>
-        public QTeam SetNewTeam(Team team)
-        {
-            QueryType = typeof(Setter);
-            Name = nameof(SetNewTeam);
-            Params = $"{SepStr}{team.Name}{SepEnd}";
-            return this;
-        }
 
         public QTeam GetTeamById(Team team)
         {

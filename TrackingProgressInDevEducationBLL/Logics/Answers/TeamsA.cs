@@ -8,7 +8,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Answers
     {
         public SetTeamA SetNewTeam(AbstractModel model)
         {
-            WriteTypes(new Teams().SetNewTeam());
+            WriteTypes(new CreateTeams().SetNewTeam());
             return (SetTeamA)GetModelBaseSingle(model);
         }
     }

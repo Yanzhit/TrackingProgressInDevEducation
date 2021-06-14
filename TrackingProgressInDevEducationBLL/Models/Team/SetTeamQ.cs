@@ -24,12 +24,13 @@ namespace TrackingProgressInDevEducationBLL.Models.Team
         {
             return Name == other.Name
                    && From == other.From
-                   && To == other.To;
+                   && To == other.To
+                   && LectorId == other.LectorId;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, From, To);
+            return HashCode.Combine(Name, From, To, LectorId);
         }
     }
 }

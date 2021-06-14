@@ -9,7 +9,7 @@ namespace TrackingProgressInDevEducationBLL.Logics.Queries
     {
         public AbstractModel SetNewTeam(SetTeamQ model)
         {
-            WriteTypes(new Teams().SetNewTeam());
+            WriteTypes(new CreateTeams().SetNewTeam());
             return GetModelBaseSingle(model);
         }
     }

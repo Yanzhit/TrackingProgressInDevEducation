@@ -56,8 +56,8 @@ namespace TrackingProgressInDevEducationBLL
         public SetTeamA SetNewTeam(SetTeamQ setTeamQ)
         {
             var model = (SetNewTeams) _bllManager.TeamsQ.SetNewTeam(setTeamQ);
-            Team modelReturned = _dalManager.Teams.SetNewTeams(model);
-            return _bllManager.TeamsA.SetNewTeam(modelReturned);
+            SetNewTeams modelReturned = _dalManager.Joins.SetNewTeams(model);
+            return modelReturned is null ? null : _bllManager.TeamsA.SetNewTeam(modelReturned);
         }
         public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
         {

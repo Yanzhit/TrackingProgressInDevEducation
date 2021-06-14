@@ -76,5 +76,15 @@ namespace TrackingProgressInDevEducationDAL.Facades
         {
             return (SetNewGroupJ)Manager.Setter.Single(_query.SetNewGroupJ(group));
         }
+
+        /// <summary>
+        /// Добавить новую команду
+        /// </summary>
+        /// <param name="team">Объект данных</param>
+        /// <returns></returns>
+        public SetNewTeams SetNewTeams(SetNewTeams team)
+        {
+            return (SetNewTeams)Manager.Setter.Single(_query.SetNewTeam(team));
+        }
     }
 }
