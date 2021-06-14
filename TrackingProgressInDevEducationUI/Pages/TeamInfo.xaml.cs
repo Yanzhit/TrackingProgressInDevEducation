@@ -21,11 +21,13 @@ namespace TrackingProgressInDevEducationUI.Pages
     public partial class TeamInfo : Page
     {
         private int _id;
+        private string _name;
         private readonly SingleContents _contents = SingleContents.GetContent();
-        public TeamInfo(int id)
+        public TeamInfo(int id, string name)
         {
             InitializeComponent();
             _id = id;
+            _name = name;
         }
         private void Logo_Click(object sender, RoutedEventArgs e)
         {

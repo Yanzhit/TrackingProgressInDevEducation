@@ -27,7 +27,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         public void SetNewGroup(SetGroupQ query, SetNewGroupJ expectedA, SetGroupA expected)
         {
             var model = (SetNewGroupJ)BLLManager.GroupsQ.SetNewGroup(query);
-            Mock.Setup(mock => mock.SetNewGroup(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.SetNewGroupJ(model)).Returns(expectedA);
             var actual = BLLManager.GroupsA.SetNewGroup(expectedA);
             Assert.AreEqual(actual, expected);
         }
@@ -42,10 +42,10 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         }
 
         [TestCaseSource(typeof(EJoins), nameof(EJoins.GetGroupsByLectorJ))]
-        public void GetGroupsByLectorJ(GetGroupsByLectorQ query, List<GetGroupByIdJ> expectedA, List<GetGroupsByLectorA> expected)
+        public void GetGroupsByLectorJ(GetGroupsByLectorQ query, List<GetGroupByLectorJ> expectedA, List<GetGroupsByLectorA> expected)
         {
             var model = (GetGroupByLectorJ)BLLManager.MainPagesQ.GetGroupsByLectorJ(query);
-            Mock.Setup(mock => mock.GetGroupsByLectorJ(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.GetGroupByLectorJ(model)).Returns(expectedA);
             var actual = (List<GetGroupsByLectorA>)BLLManager.MainPagesA.GetGroupsByLectorJ(expectedA);
             Assert.AreEqual(actual, expected);
         }
@@ -81,7 +81,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         public void GetAllStudents(EmptyQ query, List<GetAllStudentsJ> expectedA, List<GetAllStudentsA> expected)
         {
             var model = (GetAllStudentsJ)BLLManager.StudentsSQ.GetAllStudents(query);
-            Mock.Setup(mock => mock.GetAllStudents(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.GetAllStudents()).Returns(expectedA);
             var actual = (List<GetAllStudentsA>)BLLManager.StudentsSA.GetAllStudents(expectedA);
             Assert.AreEqual(actual, expected);
         }

@@ -54,7 +54,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BAddStudent_Click(object sender, RoutedEventArgs e)
         {
-            _contents.NewStudent();
+            _contents.WinNewStudent();
         }
     }
 }

@@ -73,13 +73,6 @@ namespace TrackingProgressInDevEducationUI
             _main.Content = _mainPage;
         }
 
-        public void NewStudent()
-        {
-            _newStudent = new NewStudent();
-            _main.Content = _newStudent;
-        }
-
-
         public void Registration()
         {
             _registration = new Registration();
@@ -141,9 +134,9 @@ namespace TrackingProgressInDevEducationUI
             _studentRate = new StudentRate();
             _main.Content = _studentRate;
         }
-        public void TeamInfo(int id)
+        public void TeamInfo(int id, string name)
         {
-            _teamInfo = new TeamInfo(id);
+            _teamInfo = new TeamInfo(id, name);
             _main.Content = _teamInfo;
         }
         public void TeamRate()
@@ -192,6 +185,14 @@ namespace TrackingProgressInDevEducationUI
             _additionalWindows = new AdditionalWindows() { Title = StudentToTeamT, Width = StudentToTeamW, Height = StudentToTeamH };
             _addStudentToTeams = new AddStudentToTeams();
             _additionalWindows.Content = _addStudentToGroup;
+            _additionalWindows.ShowDialog();
+        }
+
+        public void WinNewStudent()
+        {
+            _additionalWindows = new AdditionalWindows() { Title = NewStudentT, Width = NewStudentW, Height = NewStudentH };
+            _newStudent = new NewStudent();
+            _additionalWindows.Content = _newStudent;
             _additionalWindows.ShowDialog();
         }
 
