@@ -3,10 +3,9 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationDAL.Facades.Interfaces
 {
-    public interface ICities
+    public interface IGroups
     {
-        City SetNewCity(City city);
-        IEnumerable<City> GetCities();
-        IEnumerable<City> NullifyCities();
+        IEnumerable<Group> GetGroups();
+        IEnumerable<Group> NullifyGroups();
     }
 }

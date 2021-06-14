@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class HWCompletes : AFacade
+    public class HWCompletes : AFacade, IHWCompletes
     {
         private readonly QHWComplete _query  = new();
 

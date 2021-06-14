@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Others;
@@ -6,15 +7,10 @@ using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Groups : AFacade
+    public class Groups : AFacade, IGroups
     {
         private readonly QGroup _query  = new();
 
-        /// <summary>
-        /// Создать новую Группу
-        /// </summary>
-        /// <param name="group">Объект данных</param>
-        /// <returns>Группа</returns>
 
         /// <summary>
         /// Обнуление таблицы Группы и ключа identity
