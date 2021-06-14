@@ -44,7 +44,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         private void WriteGrids()
         {
             var www = RenderStudents();
-            //DGStudent.ItemsSource = 
+            DGStudent.ItemsSource = www;
         }
 
         private IEnumerable<GetAllStudentsA> RenderStudents()

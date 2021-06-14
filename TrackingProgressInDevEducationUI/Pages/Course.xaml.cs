@@ -38,7 +38,7 @@ namespace TrackingProgressInDevEducationUI.Pages
         {
             OperationLogics operation = new OperationLogics();
             var setNewCourses = operation.SetNewCourse(new SetNewCoursesQ(TBNameCurses.Text, TBCourseDescription.Text));
-            MessageBox.Show("Курс " + TBNameCurses.Text + " Созданн!");
+            _contents.CloseAdditionalWindows();
         }
 
         private void TBNameCurses_TextChanged(object sender, TextChangedEventArgs e)
