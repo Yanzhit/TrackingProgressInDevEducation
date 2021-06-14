@@ -39,8 +39,19 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BCreateStudent_Click(object sender, RoutedEventArgs e)
         {
-            var answer = _operation.SetNewStudent(new SetNewStudentQ(groupId: 2, name: "asdqw", cityId:1, email:"qeqew"));
-            MessageBox.Show("Студент" + TBName.Text + " Создан!");
+            var answer = _operation.SetNewStudent(new SetNewStudentQ()
+            {
+                Surname = TBSurname.Text,
+                Name = TBName.Text,
+                MiddleName = TBMiddleName.Text,
+                Contract = TBContractNumber.Text,
+                CityId = CBChangeCity.SelectedIndex,
+                Phone = CBChangeCity.Text,
+                Email = TBEmail.Text,
+                Git = TBGit.Text,
+                Birthday = DPBDate.Text,
+                GroupId = CBChangeGroup.SelectedIndex
+            });
         }
 
         private void GetCitiesInPage()

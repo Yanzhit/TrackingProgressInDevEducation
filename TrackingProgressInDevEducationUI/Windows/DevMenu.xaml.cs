@@ -102,7 +102,7 @@ namespace TrackingProgressInDevEducationUI.Windows
 
         private void TeamInfo_Click(object sender, RoutedEventArgs e)
         {
-            _contents.TeamInfo();
+            _contents.TeamInfo(2);
         }
         
         private void MainPage_Click(object sender, RoutedEventArgs e)

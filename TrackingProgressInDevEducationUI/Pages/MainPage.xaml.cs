@@ -129,5 +129,11 @@ namespace TrackingProgressInDevEducationUI.Pages
             var id = (int)(sender as Button).Tag;
             _contents.GroupInfo(id);
         }
+
+        private void TableTeam_Click(object sender, RoutedEventArgs e)
+        {
+            var id = (int)(sender as Button).Tag;
+           _contents.TeamInfo(id);
+        }
     }
 }

@@ -24,7 +24,7 @@
             <Label x:Name="TBChangeCourse" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="216,161,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
             <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="216,218,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
             <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="216,267,0,0" VerticalAlignment="Top" Width="193" FontSize="18"/>
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="472,106,0,406" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="472,106,0,406" Background="#FFFF9BFF" />
             <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="472,161,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged"/>
             <DatePicker x:Name="DPEndDate" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
             <DatePicker x:Name="DPStartDate" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Height="26" Width="140"/>

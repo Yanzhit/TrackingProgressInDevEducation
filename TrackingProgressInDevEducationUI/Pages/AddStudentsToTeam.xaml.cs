@@ -33,7 +33,7 @@ namespace TrackingProgressInDevEducationUI.Pages
 
         private void BBack_Click(object sender, RoutedEventArgs e)
         {
-            _contents.TeamInfo();
+            _contents.TeamInfo(2);
         }
 
         private void BAddStudentToTeam_Click(object sender, RoutedEventArgs e)

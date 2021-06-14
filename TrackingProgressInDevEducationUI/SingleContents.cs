@@ -141,9 +141,9 @@ namespace TrackingProgressInDevEducationUI
             _studentRate = new StudentRate();
             _main.Content = _studentRate;
         }
-        public void TeamInfo()
+        public void TeamInfo(int id)
         {
-            _teamInfo = new TeamInfo();
+            _teamInfo = new TeamInfo(id);
             _main.Content = _teamInfo;
         }
         public void TeamRate()

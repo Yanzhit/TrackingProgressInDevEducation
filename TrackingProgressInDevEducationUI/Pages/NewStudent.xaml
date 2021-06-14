@@ -30,14 +30,14 @@
             <ComboBox x:Name="CBChangeCity" HorizontalAlignment="Left" Margin="546,215,0,0" VerticalAlignment="Top" Width="347" Height="36"/>
             <Label x:Name="LGroup" Content="Группа" HorizontalAlignment="Left" Height="43" Margin="193,414,0,0" VerticalAlignment="Top" Width="287" FontSize="22" HorizontalContentAlignment="Left"/>
             <ComboBox x:Name="CBChangeGroup" HorizontalAlignment="Left" Margin="546,414,0,0" VerticalAlignment="Top" Width="347" Height="36"/>
-            <TextBox  Style="{StaticResource LittleTextBoxStyles}" x:Name="TBSurname" Margin="543,59,0,453" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBName" Margin="543,98,0,414" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBPhone" Margin="543,262,0,250" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBEmail" Margin="543,300,0,212"/>
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBContractNumber" Margin="543,176,0,336" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBBirthday" Margin="543,379,0,133" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBMiddleName" Margin="543,137,0,375" />
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGit" Margin="543,338,0,174" />
+            <TextBox  Style="{StaticResource LittleTextBoxStyles}" x:Name="TBSurname" Margin="543,59,0,453" Background="#FFFF9BFF" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBName" Margin="543,98,0,414" Background="#FFFF9BFF" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBPhone" Margin="543,262,0,250" Background="#FFFF9BFF" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBEmail" Margin="543,300,0,212" Background="#FFFF9BFF"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBContractNumber" Margin="543,176,0,336" Background="#FFFF9BFF" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBMiddleName" Margin="543,137,0,375" Background="#FFFF9BFF" />
+            <DatePicker x:Name="DPBDate" HorizontalAlignment="Left" Margin="546,381,0,0" VerticalAlignment="Top" Height="26" Width="347"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGit" Margin="543,338,0,174" Background="#FFFF9BFF" />
         </Grid>
         <Label x:Name="LNamePage" Content="Создание нового студента" HorizontalAlignment="Left" Height="72" Margin="895,10,0,0" VerticalAlignment="Top" Width="375" FontSize="30" FontWeight="Normal" FlowDirection="RightToLeft"/>
         <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Click="Logo_Click" Margin="10,10,0,0">
