@@ -34,8 +34,8 @@ namespace TrackingProgressInDevEducationDAL.Tests.Tests
         public void GetAllCitiesTest(IQuery query, object expected)
         {
             PreparindDB(query.ModelType);
-            DalManager.Cities.GetCities();
-            //Assert.AreEqual(expected, actual);
+            var actual = DalManager.Cities.GetCities();
+            Assert.AreEqual(expected, actual);
         }
 
         /// <summary>

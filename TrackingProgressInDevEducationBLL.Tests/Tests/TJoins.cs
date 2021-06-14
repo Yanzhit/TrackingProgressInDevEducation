@@ -1,13 +1,35 @@
-﻿namespace TrackingProgressInDevEducationBLL.Tests.Tests
+﻿using Moq;
+using NUnit.Framework;
+using System.Collections.Generic;
+using TrackingProgressInDevEducationBLL.Models;
+using TrackingProgressInDevEducationBLL.Models.Group;
+using TrackingProgressInDevEducationBLL.Models.GroupInfo;
+using TrackingProgressInDevEducationBLL.Models.NewStudent;
+using TrackingProgressInDevEducationBLL.Tests.Expecteds;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
+
+namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TJoins : AbstractTest
     {
-        //public SetGroupA SetNewGroup(SetGroupQ setGroupQ)
-        //{
-        //    var model = (SetNewGroupJ)_bllManager.GroupsQ.SetNewGroup(setGroupQ);
-        //    SetNewGroupJ modelReturned = _dalManager.Joins.SetNewGroupJ(model);
-        //    return _bllManager.GroupsA.SetNewGroup(modelReturned);
-        //}
+        public Mock<ILectors> Mock;
+
+        [SetUp]
+        public void SetUp()
+        {
+            Mock = new Mock<ILectors>();
+        }
+
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetCities))]
+        public void SetNewGroup(SetGroupQ query, SetNewGroupJ expectedA, SetGroupA expected)
+        {
+            var model = (SetNewGroupJ)BLLManager.GroupsQ.SetNewGroup(query);
+            Mock.Setup(mock => mock.SetNewGroup(model)).Returns(expectedA);
+            var actual = BLLManager.GroupsA.SetNewGroup(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
         //public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
         //{

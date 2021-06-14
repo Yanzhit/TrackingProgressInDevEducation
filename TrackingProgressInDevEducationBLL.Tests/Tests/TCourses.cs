@@ -1,12 +1,28 @@
-﻿namespace TrackingProgressInDevEducationBLL.Tests.Tests
+﻿using Moq;
+using NUnit.Framework;
+using TrackingProgressInDevEducationBLL.Models.Course;
+using TrackingProgressInDevEducationBLL.Tests.Expecteds;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
+using TrackingProgressInDevEducationDAL.Models.Bases;
+
+namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TCourses : AbstractTest
     {
-        //public SetNewCoursesA SetNewCourse(SetNewCoursesQ setNewCoursesQ)
-        //{
-        //    var model = (Course)_bllManager.NewCoureQ.SetNewCourse(setNewCoursesQ);
-        //    Course modelReturned = _dalManager.Courses.SetNewCourse(model);
-        //    return _bllManager.SenNewCourse.SetNewCourse(modelReturned);
-        //}
+        public Mock<ILectors> Mock;
+
+        [SetUp]
+        public void SetUp()
+        {
+            Mock = new Mock<ILectors>();
+        }
+        [TestCaseSource(typeof(ECourses), nameof(ECourses.GetCities))]
+        public void SetNewCourse(SetNewCoursesQ query, Course expectedA, SetNewCoursesA expected)
+        {
+            var model = (Course)BLLManager.NewCoureQ.SetNewCourse(query);
+            Mock.Setup(mock => mock.SetNewCourse(model)).Returns(expectedA);
+            var actual = BLLManager.SenNewCourse.SetNewCourse(modelReturned);
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
