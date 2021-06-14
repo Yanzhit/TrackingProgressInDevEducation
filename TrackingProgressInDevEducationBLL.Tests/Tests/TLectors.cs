@@ -7,16 +7,14 @@ using TrackingProgressInDevEducationDAL.Models.Bases;
 
 namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
-    public class TLectors
+    public class TLectors : AbstractTest
     {
         public Mock<ILectors> Mock;
-        public BLLManager BLLManager;
 
         [SetUp]
         public void SetUp()
         {
             Mock = new Mock<ILectors>();
-            BLLManager = new BLLManager();
         }
 
         [TestCaseSource(typeof(ELectors), nameof(ELectors.GetLectorByLoginAndPassword))]
@@ -29,5 +27,26 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
             var actual = BLLManager.SignInsA.GetLectorByLoginAndPassword(expectedA);
             Assert.AreEqual(actual, expected);
         }
+
+        //public SetLectorA SetNewLector(SetLectorQ setLectorQ)
+        //{
+        //    var model = (Lector)_bllManager.RegistrationsQ.SetNewLector(setLectorQ);
+        //    Lector modelReturned = _dalManager.Lectors.SetNewLector(model);
+        //    return _bllManager.RegistrationsA.SetNewLector(modelReturned);
+        //}
+
+        //public UpdLectorA UpdateAcrivationLector(UpdLectorQ updLectorQ)
+        //{
+        //    var model = (Lector)_bllManager.VerificationsQ.UpdateActivationLector(updLectorQ);
+        //    Lector modelReturned = _dalManager.Lectors.UpdateAcrivationLector(model);
+        //    return _bllManager.VerificationsA.UpdateActivationLector(modelReturned);
+        //}
+
+        //public List<SetCoursesA> GetAllCurses(SetCoursesQ setCoursesQ)
+        //{
+        //    _bllManager.CoursesQ.GetAllCourses(setCoursesQ);
+        //    IEnumerable<Course> modelReturned = _dalManager.Courses.GetAllCourses();
+        //    return (List<SetCoursesA>)_bllManager.CoursesA.GetSetCourses(modelReturned);
+        //}
     }
 }
