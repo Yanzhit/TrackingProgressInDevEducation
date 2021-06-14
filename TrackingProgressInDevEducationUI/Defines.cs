@@ -49,12 +49,12 @@
         public const int AddStudentToGroupH = 450;
         
         public const string NewCourseT = "Добавление нового курса";
-        public const int NewCourseW = 850;
-        public const int NewCourseH = 500;
+        public const int NewCourseW = 820;
+        public const int NewCourseH = 480;
 
         public const string NewGroupT = "Добавление новой группы";
-        public const int NewGroupW = 850;
-        public const int NewGroupH = 450;
+        public const int NewGroupW = 800;
+        public const int NewGroupH = 490;
 
         public const string NewTeamT = "Добавление новой команды";
         public const int NewTeamW = 850;
@@ -65,7 +65,7 @@
         public const int StudentToTeamH = 450;
         
         public const string NewStudentT = "Добавление нового студента";
-        public const int NewStudentW = 400;
-        public const int NewStudentH = 400;
+        public const int NewStudentW = 850;
+        public const int NewStudentH = 750;
     }
 }
