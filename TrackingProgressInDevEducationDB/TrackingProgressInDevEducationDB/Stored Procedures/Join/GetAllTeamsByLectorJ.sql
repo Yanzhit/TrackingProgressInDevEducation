@@ -7,7 +7,7 @@ AS
 ,T.[From]
 ,T.[To]
 --,G.id
-,COUNT(T.[id]) StudentCount
+,COUNT(TS.[StudentId]) StudentCount
 FROM Teams T
 LEFT JOIN Team_Student TS ON T.[id] = TS.TeamId
 LEFT JOIN Students S ON S.[id] = TS.StudentId
