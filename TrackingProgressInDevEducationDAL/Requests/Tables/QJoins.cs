@@ -140,7 +140,7 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             ModelType = typeof(SetNewTeams);
             QueryType = typeof(Setter);
             Name = nameof(SetNewTeam);
-            Params = $"{SepStr}{team.Name}{SepEnd}";
+            Params = $"{SepStr}{team.Name}{SepMid}{team.From}{SepMid}{team.To}{SepMid}{team.LectorId}{SepEnd}";
             return this;
         }
     }
