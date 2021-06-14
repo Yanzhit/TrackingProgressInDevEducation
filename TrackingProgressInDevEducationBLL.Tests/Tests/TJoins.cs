@@ -15,12 +15,12 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TJoins : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<IJoins> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<IJoins>();
         }
 
         [TestCaseSource(typeof(EJoins), nameof(EJoins.SetNewGroup))]

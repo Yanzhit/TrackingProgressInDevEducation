@@ -11,19 +11,19 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TCIties : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<ICities> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<ICities>();
         }
 
-        [TestCaseSource(typeof(ECities), nameof(ECities.GetCities))]
+        [TestCaseSource(typeof(ECIties), nameof(ECIties.GetCities))]
         public void GetCities(EmptyQ query, List<City> expectedA, IEnumerable<GetCityA> expected)
         {
             var model = (City)BLLManager.CityQ.GetCities(query);
-            Mock.Setup(mock => mock.GetCities(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.GetCities()).Returns(expectedA);
             var actual = (List<GetCityA>)BLLManager.CityA.GetCities(expectedA);
             Assert.AreEqual(actual, expected);
         }

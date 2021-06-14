@@ -10,12 +10,12 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TComments : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<IComments> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<IComments>();
         }
 
         [TestCaseSource(typeof(EComments), nameof(EComments.GetCommentsByStudent))]
@@ -37,13 +37,13 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         }
 
 
-        //[TestCaseSource(typeof(EComments), nameof(EComments.SetNewCommentToStudent))]
-        //public void SetNewCommentToStudent(SetCommentsQ query, Comment expectedA, SetCommentsA expected)
-        //{
-        //    var model = (Comment)BLLManager.CommentsQ.SetNewCommentToStudent(query);
-        //    Mock.Setup(mock => mock.SetNewCommentToStudent(model)).Returns(expectedA);
-        //    var actual = BLLManager.CommentsA.SetNewCommentToStudent(expectedA);
-        //    Assert.AreEqual(actual, expected);
-        //}
+        [TestCaseSource(typeof(EComments), nameof(EComments.SetNewCommentToStudent))]
+        public void SetNewCommentToStudent(SetCommentsQ query, Comment expectedA, SetCommentsA expected)
+        {
+            var model = (Comment)BLLManager.CommentsQ.SetNewCommentToStudent(query);
+            Mock.Setup(mock => mock.SetNewCommentToStudent(model)).Returns(expectedA);
+            var actual = BLLManager.CommentsA.SetNewCommentToStudent(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
     }
 }

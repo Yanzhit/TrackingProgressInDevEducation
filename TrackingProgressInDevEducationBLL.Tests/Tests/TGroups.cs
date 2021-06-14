@@ -11,18 +11,18 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TGroups : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<IGroups> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<IGroups>();
         }
-        [TestCaseSource(typeof(EGroups), nameof(EGroups.GetCities))]
+        [TestCaseSource(typeof(EGroups), nameof(EGroups.GetGroups))]
         public void GetGroups(EmptyQ query, List<Group> expectedA, IEnumerable<GetGroupsA> expected)
         {
             var model = (Group)BLLManager.CityQ.GetGroups(query);
-            Mock.Setup(mock => mock.GetGroups(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.GetGroups()).Returns(expectedA);
             var actual = (List<GetGroupsA>)BLLManager.CityA.GetGroups(expectedA);
             Assert.AreEqual(actual, expected);
         }
