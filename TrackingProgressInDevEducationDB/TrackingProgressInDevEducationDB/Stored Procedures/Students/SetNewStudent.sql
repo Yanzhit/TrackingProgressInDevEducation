@@ -47,7 +47,7 @@ AS
 		 @Name
 		,@Surname
 		,@Rate
-		,@GroupId
+		,@GroupId + 1
 		,@Phone
 		,@Email
 		,@Contract

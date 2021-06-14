@@ -45,12 +45,12 @@ namespace TrackingProgressInDevEducationUI.Pages
                 Name = TBName.Text,
                 MiddleName = TBMiddleName.Text,
                 Contract = TBContractNumber.Text,
-                CityId = CBChangeCity.SelectedIndex,
+                CityId = CBChangeCity.SelectedIndex + 1,
                 Phone = CBChangeCity.Text,
                 Email = TBEmail.Text,
                 Git = TBGit.Text,
                 Birthday = DPBDate.Text,
-                GroupId = CBChangeGroup.SelectedIndex
+                GroupId = CBChangeGroup.SelectedIndex + 1
             });
         }
 

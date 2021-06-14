@@ -53,8 +53,8 @@
         public const int NewCourseH = 450;
 
         public const string NewGroupT = "Добавление новой группы";
-        public const int NewGroupW = 750;
-        public const int NewGroupH = 450;
+        public const int NewGroupW = 50;
+        public const int NewGroupH = 50;
 
         public const string NewTeamT = "Добавление новой команды";
         public const int NewTeamW = 750;
