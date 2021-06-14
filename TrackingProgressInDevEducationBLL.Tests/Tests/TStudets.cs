@@ -11,12 +11,12 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TStudets : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<ITStudents> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<ITStudents>();
         }
 
         [TestCaseSource(typeof(EStudets), nameof(EStudets.GetCities))]
