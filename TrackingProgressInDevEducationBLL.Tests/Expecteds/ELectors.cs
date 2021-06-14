@@ -65,7 +65,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
                 {
                     Id = 3, IsActivated = true
                 },
-                new UpdLectorA(1, true)
+                new UpdLectorA(3, true)
             };
             yield return new object[]
             {
@@ -98,7 +98,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
                 new List<SetCoursesA>()
                 {
                     new SetCoursesA(4, "3333"),
-                    new SetCoursesA(1, "555555")
+                    new SetCoursesA(3, "555555")
                 }
             };
             yield return new object[]
