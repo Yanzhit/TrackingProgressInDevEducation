@@ -5,35 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="450" d:DesignWidth="850"
+      MinWidth="850" MinHeight="450" 
+      MaxWidth="850" MaxHeight="450"
       Title="Group">
 
     <Grid Background="#FFDED4D4">
-        <Grid HorizontalAlignment="Center" Height="542" Margin="0,122,0,56"  Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49" Width="1084">
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatGroup" Content="Создать" Margin="0,394,0,0" Click="BCreatGroup_Click" HorizontalAlignment="Center" Height="40"/>
-            <Label x:Name="LGroupName" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="216,104,0,0" VerticalAlignment="Top" Width="225" FontSize="18" RenderTransformOrigin="0.533,1.415">
-                <Label.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.194"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="-0.529"/>
-                    </TransformGroup>
-                </Label.RenderTransform>
-            </Label>
-            <Label x:Name="TBChangeCourse" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="216,161,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
-            <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="216,218,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
-            <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="216,267,0,0" VerticalAlignment="Top" Width="193" FontSize="18"/>
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="472,106,0,406" Background="#FFFF9BFF" />
-            <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="472,161,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged"/>
-            <DatePicker x:Name="DPEndDate" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
-            <DatePicker x:Name="DPStartDate" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-        </Grid>
-        <Label x:Name="LPageName" Content="Создание новой группы" HorizontalAlignment="Left" Height="53" Margin="919,10,0,0" VerticalAlignment="Top" Width="351" FontSize="30" FlowDirection="RightToLeft"/>
-        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
+        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatGroup" Content="Создать" Margin="274,386,0,0" Click="BCreatGroup_Click" Height="40" RenderTransformOrigin="-0.05,0.474"/>
+        <Label x:Name="LGroupName" Content="НАЗВАНИЕ ГРУППЫ" HorizontalAlignment="Left" Margin="11,42,0,0" VerticalAlignment="Top" Width="225" FontSize="18" RenderTransformOrigin="0.533,1.415">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.194"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.529"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="TBChangeCourse" Content="ВЫБРАТЬ КУРС" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
+        <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" Width="165" FontSize="18"/>
+        <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" Width="193" FontSize="18"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBGroupName" Margin="239,42,0,378" TextChanged="TBGroupName_TextChanged" />
+        <ComboBox x:Name="CBChangeCourse" HorizontalAlignment="Left" Height="29" Margin="239,124,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="CBChangeCourse_SelectionChanged"/>
+        <DatePicker x:Name="DPEndDate" HorizontalAlignment="Left" Margin="241,288,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
+        <DatePicker x:Name="DPStartDate" HorizontalAlignment="Left" Margin="239,209,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
     </Grid>
 </Page>

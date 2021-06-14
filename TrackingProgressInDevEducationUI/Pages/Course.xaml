@@ -5,26 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="850"
+      d:DesignHeight="450" d:DesignWidth="850"
+      MinWidth="850" MinHeight="450" 
+      MaxWidth="850" MaxHeight="450"
       Title="Course">
 
     <Grid x:Name="Grid" Background="#FFDED4D4" Margin="0,0,32,10">
-        <Grid x:Name="GridCenter" HorizontalAlignment="Center" Height="400" VerticalAlignment="Top" Width="850" Background="#FFF9EFEF">
-            <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="52" Margin="31,48,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
-            <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="44" Margin="31,165,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
-            <TextBox 
-                     Style="{StaticResource BigTextBoxStyles}"
+        <Label x:Name="LNameCurses" Content="Название курса" HorizontalAlignment="Left" Height="52" Margin="10,34,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
+        <Label x:Name="LCourseDescription" Content="Описание курса" HorizontalAlignment="Left" Height="44" Margin="10,131,0,0" VerticalAlignment="Top" Width="224" FontSize="22"/>
+        <TextBox 
+                     Style="{StaticResource LittleTextBoxStyles}"
                      x:Name="TBNameCurses" 
-                     Margin="232,32,0,206" 
+                     Margin="239,45,0,365" 
                      Text="Введите название..." TextChanged="TBNameCurses_TextChanged" Background="White"
             />
-            <TextBox 
+        <TextBox 
                 Style="{StaticResource BigTextBoxStyles}"
                 x:Name="TBCourseDescription" 
-                     Margin="232,144,0,92" 
+                     Margin="234,131,0,224" 
                      Text="Введите описание..." Background="White" />
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="340,316,0,0" Click="BCreateCurses_Click" Height="40"/>
-        </Grid>
+        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreateCurses" Content="Создать курс" Margin="340,316,0,0" Click="BCreateCurses_Click" Height="40"/>
+
 
     </Grid>
 </Page>
