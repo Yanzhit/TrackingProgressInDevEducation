@@ -5,25 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="450" d:DesignWidth="850
+      "
       Title="CreateTeam">
 
     <Grid Background="#FFDED5D4">
-        <Button Style="{StaticResource LogoStyles}" x:Name="Logo" Margin="10,10,0,0" Click="Logo_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
-        <Label x:Name="LPageName" Content="Создание команды" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Height="44" FontSize="30" FlowDirection="RightToLeft"/>
-        <Grid HorizontalAlignment="Center" Height="542" Margin="0,122,0,0" VerticalAlignment="Top" Width="1084" Background="#FFF9EFEF" RenderTransformOrigin="0.456,0.49">
-            <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatTeam" Content="Создать" Margin="500,334,0,0" Height="34" Width="169" Click="BCreatTeam_Click" />
-            <Label x:Name="LTeamName" Content="НАЗВАНИЕ КОМАНДЫ" HorizontalAlignment="Left" Margin="119,107,0,0" VerticalAlignment="Top" Width="302" FontSize="22" RenderTransformOrigin="0.533,1.415"/>
-            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBTeamName" Margin="500,107,0,0" VerticalAlignment="Top" Width="504" Height="39"  />
-            <DatePicker x:Name="DPTEndDate" HorizontalAlignment="Left" Margin="500,264,0,0" VerticalAlignment="Top" Height="39" Width="169"/>
-            <DatePicker x:Name="DPTStartDate" HorizontalAlignment="Left" Margin="500,197,0,0" VerticalAlignment="Top" Height="45" Width="169"/>
-            <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="202,203,0,0" VerticalAlignment="Top" Width="164" FontSize="22" RenderTransformOrigin="0.29,0.752"/>
-            <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="168,264,0,0" VerticalAlignment="Top" Width="232" FontSize="22"/>
-        </Grid>
+        <Button Style="{StaticResource ButtonCreatStyles}" x:Name="BCreatTeam" Content="Создать" Margin="232,347,0,0" Height="34" Width="170" Click="BCreatTeam_Click" />
+        <Label x:Name="LTeamName" Content="НАЗВАНИЕ КОМАНДЫ" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="302" FontSize="22" RenderTransformOrigin="0.533,1.415"/>
+        <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBTeamName" Margin="317,34,0,0" VerticalAlignment="Top" Width="504" Height="39"  />
+        <DatePicker x:Name="DPTEndDate" HorizontalAlignment="Left" Margin="317,197,0,0" VerticalAlignment="Top" Height="39" Width="169"/>
+        <DatePicker x:Name="DPTStartDate" HorizontalAlignment="Left" Margin="317,122,0,0" VerticalAlignment="Top" Height="45" Width="169"/>
+        <Label x:Name="LStartDate" Content="ДАТА НАЧАЛА" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="164" FontSize="22" RenderTransformOrigin="0.29,0.752"/>
+        <Label x:Name="LEndDate" Content="ДАТА ОКОНЧАНИЯ" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="232" FontSize="22"/>
 
     </Grid>
 </Page>

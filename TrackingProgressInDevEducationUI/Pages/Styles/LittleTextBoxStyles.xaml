@@ -9,7 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
-                    <Border CornerRadius="15" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="0,0,0,0" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                    <Border CornerRadius="15" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="2,2,2,2" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
                         <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
                 </ControlTemplate>

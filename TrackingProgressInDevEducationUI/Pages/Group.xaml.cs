@@ -56,5 +56,10 @@ namespace TrackingProgressInDevEducationUI.Pages
             }
             CBChangeCourse.SelectedIndex = 0;
         }
+
+        private void TBGroupName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

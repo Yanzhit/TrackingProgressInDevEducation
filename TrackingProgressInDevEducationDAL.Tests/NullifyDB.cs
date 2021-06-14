@@ -135,7 +135,7 @@ namespace TrackingProgressInDevEducationDAL.Tests
 
         private void NullifyTableTeamStudent()
         {
-            _manager.TStudents.NullifyTStudent();
+           // _manager.TStudents.NullifyTStudent();
         }
 
         private void NullifyTableVisits()

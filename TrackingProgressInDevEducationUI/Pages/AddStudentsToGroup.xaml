@@ -5,29 +5,20 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TrackingProgressInDevEducationUI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="450" d:DesignWidth="850"
+      MinWidth="850" MinHeight="450" 
+      MaxWidth="850" MaxHeight="450"
       Title="AddStudentsToGroup">
 
     <Grid Background="#FFDED5D4" Width="1280" Margin="0,0,0,0">
         <Button 
-            Style="{StaticResource LogoStyles}"
-            x:Name="Logo" 
-                Content="" 
-                Margin="10,10,0,0" 
-                Click="Logo_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Resourses/Images/Education.jpg" Stretch="Uniform"/>
-            </Button.Background>
-        </Button>
-        <Button 
             Style="{StaticResource ButtonBackStyles}"
             x:Name="BBack" 
             Content="Назад" 
-            Margin="163,16,0,0" 
+            Margin="34,16,0,0" 
             Click="BBack_Click" Height="40"/>
-        <Label x:Name="LPageName" Content="Добавление студентов в группу" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="484" Height="52" FontSize="30" FlowDirection="RightToLeft"/>
         <DataGrid 
-            x:Name="dgStudents" Margin="10,74,10,10" SelectionChanged="dgStudents_SelectionChanged">
+            x:Name="dgStudents" Margin="10,74,442,10" SelectionChanged="dgStudents_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="# Контракта"/>
                 <DataGridCheckBoxColumn Header="Фамилия" Width="125"/>
@@ -49,7 +40,7 @@
             Style="{StaticResource ButtonAddStyles}"
             x:Name="BAddStudentToGroup" 
             Content="Добавить" 
-            Margin="315,16,0,0" 
+            Margin="640,16,0,0" 
             RenderTransformOrigin="1.649,0.632" Click="BAddStudentToGroup_Click" Height="40"
         />
 
