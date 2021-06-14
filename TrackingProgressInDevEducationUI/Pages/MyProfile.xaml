@@ -27,10 +27,10 @@
             <Label x:Name="LName" Content="Имя:" HorizontalAlignment="Left" Margin="276,108,0,0" VerticalAlignment="Top" Width="50" FontSize="18"/>
             <Label x:Name="LSurname" Content="Фамилия:" HorizontalAlignment="Left" Margin="256,72,0,0" VerticalAlignment="Top" Width="90" FontSize="18"/>
             <Label x:Name="LMiddleName" Content="Отчество:" HorizontalAlignment="Left" Margin="252,144,0,0" VerticalAlignment="Top" Width="94" FontSize="18"/>
-            <TextBlock  x:Name="TBLogin" HorizontalAlignment="Left" Margin="368,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" IsEnabled="False" Height="28"/>
-            <TextBlock x:Name="TBSurname" HorizontalAlignment="Left" Margin="368,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" IsEnabled="False" Height="30"/>
-            <TextBlock x:Name="TBName" HorizontalAlignment="Left" Margin="368,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" IsEnabled="False" Height="30"/>
-            <TextBlock x:Name="TBMiddleName" HorizontalAlignment="Left" Margin="368,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" IsEnabled="False" Height="30"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}"  x:Name="TBLogin" Margin="367,38,0,137" IsEnabled="False"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBSurname" Margin="368,74,0,101" IsEnabled="False" />
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBName" Margin="368,112,0,63" IsEnabled="False"/>
+            <TextBox Style="{StaticResource LittleTextBoxStyles}" x:Name="TBMiddleName" Margin="367,148,0,27" IsEnabled="False"/>
             <Button Style="{StaticResource OtherButtonStyles}" x:Name="BChangePassword" Content="Поменять пароль" Margin="0,42,0,0" Click="BChangePassword_Click" Grid.Column="1" HorizontalAlignment="Center" Width="162" Height="40"/>
             <Button Style="{StaticResource ExitButtonStyles}" x:Name="BLogout" Content="Выйти из профиля" Margin="0,138,0,0" Click="BLogout_Click" Grid.Column="1" HorizontalAlignment="Center" Width="162" Height="40"/>
         </Grid>
