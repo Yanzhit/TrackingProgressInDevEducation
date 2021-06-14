@@ -129,5 +129,19 @@ namespace TrackingProgressInDevEducationDAL.Requests.Tables
             Params = $"{SepStr}{group.GroupId}{SepMid}{group.LectorId}{SepMid}{group.Name}{SepMid}{group.CourseId}{SepMid}{group.StartDate}{SepMid}{group.EndDate}{SepEnd}";
             return this;
         }
+
+        /// <summary>
+        /// Создание нового команды
+        /// </summary>
+        /// <param name="team">Объект данных</param>
+        /// <returns>Подготовленный запрос</returns>
+        public QJoins SetNewTeam(SetNewTeams team)
+        {
+            ModelType = typeof(SetNewTeams);
+            QueryType = typeof(Setter);
+            Name = nameof(SetNewTeam);
+            Params = $"{SepStr}{team.Name}{SepEnd}";
+            return this;
+        }
     }
 }
