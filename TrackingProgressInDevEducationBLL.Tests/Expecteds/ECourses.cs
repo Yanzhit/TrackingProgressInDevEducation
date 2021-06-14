@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +10,3 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
     {
     }
 }
-=======
-﻿namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
-{
-    public class ECourses
-    {
-        
-    }
-}
->>>>>>> AddforBLLTestsInterface
