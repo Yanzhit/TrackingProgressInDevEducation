@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Others;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Joins : AFacade 
+    public class Joins : AFacade, IJoins
     {
         private readonly QJoins _query  = new();
         public IEnumerable<Joins> GetAllCoursesByLectorJ()
