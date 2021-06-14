@@ -21,7 +21,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
         public void GetCities(SetTeamQ query, SetNewTeams expectedA, SetTeamA expected)
         {
             var model = (SetNewTeams)BLLManager.TeamsQ.SetNewTeam(query);
-            Mock.Setup(mock => mock.SetNewTeam(model)).Returns(expectedA);
+            Mock.Setup(mock => mock.SetNewTeams(model)).Returns(expectedA);
             var actual = BLLManager.TeamsA.SetNewTeam(expectedA);
             Assert.AreEqual(actual, expected);
         }
