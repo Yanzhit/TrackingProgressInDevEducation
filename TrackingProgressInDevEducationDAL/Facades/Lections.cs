@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class Lections : AFacade 
+    public class Lections : AFacade, ILections
     {
         private readonly QLection _query  = new();
 

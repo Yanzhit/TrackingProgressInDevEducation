@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class CommentsFor : AFacade
+    public class CommentsFor : AFacade , ICommentsFor
     {
         private readonly QCommentFor _query = new();
     

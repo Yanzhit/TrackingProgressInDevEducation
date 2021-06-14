@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using TrackingProgressInDevEducationDAL.Facades.Interfaces;
 using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Requests.Tables;
 
 namespace TrackingProgressInDevEducationDAL.Facades
 {
-    public class HWGroups : AFacade 
+    public class HWGroups : AFacade, IHWGroups
     {
         private readonly QHWGroup _query  = new();
 
