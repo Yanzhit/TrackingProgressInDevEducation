@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using TrackingProgressInDevEducationBLL.Models;
 using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationBLL.Models.GroupInfo;
-using TrackingProgressInDevEducationBLL.Models.NewStudent;
+using TrackingProgressInDevEducationBLL.Models.GroupJournal;
+using TrackingProgressInDevEducationBLL.Models.MainPage;
+using TrackingProgressInDevEducationBLL.Models.Students;
 using TrackingProgressInDevEducationBLL.Tests.Expecteds;
 using TrackingProgressInDevEducationDAL.Facades.Interfaces;
-using TrackingProgressInDevEducationDAL.Models.Bases;
 using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Tests.Tests
@@ -22,7 +23,7 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
             Mock = new Mock<ILectors>();
         }
 
-        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetCities))]
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.SetNewGroup))]
         public void SetNewGroup(SetGroupQ query, SetNewGroupJ expectedA, SetGroupA expected)
         {
             var model = (SetNewGroupJ)BLLManager.GroupsQ.SetNewGroup(query);
@@ -31,53 +32,67 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
             Assert.AreEqual(actual, expected);
         }
 
-        //public GetGroupByIdJA GetGroupByIdJ(GetGroupByIdJQ getGroupByIdJQ)
-        //{
-        //    var model = (GetGroupByIdJ)_bllManager.GroupInfosQ.GetGroupByIdJ(getGroupByIdJQ);
-        //    GetGroupByIdJ modelReturned = _dalManager.Joins.GetGroupByIdJ(model);
-        //    return _bllManager.GroupInfosA.GetGroupByIdJA(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetGroupByIdJ))]
+        public void GetGroupByIdJA(GetGroupByIdJQ query, GetGroupByIdJ expectedA, GetGroupByIdJA expected)
+        {
+            var model = (GetGroupByIdJ)BLLManager.GroupInfosQ.GetGroupByIdJ(query);
+            Mock.Setup(mock => mock.GetGroupByIdJ(model)).Returns(expectedA);
+            var actual = BLLManager.GroupInfosA.GetGroupByIdJA(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetGroupsByLectorA> GetGroupsByLector(GetGroupsByLectorQ getGroupsByLectorQ)
-        //{
-        //    var model = (GetGroupByLectorJ)_bllManager.MainPagesQ.GetGroupsByLectorJ(getGroupsByLectorQ);
-        //    IEnumerable<GetGroupByLectorJ> modelReturned = _dalManager.Joins.GetGroupByLectorJ(model);
-        //    return (List<GetGroupsByLectorA>)_bllManager.MainPagesA.GetGroupsByLectorJ(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetGroupsByLectorJ))]
+        public void GetGroupsByLectorJ(GetGroupsByLectorQ query, List<GetGroupByIdJ> expectedA, List<GetGroupsByLectorA> expected)
+        {
+            var model = (GetGroupByLectorJ)BLLManager.MainPagesQ.GetGroupsByLectorJ(query);
+            Mock.Setup(mock => mock.GetGroupsByLectorJ(model)).Returns(expectedA);
+            var actual = (List<GetGroupsByLectorA>)BLLManager.MainPagesA.GetGroupsByLectorJ(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetAllStudentsByGroupA> GetAllStudentsByGroup(GetAllStudentsByGroupQ query)
-        //{
-        //    var model = (GetAllStudentsByGroup)_bllManager.GroupInfosQ.GetAllStudentsByGroup(query);
-        //    IEnumerable<GetAllStudentsByGroup> modelReturned = _dalManager.Joins.GetAllStudentsByGroup(model);
-        //    return (List<GetAllStudentsByGroupA>)_bllManager.GroupInfosA.GetAllStudentsByGroupA(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetAllStudentsByGroup))]
+        public void GetAllStudentsByGroup(GetAllStudentsByGroupQ query, List<GetAllStudentsByGroup> expectedA, List<GetAllStudentsByGroupA> expected)
+        {
+            var model = (GetAllStudentsByGroup)BLLManager.GroupInfosQ.GetAllStudentsByGroup(query);
+            Mock.Setup(mock => mock.GetAllStudentsByGroup(model)).Returns(expectedA);
+            var actual = (List<GetAllStudentsByGroupA>)BLLManager.GroupInfosA.GetAllStudentsByGroupA(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetAllCoursesByGroupA> GetAllCoursesByGroup(GetAllCoursesByGroupQ getAllCoursesByGroupQ)
-        //{
-        //    var model = (GetAllCoursesByGroup)_bllManager.GroupInfosQ.GetAllCoursesByGroup(getAllCoursesByGroupQ);
-        //    IEnumerable<GetAllCoursesByGroup> modelReturned = _dalManager.Joins.GetAllCoursesByGroup(model);
-        //    return (List<GetAllCoursesByGroupA>)_bllManager.GroupInfosA.GetAllCoursesByGroupA(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetAllCoursesByGroup))]
+        public void GetAllCoursesByGroup(GetAllCoursesByGroupQ query, List<GetAllCoursesByGroup> expectedA, List<GetAllCoursesByGroupA> expected)
+        {
+            var model = (GetAllCoursesByGroup)BLLManager.GroupInfosQ.GetAllCoursesByGroup(query);
+            Mock.Setup(mock => mock.GetAllCoursesByGroup(model)).Returns(expectedA);
+            var actual = (List<GetAllCoursesByGroupA>)BLLManager.GroupInfosA.GetAllCoursesByGroupA(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetAllTeamsByLectorJA> GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ getTeamssByLectorQ)
-        //{
-        //    var model = (GetAllTeamsByLectorJ)_bllManager.MainPagesQ.GetAllTeamsByLectorJ(getTeamssByLectorQ);
-        //    IEnumerable<GetAllTeamsByLectorJ> modelReturned = _dalManager.Joins.GetAllTeamsByLectorJ(model);
-        //    return (List<GetAllTeamsByLectorJA>)_bllManager.MainPagesA.GetAllTeamsByLectorJ(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetAllTeamsByLectorJ))]
+        public void GetAllTeamsByLectorJ(GetAllTeamsByLectorJQ query, List<GetAllTeamsByLectorJ> expectedA, List<GetAllTeamsByLectorJA> expected)
+        {
+            var model = (GetAllTeamsByLectorJ)BLLManager.MainPagesQ.GetAllTeamsByLectorJ(query);
+            Mock.Setup(mock => mock.GetAllTeamsByLectorJ(model)).Returns(expectedA);
+            var actual = (List<GetAllTeamsByLectorJA>)BLLManager.MainPagesA.GetAllTeamsByLectorJ(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetAllStudentsA> GetAllStudents(EmptyQ emptyQ)
-        //{
-        //    var model = (GetAllStudentsJ)_bllManager.StudentsSQ.GetAllStudents(emptyQ);
-        //    IEnumerable<GetAllStudentsJ> modelReturned = _dalManager.Joins.GetAllStudents();
-        //    return (List<GetAllStudentsA>)_bllManager.StudentsSA.GetAllStudents(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetAllStudents))]
+        public void GetAllStudents(EmptyQ query, List<GetAllStudentsJ> expectedA, List<GetAllStudentsA> expected)
+        {
+            var model = (GetAllStudentsJ)BLLManager.StudentsSQ.GetAllStudents(query);
+            Mock.Setup(mock => mock.GetAllStudents(model)).Returns(expectedA);
+            var actual = (List<GetAllStudentsA>)BLLManager.StudentsSA.GetAllStudents(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
 
-        //public List<GetVisitsByStudentJA> GetVisitsByStudentJ(GetVisitsByStudentJQ query)
-        //{
-        //    var model = (GetVisitsByStudentJ)_bllManager.GroupJournalsQ.GetVisitsByStudentJ(query);
-        //    IEnumerable<GetVisitsByStudentJ> modelReturned = _dalManager.Joins.GetVisitsByStudentJ(model);
-        //    return (List<GetVisitsByStudentJA>)_bllManager.GroupJournalsA.GetVisitsByStudentJ(modelReturned);
-        //}
+        [TestCaseSource(typeof(EJoins), nameof(EJoins.GetVisitsByStudentJ))]
+        public void GetVisitsByStudentJ(GetVisitsByStudentJQ query, List<GetVisitsByStudentJ> expectedA, List<GetAllStudentsA> expected)
+        {
+            var model = (GetVisitsByStudentJ)BLLManager.GroupJournalsQ.GetVisitsByStudentJ(query);
+            Mock.Setup(mock => mock.GetVisitsByStudentJ(model)).Returns(expectedA);
+            var actual = (List<GetVisitsByStudentJA>)BLLManager.GroupJournalsA.GetVisitsByStudentJ(expectedA);
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
