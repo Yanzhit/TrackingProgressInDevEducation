@@ -49,8 +49,8 @@
         public const int AddStudentToGroupH = 400;
         
         public const string NewCourseT = "Добавление нового курса";
-        public const int NewCourseW = 750;
-        public const int NewCourseH = 450;
+        public const int NewCourseW = 850;
+        public const int NewCourseH = 500;
 
         public const string NewGroupT = "Добавление новой группы";
         public const int NewGroupW = 50;
