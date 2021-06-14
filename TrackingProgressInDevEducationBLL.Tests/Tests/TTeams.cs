@@ -9,18 +9,18 @@ namespace TrackingProgressInDevEducationBLL.Tests.Tests
 {
     public class TTeams : AbstractTest
     {
-        public Mock<ILectors> Mock;
+        public Mock<IJoins> Mock;
 
         [SetUp]
         public void SetUp()
         {
-            Mock = new Mock<ILectors>();
+            Mock = new Mock<IJoins>();
         }
 
         [TestCaseSource(typeof(ETeams), nameof(ETeams.SetNewTeam))]
         public void GetCities(SetTeamQ query, SetNewTeams expectedA, SetTeamA expected)
         {
-            var model = (SetNewTeams)BLLManager.TeamsQ.SetNewTeam(SetTeamQ);
+            var model = (SetNewTeams)BLLManager.TeamsQ.SetNewTeam(query);
             Mock.Setup(mock => mock.SetNewTeam(model)).Returns(expectedA);
             var actual = BLLManager.TeamsA.SetNewTeam(expectedA);
             Assert.AreEqual(actual, expected);

@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrackingProgressInDevEducationBLL.Models.Course;
+using TrackingProgressInDevEducationBLL.Models.Group;
 using TrackingProgressInDevEducationDAL.Models.Bases;
+using TrackingProgressInDevEducationDAL.Models.Others;
 
 namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
 {
@@ -15,23 +17,27 @@ namespace TrackingProgressInDevEducationBLL.Tests.Expecteds
         {
             yield return new object[]
             {
-                new SetNewCoursesQ(),
-                new Course
+                new SetGroupQ(),
+                new SetNewGroupJ
                 {
-                    Name = "sssss",
-                    Description = "eeee"
-                },
-                new SetNewCoursesA("sssss")
+                     Name = "Name",
+                    CourseId = 1,
+                    StartDate = "22.21.22",
+                    EndDate = "22.22.22"
+        },
+                new SetGroupA("Name", 1, "22.21.22", "22.22.22")
             };
             yield return new object[]
             {
-                new SetNewCoursesQ(),
-                new Course
+                new SetGroupQ(),
+                new SetNewGroupJ
                 {
-                     Name = "eeee",
-                    Description = "ssss"
-                },
-                new SetNewCoursesA("eeee")
+                     Name = "Name11",
+                    CourseId = 1,
+                    StartDate = "22.21.21",
+                    EndDate = "22.22.23"
+        },
+                new SetGroupA("Name11", 1, "22.21.21", "22.22.23")
             };
         }
         public static IEnumerable GetGroupByIdJ()
